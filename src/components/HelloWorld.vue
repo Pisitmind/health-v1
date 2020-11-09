@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-lg-xl>
-    <div class="card">
+    <div class="card_el">
       <v-card elevation="2" outlined height="350">
         <div class="card1-root">
           <div class="head-card1">
@@ -20,17 +20,15 @@
             </div>
           </div>
           <div class="card1-content">
-           <div class="text-center">
+            <div class="text-center">
               <v-progress-circular
                 :value="63"
                 :size="200"
                 color="deep-orange lighten-2"
               >
-              ผู้ใช้ทั้งหมด
-              2,800 
-              คน
+                ผู้ใช้ทั้งหมด 2,800 คน
               </v-progress-circular>
-           </div>
+            </div>
             <v-card>
               <v-card-subtitle>
                 ตัวบ่งชี้
@@ -87,7 +85,7 @@
                 <div class="brand-content">
                   <div class="text-brand">
                     <v-icon x-small>mdi-circle </v-icon>
-                    <span> German</span>
+                    <span> Garmin</span>
                   </div>
                   <div>
                     395
@@ -162,13 +160,12 @@
           </div>
         </div>
       </v-card>
-
-      <v-card elevation="2" outlined height="350" mt-3 pa-3>
-        <div class="card1">
-          <div class="head-card1">
-            <div class="card1-left">
-              <p>ช่วงอายุ</p>
-            </div>
+    </div>
+    <div class="card_el">
+      <v-card elevation="2" outlined height="350">
+        <div class="card2">
+          <div class="head-card2">
+            <p>ช่วงอายุ</p>
           </div>
           <div class="card1-content">
             <v-card>
@@ -189,25 +186,126 @@
         </div>
       </v-card>
     </div>
+    <div class="card_el">
+      <div class="card-split">
+        <div class="card_l">
+          <v-card elevation="2" outlined height="350">
+            <div class="card3">
+              <div class="head_card3">
+                <div class="title-card3">
+                  <div class=""><p>การก้าว</p></div>
+                </div>
+                <div class="sex-age-title-card3">
+                  <div class="sex-title"><p>เพศ</p></div>
+                  <div class="age-title"><p>อายุ</p></div>
+                </div>
+                <div class="icon-card3">
+                  <div class="exit-icon-card3">
+                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card1-content">
+                <v-card>
+                  <v-card-subtitle>
+                    ตัวบ่งชี้
+                  </v-card-subtitle>
+                  <v-card-text>
+                    กราฟ
+                  </v-card-text>
+                </v-card>
+                <v-card>
+                  <v-card-title>
+                    เนื้อหา
+                  </v-card-title>
+                </v-card>
+                <!-- <p>content</p> -->
+              </div>
+            </div>
+          </v-card>
+        </div>
+        <div class="card_r">
+          <v-card elevation="2" outlined height="350">
+            <div class="card3">
+              <div class="head_card3">
+                <div class="title-card3">
+                  <div class=""><p>การเผาผลาญ</p></div>
+                </div>
+                <div class="sex-age-title-card3">
+                  <div class="sex-title"><p>เพศ</p></div>
+                  <div class="age-title"><p>อายุ</p></div>
+                </div>
+                <div class="icon-card3">
+                  <div class="exit-icon-card3">
+                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="card1-content">
+                <v-card>
+                  <v-card-title>
+                    กราฟฟฟฟ
+                  </v-card-title>
+                </v-card>
+                <!-- <p>content</p> -->
+              </div>
+            </div>
+          </v-card>
+        </div>
+      </div>
+    </div>
+    <div class="card_el">
+      <v-card elevation="2" outlined height="350">
+        <div class="card2">
+          <div class="head_card4">
+            <div class="title_card4">
+              <div class="h_card4"><p>สัดส่วนน้ำหนัก</p></div>
+              <div class="sexnage_card4">
+                <div class="sex_card4"><p>เพศ</p></div>
+                <div class="age_card4"><p>อายุ</p></div>
+              </div>
+            </div>
+            <div class="icon-card3 card4">
+              <div class="exit-icon-card3">
+                <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+              </div>
+            </div>
+          </div>
+          <div class="card1-content">
+            <v-card>
+              <v-card-text>
+                กราฟอะแหละ
+              </v-card-text>
+            </v-card>
+            <!-- <p>content</p> -->
+          </div>
+        </div>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
 <style scoped>
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
-}
+} */
 .head-card1 {
   display: flex;
   /* justify-items: space-between; */
   justify-content: space-between;
+}
+.head-card2 {
+  display: flex;
+  justify-content: start;
+  padding: 20px;
 }
 .card1-left {
   display: flex;
   width: 100%;
   justify-content: space-around;
   justify-items: space-around;
-  padding: 10px;
+  padding: 20px;
 }
 .card1-right {
   display: flex;
@@ -274,5 +372,86 @@
 
 .pd-10 {
   padding: 10px;
+}
+.head_card3 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px;
+}
+.sex-age-title-card3 {
+  display: flex;
+  /* width: 50%; */
+  /* background-color:violet; */
+}
+.sex-title {
+  padding: 0 30px;
+}
+.age-title {
+  padding: 0 30px;
+}
+.icon-card3 {
+  padding: 0 0 0 50px;
+  /* width: 100%; */
+  /* padding: 10px; */
+}
+.title-card3 {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-around;
+}
+.card_el {
+  padding: 10px 10px;
+  margin-bottom: 5px;
+}
+.card-split {
+  display: flex;
+  flex-direction: row;
+}
+.card_l {
+  width: 100%;
+  /* margin-right:10px; */
+  padding-right: 10px;
+}
+.card_r {
+  width: 100%;
+  /* margin-left:10px; */
+  padding-left: 10px;
+}
+.head_card4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.title_card4 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sex_card4 {
+  padding: 0 10px;
+}
+.age_card4 {
+  padding: 0 10px;
+}
+.sexnage_card4{
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
 }
 </style>
