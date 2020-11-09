@@ -104,18 +104,18 @@ export default {
    data () {
       return {
         items: [
-          { title: 'กราฟข้อมูล', icon: 'mdi-view-dashboard',link: '/' },
-          { title: 'แจ้งเตือน', icon: 'mdi-image' },
-          { title: 'ข้อมูลการเคลื่อนไหว', icon: 'mdi-help-box' },
-          { title: 'ข้อมูลสถานะร่างกาย', icon: 'mdi-help-box' },
-          { title: 'ค่าส่วนประกอบในร่างกาย', icon: 'mdi-help-box' },
-          { title: 'ข้อมูลสุขภาพจำเพาะ', icon: 'mdi-help-box' },
-          { title: 'รายงาน', icon: 'mdi-help-box' },
+          { title: 'กราฟข้อมูล', icon: 'mdi-chart-timeline',link: '/' },
+          { title: 'แจ้งเตือน', icon: 'mdi-bell-outline' },
+          { title: 'ข้อมูลการเคลื่อนไหว', icon: 'mdi-walk' },
+          { title: 'ข้อมูลสถานะร่างกาย', icon: 'mdi-account-details' },
+          { title: 'ค่าส่วนประกอบในร่างกาย', icon: 'mdi-human-handsup' },
+          { title: 'ข้อมูลสุขภาพจำเพาะ', icon: 'mdi-water-plus' },
+          { title: 'รายงาน', icon: 'mdi-chart-areaspline' },
         ],
         items2:[
-          { title: 'ผู้ใช้งาน', icon: 'mdi-help-box' },
-          { title: 'ข่าว / ประกาศ', icon: 'mdi-help-box' },
-          { title: 'บอร์ด / สาระสุขภาพ', icon: 'mdi-help-box' },
+          { title: 'ผู้ใช้งาน', icon: 'mdi-account-group-outline' },
+          { title: 'ข่าว / ประกาศ', icon: 'mdi-new-box' },
+          { title: 'บอร์ด / สาระสุขภาพ', icon: 'mdi-teach' },
           
         ],
       }
@@ -139,5 +139,8 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+.profile-bar {
+  padding-left: 10px;
 }
 </style>
