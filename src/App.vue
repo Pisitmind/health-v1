@@ -1,32 +1,143 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <!-- App.vue -->
+
+<v-app>
+  <v-navigation-drawer app>
+    <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            <v-img class="center" max-width="100" max-height="50" src="./assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"></v-img>
+          </v-list-item-title>
+            <div class="title-list">
+            <!-- <v-list-item-avatar> -->
+              <v-img 
+                max-height="40"
+                max-width="40"
+                pb-5
+                src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                <div  class="profile-bar">
+                  <div class="pro-name">
+                    <span>Supratcha  Wiwattanakorn</span>
+                  </div>
+                  <div class="icon-profile">
+                    <v-icon>mdi-bell</v-icon>
+                    <v-icon>mdi-cog</v-icon>
+                  </div>
+
+                </div>
+            </div>
+          <!-- </v-list-item-avatar> -->
+          <v-list-item-subtitle>
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list
+        dense
+        nav
+        
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <p>การจัดการ</p>
+        </v-list-item>
+        <v-list-item
+          v-for="item2 in items2"
+          :key="item2.title"
+          link
+          >
+            <v-list-item-icon>
+            <v-icon>{{ item2.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item2.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    
+  </v-navigation-drawer>
+
+  <!-- <v-app-bar app>
+  </v-app-bar> -->
+
+  <!-- Sizes your content based upon application components -->
+  <v-main>
+
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
+      <!-- If using vue-router -->
+      <router-view></router-view>
+    </v-container>
+  </v-main>
+
+  <v-footer app>
+    <!-- -->
+  </v-footer>
+</v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+// import HelloWorld from "./components/HelloWorld";
+
+export default {
+  name: "App",
+
+  components: {
+    // HelloWorld
+  },
+
+   data () {
+      return {
+        items: [
+          { title: 'กราฟข้อมูล', icon: 'mdi-view-dashboard',link: '/' },
+          { title: 'แจ้งเตือน', icon: 'mdi-image' },
+          { title: 'ข้อมูลการเคลื่อนไหว', icon: 'mdi-help-box' },
+          { title: 'ข้อมูลสถานะร่างกาย', icon: 'mdi-help-box' },
+          { title: 'ค่าส่วนประกอบในร่างกาย', icon: 'mdi-help-box' },
+          { title: 'ข้อมูลสุขภาพจำเพาะ', icon: 'mdi-help-box' },
+          { title: 'รายงาน', icon: 'mdi-help-box' },
+        ],
+        items2:[
+          { title: 'ผู้ใช้งาน', icon: 'mdi-help-box' },
+          { title: 'ข่าว / ประกาศ', icon: 'mdi-help-box' },
+          { title: 'บอร์ด / สาระสุขภาพ', icon: 'mdi-help-box' },
+          
+        ],
+      }
+    },
+};
+</script>
+
+
+<style scope>
+.title{
+  padding-bottom: 10px;
+
+}
+.title-list {
+  display: flex;
+  flex-direction: row;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 </style>
