@@ -10,6 +10,7 @@ import report from '../views/Report.vue';
 import users from '../views/Users.vue';
 import news from '../views/News.vue';
 import boards from '../views/Boards.vue';
+import Login from '../components/Login.vue';
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,10 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },{
+    path: "/login",
+    name: "Login",
+    component: Login
   },
   {
     path: "/About",

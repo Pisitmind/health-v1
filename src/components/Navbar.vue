@@ -18,7 +18,7 @@
                   </div>
                   <div class="icon-profile">
                     <v-icon>mdi-bell</v-icon>
-                    <v-icon>mdi-cog</v-icon>
+                    <v-btn class="ma-2" text icon color="blue lighten-2" to="/login"><v-icon >mdi-cog</v-icon></v-btn>
                   </div>
 
                 </div>
