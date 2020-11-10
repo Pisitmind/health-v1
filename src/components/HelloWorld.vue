@@ -9,7 +9,9 @@
                 <p>สมาชิกผู้ใช้</p>
               </div>
               <div>
-                <v-btn>วันนี้</v-btn>
+                <v-btn class="white--text" color="purple darken-2"
+                  >วันนี้</v-btn
+                >
               </div>
               <div><h3>ปฏิทิน</h3></div>
             </div>
@@ -156,7 +158,7 @@
       </v-card>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined >
+      <v-card elevation="2" outlined>
         <div class="card2">
           <div class="head-card2">
             <p>ช่วงอายุ</p>
@@ -235,9 +237,7 @@
                   <v-card-title>
                     <canvas id="graph1" width="" height="200px"></canvas>
                   </v-card-title>
-                  <v-card-content>
-                    
-                  </v-card-content>
+                  <v-card-content> </v-card-content>
                 </v-card>
                 <!-- <p>content</p> -->
               </div>
@@ -247,7 +247,7 @@
       </div>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined height="">
+      <v-card elevation="2" outlined >
         <div class="card2">
           <div class="head_card4">
             <div class="title_card4">
@@ -264,27 +264,82 @@
             </div>
           </div>
           <div class="card4-content">
-            <div class="card6-graph">
-              <canvas id="graphline" width="" height="25px"></canvas>
+            <div class="card4-l-content">
+              <div>
+                
+              </div>
             </div>
-            <div class="card6-details center">
-              <h2>Icon human</h2>
+            <div class="card4-r-content">
+                <div class="card6-details px-2">
+              <div class="progress-el">
+                <v-progress-linear
+                  color="purple darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span class="text-top">56.7</span>
+                <v-progress-linear
+                  color="blue darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span>76.6</span>
+                <v-progress-linear
+                  color="green darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span>85.8</span>
+                <v-progress-linear
+                  color="yellow darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span>98.0</span>
+                <v-progress-linear
+                  color="red darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+              </div>
+              <br />
+              <div class="progress-el icon-set">
+                <div class="i-human">
+                  <div><v-icon>mdi-human-male</v-icon></div>
+                  <div><p>ผอมมาก</p></div>
+                </div>
+                <div class="i-human">
+                  <div><v-icon>mdi-human-male</v-icon></div>
+                  <div><p>ปกติ</p></div>
+                </div>
+                <div class="i-human">
+                  <div><v-icon>mdi-human-male</v-icon></div>
+                  <div><p>อวบ</p></div>
+                </div>
+                <div class="i-human">
+                  <div><v-icon>mdi-human-male</v-icon></div>
+                  <div><p>อ้วน ระยะที่1</p></div>
+                </div>
+                <div class="i-human">
+                  <div><v-icon>mdi-human-male</v-icon></div>
+                  <div><p>อ้วน ระยะที่2</p></div>
+                </div>
+              </div>
             </div>
             <v-container>
-              <v-row v-for="item in items"
-          :key="item.id">
-                <v-col v-for="n in 6"
-          :key="n">
-                  <v-card
-            class="pa-2"
-            outlined
-            tile
-          >
-           {{item.data[n-1]}}
-          </v-card>
+              <v-row v-for="item in items" :key="item.id">
+                <v-col v-for="n in 5" :key="n">
+                  <v-card class="black--text" outlined tile>
+                    {{ item.data[n - 1] }}
+                  </v-card>
                 </v-col>
               </v-row>
             </v-container>
+            </div>
             <!-- <p>content</p> -->
           </div>
         </div>
@@ -294,121 +349,118 @@
 </template>
 
 <script>
-
-import Chart from 'chart.js'
-export default{
-  mounted: function () {
-    var ctx0 = document.getElementById('graph0').getContext('2d')
+import Chart from "chart.js";
+export default {
+  mounted: function() {
+    var ctx0 = document.getElementById("graph0").getContext("2d");
     var bar0 = new Chart(ctx0, {
-      type: 'doughnut',
-      data:{
-        datasets: [{
-        data: [1471, 1329],
-            backgroundColor: ['#9ACDE9','#F8C5C5']
-        }],
-        labels: [
-            'ชาย',
-            'หญิง'
-        ]
-      }
-    })
-    console.log(bar0)
-    var ctx = document.getElementById('graph').getContext('2d')
-    var bar = new Chart(ctx, {
-      type: 'bar',
-      data:{
-        labels: ['18-20' , '21-30' , '31-40', '41-50','51-60', '60 Up'],
-        backgroundColor: [
-            '#ff6384',
-            '#36a2eb'
+      type: "doughnut",
+      data: {
+        datasets: [
+          {
+            data: [1471, 1329],
+            backgroundColor: ["#9ACDE9", "#F8C5C5"],
+          },
         ],
-        datasets: [
-          {
-            label: 'Man',
-            backgroundColor:'#9ACDE9',
-            data: [638,557,784,652,145,24]
-          },
-          {
-            label: 'Woman',
-            backgroundColor:'#F8C5C5',
-            data: [270,250,275,480,145,40]
-          }
-          ]
-
-      }
-    })
-    console.log(bar)
-    var ctx1 = document.getElementById('graph1').getContext('2d')
-    var bar1 = new Chart(ctx1, {
-      type: 'horizontalBar',
-      data:{
-        labels: ['18-20' , '21-30' , '31-40', '41-50','51-60', '60 Up'],
-        datasets: [
-          {
-            label:'',
-            backgroundColor:['#58BFAE','#FF3E80','#FF850A','#DA2121','#B4B4B4','#2289D8'],
-            data: [270,250,275,480,145,40]
-          }
-          ]
-
-      }
-    })
-    console.log(bar1)
-    var ctx3 = document.getElementById('graph3-1').getContext('2d')
-    var bar3 = new Chart(ctx3, {
-      type: 'horizontalBar',
-      data:{
-        labels: ['man','woman'],
-       datasets: [
-          {
-            label: 'ก้าว',
-            backgroundColor:['#9ACDE9','#F8C5C5'],
-            data: [5380,3700]
-          },
-          ]
-      }
-    })
-    console.log(bar3)
-    var ctx_line = document.getElementById('graphline').getContext('2d')
-    var bar_line = new Chart(ctx_line, {
-      type: 'line',
-      options: {
-        scales: {
-          yAxes: [{
-            display: false
-          }],
-        }
+        labels: ["ชาย", "หญิง"],
       },
-      data:{
-        datasets: [{
-            data: [10,10,10,10,10],
-            // backgroundColor:['purple'],
-            backgroundColor:['purple','blue','green','orange','red'],
-            above: ['purple','blue','green','orange','red'],   // Area will be red above the origin
-            below: ['purple','blue','green','orange','red'], 
-           borderColor: ['purple','blue','green','orange','red'], 
-        }],
-        labels: [
-            '0','56.7','76.6','85.8','98.0'
+    });
+    console.log(bar0);
+    var ctx = document.getElementById("graph").getContext("2d");
+    var bar = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
+        backgroundColor: ["#ff6384", "#36a2eb"],
+        datasets: [
+          {
+            label: "Man",
+            backgroundColor: "#9ACDE9",
+            data: [638, 557, 784, 652, 145, 24],
+          },
+          {
+            label: "Woman",
+            backgroundColor: "#F8C5C5",
+            data: [270, 250, 275, 480, 145, 40],
+          },
         ],
-      }
-      
-    })
-    console.log(bar_line)
+      },
+    });
+    console.log(bar);
+    var ctx1 = document.getElementById("graph1").getContext("2d");
+    var bar1 = new Chart(ctx1, {
+      type: "horizontalBar",
+      data: {
+        labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
+        datasets: [
+          {
+            label: "",
+            backgroundColor: [
+              "#58BFAE",
+              "#FF3E80",
+              "#FF850A",
+              "#DA2121",
+              "#B4B4B4",
+              "#2289D8",
+            ],
+            data: [270, 250, 275, 480, 145, 40],
+          },
+        ],
+      },
+    });
+    console.log(bar1);
+    var ctx3 = document.getElementById("graph3-1").getContext("2d");
+    var bar3 = new Chart(ctx3, {
+      type: "horizontalBar",
+      data: {
+        labels: ["man", "woman"],
+        datasets: [
+          {
+            label: "ก้าว",
+            backgroundColor: ["#9ACDE9", "#F8C5C5"],
+            data: [5380, 3700],
+          },
+        ],
+      },
+    });
+    console.log(bar3);
+    // var ctx_line = document.getElementById("graphline").getContext("2d");
+    // var bar_line = new Chart(ctx_line, {
+    //   type: "line",
+    //   options: {
+    //     scales: {
+    //       yAxes: [
+    //         {
+    //           display: false,
+    //         },
+    //       ],
+    //     },
+    //   },
+    //   data: {
+    //     datasets: [
+    //       {
+    //         data: [10, 10, 10, 10, 10],
+    //         backgroundColor: ["purple", "blue", "green", "orange", "red"],
+    //         above: ["purple", "blue", "green", "orange", "red"],
+    //         below: ["purple", "blue", "green", "orange", "red"],
+    //         borderColor: ["purple", "blue", "green", "orange", "red"],
+    //       },
+    //     ],
+    //     labels: ["0", "56.7", "76.6", "85.8", "98.0"],
+    //   },
+    // });
+    // console.log(bar_line);
   },
-  data(){
-   
+  data() {
     return {
-        items: [
-          { id:'1',gender: 'ชาย', data:['27','98','780','34','0']},
-          { id:'2',gender: 'หญิง', data:[12,132,560,22,0] },
-        ],
-        data_male:[{
-        }
-        ]
-    }
-  }
-}
+      items: [
+        { id: "1", gender: "ชาย", data: ["27", "98", "780", "34", "0"] },
+        { id: "2", gender: "หญิง", data: [12, 132, 560, 22, 0] },
+      ],
+      data_male: [{}],
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -426,7 +478,7 @@ export default{
   justify-content: start;
   padding: 20px;
 }
-.card2-graph{
+.card2-graph {
   width: 60%;
 }
 .card1-left {
@@ -451,7 +503,7 @@ export default{
 .card2-content {
   display: flex;
   justify-content: space-around;
-  padding:20px 0;
+  padding: 20px 0;
 }
 .right-icon {
   display: flex;
@@ -562,13 +614,19 @@ export default{
   flex-direction: row;
   justify-content: space-around;
 }
+.card4-l-content{
+  width: 20%;
+}
+.card4-r-content{
+  width: 80%;
+}
 .sex_card4 {
   padding: 0 10px;
 }
 .age_card4 {
   padding: 0 10px;
 }
-.sexnage_card4{
+.sexnage_card4 {
   display: flex;
   flex-direction: row;
   width: 20%;
@@ -588,11 +646,10 @@ export default{
 .space-around {
   justify-content: space-around;
 }
-/* .card4-content{
+.card4-content{
   display: flex;
-  
-} */
-.card6-details{
-  padding-top:20px;
+}
+.card6-details {
+  padding-top: 20px;
 }
 </style>

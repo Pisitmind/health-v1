@@ -1,8 +1,70 @@
 <template>
     <div class="Moving">
+      <div>
         <h1>Moving page</h1>
          <canvas id="graph0" width="" height="40px"></canvas>
-         <canvas id="graphline" width="" height="40px"></canvas>
+         <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+      </div>
+      <br>
+      <br>
+      <div class="progress-el">
+        <v-progress-linear
+          color="purple darken-2"
+          rounded
+          value="100"
+        ></v-progress-linear>
+        <br>
+        <span class="text-top">56.7</span>
+        <v-progress-linear
+          color="blue darken-2"
+          rounded
+          value="100"
+        ></v-progress-linear>
+        <br>
+        <span>76.6</span>
+        <v-progress-linear
+          color="green darken-2"
+          rounded
+          value="100"
+        ></v-progress-linear>  
+        <br>
+        <span>85.8</span>
+        <v-progress-linear
+          color="yellow darken-2"
+          rounded
+          value="100"
+        ></v-progress-linear> 
+        <br>
+        <span>98.0</span>
+        <v-progress-linear
+          color="red darken-2"
+          rounded
+          value="100"
+        ></v-progress-linear>
+      </div>
+      <br>
+      <div class="progress-el icon-set"> 
+        <div class="i-human">
+          <div><v-icon>mdi-human-male</v-icon></div>
+          <div><p>ผอมมาก</p></div>
+        </div>
+        <div class="i-human">
+          <div><v-icon>mdi-human-male</v-icon></div>
+         <div><p>ปกติ</p></div>
+        </div>
+        <div class="i-human">
+          <div><v-icon>mdi-human-male</v-icon></div>
+          <div><p>อวบ</p></div>
+        </div>
+        <div class="i-human">
+          <div><v-icon>mdi-human-male</v-icon></div>
+          <div><p>อ้วน ระยะที่1</p></div>
+        </div>
+        <div class="i-human">
+          <div><v-icon>mdi-human-male</v-icon></div>
+           <div><p>อ้วน ระยะที่2</p></div>
+        </div>
+      </div>
 
     </div>
 
@@ -47,7 +109,7 @@ export default{
             backgroundColor:['purple','blue','green','orange','red'],
             above: ['purple','blue','green','orange','red'],   // Area will be red above the origin
             below: ['purple','blue','green','orange','red'], 
-           borderColor: ['purple','blue','green','orange','red'], 
+            borderColor: ['purple','blue','green','orange','red'],
         }],
         labels: [
             '0','56.7','76.6','85.8','98.0'
@@ -69,4 +131,24 @@ export default{
 
 
 <style scope>
+.progress-el{
+  display: flex;
+  flex-direction: row;
+}
+.text-top{
+  text-align: top;
+  
+}
+.s-20{
+  width: 20%;
+}
+.icon-set{
+  display: flex;
+  justify-content: space-around;
+}
+.i-human{
+  display: flex;
+  flex-direction: column;
+  
+}
 </style>
