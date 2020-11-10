@@ -21,13 +21,7 @@
           </div>
           <div class="card1-content">
             <div class="text-center">
-              <v-progress-circular
-                :value="63"
-                :size="200"
-                color="deep-orange lighten-2"
-              >
-                ผู้ใช้ทั้งหมด 2,800 คน
-              </v-progress-circular>
+              <canvas id="graph0" width="" height="200px"></canvas>
             </div>
             <v-card>
               <v-card-subtitle>
@@ -162,19 +156,14 @@
       </v-card>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined height="350">
+      <v-card elevation="2" outlined >
         <div class="card2">
           <div class="head-card2">
             <p>ช่วงอายุ</p>
           </div>
-          <div class="card1-content">
-            <v-card>
-              <v-card-subtitle>
-                ตัวบ่งชี้
-              </v-card-subtitle>
-              <v-card-text>
-                กราฟ
-              </v-card-text>
+          <div class="card2-content">
+            <v-card elevation="1" class="card2-graph ">
+              <canvas id="graph" width="" height="150px"></canvas>
             </v-card>
             <v-card>
               <v-card-title>
@@ -211,7 +200,7 @@
                     ตัวบ่งชี้
                   </v-card-subtitle>
                   <v-card-text>
-                    กราฟ
+                    <canvas id="graph3-1" width="" height="180"></canvas>
                   </v-card-text>
                 </v-card>
                 <v-card>
@@ -244,8 +233,11 @@
               <div class="card1-content">
                 <v-card>
                   <v-card-title>
-                    กราฟฟฟฟ
+                    <canvas id="graph1" width="" height="200px"></canvas>
                   </v-card-title>
+                  <v-card-content>
+                    
+                  </v-card-content>
                 </v-card>
                 <!-- <p>content</p> -->
               </div>
@@ -255,7 +247,7 @@
       </div>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined height="350">
+      <v-card elevation="2" outlined height="">
         <div class="card2">
           <div class="head_card4">
             <div class="title_card4">
@@ -271,12 +263,28 @@
               </div>
             </div>
           </div>
-          <div class="card1-content">
-            <v-card>
-              <v-card-text>
-                กราฟอะแหละ
-              </v-card-text>
-            </v-card>
+          <div class="card4-content">
+            <div class="card6-graph">
+              <canvas id="graphline" width="" height="25px"></canvas>
+            </div>
+            <div class="card6-details center">
+              <h2>Icon human</h2>
+            </div>
+            <v-container>
+              <v-row v-for="item in items"
+          :key="item.id">
+                <v-col v-for="n in 6"
+          :key="n">
+                  <v-card
+            class="pa-2"
+            outlined
+            tile
+          >
+           {{item.data[n-1]}}
+          </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
             <!-- <p>content</p> -->
           </div>
         </div>
@@ -285,7 +293,125 @@
   </v-container>
 </template>
 
-<style scoped>
+<script>
+
+import Chart from 'chart.js'
+export default{
+  mounted: function () {
+    var ctx0 = document.getElementById('graph0').getContext('2d')
+    var bar0 = new Chart(ctx0, {
+      type: 'doughnut',
+      data:{
+        datasets: [{
+        data: [1471, 1329],
+            backgroundColor: ['#9ACDE9','#F8C5C5']
+        }],
+        labels: [
+            'ชาย',
+            'หญิง'
+        ]
+      }
+    })
+    console.log(bar0)
+    var ctx = document.getElementById('graph').getContext('2d')
+    var bar = new Chart(ctx, {
+      type: 'bar',
+      data:{
+        labels: ['18-20' , '21-30' , '31-40', '41-50','51-60', '60 Up'],
+        backgroundColor: [
+            '#ff6384',
+            '#36a2eb'
+        ],
+        datasets: [
+          {
+            label: 'Man',
+            backgroundColor:'#9ACDE9',
+            data: [638,557,784,652,145,24]
+          },
+          {
+            label: 'Woman',
+            backgroundColor:'#F8C5C5',
+            data: [270,250,275,480,145,40]
+          }
+          ]
+
+      }
+    })
+    console.log(bar)
+    var ctx1 = document.getElementById('graph1').getContext('2d')
+    var bar1 = new Chart(ctx1, {
+      type: 'horizontalBar',
+      data:{
+        labels: ['18-20' , '21-30' , '31-40', '41-50','51-60', '60 Up'],
+        datasets: [
+          {
+            label:'',
+            backgroundColor:['#58BFAE','#FF3E80','#FF850A','#DA2121','#B4B4B4','#2289D8'],
+            data: [270,250,275,480,145,40]
+          }
+          ]
+
+      }
+    })
+    console.log(bar1)
+    var ctx3 = document.getElementById('graph3-1').getContext('2d')
+    var bar3 = new Chart(ctx3, {
+      type: 'horizontalBar',
+      data:{
+        labels: ['man','woman'],
+       datasets: [
+          {
+            label: 'ก้าว',
+            backgroundColor:['#9ACDE9','#F8C5C5'],
+            data: [5380,3700]
+          },
+          ]
+      }
+    })
+    console.log(bar3)
+    var ctx_line = document.getElementById('graphline').getContext('2d')
+    var bar_line = new Chart(ctx_line, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            display: false
+          }],
+        }
+      },
+      data:{
+        datasets: [{
+            data: [10,10,10,10,10],
+            // backgroundColor:['purple'],
+            backgroundColor:['purple','blue','green','orange','red'],
+            above: ['purple','blue','green','orange','red'],   // Area will be red above the origin
+            below: ['purple','blue','green','orange','red'], 
+           borderColor: ['purple','blue','green','orange','red'], 
+        }],
+        labels: [
+            '0','56.7','76.6','85.8','98.0'
+        ],
+      }
+      
+    })
+    console.log(bar_line)
+  },
+  data(){
+   
+    return {
+        items: [
+          { id:'1',gender: 'ชาย', data:['27','98','780','34','0']},
+          { id:'2',gender: 'หญิง', data:[12,132,560,22,0] },
+        ],
+        data_male:[{
+        }
+        ]
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
 /* .card {
   display: flex;
   flex-direction: column;
@@ -299,6 +425,9 @@
   display: flex;
   justify-content: start;
   padding: 20px;
+}
+.card2-graph{
+  width: 60%;
 }
 .card1-left {
   display: flex;
@@ -318,6 +447,11 @@
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
+}
+.card2-content {
+  display: flex;
+  justify-content: space-around;
+  padding:20px 0;
 }
 .right-icon {
   display: flex;
@@ -453,5 +587,12 @@
 }
 .space-around {
   justify-content: space-around;
+}
+/* .card4-content{
+  display: flex;
+  
+} */
+.card6-details{
+  padding-top:20px;
 }
 </style>
