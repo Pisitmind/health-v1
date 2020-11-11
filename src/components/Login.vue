@@ -8,9 +8,9 @@
                           <v-form ref="form" v-model="valid" lazy-validation>
                               <v-card class="elevation-12 pa-10" height="400">
                                   <v-img class="center" max-width="200px" src="../assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"></v-img>
-                                  <v-text-field v-model="name"  :counter="10" :rules="nameRules" label="USERNAME" placeholder="Enter your user name" required ></v-text-field>
-                                  <v-text-field v-model="password" type="password" :rules="passwordRules" labelcounter="10" label="PASSWORD" placeholder="Enter your password" required ></v-text-field>
-                                  <v-btn to="/" outline block color="Primary">login</v-btn>
+                                  <v-text-field v-model="name"  :counter="10" :rules="nameRules" label="USERNAME" color="#AD8DBB" placeholder="Enter your user name" required ></v-text-field>
+                                  <v-text-field v-model="password" type="password" :rules="passwordRules" labelcounter="10" label="PASSWORD" color="#AD8DBB" placeholder="Enter your password" required ></v-text-field>
+                                  <v-btn to="/" outline block class="white--text" color="purple lighten-2" >login</v-btn>
                               </v-card>
                           </v-form>
                       </v-flex>

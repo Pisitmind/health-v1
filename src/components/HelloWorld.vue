@@ -1,61 +1,51 @@
 <template>
   <v-container grid-list-lg-xl>
     <div class="card_el">
-      <v-card elevation="2" outlined height="auto">
+      <v-card elevation="2" outlined>
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
-              <div>
+              <div class="">
                 <p><strong>สมาชิกผู้ใช้</strong></p>
               </div>
               <div>
-                <v-btn class="white--text " small color="#AD8DBB"
-                  >วันนี้</v-btn
-                >
+                <v-btn class="white--text " small color="#AD8DBB">วันนี้</v-btn>
               </div>
               <div>
                 <v-menu
-        ref="menu"
-        v-model="menu"
-        :close-on-content-click="false"
-        :return-value.sync="date"
-        transition="scale-transition"
-        offset-y
-        min-width="290px"
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-text-field
-            color="#AD8DBB"
-            v-model="date"
-            label="select date"
-            prepend-icon="mdi-calendar"
-            v-bind="attrs"
-            v-on="on"
-          ></v-text-field>
-        </template>
-        <v-date-picker
-          v-model="date"
-          no-title
-          scrollable
-          color="#AD8DBB"
-        >
-          <v-spacer></v-spacer>
-          <v-btn
-            text
-            color="primary"
-            @click="menu = false"
-          >
-            Cancel
-          </v-btn>
-          <v-btn
-            text
-            color="primary"
-            @click="$refs.menu.save(date)"
-          >
-            OK
-          </v-btn>
-        </v-date-picker>
-      </v-menu>
+                  ref="menu"
+                  v-model="menu"
+                  :close-on-content-click="false"
+                  :return-value.sync="date"
+                  transition="scale-transition"
+                  offset-y
+                  min-width="290px"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                      color="#AD8DBB"
+                      v-model="date"
+                      label="select date"
+                      prepend-icon="mdi-calendar"
+                      v-bind="attrs"
+                      v-on="on"
+                    ></v-text-field>
+                  </template>
+                  <v-date-picker
+                    v-model="date"
+                    no-title
+                    scrollable
+                    color="#AD8DBB"
+                  >
+                    <v-spacer></v-spacer>
+                    <v-btn text color="primary" @click="menu = false">
+                      Cancel
+                    </v-btn>
+                    <v-btn text color="primary" @click="$refs.menu.save(date)">
+                      OK
+                    </v-btn>
+                  </v-date-picker>
+                </v-menu>
               </div>
             </div>
             <div class="card1-right">
@@ -75,41 +65,53 @@
               <v-card-text v-for="item in data_card1" :key="item.id">
                 <div class="male-content">
                   <div class="top-male-content">
-                    <div class="text-male" >
-                      <v-icon x-small :style="{'color': item.color}" >mdi-circle</v-icon>
-                      <v-icon :style="{'color': item.color}">{{item.icon}}</v-icon>
-                      <span ><strong>{{item.gender}}</strong></span>
+                    <div class="text-male">
+                      <v-icon x-small :style="{ color: item.color }"
+                        >mdi-circle</v-icon
+                      >
+                      <v-icon :style="{ color: item.color }">{{
+                        item.icon
+                      }}</v-icon>
+                      <span class="black--text"
+                        ><strong>{{ item.gender }}</strong></span
+                      >
                     </div>
-                    <div>
-                      {{item.data}}
+                    <div class="black--text ">
+                      <strong>{{ item.data }}</strong>
                     </div>
                   </div>
                   <div class="bot-male-content">
-                    <div class="male-subdt">
-                      {{ item.info}}
+                    <div class="male-subdt grey--text">
+                      {{ item.info }}
                     </div>
-                    <div>
-                      {{ item.percent}}
+                    <div class="percent-subdt grey--text">
+                      {{ item.percent }}
                     </div>
                   </div>
                 </div>
               </v-card-text>
             </v-card>
-            <v-card width="350" >
+            <v-card class="card1-subcard-3" width="350">
               <v-card-subtitle>
                 อุปกรณ์
               </v-card-subtitle>
-              <div class="card1-info-right pa-1" v-for="item in data_card1_info" :key="item.id">
+              <div
+                class="card-info-right pa-1"
+                v-for="item in data_card1_info"
+                :key="item.id"
+              >
                 <div class="brand-content">
                   <div class="text-brand">
-                    <v-icon x-small :style="{'color': item.color}">mdi-circle </v-icon>
-                    <span> {{item.name}}</span>
+                    <v-icon x-small :style="{ color: item.color }"
+                      >mdi-circle
+                    </v-icon>
+                    <span> {{ item.name }}</span>
                   </div>
                   <div>
-                    {{item.data}}
+                    {{ item.data }}
                   </div>
                   <div class="card1-percent">
-                    {{ item.percent}}
+                    {{ item.percent }}
                   </div>
                 </div>
               </div>
@@ -123,16 +125,36 @@
       <v-card elevation="2" outlined>
         <div class="card2">
           <div class="head-card2">
-            <p>ช่วงอายุ</p>
+            <p><strong>ช่วงอายุ</strong></p>
           </div>
           <div class="card2-content">
             <v-card elevation="1" class="card2-graph ">
               <canvas id="graph" width="" height="150px"></canvas>
             </v-card>
-            <v-card>
-              <v-card-title>
+           <v-card class="card1-subcard-3" width="350">
+              <v-card-subtitle>
                 เนื้อหา
-              </v-card-title>
+              </v-card-subtitle>
+              <div
+                class="card-info-right pa-1"
+                v-for="item in data_card1_info"
+                :key="item.id"
+              >
+                <div class="brand-content">
+                  <div class="text-brand">
+                    <v-icon x-small :style="{ color: item.color }"
+                      >mdi-circle
+                    </v-icon>
+                    <span> {{ item.name }}</span>
+                  </div>
+                  <div>
+                    {{ item.data }}
+                  </div>
+                  <div class="card1-percent">
+                    {{ item.percent }}
+                  </div>
+                </div>
+              </div>
             </v-card>
             <!-- <p>content</p> -->
           </div>
@@ -200,7 +222,7 @@
       </div>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined >
+      <v-card elevation="2" outlined>
         <div class="card2">
           <div class="head_card4">
             <div class="title_card4">
@@ -218,80 +240,78 @@
           </div>
           <div class="card4-content">
             <div class="card4-l-content">
-              <div>
-                
-              </div>
+              <div></div>
             </div>
             <div class="card4-r-content">
-                <div class="graph6-details px-2">
-              <div class="progress-el">
-                <v-progress-linear
-                  color="purple darken-2"
-                  rounded
-                  value="100"
-                ></v-progress-linear>
+              <div class="graph6-details px-2">
+                <div class="progress-el">
+                  <v-progress-linear
+                    color="purple darken-2"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                  <span class="text-top">56.7 กก.</span>
+                  <v-progress-linear
+                    color="blue darken-2"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                  <span>76.6 กก.</span>
+                  <v-progress-linear
+                    color="green darken-2"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                  <span>85.8 กก.</span>
+                  <v-progress-linear
+                    color="yellow darken-2"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                  <span>98.0 กก.</span>
+                  <v-progress-linear
+                    color="red darken-2"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                </div>
                 <br />
-                <span class="text-top">56.7 กก.</span>
-                <v-progress-linear
-                  color="blue darken-2"
-                  rounded
-                  value="100"
-                ></v-progress-linear>
-                <br />
-                <span>76.6 กก.</span>
-                <v-progress-linear
-                  color="green darken-2"
-                  rounded
-                  value="100"
-                ></v-progress-linear>
-                <br />
-                <span>85.8 กก.</span>
-                <v-progress-linear
-                  color="yellow darken-2"
-                  rounded
-                  value="100"
-                ></v-progress-linear>
-                <br />
-                <span>98.0 กก.</span>
-                <v-progress-linear
-                  color="red darken-2"
-                  rounded
-                  value="100"
-                ></v-progress-linear>
+                <div class="progress-el icon-set">
+                  <div class="i-human">
+                    <div><v-icon>mdi-human-male</v-icon></div>
+                    <div><p>ผอมมาก</p></div>
+                  </div>
+                  <div class="i-human">
+                    <div><v-icon>mdi-human-male</v-icon></div>
+                    <div><p>ปกติ</p></div>
+                  </div>
+                  <div class="i-human">
+                    <div><v-icon>mdi-human-male</v-icon></div>
+                    <div><p>อวบ</p></div>
+                  </div>
+                  <div class="i-human">
+                    <div><v-icon>mdi-human-male</v-icon></div>
+                    <div><p>อ้วน ระยะที่1</p></div>
+                  </div>
+                  <div class="i-human">
+                    <div><v-icon>mdi-human-male</v-icon></div>
+                    <div><p>อ้วน ระยะที่2</p></div>
+                  </div>
+                </div>
               </div>
-              <br />
-              <div class="progress-el icon-set">
-                <div class="i-human">
-                  <div><v-icon>mdi-human-male</v-icon></div>
-                  <div><p>ผอมมาก</p></div>
-                </div>
-                <div class="i-human">
-                  <div><v-icon>mdi-human-male</v-icon></div>
-                  <div><p>ปกติ</p></div>
-                </div>
-                <div class="i-human">
-                  <div><v-icon>mdi-human-male</v-icon></div>
-                  <div><p>อวบ</p></div>
-                </div>
-                <div class="i-human">
-                  <div><v-icon>mdi-human-male</v-icon></div>
-                  <div><p>อ้วน ระยะที่1</p></div>
-                </div>
-                <div class="i-human">
-                  <div><v-icon>mdi-human-male</v-icon></div>
-                  <div><p>อ้วน ระยะที่2</p></div>
-                </div>
-              </div>
-            </div>
-            <v-container>
-              <v-row v-for="item in items" :key="item.id">
-                <v-col v-for="n in 5" :key="n">
-                  <v-card class="black--text" outlined tile>
-                    {{ item.data[n - 1] }}
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
+              <v-container>
+                <v-row v-for="item in items" :key="item.id">
+                  <v-col v-for="n in 5" :key="n">
+                    <v-card class="black--text" outlined tile>
+                      {{ item.data[n - 1] }}
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-container>
             </div>
             <!-- <p>content</p> -->
           </div>
@@ -306,6 +326,7 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx0 = document.getElementById("graph0").getContext("2d");
+    
     var bar0 = new Chart(ctx0, {
       type: "doughnut",
       data: {
@@ -317,8 +338,16 @@ export default {
         ],
         labels: ["ชาย", "หญิง"],
       },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+      },
     });
+    
     console.log(bar0);
+    
     var ctx = document.getElementById("graph").getContext("2d");
     var bar = new Chart(ctx, {
       type: "bar",
@@ -327,12 +356,12 @@ export default {
         backgroundColor: ["#ff6384", "#36a2eb"],
         datasets: [
           {
-            label: "Man",
+            label: "ชาย",
             backgroundColor: "#9ACDE9",
             data: [638, 557, 784, 652, 145, 24],
           },
           {
-            label: "Woman",
+            label: "หญิง",
             backgroundColor: "#F8C5C5",
             data: [270, 250, 275, 480, 145, 40],
           },
@@ -379,33 +408,50 @@ export default {
     console.log(bar3);
   },
   date: new Date().toISOString().substr(0, 10),
-      menu: false,
-      modal: false,
-      menu2: false,
+  menu: false,
+  modal: false,
+  menu2: false,
   data() {
-    
     return {
       items: [
         { id: "1", gender: "ชาย", data: ["27", "98", "780", "34", "0"] },
         { id: "2", gender: "หญิง", data: [12, 132, 560, 22, 0] },
       ],
       data_card1: [
-        { id: "1",color:'#9ACDE9',icon:'mdi-human-male', gender: "ชาย", data:"1471" ,info:"ค่าเฉลี่ยผู้ใช้งานเพศชายรายวัน",percent:"63%" },
-        { id: "2",color:'#F8C5C5',icon:'mdi-human-female', gender: "หญิง", data: "1329",info:"ค่าเฉลี่ยผู้ใช้งานเพศหญิงรายวัน",percent:"27%" },
+        {
+          id: "1",
+          color: "#359BD3",
+          icon: "mdi-human-male",
+          gender: "ชาย",
+          data: "1,471",
+          info: "ค่าเฉลี่ยผู้ใช้งานเพศชายรายวัน",
+          percent: "63%",
+        },
+        {
+          id: "2",
+          color: "#F28C8C",
+          icon: "mdi-human-female",
+          gender: "หญิง",
+          data: "1,329",
+          info: "ค่าเฉลี่ยผู้ใช้งานเพศหญิงรายวัน",
+          percent: "27%",
+        },
       ],
-      data_card1_info:[
-        { name:'Garmin',color:'#2289D8',data:'395',percent:'14.1%'},
-        { name:'Suunto',color:'#DA2121',data:'422',percent:'15%'},
-        { name:'Xiaomi',color:'#FF850A',data:'796',percent:'28.4%'},
-        { name:'Honor',color:'#FF3E80',data:'321',percent:'11.4%'},
-        { name:'Apple Watch',color:'#9C9C9C',data:'844',percent:'31.1%'},
-        { name:'อื่นๆ',color:'#58BFAE',data:'22',percent:'0.7%'},
+      data_card1_info: [
+        { name: "Garmin", color: "#2289D8", data: "395", percent: "14.1%" },
+        { name: "Suunto", color: "#DA2121", data: "422", percent: "15%" },
+        { name: "Xiaomi", color: "#FF850A", data: "796", percent: "28.4%" },
+        { name: "Honor", color: "#FF3E80", data: "321", percent: "11.4%" },
+        {
+          name: "Apple Watch",
+          color: "#9C9C9C",
+          data: "844",
+          percent: "31.1%",
+        },
+        { name: "อื่นๆ", color: "#58BFAE", data: "22", percent: "0.7%" },
       ],
-      data_card2: [
-        {id:"1"},
-      ],
+      data_card2: [{ id: "1" }],
     };
-    
   },
 };
 </script>
@@ -415,36 +461,31 @@ export default {
   display: flex;
   flex-direction: column;
 } */
+
+.v-text-field {
+  padding: 0;
+}
 .head-card1 {
   display: flex;
-  /* justify-items: space-between; */
   justify-content: space-between;
+  // padding-bottom:20px;
 }
-.card1-root{
-  padding-bottom:20px;
-}
-.card1-percent{
-  padding-right:10px;
-}
-.head-card2 {
-  display: flex;
-  justify-content: start;
+.card1-root {
   padding: 20px;
 }
-.card2-graph {
-  width: 60%;
+.card1-percent {
+  padding-right: 10px;
 }
+
 .card1-left {
   display: flex;
   width: 100%;
   justify-content: space-around;
   justify-items: space-around;
-  padding: 20px;
 }
 .card1-right {
   display: flex;
   width: 100%;
-  padding: 10px;
   justify-content: center;
   align-items: right;
 }
@@ -453,21 +494,63 @@ export default {
   justify-content: space-around;
   padding-top: 20px;
 }
-.card1-info-right{
-  font-size:12px;
+.card-info-right {
+  font-size: 12px;
 }
-.card3-content {
-  display: flex;
-  justify-content: space-around;
+.card1-subcard-3 {
+  padding-bottom: 15px;
 }
-.text-brand{
+
+.text-brand {
   padding-left: 10px;
+}
+.head-card2 {
+  display: flex;
+  justify-content: start;
+}
+.card2 {
+  padding: 20px;
+}
+.card2-graph {
+  width: 60%;
 }
 .card2-content {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
 }
+.head_card3 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px;
+}
+.card3-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sex-age-title-card3 {
+  display: flex;
+  /* width: 50%; */
+  /* background-color:violet; */
+}
+.sex-title {
+  padding: 0 30px;
+}
+.age-title {
+  padding: 0 30px;
+}
+.icon-card3 {
+  padding: 0 0 0 50px;
+  /* width: 100%; */
+  /* padding: 10px; */
+}
+.title-card3 {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-around;
+}
+
 .right-icon {
   display: flex;
   padding-left: 90%;
@@ -494,6 +577,9 @@ export default {
   padding-right: 40px;
   padding-left: 15px;
 }
+.percent-subdt {
+  font-size: 11px;
+}
 
 .item-set {
   display: flex;
@@ -516,32 +602,7 @@ export default {
 .pd-10 {
   padding: 10px;
 }
-.head_card3 {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 10px;
-}
-.sex-age-title-card3 {
-  display: flex;
-  /* width: 50%; */
-  /* background-color:violet; */
-}
-.sex-title {
-  padding: 0 30px;
-}
-.age-title {
-  padding: 0 30px;
-}
-.icon-card3 {
-  padding: 0 0 0 50px;
-  /* width: 100%; */
-  /* padding: 10px; */
-}
-.title-card3 {
-  display: flex;
-  /* width: 100%; */
-  justify-content: space-around;
-}
+
 .card_el {
   padding: 10px 10px;
   margin-bottom: 5px;
@@ -571,10 +632,10 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
-.card4-l-content{
+.card4-l-content {
   width: 20%;
 }
-.card4-r-content{
+.card4-r-content {
   width: 80%;
 }
 .sex_card4 {
@@ -587,6 +648,9 @@ export default {
   display: flex;
   flex-direction: row;
   width: 20%;
+}
+.card4-content {
+  display: flex;
 }
 .flex {
   display: flex;
@@ -603,9 +667,7 @@ export default {
 .space-around {
   justify-content: space-around;
 }
-.card4-content{
-  display: flex;
-}
+
 .graph6-details {
   padding-top: 20px;
 }

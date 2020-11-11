@@ -18,7 +18,7 @@
                   </div>
                   <div class="icon-profile">
                     <v-icon>mdi-bell</v-icon>
-                    <v-btn class="ma-2" text icon color="blue lighten-2" to="/login"><v-icon >mdi-cog</v-icon></v-btn>
+                    <v-btn class="ma-1" icon rounded raised color="blue lighten-2" to="/login"><v-icon >mdi-cog</v-icon></v-btn>
                   </div>
 
                 </div>
@@ -40,6 +40,7 @@
           :key="item.title"
           link
           router :to="item.route"
+          active-class="white--text purple rounded-l-lg"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -57,6 +58,7 @@
           :key="item2.title"
           link
           router :to="item2.route"
+          active-class="white--text purple rounded-l-lg"
           >
             <v-list-item-icon>
             <v-icon>{{ item2.icon }}</v-icon>
@@ -109,15 +111,25 @@ export default {
 
 
 <style scope>
+#nav a:link, a:visited {
+    font-weight: bold;
+    color: rgb(122, 1, 133);
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 .title{
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 
 }
 .title-list {
   display: flex;
   flex-direction: row;
 }
-
+.pro-name{
+  font-size:12px;
+}
 .center {
   display: block;
   margin-left: auto;
