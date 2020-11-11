@@ -1,19 +1,62 @@
 <template>
   <v-container grid-list-lg-xl>
     <div class="card_el">
-      <v-card elevation="2" outlined height="350">
+      <v-card elevation="2" outlined height="auto">
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
               <div>
-                <p>สมาชิกผู้ใช้</p>
+                <p><strong>สมาชิกผู้ใช้</strong></p>
               </div>
               <div>
-                <v-btn class="white--text" color="purple darken-2"
+                <v-btn class="white--text " small color="#AD8DBB"
                   >วันนี้</v-btn
                 >
               </div>
-              <div><h3>ปฏิทิน</h3></div>
+              <div>
+                <v-menu
+        ref="menu"
+        v-model="menu"
+        :close-on-content-click="false"
+        :return-value.sync="date"
+        transition="scale-transition"
+        offset-y
+        min-width="290px"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-text-field
+            color="#AD8DBB"
+            v-model="date"
+            label="select date"
+            prepend-icon="mdi-calendar"
+            v-bind="attrs"
+            v-on="on"
+          ></v-text-field>
+        </template>
+        <v-date-picker
+          v-model="date"
+          no-title
+          scrollable
+          color="#AD8DBB"
+        >
+          <v-spacer></v-spacer>
+          <v-btn
+            text
+            color="primary"
+            @click="menu = false"
+          >
+            Cancel
+          </v-btn>
+          <v-btn
+            text
+            color="primary"
+            @click="$refs.menu.save(date)"
+          >
+            OK
+          </v-btn>
+        </v-date-picker>
+      </v-menu>
+              </div>
             </div>
             <div class="card1-right">
               <div class="right-icon">
@@ -29,125 +72,44 @@
               <v-card-subtitle>
                 ตัวบ่งชี้
               </v-card-subtitle>
-              <v-card-text>
+              <v-card-text v-for="item in data_card1" :key="item.id">
                 <div class="male-content">
                   <div class="top-male-content">
-                    <div class="text-male">
-                      <v-icon x-small>mdi-circle</v-icon>
-                      <v-icon>mdi-human-male</v-icon>
-                      <!-- <v-icon>mdi-human-female</v-icon> -->
-                      <span>ชาย</span>
+                    <div class="text-male" >
+                      <v-icon x-small :style="{'color': item.color}" >mdi-circle</v-icon>
+                      <v-icon :style="{'color': item.color}">{{item.icon}}</v-icon>
+                      <span ><strong>{{item.gender}}</strong></span>
                     </div>
                     <div>
-                      1,471
+                      {{item.data}}
                     </div>
                   </div>
                   <div class="bot-male-content">
                     <div class="male-subdt">
-                      ค่าเฉลี่ยผู้ใช้งานเพศชายรายวัน
+                      {{ item.info}}
                     </div>
                     <div>
-                      63%
-                    </div>
-                  </div>
-                </div>
-                <div class="female-content">
-                  <div class="top-male-content">
-                    <div class="text-male">
-                      <v-icon x-small>mdi-circle</v-icon>
-                      <v-icon>mdi-human-female</v-icon>
-                      <span>หญิง</span>
-                    </div>
-                    <div>
-                      1,329
-                    </div>
-                  </div>
-                  <div class="bot-male-content">
-                    <div class="male-subdt">
-                      ค่าเฉลี่ยผู้ใช้งานเพศหญิงรายวัน
-                    </div>
-                    <div>
-                      27%
+                      {{ item.percent}}
                     </div>
                   </div>
                 </div>
               </v-card-text>
             </v-card>
-            <v-card width="350">
+            <v-card width="350" >
               <v-card-subtitle>
                 อุปกรณ์
               </v-card-subtitle>
-              <div class="pd-10">
+              <div class="card1-info-right pa-1" v-for="item in data_card1_info" :key="item.id">
                 <div class="brand-content">
                   <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> Garmin</span>
+                    <v-icon x-small :style="{'color': item.color}">mdi-circle </v-icon>
+                    <span> {{item.name}}</span>
                   </div>
                   <div>
-                    395
+                    {{item.data}}
                   </div>
-                  <div>
-                    14.1%
-                  </div>
-                </div>
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> Suunto</span>
-                  </div>
-                  <div>
-                    422
-                  </div>
-                  <div>
-                    15%
-                  </div>
-                </div>
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> Xiaomi</span>
-                  </div>
-                  <div>
-                    796
-                  </div>
-                  <div>
-                    28.4%
-                  </div>
-                </div>
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> Honor</span>
-                  </div>
-                  <div class="center-text">
-                    <span>321</span>
-                  </div>
-                  <div class="center-text">
-                    11.4%
-                  </div>
-                </div>
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> Apple Watch</span>
-                  </div>
-                  <div>
-                    <span class="text-center">844</span>
-                  </div>
-                  <div>
-                    31.1%
-                  </div>
-                </div>
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small>mdi-circle </v-icon>
-                    <span> อื่นๆ</span>
-                  </div>
-                  <div class="center-text">
-                    22
-                  </div>
-                  <div class="center-text">
-                    0.7%
+                  <div class="card1-percent">
+                    {{ item.percent}}
                   </div>
                 </div>
               </div>
@@ -196,21 +158,12 @@
                   </div>
                 </div>
               </div>
-              <div class="card1-content">
+              <div class="card3-content">
                 <v-card>
-                  <v-card-subtitle>
-                    ตัวบ่งชี้
-                  </v-card-subtitle>
                   <v-card-text>
-                    <canvas id="graph3-1" width="" height="180"></canvas>
+                    <canvas id="graph3-1" width="" height="200px"></canvas>
                   </v-card-text>
                 </v-card>
-                <v-card>
-                  <v-card-title>
-                    เนื้อหา
-                  </v-card-title>
-                </v-card>
-                <!-- <p>content</p> -->
               </div>
             </div>
           </v-card>
@@ -270,7 +223,7 @@
               </div>
             </div>
             <div class="card4-r-content">
-                <div class="card6-details px-2">
+                <div class="graph6-details px-2">
               <div class="progress-el">
                 <v-progress-linear
                   color="purple darken-2"
@@ -278,28 +231,28 @@
                   value="100"
                 ></v-progress-linear>
                 <br />
-                <span class="text-top">56.7</span>
+                <span class="text-top">56.7 กก.</span>
                 <v-progress-linear
                   color="blue darken-2"
                   rounded
                   value="100"
                 ></v-progress-linear>
                 <br />
-                <span>76.6</span>
+                <span>76.6 กก.</span>
                 <v-progress-linear
                   color="green darken-2"
                   rounded
                   value="100"
                 ></v-progress-linear>
                 <br />
-                <span>85.8</span>
+                <span>85.8 กก.</span>
                 <v-progress-linear
                   color="yellow darken-2"
                   rounded
                   value="100"
                 ></v-progress-linear>
                 <br />
-                <span>98.0</span>
+                <span>98.0 กก.</span>
                 <v-progress-linear
                   color="red darken-2"
                   rounded
@@ -424,41 +377,35 @@ export default {
       },
     });
     console.log(bar3);
-    // var ctx_line = document.getElementById("graphline").getContext("2d");
-    // var bar_line = new Chart(ctx_line, {
-    //   type: "line",
-    //   options: {
-    //     scales: {
-    //       yAxes: [
-    //         {
-    //           display: false,
-    //         },
-    //       ],
-    //     },
-    //   },
-    //   data: {
-    //     datasets: [
-    //       {
-    //         data: [10, 10, 10, 10, 10],
-    //         backgroundColor: ["purple", "blue", "green", "orange", "red"],
-    //         above: ["purple", "blue", "green", "orange", "red"],
-    //         below: ["purple", "blue", "green", "orange", "red"],
-    //         borderColor: ["purple", "blue", "green", "orange", "red"],
-    //       },
-    //     ],
-    //     labels: ["0", "56.7", "76.6", "85.8", "98.0"],
-    //   },
-    // });
-    // console.log(bar_line);
   },
+  date: new Date().toISOString().substr(0, 10),
+      menu: false,
+      modal: false,
+      menu2: false,
   data() {
+    
     return {
       items: [
         { id: "1", gender: "ชาย", data: ["27", "98", "780", "34", "0"] },
         { id: "2", gender: "หญิง", data: [12, 132, 560, 22, 0] },
       ],
-      data_male: [{}],
+      data_card1: [
+        { id: "1",color:'#9ACDE9',icon:'mdi-human-male', gender: "ชาย", data:"1471" ,info:"ค่าเฉลี่ยผู้ใช้งานเพศชายรายวัน",percent:"63%" },
+        { id: "2",color:'#F8C5C5',icon:'mdi-human-female', gender: "หญิง", data: "1329",info:"ค่าเฉลี่ยผู้ใช้งานเพศหญิงรายวัน",percent:"27%" },
+      ],
+      data_card1_info:[
+        { name:'Garmin',color:'#2289D8',data:'395',percent:'14.1%'},
+        { name:'Suunto',color:'#DA2121',data:'422',percent:'15%'},
+        { name:'Xiaomi',color:'#FF850A',data:'796',percent:'28.4%'},
+        { name:'Honor',color:'#FF3E80',data:'321',percent:'11.4%'},
+        { name:'Apple Watch',color:'#9C9C9C',data:'844',percent:'31.1%'},
+        { name:'อื่นๆ',color:'#58BFAE',data:'22',percent:'0.7%'},
+      ],
+      data_card2: [
+        {id:"1"},
+      ],
     };
+    
   },
 };
 </script>
@@ -472,6 +419,12 @@ export default {
   display: flex;
   /* justify-items: space-between; */
   justify-content: space-between;
+}
+.card1-root{
+  padding-bottom:20px;
+}
+.card1-percent{
+  padding-right:10px;
 }
 .head-card2 {
   display: flex;
@@ -500,6 +453,16 @@ export default {
   justify-content: space-around;
   padding-top: 20px;
 }
+.card1-info-right{
+  font-size:12px;
+}
+.card3-content {
+  display: flex;
+  justify-content: space-around;
+}
+.text-brand{
+  padding-left: 10px;
+}
 .card2-content {
   display: flex;
   justify-content: space-around;
@@ -512,12 +475,6 @@ export default {
 .male-content {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-}
-.female-content {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
 }
 .top-male-content {
   display: flex;
@@ -649,7 +606,7 @@ export default {
 .card4-content{
   display: flex;
 }
-.card6-details {
+.graph6-details {
   padding-top: 20px;
 }
 </style>
