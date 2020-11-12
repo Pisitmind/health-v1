@@ -50,7 +50,9 @@
             </div>
             <div class="card1-right">
               <div class="right-icon">
-                <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                <v-btn x-small icon fab>
+                  <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                </v-btn>
               </div>
             </div>
           </div>
@@ -60,7 +62,9 @@
             </div>
             <v-card>
               <v-card-subtitle>
-                ตัวบ่งชี้
+                <span class="topic-name-card ">
+                  ตัวบ่งชี้
+                </span>
               </v-card-subtitle>
               <v-card-text v-for="item in data_card1" :key="item.id">
                 <div class="male-content">
@@ -91,30 +95,33 @@
                 </div>
               </v-card-text>
             </v-card>
-            <v-card class="card1-subcard-3" width="350">
+            <v-card class="card1-subcard-3" width="" height="">
               <v-card-subtitle>
-                อุปกรณ์
+                <span class="topic-name-card pl-5">
+                  อุปกรณ์
+                </span>
               </v-card-subtitle>
-              <div
-                class="card-info-right pa-1"
-                v-for="item in data_card1_info"
-                :key="item.id"
-              >
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small :style="{ color: item.color }"
-                      >mdi-circle
-                    </v-icon>
-                    <span> {{ item.name }}</span>
-                  </div>
-                  <div>
-                    {{ item.data }}
-                  </div>
-                  <div class="card1-percent">
-                    {{ item.percent }}
-                  </div>
+              <v-card-text class="pa-1">
+                <div>
+                  <table class="card1-table">
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                    <tr v-for="item in data_card1_info" :key="item.name">
+                      <td>
+                        <v-icon x-small :style="{ color: item.color }"
+                          >mdi-circle
+                        </v-icon>
+                        {{ item.name }}
+                      </td>
+                      <td>{{ item.data }}</td>
+                      <td>{{ item.percent }}</td>
+                    </tr>
+                  </table>
                 </div>
-              </div>
+              </v-card-text>
             </v-card>
             <!-- <p>content</p> -->
           </div>
@@ -128,33 +135,38 @@
             <p><strong>ช่วงอายุ</strong></p>
           </div>
           <div class="card2-content">
-            <v-card elevation="1" class="card2-graph ">
+            <div  class="card2-graph ">
               <canvas id="graph" width="" height="150px"></canvas>
-            </v-card>
-           <v-card class="card1-subcard-3" width="350">
+            </div>
+            <v-card class="card2-subcard-3" width="39%" height="">
               <v-card-subtitle>
-                เนื้อหา
+                <span class="topic-name-card pl-5">
+                  ตัวบ่งชี้
+                </span>
               </v-card-subtitle>
-              <div
-                class="card-info-right pa-1"
-                v-for="item in data_card1_info"
-                :key="item.id"
-              >
-                <div class="brand-content">
-                  <div class="text-brand">
-                    <v-icon x-small :style="{ color: item.color }"
-                      >mdi-circle
-                    </v-icon>
-                    <span> {{ item.name }}</span>
-                  </div>
-                  <div>
-                    {{ item.data }}
-                  </div>
-                  <div class="card1-percent">
-                    {{ item.percent }}
-                  </div>
+              <v-card-text class="pa-1">
+                 <div class="card-info-right pa-1">
+                  <table class="card2-table">
+                    <tr>
+                      <th>ช่วงอายุ</th>
+                      <th>ชาย</th>
+                      <th>หญิง</th>
+                      <th>เฉลี่ยรวม</th>
+                    </tr>
+                    <tr v-for="item in data_card2_info" :key="item.id">
+                      <td class="two-data-card2">
+                        <v-icon x-small :style="{ color: item.color }"
+                          >mdi-circle
+                        </v-icon>
+                        {{ item.name }}
+                      </td>
+                      <td>{{ item.dataMan }}</td>
+                      <td>{{ item.dataWman }}</td>
+                      <td> {{ item.avg }}</td>
+                    </tr>
+                  </table>
                 </div>
-              </div>
+              </v-card-text>
             </v-card>
             <!-- <p>content</p> -->
           </div>
@@ -165,55 +177,106 @@
       <div class="card-split">
         <div class="card_l">
           <v-card elevation="2" outlined height="350">
-            <div class="card3">
-              <div class="head_card3">
-                <div class="title-card3">
-                  <div class=""><p>การก้าว</p></div>
-                </div>
-                <div class="sex-age-title-card3">
-                  <div class="sex-title"><p>เพศ</p></div>
-                  <div class="age-title"><p>อายุ</p></div>
-                </div>
-                <div class="icon-card3">
-                  <div class="exit-icon-card3">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+            <div class="card3 c_l">
+              <div class="card3_headNsub">
+                <div class="head_card3_l">
+                  <div class="title-card3">
+                    <div style="padding-right:10px;">
+                      <v-icon large color="#AD8DBB">mdi-shoe-print</v-icon>
+                    </div>
+                    <div class="card3-bot-text ">
+                      <span><strong>การก้าว</strong></span>
+                    </div>
+                  </div>
+                  <div class="sex-age-title-card3">
+                    <div class="sex-title">
+                      <v-btn class="white--text " small color="#AD8DBB"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age-title">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        ><span>อายุ</span></v-btn
+                      >
+                    </div>
+                  </div>
+                  <div class="icon-card">
+                    <div class="exit-icon-card3">
+                      <v-btn x-small icon fab>
+                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                      </v-btn>
+                    </div>
                   </div>
                 </div>
+                <div class="card3_line2 grey--text">
+                  <span
+                    >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
+                  >
+                </div>
               </div>
+
               <div class="card3-content">
-                <v-card>
+                <div>
                   <v-card-text>
                     <canvas id="graph3-1" width="" height="200px"></canvas>
                   </v-card-text>
-                </v-card>
+                </div>
               </div>
             </div>
           </v-card>
         </div>
         <div class="card_r">
           <v-card elevation="2" outlined height="350">
-            <div class="card3">
-              <div class="head_card3">
-                <div class="title-card3">
-                  <div class=""><p>การเผาผลาญ</p></div>
-                </div>
-                <div class="sex-age-title-card3">
-                  <div class="sex-title"><p>เพศ</p></div>
-                  <div class="age-title"><p>อายุ</p></div>
-                </div>
-                <div class="icon-card3">
-                  <div class="exit-icon-card3">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+            <div class="card3 c_r">
+              <div class="card3_headNsub">
+                <div class="head_card3_r">
+                  <div class="title-card3">
+                    <div style="padding-right:10px;">
+                      <v-icon large color="#F57C00">mdi-fire</v-icon>
+                    </div>
+                    <div class="card3-bot-text ">
+                      <span><strong>การเผาผลาญ</strong></span>
+                    </div>
                   </div>
+                  <div class="sex-age-title-card3">
+                    <div class="sex-title">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age-title">
+                      <v-btn class="white--text " small color="#AD8DBB"
+                        ><span>อายุ</span></v-btn
+                      >
+                    </div>
+                  </div>
+                  <div class="icon-card">
+                    <div class="exit-icon-card3">
+                      <v-btn x-small icon fab>
+                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                      </v-btn>
+                    </div>
+                  </div>
+                </div>
+                <div class="card3_line2 grey--text">
+                  <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุคน</span>
                 </div>
               </div>
               <div class="card1-content">
-                <v-card>
+                <div>
                   <v-card-title>
                     <canvas id="graph1" width="" height="200px"></canvas>
                   </v-card-title>
                   <v-card-content> </v-card-content>
-                </v-card>
+                </div>
                 <!-- <p>content</p> -->
               </div>
             </div>
@@ -223,19 +286,47 @@
     </div>
     <div class="card_el">
       <v-card elevation="2" outlined>
-        <div class="card2">
-          <div class="head_card4">
-            <div class="title_card4">
-              <div class="h_card4"><p>สัดส่วนน้ำหนัก</p></div>
-              <div class="sexnage_card4">
-                <div class="sex_card4"><p>เพศ</p></div>
-                <div class="age_card4"><p>อายุ</p></div>
+        <div class="card5">
+          <div>
+            <div class="head_card4">
+              <div class="title_card4">
+                <div class="card4_nameNicon">
+                  <div style="padding-right:10px;">
+                    <v-icon color="#009688">mdi-scale</v-icon>
+                  </div>
+                  <div class="card3-bot-text ">
+                    <span><strong>สัดส่วนน้ำหนัก</strong></span>
+                  </div>
+                </div>
+                <div class="card4_head_btn">
+                  <div class="sexnage_card4">
+                    <div class="sex_card4">
+                      <v-btn class="white--text " small color="#AD8DBB"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age_card4">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        ><span>อายุ</span></v-btn
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-card">
+                <div class="exit-icon-card3">
+                  <v-btn x-small icon fab>
+                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </div>
               </div>
             </div>
-            <div class="icon-card3 card4">
-              <div class="exit-icon-card3">
-                <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-              </div>
+            <div class="card3_line2 grey--text">
+              <span>สัดส่วนน้ำหนักร่างกาย</span>
             </div>
           </div>
           <div class="card4-content">
@@ -246,33 +337,64 @@
               <div class="graph6-details px-2">
                 <div class="progress-el">
                   <v-progress-linear
+                    color="none"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                  <span class="text-top">56.7กก.</span>
+                  <v-progress-linear
+                    color="none"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                   <span class="text-top">76.6กก.</span>
+                  <v-progress-linear
+                    color="none"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                   <span class="text-top">85.8กก.</span>
+                  <v-progress-linear
+                    color="none"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                  <br />
+                   <span class="text-top">98.0กก.</span>
+                  <v-progress-linear
+                    color="none"
+                    rounded
+                    value="100"
+                  ></v-progress-linear>
+                </div>
+                <div class="progress-el">
+                  <v-progress-linear
                     color="purple darken-2"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                  <span class="text-top">56.7 กก.</span>
                   <v-progress-linear
                     color="blue darken-2"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                  <span>76.6 กก.</span>
                   <v-progress-linear
                     color="green darken-2"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                  <span>85.8 กก.</span>
                   <v-progress-linear
                     color="yellow darken-2"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                  <span>98.0 กก.</span>
                   <v-progress-linear
                     color="red darken-2"
                     rounded
@@ -306,9 +428,9 @@
               <v-container>
                 <v-row v-for="item in items" :key="item.id">
                   <v-col v-for="n in 5" :key="n">
-                    <v-card class="black--text" outlined tile>
+                    <table class="black--text" outlined tile>
                       {{ item.data[n - 1] }}
-                    </v-card>
+                    </table>
                   </v-col>
                 </v-row>
               </v-container>
@@ -326,7 +448,7 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx0 = document.getElementById("graph0").getContext("2d");
-    
+
     var bar0 = new Chart(ctx0, {
       type: "doughnut",
       data: {
@@ -345,9 +467,9 @@ export default {
         },
       },
     });
-    
+
     console.log(bar0);
-    
+
     var ctx = document.getElementById("graph").getContext("2d");
     var bar = new Chart(ctx, {
       type: "bar",
@@ -395,7 +517,7 @@ export default {
     var bar3 = new Chart(ctx3, {
       type: "horizontalBar",
       data: {
-        labels: ["man", "woman"],
+        labels: ["ชาย", "หญิง"],
         datasets: [
           {
             label: "ก้าว",
@@ -450,7 +572,50 @@ export default {
         },
         { name: "อื่นๆ", color: "#58BFAE", data: "22", percent: "0.7%" },
       ],
-      data_card2: [{ id: "1" }],
+      data_card2_info: [
+        {
+          name: "18-20",
+          color: "#58BFAE",
+          dataMan: "638",
+          dataWman: "270",
+          avg: "22.7%",
+        },
+        {
+          name: "21-30",
+          color: "#FF3E80",
+          dataMan: "557",
+          dataWman: "250",
+          avg: "19.9%",
+        },
+        {
+          name: "31-40",
+          color: "#FF850A",
+          dataMan: "784",
+          dataWman: "275",
+          avg: "28%",
+        },
+        {
+          name: "41-50",
+          color: "#DA2121",
+          dataMan: "652",
+          dataWman: "480",
+          avg: "23.2%",
+        },
+        {
+          name: "51-60",
+          color: "#B4B4B4",
+          dataMan: "145",
+          dataWman: "145",
+          avg: "5.1%",
+        },
+        {
+          name: "60ขึ้นไป",
+          color: "#2289D8",
+          dataMan: "24",
+          dataWman: "40",
+          avg: "1.1%",
+        },
+      ],
     };
   },
 };
@@ -461,9 +626,35 @@ export default {
   display: flex;
   flex-direction: column;
 } */
-
 .v-text-field {
-  padding: 0;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+th {
+  text-align: center;
+}
+.card1-root td {
+  padding: 0 25px;
+  text-align: left;
+}
+.card1-table {
+  font-size: 12px;
+  color: #5b5b5b;
+}
+.card2-table{
+  font-size:12px;
+  color: #5b5b5b;
+  td {
+  padding: 0 26px;
+  text-align: left;
+}
+
+}
+.topic-name-card {
+  color: #ad8dbb;
+}
+.two-data-card2{
+  padding:2px 0px;
 }
 .head-card1 {
   display: flex;
@@ -497,50 +688,82 @@ export default {
 .card-info-right {
   font-size: 12px;
 }
+.pdr-5 {
+  padding: 10px;
+}
 .card1-subcard-3 {
   padding-bottom: 15px;
 }
-
+.set-center {
+  margin: auto;
+  width: 90%;
+}
 .text-brand {
   padding-left: 10px;
 }
 .head-card2 {
   display: flex;
   justify-content: start;
+  padding-left: 10px;
 }
 .card2 {
   padding: 20px;
 }
 .card2-graph {
   width: 60%;
+  padding-right: 10px;
+}
+.card2-subcard-3{
+  padding-left:10px;
 }
 .card2-content {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
 }
-.head_card3 {
+.text-ageRange {
+  padding-left: 15px;
+}
+.head_card3_l {
   display: flex;
   justify-content: space-around;
-  padding: 10px 10px;
+  padding: 20px 10px 0px 10px;
+}
+.head_card3_r {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px 0px 10px;
+}
+.subtext-card3 {
+  display: flex;
+  justify-content: start;
+  padding: 0px 10px;
 }
 .card3-content {
   display: flex;
   justify-content: space-around;
 }
 
+.card3-bot-text {
+  display: flex;
+  justify-content: center;
+}
+.card3_line2 {
+  padding-left: 30px;
+  font-size: 11px;
+}
 .sex-age-title-card3 {
   display: flex;
   /* width: 50%; */
   /* background-color:violet; */
 }
 .sex-title {
-  padding: 0 30px;
+  padding: 0 10px 0 30px;
 }
 .age-title {
-  padding: 0 30px;
+  padding: 0 30px 10px 0;
 }
-.icon-card3 {
+.icon-card {
   padding: 0 0 0 50px;
   /* width: 100%; */
   /* padding: 10px; */
@@ -595,8 +818,10 @@ export default {
 .brand-content {
   display: flex;
   flex-direction: row;
+  // justify-content: space-around;
   justify-content: space-between;
-  text-align: center;
+  margin: 0 auto;
+  // text-align: left;
 }
 
 .pd-10 {
@@ -621,16 +846,20 @@ export default {
   /* margin-left:10px; */
   padding-left: 10px;
 }
+.card3_headNsub {
+  display: flex;
+  flex-direction: column;
+  // background-color:gray;
+}
 .head_card4 {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  // padding: 20px;
 }
 .title_card4 {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 .card4-l-content {
   width: 20%;
@@ -652,6 +881,13 @@ export default {
 .card4-content {
   display: flex;
 }
+.card4_nameNicon {
+  display: flex;
+  padding-right: 60px;
+}
+.card5 {
+  padding: 20px;
+}
 .flex {
   display: flex;
 }
@@ -670,5 +906,8 @@ export default {
 
 .graph6-details {
   padding-top: 20px;
+}
+.text-top{
+  font-size: 12px;
 }
 </style>

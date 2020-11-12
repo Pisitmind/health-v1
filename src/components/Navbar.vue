@@ -14,7 +14,7 @@
                 src="https://pbs.twimg.com/profile_images/1002416157280727040/7SjA9KTJ_400x400.jpg"></v-img>
                 <div  class="profile-bar">
                   <div class="pro-name">
-                    <span>Supratcha  Wiwattanakorn</span>
+                    <span><strong> Supratcha  Wiwattanakorn</strong></span>
                   </div>
                   <div class="icon-profile">
                     <v-icon>mdi-bell</v-icon>
@@ -90,18 +90,18 @@ export default {
    data () {
       return {
         items: [
-          { title: 'กราฟข้อมูล', icon: 'mdi-chart-timeline',route: '/' },
-          { title: 'แจ้งเตือน', icon: 'mdi-bell-outline',route: '/About' },
-          { title: 'ข้อมูลการเคลื่อนไหว', icon: 'mdi-walk',route: '/Moving' },
-          { title: 'ข้อมูลสถานะร่างกาย', icon: 'mdi-account-details',route: '/Status' },
-          { title: 'ค่าส่วนประกอบในร่างกาย', icon: 'mdi-human-handsup',route: '/Body-info' },
-          { title: 'ข้อมูลสุขภาพจำเพาะ', icon: 'mdi-water-plus',route: '/unq-health' },
-          { title: 'รายงาน', icon: 'mdi-chart-areaspline',route: '/Report' },
+          { title:'กราฟข้อมูล', icon:'mdi-chart-timeline',route:'/' },
+          { title:'แจ้งเตือน', icon:'mdi-bell-outline',route:'/About' },
+          { title:'ข้อมูลการเคลื่อนไหว', icon:'mdi-walk',route:'/Moving' },
+          { title:'ข้อมูลสถานะร่างกาย', icon:'mdi-account-details',route:'/Status' },
+          { title:'ค่าส่วนประกอบในร่างกาย', icon:'mdi-human-handsup',route:'/Body-info' },
+          { title:'ข้อมูลสุขภาพจำเพาะ', icon:'mdi-water-plus',route:'/unq-health' },
+          { title:'รายงาน',icon:'mdi-chart-areaspline',route:'/Report' },
         ],
         items2:[
-          { title: 'ผู้ใช้งาน', icon: 'mdi-account-group-outline',route: '/Users' },
-          { title: 'ข่าว / ประกาศ', icon: 'mdi-new-box',route: '/News' },
-          { title: 'บอร์ด / สาระสุขภาพ', icon: 'mdi-teach',route: '/Boards' },
+          { title:'ผู้ใช้งาน', icon:'mdi-account-group-outline',route:'/Users' },
+          { title:'ข่าว / ประกาศ', icon:'mdi-new-box',route:'/News' },
+          { title:'บอร์ด / สาระสุขภาพ', icon:'mdi-teach',route:'/Boards' },
           
         ],
       }
