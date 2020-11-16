@@ -336,115 +336,139 @@
             <div class="card5-top-content">
               <div class="graph6-details ">
                 <!-- แถบprogress -->
-                <div class="progress-el">
-                  <v-progress-linear
-                    color="none"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <span class="text-top">56.7กก.</span>
-                  <v-progress-linear
-                    color="none"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <span class="text-top">76.6กก.</span>
-                  <v-progress-linear
-                    color="none"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <span class="text-top">85.8กก.</span>
-                  <v-progress-linear
-                    color="none"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <span class="text-top">98.0กก.</span>
-                  <v-progress-linear
-                    color="none"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                </div>
-                <div class="progress-el">
-                  <v-progress-linear
-                    color="purple darken-2"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <v-progress-linear
-                    color="blue darken-2"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <v-progress-linear
-                    color="green darken-2"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <v-progress-linear
-                    color="yellow darken-2"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                  <br />
-                  <v-progress-linear
-                    color="red darken-2"
-                    rounded
-                    value="100"
-                  ></v-progress-linear>
-                </div>
+                <table
+        style="width: 100%;
+  border-collapse: collapse;"
+      >
+        <tr>
+          <th width="16.67%"></th>
+          <th>
+            <div class="graph6-details ">
+              <!-- แถบprogress -->
+              <div class="progress-el">
+                <v-progress-linear
+                  color="none"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
                 <br />
+                <span class="text-top">56.7กก.</span>
+                <v-progress-linear
+                  color="none"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span class="text-top">76.6กก.</span>
+                <v-progress-linear
+                  color="none"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span class="text-top">85.8กก.</span>
+                <v-progress-linear
+                  color="none"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <span class="text-top">98.0กก.</span>
+                <v-progress-linear
+                  color="none"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+              </div>
+              <div class="progress-el">
+                <v-progress-linear
+                  color="purple darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <v-progress-linear
+                  color="blue darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <v-progress-linear
+                  color="green darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <v-progress-linear
+                  color="yellow darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+                <br />
+                <v-progress-linear
+                  color="red darken-2"
+                  rounded
+                  value="100"
+                ></v-progress-linear>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </table>
               </div>
             </div>
             <div class="card5-bottom-content">
               <!-- ใส่ในนี้ -->
               <div class="table_c5">
-                <table class="card5-table">
-                  <tr align="center">
-                    <td></td>
-                    <th scope="col"><div class="i-human">
-                    <div><v-icon>mdi-human-male</v-icon></div>
-                    <div><p>ผอมมาก</p></div>
-                  </div></th>
-                    <th scope="col"><div class="i-human">
-                    <div><v-icon>mdi-human-male</v-icon></div>
-                    <div><p>ปกติ</p></div>
-                  </div></th>
-                    <th scope="col"><div class="i-human">
-                    <div><v-icon>mdi-human-male</v-icon></div>
-                    <div><p>อวบ</p></div>
-                  </div></th>
-                    <th scope="col"><div class="i-human">
-                    <div><v-icon>mdi-human-male</v-icon></div>
-                    <div><p>อ้วน ระยะที่1</p></div>
-                  </div></th>
-                    <th scope="col">
-                      <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
-                        <div><p>อ้วน ระยะที่2</p></div>
-                      </div>
-                    </th>
-                  </tr>
-                  <tr v-for="item in items" :key="item.id" align="center">
-                    <th scope="row"> <div class="flex"><v-icon :style="{ color: item.color }">{{
-                        item.icon
-                      }}</v-icon>
-                      <span class="black--text"
-                        ><strong>{{ item.gender }}</strong></span
-                      ></div></th>
-                    <td v-for="n in 6" :key="n" border="1px solid black;" width="16.67%">{{ item.data[n - 1] }}</td>
-                  </tr>
-                  <tr></tr>
-                </table>
+              <table
+        style="width: 100%;
+  border-collapse: collapse;"
+      >
+        <tr>
+          <th></th>
+          <th>
+            <div class="i-human">
+              <div><v-icon>mdi-human-male</v-icon></div>
+              <div><p>ผอมมาก</p></div>
+            </div>
+          </th>
+          <th>
+            <div class="i-human">
+              <div><v-icon>mdi-human-male</v-icon></div>
+              <div><p>ปกติ</p></div>
+            </div>
+          </th>
+          <th>
+            <div class="i-human">
+              <div><v-icon>mdi-human-male</v-icon></div>
+              <div><p>อวบ</p></div>
+            </div>
+          </th>
+          <th>
+            <div class="i-human">
+              <div><v-icon>mdi-human-male</v-icon></div>
+              <div><p>อ้วน ระยะที่1</p></div>
+            </div>
+          </th>
+          <th>
+            <div class="i-human">
+              <div><v-icon>mdi-human-male</v-icon></div>
+              <div><p>อ้วน ระยะที่2</p></div>
+            </div>
+          </th>
+        </tr>
+        <tr v-for="item in items" :key="item.id" align="center">
+          <th scope="row">
+            <v-icon :style="{ color: item.color }">{{ item.icon }}</v-icon>
+            <span class="black--text"
+              ><strong>{{ item.gender }}</strong></span
+            >
+          </th>
+          <td v-for="n in 5" :key="n" width="16.67%" style="border:1.5px solid #757575;">
+            {{ item.data[n - 1] }}
+          </td>
+        </tr>
+      </table>
               </div>
             </div>
             <!-- <p>content</p> -->
@@ -920,7 +944,6 @@ th {
 }
 .card5-top-content {
   // width: 80%;
-  padding-left: 16.67%;
 }
 .card5-bottom-content {
   // width: 80%;
