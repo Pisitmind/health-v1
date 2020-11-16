@@ -135,7 +135,7 @@
             <p><strong>ช่วงอายุ</strong></p>
           </div>
           <div class="card2-content">
-            <div  class="card2-graph ">
+            <div class="card2-graph ">
               <canvas id="graph" width="" height="150px"></canvas>
             </div>
             <v-card class="card2-subcard-3" width="39%" height="">
@@ -145,7 +145,7 @@
                 </span>
               </v-card-subtitle>
               <v-card-text class="pa-1">
-                 <div class="card-info-right pa-1">
+                <div class="card-info-right pa-1">
                   <table class="card2-table">
                     <tr>
                       <th>ช่วงอายุ</th>
@@ -162,7 +162,7 @@
                       </td>
                       <td>{{ item.dataMan }}</td>
                       <td>{{ item.dataWman }}</td>
-                      <td> {{ item.avg }}</td>
+                      <td>{{ item.avg }}</td>
                     </tr>
                   </table>
                 </div>
@@ -326,15 +326,16 @@
               </div>
             </div>
             <div class="card3_line2 grey--text">
-              <span>สัดส่วนน้ำหนักร่างกาย</span>
+              <span
+                >สัดส่วนน้ำหนักร่างกายของแต่ละบุคคล สามารถบ่งบอกถึงสุขภาพได้
+                ตามการเปลี่ยนแปลงของน้ำหนักตัว</span
+              >
             </div>
           </div>
           <div class="card4-content">
-            <div class="card4-l-content">
-              <div></div>
-            </div>
-            <div class="card4-r-content">
-              <div class="graph6-details px-2">
+            <div class="card5-top-content">
+              <div class="graph6-details ">
+                <!-- แถบprogress -->
                 <div class="progress-el">
                   <v-progress-linear
                     color="none"
@@ -349,21 +350,21 @@
                     value="100"
                   ></v-progress-linear>
                   <br />
-                   <span class="text-top">76.6กก.</span>
+                  <span class="text-top">76.6กก.</span>
                   <v-progress-linear
                     color="none"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                   <span class="text-top">85.8กก.</span>
+                  <span class="text-top">85.8กก.</span>
                   <v-progress-linear
                     color="none"
                     rounded
                     value="100"
                   ></v-progress-linear>
                   <br />
-                   <span class="text-top">98.0กก.</span>
+                  <span class="text-top">98.0กก.</span>
                   <v-progress-linear
                     color="none"
                     rounded
@@ -402,38 +403,49 @@
                   ></v-progress-linear>
                 </div>
                 <br />
-                <div class="progress-el icon-set">
-                  <div class="i-human">
+              </div>
+            </div>
+            <div class="card5-bottom-content">
+              <!-- ใส่ในนี้ -->
+              <div class="table_c5">
+                <table class="card5-table">
+                  <tr align="center">
+                    <td></td>
+                    <th scope="col"><div class="i-human">
                     <div><v-icon>mdi-human-male</v-icon></div>
                     <div><p>ผอมมาก</p></div>
-                  </div>
-                  <div class="i-human">
+                  </div></th>
+                    <th scope="col"><div class="i-human">
                     <div><v-icon>mdi-human-male</v-icon></div>
                     <div><p>ปกติ</p></div>
-                  </div>
-                  <div class="i-human">
+                  </div></th>
+                    <th scope="col"><div class="i-human">
                     <div><v-icon>mdi-human-male</v-icon></div>
                     <div><p>อวบ</p></div>
-                  </div>
-                  <div class="i-human">
+                  </div></th>
+                    <th scope="col"><div class="i-human">
                     <div><v-icon>mdi-human-male</v-icon></div>
                     <div><p>อ้วน ระยะที่1</p></div>
-                  </div>
-                  <div class="i-human">
-                    <div><v-icon>mdi-human-male</v-icon></div>
-                    <div><p>อ้วน ระยะที่2</p></div>
-                  </div>
-                </div>
+                  </div></th>
+                    <th scope="col">
+                      <div class="i-human">
+                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div><p>อ้วน ระยะที่2</p></div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr v-for="item in items" :key="item.id" align="center">
+                    <th scope="row"> <div class="flex"><v-icon :style="{ color: item.color }">{{
+                        item.icon
+                      }}</v-icon>
+                      <span class="black--text"
+                        ><strong>{{ item.gender }}</strong></span
+                      ></div></th>
+                    <td v-for="n in 6" :key="n" border="1px solid black;" width="16.67%">{{ item.data[n - 1] }}</td>
+                  </tr>
+                  <tr></tr>
+                </table>
               </div>
-              <v-container>
-                <v-row v-for="item in items" :key="item.id">
-                  <v-col v-for="n in 5" :key="n">
-                    <table class="black--text" outlined tile>
-                      {{ item.data[n - 1] }}
-                    </table>
-                  </v-col>
-                </v-row>
-              </v-container>
             </div>
             <!-- <p>content</p> -->
           </div>
@@ -536,8 +548,8 @@ export default {
   data() {
     return {
       items: [
-        { id: "1", gender: "ชาย", data: ["27", "98", "780", "34", "0"] },
-        { id: "2", gender: "หญิง", data: [12, 132, 560, 22, 0] },
+        { gender: "ชาย", icon: "mdi-human-male",color:"#359BD3", data: [27, 98, 780, 34, 0] },
+        { gender: "หญิง", icon: "mdi-human-female",color:"#F28C8C", data: [12, 132, 560, 22, 0] },
       ],
       data_card1: [
         {
@@ -641,20 +653,19 @@ th {
   font-size: 12px;
   color: #5b5b5b;
 }
-.card2-table{
-  font-size:12px;
+.card2-table {
+  font-size: 12px;
   color: #5b5b5b;
   td {
-  padding: 0 26px;
-  text-align: left;
-}
-
+    padding: 0 26px;
+    text-align: left;
+  }
 }
 .topic-name-card {
   color: #ad8dbb;
 }
-.two-data-card2{
-  padding:2px 0px;
+.two-data-card2 {
+  padding: 2px 0px;
 }
 .head-card1 {
   display: flex;
@@ -713,8 +724,8 @@ th {
   width: 60%;
   padding-right: 10px;
 }
-.card2-subcard-3{
-  padding-left:10px;
+.card2-subcard-3 {
+  padding-left: 10px;
 }
 .card2-content {
   display: flex;
@@ -861,12 +872,7 @@ th {
   display: flex;
   flex-direction: row;
 }
-.card4-l-content {
-  width: 20%;
-}
-.card4-r-content {
-  width: 80%;
-}
+
 .sex_card4 {
   padding: 0 10px;
 }
@@ -880,14 +886,13 @@ th {
 }
 .card4-content {
   display: flex;
+  flex-direction: column;
 }
 .card4_nameNicon {
   display: flex;
   padding-right: 60px;
 }
-.card5 {
-  padding: 20px;
-}
+
 .flex {
   display: flex;
 }
@@ -907,7 +912,26 @@ th {
 .graph6-details {
   padding-top: 20px;
 }
-.text-top{
+.text-top {
   font-size: 12px;
+}
+.card5 {
+  padding: 20px;
+}
+.card5-top-content {
+  // width: 80%;
+  padding-left: 16.67%;
+}
+.card5-bottom-content {
+  // width: 80%;
+  // padding: 0 20px;
+  
+}
+.table_c5{
+  // width: 100%;
+  // table-layout: fixed;
+}
+.card5-table{
+  // width: 100%;
 }
 </style>

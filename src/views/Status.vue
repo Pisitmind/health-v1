@@ -33,21 +33,6 @@
       </v-simple-table>
     </div>
     <div>
-      <table>
-        <tr>
-          <th>name</th>
-          <th>name</th>
-          <th>name</th>
-        </tr>
-        <tr v-for="item in data_card1_info" :key="item.name">
-          <td>
-            <v-icon x-small :style="{ color: item.color }">mdi-circle </v-icon>
-                {{ item.name }}
-          </td>
-          <td>{{ item.data }}</td>
-          <td>{{ item.percent }}</td>
-        </tr>
-      </table>
     </div>
   </div>
 </template>
