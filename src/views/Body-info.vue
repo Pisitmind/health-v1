@@ -1,12 +1,13 @@
 <template>
   <div class="bodyinfo">
     <h1>Bodyinfo page</h1>
-    <div class="card_el">
-      <v-card elevation="2" outlined>
-        <div class="card5">
-          <div class="card4-content">
-            <div class="card4-top-content">
-              <div class="graph6-details px-2">
+    <div class="card4-content">
+      <table style="width:100%">
+        <tr>
+          <th width="20%">aaaa</th>
+          <th>
+            <div class="card5-top-content">
+              <div class="graph6-details ">
                 <!-- แถบprogress -->
                 <div class="progress-el">
                   <v-progress-linear
@@ -77,65 +78,120 @@
                 <br />
               </div>
             </div>
-            <div class="card4-un-content">
-              <!-- หัวตาราง -->
-              <div class="progress-el icon-set">
+          </th>
+        </tr>
+
+        <tr width="100%">
+          <td width="20%" align="center">head</td>
+          <td style="background-color:gray;">
+            <th><div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <br />
+                <div><p>ผอมมาก</p></div>
+              </div></th>
+              <th></th>
+          </td>
+          <!-- <td class="test-d" style="background-color:gray;">
+            <tr align="center">
+              <td scope="col " style="background-color:red;">
                 <div class="i-human">
                   <div><v-icon>mdi-human-male</v-icon></div>
                   <div><p>ผอมมาก</p></div>
                 </div>
+              </td>
+               <br />
+              <td scope="col" style="background-color:white;">
                 <div class="i-human">
                   <div><v-icon>mdi-human-male</v-icon></div>
                   <div><p>ปกติ</p></div>
                 </div>
+              </td>
+               <br />
+              <td scope="col" style="background-color:pink;">
                 <div class="i-human">
                   <div><v-icon>mdi-human-male</v-icon></div>
                   <div><p>อวบ</p></div>
                 </div>
+              </td>
+               <br />
+              <td scope="col" style="background-color:purple;">
                 <div class="i-human">
                   <div><v-icon>mdi-human-male</v-icon></div>
                   <div><p>อ้วน ระยะที่1</p></div>
                 </div>
+              </td>
+               <br />
+              <td scope="col" style="background-color:yellow;">
                 <div class="i-human">
                   <div><v-icon>mdi-human-male</v-icon></div>
                   <div><p>อ้วน ระยะที่2</p></div>
                 </div>
-              </div>
-              <v-container>
-                <v-row v-for="item in items" :key="item.id">
-                  <v-col v-for="n in 5" :key="n">
-                    <table class="black--text" outlined tile>
-                      {{
-                        item.data[n - 1]
-                      }}
-                    </table>
-                  </v-col>
-                </v-row>
-              </v-container>
+              </td>
+               <br />
+            </tr>
+          </td> -->
+        </tr>
 
-              <div></div>
-            </div>
-            <div class="card-info-right pa-1">
-              <table class="card2-table">
-                <tr>
-                  <td></td>
-                  <th scope="col">A</th>
-                  <th scope="col">B</th>
-                  <th scope="col">C</th>
-                  <th scope="col">D</th>
-                  <th scope="col">E</th>
-                </tr>
-                <tr v-for="item in data_card2_info" :key="item.id">
-                  <th scope="row">{{ item.name }}</th>
-                  <td v-for="n in 6" :key="n">{{ item.dataMan[n - 1] }}</td>
-                </tr>
-                <tr></tr>
-              </table>
-            </div>
-            <!-- <p>content</p> -->
-          </div>
-        </div>
-      </v-card>
+        <tr width="100%">
+          <td width="20%" align="center">head</td>
+          <td style="background-color:gray;">
+            <th>ชื่อ</th>
+            <tr> 5</tr>
+          </td>
+          <td>d</td>
+        </tr>
+
+        <td>
+          <!-- ใส่ในนี้ -->
+          <tr align="">
+            <th></th>
+            <th scope="col">
+              <div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <div><p>ผอมมาก</p></div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <div><p>ปกติ</p></div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <div><p>อวบ</p></div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <div><p>อ้วน ระยะที่1</p></div>
+              </div>
+            </th>
+            <th scope="col">
+              <div class="i-human">
+                <div><v-icon>mdi-human-male</v-icon></div>
+                <div><p>อ้วน ระยะที่2</p></div>
+              </div>
+            </th>
+          </tr>
+
+          <tr v-for="item in items" :key="item.id" align="center">
+            <th scope="row">
+              <v-icon :style="{ color: item.color }">{{ item.icon }}</v-icon>
+              <span class="black--text"
+                ><strong>{{ item.gender }}</strong></span
+              >
+            </th>
+            <td v-for="n in 6" :key="n" border="1px solid black;" width="">
+              {{ item.data[n - 1] }}
+            </td>
+          </tr>
+        </td>
+      </table>
+
+      <!-- <p>content</p> -->
     </div>
   </div>
 </template>
@@ -144,131 +200,18 @@
 export default {
   data() {
     return {
-      headers: [
-        {
-          text: "Dessert (100g serving)",
-          align: "start",
-          value: "name",
-        },
-        { text: "Calories", value: "calories" },
-        { text: "Fat (g)", value: "fat" },
-        { text: "Carbs (g)", value: "carbs" },
-        { text: "Protein (g)", value: "protein" },
-        { text: "Iron (%)", value: "iron" },
-      ],
       items: [
-        { id: "1", gender: "ชาย", data: ["27", "98", "780", "34", "0"] },
-        { id: "2", gender: "หญิง", data: [12, 132, 560, 22, 0] },
-      ],
-      data_card1_info: [
-        { name: "Garmin", color: "#2289D8", data: "395", percent: "14.1%" },
-        { name: "Suunto", color: "#DA2121", data: "422", percent: "15%" },
-        { name: "Xiaomi", color: "#FF850A", data: "796", percent: "28.4%" },
-        { name: "Honor", color: "#FF3E80", data: "321", percent: "11.4%" },
         {
-          name: "Apple Watch",
-          color: "#9C9C9C",
-          data: "844",
-          percent: "31.1%",
-        },
-        { name: "อื่นๆ", color: "#58BFAE", data: "22", percent: "0.7%" },
-      ],
-      data_card2_info: [
-        {
-          name: "18-20",
-          color: "#58BFAE",
-          dataMan: [638, 650, 532, 634,636],
-          dataWman: "270",
-          avg: "22.7%",
+          gender: "ชาย",
+          icon: "mdi-human-male",
+          color: "#359BD3",
+          data: [27, 98, 780, 34, 0],
         },
         {
-          name: "21-30",
-          color: "#FF3E80",
-          dataMan: [333, 666, 999, 111,525],
-          dataWman: "250",
-          avg: "19.9%",
-        },
-      ],
-      desserts: [
-        {
-          name: "Frozen Yogurt",
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: "1%",
-        },
-        {
-          name: "Ice cream sandwich",
-          calories: 237,
-          fat: 9.0,
-          carbs: 37,
-          protein: 4.3,
-          iron: "1%",
-        },
-        {
-          name: "Eclair",
-          calories: 262,
-          fat: 16.0,
-          carbs: 23,
-          protein: 6.0,
-          iron: "7%",
-        },
-        {
-          name: "Cupcake",
-          calories: 305,
-          fat: 3.7,
-          carbs: 67,
-          protein: 4.3,
-          iron: "8%",
-        },
-        {
-          name: "Gingerbread",
-          calories: 356,
-          fat: 16.0,
-          carbs: 49,
-          protein: 3.9,
-          iron: "16%",
-        },
-        {
-          name: "Jelly bean",
-          calories: 375,
-          fat: 0.0,
-          carbs: 94,
-          protein: 0.0,
-          iron: "0%",
-        },
-        {
-          name: "Lollipop",
-          calories: 392,
-          fat: 0.2,
-          carbs: 98,
-          protein: 0,
-          iron: "2%",
-        },
-        {
-          name: "Honeycomb",
-          calories: 408,
-          fat: 3.2,
-          carbs: 87,
-          protein: 6.5,
-          iron: "45%",
-        },
-        {
-          name: "Donut",
-          calories: 452,
-          fat: 25.0,
-          carbs: 51,
-          protein: 4.9,
-          iron: "22%",
-        },
-        {
-          name: "KitKat",
-          calories: 518,
-          fat: 26.0,
-          carbs: 65,
-          protein: 7,
-          iron: "6%",
+          gender: "หญิง",
+          icon: "mdi-human-female",
+          color: "#F28C8C",
+          data: [12, 132, 560, 22, 0],
         },
       ],
     };
