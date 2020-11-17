@@ -15,9 +15,38 @@
             </div>
             <div class="card1-right">
               <div class="right-icon">
-                <v-btn large icon fab>
-                  <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                </v-btn>
+                <v-row justify="center">
+                  <v-dialog v-model="dialog" width="600px">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn large icon fab v-bind="attrs" v-on="on">
+                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                      </v-btn>
+                    </template>
+                    <v-card>
+                      <v-card-title>
+                        <div class="head_dialog">
+                          <div>
+                            <span class="headline">Heart rate risk</span>
+                          </div>
+                          <div>
+                            <v-btn
+                              color="green darken-1"
+                              icon
+                              @click="dialog = false"
+                            >
+                              <v-icon>mdi-close</v-icon>
+                            </v-btn>
+                          </div>
+                        </div>
+                      </v-card-title>
+                      <v-card-text>
+                        exercise and Weight loss can help limit some of the
+                        health risks associated with tachycardia by reducing the
+                        negative effects of high blood pressure and sleep apnea.
+                      </v-card-text>
+                    </v-card>
+                  </v-dialog>
+                </v-row>
               </div>
             </div>
           </div>
@@ -164,32 +193,6 @@
         </div>
       </v-card>
     </div>
-    <br />
-    <br />
-    <h2>how can i insert table data in graph hmm?</h2>
-    <br />
-
-    <v-card v-for="item in table1_ct2" :key="item.id">
-      <table>
-        <v-row no-gutters>
-          <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-            <v-card class="pa-2" outlined tile>
-              <div>
-                <div>
-                  <p>{{ item.data[n - 1] }}</p>
-                </div>
-                <div class="name_lb_c1">
-                  <v-icon x-small :style="{ color: item.color[n - 1] }"
-                    >mdi-circle</v-icon
-                  >
-                  <span class="pd_text_5">{{ item.name[n - 1] }}</span>
-                </div>
-              </div>
-            </v-card>
-          </v-col>
-        </v-row>
-      </table>
-    </v-card>
     <!-- <p>{{card2.labels[0]}}</p> -->
   </div>
 </template>
@@ -271,6 +274,7 @@ export default {
   },
   data: function() {
     return {
+      dialog: false,
       card2: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         Color: [
@@ -361,6 +365,9 @@ export default {
 </script>
 
 <style scope>
+.noti {
+  padding: 16px;
+}
 .c_size {
   height: auto;
   width: 300px;
