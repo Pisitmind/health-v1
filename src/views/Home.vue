@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>Homepage and content</h1>
     <HelloWorld />
     <!-- <Login /> -->
   </div>

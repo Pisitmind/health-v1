@@ -1,10 +1,9 @@
 <template>
   <v-app>
-
-    <!-- close it -->
     <!-- <v-app-bar app>
     </v-app-bar> -->
-    <Navbar />
+    <!-- <Navbar /> -->
+      <Navbar />
     <v-main>
       <v-container fluid>
         <router-view></router-view>
@@ -14,7 +13,6 @@
     <v-footer app>
       <!-- -->
     </v-footer>
-
   </v-app>
 </template>
 
@@ -23,15 +21,18 @@ import Navbar from "./components/Navbar";
 
 export default {
   name: "App",
-
   components: {
-    Navbar
+    Navbar,
   },
 
-   data () {
-      return {
-      }
-    },
+  data() {
+    return {};
+  },
+  computed: {
+ hide () {
+   return this.$route.path !== '/login'; 
+ }
+},
+  
 };
 </script>
-

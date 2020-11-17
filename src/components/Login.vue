@@ -1,24 +1,49 @@
 <template>
-  <div class="login">
-      <v-app class="log_in">
-          <v-content>
-              <v-container fill-height>
-                  <v-layout align-center justify-center>
-                      <v-flex xs12 sm8 md8>
-                          <v-form ref="form" v-model="valid" lazy-validation>
-                              <v-card class="elevation-12 pa-10" height="400">
-                                  <v-img class="center" max-width="200px" src="../assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"></v-img>
-                                  <v-text-field v-model="name"  :counter="10" :rules="nameRules" label="USERNAME" color="#AD8DBB" placeholder="Enter your user name" required ></v-text-field>
-                                  <v-text-field v-model="password" type="password" :rules="passwordRules" labelcounter="10" label="PASSWORD" color="#AD8DBB" placeholder="Enter your password" required ></v-text-field>
-                                  <v-btn to="/" outline block class="white--text" color="purple lighten-2" >login</v-btn>
-                              </v-card>
-                          </v-form>
-                      </v-flex>
-                  </v-layout>
-              </v-container>
-          </v-content>
-
-      </v-app>
+  <div class="login" id="Login">
+    <v-app class="log_a" id="inspire" >
+      <v-content class="log_in">
+        <v-container fill-height >
+          <v-layout v-resize="onResize" column align-center justify-center >
+            <v-form ref="form" v-model="valid" lazy-validation >
+              <v-card class="elevation-10 pa-10" height="370px" width="450px">
+                <v-img
+                  class="center"
+                  max-width="200px"
+                  src="../assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"
+                ></v-img>
+                <v-text-field
+                  v-model="name"
+                  :counter="10"
+                  :rules="nameRules"
+                  label="USERNAME"
+                  color="#AD8DBB"
+                  placeholder="Enter your user name"
+                  required
+                ></v-text-field>
+                <v-text-field
+                  v-model="password"
+                  type="password"
+                  :rules="passwordRules"
+                  labelcounter="10"
+                  label="PASSWORD"
+                  color="#AD8DBB"
+                  placeholder="Enter your password"
+                  required
+                ></v-text-field>
+                <v-btn
+                  to="/"
+                  outline
+                  block
+                  class="white--text"
+                  color="purple lighten-2"
+                  >login</v-btn
+                >
+              </v-card>
+            </v-form>
+          </v-layout>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
@@ -97,18 +122,29 @@
 //   }
 </script>
 <style scoped>
-
-.log_in{
-    background-image: url('../assets/pic/cmuhealth_BG01.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-.v-text-field{
-    font-size:16px;
-}
-.v-text-field label{
-    font-weight: 550;
+.log_in {
+  background-image: url("../assets/pic/bg_login.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* background-position: center; */
 }
 
-</style>>
+#inspire {
+  height: 100vh;
+}
+.log_a{
+  overflow: hidden;
+  background-color: tomato;
+  /* display: inline-block; */
+  /* display: none; */
+
+}
+.v-text-field {
+  font-size: 16px;
+}
+.v-text-field label {
+  font-weight: 550;
+}
+</style>
