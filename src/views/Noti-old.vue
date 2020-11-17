@@ -40,14 +40,14 @@
                   style="width: 100%;
   border-collapse: collapse;"
                 >
-                  <v-title>Resting state of people</v-title>
+                  <v-title>Resting state of people2</v-title>
                   <v-row
                     no-gutters
                     style="height:auto;"
                     v-for="item in table1_ct1"
                     :key="item.id"
                   >
-                    <v-col v-for="n in 6" :key="n" cols="12" sm="4">
+                    <v-col v-for="n in 6" :key="n">
                       <v-card class="box_ct1 pa-2" outlined tile>
                         <div class="">
                           <div>
@@ -85,20 +85,26 @@
               <br />
               <div class="table_ct2_c1 c1">
                 <table
-                  class="table_c1 c1"
+                  class="table_c2"
                   style="width: 100%;
   border-collapse: collapse;"
                 >
-                  <v-title>Resting state of people</v-title>
+                  <v-title>Active state of people</v-title>
                   <v-row
                     no-gutters
                     style="height:auto;"
                     v-for="item in table1_ct2"
                     :key="item.id"
                   >
-                    <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-                      <v-card class="box_ct1 pa-2" outlined tile>
-                        <div class="">
+                    <v-col class="column_wrapper">
+                      <v-card
+                        class="box_ct1"
+                        outlined
+                        tile
+                        v-for="n in 6"
+                        :key="n"
+                      >
+                        <div>
                           <div>
                             <p>{{ item.data[n - 1] }}</p>
                           </div>
@@ -108,7 +114,9 @@
                               :style="{ color: item.color[n - 1] }"
                               >mdi-circle</v-icon
                             >
-                            <span>{{ item.name[n - 1] }}</span>
+                            <span class="pd_text_5">{{
+                              item.name[n - 1]
+                            }}</span>
                           </div>
                         </div>
                       </v-card>
@@ -169,22 +177,28 @@
     <h2>how can i insert table data in graph hmm?</h2>
     <br />
 
-    <v-card v-for="item in table1_ct2" :key="item.id">
+
+    <v-card  v-for="item in table1_ct2"
+                    :key="item.id">
       <table>
         <v-row no-gutters>
           <v-col v-for="n in 6" :key="n" cols="12" sm="4">
             <v-card class="pa-2" outlined tile>
               <div>
-                <div>
-                  <p>{{ item.data[n - 1] }}</p>
-                </div>
-                <div class="name_lb_c1">
-                  <v-icon x-small :style="{ color: item.color[n - 1] }"
-                    >mdi-circle</v-icon
-                  >
-                  <span class="pd_text_5">{{ item.name[n - 1] }}</span>
-                </div>
-              </div>
+                          <div>
+                            <p>{{ item.data[n - 1] }}</p>
+                          </div>
+                          <div class="name_lb_c1">
+                            <v-icon
+                              x-small
+                              :style="{ color: item.color[n - 1] }"
+                              >mdi-circle</v-icon
+                            >
+                            <span class="pd_text_5">{{
+                              item.name[n - 1]
+                            }}</span>
+                          </div>
+                        </div>
             </v-card>
           </v-col>
         </v-row>

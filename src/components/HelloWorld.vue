@@ -26,6 +26,7 @@
                       color="#AD8DBB"
                       v-model="date"
                       label="select date"
+                      placeholder=""
                       prepend-icon="mdi-calendar"
                       v-bind="attrs"
                       v-on="on"
@@ -60,7 +61,7 @@
             <div class="text-center">
               <canvas id="graph0" width="" height="200px"></canvas>
             </div>
-            <v-card>
+            <v-card >
               <v-card-subtitle>
                 <span class="topic-name-card ">
                   ตัวบ่งชี้
@@ -138,7 +139,7 @@
             <div class="card2-graph ">
               <canvas id="graph" width="" height="150px"></canvas>
             </div>
-            <v-card class="card2-subcard-3" width="39%" height="">
+            <v-card class="card2-subcard-3 ct_set" width="" height="">
               <v-card-subtitle>
                 <span class="topic-name-card pl-5">
                   ตัวบ่งชี้
@@ -691,6 +692,14 @@ export default {
 .v-text-field {
   padding-top: 0px;
   margin-top: 0px;
+}
+.ct_set{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  // text-align: center;
+  padding:auto;
+  margin:auto;
 }
 th {
   text-align: center;

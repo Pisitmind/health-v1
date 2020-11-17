@@ -1,6 +1,6 @@
-<template>
-  <div class="login" id="Login">
-    <v-app class="log_a" id="inspire" >
+<template >
+  <div class="login" id="Login" >
+    <v-app  id="inspire" >
       <v-content class="log_in">
         <v-container fill-height >
           <v-layout v-resize="onResize" column align-center justify-center >
@@ -13,7 +13,6 @@
                 ></v-img>
                 <v-text-field
                   v-model="name"
-                  :counter="10"
                   :rules="nameRules"
                   label="USERNAME"
                   color="#AD8DBB"
@@ -22,6 +21,7 @@
                 ></v-text-field>
                 <v-text-field
                   v-model="password"
+                  :counter="10"
                   type="password"
                   :rules="passwordRules"
                   labelcounter="10"
@@ -123,7 +123,7 @@
 </script>
 <style scoped>
 .log_in {
-  background-image: url("../assets/pic/bg_login.png");
+  background-image: url("../assets/pic/bg_1.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
