@@ -11,6 +11,7 @@ import users from '../views/Users.vue';
 import news from '../views/News.vue';
 import boards from '../views/Boards.vue';
 import Login from '../components/Login.vue';
+import notif from '../views/Noti.vue';
 
 Vue.use(VueRouter);
 
@@ -62,7 +63,11 @@ const routes = [
     path: "/boards",
     name: "Boards",
     component: boards
-  },
+  },{
+    path: "/Notifications",
+    name: "notif",
+    component: notif
+  }
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

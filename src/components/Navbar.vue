@@ -91,7 +91,7 @@ export default {
       return {
         items: [
           { title:'กราฟข้อมูล', icon:'mdi-chart-timeline',route:'/' },
-          { title:'แจ้งเตือน', icon:'mdi-bell-outline',route:'/About' },
+          { title:'แจ้งเตือน', icon:'mdi-bell-outline',route:'/Notifications' },
           { title:'ข้อมูลการเคลื่อนไหว', icon:'mdi-walk',route:'/Moving' },
           { title:'ข้อมูลสถานะร่างกาย', icon:'mdi-account-details',route:'/Status' },
           { title:'ค่าส่วนประกอบในร่างกาย', icon:'mdi-human-handsup',route:'/Body-info' },
