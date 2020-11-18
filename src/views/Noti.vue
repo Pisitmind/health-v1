@@ -77,21 +77,23 @@
                     :key="item.id"
                   >
                     <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-                      <v-card class="box_ct1 pa-2" outlined tile>
-                        <div class="">
-                          <div>
-                            <p>{{ item.data[n - 1] }}</p>
+                      <div class="">
+                        <v-card class="box_ct1 pa-2" outlined tile>
+                          <div class="">
+                            <div>
+                              <p>{{ item.data[n - 1] }}</p>
+                            </div>
+                            <div class="name_lb_c1">
+                              <v-icon
+                                x-small
+                                :style="{ color: item.color[n - 1] }"
+                                >mdi-circle</v-icon
+                              >
+                              <span>{{ item.name[n - 1] }}</span>
+                            </div>
                           </div>
-                          <div class="name_lb_c1">
-                            <v-icon
-                              x-small
-                              :style="{ color: item.color[n - 1] }"
-                              >mdi-circle</v-icon
-                            >
-                            <span>{{ item.name[n - 1] }}</span>
-                          </div>
-                        </div>
-                      </v-card>
+                        </v-card>
+                      </div>
                     </v-col>
                   </v-row>
                 </table>

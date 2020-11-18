@@ -2,37 +2,64 @@
   <div class="status">
     <h1>Status page</h1>
     <div>
-      <v-simple-table height="">
+      <v-simple-table>
         <template v-slot:default>
           <thead>
+            <span class=""> NOTIFY : ADMIN LIST</span>
             <tr>
+              <th class="text-left">
+                No
+              </th>
               <th class="text-left">
                 Name
               </th>
               <th class="text-left">
-                User
+                Location
               </th>
               <th class="text-left">
-                Percent
+                ROOM NO
+              </th>
+              <th class="text-left">
+                AVG (BPM)
+              </th>
+              <th class="text-left">
+                NOW (BPM)
+              </th>
+              <th class="text-left">
+                AUTO NOTIFY
+              </th>
+              <th class="text-left">
+                MANUAL NOTFY
               </th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="item in data_card1_info" :key="item.id">
+              <td>{{ item.no }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.location }}</td>
+              <td>{{ item.room_no }}</td>
+              <td>{{ item.avg_bpm }}</td>
+              <td>{{ item.now_bpm }}</td>
               <td>
-                <v-icon x-small :style="{ color: item.color }"
-                  >mdi-circle
-                </v-icon>
-                {{ item.name }}
+                <div>
+                  <v-switch
+                    v-model="ex11"
+                    color="#22CE8B"
+                    hide-details
+                  ></v-switch>
+                </div>
               </td>
-              <td>{{ item.data }}</td>
-              <td>{{ item.percent }}</td>
+              <td>
+                <v-btn :style="{ backgroundColor: item.color }" elevation="2" small>
+                  {{ item.manual_noti }}
+                </v-btn>
+              </td>
             </tr>
           </tbody>
         </template>
       </v-simple-table>
-    </div>
-    <div>
+      <v-divider></v-divider>
     </div>
   </div>
 </template>
@@ -42,19 +69,46 @@ export default {
   data() {
     return {
       data_card1_info: [
-        { name: "Garmin", color: "#2289D8", data: "395", percent: "14.1%" },
-        { name: "Suunto", color: "#DA2121", data: "422", percent: "15%" },
-        { name: "Xiaomi", color: "#FF850A", data: "796", percent: "28.4%" },
-        { name: "Honor", color: "#FF3E80", data: "321", percent: "11.4%" },
         {
-          name: "Apple Watch",
-          color: "#9C9C9C",
-          data: "844",
-          percent: "31.1%",
+          name: "Inverness McKenzie",
+          no: "101",
+          location: "Production B1",
+          room_no: "102",
+          avg_bpm: "104",
+          now_bpm: "159",
+          color: "#B4B4B4",
+          manual_noti: "SENDED",
         },
-        { name: "อื่นๆ", color: "#58BFAE", data: "22", percent: "0.7%" },
+        {
+          name: "Niles Peppertrout",
+          no: "102",
+          location: "Production B1",
+          room_no: "140",
+          avg_bpm: "140",
+          now_bpm: "157",
+          color: "#22CE8B",
+          manual_noti: "SEND",
+        },
+        {
+          name: "Abraham Pigeon",
+          no: "103",
+          location: "Production B1",
+          room_no: "106",
+          avg_bpm: "161",
+          now_bpm: "174",
+          color: "#22CE8B",
+          manual_noti: "SEND",
+        },
       ],
     };
   },
 };
 </script>
+
+<style scoped>
+.t_switch {
+  display: flex;
+  /* justify-items: center; */
+  justify-content: center;
+}
+</style>
