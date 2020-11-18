@@ -63,7 +63,6 @@
 <style scoped>
 .e20 {
   background-color: gray;
-  color:auto;
 }
 .e21 {
   background-color: rgb(92, 84, 84);
