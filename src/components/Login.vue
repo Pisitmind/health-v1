@@ -49,13 +49,30 @@
           </v-layout>
         </v-container>
       </v-content>
-    <v-footer >
-      <v-flex> 
-        <v-content class="foot_content">
-          
-        </v-content>
-      </v-flex>
-    </v-footer>
+    <v-footer
+    dark
+    padless
+  >
+    <!-- <v-card
+      flat
+      tile
+      class=" purple lighten-2 white--text text-center"
+    >
+      <v-card-text class="fit_w white--text pt-0 ">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. 
+      </v-card-text>
+
+      <v-divider></v-divider>
+    </v-card> -->
+    <div class="foot_item">
+    <v-card class="p_200">
+      <span>สร้างโดย</span>
+    </v-card>
+    <v-card class="p_200">
+      <span>โลโก้มอ+ที่อยู่ </span>
+    </v-card>
+    </div>
+  </v-footer>
     </v-app>
   </div>
 </template>
@@ -79,7 +96,22 @@
 .v-text-field{
   margin-bottom: 10px;
 }
-.v-footer{
+.v-flex{
+  background-color:#AD8DBB;
+}
+.p_200{
+  width:200px;
+  height: 260px;
+  color:aquamarine;
+}
+.fit_w{
+  width: 100%;
+}
+.foot_item{
+  width: 100%;
+  padding:0 70px;
+  display:flex;
+  justify-content: space-between;
   background-color:#AD8DBB;
 }
 /* .set_center{
