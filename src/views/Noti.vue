@@ -380,6 +380,7 @@
             <div class="card1-left">
               <div class="">
                 <p><strong>Hearth rate</strong></p>
+                
               </div>
             </div>
           </div>
