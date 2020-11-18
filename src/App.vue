@@ -10,9 +10,6 @@
       </v-container>
     </v-main>
 
-    <v-footer app>
-      <!-- -->
-    </v-footer>
   </v-app>
 </template>
 
@@ -31,8 +28,21 @@ export default {
   computed: {
  hide () {
    return this.$route.path !== '/login'; 
- }
+ },
 },
   
 };
 </script>
+
+<style scope>
+
+html{
+  overflow-x:hidden;
+  /* overflow-y:hidden; */
+}
+/*
+html::-webkit-scrollbar { 
+    display: none; 
+    
+} */
+</style>
