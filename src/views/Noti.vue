@@ -1,9 +1,5 @@
 <template>
   <div class="noti">
-    <h1>This is a Notifications page</h1>
-    <br />
-    <!-- <canvas id="graph" width="200" height="100"></canvas> -->
-    <br />
     <div class="card_el">
       <v-card elevation="3" outlined>
         <div class="card1-root">
@@ -190,7 +186,7 @@
                                   >
                                     <td>{{ item.no }}</td>
                                     <td>{{ item.name }}</td>
-                                    <td>{{ item.location }}</td>
+                                    <td class="text_green">{{ item.location }}</td>
                                     <td>{{ item.room_no }}</td>
                                     <td>{{ item.avg_bpm }}</td>
                                     <td>{{ item.now_bpm }}</td>
@@ -200,6 +196,8 @@
                                           v-model="ex11"
                                           color="#22CE8B"
                                           hide-details
+                                          value
+                                          input-value="true"
                                         ></v-switch>
                                       </div>
                                     </td>
@@ -230,23 +228,24 @@
           <div class="content1-card1">
             <div class="cont1-card1 c_size c1">
               <div class="head_ct1_c1">
-                <span><strong>Resting state</strong></span>
-                <p style="grey--text">
+                <span style="text-align: center;" class="center"><strong>Resting state</strong></span>
+                <p class="grey--text " style="text-align: center; font-size:14px;" >
                   Heart rate is resting state usually varies between 60 and 100
                   BPM.
                 </p>
               </div>
+              <br />
               <div class="c3">
                 <canvas id="graph0" width="" height="200px"></canvas>
               </div>
-              <br />
+
               <div class="table_ct1_c1 c1">
                 <table
                   class="table_c1 c1"
                   style="width: 100%;
   border-collapse: collapse;"
                 >
-                  <v-title>Resting state of people</v-title>
+                  <v-title class="title_table_c1 ">Resting state of people</v-title>
                   <v-row
                     no-gutters
                     style="height:auto;"
@@ -258,7 +257,7 @@
                         <v-card class="box_ct1 pa-2" outlined tile>
                           <div class="">
                             <div>
-                              <p>{{ item.data[n - 1] }}</p>
+                              <p class="font_omg">{{ item.data[n - 1] }}</p>
                             </div>
                             <div class="name_lb_c1">
                               <v-icon
@@ -266,7 +265,7 @@
                                 :style="{ color: item.color[n - 1] }"
                                 >mdi-circle</v-icon
                               >
-                              <span>{{ item.name[n - 1] }}</span>
+                              <span class="font_sm pd_text_5">{{ item.name[n - 1] }}</span>
                             </div>
                           </div>
                         </v-card>
@@ -275,13 +274,11 @@
                   </v-row>
                 </table>
               </div>
-              <br />
             </div>
-
             <div class="cont2-card1 c_size c2">
               <div class="head_ct1_c1">
-                <span><strong>Active state</strong></span>
-                <p style="grey--text">
+                <span style="text-align: center;" class="center"><strong>Active state</strong></span>
+                <p class="grey--text " style="font-size:14px;">
                   Your exercise heart rate zone is calculated as below. Select
                   the appropriate heart rate zone to get the most out of your
                   exercise.
@@ -290,14 +287,13 @@
               <div class="c3">
                 <canvas id="graph1" width="" height="200px"></canvas>
               </div>
-              <br />
               <div class="table_ct2_c1 c1">
                 <table
                   class="table_c1 c1"
                   style="width: 100%;
   border-collapse: collapse;"
                 >
-                  <v-title>Resting state of people</v-title>
+                  <v-title class="title_table_c1">Active state of people</v-title>
                   <v-row
                     no-gutters
                     style="height:auto;"
@@ -308,7 +304,7 @@
                       <v-card class="box_ct1 pa-2" outlined tile>
                         <div class="">
                           <div>
-                            <p>{{ item.data[n - 1] }}</p>
+                            <p class="font_omg">{{ item.data[n - 1] }}</p>
                           </div>
                           <div class="name_lb_c1">
                             <v-icon
@@ -316,7 +312,7 @@
                               :style="{ color: item.color[n - 1] }"
                               >mdi-circle</v-icon
                             >
-                            <span>{{ item.name[n - 1] }}</span>
+                            <span class="font_sm pd_text_5" >{{ item.name[n - 1] }}</span>
                           </div>
                         </div>
                       </v-card>
@@ -330,7 +326,7 @@
             <div class="c_size c1">
               <v-card class="card1-subcard-3 ct_set" width="" height="">
                 <v-card-title>
-                  <span class="topic-name-card pl-5">
+                  <span class="topic_name_card pl-5 ">
                     Heart rate zone
                   </span>
                 </v-card-title>
@@ -355,12 +351,12 @@
                               :style="{ color: item.color[x - 1] }"
                               >mdi-circle
                             </v-icon>
-                            <span class="txt_pd">
+                            <span class="txt_pd font_sm font_bold">
                               {{ item.name[x - 1] }}
                             </span>
                           </div>
                         </td>
-                        <td class="alr c1">{{ item.avg[x - 1] }}</td>
+                        <td class="alr font_sm font_bold">{{ item.avg[x - 1] }}</td>
                       </tr>
                     </table>
                   </div>
@@ -434,7 +430,7 @@
                               value="100"
                             ></v-progress-linear>
                             <br />
-                            <span class="text-top">56.7kg.</span>
+                            <span class="text-top ">56.7kg.</span>
                             <v-progress-linear
                               color="none"
                               rounded
@@ -539,7 +535,7 @@
                     </tr>
                     <tr v-for="item in items" :key="item.id" align="center">
                       <th scope="row">
-                        <v-icon :style="{ color: item.color }">{{
+                        <v-icon  :style="{ color: item.color }">{{
                           item.icon
                         }}</v-icon>
                         <span class="black--text"
@@ -552,6 +548,7 @@
                         width="16.67%"
                         height="40px"
                         style="border:1px solid black;"
+                        class="font_omg"
                       >
                         {{ item.data[n - 1] }}
                       </td>
@@ -576,7 +573,7 @@
                <div class="title_card2">
                 <div class="card2_nameNicon">
                   <div style="padding-right:10px;">
-                    <v-icon color="#009688">mdi-amazon-alexa</v-icon>
+                    <v-icon color="#009688">mdi-google-fit</v-icon>
                   </div>
                   <div class="card2_bot_text ">
                     <span><strong>BMI</strong></span>
@@ -737,6 +734,7 @@
                         width="16.67%"
                         height="40px"
                         style="border:1px solid black;"
+                        class="font_omg"
                       >
                         {{ item.data[n - 1] }}
                       </td>
@@ -751,21 +749,78 @@
     </div>
     <br />
 
-    <div class="card_el">
-      <v-card elevation="3" outlined>
-        <div class="card1-root">
-          <div class="head-card1">
-            <div class="card1-left">
-              <div class="">
-                <p><strong>Step</strong></p>
-                
+     <br />
+    <div class="card_el_card2">
+      <v-card class="card2_size" elevation="3" outlined>
+        <div class="card3_root">
+          <div class="head-card2">
+            <div class="">
+              <div class="header_card2">
+                <div class="title_card2">
+                  <div class="card2_nameNicon">
+                    <div style="padding-right:10px;">
+                      <v-icon color="#009688">mdi-foot-print</v-icon>
+                    </div>
+                    <div class="card2_bot_text ">
+                      <span><strong>Step</strong></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="head_card2_btn">
+                  <v-btn small icon fab>
+                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="card2_line2 grey--text">
+            <span>Daily avg doing more exercise id good for health</span>
+          </div>
+          <div class="content1_card3">
+            <!-- card l -->
+            <div class="chart1_card3 c30">
+              <div class="size_chart3">
+                <canvas id="graph1_c3" width="800px" height="200px"></canvas>
+              </div>
+            </div>
+            <br />
+            <!-- card r  -->
+            <div class="data_table_card3 c30">
+              <div class="card1-subcard-3 ct_set" width="" height=""></div>
+               <div class="table_content_card2">
+
+                  <table
+                    style="width: 100%;
+  border-collapse: collapse;"
+                  >
+                    <tr v-for="item in data_card3" :key="item.id" align="center">
+                      <th scope="row" width="12%" class="head_table_card3">
+                        <v-icon small :style="{ color: item.color }">{{
+                          item.icon
+                        }}</v-icon>
+                        <span class="black--text pd_text_table_c3 pd_text_5 font_sm" 
+                          ><strong>{{ item.type }}</strong></span
+                        >
+                      </th>
+                      <td
+                        v-for="n in 5"
+                        :key="n"
+                        width="17%"
+                        height="40px"
+                        style="border:1px solid black;"
+                        class="font_omg"
+                      >
+                        {{ item.data[n - 1] }}
+                      </td>
+                    </tr>
+                  </table>
+                </div>
             </div>
           </div>
         </div>
       </v-card>
     </div>
-    <!-- <p>{{card2.labels[0]}}</p> -->
   </div>
 </template>
 
@@ -893,6 +948,42 @@ export default {
       },
     });
     console.log(bar1);
+    var ctx2_c3 = document.getElementById("graph1_c3").getContext("2d");
+    var bar2_c3 = new Chart(ctx2_c3, {
+      type: "bar",
+      data: {
+        datasets: [
+          {
+            label: "Steps",
+            backgroundColor: "#A3A1FB",
+            data: [139, 384, 223, 189, 158, 318, 93],
+          },
+          {
+            label: "Setting",
+            backgroundColor: "#FFDA83",
+            data: [385, 259, 196, 230, 106, 237, 107],
+          },
+        ],
+        labels: ["7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14"],
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true ,ticks: {
+          reverse: false,
+          min: 0,
+          max: 1000,
+          stepSize: 200, }}],
+          
+        },
+        
+      },
+    });
+    console.log(bar2_c3);
 
     // bar_dia make the code broken 1
     var ctx_dia = document.getElementById("graph_dialog").getContext("2d");
@@ -1207,10 +1298,30 @@ export default {
           data: [154, 569, 601, 22, 7],
         },
       ],
+      data_card3: [
+        {
+          type: "All",
+          icon: "mdi-circle",
+          color: "#359BD3",
+          data: [524, 643, 419, 419, 264, 555, 200],
+        },
+        {
+          type: "Steps",
+          icon: "mdi-circle",
+          color: "#A3A1FB",
+          data: [139, 384, 223, 189, 158, 318, 93],
+        }, 
+        {
+          type: "Setting",
+          icon: "mdi-circle",
+          color: "#FFDA83",
+          data: [385, 259, 196, 230, 106, 237, 107],
+        },
+      ],
 
     };
   },
-};
+};  
 </script>
 
 <style  scoped>
@@ -1222,7 +1333,7 @@ export default {
   height: auto;
   width: 300px;
 }
-.c1 {
+/* .c1 {
   background-color: greenyellow;
 }
 .c2 {
@@ -1230,7 +1341,7 @@ export default {
 }
 .c3 {
   background-color: gray;
-}
+} */
 .head-card1 {
   display: flex;
   justify-content: space-between;
@@ -1242,8 +1353,17 @@ export default {
   /* justify-content:space-between; */
   justify-content: space-around;
 }
-.head_ct1_c1 {
-  height: 20%;
+.font_bold {
+  font-weight: bold;  
+}
+.font_norm{
+  font-weight: normal;
+}
+.font_sm{
+  font-size: 14px;
+}
+.font_omg{
+  font-size: 24px;
 }
 .cont1-card1 {
   display: flex;
@@ -1257,6 +1377,13 @@ export default {
 .t1 {
   color: white;
   background-color: skyblue;
+}
+.topic_name_card{
+  color: #ad8dbb;
+}
+.title_table_c1{
+  font-size:14px;
+  font-weight: bold;
 }
 .t_name_ct3c1 {
   display: flex;
@@ -1291,7 +1418,9 @@ export default {
   width: 33%;
   height: 100px;
 }
-
+.text_green{
+  color:#22CE8B;
+}
 .head_dialog {
   width: 100%;
   display: flex;
@@ -1326,9 +1455,9 @@ export default {
 }
 
 
-.c30{
+/* .c30{
   background-color:pink;
-}
+} */
 .header_card2{
   display:flex;
   justify-content: space-between;
@@ -1342,10 +1471,9 @@ export default {
 .card2_root{
   padding: 10px;
 }
-.card2_size{
-  /* height:350px; */
+/* .card2_size{
   background-color:rgba(0,0,0,0.1);
-}
+} */
 .card2_nameNicon{
   display:flex;
   justify-content:center;
@@ -1359,10 +1487,21 @@ export default {
 .chart1_card2{
   padding: 20px 0;
 }
+.chart1_card3{
+  width:100%;
+  display:flex;
+  /* align-content: center; */
+  /* align-items: center; */
+  justify-content: center;
+}
 .content1_card2{
   display: flex;
   justify-content: space-around;
-
+}
+.content1_card3 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .title_card2{
   justify-content: center;
@@ -1376,5 +1515,22 @@ export default {
 .data_table_card2{
   width: 70%;
   padding:20px 0;
+}
+.card3_root{
+  padding: 10px;
+}
+.data_table_card3{
+  padding:0 40px;
+}
+.size_chart3{
+  width: 80%;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+.head_table_card3{
+  text-align: left;
 }
 </style>
