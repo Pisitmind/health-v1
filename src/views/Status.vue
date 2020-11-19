@@ -1,22 +1,30 @@
 <template>
   <div class="status">
     <br />
+    <!-- el card2 div -->
     <div class="card_el_card2">
+        <!-- card2 head+content -->
       <v-card class="card2_size" elevation="3" outlined>
         <div class="card1-root">
+          <!-- card2 header -->
           <div class="head-card1">
-            <div class="card1-left">
+            <div class="">
               <div class="">
+                <v-icon ></v-icon>
                 <p><strong>Ideal weight</strong></p>
               </div>
             </div>
           </div>
+          <!-- card2 content -->
           <div class="content1-card1">
+            <!-- card l -->
             <div class="cont1-card1 c_size c1">
               <div class="c3">
-                <canvas id="graph1_c2" width="" height="200px"></canvas>
+                <canvas id="graph1_c2" width="200px" height="200px"></canvas>
               </div>
             </div>
+                
+            <!-- card r  -->
             <div class="card2_data_table c1">
               <v-card class="card1-subcard-3 ct_set" width="" height="">
                 <div class="card4-content">
@@ -68,31 +76,33 @@
                           <div class="progress-el">
                             <v-progress-linear
                               color="purple darken-2"
-                              rounded
+                              height="15"
+                              class="rounded-l-xl"
                               value="100"
                             ></v-progress-linear>
                             <br />
                             <v-progress-linear
                               color="blue darken-2"
-                              rounded
+                              height="15"
                               value="100"
                             ></v-progress-linear>
                             <br />
                             <v-progress-linear
                               color="green darken-2"
-                              rounded
+                              height="15"
                               value="100"
                             ></v-progress-linear>
                             <br />
                             <v-progress-linear
                               color="yellow darken-2"
-                              rounded
+                              height="15"
                               value="100"
                             ></v-progress-linear>
                             <br />
                             <v-progress-linear
                               color="red darken-2"
-                              rounded
+                              height="15"
+                              class="rounded-r-xl"
                               value="100"
                             ></v-progress-linear>
                           </div>

@@ -38,6 +38,7 @@ export default {
 
 html{
   overflow-x:hidden;
+  font-family: Roboto;
   /* overflow-y:hidden; */
 }
 /*
