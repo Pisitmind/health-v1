@@ -1462,7 +1462,9 @@ export default {
   display:flex;
   justify-content: space-between;
 }
-.card_el_card2{
+.card_el{
+  padding:10px;
+}.card_el_card2{
   padding:10px;
 }
 .head_card2_btn{
