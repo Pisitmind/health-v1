@@ -88,7 +88,7 @@
             <div class="pd_top_foot">
               <v-img
                 max-width="200px"
-                src="../assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"
+                src="../assets/pic/LogoCMU02-12.png"
               ></v-img>
               <div class="foot_card">
                 <img
