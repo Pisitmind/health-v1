@@ -29,7 +29,6 @@
       </v-list-item>
 
       <v-divider></v-divider>
-
       <v-list
         dense
         nav
@@ -43,6 +42,11 @@
           active-class="white--text purple rounded-l-lg"
         >
           <v-list-item-icon>
+            <!-- <img
+                  height="30px"
+                  class="filter-color"
+                  alt="email"
+                /> -->
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
@@ -90,18 +94,18 @@ export default {
    data () {
       return {
         items: [
-          { title:'กราฟข้อมูล', icon:'mdi-chart-timeline',route:'/' },
-          { title:'แจ้งเตือน', icon:'mdi-bell-outline',route:'/Notifications' },
-          { title:'ข้อมูลการเคลื่อนไหว', icon:'mdi-walk',route:'/Moving' },
-          { title:'ข้อมูลสถานะร่างกาย', icon:'mdi-account-details',route:'/Status' },
-          { title:'ค่าส่วนประกอบในร่างกาย', icon:'mdi-human-handsup',route:'/Body-info' },
-          { title:'ข้อมูลสุขภาพจำเพาะ', icon:'mdi-water-plus',route:'/unq-health' },
-          { title:'รายงาน',icon:'mdi-chart-areaspline',route:'/Report' },
+          { title:'กราฟข้อมูล', icon:'mdi-chart-timeline',logo:'../assets/icon/icon_dashboard.svg' ,route:'/' },
+          { title:'แจ้งเตือน', icon:'mdi-bell-outline',logo:'../assets/icon/icon_noti_other.svg' ,route:'/Notifications' },
+          { title:'ข้อมูลการเคลื่อนไหว', icon:'mdi-walk',logo:'../assets/icon/icon_exercise.svg' ,route:'/Moving' },
+          { title:'ข้อมูลสถานะร่างกาย', icon:'mdi-account-details',logo:'../assets/icon/icon_statusdata.svg',route:'/Status' },
+          { title:'ค่าส่วนประกอบในร่างกาย', icon:'mdi-human-handsup',logo:'../assets/icon/icon_bodycomposition.svg',route:'/Body-info' },
+          { title:'ข้อมูลสุขภาพจำเพาะ', icon:'mdi-water-plus',logo:'../assets/icon/icon_healthsign.svg',route:'/unq-health' },
+          { title:'รายงาน',icon:'mdi-chart-areaspline',logo:'../assets/icon/icon_report.svg',route:'/Report' },
         ],
         items2:[
-          { title:'ผู้ใช้งาน', icon:'mdi-account-group-outline',route:'/Users' },
-          { title:'ข่าว / ประกาศ', icon:'mdi-new-box',route:'/News' },
-          { title:'บอร์ด / สาระสุขภาพ', icon:'mdi-teach',route:'/Boards' },
+          { title:'ผู้ใช้งาน', icon:'mdi-account-group-outline',logo:'../assets/icon/icon_datapersonsa.svg',route:'/Users' },
+          { title:'ข่าว / ประกาศ', icon:'mdi-new-box',logo:'../assets/icon/icon_news.svg',route:'/News' },
+          { title:'บอร์ด / สาระสุขภาพ', icon:'mdi-teach',logo:'../assets/icon/icon_board.svg',route:'/Boards' },
           
         ],
       }

@@ -1,13 +1,13 @@
 <template>
   <div class="login" id="login">
-    <v-app class="e20_none" overflow="hidden">
-      <v-content class="log_in">
+    <v-app class="e20_none">
+      <v-content class="bg_top">
         <v-container class="e22" fluid fill-height>
-          <v-layout v-resize="onResize" align-center>
-            <v-flex>
+          <v-layout v-resize="onResize" align-bottom>
+            <v-flex class="set_form">
               <v-card
-                class="center elevation-10 pa-10"
-                width="570px"
+                class="center elevation-5 pa-10"
+                width="450px"
                 height="auto"
               >
                 <v-img
@@ -49,7 +49,7 @@
           </v-layout>
         </v-container>
       </v-content>
-      <div class="foot">
+      <div class="foot" fluid>
         <div class="foot_item">
           <div dense class="p_200 foot_content">
             <div class="pd_top_foot">
@@ -133,19 +133,24 @@
 .e21 {
   background-color: rgb(92, 84, 84);
 }
-.log_in {
-  background-image: url("../assets/pic/1710-GR-01-01.jpg");
-  background-size: 100%;
-  /* background-repeat: no-repeat; */
-  background-attachment: fixed;
-  overflow: hidden !important;
-
-  /* background-position: center; */
+.e22 {
+  display: flex;
+  /* align-items: center; */
+  padding-top:50px;
 }
+.bg_top {
+  background-image: url("../assets/pic/1710-GR-01-01.jpg");
+  background-position: bottom;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-attachment:fixed; */
+  overflow: hidden !important;
+}
+
 .v-text-field {
   margin-bottom: 10px;
 }
-.foot_content{
+.foot_content {
   background-color: #ad8dbb;
 }
 .v-flex {
@@ -153,9 +158,12 @@
 }
 .p_200 {
   width: 220px;
-  height: 260px;
-  color: white;;
+  color: white;
   /* color: aquamarine; */
+}
+.set_form {
+  /* display: none; */
+  /* display: flex; */
 }
 .fit_w {
   width: 100%;
@@ -163,6 +171,7 @@
 .foot_item {
   width: 100%;
   padding: 0 70px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   background-color: #ad8dbb;
@@ -179,7 +188,7 @@
   justify-content: space-around;
 }
 .pd_top_foot {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .mg_y_10 {
   margin: 10px 0;
