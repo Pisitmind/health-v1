@@ -61,7 +61,7 @@
             <div class="text-center">
               <canvas id="graph0" width="" height="200px"></canvas>
             </div>
-            <v-card >
+            <v-card>
               <v-card-subtitle>
                 <span class="topic-name-card ">
                   ตัวบ่งชี้
@@ -223,7 +223,7 @@
               <div class="card3-content">
                 <div>
                   <v-card-text>
-                    <canvas id="graph3-1" width="" height="200px"></canvas>
+                    <canvas id="graph3-1" width="450px" height="200px"></canvas>
                   </v-card-text>
                 </div>
               </div>
@@ -274,7 +274,7 @@
               <div class="card1-content">
                 <div>
                   <v-card-title>
-                    <canvas id="graph1" width="" height="200px"></canvas>
+                    <canvas id="graph1" width="450px" height="200px"></canvas>
                   </v-card-title>
                   <v-card-content> </v-card-content>
                 </div>
@@ -384,31 +384,33 @@
                         <div class="progress-el">
                           <v-progress-linear
                             color="purple darken-2"
-                            rounded
+                            height="15"
+                            class="rounded-l-xl"
                             value="100"
                           ></v-progress-linear>
                           <br />
                           <v-progress-linear
                             color="blue darken-2"
-                            rounded
+                            height="15"
                             value="100"
                           ></v-progress-linear>
                           <br />
                           <v-progress-linear
                             color="green darken-2"
-                            rounded
+                            height="15"
                             value="100"
                           ></v-progress-linear>
                           <br />
                           <v-progress-linear
                             color="yellow darken-2"
-                            rounded
+                            height="15"
                             value="100"
                           ></v-progress-linear>
                           <br />
                           <v-progress-linear
                             color="red darken-2"
-                            rounded
+                            height="15"
+                            class="rounded-r-xl"
                             value="100"
                           ></v-progress-linear>
                         </div>
@@ -518,6 +520,35 @@ export default {
     var ctx = document.getElementById("graph").getContext("2d");
     var bar = new Chart(ctx, {
       type: "bar",
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 200, // minimum will be 0, unless there is a lower value.
+                stepValue: 200,
+                max: 1000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+            },
+          ],
+        },
+      },
       data: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         backgroundColor: ["#ff6384", "#36a2eb"],
@@ -547,6 +578,32 @@ export default {
     var ctx1 = document.getElementById("graph1").getContext("2d");
     var bar1 = new Chart(ctx1, {
       type: "horizontalBar",
+      options: {
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              // display: true,
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 250,
+                max: 1200,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "แคล",
+              },
+            },
+          ],
+        },
+      },
       data: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         datasets: [
@@ -560,7 +617,7 @@ export default {
               "#B4B4B4",
               "#2289D8",
             ],
-            data: [270, 250, 275, 480, 145, 40],
+            data: [984, 627, 743, 505, 286, 211],
           },
         ],
       },
@@ -569,13 +626,39 @@ export default {
     var ctx3 = document.getElementById("graph3-1").getContext("2d");
     var bar3 = new Chart(ctx3, {
       type: "horizontalBar",
+      options: {
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 1000, // minimum will be 0, unless there is a lower value.
+                stepValue: 1000,
+                max: 6000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "ก้าว",
+              },
+            },
+          ],
+        },
+      },
       data: {
         labels: ["ชาย", "หญิง"],
         datasets: [
           {
             label: "ก้าว",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
-            data: [5380, 3700],
+            data: [3628, 4874],
           },
         ],
       },
@@ -693,13 +776,13 @@ export default {
   padding-top: 0px;
   margin-top: 0px;
 }
-.ct_set{
+.ct_set {
   align-items: center;
   justify-content: center;
   justify-items: center;
   // text-align: center;
-  padding:auto;
-  margin:auto;
+  padding: auto;
+  margin: auto;
 }
 th {
   text-align: center;
