@@ -263,17 +263,35 @@
           <div class="card1_p3_content">
             <div class="card3_p3_content_left">
               <v-card-text>
-                <div class="card3_line2 grey--text">
+                <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
-                </div>
-                <canvas id="graph1_p3" width="200px" height=""></canvas>
+                </div> -->
+                <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
+                <div class="label_grpah1_c1_p3">
+                <table width="100%">
+                  <tr>
+                    <td style="text-align:center;">
+                      <div class="label_text_card3">
+                        <div>
+                          <v-icon small color="blue"> mdi-circle</v-icon>
+                          <span class="black--text"><strong>ชาย</strong></span>
+                        </div>
+                        <div class="pd_10">
+                          <v-icon small color="pink"> mdi-circle</v-icon>
+                          <span class="black--text"><strong>หญิง</strong></span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
               </v-card-text>
             </div>
-            <v-divider vertical></v-divider>
-            <div class="card3_p3_content_right">
-              <v-card class="card2-subcard-3 ct_set" width="" height="">
+            <!-- <v-divider vertical></v-divider> -->
+            <div class="card3_p3_content_right pd_r_30">
+              <v-card class="card2-subcard-3  ct_set" width="" height="">
                 <v-card-subtitle>
-                  <span class="topic-name-card pl-5">
+                  <span class="topic-name-card_c3 ">
                     ตัวบ่งชี้
                   </span>
                 </v-card-subtitle>
@@ -281,12 +299,12 @@
                   <div class="card-info-right pa-1">
                     <table class="card2-table">
                       <tr>
-                        <th>กิจกรรม</th>
+                        <th height="30px">กิจกรรม</th>
                         <th>ชาย</th>
                         <th>หญิง</th>
                         <th>เฉลี่ยรวม</th>
                       </tr>
-                      <tr v-for="item in data_card3_p3" :key="item.id">
+                      <tr v-for="item in data_card3_p3" :key="item.id" height="30px">
                         <td class="two-data-card2">
                           <v-icon x-small :style="{ color: item.color }"
                             >mdi-circle
@@ -308,7 +326,7 @@
     </div>
     <br />
     <div>
-      <div class="card-info-right pa-1">
+      <!-- <div class="card-info-right pa-1">
         <table
           class="card2-table"
           v-for="item in data_card3_p3_1"
@@ -338,7 +356,7 @@
             <td class="alr font_sm font_bold">{{ item.avg[x - 1] }}</td>
           </tr>
         </table>
-      </div>
+      </div> -->
     </div>
     <br />
     <br />
@@ -533,6 +551,65 @@ export default {
       },
     });
     console.log(bar2_c2_p3);
+
+    var ctx1_c3_p3 = document.getElementById("graph1_c3_p3").getContext("2d");
+    var bar1_c3_p3 = new Chart(ctx1_c3_p3, {
+      type: "bar",
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 200, // minimum will be 0, unless there is a lower value.
+                stepValue: 200,
+                max: 1000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+            },
+          ],
+        },
+      },
+      data: {
+        labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
+        backgroundColor: ["#ff6384", "#36a2eb"],
+        Color: [
+          "#58BFAE",
+          "#FF3E80",
+          "#FF850A",
+          "#DA2121",
+          "#B4B4B4",
+          "#2289D8",
+        ],
+        datasets: [
+          {
+            label: "ชาย",
+            backgroundColor: "#9ACDE9",
+            data: [638, 557, 784, 652, 145, 24],
+          },
+          {
+            label: "หญิง",
+            backgroundColor: "#F8C5C5",
+            data: [270, 250, 275, 480, 145, 40],
+          },
+        ],
+      },
+    });
+    console.log(bar1_c3_p3);
   },
   data() {
     return {
@@ -691,7 +768,7 @@ export default {
 .head_card3_p3_l_title {
   display: flex;
   /* padding: 0 10px; */
-  background-color: rgba(0, 0, 0, 0.2);
+  // background-color: rgba(0, 0, 0, 0.2);
   /* justify-content: space-between; */
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.2); */
@@ -724,6 +801,9 @@ export default {
   display: flex;
   justify-content: center;
 }
+.label_text_card3 {
+  display: flex;
+}
 .title_card3_p3 {
   width: 40%;
 }
@@ -732,7 +812,7 @@ export default {
   /* padding-left:30px; */
   justify-content: space-around;
   width: 60%;
-  background-color: rgba(0, 200, 200, 0.4);
+  // background-color: rgba(0, 200, 200, 0.4);
 }
 
 .male-content {
@@ -759,6 +839,13 @@ export default {
     padding: 0 20px;
     text-align: left;
   }
+}
+.topic-name-card_c3 {
+  color: #ad8dbb;
+}
+
+.pd_r_30{
+  padding-right: 30px;
 }
 /* 
 
