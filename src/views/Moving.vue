@@ -107,7 +107,7 @@
         </div>
       </v-card>
     </div>
-<div class="card1_p3">
+    <div class="card1_p3">
       <v-card elevation="2" outlined height="">
         <div class="card1_p3_root">
           <div class="card1_p3_headNsub">
@@ -119,7 +119,7 @@
                 <div class="head_card1_p3_l_title">
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p3">
-                     <div style="padding-right:10px;">
+                    <div style="padding-right:10px;">
                       <v-icon large color="#F57C00">mdi-fire</v-icon>
                     </div>
                     <div class="card3-bot-text ">
@@ -162,9 +162,7 @@
             <div class="card1_p3_content_left">
               <v-card-text>
                 <div class="card3_line2 grey--text">
-                  <span
-                    >ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span
-                  >
+                  <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
                 </div>
                 <canvas id="graph1_c2_p3" width="200px" height=""></canvas>
               </v-card-text>
@@ -175,14 +173,19 @@
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
-                <canvas id="graph2_c1_p3" width="200px" height=""></canvas>
+                <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p3">
                 <table width="100%">
                   <span class
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 7,580
-                    ก้าวต่อวัน</span
+                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
+                    แคลต่อวัน</span
+                  >
+                  <br />
+                  <span class="grey--text"
+                    >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
+                    ต่อวัน)</span
                   >
                 </table>
               </div>
@@ -200,27 +203,45 @@
               <!-- head left div -->
               <div class="head_card1_p3_l">
                 <!-- head left -->
-                <div class="head_card1_p3_l_title">
+                <div class="head_card3_p3_l_title">
                   <!-- การก้าว+icon -->
-                  <div class="title_card1_p3">
+                  <div class="title_card3_p3">
                     <div class="card3-bot-text ">
                       <span><strong>การออกกำลังกาย</strong></span>
                     </div>
                   </div>
                   <!-- btn sex & age -->
-                  <div class="sex_age_title_card1_p3">
-                    <div class="sex_title">
+                  <div class="btn_date_head_card3">
+                    <div class="">
                       <v-btn class="white--text " small color="#AD8DBB"
-                        ><span>เพศ</span></v-btn
+                        ><span>วันนี้</span></v-btn
                       >
                     </div>
-                    <div class="age_title">
+                    <div class="">
                       <v-btn
                         class="#AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
-                        ><span>อายุ</span></v-btn
+                        ><span>สัปดาห์</span></v-btn
+                      >
+                    </div>
+                    <div class="">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        ><span>เดือน</span></v-btn
+                      >
+                    </div>
+                    <div class="">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        ><span>ปี</span></v-btn
                       >
                     </div>
                   </div>
@@ -240,40 +261,85 @@
             </div>
           </div>
           <div class="card1_p3_content">
-            <div class="card1_p3_content_left">
+            <div class="card3_p3_content_left">
               <v-card-text>
                 <div class="card3_line2 grey--text">
-                  <span
-                    >ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span
-                  >
+                  <span>graph here</span>
                 </div>
                 <canvas id="graph1_p3" width="200px" height=""></canvas>
               </v-card-text>
             </div>
             <v-divider vertical></v-divider>
-            <div class="card1_p3_content_right">
-              <v-card-text>
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
-                <canvas id="graph2_c1_p3" width="200px" height=""></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <span class
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 7,580
-                    ก้าวต่อวัน</span
-                  >
-                </table>
-              </div>
+            <div class="card3_p3_content_right">
+              <v-card class="card2-subcard-3 ct_set" width="" height="">
+                <v-card-subtitle>
+                  <span class="topic-name-card pl-5">
+                    ตัวบ่งชี้
+                  </span>
+                </v-card-subtitle>
+                <v-card-text class="pa-1">
+                  <div class="card-info-right pa-1">
+                    <table class="card2-table">
+                      <tr>
+                        <th>กิจกรรม</th>
+                        <th>ชาย</th>
+                        <th>หญิง</th>
+                        <th>เฉลี่ยรวม</th>
+                      </tr>
+                      <tr v-for="item in data_card3_p3" :key="item.id">
+                        <td class="two-data-card2">
+                          <v-icon x-small :style="{ color: item.color }"
+                            >mdi-circle
+                          </v-icon>
+                          {{ item.name }}
+                        </td>
+                        <td>{{ item.dataMan }}</td>
+                        <td>{{ item.dataWman }}</td>
+                        <td>{{ item.avg }}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </v-card-text>
+              </v-card>
             </div>
           </div>
         </div>
       </v-card>
     </div>
     <br />
-
+    <div>
+      <div class="card-info-right pa-1">
+        <table
+          class="card2-table"
+          v-for="item in data_card3_p3_1"
+          :key="item.id"
+          style="width: 100%;
+  border-collapse: collapse;"
+        >
+          <tr>
+            <th>กิจกรรม</th>
+            <th>ชาย</th>
+            <th>หญิง</th>
+            <th>เฉลี่ยรวม</th>
+          </tr>
+          <tr v-for="x in 6" :key="x" class="two-data-card2">
+            <td height="40px" class="pd_text 3">
+              <div class="t_name_ct3c1">
+                <v-icon x-small :style="{ color: item.color[x - 1] }"
+                  >mdi-circle
+                </v-icon>
+                <span class="txt_pd font_sm font_bold">
+                  {{ item.name[x - 1] }}
+                </span>
+              </div>
+            </td>
+            <td class="alr font_sm font_bold">{{ item.dataMan[x - 1] }}</td>
+            <td class="alr font_sm font_bold">{{ item.dataWman[x - 1] }}</td>
+            <td class="alr font_sm font_bold">{{ item.avg[x - 1] }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <br />
     <br />
   </div>
@@ -377,6 +443,32 @@ export default {
     var ctx1_c2_p3 = document.getElementById("graph1_c2_p3").getContext("2d");
     var bar1_c2_p3 = new Chart(ctx1_c2_p3, {
       type: "horizontalBar",
+      options: {
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              // display: true,
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 250,
+                max: 1200,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "แคล",
+              },
+            },
+          ],
+        },
+      },
       data: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         datasets: [
@@ -390,12 +482,57 @@ export default {
               "#B4B4B4",
               "#2289D8",
             ],
-            data: [270, 250, 275, 480, 145, 40],
+            data: [984, 627, 743, 505, 286, 211],
           },
         ],
       },
     });
     console.log(bar1_c2_p3);
+
+    var ctx2_c2_p3 = document.getElementById("graph2_c2_p3").getContext("2d");
+    var bar2_c2_p3 = new Chart(ctx2_c2_p3, {
+      type: "line",
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 3000,
+                max: 12000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "ก้าว",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+            },
+          ],
+        },
+      },
+      data: {
+        datasets: [
+          {
+            label: "ก้าว",
+            backgroundColor: "#B192BE",
+            data: [2900, 4000, 4100, 3800, 7200, 2800],
+          },
+        ],
+        labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
+      },
+    });
+    console.log(bar2_c2_p3);
   },
   data() {
     return {
@@ -403,12 +540,81 @@ export default {
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
         { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
       ],
+      data_card3_p3: [
+        {
+          name: "เดิน",
+          color: "#58BFAE",
+          dataMan: "638",
+          dataWman: "270",
+          avg: "22.7%",
+        },
+        {
+          name: "วิ่ง",
+          color: "#FF3E80",
+          dataMan: "557",
+          dataWman: "250",
+          avg: "19.9%",
+        },
+        {
+          name: "ว่ายน้ำ",
+          color: "#FF850A",
+          dataMan: "784",
+          dataWman: "275",
+          avg: "28%",
+        },
+        {
+          name: "ปั่นจักรยาน",
+          color: "#DA2121",
+          dataMan: "652",
+          dataWman: "480",
+          avg: "23.2%",
+        },
+        {
+          name: "เครื่องวิ่งวงรี",
+          color: "#B4B4B4",
+          dataMan: "145",
+          dataWman: "145",
+          avg: "5.1%",
+        },
+        {
+          name: "กิจกรรมในร่ม",
+          color: "#2289D8",
+          dataMan: "24",
+          dataWman: "40",
+          avg: "1.1%",
+        },
+      ],
+
+      data_card3_p3_1: [
+        {
+          name: [
+            "เดิน",
+            "วิ่ง",
+            "ว่ายน้ำ",
+            "ปั่นจักรยาน",
+            "เครื่องวิ่งวงรี",
+            "กิจกรรมในร่ม",
+          ],
+          //   icon: "mdi-circle",
+          color: [
+            "#58BFAE",
+            "#FF3E80",
+            "#FF850A",
+            "#DA2121",
+            "#B4B4B4",
+            "#2289D8",
+          ],
+          dataMan: [638, 557, 784, 652, 145, 24],
+          dataWman: [270, 250, 275, 480, 145, 40],
+          avg: ["22.7%", "19.9%", "28%", "23.2%", "5.1%", "1.1%"],
+        },
+      ],
     };
   },
 };
 </script>
 
-<style scope>
+<style lang="scss" scope>
 .progress-el {
   display: flex;
   flex-direction: row;
@@ -464,12 +670,29 @@ export default {
 .card1_p3_content_right {
   width: 50%;
   padding-left: 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
 
+.card3_p3_content_left {
+  width: 60%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.card3_p3_content_right {
+  width: 40%;
+  padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
 .head_card1_p3_l_title {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.head_card3_p3_l_title {
+  display: flex;
+  /* padding: 0 10px; */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* justify-content: space-between; */
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
@@ -501,4 +724,49 @@ export default {
   display: flex;
   justify-content: center;
 }
+.title_card3_p3 {
+  width: 40%;
+}
+.btn_date_head_card3 {
+  display: flex;
+  /* padding-left:30px; */
+  justify-content: space-around;
+  width: 60%;
+  background-color: rgba(0, 200, 200, 0.4);
+}
+
+.male-content {
+  display: flex;
+  flex-direction: column;
+}
+.top-male-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text-male {
+  display: flex;
+}
+
+.card2-subcard-3 {
+  padding-left: 10px;
+}
+
+.card2-table {
+  font-size: 12px;
+  color: #5b5b5b;
+  td {
+    padding: 0 20px;
+    text-align: left;
+  }
+}
+/* 
+
+.ct_set {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: auto;
+  margin: auto;
+} */
 </style>
