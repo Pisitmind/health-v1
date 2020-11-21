@@ -534,7 +534,7 @@
                       </th>
                     </tr>
                     <tr v-for="item in items" :key="item.id" align="center">
-                      <th scope="row">
+                      <th scope="row" class="text-left">
                         <v-icon  :style="{ color: item.color }">{{
                           item.icon
                         }}</v-icon>
@@ -720,7 +720,7 @@
                       </th>
                     </tr>
                     <tr v-for="item in items_2" :key="item.id" align="center">
-                      <th scope="row">
+                      <th scope="row" class="text-left">
                         <v-icon :style="{ color: item.color }">{{
                           item.icon
                         }}</v-icon>

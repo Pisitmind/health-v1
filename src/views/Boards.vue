@@ -1,234 +1,145 @@
 <template>
-    <div class="boards">
-        <h1>Board page</h1>
-          <br />
-    <v-card>
-      <v-card-title>
-        <div class="head_dialog_c1_p3">
-          <div>
-            <v-btn color="green darken-1" icon @click="dialog = false">
-              <v-icon>mdi-arrow-left-drop-circle-outline</v-icon>
-            </v-btn>
-          </div>
-          <div>
-            <span class="headline">รายละเอียดการเคลื่อนไหว</span>
-          </div>
-          
-        </div>
-      </v-card-title>
-      <v-card-text>
-       กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-      </v-card-text>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas id="graph1_c1_p3" width="500px" height="200px"></canvas>
+  <div class="boards">
+    <h1>Board page</h1>
+    <br />
+    <div class="card_1_p10">
+      <v-card>
+        <v-card-title>
+          <div class="head_card_p10">
+            <div>
+              <v-btn color="blue darken-1" icon large @click="dialog = false">
+                <v-icon>mdi-bottle-tonic-plus</v-icon>
+              </v-btn>
             </div>
-               <div class="table_content_card2">
-
-                  <table
-                    style="width: 100%;"
-                  >
-                    <tr v-for="item in data_card3" :key="item.id" align="center">
-                      <th scope="row" width="15%" class="head_table_card3">
-                        <v-icon small :style="{ color: item.color }">{{
-                          item.icon
-                        }}</v-icon>
-                        <span class="black--text pd_text_table_c3 pd_text_5 font_sm" 
-                          ><strong>{{ item.type }}</strong></span
+            <div class="text_header">
+              <span class="">บทคววาม / สาระสุขภาพ</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          <div class="">
+            <v-row>
+              <v-col cols="6">
+                    <v-dialog v-model="dialog" width="">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn
+                          class="white--text  mx-2"
+                          small
+                          width="120px"
+                          height="30px"
+                          color="#AD8DBB"
+                          v-bind="attrs"
+                          v-on="on"
                         >
+                          <span>+ เพิ่มบอร์ด</span>
+                        </v-btn>
+                      </template>
+                      <v-card>
+                        <dialog_p10 />
+                      </v-card>
+                    </v-dialog>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="message"
+                  outlined
+                  clearable
+                  label="ค้นหา"
+                  type="text"
+                  height="40px"
+                >
+                  <template v-slot:append>
+                    <v-icon center>
+                      mdi-magnify
+                    </v-icon>
+                  </template>
+                </v-text-field>
+              </v-col>
+            </v-row>
+          </div>
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_bot">
+            <div class="table_news_p10">
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <tr class="">
+                      <th width="10%" class="text-left">
+                        วันที่
                       </th>
-                      <td
-                        v-for="n in 7"
-                        :key="n"
-
-                        height="35px"
-                        style="border:1px solid black;"
-                        class="font_omg"
-                      >
-                        {{ item.data[n - 1] }}
+                      <th width="10%" class="text-left">
+                        เวลา
+                      </th>
+                      <th width="25%" class="text-left">
+                        หัวข้อบทความ
+                      </th>
+                      <th width="20%" class="text-left">
+                        กลุ่มบทความ
+                      </th>
+                      <th width="" class="text-center">
+                        ยอดผู้อ่าน
+                      </th>
+                      <th width="15%" class="text-left">
+                        โดย
+                      </th>
+                      <th width="10%" class="text-left"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="text-left"
+                      v-for="item in data_p10"
+                      :key="item.id"
+                    >
+                      <td>{{ item.date }}</td>
+                      <td>{{ item.time }}</td>
+                      <td class=" text-truncate" style="max-width: 100px;">
+                        {{ item.topic }}
+                      </td>
+                      <td>
+                        {{ item.group }}
+                      </td>
+                      <td class="text-center">{{ item.viewer }}</td>
+                      <td class="text-left">{{ item.by }}</td>
+                      <td class="text-right">
+                        <v-btn
+                          :style="{
+                            color: item.color,
+                            backgroundColor: item.back_col,
+                          }"
+                          elevation="2"
+                          small
+                        >
+                          {{ item.edit_bot }}
+                        </v-btn>
                       </td>
                     </tr>
-                  </table>
-                </div>
-
-
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>119</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              ก้าว / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div> 
-            <br/>
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการนั่ง (ในช่วง 6 เดือน)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+12%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>64</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              ครั้ง / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
+              <div></div>
             </div>
           </div>
-        </div>
-        <div class="content_dialog_page_bot">
-           <div>
-        <br/>
-        <br/>
-      <v-simple-table>
-        <template v-slot:default>
-          <thead>
-            <span class=""> ข้อมูลผู้ใช้งาน</span>
-            <tr>
-              <th class="text-left">
-                รหัส
-              </th>
-              <th class="text-left">
-                ชื่อ-สกุล
-              </th>
-              <th class="text-left">
-                ตำแหน่ง
-              </th>
-              <th class="text-left">
-                การเดิน (วันนี้)
-              </th>
-              <th class="text-left">
-                เปลี่ยนแปลงการเดิน
-              </th>
-              <th class="text-left">
-                การนั่งนาน (วันนี้)
-              </th>
-              <th class="text-left">
-                เปลี่ยนแปลงการนั่ง
-              </th>
-              <th class="text-left">
-                ดูประวัติ
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in data_card1_info" :key="item.id">
-              <td>{{ item.no }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.location }}</td>
-              <td>{{ item.room_no }}</td>
-              <td>{{ item.avg_bpm }}</td>
-              <td>{{ item.now_bpm }}</td>
-              <td>
-                <div>
-                  <v-switch
-                    v-model="ex11"
-                    color="#22CE8B"
-                    hide-details
-                  ></v-switch>
-                </div>
-              </td>
-              <td>
-                <v-btn :style="{ backgroundColor: item.color }" elevation="2" small>
-                  {{ item.manual_noti }}
-                </v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </template>
-      </v-simple-table>
-      <v-divider></v-divider>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
     </div>
-        </div>
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
-    </v-card>
-    </div>
-
+  </div>
 </template>
-
-
 
 <script>
 import Chart from "chart.js";
+import dialog_p10 from "@/components/dialog_p10.vue";
 export default {
+  components: {
+    dialog_p10,
+  },
   mounted: function() {
-
-    var ctx_dia_c1_p3 = document.getElementById("graph1_c1_p3").getContext("2d");
+    var ctx_dia_c1_p3 = document
+      .getElementById("graph1_c1_p3")
+      .getContext("2d");
     var bar_dia_c1_p3 = new Chart(ctx_dia_c1_p3, {
       type: "bar",
       data: {
@@ -253,14 +164,18 @@ export default {
         },
         scales: {
           xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true ,ticks: {
-          reverse: false,
-          min: 0,
-          max: 1000,
-          stepSize: 200, }}],
-          
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                reverse: false,
+                min: 0,
+                max: 1000,
+                stepSize: 200,
+              },
+            },
+          ],
         },
-        
       },
     });
     console.log(bar_dia_c1_p3);
@@ -316,7 +231,7 @@ export default {
         ],
       },
     });
-    console.log(bar_dia_c2); 
+    console.log(bar_dia_c2);
     var ctx_dia_c3 = document
       .getElementById("graph_dialog_c3")
       .getContext("2d");
@@ -352,7 +267,7 @@ export default {
           {
             label: "TODAY",
             backgroundColor: "purple",
-            data: [14 ,73 ,33 ,43 ,74 ,66 ,76 ,24 ,72],
+            data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],
         labels: [
@@ -398,65 +313,55 @@ export default {
     });
     console.log(bar_line);
 
-    
     // 'ผอมมาก','ปกติ','อวบ','อ้วน ระยะที่1','อ้วน ระยะที่2'
   },
   data() {
     return {
-      items: [
-        { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
-        { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
-      ],
-      data_card1_info: [
+      data_p10: [
         {
-          name: "Inverness McKenzie",
-          no: "101",
-          location: "Production B1",
-          room_no: "102",
-          avg_bpm: "104",
-          now_bpm: "159",
-          color: "#B4B4B4",
-          manual_noti: "SENDED",
+          date: "21 ก.ย.",
+          time: "16:30",
+          topic: "การรักษาสุขภาพในช่วงฤดูร้อนนั้นทำได้โดยการ....",
+          group: "จัดระเบียบความคิด",
+          viewer: "27",
+          by: "จันทรา ทิพย์วานร",
+          edit_bot: "ดู และแก้ไข",
+          color: "#B498C0",
+          back_col: "#E5E5E5",
         },
         {
-          name: "Niles Peppertrout",
-          no: "102",
-          location: "Production B1",
-          room_no: "140",
-          avg_bpm: "140",
-          now_bpm: "157",
-          color: "#22CE8B",
-          manual_noti: "SEND",
+          date: "20 ก.ย.",
+          time: "15:17",
+          topic: "รายงานล่าสุดจากสำนักข่าวท้องที่นั้นมาจาาการรายงาน....",
+          group: "สร้างกล้ามเนื้อ",
+          viewer: "32",
+          by: "จันทรา ทิพย์วานร",
+          edit_bot: "ดู และแก้ไข",
+          color: "#B498C0",
+          back_col: "#E5E5E5",
         },
         {
-          name: "Abraham Pigeon",
-          no: "103",
-          location: "Production B1",
-          room_no: "106",
-          avg_bpm: "161",
-          now_bpm: "174",
-          color: "#22CE8B",
-          manual_noti: "SEND",
-        },
-      ],
-      data_card3: [
-        {
-          type: "All",
-          icon: "mdi-circle",
-          color: "#359BD3",
-          data: [524, 643, 419, 419, 264, 555, 200],
+          date: "19 ก.ย.",
+          time: "12:04",
+          topic: "โรคระบาด ตัวใหม่ล่าสุดและวิธีควบคุมนั้น อ่านต่อได้ข้างใน....",
+          group: "ผ่อนคลาย",
+          viewer: "46",
+          by: "จันทรา ทิพย์วานร",
+          edit_bot: "ดู และแก้ไข",
+          color: "#B498C0",
+          back_col: "#E5E5E5",
         },
         {
-          type: "Steps",
-          icon: "mdi-circle",
-          color: "#A3A1FB",
-          data: [139, 384, 223, 189, 158, 318, 93],
-        }, 
-        {
-          type: "Setting",
-          icon: "mdi-circle",
-          color: "#FFDA83",
-          data: [385, 259, 196, 230, 106, 237, 107],
+          date: "18 ก.ย.",
+          time: "09:04",
+          topic:
+            "ติดตาม วิธีการออกกำลังกายให้ได้ผลใน 7 วัน อ่านต่อได้ข้างใน....",
+          group: "จัดระเบียบความคิด",
+          viewer: "43",
+          by: "ยูริกา  นามาศิริ",
+          edit_bot: "ดู และแก้ไข",
+          color: "#B498C0",
+          back_col: "#E5E5E5",
         },
       ],
     };
@@ -465,45 +370,27 @@ export default {
 </script>
 
 <style scoped>
-.t_switch {
-  display: flex;
-  /* justify-items: center; */
-  justify-content: center;
-}
-.head_dialog_c1_p3 {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.content_dialog_page_top {
-  display: flex;
-  justify-content: space-around;
-}
-.c1_c2_dialog {
+.card_1_p10 {
   padding: 20px;
 }
-.card_c1_c2_pd {
-  padding: 15px;
-}
-.set_center{
-  height: 100%;
+
+.head_card_p10 {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-.data_c1c2 {
-  text-align: center;
-  vertical-align: middle;
-}
-.left{
-  text-align: left;
-}
-
-.content_top_left_page{
+.text_header {
   display: flex;
-  flex-direction: column;
-  padding-bottom:20px;
+  text-align: center;
+  align-items: center;
+  /* background
+  -color: rgba(0, 0, 0, 0.1); */
 }
-
+.table_news_p10 {
+  /* padding: 0 20px; */
+}
+.v-text-field .v-input__control .v-input__slot {
+  min-height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
 </style>

@@ -1,7 +1,5 @@
 <template>
-  <div class="report">
-    <h1>Report page</h1>
-    <br />
+  <div class="dialog_p10">
     <!-- Dialog card in  -->
     <div class="pd_20" >
       <v-card >
@@ -30,6 +28,8 @@
             </div>
           </div>
         </v-card-title>
+        <v-card-text>
+        </v-card-text>
         <v-card-content>
           <div class="content_dialog_p10">
             <v-form>
@@ -241,7 +241,7 @@ export default {
   display: flex;
   width: 100%;
   padding: 0 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 .head_text_content {
   padding-left: 15px;
@@ -251,12 +251,12 @@ export default {
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 .btn_head_p10 {
   display: flex;
   justify-content: flex-end;
-  background-color: rgba(100, 0, 0, 0.3);
+  /* background-color: rgba(100, 0, 0, 0.3); */
   width: 50%;
 }
 .row_card {
@@ -283,7 +283,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 100, 100, 0.2);
+  /* background-color: rgba(0, 100, 100, 0.2); */
   text-align: center;
   padding: 20px;
   color: #8a4532;
