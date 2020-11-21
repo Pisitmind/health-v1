@@ -12,7 +12,7 @@
               </v-btn>
             </div>
             <div class="text_header">
-              <span class="">บทคววาม / สาระสุขภาพ</span>
+              <span class="">บทความ / สาระสุขภาพ</span>
             </div>
           </div>
         </v-card-title>
