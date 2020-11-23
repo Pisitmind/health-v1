@@ -1,7 +1,5 @@
 <template>
   <div class="boards">
-    <h1>Board page</h1>
-    <br />
     <div class="card_1_p10">
       <v-card>
         <v-card-title>

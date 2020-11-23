@@ -1,37 +1,10 @@
 <template>
-  <div class="report">
-    <h1>Report page</h1>
-    <br />
+  <div class="dia_user">
     <!-- Dialog card in  -->
     <div class="pd_20">
       <v-card>
-        <v-card-title>
-          <div class="head_of_dialog_p10">
-            <div class="head_dialog_c1_p10">
-              <div>
-                <v-btn color="green darken-1" icon @click="dialog = false">
-                  <v-icon>mdi-arrow-left-drop-circle-outline</v-icon>
-                </v-btn>
-              </div>
-              <div class="head_text_content">
-                <span class="headline">เพิ่มเจ้าหน้าที่</span>
-              </div>
-            </div>
-            <div class="btn_head_p10">
-              <v-btn
-                class="white--text  mx-2"
-                small
-                width="120px"
-                height="30px"
-                color="#AD8DBB"
-              >
-                <span> เพิ่ม</span>
-              </v-btn>
-            </div>
-          </div>
-        </v-card-title>
         <v-card-content>
-          <div class="content_dialog_p10">
+          <div class="content_dialog_user">
             <v-form>
               <v-container>
                 <div class="c1_line1">
@@ -111,7 +84,7 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
-                  <v-col sm="6">
+                  <v-col cols="6" sm="6">
                     <v-select
                       :items="items"
                       label="กลุ่มเจ้าหน้าที่"
@@ -119,9 +92,8 @@
                       outlined
                     ></v-select>
                   </v-col>
+                  <v-spacer></v-spacer>
                 </div>
-
-                <br />
               </v-container>
             </v-form>
           </div>
@@ -151,27 +123,12 @@ export default {
 </script>
 
 <style scoped>
-.head_of_dialog_p10 {
-  display: flex;
-  width: 100%;
-  padding: 0 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+.content_dialog_user{
+  padding: 20px;
 }
-.head_text_content {
-  padding-left: 15px;
-}
-.head_dialog_c1_p10 {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.btn_head_p10 {
-  display: flex;
-  justify-content: flex-end;
-  background-color: rgba(100, 0, 0, 0.3);
-  width: 50%;
+
+.pd_20{
+    padding:20px;
 }
 .row_card {
   display: flex;
@@ -209,7 +166,4 @@ export default {
 .card_text {
   padding-top: 10px;
 }
-/* .pd_20 {
-  padding:20px;
-} */
 </style>

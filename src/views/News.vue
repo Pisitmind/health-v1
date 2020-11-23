@@ -1,8 +1,5 @@
 <template>
   <div class="news">
-    <h1>News page</h1>
-
-    <br />
     <div class="card_1_p9">
       <v-card>
         <v-card-title>
