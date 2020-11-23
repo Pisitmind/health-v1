@@ -205,6 +205,7 @@ export default {
 }
 .rol_card{
     text-align: center;
+    /* align-self: start; */
 }
 .head_card_user {
   display: flex;
