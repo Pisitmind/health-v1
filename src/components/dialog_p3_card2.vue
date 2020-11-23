@@ -1,14 +1,16 @@
 <template>
   <div class="dialog_p3_card2">
     <v-card>
-     <v-card-title>
-        
-     </v-card-title>
+      <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
           <div class="content_top_left_page">
             <div class="set_center">
-              <canvas id="graph1_c1_p3" width="500px" height="200px"></canvas>
+              <canvas
+                id="graphdia1_c1_p3"
+                width="500px"
+                height="200px"
+              ></canvas>
             </div>
             <div class="table_content_card2">
               <table style="width: 100%;">
@@ -57,7 +59,7 @@
                     <td>
                       <div class="card_c1_c2_pd">
                         <canvas
-                          id="graph_dialog_c2"
+                          id="graphdia_c2_p3"
                           width=""
                           height="100px"
                         ></canvas>
@@ -103,7 +105,7 @@
                     <td>
                       <div class="card_c1_c2_pd">
                         <canvas
-                          id="graph_dialog_c3"
+                          id="graphdia_c3_p3"
                           width=""
                           height="100px"
                         ></canvas>
@@ -163,7 +165,9 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.pos }}</td>
                     <td>{{ item.walk_sum }}</td>
-                      <td :style="{ color: item.color0 }" >{{ item.walk_change }}</td>
+                    <td :style="{ color: item.color0 }">
+                      {{ item.walk_change }}
+                    </td>
                     <td>
                       <v-btn
                         :style="{ backgroundColor: item.color }"
@@ -191,24 +195,24 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx_dia_c1_p3 = document
-      .getElementById("graph1_c1_p3")
+      .getElementById("graphdia1_c1_p3")
       .getContext("2d");
     var bar_dia_c1_p3 = new Chart(ctx_dia_c1_p3, {
-      type: "bar",
+      type: "line",
       data: {
         datasets: [
           {
             label: "Steps",
             backgroundColor: "#A3A1FB",
-            data: [139, 384, 223, 189, 158, 318, 93],
+            data: [139, 384, 223, 189, 158, 318,],
           },
           {
             label: "Setting",
             backgroundColor: "#FFDA83",
-            data: [385, 259, 196, 230, 106, 237, 107],
+            data: [385, 259, 196, 230, 106, 237],
           },
         ],
-        labels: ["7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14"],
+        labels: ["ม.ค", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย."],
       },
       options: {
         responsive: true,
@@ -226,6 +230,10 @@ export default {
                 max: 1000,
                 stepSize: 200,
               },
+              scaleLabel: {
+                display: true,
+                labelString: "แคล",
+              },
             },
           ],
         },
@@ -233,9 +241,7 @@ export default {
     });
     console.log(bar_dia_c1_p3);
 
-    var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
+    var ctx_dia_c2 = document.getElementById("graphdia_c2_p3").getContext("2d");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -285,9 +291,7 @@ export default {
       },
     });
     console.log(bar_dia_c2);
-    var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
+    var ctx_dia_c3 = document.getElementById("graphdia_c3_p3").getContext("2d");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -454,7 +458,7 @@ export default {
 </script>
 
 <style scoped>
-.dialog_p3_card1{
+.dialog_p3_card1 {
   width: 100%;
 }
 .t_switch {
@@ -499,7 +503,7 @@ export default {
   flex-direction: column;
   padding-bottom: 20px;
 }
-.content_dialog_page_bot{
-  padding:0 30px;
+.content_dialog_page_bot {
+  padding: 0 30px;
 }
 </style>

@@ -44,14 +44,52 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                    <v-btn small icon fab>
-                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                    </v-btn>
+                    <v-dialog v-model="dialog1" width="">
+                      <template v-slot:activator="{ on, attrs1 }">
+                        <v-btn small icon fab v-bind="attrs1" v-on="on">
+                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        </v-btn>
+                      </template>
+                      <v-card>
+                        <v-card-title>
+                          <div class="head_dialog_c1_p3">
+                            <div>
+                              <v-btn
+                                color="green darken-1"
+                                icon
+                                @click="dialog1 = false"
+                              >
+                                <v-icon
+                                  >mdi-arrow-left-drop-circle-outline</v-icon
+                                >
+                              </v-btn>
+                            </div>
+                            <div>
+                              <span class="headline"
+                                >รายละเอียดการเคลื่อนไหว</span
+                              >
+                            </div>
+                          </div>
+                        </v-card-title>
+                        <v-card-text>
+                          กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
+                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                        </v-card-text>
+                        <v-card-content>
+                          <div>
+                            <dialog_p3 />
+                          </div>
+                          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+                        </v-card-content>
+                      </v-card>
+                    </v-dialog>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- dontent  -->
           <div class="card1_p3_content">
             <div class="card1_p3_content_left">
               <v-card-text>
@@ -150,9 +188,45 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                    <v-btn small icon fab>
+                     <v-dialog v-model="dialog2" width="">
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn small icon fab v-bind="attrs" v-on="on">
                       <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                     </v-btn>
+                      </template>
+                       <v-card>
+                        <v-card-title>
+                          <div class="head_dialog_c2_p3">
+                            <div>
+                              <v-btn
+                                color="green darken-1"
+                                icon
+                                @click="dialog2 = false"
+                              >
+                                <v-icon
+                                  >mdi-arrow-left-drop-circle-outline</v-icon
+                                >
+                              </v-btn>
+                            </div>
+                            <div class="pd_text">
+                              <span class="headline"
+                                >รายละเอียดค่าการเผาผลาญ</span
+                              >
+                            </div>
+                          </div>
+                        </v-card-title>
+                        <v-card-text>
+                          กราฟสรุปรายละเอียดการเผาผลาญต่อเดือน
+                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                        </v-card-text>
+                        <v-card-content>
+                          <div>
+                            <dialog_p3_2 />
+                          </div>
+                        </v-card-content>
+                      </v-card>
+                    </v-dialog>
                   </div>
                 </div>
               </div>
@@ -268,23 +342,27 @@
                 </div> -->
                 <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
                 <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card3">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align:center;">
+                        <div class="label_text_card3">
+                          <div>
+                            <v-icon small color="blue"> mdi-circle</v-icon>
+                            <span class="black--text"
+                              ><strong>ชาย</strong></span
+                            >
+                          </div>
+                          <div class="pd_10">
+                            <v-icon small color="pink"> mdi-circle</v-icon>
+                            <span class="black--text"
+                              ><strong>หญิง</strong></span
+                            >
+                          </div>
                         </div>
-                        <div class="pd_10">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
               </v-card-text>
             </div>
             <!-- <v-divider vertical></v-divider> -->
@@ -304,7 +382,11 @@
                         <th>หญิง</th>
                         <th>เฉลี่ยรวม</th>
                       </tr>
-                      <tr v-for="item in data_card3_p3" :key="item.id" height="30px">
+                      <tr
+                        v-for="item in data_card3_p3"
+                        :key="item.id"
+                        height="30px"
+                      >
                         <td class="two-data-card2">
                           <v-icon x-small :style="{ color: item.color }"
                             >mdi-circle
@@ -365,7 +447,12 @@
 
 <script>
 import Chart from "chart.js";
+import dialog_p3 from "@/components/dialog_p3_card1.vue";
+import dialog_p3_2 from '@/components/dialog_p3_card2.vue';
 export default {
+  components: {
+    dialog_p3,dialog_p3_2
+  },
   mounted: function() {
     var ctx1_p3 = document.getElementById("graph1_p3").getContext("2d");
     var bar1_p3 = new Chart(ctx1_p3, {
@@ -613,6 +700,8 @@ export default {
   },
   data() {
     return {
+      dialog1: false,
+      dialog2: false,
       items: [
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
         { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
@@ -706,6 +795,9 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+// .pd_text{
+//   padding-left:5px;
+// }
 .i-human {
   display: flex;
   flex-direction: column;
@@ -844,9 +936,23 @@ export default {
   color: #ad8dbb;
 }
 
-.pd_r_30{
+.pd_r_30 {
   padding-right: 30px;
 }
+
+.head_dialog_c1_p3 {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head_dialog_c2_p3 {
+  width: 27%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* 
 
 .ct_set {

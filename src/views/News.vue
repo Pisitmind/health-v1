@@ -25,16 +25,56 @@
             <div class="">
               <v-row >
                 <v-col cols="6">
-                  <v-btn
-                    class="white--text  mx-2"
-                    small
-                    width="120px"
-                    height="30px"
-                    color="#AD8DBB"
-                  >
+                   <v-dialog v-model="dialog1" width="">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      class="white--text  mx-2"
+                      small
+                      width="120px"
+                      height="30px"
+                      color="#AD8DBB"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
                     <span>+ เพิ่มข่าว</span>
-                  </v-btn></v-col
-                >
+                  </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title>
+                      <div class="head_of_dialog_p9">
+                        <div class="head_dialog_c1_p9">
+                          <div>
+                            <v-btn
+                              color="green darken-1"
+                              icon
+                              @click="dialog1 = false"
+                            >
+                              <v-icon
+                                >mdi-arrow-left-drop-circle-outline</v-icon
+                              >
+                            </v-btn>
+                          </div>
+                          <div class="head_text_content">
+                            <span class="headline">เพิ่มข่าว</span>
+                          </div>
+                        </div>
+                        <div class="btn_head_p10">
+                          <v-btn
+                            class="white--text  mx-2"
+                            small
+                            width="120px"
+                            height="30px"
+                            color="#AD8DBB"
+                          >
+                            <span> บันทึก</span>
+                          </v-btn>
+                        </div>
+                      </div>
+                    </v-card-title>
+                    <dialog_p9 />
+                  </v-card>
+                </v-dialog>
+                </v-col>
                 <v-col cols="6">
                   <v-text-field
                     v-model="message"
@@ -155,7 +195,11 @@
 
 <script>
 import Chart from "chart.js";
+import dialog_p9 from "@/components/dialog_p9.vue";
 export default {
+  components: {
+    dialog_p9,
+  },
   mounted: function() {
     var ctx_dia_c1_p3 = document
       .getElementById("graph1_c1_p3")
@@ -337,6 +381,8 @@ export default {
   },
   data() {
     return {
+      dialog: false,
+      dialog1: false,
       data_p9: [
         {
           date: "21 ก.ย.",
@@ -388,6 +434,24 @@ export default {
 
 <style scoped>
 .card_1_p9 {
+  padding: 20px;
+}
+
+.head_of_dialog_p9 {
+  display: flex;
+  width: 100%;
+  padding: 0 15px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.head_text_content {
+  padding-left: 15px;
+}
+.head_dialog_c1_p9{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.btn_head_p10{
   padding: 20px;
 }
 

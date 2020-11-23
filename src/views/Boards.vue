@@ -20,24 +20,55 @@
           <div class="">
             <v-row>
               <v-col cols="6">
-                    <v-dialog v-model="dialog" width="">
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-btn
-                          class="white--text  mx-2"
-                          small
-                          width="120px"
-                          height="30px"
-                          color="#AD8DBB"
-                          v-bind="attrs"
-                          v-on="on"
-                        >
-                          <span>+ เพิ่มบอร์ด</span>
-                        </v-btn>
-                      </template>
-                      <v-card>
-                        <dialog_p10 />
-                      </v-card>
-                    </v-dialog>
+                <v-dialog v-model="dialog1" width="">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      class="white--text  mx-2"
+                      small
+                      width="120px"
+                      height="30px"
+                      color="#AD8DBB"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <span>+ เพิ่มบอร์ด</span>
+                    </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title>
+                      <div class="head_of_dialog_p10">
+                        <div class="head_dialog_c1_p10">
+                          <div>
+                            <v-btn
+                              color="green darken-1"
+                              icon
+                              @click="dialog1 = false"
+                            >
+                              <v-icon
+                                >mdi-arrow-left-drop-circle-outline</v-icon
+                              >
+                            </v-btn>
+                          </div>
+                          <div class="head_text_content">
+                            <span class="headline">เพิ่มบทความ</span>
+                          </div>
+                        </div>
+                        <div class="btn_head_p10">
+                          <v-btn
+                            class="white--text  mx-2"
+                            small
+                            width="120px"
+                            height="30px"
+                            color="#AD8DBB"
+                          >
+                            <span> บันทึก</span>
+                          </v-btn>
+                        </div>
+                      </div>
+                    </v-card-title>
+                    <dialog_p10 />
+                  </v-card>
+                </v-dialog>
               </v-col>
               <v-col cols="6">
                 <v-text-field
@@ -317,6 +348,8 @@ export default {
   },
   data() {
     return {
+      dialog: false,
+      dialog1: false,
       data_p10: [
         {
           date: "21 ก.ย.",
@@ -372,6 +405,24 @@ export default {
 <style scoped>
 .card_1_p10 {
   padding: 20px;
+}
+
+.head_of_dialog_p10 {
+  display: flex;
+  width: 100%;
+  padding: 0 15px;
+  padding-top:20px;
+  justify-content: space-between;
+}
+.head_text_content {
+  padding-left: 15px;
+}
+.head_dialog_c1_p10 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .head_card_p10 {

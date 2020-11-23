@@ -48,7 +48,7 @@
                       maxlength="50"
                       hint=""
                       label="หัวข้อข่าว"
-                      placeholder="เนื้อหาข่าว"
+                      placeholder="กรอกหัวข้อข่าว"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12">

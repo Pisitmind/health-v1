@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog_p3_card2">
+  <div class="dialog_p3_card1">
     <v-card>
      <v-card-title>
         
@@ -41,7 +41,7 @@
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
                     </td>
                     <td>
                       <v-btn
@@ -67,11 +67,11 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>92</span>
+                            <span>119</span>
                           </tr>
                           <tr class="grey--text">
                             <span>
-                              แคล / วัน
+                              ก้าว / วัน
                             </span>
                           </tr>
                         </table>
@@ -87,7 +87,7 @@
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการนั่ง (ในช่วง 6 เดือน)</span>
                     </td>
                     <td>
                       <v-btn
@@ -113,11 +113,11 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>136</span>
+                            <span>64</span>
                           </tr>
                           <tr class="grey--text">
                             <span>
-                              แคล / วัน
+                              ครั้ง / วัน
                             </span>
                           </tr>
                         </table>
@@ -147,10 +147,16 @@
                       ตำแหน่ง
                     </th>
                     <th class="text-left">
-                      แคลอรี่ (วันนี้)
+                      การเดิน (วันนี้)
                     </th>
                     <th class="text-left">
-                      เปลี่ยนแปลงแคลอรี่
+                      เปลี่ยนแปลงการเดิน
+                    </th>
+                    <th class="text-left">
+                      การนั่งนาน (วันนี้)
+                    </th>
+                    <th class="text-left">
+                      เปลี่ยนแปลงการนั่ง
                     </th>
                     <th class="text-left">
                       ดูประวัติ
@@ -164,6 +170,9 @@
                     <td>{{ item.pos }}</td>
                     <td>{{ item.walk_sum }}</td>
                       <td :style="{ color: item.color0 }" >{{ item.walk_change }}</td>
+                    <td>{{ item.long_sit }}</td>
+                    <td :style="{ color: item.color1 }" >{{ item.sit_change}}
+                    </td>
                     <td>
                       <v-btn
                         :style="{ backgroundColor: item.color }"

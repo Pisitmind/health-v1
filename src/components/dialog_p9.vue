@@ -1,18 +1,16 @@
 <template>
-  <div class="dialog_p10">
+  <div class="dialog_p9">
     <!-- Dialog card in  -->
     <div class="pd_20" >
-        <v-card-text>
-        </v-card-text>
-        <v-card-content>
-          <div class="content_dialog_p10">
+       <v-card-content>
+          <div class="content_dialog_p9">
             <v-form>
               <v-container>
                 <v-row>
-                  <v-col cols="10" sm="6">
+                  <v-col cols="12" sm="12">
                     <v-text-field
-                      v-model="group"
-                      :rules="rules"
+                      v-model="topic"
+                      :rules="rules_"
                       counter
                       maxlength="50"
                       hint=""
@@ -20,28 +18,15 @@
                       placeholder="กรอกหัวข้อข่าว"
                     ></v-text-field>
                   </v-col>
-
-                  <v-col cols="10" sm="6">
-                    <v-text-field
-                      v-model="topic"
-                      :rules="rules"
-                      counter
-                      maxlength="50"
-                      hint=""
-                      label="หัวข้อบทความ"
-                      placeholder="กรอกหัวข้อบทความ"
-                    ></v-text-field>
-                  </v-col>
-
                   <v-col cols="12" sm="12">
                     <v-text-field
-                      v-model="description"
+                      v-model="detail"
                       :rules="rules_1000"
                       counter
                       maxlength="1000"
                       hint=""
-                      label="รายละเอียดของบทความ"
-                      placeholder="เนื้อหาบทความ"
+                      label="รายละเอียดข่าว"
+                      placeholder="เนื้อหาข่าว"
                     ></v-text-field>
                   </v-col>
                 </v-row>
@@ -59,9 +44,9 @@
                         <v-btn class="center" icon small>
                           <v-icon color="#8A4532">mdi-camera-outline</v-icon>
                         </v-btn>
-                        <span class="card_text">รูปบทความ</span>
+                        <span class="card_text">รูปข่าว</span>
                         <p class="sub_text">
-                          ขนาดที่ดีที่สุดคือ 960x540 หรือ 16:9
+                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
                         </p>
                       </div>
                     </v-action-card>
@@ -72,9 +57,9 @@
                         <v-btn class="center" icon small>
                           <v-icon color="#8A4532">mdi-camera-outline</v-icon>
                         </v-btn>
-                        <span class="card_text">รูปบทความ</span>
+                        <span class="card_text">รูปข่าว</span>
                         <p class="sub_text">
-                          ขนาดที่ดีที่สุดคือ 960x540 หรือ 16:9
+                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
                         </p>
                       </div>
                     </v-action-card>
@@ -85,16 +70,16 @@
                         <v-btn class="center" icon small>
                           <v-icon color="#8A4532">mdi-camera-outline</v-icon>
                         </v-btn>
-                        <span class="card_text">รูปบทความ</span>
+                        <span class="card_text">รูปข่าว</span>
                         <p class="sub_text">
-                          ขนาดที่ดีที่สุดคือ 960x540 หรือ 16:9
+                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
                         </p>
                       </div>
                     </v-action-card>
                   </v-card>
                 </div>
                 <br />
-                <v-card-text class="color_bg">
+                <v-card-text>
                   <v-file-input
                     prepend-icon=""
                     messages=""
