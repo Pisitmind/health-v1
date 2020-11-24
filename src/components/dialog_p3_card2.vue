@@ -15,7 +15,7 @@
             <div class="table_content_card2">
               <table style="width: 100%;">
                 <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th scope="row" width="15%" class="head_table_card3">
+                  <th scope="row" width="15%" align="left"  class="head_table_card3">
                     <v-icon small :style="{ color: item.color }">{{
                       item.icon
                     }}</v-icon>
