@@ -99,14 +99,19 @@
           <v-row>
             <v-col v-for="idx in data_au" :key="idx.id" cols="12" sm="2">
               <v-card class="au_card" elevation="2" outlined>
-                  <v-card>
-                    <v-img src="https://picsum.photos/510/300?random"></v-img>
-                  </v-card>
+                <div class="img_n_name">
+                <div class="img_avatar" >
+                  <v-avatar size="84">
+                     <img src="../assets/user_pic/user7.jpg" alt />
+                  </v-avatar>
+                </div>
                 <div class="n_card">
                   <span style="color:#88432F;">{{ idx.name }}</span>
                 </div>
+                </div>
+
                 <div class="rol_card ">
-                  <span  style="color:#B79BC4;">{{ idx.role }}</span>
+                  <span style="color:#B79BC4;">{{ idx.role }}</span>
                 </div>
               </v-card>
             </v-col>
@@ -130,64 +135,64 @@ export default {
 
       data_au: [
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/assets/user_pic/au1.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user1.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user2.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user3.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user4.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user5.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user6.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user7.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user8.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
-          name: "ยูริกา นามาศรี",
-          pic: "./src/images/au2.jpg",
+          name: "ปัญสิกรณ์ ติยะกร",
+          pic: "../assets/user_pic/user9.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -199,13 +204,12 @@ export default {
 </script>
 
 <style scoped>
-
-.n_card{
-    text-align: center;
+.n_card {
+  text-align: center;
 }
-.rol_card{
-    text-align: center;
-    /* align-self: start; */
+.rol_card {
+  text-align: center;
+  /* align-self: start; */
 }
 .head_card_user {
   display: flex;
@@ -237,7 +241,19 @@ export default {
   width: 50px;
   height: 50px;
 }
+.img_n_name{
+    display: flex;
+    flex-direction: column;
+}
 .au_card {
   width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img_avatar{
+    display: flex;
+    justify-content: center;
 }
 </style>

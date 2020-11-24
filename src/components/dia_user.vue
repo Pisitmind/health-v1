@@ -154,7 +154,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 100, 100, 0.2);
+  /* background-color: rgba(0, 100, 100, 0.2); */
   text-align: center;
   padding: 20px;
   color: #8a4532;
