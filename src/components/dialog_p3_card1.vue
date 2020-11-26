@@ -1,6 +1,6 @@
 <template>
   <div class="dialog_p3_card1">
-    <v-card>
+    <v-card elevation="0">
      <v-card-title>
         
      </v-card-title>

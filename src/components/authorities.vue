@@ -1,6 +1,5 @@
 <template>
   <div class="authorities">
-    i'm authorities
     <v-card>
       <v-card-title>
         <div class="head_title_card_user">
@@ -89,7 +88,7 @@
         </div>
       </v-card-title>
 
-      <v-card-content>
+      <v-card-content class="pd_h_card">
         <span>
           รายชื่อเจ้าหน้าที่
         </span>
@@ -204,6 +203,9 @@ export default {
 </script>
 
 <style scoped>
+.authorities{
+  padding:20px;
+}
 .n_card {
   text-align: center;
 }
@@ -222,6 +224,12 @@ export default {
   display: flex;
   width: 100%;
   padding: 0 15px;
+}
+.pd_h_card{
+  color:grey;
+  font-size: bold;
+  font-size: 16px;
+  padding:20px;
 }
 .head_dialog_c1_user {
   width: 50%;

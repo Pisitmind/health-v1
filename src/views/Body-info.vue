@@ -1,7 +1,5 @@
 <template>
   <div class="bodyinfo">
-    <h1>Bodyinfo page</h1>
-    <br />
     <div class="card1_p5">
       <v-card elevation="2" outlined height="">
         <div class="card1_p5_root">
@@ -167,7 +165,7 @@
                     </div>
                   </div>
                   <!-- btn sex & age -->
-                  <div class="btn_date_head_card3">
+                  <!-- <div class="btn_date_head_card3">
                     <div class="">
                       <v-btn class="white--text " small color="#AD8DBB"
                         ><span>วันนี้</span></v-btn
@@ -200,7 +198,7 @@
                         ><span>ปี</span></v-btn
                       >
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- head right div -->
@@ -260,7 +258,7 @@
                 <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
-                <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
+                <canvas id="graph1_c2_p5" width="200px" height=""></canvas>
                 <div class="label_grpah1_c1_p3">
                   <table width="100%">
                     <tr>
@@ -303,7 +301,7 @@
                         <th>เฉลี่ยรวม</th>
                       </tr>
                       <tr
-                        v-for="item in data_card3_p3"
+                        v-for="item in data_card2_p5"
                         :key="item.id"
                         height="30px"
                       >
@@ -436,12 +434,115 @@ export default {
       },
     });
     console.log(bar2_c1_p5);
+
+    var ctx1_c2_p5 = document.getElementById("graph1_c2_p5").getContext("2d");
+    var bar1_c3_p5 = new Chart(ctx1_c2_p5, {
+      type: "bar",
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: true,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 250,
+                max: 1000,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "คน",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+            },
+          ],
+        },
+      },
+      data: {
+        labels: [
+          ["ต่ำ", "0 - 18.5"],
+          ["ปานกลาง", "18.5 - 25.0"],
+          ["ค่อนข้างสูง", "25.1 - 28.0"],
+          ["สูง", "28.1 - 32.0"],
+          ["สูงมาก", "32.0 ขึ้นไป"],
+        ],
+        backgroundColor: ["#ff6384", "#36a2eb"],
+        Color: ["#58BFAE", "#FF3E80", "#FF850A", "#DA2121", "#B4B4B4"],
+        datasets: [
+          {
+            label: "ชาย",
+            backgroundColor: "#9ACDE9",
+            data: [638, 857, 980, 875, 750],
+          },
+          {
+            label: "หญิง",
+            backgroundColor: "#F8C5C5",
+            data: [270, 250, 275, 480, 750],
+          },
+        ],
+      },
+    });
+    console.log(bar1_c3_p5);
   },
   data() {
     return {
       dialog0: false,
       dialog1: false,
       dialog2: false,
+      data_card2_p5: [
+        {
+          name: "ต่ำ",
+          color: "#58BFAE",
+          dataMan: "638",
+          dataWman: "270",
+          avg: "22.7%",
+        },
+        {
+          name: "ปกติ",
+          color: "#2289D8",
+          dataMan: "557",
+          dataWman: "250",
+          avg: "19.9%",
+        },
+        {
+          name: "ค่อนข้างสูง",
+          color: "#FF850A",
+          dataMan: "784",
+          dataWman: "275",
+          avg: "28%",
+        },
+        {
+          name: "สูงมาก",
+          color: "#DA2121",
+          dataMan: "652",
+          dataWman: "480",
+          avg: "23.2%",
+        },
+        {
+          name: "เครื่องวิ่งวงรี",
+          color: "#B4B4B4",
+          dataMan: "145",
+          dataWman: "145",
+          avg: "5.1%",
+        },
+        {
+          name: "กิจกรรมในร่ม",
+          color: "#2289D8",
+          dataMan: "24",
+          dataWman: "40",
+          avg: "1.1%",
+        },
+      ],
     };
   },
 };
@@ -460,7 +561,7 @@ export default {
 .head_card1_p5_l {
   width: 50%;
 }
-.label_grpah1_c1_p5{
+.label_grpah1_c1_p5 {
   padding-left: 16px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }

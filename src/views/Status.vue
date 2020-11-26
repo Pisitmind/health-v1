@@ -1,8 +1,5 @@
 <template>
   <div class="status">
-    <br />
-    <h1>Status page</h1>
-    <br />
     <div class="card1_p4">
       <v-card elevation="2" outlined height="">
         <div class="card1_p4_root">
@@ -622,7 +619,7 @@ export default {
          ['ปกติ', '101 - 116 BPM'],
          ['เริ่มเต้นแรง', '117 - 135 ฺBPM'],
          ['ออกกำลังกาย', '136 - 154 BPM'],
-         ['ออกกำลังกานหนัก', '155 - 174 BPM'],
+         ['ออกกำลังกายหนัก', '155 - 174 BPM'],
          ['ค่าออกซิเจนสูงสุด', 'สูงกว่า 175 BPM'],
         ],
         backgroundColor: ["#ff6384", "#36a2eb"],

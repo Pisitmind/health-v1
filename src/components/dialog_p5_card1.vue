@@ -6,7 +6,7 @@
           <div class="content_top_left_page">
             <div class="card_el_card2">
               <!-- card2 head+content -->
-              <v-card class="card2_size" elevation="3" outlined>
+              <v-card class="card2_size" elevation="0" >
                 <div class="card2_root">
                   <!-- card2 content -->
                   <div class="content1_card2">
@@ -34,9 +34,9 @@
                                   </td>
                                   <td width="" class="btn_right">
                                     <v-btn
-                                      color="#22CE8B"
+                                      color="#AD8DBB"
                                       depressed
-                                      x-small
+                                      small
                                       class="white--text"
                                       elevation="2"
                                       >+4%</v-btn
@@ -78,16 +78,16 @@
                             <v-card class="card_wman">
                               <table class="">
                                 <tr height="30px" class="">
-                                   <td width="300px" class="text_lft">
+                                  <td width="300px" class="text_lft">
                                     <span
                                       >ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span
                                     >
                                   </td>
                                   <td width="" class="btn_right">
                                     <v-btn
-                                      color="#22CE8B"
+                                      color="#AD8DBB"
                                       depressed
-                                      x-small
+                                      small
                                       class="white--text"
                                       elevation="2"
                                       >+4%</v-btn
@@ -304,13 +304,13 @@
                                 <td>{{ item.no }}</td>
                                 <td>{{ item.name }}</td>
                                 <td>{{ item.pos }}</td>
-                                <td>{{ item.walk_sum }}</td>
+                                <td>{{ item.bmi_sum }}</td>
                                 <td :style="{ color: item.color0 }">
-                                  {{ item.walk_change }}
+                                  {{ item.bmi_change }}
                                 </td>
                                 <td>
                                   <v-btn
-                                    :style="{ backgroundColor: item.color }"
+                                    style="backgroundColor:#AD8DBB; color:white"
                                     elevation="2"
                                     small
                                   >
@@ -487,13 +487,13 @@ export default {
           gender: "ชาย",
           icon: "mdi-human-male",
           color: "#359BD3",
-          data: [27, 98, 780, 34, 0],
+          data: [27, 98, 780, 34, 1],
         },
         {
           gender: "หญิง",
           icon: "mdi-human-female",
           color: "#F28C8C",
-          data: [12, 132, 560, 22, 0],
+          data: [12, 132, 560, 22, 7],
         },
       ],
       moving_data_1: [
@@ -501,11 +501,9 @@ export default {
           name: "สารุท อินทร์ศรี",
           no: "101",
           pos: "อาจารย์",
-          walk_sum: "4596",
-          walk_change: "+156",
-          long_sit: "159",
-          sit_change: "+3",
-          color: "#B4B4B4",
+          bmi_sum: "18.5",
+          bmi_change: "+2.1",
+          color: "#AD8DBB",
           color0: "green",
           color1: "red",
           show_history: "ดู",
@@ -514,11 +512,9 @@ export default {
           name: "Niles Peppertrout",
           no: "102",
           pos: "ผู้ช่วยสอน",
-          walk_sum: "4875",
-          walk_change: "-395",
-          long_sit: "157",
-          sit_change: "-1",
-          color: "#22CE8B",
+          bmi_sum: "20.0",
+          bmi_change: "-0.2",
+          color: "#AD8DBB",
           color0: "red",
           color1: "green",
           show_history: "ดู",
@@ -527,11 +523,9 @@ export default {
           name: "Abraham Pigeon",
           no: "103",
           pos: "อาจารย์",
-          walk_sum: "3621",
-          walk_change: "+0",
-          long_sit: "174",
-          sit_change: "+0",
-          color: "#22CE8B",
+          bmi_sum: "12.4",
+          bmi_change: "+0.1",
+          color: "#AD8DBB",
           color0: "green",
           color1: "green",
           show_history: "ดู",
@@ -540,11 +534,20 @@ export default {
           name: "Abraham Pigeon",
           no: "104",
           pos: "อาจารย์",
-          walk_sum: "2541",
-          walk_change: "+156",
-          long_sit: "159",
-          sit_change: "+3",
-          color: "#22CE8B",
+          bmi_sum: "28.2",
+          bmi_change: "+2",
+          color: "#AD8DBB",
+          color0: "green",
+          color1: "green",
+          show_history: "ดู",
+        },
+        {
+          name: "Abraham Pigeon",
+          no: "105",
+          pos: "อาจารย์",
+          bmi_sum: "30.1",
+          bmi_change: "-4",
+          color: "#AD8DBB",
           color0: "red",
           color1: "green",
           show_history: "ดู",
@@ -555,8 +558,8 @@ export default {
 };
 </script>
 <style scoped>
-.dialog_p5_card1{
-  padding:20px;
+.dialog_p5_card1 {
+  padding: 20px;
 }
 .head-card2 {
   padding: 20px;
