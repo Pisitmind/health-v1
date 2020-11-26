@@ -142,8 +142,7 @@
               <div class="label_grpah1_c1_p4">
                 <table width="100%">
                   <span class
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 7,580
-                    ก้าวต่อวัน</span
+                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40 ชั่วโมงต่อวัน</span
                   >
                 </table>
               </div>
@@ -593,7 +592,7 @@ export default {
           display: false,
         },
         tooltips: {
-          enabled: false,
+          enabled: true,
         },
         scales: {
           yAxes: [
@@ -605,8 +604,8 @@ export default {
                 max: 1000,
               },
               scaleLabel: {
-                display: false,
-                labelString: "",
+                display: true,
+                labelString: "คน",
               },
             },
           ],
@@ -619,12 +618,12 @@ export default {
       },
       data: {
         labels: [
-          "พักผ่อน 60-100 BPM",
-          "ปกติ ",
-          "31-40",
-          "41-50",
-          "51-60",
-          "60 Up",
+         ['พักผ่อน', '60 - 100 BPM'],
+         ['ปกติ', '101 - 116 BPM'],
+         ['เริ่มเต้นแรง', '117 - 135 ฺBPM'],
+         ['ออกกำลังกาย', '136 - 154 BPM'],
+         ['ออกกำลังกานหนัก', '155 - 174 BPM'],
+         ['ค่าออกซิเจนสูงสุด', 'สูงกว่า 175 BPM'],
         ],
         backgroundColor: ["#ff6384", "#36a2eb"],
         Color: [

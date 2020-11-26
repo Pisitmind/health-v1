@@ -8,29 +8,6 @@
             <div class="set_center">
               <canvas id="graph1_c1_p4" width="500px" height="200px"></canvas>
             </div>
-            <div class="table_content_card2">
-              <table style="width: 100%;">
-                <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th scope="row" width="15%" class="head_table_card3">
-                    <v-icon small :style="{ color: item.color }">{{
-                      item.icon
-                    }}</v-icon>
-                    <span class="black--text pd_text_table_c3 pd_text_5 font_sm"
-                      ><strong>{{ item.type }}</strong></span
-                    >
-                  </th>
-                  <td
-                    v-for="n in 7"
-                    :key="n"
-                    height="35px"
-                    style="border:1px solid black;"
-                    class="font_omg"
-                  >
-                    {{ item.data[n - 1] }}
-                  </td>
-                </tr>
-              </table>
-            </div>
           </div>
           <div class="content_top_right_page">
             <!-- data top right -->
@@ -51,7 +28,6 @@
                         >+2%</v-btn
                       >
                     </td>
-                    
                   </tr>
                   <tr>
                     <td>
@@ -85,13 +61,13 @@
             <br />
             <div>
               <v-card width="400px" class="c1_c2_dialog">
-                <table class="data_c1c2 " >
+                <table class="data_c1c2 ">
                   <tr class="">
-                      <td class="left" width="80%" height="20%">
+                    <td class="left" width="80%" height="20%">
                       <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span>
                     </td>
-                     <v-spacer></v-spacer>
-                   <td width="20%">
+                    <v-spacer></v-spacer>
+                    <td width="20%">
                       <v-btn
                         color="#22CE8B"
                         depressed
@@ -101,7 +77,7 @@
                       >
                     </td>
                   </tr>
-                  <tr class="bg_22" >
+                  <tr class="bg_22">
                     <td>
                       <div class="card_c1_c2_pd">
                         <canvas
@@ -150,10 +126,10 @@
                       ตำแหน่ง
                     </th>
                     <th class="text-left">
-                      ระยะเวลานอน (วันนี้)
+                     ค่าเฉลี่ยการเต้นของหัวใจ
                     </th>
                     <th class="text-left">
-                      เปลี่ยนแปลงระยะเวลานอน
+                      เปลี่ยนแปลงการเต้นของหัวใจ
                     </th>
                     <th class="text-left">
                       ดูประวัติ
@@ -208,15 +184,30 @@ export default {
           {
             label: "ชาย",
             backgroundColor: "#A3A1FB",
-            data: [8.11, 3.3, 7.0, 5.4, 7.3, 4.05],
+            data: [81.1, 33, 70, 54, 73, 40.5, 41.5, 61.5, 74.5],
           },
           {
             label: "หญิง",
             backgroundColor: "#FFDA83",
-            data: [6.15, 4.15, 6.15, 7.45, 6.1, 9.5],
+            data: [61.5, 41.5, 61.5, 74.5, 61.0, 95.0, 10.5, 57.0, 10.3],
+          },
+          {
+            label: "เฉลี่ย",
+            backgroundColor: "#2CD889",
+            data: [71.0, 37.5, 65.5 , 64.25,50.5 , 67.75, 37.0 , 59.25, 42.4],
           },
         ],
-        labels: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย."],
+        labels: [
+          "00:00.",
+          "03:00",
+          "06:00",
+          "09:00",
+          "12:00",
+          "15:00",
+          "18:00",
+          "21:00",
+          "00:00",
+        ],
       },
       options: {
         responsive: true,
@@ -231,8 +222,8 @@ export default {
               ticks: {
                 reverse: false,
                 min: 0,
-                max: 10,
-                stepSize: 1,
+                max: 200,
+                stepSize: 50,
               },
             },
           ],
@@ -387,11 +378,9 @@ export default {
           name: "สารุท อินทร์ศรี",
           no: "101",
           pos: "อาจารย์",
-          sleep_sum: "4:30 ชั่วโมง",
-          sleep_change: "+0:15 ชั่วโมง",
+          sleep_sum: "124 BPM",
+          sleep_change: "+1 BPM",
           icon: "mdi-menu-up",
-          long_sit: "159",
-          sit_change: "+3",
           color: "#B4B4B4",
           color0: "green",
           color1: "red",
@@ -401,11 +390,9 @@ export default {
           name: "Niles Peppertrout",
           no: "102",
           pos: "ผู้ช่วยสอน",
-          sleep_sum: "6:30 ชั่วโมง",
-          sleep_change: "-2:15 ชั่วโมง",
+          sleep_sum: "120 BPM",
+          sleep_change: "-1 BPM",
           icon: "mdi-menu-down",
-          long_sit: "157",
-          sit_change: "-1",
           color: "#22CE8B",
           color0: "red",
           color1: "green",
@@ -415,11 +402,9 @@ export default {
           name: "Abraham Pigeon",
           no: "103",
           pos: "อาจารย์",
-          sleep_sum: "2:15 ชั่วโมง",
-          sleep_change: "+3:05 ชั่วโมง",
+          sleep_sum: "105 BPM",
+          sleep_change: "+4 BPM",
           icon: "mdi-menu-up",
-          long_sit: "174",
-          sit_change: "+0",
           color: "#22CE8B",
           color0: "green",
           color1: "green",
@@ -429,11 +414,9 @@ export default {
           name: "Abraham Pigeon",
           no: "104",
           pos: "อาจารย์",
-          sleep_sum: "7:15 ชั่วโมง",
-          sleep_change: "+1:00 ชั่วโมง",
+          sleep_sum: "130 BPM",
+          sleep_change: "+1 BPM",
           icon: "mdi-menu-up",
-          long_sit: "159",
-          sit_change: "+3",
           color: "#22CE8B",
           color0: "green",
           color1: "red",
@@ -443,11 +426,9 @@ export default {
           name: "Abraham Pigeon",
           no: "105",
           pos: "อาจารย์",
-          sleep_sum: "4:10 ชั่วโมง",
-          sleep_change: "-0:10 ชั่วโมง",
+          sleep_sum: "109 ฺBPM",
+          sleep_change: "-4 BPM",
           icon: "mdi-menu-down",
-          long_sit: "159",
-          sit_change: "3",
           color: "#22CE8B",
           color0: "red",
           color1: "green",
@@ -528,12 +509,12 @@ export default {
 .content_dialog_page_bot {
   padding: 0 30px;
 }
-.wd_100{
+.wd_100 {
   width: 100%;
   text-align: center;
   /* background-color:rgba(200,100,50,.2); */
 }
-.bg_22{
+.bg_22 {
   /* background-color:rgba(50,100,200,.2); */
 }
 </style>

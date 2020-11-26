@@ -68,9 +68,7 @@
                               </v-btn>
                             </div>
                             <div>
-                              <span class="headline"
-                                >รายละเอียดค่าน้ำหนัก</span
-                              >
+                              <span class="headline">รายละเอียดค่าน้ำหนัก</span>
                             </div>
                           </div>
                         </v-card-title>
@@ -81,7 +79,7 @@
                         </v-card-text>
                         <v-card-content>
                           <div>
-                            <dialog_p5 />
+                            <dialog_p5_1 />
                           </div>
                         </v-card-content>
                       </v-card>
@@ -101,7 +99,7 @@
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
-                <canvas id="graph1_p5" width="200px" height=""></canvas>
+                <canvas id="graph1_p5" width="200px" height="90px"></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p5">
@@ -141,7 +139,8 @@
               <div class="label_grpah1_c1_p5">
                 <table width="100%">
                   <span class
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 78 กิโลกรัม</span
+                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีน้ำหนักประมาณ 78
+                    กิโลกรัม</span
                   >
                 </table>
               </div>
@@ -150,7 +149,7 @@
         </div>
       </v-card>
     </div>
-     <div class="card1_p3">
+    <div class="card1_p3">
       <v-card elevation="2" outlined height="">
         <div class="card1_p3_root">
           <div class="card1_p3_headNsub">
@@ -163,7 +162,7 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card3_p3">
                     <div class="card3-bot-text ">
-                     <v-icon large color="#00E676">mdi-archive-alert</v-icon>
+                      <v-icon large color="#00E676">mdi-archive-alert</v-icon>
                       <span><strong>BMI</strong></span>
                     </div>
                   </div>
@@ -215,7 +214,7 @@
                           <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                         </v-btn>
                       </template>
-                       <v-card>
+                      <v-card>
                         <v-card-title>
                           <div class="head_dialog_c2_p4">
                             <div>
@@ -231,19 +230,21 @@
                             </div>
                             <div class="pd_text">
                               <span class="headline"
-                                >รายละเอียดค่าคะแนนร่างกาย</span
+                                ><strong>รายละเอียดค่า BMI</strong></span
                               >
                             </div>
                           </div>
                         </v-card-title>
                         <v-card-text>
-                          กราฟสรุปรายละเอียดค่าคะแนนร่างกายต่อเดือน
-                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                          <span
+                            >กราฟสรุปรายละเอียดค่า BMI
+                            เพื่อสังเกตุความแข็งแรงและสมบูรณ์ของร่างกายเพื่อระวังปัญหาสุขภาพในระยะสั้น
+                            กลาง และยาวได้</span
+                          >
                         </v-card-text>
                         <v-card-content>
                           <div>
-                            <dialog_p4_3 />
+                            <dialog_p5 />
                           </div>
                         </v-card-content>
                       </v-card>
@@ -328,6 +329,124 @@
   </div>
 </template>
 
+<script>
+import Chart from "chart.js";
+import dialog_p5 from "@/components/dialog_p5_card1.vue";
+export default {
+  components: {
+    dialog_p5,
+  },
+  mounted: function() {
+    // card1 graph
+    var ctx1_p5 = document.getElementById("graph1_p5").getContext("2d");
+    var bar1_p5 = new Chart(ctx1_p5, {
+      type: "horizontalBar",
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: true,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 5,
+                max: 100,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 2, // minimum will be 0, unless there is a lower value.
+                stepValue: 2,
+                max: 12,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ชั่วโมง",
+              },
+            },
+          ],
+        },
+      },
+      data: {
+        labels: ["ชาย", "หญิง"],
+        datasets: [
+          {
+            label: "ก้าว",
+            backgroundColor: ["#9ACDE9", "#F8C5C5"],
+            data: [4, 7.3],
+          },
+        ],
+      },
+    });
+    console.log(bar1_p5);
+
+    var ctx2_c1_p5 = document.getElementById("graph2_c1_p5").getContext("2d");
+    var bar2_c1_p5 = new Chart(ctx2_c1_p5, {
+      type: "line",
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 2, // minimum will be 0, unless there is a lower value.
+                stepValue: 2,
+                max: 8,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ชั่วโมง",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: "อายุ",
+              },
+            },
+          ],
+        },
+      },
+      data: {
+        datasets: [
+          {
+            label: "ก้าว",
+            backgroundColor: "#BADCEF",
+            data: [2.9, 4.0, 4.1, 3.8, 7.2, 2.8],
+          },
+        ],
+        labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
+      },
+    });
+    console.log(bar2_c1_p5);
+  },
+  data() {
+    return {
+      dialog0: false,
+      dialog1: false,
+      dialog2: false,
+    };
+  },
+};
+</script>
+
 <style scoped>
 .card1_p5 {
   padding: 20px;
@@ -335,35 +454,47 @@
 .card1_p5_root {
   padding: 20px;
 }
-.card1_p5_content{
+.card1_p5_content {
   display: flex;
 }
-.head_card1_p5_l{
-  width: 40%;
+.head_card1_p5_l {
+  width: 50%;
+}
+.label_grpah1_c1_p5{
+  padding-left: 16px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 /* .head_card1_p5_r{
   padding:20px;
 } */
-.head_card1_p5_l_title{
+.head_card1_p5_l_title {
   display: flex;
-  padding:20px;
-  justify-content:space-between;
+  /* padding:20px; */
+  justify-content: space-between;
   width: 100%;
-  background-color:rgba(0, 0,100,.3);
+  /* background-color:rgba(0, 0,100,.3); */
 }
-.title_card1_p5{
+.title_card1_p5 {
   display: flex;
 }
 
-.sex_age_title_card1_p5{
+.sex_age_title_card1_p5 {
   display: flex;
 }
-.card1_p5_content_left{
-width: 50%;
+.card1_p5_content_left {
+  width: 50%;
+}
+.head_dialog_c2_p4 {
+  display: flex;
 }
 /* .head_card1_p5_l {
   display: flex;
   justify-content: space-between;
   width: 50%;
 } */
+.card1_p5_content_right {
+  width: 50%;
+  padding-left: 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
 </style>

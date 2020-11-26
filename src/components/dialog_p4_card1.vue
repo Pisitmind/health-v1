@@ -39,7 +39,9 @@
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการนอนหลับ ผู้ชาย (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการนอนหลับ ผู้ชาย </span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -85,7 +87,9 @@
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการนอนหลับ ผู้หญิง (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการนอนหลับ ผู้หญิง </span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -227,7 +231,7 @@ export default {
                 reverse: false,
                 min: 0,
                 max: 10,
-                stepSize: 1,
+                stepSize: 2,
               },
             },
           ],
@@ -270,7 +274,7 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
+            backgroundColor: "#E8E7FE",
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -322,7 +326,7 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: "#ffdc89",
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],
@@ -454,19 +458,19 @@ export default {
           type: "All",
           icon: "mdi-circle",
           color: "#359BD3",
-          data: [524, 643, 419, 419, 264, 555],
+          data: ["7:30", "3:55", "6:45", "6:20", "7:05", "6:15"],
         },
         {
           type: "ชาย",
           icon: "mdi-circle",
           color: "#A3A1FB",
-          data: [8.11, 3.3, 7.0, 5.4, 7.3, 4.05],
+          data: ["8:11", "3:30", "7:00", "5:40", "7:30", "4:05"],
         },
         {
           type: "หญิง",
           icon: "mdi-circle",
           color: "#FFDA83",
-          data: [6.15, 4.15, 6.15, 7.45, 6.1, 9.5],
+          data: ["6:15", "4:15", "6:15", "7:45", "6:10", "9:50"],
         },
       ],
     };
