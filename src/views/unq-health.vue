@@ -1,8 +1,5 @@
 <template>
   <div class="unqHealth">
-    <h1>unqHealth page</h1>
-    <v-divider></v-divider>
-    <br />
     <div class="card1_p6">
       <v-card elevation="2" outlined height="">
         <div class="card1_p6_root">
@@ -149,7 +146,6 @@
         </div>
       </v-card>
     </div>
-    <br />
     <div class="card2_p6">
       <v-card elevation="3" outlined height="">
         <div class="card1_p6_root">
@@ -378,7 +374,6 @@
         </div>
       </v-card>
     </div>
-    <br />
     <div class="card3_p6">
       <v-card elevation="2" outlined height="">
         <v-card elevation="2" outlined height="">

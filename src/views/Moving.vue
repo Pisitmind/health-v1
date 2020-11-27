@@ -1,6 +1,5 @@
 <template>
   <div class="Moving">
-    <br />
     <div class="card1_p3">
       <v-card elevation="2" outlined height="">
         <div class="card1_p3_root">
@@ -406,42 +405,6 @@
         </div>
       </v-card>
     </div>
-    <br />
-    <div>
-      <!-- <div class="card-info-right pa-1">
-        <table
-          class="card2-table"
-          v-for="item in data_card3_p3_1"
-          :key="item.id"
-          style="width: 100%;
-  border-collapse: collapse;"
-        >
-          <tr>
-            <th>กิจกรรม</th>
-            <th>ชาย</th>
-            <th>หญิง</th>
-            <th>เฉลี่ยรวม</th>
-          </tr>
-          <tr v-for="x in 6" :key="x" class="two-data-card2">
-            <td height="40px" class="pd_text 3">
-              <div class="t_name_ct3c1">
-                <v-icon x-small :style="{ color: item.color[x - 1] }"
-                  >mdi-circle
-                </v-icon>
-                <span class="txt_pd font_sm font_bold">
-                  {{ item.name[x - 1] }}
-                </span>
-              </div>
-            </td>
-            <td class="alr font_sm font_bold">{{ item.dataMan[x - 1] }}</td>
-            <td class="alr font_sm font_bold">{{ item.dataWman[x - 1] }}</td>
-            <td class="alr font_sm font_bold">{{ item.avg[x - 1] }}</td>
-          </tr>
-        </table>
-      </div> -->
-    </div>
-    <br />
-    <br />
   </div>
 </template>
 
@@ -814,7 +777,7 @@ export default {
   /* background-color: gray; */
 }
 .card1_p3 {
-  padding: 20px;
+  padding:10px 20px 10px 20px;
 }
 .card1_p3_root {
   padding: 20px;
@@ -830,7 +793,10 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-
+.card3-bot-text {
+  display: flex;
+  justify-content: center;
+}
 .head_card1_p3_l {
   display: flex;
   justify-content: space-between;

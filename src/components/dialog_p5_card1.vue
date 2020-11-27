@@ -6,7 +6,7 @@
           <div class="content_top_left_page">
             <div class="card_el_card2">
               <!-- card2 head+content -->
-              <v-card class="card2_size" elevation="0" >
+              <v-card class="card2_size" elevation="0">
                 <div class="card2_root">
                   <!-- card2 content -->
                   <div class="content1_card2">
@@ -306,7 +306,9 @@
                                 <td>{{ item.pos }}</td>
                                 <td>{{ item.bmi_sum }}</td>
                                 <td :style="{ color: item.color0 }">
+                                  <v-icon  :style="{ color: item.color0 }">{{item.icon}}</v-icon>
                                   {{ item.bmi_change }}
+
                                 </td>
                                 <td>
                                   <v-btn
@@ -503,6 +505,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "18.5",
           bmi_change: "+2.1",
+            icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "red",
@@ -514,6 +517,7 @@ export default {
           pos: "ผู้ช่วยสอน",
           bmi_sum: "20.0",
           bmi_change: "-0.2",
+           icon: "mdi-menu-down",
           color: "#AD8DBB",
           color0: "red",
           color1: "green",
@@ -525,6 +529,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "12.4",
           bmi_change: "+0.1",
+            icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "green",
@@ -536,6 +541,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "28.2",
           bmi_change: "+2",
+            icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "green",
@@ -547,6 +553,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "30.1",
           bmi_change: "-4",
+           icon: "mdi-menu-down",
           color: "#AD8DBB",
           color0: "red",
           color1: "green",

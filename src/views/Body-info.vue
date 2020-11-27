@@ -15,7 +15,7 @@
                     <div style="padding-right:10px;">
                       <v-icon large color="#AD8DBB">mdi-weight-gram</v-icon>
                     </div>
-                    <div class="card3-bot-text " style="text-align: center;">
+                    <div class="card5-bot-text " style="text-align: center;">
                       <span><strong>ค่าน้ำหนัก</strong></span>
                     </div>
                   </div>
@@ -147,19 +147,19 @@
         </div>
       </v-card>
     </div>
-    <div class="card1_p3">
+    <div class="card1_p5">
       <v-card elevation="2" outlined height="">
-        <div class="card1_p3_root">
-          <div class="card1_p3_headNsub">
+        <div class="card1_p5_root">
+          <div class="card1_p5_headNsub">
             <!-- head lr -->
             <div class="card1_head_lr">
               <!-- head left div -->
-              <div class="head_card1_p3_l">
+              <div class="head_card1_p5_l">
                 <!-- head left -->
-                <div class="head_card3_p3_l_title">
+                <div class="head_card3_p5_l_title">
                   <!-- การก้าว+icon -->
-                  <div class="title_card3_p3">
-                    <div class="card3-bot-text ">
+                  <div class="title_card3_p5">
+                    <div class="card5-bot-text ">
                       <v-icon large color="#00E676">mdi-archive-alert</v-icon>
                       <span><strong>BMI</strong></span>
                     </div>
@@ -202,9 +202,9 @@
                 </div>
               </div>
               <!-- head right div -->
-              <div class="head_card1_p3_r">
+              <div class="head_card1_p5_r">
                 <!-- head right -->
-                <div class="head_card1_p3_r_title">
+                <div class="head_card1_p5_r_title">
                   <div class="exit-icon-card3">
                     <v-dialog v-model="dialog2" width="">
                       <template v-slot:activator="{ on, attrs }">
@@ -252,14 +252,14 @@
               </div>
             </div>
           </div>
-          <div class="card1_p3_content">
-            <div class="card3_p3_content_left">
+          <div class="card1_p5_content">
+            <div class="card3_p5_content_left">
               <v-card-text>
                 <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
                 <canvas id="graph1_c2_p5" width="200px" height=""></canvas>
-                <div class="label_grpah1_c1_p3">
+                <div class="label_grpah1_c1_p5">
                   <table width="100%">
                     <tr>
                       <td style="text-align:center;">
@@ -284,7 +284,7 @@
               </v-card-text>
             </div>
             <!-- <v-divider vertical></v-divider> -->
-            <div class="card3_p3_content_right pd_r_30">
+            <div class="card3_p5_content_right pd_r_30">
               <v-card class="card2-subcard-3  ct_set" width="" height="">
                 <v-card-subtitle>
                   <span class="topic-name-card_c3 ">
@@ -545,7 +545,16 @@ export default {
 
 <style scoped>
 .card1_p5 {
+  padding:10px 20px 10px 20px;
+}
+.card1_p5_root {
   padding: 20px;
+}
+.card1_p5_content {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  /* width: 100%; */
 }
 .card1_p5_root {
   padding: 20px;
@@ -560,6 +569,10 @@ export default {
   padding-left: 16px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
+.card5-bot-text {
+  display: flex;
+  justify-content: center;
+}
 /* .head_card1_p5_r{
   padding:20px;
 } */
@@ -573,9 +586,55 @@ export default {
 .title_card1_p5 {
   display: flex;
 }
-
+.card3_p5_content_left {
+  width: 60%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.card3_p5_content_right {
+  width: 40%;
+  padding-left: 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
 .sex_age_title_card1_p5 {
   display: flex;
+}
+.card1_p5_content_left {
+  width: 50%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.card1_p5_content_right {
+  width: 50%;
+  padding-left: 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.card3_p5_content_left {
+  width: 60%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.card3_p5_content_right {
+  width: 40%;
+  padding-left: 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.head_card1_p5_l_title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.head_card3_p5_l_title {
+  display: flex;
+  width: 100%;
+}
+.title_card1_p5 {
+  display: flex;
+}
+.sex_age_title_card1_p5 {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 .card1_p5_content_left {
   width: 50%;

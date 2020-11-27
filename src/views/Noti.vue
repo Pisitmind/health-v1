@@ -61,7 +61,6 @@
                   BPM.
                 </p>
               </div>
-              <br />
               <div class="c3">
                 <canvas id="graph0" width="" height="200px"></canvas>
               </div>
@@ -207,8 +206,6 @@
         </div>
       </v-card>
     </div>
-    <br />
-
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="card2_size" elevation="3" outlined>
@@ -401,7 +398,6 @@
         </div>
       </v-card>
     </div>
-    <br />
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="card2_size" elevation="3" outlined>
@@ -590,9 +586,6 @@
         </div>
       </v-card>
     </div>
-    <br />
-
-    <br />
     <div class="card_el_card2">
       <v-card class="card2_size" elevation="3" outlined>
         <div class="card3_root">

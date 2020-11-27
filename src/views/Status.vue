@@ -332,9 +332,6 @@
         </div>
       </v-card>
     </div>
-
-    <br />
-
     <div class="card1_p4">
       <v-card elevation="2" outlined height="">
         <div class="card1_p4_root">
@@ -863,7 +860,7 @@ export default {
 
 <style scoped>
 .card1_p4 {
-  padding: 20px;
+  padding:10px 20px 10px 20px;
 }
 .card1_p4_root {
   padding: 20px;

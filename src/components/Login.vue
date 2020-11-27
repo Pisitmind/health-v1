@@ -52,15 +52,17 @@
       <div class="foot" fluid>
         <div class="foot_item">
           <div dense class="p_200 foot_content">
-            <div class="pd_top_foot">
+            <div class="pd_top_foot pd_20">
               <span>POWERED BY</span>
               <br />
               <v-img
                 class="mg_y_10"
-                max-width="180px"
+                max-width="160px"
                 src="../assets/logo/Logo BAAK_w.png"
               ></v-img>
-              <span class="">BAAK Co., Ltd.</span>
+              <span class="">BAAK</span>
+              <br />
+              <span class="sub_text">BAAK Co., Ltd.</span>
               <div class="icon_foot_l wd_80">
                 <img
                   height="40px"
@@ -188,13 +190,16 @@
   justify-content: space-around;
 }
 .pd_top_foot {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .mg_y_10 {
   margin: 10px 0;
 }
 .wd_80 {
   width: 80%;
+}
+.pd_20{
+  padding-top: 20px;
 }
 .filter-white {
   filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(133deg)
@@ -203,6 +208,11 @@
 .filter-black {
   filter: invert(0%) sepia(100%) saturate(7459%) hue-rotate(74deg)
     brightness(95%) contrast(109%);
+}
+.sub_text{
+  font-size: 12px;
+  color:rgb(249, 236, 250);
+  font-weight:lighter;
 }
 /* .set_center{
   align-items: center;
