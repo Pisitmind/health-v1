@@ -1,12 +1,15 @@
 <template>
-  <div class="dialog_p4_card2">
-     <v-card elevation="0">
+  <div class="dialog_p6_card1">
+    <v-card elevation="0">
       <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
           <div class="content_top_left_page">
             <div class="set_center">
-              <canvas id="graph1_c1_p4" width="500px" height="200px"></canvas>
+              <canvas id="graph1_c1_p6" width="500px" height="200px"></canvas>
+            </div>
+            <div class="table_content_card2">
+              <table style="width: 100%;"></table>
             </div>
           </div>
           <div class="content_top_right_page">
@@ -14,9 +17,11 @@
             <div>
               <v-card width="" class="c1_c2_dialog">
                 <table class="data_c1c2">
-                  <tr width="">
+                  <tr>
                     <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span>
+                      <span>ค่าเฉลี่ยความดันโลหิต ผู้ชาย</span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <v-spacer></v-spacer>
                     <td width="20%">
@@ -25,7 +30,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
-                        >+2%</v-btn
+                        >+4%</v-btn
                       >
                     </td>
                   </tr>
@@ -39,7 +44,6 @@
                         ></canvas>
                       </div>
                     </td>
-                    <v-spacer></v-spacer>
                     <td>
                       <div class="wd_100">
                         <table class="text-align-center">
@@ -60,11 +64,13 @@
             </div>
             <br />
             <div>
-             <v-card width="400px" class="c1_c2_dialog">
+              <v-card width="400px" class="c1_c2_dialog">
                 <table class="data_c1c2">
-                  <tr width="">
+                  <tr>
                     <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span>
+                      <span>ค่าเฉลี่ยความดันโลหิต ผู้หญิง </span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <v-spacer></v-spacer>
                     <td width="20%">
@@ -73,7 +79,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
-                        >+4%</v-btn
+                        >+12%</v-btn
                       >
                     </td>
                   </tr>
@@ -87,16 +93,15 @@
                         ></canvas>
                       </div>
                     </td>
-                    <v-spacer></v-spacer>
                     <td>
-                      <div class="">
-                        <table class="align-center">
+                      <div class="wd_100">
+                        <table class="text-align-center">
                           <tr>
                             <span>34</span>
                           </tr>
                           <tr class="grey--text">
                             <span>
-                              BPM
+                              ฺBPM
                             </span>
                           </tr>
                         </table>
@@ -126,10 +131,16 @@
                       ตำแหน่ง
                     </th>
                     <th class="text-left">
-                     ค่าเฉลี่ยการเต้นของหัวใจ
+                      การเดิน (วันนี้)
                     </th>
                     <th class="text-left">
-                      เปลี่ยนแปลงการเต้นของหัวใจ
+                      เปลี่ยนแปลงการเดิน
+                    </th>
+                    <th class="text-left">
+                      การนั่งนาน (วันนี้)
+                    </th>
+                    <th class="text-left">
+                      เปลี่ยนแปลงการนั่ง
                     </th>
                     <th class="text-left">
                       ดูประวัติ
@@ -137,20 +148,21 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in status_data_1" :key="item.id">
+                  <tr v-for="item in moving_data_1" :key="item.id">
                     <td>{{ item.no }}</td>
                     <td>{{ item.name }}</td>
                     <td>{{ item.pos }}</td>
-                    <td>{{ item.sleep_sum }}</td>
+                    <td>{{ item.walk_sum }}</td>
                     <td :style="{ color: item.color0 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.sleep_change }}
+                      {{ item.walk_change }}
+                    </td>
+                    <td>{{ item.long_sit }}</td>
+                    <td :style="{ color: item.color1 }">
+                      {{ item.sit_change }}
                     </td>
                     <td>
                       <v-btn
-                        style="backgroundColor:#AD8DBB; color:white"
+                        :style="{ backgroundColor: item.color }"
                         elevation="2"
                         small
                       >
@@ -174,40 +186,31 @@
 import Chart from "chart.js";
 export default {
   mounted: function() {
-    var ctx_dia_c1_p4 = document
-      .getElementById("graph1_c1_p4")
+    var ctx_dia_c1_p6 = document
+      .getElementById("graph1_c1_p6")
       .getContext("2d");
-    var bar_dia_c1_p4 = new Chart(ctx_dia_c1_p4, {
+    var bar_dia_c1_p6 = new Chart(ctx_dia_c1_p6, {
       type: "line",
       data: {
         datasets: [
           {
-            label: "ชาย",
+            label: "Steps",
+            pointBorderColor: "#A3A1FB",
+            fill: "Disabled",
             backgroundColor: "#A3A1FB",
-            data: [81.1, 33, 70, 54, 73, 40.5, 41.5, 61.5, 74.5],
+            lineTension: "0.2",
+            borderDash: [5],
+            data: [139, 384, 223, 189, 158, 318, 93],
           },
           {
-            label: "หญิง",
-            backgroundColor: "#FFDA83",
-            data: [61.5, 41.5, 61.5, 74.5, 61.0, 95.0, 10.5, 57.0, 10.3],
-          },
-          {
-            label: "เฉลี่ย",
-            backgroundColor: "#2CD889",
-            data: [71.0, 37.5, 65.5 , 64.25,50.5 , 67.75, 37.0 , 59.25, 42.4],
+            label: "Setting",
+            pointBorderColor: "#FFDA83",
+            fill: "Disabled",
+            borderDash:[5],
+            data: [385, 259, 196, 230, 106, 237, 107],
           },
         ],
-        labels: [
-          "00:00.",
-          "03:00",
-          "06:00",
-          "09:00",
-          "12:00",
-          "15:00",
-          "18:00",
-          "21:00",
-          "00:00",
-        ],
+        labels: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย."],
       },
       options: {
         responsive: true,
@@ -222,15 +225,15 @@ export default {
               ticks: {
                 reverse: false,
                 min: 0,
-                max: 200,
-                stepSize: 50,
+                max: 1000,
+                stepSize: 200,
               },
             },
           ],
         },
       },
     });
-    console.log(bar_dia_c1_p4);
+    console.log(bar_dia_c1_p6);
 
     var ctx_dia_c2 = document
       .getElementById("graph_dialog_c2")
@@ -267,6 +270,7 @@ export default {
           {
             label: "TODAY",
             backgroundColor: "#3db161",
+
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -373,14 +377,15 @@ export default {
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
         { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
       ],
-      status_data_1: [
+      moving_data_1: [
         {
           name: "สารุท อินทร์ศรี",
           no: "101",
           pos: "อาจารย์",
-          sleep_sum: "124 BPM",
-          sleep_change: "+1 BPM",
-          icon: "mdi-menu-up",
+          walk_sum: "4596",
+          walk_change: "+156",
+          long_sit: "159",
+          sit_change: "+3",
           color: "#B4B4B4",
           color0: "green",
           color1: "red",
@@ -390,9 +395,10 @@ export default {
           name: "Niles Peppertrout",
           no: "102",
           pos: "ผู้ช่วยสอน",
-          sleep_sum: "120 BPM",
-          sleep_change: "-1 BPM",
-          icon: "mdi-menu-down",
+          walk_sum: "4875",
+          walk_change: "-395",
+          long_sit: "157",
+          sit_change: "-1",
           color: "#22CE8B",
           color0: "red",
           color1: "green",
@@ -402,9 +408,10 @@ export default {
           name: "Abraham Pigeon",
           no: "103",
           pos: "อาจารย์",
-          sleep_sum: "105 BPM",
-          sleep_change: "+4 BPM",
-          icon: "mdi-menu-up",
+          walk_sum: "3621",
+          walk_change: "+0",
+          long_sit: "174",
+          sit_change: "+0",
           color: "#22CE8B",
           color0: "green",
           color1: "green",
@@ -414,21 +421,10 @@ export default {
           name: "Abraham Pigeon",
           no: "104",
           pos: "อาจารย์",
-          sleep_sum: "130 BPM",
-          sleep_change: "+1 BPM",
-          icon: "mdi-menu-up",
-          color: "#22CE8B",
-          color0: "green",
-          color1: "red",
-          show_history: "ดู",
-        },
-        {
-          name: "Abraham Pigeon",
-          no: "105",
-          pos: "อาจารย์",
-          sleep_sum: "109 ฺBPM",
-          sleep_change: "-4 BPM",
-          icon: "mdi-menu-down",
+          walk_sum: "2541",
+          walk_change: "+156",
+          long_sit: "159",
+          sit_change: "+3",
           color: "#22CE8B",
           color0: "red",
           color1: "green",
@@ -461,7 +457,7 @@ export default {
 </script>
 
 <style scoped>
-.dialog_p4_card2 {
+.dialog_p6_card1 {
   width: 100%;
 }
 .t_switch {
@@ -469,7 +465,7 @@ export default {
   /* justify-items: center; */
   justify-content: center;
 }
-/* .head_dialog_c1_p4 {
+/* .head_dialog_c1_p6 {
   width: 30%;
   display: flex;
   flex-direction: row;
@@ -508,13 +504,5 @@ export default {
 }
 .content_dialog_page_bot {
   padding: 0 30px;
-}
-.wd_100 {
-  width: 100%;
-  text-align: center;
-  /* background-color:rgba(200,100,50,.2); */
-}
-.bg_22 {
-  /* background-color:rgba(50,100,200,.2); */
 }
 </style>

@@ -1,111 +1,107 @@
 <template>
   <div class="dia_noti">
     <v-card-content>
-       <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas
-                id="graphdia1_c1_p2"
-                width="500px"
-                height="200px"
-              ></canvas>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>HEART RATE (TODAY)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialogc2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>119</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              MON
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
-            <br />
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>HEART RATE (YESTERDAY)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+2%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialogc3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>124</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                             THU
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
+      <div class="content_dialog_page_top">
+        <div class="content_top_left_page">
+          <div class="set_center ">
+            <canvas id="graphdia1" width="600px" height="400px"></canvas>
           </div>
         </div>
+        <div class="content_top_right_page">
+          <!-- data top right -->
+          <div>
+            <v-card width="" class="c1_c2_dialog">
+              <table class="data_c1c2">
+                <tr>
+                  <td class="left" width="80%" height="20%">
+                    <span>HEART RATE (TODAY)</span>
+                  </td>
+                  <td>
+                    <v-btn
+                      color="#22CE8B"
+                      depressed
+                      class="white--text"
+                      elevation="2"
+                      >-4%</v-btn
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="card_c1_c2_pd">
+                      <canvas
+                        id="graph_dialogc2"
+                        width=""
+                        height="100px"
+                      ></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="wd_100">
+                      <table class="align-center">
+                        <tr>
+                          <span>119</span>
+                        </tr>
+                        <tr class="grey--text">
+                          <span>
+                            MON
+                          </span>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </v-card>
+          </div>
+          <br />
+          <div>
+            <v-card width="" class="c1_c2_dialog">
+              <table class="data_c1c2">
+                <tr>
+                  <td class="left" width="80%" height="20%">
+                    <span>HEART RATE (YESTERDAY)</span>
+                  </td>
+                  <td>
+                    <v-btn
+                      color="#22CE8B"
+                      depressed
+                      class="white--text"
+                      elevation="2"
+                      >+2%</v-btn
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="card_c1_c2_pd">
+                      <canvas
+                        id="graph_dialogc3"
+                        width=""
+                        height="100px"
+                      ></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="wd_100">
+                      <table class="align-center">
+                        <tr>
+                          <span>124</span>
+                        </tr>
+                        <tr class="grey--text">
+                          <span>
+                            THU
+                          </span>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </v-card>
+          </div>
+        </div>
+      </div>
       <div class="content_dialog_page_bot">
         <div>
           <v-simple-table>
@@ -184,11 +180,9 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     // bar_dia make the code broken 1
-     var ctx_dia_c1_p2 = document
-      .getElementById("graphdia1_c1_p2")
-      .getContext("2d");
-    var bar_dia_c1_p2 = new Chart(ctx_dia_c1_p2, {
-       type: "line",
+    var ctx_d1 = document.getElementById("graphdia1").getContext("2d");
+    var bar_d1 = new Chart(ctx_d1, {
+      type: "line",
       options: {
         title: {
           display: true,
@@ -242,7 +236,7 @@ export default {
         ],
       },
     });
-    console.log(bar_dia_c1_p2);
+    console.log(bar_d1);
     // broken2
     var ctx_dia_c2 = document
       .getElementById("graph_dialogc2")
@@ -353,6 +347,7 @@ export default {
 
   data: function() {
     return {
+      dialog: false,
       card2: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         Color: [
@@ -629,7 +624,6 @@ export default {
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
-  /* background-color:#22CE8B; */
 }
 .c1_c2_dialog {
   padding: 20px;
@@ -637,16 +631,12 @@ export default {
 .card_c1_c2_pd {
   padding: 15px;
 }
-
-.content_top_left_page{
-  /* background-color:#22CE8B; */
-}
 .set_center {
   /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color:#22CE8B; */
+  background-color:#22CE8B;
 }
 .data_c1c2 {
   text-align: center;

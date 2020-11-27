@@ -139,7 +139,8 @@
               <div class="label_grpah1_c1_p4">
                 <table width="100%">
                   <span class
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40 ชั่วโมงต่อวัน</span
+                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40
+                    ชั่วโมงต่อวัน</span
                   >
                 </table>
               </div>
@@ -521,7 +522,7 @@ export default {
         labels: ["ชาย", "หญิง"],
         datasets: [
           {
-            label: "ก้าว",
+            label: "ชั่วโมง",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [4, 7.3],
           },
@@ -569,9 +570,11 @@ export default {
       data: {
         datasets: [
           {
-            label: "ก้าว",
+            label: "",
             backgroundColor: "#BADCEF",
-            data: [2.9, 4.0, 4.1, 3.8, 7.2, 2.8],
+            data: [2.9, 4.0, 4.1, 3.8, 6.2, 2.8],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -615,12 +618,12 @@ export default {
       },
       data: {
         labels: [
-         ['พักผ่อน', '60 - 100 BPM'],
-         ['ปกติ', '101 - 116 BPM'],
-         ['เริ่มเต้นแรง', '117 - 135 ฺBPM'],
-         ['ออกกำลังกาย', '136 - 154 BPM'],
-         ['ออกกำลังกายหนัก', '155 - 174 BPM'],
-         ['ค่าออกซิเจนสูงสุด', 'สูงกว่า 175 BPM'],
+          ["พักผ่อน", "60 - 100 BPM"],
+          ["ปกติ", "101 - 116 BPM"],
+          ["เริ่มเต้นแรง", "117 - 135 ฺBPM"],
+          ["ออกกำลังกาย", "136 - 154 BPM"],
+          ["ออกกำลังกายหนัก", "155 - 174 BPM"],
+          ["ค่าออกซิเจนสูงสุด", "สูงกว่า 175 BPM"],
         ],
         backgroundColor: ["#ff6384", "#36a2eb"],
         Color: [
@@ -689,6 +692,8 @@ export default {
             label: "BPM",
             backgroundColor: "#BADCEF",
             data: [60, 89, 92, 107, 122, 59],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -738,6 +743,8 @@ export default {
             label: "BPM",
             backgroundColor: "#F28C8C",
             data: [60, 89, 92, 107, 122, 59],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -764,8 +771,8 @@ export default {
               display: true,
               ticks: {
                 suggestedMin: 0, // minimum will be 0, unless there is a lower value.
-                stepValue: 250,
-                max: 1200,
+                stepValue: 10,
+                max: 40,
               },
               scaleLabel: {
                 display: true,
@@ -778,7 +785,10 @@ export default {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         datasets: [
           {
-            label: "",
+            barPercentage: 0.5,
+            barThickness: 6,
+            maxBarThickness: 8,
+            minBarLength: 2,
             backgroundColor: [
               "#58BFAE",
               "#FF3E80",
@@ -787,7 +797,7 @@ export default {
               "#B4B4B4",
               "#2289D8",
             ],
-            data: [984, 627, 743, 505, 286, 211],
+            data: [27.9, 19.5, 25.6, 24.2, 32.7, 38.0],
           },
         ],
       },
@@ -832,6 +842,8 @@ export default {
             label: "ก้าว",
             backgroundColor: "#B192BE",
             data: [2900, 4000, 4100, 3800, 7200, 2800],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],

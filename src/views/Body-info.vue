@@ -428,6 +428,8 @@ export default {
             label: "ก้าว",
             backgroundColor: "#BADCEF",
             data: [2.9, 4.0, 4.1, 3.8, 7.2, 2.8],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -502,7 +504,7 @@ export default {
       data_card2_p5: [
         {
           name: "ต่ำ",
-          color: "#58BFAE",
+          color: "#B699C2",
           dataMan: "638",
           dataWman: "270",
           avg: "22.7%",
@@ -516,10 +518,17 @@ export default {
         },
         {
           name: "ค่อนข้างสูง",
-          color: "#FF850A",
+          color: "#B4E4B4",
           dataMan: "784",
           dataWman: "275",
           avg: "28%",
+        },
+        {
+          name: "สูง",
+          color: "#FF850A",
+          dataMan: "145",
+          dataWman: "145",
+          avg: "5.1%",
         },
         {
           name: "สูงมาก",
@@ -527,20 +536,6 @@ export default {
           dataMan: "652",
           dataWman: "480",
           avg: "23.2%",
-        },
-        {
-          name: "เครื่องวิ่งวงรี",
-          color: "#B4B4B4",
-          dataMan: "145",
-          dataWman: "145",
-          avg: "5.1%",
-        },
-        {
-          name: "กิจกรรมในร่ม",
-          color: "#2289D8",
-          dataMan: "24",
-          dataWman: "40",
-          avg: "1.1%",
         },
       ],
     };

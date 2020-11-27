@@ -188,13 +188,13 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                     <v-dialog v-model="dialog2" width="">
-                    <template v-slot:activator="{ on, attrs }">
+                    <v-dialog v-model="dialog2" width="">
+                      <template v-slot:activator="{ on, attrs }">
                         <v-btn small icon fab v-bind="attrs" v-on="on">
-                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                    </v-btn>
+                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        </v-btn>
                       </template>
-                       <v-card>
+                      <v-card>
                         <v-card-title>
                           <div class="head_dialog_c2_p3">
                             <div>
@@ -448,10 +448,11 @@
 <script>
 import Chart from "chart.js";
 import dialog_p3 from "@/components/dialog_p3_card1.vue";
-import dialog_p3_2 from '@/components/dialog_p3_card2.vue';
+import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
 export default {
   components: {
-    dialog_p3,dialog_p3_2
+    dialog_p3,
+    dialog_p3_2,
   },
   mounted: function() {
     var ctx1_p3 = document.getElementById("graph1_p3").getContext("2d");
@@ -464,6 +465,7 @@ export default {
         tooltips: {
           enabled: true,
         },
+
         scales: {
           yAxes: [
             {
@@ -508,7 +510,7 @@ export default {
           display: false,
         },
         tooltips: {
-          enabled: false,
+          enabled: true,
         },
         scales: {
           yAxes: [
@@ -538,6 +540,8 @@ export default {
             label: "ก้าว",
             backgroundColor: "#B192BE",
             data: [2900, 4000, 4100, 3800, 7200, 2800],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -632,6 +636,8 @@ export default {
             label: "ก้าว",
             backgroundColor: "#B192BE",
             data: [2900, 4000, 4100, 3800, 7200, 2800],
+            borderDash: [5],
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -647,7 +653,7 @@ export default {
           display: false,
         },
         tooltips: {
-          enabled: false,
+          enabled: true,
         },
         scales: {
           yAxes: [

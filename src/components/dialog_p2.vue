@@ -1,215 +1,203 @@
 <template>
   <div>
-      <v-dialog v-model="dialog" width="">
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn large icon fab v-bind="attrs" v-on="on">
-                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                      </v-btn>
-                    </template>
-                    <v-card>
-                      <v-card-title>
-                        <div class="head_dialog">
-                          <div>
-                            <span class="headline">Heart rate risk</span>
-                          </div>
-                          <div>
-                            <v-btn
-                              color="green darken-1"
-                              icon
-                              @click="dialog = false"
-                            >
-                              <v-icon>mdi-close</v-icon>
-                            </v-btn>
-                          </div>
+    <v-dialog v-model="dialog" width="">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn large icon fab v-bind="attrs" v-on="on">
+          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+        </v-btn>
+      </template>
+      <v-card>
+        <v-card-title>
+          <div class="head_dialog">
+            <div>
+              <span class="headline">Heart rate risk</span>
+            </div>
+            <div>
+              <v-btn color="green darken-1" icon @click="dialog = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          exercise and Weight loss can help limit some of the health risks
+          associated with tachycardia by reducing the negative effects of high
+          blood pressure and sleep apnea.
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="set_center">
+                <canvas id="graph_dialog" width="600px" height="400px"></canvas>
+              </div>
+            </div>
+            <div class="content_top_right_page">
+              <!-- data top right -->
+              <div>
+                <v-card width="" class="c1_c2_dialog">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>HEART RATE (TODAY)</span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          >-4%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="card_c1_c2_pd">
+                          <canvas
+                            id="graph_dialog_c2"
+                            width=""
+                            height="100px"
+                          ></canvas>
                         </div>
-                      </v-card-title>
-                      <v-card-text>
-                        exercise and Weight loss can help limit some of the
-                        health risks associated with tachycardia by reducing the
-                        negative effects of high blood pressure and sleep apnea.
-                      </v-card-text>
-                      <v-card-content>
-                        <div class="content_dialog_page_top">
-                          <div class="content_top_left_page">
-                            <div class="set_center">
-                              <canvas
-                                id="graph_dialog"
-                                width="600px"
-                                height="400px"
-                              ></canvas>
-                            </div>
-                          </div>
-                          <div class="content_top_right_page">
-                            <!-- data top right -->
-                            <div>
-                              <v-card width="" class="c1_c2_dialog">
-                                <table class="data_c1c2">
-                                  <tr>
-                                    <td class="left" width="80%" height="20%">
-                                      <span>HEART RATE (TODAY)</span>
-                                    </td>
-                                    <td>
-                                      <v-btn
-                                        color="#22CE8B"
-                                        depressed
-                                        class="white--text"
-                                        elevation="2"
-                                        >-4%</v-btn
-                                      >
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <div class="card_c1_c2_pd">
-                                        <canvas
-                                          id="graph_dialog_c2"
-                                          width=""
-                                          height="100px"
-                                        ></canvas>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="wd_100">
-                                        <table class="align-center">
-                                          <tr>
-                                            <span>119</span>
-                                          </tr>
-                                          <tr class="grey--text">
-                                            <span>
-                                              MON
-                                            </span>
-                                          </tr>
-                                        </table>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </v-card>
-                            </div>
-                            <br />
-                            <div>
-                              <v-card width="" class="c1_c2_dialog">
-                                <table class="data_c1c2">
-                                  <tr>
-                                    <td class="left" width="80%" height="20%">
-                                      <span>HEART RATE (YESTERDAY)</span>
-                                    </td>
-                                    <td>
-                                      <v-btn
-                                        color="#22CE8B"
-                                        depressed
-                                        class="white--text"
-                                        elevation="2"
-                                        >+2%</v-btn
-                                      >
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <div class="card_c1_c2_pd">
-                                        <canvas
-                                          id="graph_dialog_c3"
-                                          width=""
-                                          height="100px"
-                                        ></canvas>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="wd_100">
-                                        <table class="align-center">
-                                          <tr>
-                                            <span>124</span>
-                                          </tr>
-                                          <tr class="grey--text">
-                                            <span>
-                                              THU
-                                            </span>
-                                          </tr>
-                                        </table>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </v-card>
-                            </div>
-                          </div>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span>119</span>
+                            </tr>
+                            <tr class="grey--text">
+                              <span>
+                                MON
+                              </span>
+                            </tr>
+                          </table>
                         </div>
-                        <div class="content_dialog_page_bot">
-                          <div>
-                            <v-simple-table>
-                              <template v-slot:default>
-                                <thead>
-                                  <span class=""> NOTIFY : ADMIN LIST</span>
-                                  <tr>
-                                    <th class="text-left">
-                                      No
-                                    </th>
-                                    <th class="text-left">
-                                      Name
-                                    </th>
-                                    <th class="text-left">
-                                      Location
-                                    </th>
-                                    <th class="text-left">
-                                      ROOM NO
-                                    </th>
-                                    <th class="text-left">
-                                      AVG (BPM)
-                                    </th>
-                                    <th class="text-left">
-                                      NOW (BPM)
-                                    </th>
-                                    <th class="text-left">
-                                      AUTO NOTIFY
-                                    </th>
-                                    <th class="text-left">
-                                      MANUAL NOTFY
-                                    </th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr
-                                    v-for="item in data_card1_info"
-                                    :key="item.id"
-                                  >
-                                    <td>{{ item.no }}</td>
-                                    <td>{{ item.name }}</td>
-                                    <td>{{ item.location }}</td>
-                                    <td>{{ item.room_no }}</td>
-                                    <td>{{ item.avg_bpm }}</td>
-                                    <td>{{ item.now_bpm }}</td>
-                                    <td>
-                                      <div>
-                                        <v-switch
-                                          v-model="ex11"
-                                          color="#22CE8B"
-                                          hide-details
-                                        ></v-switch>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <v-btn
-                                        :style="{ backgroundColor: item.color }"
-                                        elevation="2"
-                                        small
-                                      >
-                                        {{ item.manual_noti }}
-                                      </v-btn>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </template>
-                            </v-simple-table>
-                            <v-divider></v-divider>
-                          </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+              <br />
+              <div>
+                <v-card width="" class="c1_c2_dialog">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>HEART RATE (YESTERDAY)</span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          >+2%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="card_c1_c2_pd">
+                          <canvas
+                            id="graph_dialog_c3"
+                            width=""
+                            height="100px"
+                          ></canvas>
                         </div>
-                        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-                      </v-card-content>
-                    </v-card>
-                  </v-dialog>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span>124</span>
+                            </tr>
+                            <tr class="grey--text">
+                              <span>
+                                THU
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+            </div>
+          </div>
+          <div class="content_dialog_page_bot">
+            <div>
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <span class=""> NOTIFY : ADMIN LIST</span>
+                    <tr>
+                      <th class="text-left">
+                        No
+                      </th>
+                      <th class="text-left">
+                        Name
+                      </th>
+                      <th class="text-left">
+                        Location
+                      </th>
+                      <th class="text-left">
+                        ROOM NO
+                      </th>
+                      <th class="text-left">
+                        AVG (BPM)
+                      </th>
+                      <th class="text-left">
+                        NOW (BPM)
+                      </th>
+                      <th class="text-left">
+                        AUTO NOTIFY
+                      </th>
+                      <th class="text-left">
+                        MANUAL NOTFY
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item in data_card1_info" :key="item.id">
+                      <td>{{ item.no }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.location }}</td>
+                      <td>{{ item.room_no }}</td>
+                      <td>{{ item.avg_bpm }}</td>
+                      <td>{{ item.now_bpm }}</td>
+                      <td>
+                        <div>
+                          <v-switch
+                            v-model="ex11"
+                            color="#22CE8B"
+                            hide-details
+                          ></v-switch>
+                        </div>
+                      </td>
+                      <td>
+                        <v-btn
+                          :style="{ backgroundColor: item.color }"
+                          elevation="2"
+                          small
+                        >
+                          {{ item.manual_noti }}
+                        </v-btn>
+                      </td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
+            </div>
+          </div>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
-
 
 <script>
 import Chart from "chart.js";
@@ -672,6 +660,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: greenyellow;
 }
 .data_c1c2 {
   text-align: center;
