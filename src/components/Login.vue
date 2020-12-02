@@ -6,9 +6,9 @@
           <v-layout v-resize="onResize" align-bottom>
             <v-flex class="set_form">
               <v-card
-                class="center elevation-5 pa-10"
+                class="center set_card elevation-5 pa-10"
                 width="450px"
-                height="auto"
+                height="fit-content"
               >
                 <v-img
                   class="center"
@@ -127,6 +127,19 @@
     </v-app>
   </div>
 </template>
+<script>
+// export default {
+// name: 'login',
+//     methods: {
+//         doLogin() {
+//             axios.post('/login', {}).then(response => {
+//                 let username = response.data.username;
+//                 this.$session.set('username', username); // Set the username in session Storage
+//             });
+//         }
+//     } 
+// }
+</script>
 
 <style scoped>
 .e20 {
@@ -165,7 +178,9 @@
 }
 .set_form {
   /* display: none; */
-  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  /* padding-top:200px; */
 }
 .fit_w {
   width: 100%;
@@ -201,18 +216,21 @@
 .pd_20{
   padding-top: 20px;
 }
-.filter-white {
+/* .filter-white {
   filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(133deg)
     brightness(108%) contrast(101%);
 }
 .filter-black {
   filter: invert(0%) sepia(100%) saturate(7459%) hue-rotate(74deg)
     brightness(95%) contrast(109%);
-}
+} */
 .sub_text{
   font-size: 12px;
   color:rgb(249, 236, 250);
   font-weight:lighter;
+}
+.set_card{
+  width: 100%;
 }
 /* .set_center{
   align-items: center;

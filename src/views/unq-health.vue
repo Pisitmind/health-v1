@@ -192,7 +192,9 @@
                             </div>
                             <div class="pd_text">
                               <span class="headline"
-                                ><strong>รายละเอียดค่าออกซิเจนในเลือด</strong></span
+                                ><strong
+                                  >รายละเอียดค่าออกซิเจนในเลือด</strong
+                                ></span
                               >
                             </div>
                           </div>
@@ -691,10 +693,10 @@ export default {
                 min: 36,
                 max: 38,
                 stepSize: 0.5,
-                scaleLabel: {
-                  display: true,
-                  labelString: "อุณหภูมิ",
-                },
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "อุณหภูมิ",
               },
             },
           ],

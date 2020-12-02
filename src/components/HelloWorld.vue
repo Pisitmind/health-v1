@@ -51,7 +51,7 @@
             </div>
             <div class="card1-right">
               <div class="right-icon">
-                <v-btn x-small icon fab>
+                <v-btn small icon fab>
                   <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                 </v-btn>
               </div>
@@ -207,7 +207,7 @@
                   </div>
                   <div class="icon-card">
                     <div class="exit-icon-card3">
-                      <v-btn x-small icon fab>
+                      <v-btn small icon fab>
                         <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                       </v-btn>
                     </div>
@@ -261,7 +261,7 @@
                   </div>
                   <div class="icon-card">
                     <div class="exit-icon-card3">
-                      <v-btn x-small icon fab>
+                      <v-btn small icon fab>
                         <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                       </v-btn>
                     </div>
@@ -320,7 +320,7 @@
               </div>
               <div class="icon-card">
                 <div class="exit-icon-card3">
-                  <v-btn x-small icon fab>
+                  <v-btn small icon fab>
                     <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </div>

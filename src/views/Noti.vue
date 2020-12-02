@@ -14,7 +14,7 @@
                 <v-row justify="center">
                   <v-dialog v-model="dialog" width="">
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn large icon fab v-bind="attrs" v-on="on">
+                      <v-btn small icon fab v-bind="attrs" v-on="on">
                         <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                       </v-btn>
                     </template>
@@ -1011,15 +1011,19 @@ export default {
   height: auto;
   width: 300px;
 }
+.head_ct1_c1{
+  height: 84px;
+}
 /* .c1 {
   background-color: greenyellow;
 }
 .c2 {
   background-color: purple;
-}
-.c3 {
-  background-color: gray;
 } */
+.c3 {
+  /* background-color: gray; */
+  padding:10px 0 10px 0 ;
+} 
 .head-card1 {
   display: flex;
   justify-content: space-between;
