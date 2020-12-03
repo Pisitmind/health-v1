@@ -107,7 +107,7 @@
         </v-row>
       </v-card-content>
       <br />
-      <v-divider color="black"></v-divider>
+      <v-divider color="#C5C5C5"></v-divider>
       <br />
       <v-row style="padding:0 50px 0 0;">
         <v-col col="12" sm="">

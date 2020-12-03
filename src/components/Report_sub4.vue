@@ -107,7 +107,7 @@
         </v-row>
       </v-card-content>
       <br />
-      <v-divider color="black"></v-divider>
+      <v-divider color="#C5C5C5"></v-divider>
       <br />
       <v-row style="padding:0 50px 0 0;">
         <v-col col="12" sm="">
@@ -199,7 +199,7 @@
                     <th width="" class="text-center">
                       เพศ
                     </th>
-                    <th width="" class="text-left">
+                    <th width="" class="text-center">
                       น้ำหนัก
                     </th>
                     <th width="" class="text-left">
