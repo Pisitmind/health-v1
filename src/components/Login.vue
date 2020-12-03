@@ -52,17 +52,14 @@
       <div class="foot" fluid>
         <div class="foot_item">
           <div dense class="p_200 foot_content">
-            <div class="pd_top_foot pd_20">
+            <div class="pd_top_foot pd_30">
               <span>POWERED BY</span>
-              <br />
               <v-img
-                class="mg_y_10"
+                class="mg_y_10 "
                 max-width="160px"
                 src="../assets/logo/Logo BAAK_w.png"
               ></v-img>
-              <span class="">BAAK</span>
-              <br />
-              <span class="sub_text">BAAK Co., Ltd.</span>
+              <span class="main_text">BAAK Co., Ltd.</span>
               <div class="icon_foot_l wd_80">
                 <img
                   height="40px"
@@ -203,9 +200,12 @@
 .icon_foot_l {
   display: flex;
   justify-content: space-around;
+  /* padding: 0 10px ; */
 }
 .pd_top_foot {
   padding-top: 30px;
+  align-content: center;
+  justify-content:center;
 }
 .mg_y_10 {
   margin: 10px 0;
@@ -213,8 +213,8 @@
 .wd_80 {
   width: 80%;
 }
-.pd_20{
-  padding-top: 20px;
+.pd_30{
+  padding-top: 30px;
 }
 /* .filter-white {
   filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(133deg)
@@ -224,10 +224,13 @@
   filter: invert(0%) sepia(100%) saturate(7459%) hue-rotate(74deg)
     brightness(95%) contrast(109%);
 } */
-.sub_text{
-  font-size: 12px;
+.main_text{
+  font-size: 15px;
   color:rgb(249, 236, 250);
-  font-weight:lighter;
+  font-weight:400;
+}
+.pd_bot{
+  padding-bottom: 20px;
 }
 .set_card{
   width: 100%;

@@ -15,7 +15,7 @@
                     <div style="padding-right:10px;">
                       <v-icon large color="#FF3F3F">mdi-water-plus</v-icon>
                     </div>
-                    <div class="card3-bot-text" style="text-align: center;">
+                    <div class="card6-bot-text" style="text-align: center;">
                       <span><strong>ความดันโลหิต</strong></span>
                     </div>
                   </div>
@@ -157,9 +157,11 @@
                 <!-- head left -->
                 <div class="head_card3_p6_l_title">
                   <!-- การก้าว+icon -->
-                  <div class="title_card3_p6">
-                    <div class="card3-bot-text ">
+                  <div class="title_card1_p6">
+                    <div style="padding-right:10px;">
                       <v-icon large color="#00E676">mdi-water-check</v-icon>
+                    </div>
+                    <div class="card6-bot-text" style="text-align: center;">
                       <span><strong>ออกซิเจนในเลือด</strong></span>
                     </div>
                   </div>
@@ -394,7 +396,7 @@
                           >mdi-thermometer-lines</v-icon
                         >
                       </div>
-                      <div class="card3-bot-text " style="text-align: center;">
+                      <div class="card6-bot-text " style="text-align: center;">
                         <span><strong>อุณหภูมิร่างกาย</strong></span>
                       </div>
                     </div>
@@ -854,6 +856,14 @@ export default {
 }
 .head_dialog_c2_p6 {
   display: flex;
+}
+.card6-bot-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 /* .head_card1_p6_l {
   display: flex;

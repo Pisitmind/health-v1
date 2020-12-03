@@ -1,401 +1,81 @@
 <template>
   <div class="report">
-      <v-card class="report_card_root">
-        <v-card-title>
-          <div class="head_title_card_p7">
-            <div class="head_card_p7">
-              <div>
-                <v-btn
-                  color="black lighten-1"
-                  icon
-                  large
-                  @click="dialog = false"
-                >
-                  <v-icon>mdi-chart-areaspline</v-icon>
-                </v-btn>
-              </div>
-              <div class="text_header">
-                <span class="">รายงานข้อมูลผู้ใช้งาน</span>
-              </div>
-              <br />
-              <br />
-              <br />
-            </div>
-          </div>
-        </v-card-title>
-        <v-card-content>
-          <v-row>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="items"
-                label="กลุ่มผู้ใช้งาน"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="age_range"
-                label="ช่วงอายุ"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="item_type"
-                label="อุปกรณ์วัดค่า"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-            <v-col col="12" sm=""></v-col>
-            <v-col col="6" sm="1" class="text-right">
-              <v-btn outlined color="purple lighten-3" style="width:100px;"
-                >ล้างข้อมูล</v-btn
-              >
-            </v-col>
-            <v-col
-              col="6"
-              sm="2"
-              class="text-right"
-              style="padding-right:40px;"
-            >
-              <v-btn color="purple lighten-3" style="color:white; width:100px;"
-                >ค้นหา</v-btn
-              >
-            </v-col>
-          </v-row>
-        </v-card-content>
-
-        <v-divider color="black"></v-divider>
-        <br />
-        <v-row style="padding:0 50px 0 0;"   >
-          <v-col col="12" sm="">
-            <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
-          </v-col>
-          <v-col col="6" sm="2" class="text-right">
-            <v-btn color="#3BD081" style="color:white; width:120px;"
-              >พิมพ์</v-btn
-            >
-          </v-col>
-          <v-col col="6" sm="2" class="text-right">
-            <v-btn color="purple lighten-3" style="color:white;"
-              >นำออกเอกสาร
-              <v-icon>mdi-menu-down</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-        <br />
-        <v-row height="400px" justify="space-around">
-          <v-col col="12" sm="3">
-            <v-card class="pa-2" width="" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3">
-                  ตัวบ่งชี้
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-2">
-                  <v-row v-for="item in data_card1" :key="item.id" >
-                    <v-table style="width:100%;">
-                      <tr height="10px">
-                        <td style="text-align: right;" width="80px">
-                          <v-icon x-small :style="{ color: item.color }"
-                            >mdi-circle</v-icon
-                          >
-                        </td>
-                        <td
-                          style="text-align: left;font-weight:bold; font-size: 14px;"
-                          width="70%"
-                        >
-                          <v-icon :style="{ color: item.color }">{{
-                            item.icon
-                          }}</v-icon>
-                          {{ item.gender }}
-                        </td>
-                        <td style="text-align: left;"  width="20%">
-                          {{ item.data }}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td
-                          style="text-align: left;color:grey; font-size: 11px;"
-                        >
-                          {{ item.info }}
-                        </td>
-                        <td
-                          style="text-align: left;color:grey; font-size: 11px;"
-                        >
-                          {{ item.percent }}
-                        </td>
-                      </tr>
-                    </v-table>
-                  </v-row>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="4">
-             <v-card class="pa-2" width="auto" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3 pl-5">
-                  ช่วงอายุ
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-1">
-                  <table class="" style="width:100%;">
-                    <tr style="text-align:center;" height="35px">
-                      <th width="5%"></th>
-                      <th style="text-align:left;padding-left:15px;">ช่วงอายุ</th>
-                      <th>ชาย</th>
-                      <th>หญิง</th>
-                      <th>เฉลี่ยรวม</th>
-                    </tr>
-                    <tr v-for="item in data_card2_info" :key="item.id" style="text-align:center;" height="35px">
-                      <td></td>
-                      <td class="two-data-card2" style="text-align:left;">
-                        <v-icon x-small :style="{ color: item.color }"
-                          >mdi-circle
-                        </v-icon>
-                        {{ item.name }}
-                      </td>
-                      <td>{{ item.dataMan }}</td>
-                      <td>{{ item.dataWman }}</td>
-                      <td>{{ item.avg }}</td>
-                    </tr>
-                  </table>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="4">
-           <v-card class="pa-2" width="auto" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3 pl-5">
-                  อุปกรณ์วัดค่าสุขภาพ
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-1">
-                <div>
-                  <table width="100%" cellspacing="0" cellpadding="" class="">
-                    <tr height="35px">
-                      <th width="5%"></th>
-                      <th style="text-align:left; padding-left:15px;">
-                        อุปกรณ์
-                      </th>
-                      <th>จำนวน</th>
-                      <th>ค่าเฉลี่ย</th>
-                    </tr>
-                    <tr
-                      v-for="item in data_card1_info"
-                      :key="item.name"
-                      style="text-align: center;" height="35px"
-                    >
-                      <td></td>
-                      <td style="text-align:left;">
-                        <v-icon x-small :style="{ color: item.color }"
-                          >mdi-circle
-                        </v-icon>
-                        {{ item.name }}
-                      </td>
-                      <td>{{ item.data }}</td>
-                      <td>{{ item.percent }}</td>
-                    </tr>
-                  </table>
-                </div>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-        <br />
-        <v-card-content>
-          <div class="content_dialog_page_bot">
-            <div class="table_news_p7">
-              <v-simple-table>
-                <template v-slot:default>
-                  <thead color="gray">
-                    <tr class="">
-                      <th width="" class="text-left">
-                        ลำดับ
-                      </th>
-                      <th width="40%" class="text-left">
-                        รายชื่อผู้ใช้
-                      </th>
-                      <th width="" class="text-left">
-                        ช่วงอายุ
-                      </th>
-                      <th width="" class="text-center">
-                        เพศ
-                      </th>
-                      <th width="20%" class="text-left">
-                        อุปกรณ์
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr
-                      class="text-left"
-                      v-for="item in data_p7"
-                      :key="item.id"
-                    >
-                      <td>{{ item.no }}</td>
-                      <td>{{ item.name }}</td>
-                      <td class=" text-truncate" style="max-width: 100px;">
-                        {{ item.age_range }}
-                      </td>
-                      <td class="text-center">{{ item.gender }}</td>
-                      <td class="text-left">{{ item.item_type }}</td>
-                    </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
-              <br />
-              <div></div>
-            </div>
-          </div>
-          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-        </v-card-content>
-      </v-card>
+    <v-card>
+      <v-tabs v-model="tab" background-color="blue lighten-2" dark>
+        <v-tab v-for="item in items" :key="item.tab">
+          {{ item.tab }}
+        </v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="tab">
+        <v-tab-item v-for="data in items" :key="data.id">
+          <v-card flat v-if="data.check === '1'">
+            <v-card-content>
+              <report1 />
+            </v-card-content>
+          </v-card>
+          <v-card flat v-if="data.check === '2'">
+            <v-card-content>
+              <report2 />
+            </v-card-content>
+          </v-card>
+          <v-card flat v-if="data.check === '3'">
+            <v-card-content>
+              <report3 />
+            </v-card-content>
+          </v-card>
+          <v-card flat v-if="data.check === '4'">
+            <v-card-content>
+              <report4 />
+            </v-card-content>
+          </v-card>
+          <v-card flat v-if="data.check === '5'">
+            <v-card-content>
+              <report5 />
+            </v-card-content>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-card>
   </div>
 </template>
 
 <script>
+import report1 from "../components/Report_sub1";
+import report2 from "../components/Report_sub2";
+import report3 from "../components/Report_sub3";
+import report4 from "../components/Report_sub4";
+import report5 from "../components/Report_sub5";
+
 export default {
+  name: "report",
+  components: {
+    report1,
+    report2,
+    report3,
+    report4,
+    report5,
+  },
   data() {
     return {
-      items: ["ผู้ใช้งานทั้งหมด", "ผู้ชาย", "ผู้หญิง"],
-      age_range: [
-        "ทุกช่วงอายุ",
-        "18-20",
-        "21-30",
-        "31-40",
-        "41-50",
-        "51-60",
-        "60 ขึ้นไป",
-      ],
-      item_type: [
-        "อุปกรณ์ทั้งหมด",
-        "Garmin",
-        "Suunto",
-        "Xiaomi",
-        "Honor",
-        "Apple watch",
-        "อื่นๆ",
-      ],
-      data_card1: [
-        {
-          id: "1",
-          color: "#359BD3",
-          icon: "mdi-human-male",
-          gender: "ชาย",
-          data: "1,471",
-          info: "ค่าเฉลี่ยผู้ใช้งานเพศชายรายวัน",
-          percent: "63%",
-        },
-        {
-          id: "2",
-          color: "#F28C8C",
-          icon: "mdi-human-female",
-          gender: "หญิง",
-          data: "1,329",
-          info: "ค่าเฉลี่ยผู้ใช้งานเพศหญิงรายวัน",
-          percent: "27%",
-        },
-      ],
-      data_card1_info: [
-        { name: "Garmin", color: "#2289D8", data: "395", percent: "14.1%" },
-        { name: "Suunto", color: "#DA2121", data: "422", percent: "15%" },
-        { name: "Xiaomi", color: "#FF850A", data: "796", percent: "28.4%" },
-        { name: "Honor", color: "#FF3E80", data: "321", percent: "11.4%" },
-        {
-          name: "Apple Watch",
-          color: "#9C9C9C",
-          data: "844",
-          percent: "31.1%",
-        },
-        { name: "อื่นๆ", color: "#58BFAE", data: "22", percent: "0.7%" },
-      ],
-      data_card2_info: [
-        {
-          name: "18-20",
-          color: "#58BFAE",
-          dataMan: "638",
-          dataWman: "270",
-          avg: "22.7%",
-        },
-        {
-          name: "21-30",
-          color: "#FF3E80",
-          dataMan: "557",
-          dataWman: "250",
-          avg: "19.9%",
-        },
-        {
-          name: "31-40",
-          color: "#FF850A",
-          dataMan: "784",
-          dataWman: "275",
-          avg: "28%",
-        },
-        {
-          name: "41-50",
-          color: "#DA2121",
-          dataMan: "652",
-          dataWman: "480",
-          avg: "23.2%",
-        },
-        {
-          name: "51-60",
-          color: "#B4B4B4",
-          dataMan: "145",
-          dataWman: "145",
-          avg: "5.1%",
-        },
-        {
-          name: "60ขึ้นไป",
-          color: "#2289D8",
-          dataMan: "24",
-          dataWman: "40",
-          avg: "1.1%",
-        },
-      ],
-      data_p7: [
-        {
-          no: "1.",
-          name: "สญานัน สุภัสศิรา",
-          age_range: "21-30",
-          gender: "หญิง",
-          icon: "mdi-menu-up",
-          color: "#B4B4B4",
-          item_type: "Garmin",
-        }, {
-          no: "2.",
-          name: "สุนันญา กันต์จวรรณ์",
-          age_range: "41-50",
-          gender: "หญิง",
-          icon: "mdi-menu-up",
-          color: "#B4B4B4",
-          item_type: "Xiaomi",
-        }, {
-          no: "3.",
-          name: "สุวรรณจณีย์ ศิลธร",
-          age_range: "21-30",
-          gender: "หญิง",
-          icon: "mdi-menu-up",
-          color: "#B4B4B4",
-          item_type: "Suunto",
-        },
+      toggle: false,
+      tab: null,
+      items: [
+        { tab: "One", check: "1", content: "ข้อมูลผู้ใช้งาน" },
+        { tab: "Two", check: "2", content: "ข้อมูลการเคลื่อนไหวของผู้ใช้งาน" },
+        { tab: "Three", check: "3", content: "ข้อมูลสถานะร่างกาย" },
+        { tab: "Four", check: "4", content: "ข้อมูลค่าส่วนประกอบในร่างกาย" },
+        { tab: "Five", check: "5", content: "ข้อมูลสุขภาพจำเพาะ" },
       ],
     };
   },
 };
 </script>
+
 <style scoped>
-.report{
+.report {
   padding: 20px;
 }
-.report_card_root{
+.report_card_root {
   padding: 20px;
 }
 .ddog {

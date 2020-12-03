@@ -795,7 +795,11 @@ export default {
 }
 .card3-bot-text {
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .head_card1_p3_l {
   display: flex;
@@ -848,6 +852,18 @@ export default {
 }
 .sex_title {
   padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.age_title{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 .dis_flex {
   display: flex;

@@ -27,9 +27,11 @@
                       v-model="date"
                       label="select date"
                       placeholder=""
-                      prepend-icon="mdi-calendar"
+                      prepend-inner-icon="mdi-calendar"
                       v-bind="attrs"
                       v-on="on"
+                      dense
+                      outlined
                     ></v-text-field>
                   </template>
                   <v-date-picker
@@ -185,17 +187,29 @@
                     <div style="padding-right:10px;">
                       <v-icon large color="#AD8DBB">mdi-shoe-print</v-icon>
                     </div>
-                    <div class="card3-bot-text ">
+                    <div
+                      class="card3-bot-text"
+                      style=" display: flex; flex-wrap: wrap; align-content: center; 
+                      text-align: center; align-item:center;"
+                    >
                       <span><strong>การก้าว</strong></span>
                     </div>
                   </div>
                   <div class="sex-age-title-card3">
-                    <div class="sex-title">
+                    <div
+                      class="sex-title"
+                      style=" display: flex; flex-wrap: wrap; align-content: center; 
+                      text-align: center; align-item:center;"
+                    >
                       <v-btn class="white--text " small color="#AD8DBB"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
-                    <div class="age-title">
+                    <div
+                      class="age-title"
+                      style=" display: flex; flex-wrap: wrap; align-content: center; 
+                      text-align: center; align-item:center;"
+                    >
                       <v-btn
                         class="#AD8DBB--text "
                         small
@@ -239,7 +253,10 @@
                     <div style="padding-right:10px;">
                       <v-icon large color="#F57C00">mdi-fire</v-icon>
                     </div>
-                    <div class="card3-bot-text ">
+                    <div
+                      class="card3-bot-text "
+                      style="display: flex; flex-wrap: wrap; align-content: center;"
+                    >
                       <span><strong>การเผาผลาญ</strong></span>
                     </div>
                   </div>
@@ -533,7 +550,7 @@ export default {
               display: true,
               ticks: {
                 suggestedMin: 200, // minimum will be 0, unless there is a lower value.
-                stepValue: 200,
+                stepValue: 250,
                 max: 1000,
               },
               scaleLabel: {
@@ -912,12 +929,22 @@ th {
 }
 .sex-title {
   padding: 0 10px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 .age-title {
-  padding: 0 30px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 .icon-card {
   padding: 0 0 0 50px;
+
   /* width: 100%; */
   /* padding: 10px; */
 }
