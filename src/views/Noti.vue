@@ -5,7 +5,7 @@
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
-              <div class="">
+              <div class="head_name_tag">
                 <p><strong>Hearth rate</strong></p>
               </div>
             </div>
@@ -135,23 +135,81 @@
                     :key="item.id"
                   >
                     <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-                      <v-card class="box_ct1 pa-2" outlined tile>
-                        <div class="">
-                          <div>
-                            <p class="font_omg">{{ item.data[n - 1] }}</p>
-                          </div>
-                          <div class="name_lb_c1">
-                            <v-icon
-                              x-small
-                              :style="{ color: item.color[n - 1] }"
-                              >mdi-circle</v-icon
-                            >
-                            <span class="font_sm pd_text_5">{{
-                              item.name[n - 1]
-                            }}</span>
-                          </div>
-                        </div>
-                      </v-card>
+                      <v-dialog
+                        v-model="dialog1"
+                        width="270px"
+                        hide-overlay
+                        scrollable
+                      >
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-card
+                            class="box_ct1 pa-2"
+                            outlined
+                            tile
+                            v-bind="attrs"
+                            v-on="on"
+                          >
+                            <div class="">
+                              <div>
+                                <p class="font_omg">{{ item.data[n - 1] }}</p>
+                              </div>
+                              <div class="name_lb_c1">
+                                <v-icon
+                                  x-small
+                                  :style="{ color: item.color[n - 1] }"
+                                  >mdi-circle</v-icon
+                                >
+                                <span class="font_sm pd_text_5">{{
+                                  item.name[n - 1]
+                                }}</span>
+                              </div>
+                            </div>
+                          </v-card>
+                        </template>
+                        <v-card>
+                          <v-card-title>
+                            <span>Heart rate {{ item.name[n - 1] }}</span>
+                          </v-card-title>
+                          <v-card-text>
+                            <thead>
+                              <tr width="100%"  justify="space-around">
+                                <th width="" class="text-left">
+                                  NO
+                                </th>
+                                <th width="" class="text-center">
+                                  NAME
+                                </th>
+                                <th width="" class="text-left">
+                                  Notification
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr
+                                v-for="item in mini_data"
+                                :key="item.id"
+                                class="text-left mini_fz"
+                                width="100%"  justify="space-around"
+                              >
+                                <td width="20%">{{ item.no }}</td>
+                                <td width="60%">{{ item.name }}</td>
+                                <td  width="20%" class="text-center">
+                                  <v-btn
+                                    :style="{
+                                      backgroundColor: item.color,
+                                      color: item.color1,
+                                    }"
+                                    elevation="2"
+                                    x-small
+                                  >
+                                    {{ item.noti }}
+                                  </v-btn>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </v-card-text>
+                        </v-card>
+                      </v-dialog>
                     </v-col>
                   </v-row>
                 </table>
@@ -225,7 +283,7 @@
                   </div>
                 </div>
                 <div class="head_card2_btn">
-                  <v-btn small icon fab>
+                  <v-btn small icon fab class="hid">
                     <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </div>
@@ -417,7 +475,7 @@
                   </div>
                 </div>
                 <div class="head_card2_btn">
-                  <v-btn small icon fab>
+                  <v-btn small icon fab class="hid">
                     <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </div>
@@ -603,7 +661,7 @@
                   </div>
                 </div>
                 <div class="head_card2_btn">
-                  <v-btn small icon fab>
+                  <v-btn small icon fab class="hid">
                     <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </div>
@@ -997,21 +1055,71 @@ export default {
           data: [385, 259, 196, 230, 106, 237, 107],
         },
       ],
-      
+      mini_data: [
+        {
+          no: "101",
+          name: "inverness McKenzie",
+          noti: "SEND",
+          color: "#22CE8B",
+          color1: "white",
+        },
+        {
+          no: "102",
+          name: "inverness McKenzie",
+          noti: "SEND",
+          color: "#22CE8B",
+          color1: "white",
+        },
+        {
+          no: "103",
+          name: "inverness McKenzie",
+          noti: "SEND",
+          color: "#22CE8B",
+          color1: "white",
+        },
+        {
+          no: "104",
+          name: "inverness McKenzie",
+          noti: "SEND",
+          color: "#22CE8B",
+          color1: "white",
+        },
+        {
+          no: "105",
+          name: "inverness McKenzie",
+          noti: "SEND",
+          color: "#22CE8B",
+          color1: "white",
+        },
+      ],
     };
   },
 };
 </script>
 
 <style scoped>
+.v-dialog {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 .noti {
   padding: 16px;
+}
+.hid {
+  display: none;
+}
+.mini_fz {
+  font-size: 12px;
+}
+.head_name_tag {
+  font-size: 20px;
 }
 .c_size {
   height: auto;
   width: 300px;
 }
-.head_ct1_c1{
+.head_ct1_c1 {
   height: 84px;
 }
 /* .c1 {
@@ -1022,8 +1130,8 @@ export default {
 } */
 .c3 {
   /* background-color: gray; */
-  padding:10px 0 10px 0 ;
-} 
+  padding: 10px 0 10px 0;
+}
 .head-card1 {
   display: flex;
   justify-content: space-between;

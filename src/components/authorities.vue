@@ -101,7 +101,8 @@
                 <div class="img_n_name">
                 <div class="img_avatar" >
                   <v-avatar size="84">
-                     <img src="../assets/user_pic/user7.jpg" alt />
+                     <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
+                        <img :src="idx.pic">
                   </v-avatar>
                 </div>
                 <div class="n_card">
@@ -135,63 +136,65 @@ export default {
       data_au: [
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user1.jpg",
+          // pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user1.jpg",
+          pic: "https://ibb.co/nDCXTFP",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user2.jpg",
+          pic: "./assets/user_pic/user7.jpg",
+          // pic: "./src/assets/user_pic/user2.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user3.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user3.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user4.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user4.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user5.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user5.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user6.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user6.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user7.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user7.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user8.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user8.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "../assets/user_pic/user9.jpg",
+          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user9.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",

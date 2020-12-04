@@ -623,13 +623,12 @@ export default {
             {
               display: true,
               ticks: {
-                suggestedMin: 200, // minimum will be 0, unless there is a lower value.
-                stepValue: 200,
-                max: 1000,
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+                stepValue: 0.5,
               },
               scaleLabel: {
-                display: false,
-                labelString: "",
+                display: true,
+                labelString: "ชั่วโมง",
               },
             },
           ],
@@ -655,6 +654,7 @@ export default {
           {
             label: "ชาย",
             backgroundColor: "#9ACDE9",
+            // แก้เป็นจน เต็ม
             data: [638, 557, 784, 652, 145, 24],
           },
           {

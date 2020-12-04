@@ -103,7 +103,7 @@ const router = new VueRouter({
   routes,
 });
 
-router.replace("/login");
+// router.replace("/login");
 
 // export default router;
 

@@ -1,117 +1,114 @@
 <template>
   <div class="dia_noti">
     <v-card-content>
-       <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas
-                id="graphdia1_c1_p2"
-                width="500px"
-                height="200px"
-              ></canvas>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>HEART RATE (TODAY)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialogc2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>119</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              MON
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
-            <br />
-            <div>
-              <v-card width="" class="c1_c2_dialog">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>HEART RATE (YESTERDAY)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        >+2%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialogc3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span>124</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                             THU
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
+      <div class="content_dialog_page_top">
+        <div class="content_top_left_page">
+          <div class="set_center">
+            <canvas id="graphdia1_c1_p2" width="" height=""></canvas>
           </div>
         </div>
+        <div class="content_top_right_page">
+          <!-- data top right -->
+          <div>
+            <v-card width="" class="c1_c2_dialog">
+              <table class="data_c1c2">
+                <tr>
+                  <td class="left" width="80%" height="20%">
+                    <span>HEART RATE (TODAY)</span>
+                  </td>
+                  <td>
+                    <v-btn
+                      color="#22CE8B"
+                      depressed
+                      class="white--text"
+                      elevation="2"
+                      >+4%</v-btn
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="card_c1_c2_pd">
+                      <canvas
+                        id="graph_dialogc2"
+                        width=""
+                        height="100px"
+                      ></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="wd_100">
+                      <table class="align-center">
+                        <tr>
+                          <span>119</span>
+                        </tr>
+                        <tr class="grey--text">
+                          <span>
+                            MON
+                          </span>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </v-card>
+          </div>
+          <br />
+          <div>
+            <v-card width="" class="c1_c2_dialog">
+              <table class="data_c1c2">
+                <tr>
+                  <td class="left" width="80%" height="20%">
+                    <span>HEART RATE (YESTERDAY)</span>
+                  </td>
+                  <td>
+                    <v-btn
+                      color="#22CE8B"
+                      depressed
+                      class="white--text"
+                      elevation="2"
+                      >+2%</v-btn
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="card_c1_c2_pd">
+                      <canvas
+                        id="graph_dialogc3"
+                        width=""
+                        height="100px"
+                      ></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="wd_100">
+                      <table class="align-center">
+                        <tr>
+                          <span>124</span>
+                        </tr>
+                        <tr class="grey--text">
+                          <span>
+                            THU
+                          </span>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </v-card>
+          </div>
+        </div>
+      </div>
+      <br />
       <div class="content_dialog_page_bot">
         <div>
           <v-simple-table>
             <template v-slot:default>
               <thead>
-                <span class=""> NOTIFY : ADMIN LIST</span>
+                <span class="set_bold fz_20"> NOTIFY : ADMIN LIST</span>
                 <tr>
                   <th class="text-left">
                     No
@@ -171,24 +168,28 @@
               </tbody>
             </template>
           </v-simple-table>
-          <v-divider></v-divider>
+          <br />
         </div>
       </div>
     </v-card-content>
   </div>
 </template>
 
-
 <script>
 import Chart from "chart.js";
 export default {
   mounted: function() {
     // bar_dia make the code broken 1
-     var ctx_dia_c1_p2 = document
-      .getElementById("graphdia1_c1_p2")
-      .getContext("2d");
-    var bar_dia_c1_p2 = new Chart(ctx_dia_c1_p2, {
-       type: "line",
+
+    var ctx_dia_c1_p2 = document
+        .getElementById("graphdia1_c1_p2")
+        .getContext("2d"),
+      gradient_c1p1 = ctx_dia_c1_p2.createLinearGradient(0, 0, 0, 300);
+    gradient_c1p1.addColorStop(0, "rgb(38, 216, 135)");
+    gradient_c1p1.addColorStop(0.76, "rgb(255, 255, 255)");
+    gradient_c1p1.addColorStop(1, "rgb(255, 255, 255)");
+    var config_g1_noti = {
+      type: "line",
       options: {
         title: {
           display: true,
@@ -200,11 +201,11 @@ export default {
           yAxes: [
             {
               ticks: {
-                suggestedMin: 50, // minimum will be 0, unless there is a lower value.
+                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
                 // OR //
                 // beginAtZero: true,
                 stepValue: 50,
-                max: 250,
+                max: 200,
               },
             },
           ],
@@ -214,17 +215,25 @@ export default {
         datasets: [
           {
             label: "AVG",
-            backgroundColor: "#1dd171",
+            backgroundColor: gradient_c1p1,
             data: [55, 99, 148, 120, 125, 146, 100, 98, 85],
           },
           {
             label: "TODAY",
-            backgroundColor: "#FECD54",
+            // backgroundColor: "#FECD54",
+            borderDash: [4],
+            borderColor: "#FECD54",
+            fill: "Disabled",
+            pointRadius: 0,
             data: [170, 150, 110, 130, 140, 80, 150, 150, 160],
           },
           {
             label: "YESTERDAY",
             backgroundColor: "#F7617D",
+            borderColor: "#F7617D",
+            borderDash: [4],
+            fill: "Disabled",
+            pointRadius: 0,
             data: [120, 110, 130, 50, 100, 80, 70, 120, 130],
             // Changes this dataset to become a line
           },
@@ -241,12 +250,16 @@ export default {
           "00:00",
         ],
       },
-    });
+    };
+    var bar_dia_c1_p2 = new Chart(ctx_dia_c1_p2, config_g1_noti);
+
     console.log(bar_dia_c1_p2);
     // broken2
-    var ctx_dia_c2 = document
-      .getElementById("graph_dialogc2")
-      .getContext("2d");
+    var ctx_dia_c2 = document.getElementById("graph_dialogc2").getContext("2d"),
+      gradient_2p1 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_2p1.addColorStop(0, "rgb(38, 216, 135)");
+    gradient_2p1.addColorStop(0.29, "rgb(255, 255, 255)");
+    gradient_2p1.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -278,8 +291,11 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
+            backgroundColor: gradient_2p1,
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
+            pointRadius: 0,
+            borderDash: [4],
+            borderColor: "#8AEABE",
           },
         ],
         labels: [
@@ -297,9 +313,11 @@ export default {
     });
     console.log(bar_dia_c2);
     // boken3
-    var ctx_dia_c3 = document
-      .getElementById("graph_dialogc3")
-      .getContext("2d");
+    var ctx_dia_c3 = document.getElementById("graph_dialogc3").getContext("2d"),
+      gradient_3p1 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_3p1.addColorStop(0, "rgb(177, 0, 255)");
+    gradient_3p1.addColorStop(0.22, "rgb(255, 255, 255)");
+    gradient_3p1.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -331,8 +349,11 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: gradient_3p1,
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
+            pointRadius: 0,
+            borderDash: [4],
+            borderColor: "#E874FA",
           },
         ],
         labels: [
@@ -509,7 +530,7 @@ export default {
           icon: "mdi-circle",
           color: "#A3A1FB",
           data: [139, 384, 223, 189, 158, 318, 93],
-        }, 
+        },
         {
           type: "Setting",
           icon: "mdi-circle",
@@ -517,20 +538,27 @@ export default {
           data: [385, 259, 196, 230, 106, 237, 107],
         },
       ],
-
     };
   },
-};  
+};
 </script>
 
-<style  scoped>
-
+<style scoped>
+.dia_noti{
+  /* padding: 0 30px; */
+}
 .noti {
   padding: 16px;
 }
 .c_size {
   height: auto;
   width: 300px;
+}
+.set_bold{
+  font-weight: bold;
+}
+.fz_20{
+  font-size:20px;
 }
 /* .c1 {
   background-color: greenyellow;
@@ -553,15 +581,15 @@ export default {
   justify-content: space-around;
 }
 .font_bold {
-  font-weight: bold;  
+  font-weight: bold;
 }
-.font_norm{
+.font_norm {
   font-weight: normal;
 }
-.font_sm{
+.font_sm {
   font-size: 14px;
 }
-.font_omg{
+.font_omg {
   font-size: 24px;
 }
 .cont1-card1 {
@@ -577,11 +605,11 @@ export default {
   color: white;
   background-color: skyblue;
 }
-.topic_name_card{
+.topic_name_card {
   color: #ad8dbb;
 }
-.title_table_c1{
-  font-size:14px;
+.title_table_c1 {
+  font-size: 14px;
   font-weight: bold;
 }
 .t_name_ct3c1 {
@@ -617,8 +645,8 @@ export default {
   width: 33%;
   height: 100px;
 }
-.text_green{
-  color:#22CE8B;
+.text_green {
+  color: #22ce8b;
 }
 .head_dialog {
   width: 100%;
@@ -629,6 +657,7 @@ export default {
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
+  /* padding : 0 30px; */
   /* background-color:#22CE8B; */
 }
 .c1_c2_dialog {
@@ -638,7 +667,8 @@ export default {
   padding: 15px;
 }
 
-.content_top_left_page{
+.content_top_left_page {
+  width: 50%;
   /* background-color:#22CE8B; */
 }
 .set_center {
@@ -656,34 +686,35 @@ export default {
   text-align: left;
 }
 .content_dialog_page_bot {
-  padding: 20px;
+  padding: 30px;
+  /* padding: 0 30px; */
 }
-
 
 /* .c30{
   background-color:pink;
 } */
-.header_card2{
-  display:flex;
+.header_card2 {
+  display: flex;
   justify-content: space-between;
 }
-.card_el{
-  padding:10px;
-}.card_el_card2{
-  padding:10px;
+.card_el {
+  padding: 10px;
 }
-.head_card2_btn{
+.card_el_card2 {
+  padding: 10px;
+}
+.head_card2_btn {
   align-content: center;
 }
-.card2_root{
+.card2_root {
   padding: 10px;
 }
 /* .card2_size{
   background-color:rgba(0,0,0,0.1);
 } */
-.card2_nameNicon{
-  display:flex;
-  justify-content:center;
+.card2_nameNicon {
+  display: flex;
+  justify-content: center;
   /* padding:20px; */
 }
 .t_switch {
@@ -691,17 +722,17 @@ export default {
   /* justify-items: center; */
   justify-content: center;
 }
-.chart1_card2{
+.chart1_card2 {
   padding: 20px 0;
 }
-.chart1_card3{
-  width:100%;
-  display:flex;
+.chart1_card3 {
+  width: 100%;
+  display: flex;
   /* align-content: center; */
   /* align-items: center; */
   justify-content: center;
 }
-.content1_card2{
+.content1_card2 {
   display: flex;
   justify-content: space-around;
 }
@@ -710,26 +741,26 @@ export default {
   justify-content: space-around;
   flex-direction: column;
 }
-.title_card2{
+.title_card2 {
   justify-content: center;
   align-items: center;
   text-align: bottom;
-  padding-top:10px;
+  padding-top: 10px;
 }
-.card2_line2{
+.card2_line2 {
   font-size: 12px;
 }
-.data_table_card2{
+.data_table_card2 {
   width: 70%;
-  padding:20px 0;
+  padding: 20px 0;
 }
-.card3_root{
+.card3_root {
   padding: 10px;
 }
-.data_table_card3{
-  padding:0 40px;
+.data_table_card3 {
+  padding: 0 40px;
 }
-.size_chart3{
+.size_chart3 {
   width: 80%;
   padding-top: 20px;
   align-items: center;
@@ -737,7 +768,7 @@ export default {
   justify-items: center;
   align-content: center;
 }
-.head_table_card3{
+.head_table_card3 {
   text-align: left;
 }
 </style>
