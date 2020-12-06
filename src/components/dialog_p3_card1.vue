@@ -1,9 +1,7 @@
 <template>
   <div class="dialog_p3_card1">
     <v-card elevation="0">
-     <v-card-title>
-        
-     </v-card-title>
+      <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
           <div class="content_top_left_page">
@@ -13,7 +11,12 @@
             <div class="table_content_card2">
               <table style="width: 100%;">
                 <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th scope="row" width="15%" align="left"  class="head_table_card3">
+                  <th
+                    scope="row"
+                    width="15%"
+                    align="left"
+                    class="head_table_card3"
+                  >
                     <v-icon small :style="{ color: item.color }">{{
                       item.icon
                     }}</v-icon>
@@ -169,15 +172,19 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.pos }}</td>
                     <td>{{ item.walk_sum }}</td>
-                      <td :style="{ color: item.color0 }" >{{ item.walk_change }}</td>
+                    <td :style="{ color: item.color0 }">
+                      {{ item.walk_change }}
+                    </td>
                     <td>{{ item.long_sit }}</td>
-                    <td :style="{ color: item.color1 }" >{{ item.sit_change}}
+                    <td :style="{ color: item.color1 }">
+                      {{ item.sit_change }}
                     </td>
                     <td>
                       <v-btn
-                        :style="{ backgroundColor: item.color }"
+                        style="background-color:#AD8DBB; color:white;"
                         elevation="2"
                         small
+                        width="80px"
                       >
                         {{ item.show_history }}
                       </v-btn>
@@ -207,14 +214,16 @@ export default {
       data: {
         datasets: [
           {
-            label: "Steps",
-            backgroundColor: "#A3A1FB",
-            data: [139, 384, 223, 189, 158, 318, 93],
-          },
-          {
             label: "Setting",
             backgroundColor: "#FFDA83",
             data: [385, 259, 196, 230, 106, 237, 107],
+            barPercentage: 0.4,
+          },
+          {
+            label: "Steps",
+            backgroundColor: "#A3A1FB",
+            data: [139, 384, 223, 189, 158, 318, 93],
+            barPercentage: 0.4,
           },
         ],
         labels: ["7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14"],
@@ -243,8 +252,12 @@ export default {
     console.log(bar_dia_c1_p3);
 
     var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
+        .getElementById("graph_dialog_c2")
+        .getContext("2d"),
+      gradient_p3_1 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_p3_1.addColorStop(0, "rgb(141, 141, 244)");
+    gradient_p3_1.addColorStop(0.41414, "rgb(255, 255, 255)");
+    gradient_p3_1.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -276,7 +289,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
+            backgroundColor: gradient_p3_1,
+            borderColor: "#8d8df4",
+            pointRadius: 0,
+            borderDash: [2],
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -295,8 +311,11 @@ export default {
     });
     console.log(bar_dia_c2);
     var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
+        .getElementById("graph_dialog_c3")
+        .getContext("2d"),
+      gradient_p3_2 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_p3_2.addColorStop(0, "rgb(181, 28, 181)");
+    gradient_p3_2.addColorStop(0.3414141, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -328,7 +347,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: gradient_p3_2,
+            pointRadius: 0,
+            borderDash: [2],
+            borderColor: "#b51cb5",
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],
@@ -431,7 +453,7 @@ export default {
           walk_change: "+156",
           long_sit: "159",
           sit_change: "+3",
-          color: "#22CE8B",
+          color: "#AD8DBB",
           color0: "red",
           color1: "green",
           show_history: "ดู",
@@ -463,7 +485,7 @@ export default {
 </script>
 
 <style scoped>
-.dialog_p3_card1{
+.dialog_p3_card1 {
   width: 100%;
 }
 .t_switch {
@@ -508,7 +530,7 @@ export default {
   flex-direction: column;
   padding-bottom: 20px;
 }
-.content_dialog_page_bot{
-  padding:0 30px;
+.content_dialog_page_bot {
+  padding: 0 30px;
 }
 </style>

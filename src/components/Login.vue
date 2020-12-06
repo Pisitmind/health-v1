@@ -4,7 +4,7 @@
       <v-content class="bg_top">
         <v-container class="e22" fluid fill-height>
           <v-layout v-resize="onResize" align-bottom>
-            <v-flex class="set_form">
+            <v-flex class="set_form set_ab">
               <v-card
                 class="center set_card elevation-5 pa-10"
                 width="450px"
@@ -26,10 +26,9 @@
                   ></v-text-field>
                   <v-text-field
                     v-model="password"
-                    :counter="10"
                     type="password"
                     :rules="passwordRules"
-                    labelcounter="10"
+
                     label="PASSWORD"
                     color="#AD8DBB"
                     placeholder="Enter your password"
@@ -60,21 +59,21 @@
                 src="../assets/logo/Logo BAAK_w.png"
               ></v-img>
               <span class="main_text">BAAK Co., Ltd.</span>
-              <div class="icon_foot_l wd_80">
+              <div class="icon_foot_l wd_70">
                 <img
-                  height="40px"
+                  height="30px"
                   class="filter-white"
                   src="../assets/icon/icon_contact_call.svg"
-                  alt="phone"
+                  alt="pho  ne"
                 />
                 <img
-                  height="40px"
+                  height="30px"
                   class="filter-white"
                   src="../assets/icon/icon_contact_mail.svg"
                   alt="email"
                 />
                 <img
-                  height="40px"
+                  height="30px"
                   class="filter-white"
                   src="../assets/icon/icon_contact_location.svg"
                   alt="location"
@@ -89,9 +88,10 @@
                 max-width="200px"
                 src="../assets/pic/LogoCMU02-12.png"
               ></v-img>
+              <div style="padding-top:24px;"></div>
               <div class="foot_card">
                 <img
-                  height="40px"
+                  height="30px"
                   fill="white"
                   class="filter-white"
                   src="../assets/icon/icon_contact_location.svg"
@@ -101,7 +101,7 @@
               </div>
               <div class="foot_card">
                 <img
-                  height="40px"
+                  height="30px"
                   class="filter-white"
                   src="../assets/icon/icon_contact_call.svg"
                   alt="phone"
@@ -111,7 +111,7 @@
               <div class="foot_card">
                 <img
                   class="filter-white"
-                  height="40px"
+                  height="30px"
                   src="../assets/icon/icon_contact_mail.svg"
                   alt="email"
                 />
@@ -179,6 +179,12 @@
   justify-content: center;
   /* padding-top:200px; */
 }
+.set_ab{
+  /* position: absolute; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom:0; */
+}
 .fit_w {
   width: 100%;
 }
@@ -199,7 +205,8 @@
 }
 .icon_foot_l {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: space-between;
   /* padding: 0 10px ; */
 }
 .pd_top_foot {
@@ -210,8 +217,8 @@
 .mg_y_10 {
   margin: 10px 0;
 }
-.wd_80 {
-  width: 80%;
+.wd_70 {
+  width: 70%;
 }
 .pd_30{
   padding-top: 30px;

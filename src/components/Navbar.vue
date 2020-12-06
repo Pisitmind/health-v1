@@ -1,6 +1,10 @@
 <template>
   <nav>
-    <v-navigation-drawer app v-if="['Login'].indexOf($route.name) === -1">
+    <v-navigation-drawer
+      app
+      v-if="['Login'].indexOf($route.name) === -1"
+      floating
+    >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -40,7 +44,6 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
       <v-list dense nav>
         <v-list-item
           v-for="item in items"
@@ -151,12 +154,12 @@ export default {
               title: "ข้อมูลการเคลื่อนไหวของผู้ใช้งาน",
               icon: "mdi-square-circle",
               route: "/moving_data_user",
-            }, 
+            },
             {
               title: "ข้อมูลสถานะร่างกาย",
               icon: "mdi-square-circle",
               route: "/status_data_user",
-            }, 
+            },
             {
               title: "ข้อมูลส่วนประกอบในร่างกาย",
               icon: "mdi-square-circle",

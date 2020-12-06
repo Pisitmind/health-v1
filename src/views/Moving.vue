@@ -22,7 +22,11 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p3">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
@@ -32,6 +36,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -54,7 +59,7 @@
                           <div class="head_dialog_c1_p3">
                             <div>
                               <v-btn
-                                color="green darken-1"
+                                color="black darken-1"
                                 icon
                                 @click="dialog1 = false"
                               >
@@ -115,7 +120,7 @@
                         </div>
                       </div>
                     </td>
-                    <td width="50%">
+                    <td width="50%" class="text_sub">
                       <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                     </td>
                   </tr>
@@ -133,7 +138,7 @@
 
               <div class="label_grpah1_c1_p3">
                 <table width="100%">
-                  <span class
+                  <span class="text_sub"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 7,580
                     ก้าวต่อวัน</span
                   >
@@ -166,16 +171,21 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p3">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
-                        ><span>เพศ</span></v-btn
-                      >
-                    </div>
-                    <div class="age_title">
                       <v-btn
                         class="#AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age_title">
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -198,7 +208,7 @@
                           <div class="head_dialog_c2_p3">
                             <div>
                               <v-btn
-                                color="green darken-1"
+                                color="black darken-1"
                                 icon
                                 @click="dialog2 = false"
                               >
@@ -251,12 +261,12 @@
 
               <div class="label_grpah1_c1_p3">
                 <table width="100%">
-                  <span class
+                  <span class="text_sub"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
                     แคลต่อวัน</span
                   >
                   <br />
-                  <span class="grey--text"
+                  <span class="grey--text text_sub"
                     >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
                     ต่อวัน)</span
                   >
@@ -274,7 +284,7 @@
             <!-- head lr -->
             <div class="card1_head_lr">
               <!-- head left div -->
-              <div class="head_card1_p3_l">
+              <div class="head_card1_p3_l_last">
                 <!-- head left -->
                 <div class="head_card3_p3_l_title">
                   <!-- การก้าว+icon -->
@@ -283,10 +293,14 @@
                       <span><strong>การออกกำลังกาย</strong></span>
                     </div>
                   </div>
-                  <!-- btn sex & age -->
+                  <!-- btn all -->
                   <div class="btn_date_head_card3">
                     <div class="">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>วันนี้</span></v-btn
                       >
                     </div>
@@ -296,6 +310,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>สัปดาห์</span></v-btn
                       >
                     </div>
@@ -305,6 +320,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>เดือน</span></v-btn
                       >
                     </div>
@@ -314,6 +330,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>ปี</span></v-btn
                       >
                     </div>
@@ -325,7 +342,7 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                    <v-btn small icon fab>
+                    <v-btn small icon fab class="hid">
                       <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
                     </v-btn>
                   </div>
@@ -438,6 +455,9 @@ export default {
                 stepValue: 5,
                 max: 100,
               },
+              gridLines: {
+                offsetGridLines: true,
+              },
             },
           ],
           xAxes: [
@@ -447,6 +467,9 @@ export default {
                 suggestedMin: 1000, // minimum will be 0, unless there is a lower value.
                 stepValue: 1000,
                 max: 6000,
+              },
+              gridLines: {
+                display: false,
               },
             },
           ],
@@ -459,13 +482,19 @@ export default {
             label: "ก้าว",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [3628, 4874],
+            barPercentage: 0.5,
+            categoryPercentage: 0.8,
           },
         ],
       },
     });
     console.log(bar1_p3);
 
-    var ctx2_c1_p3 = document.getElementById("graph2_c1_p3").getContext("2d");
+    var ctx2_c1_p3 = document.getElementById("graph2_c1_p3").getContext("2d"),
+      gradient_mov_1 = ctx2_c1_p3.createLinearGradient(0, 0, 0, 300);
+    gradient_mov_1.addColorStop(0, "rgb(186, 119, 215)");
+    gradient_mov_1.addColorStop(0.6717171717171717, "rgb(255, 255, 255)");
+    gradient_mov_1.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c1_p3 = new Chart(ctx2_c1_p3, {
       type: "line",
       options: {
@@ -485,7 +514,7 @@ export default {
                 max: 12000,
               },
               scaleLabel: {
-                display: false,
+                display: true,
                 labelString: "ก้าว",
               },
             },
@@ -493,6 +522,9 @@ export default {
           xAxes: [
             {
               display: true,
+              gridLines: {
+                display: false,
+              },
             },
           ],
         },
@@ -501,10 +533,12 @@ export default {
         datasets: [
           {
             label: "ก้าว",
-            backgroundColor: "#B192BE",
+            backgroundColor: gradient_mov_1,
+            borderColor: "#D8B1E8",
             data: [2900, 4000, 4100, 3800, 7200, 2800],
             borderDash: [5],
-            fill: "Disabled",
+            pointRadius: 0,
+            // fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -537,6 +571,9 @@ export default {
                 display: true,
                 labelString: "แคล",
               },
+              gridLines: {
+                display: false,
+              },
             },
           ],
         },
@@ -561,7 +598,12 @@ export default {
     });
     console.log(bar1_c2_p3);
 
-    var ctx2_c2_p3 = document.getElementById("graph2_c2_p3").getContext("2d");
+    var ctx2_c2_p3 = document.getElementById("graph2_c2_p3").getContext("2d"),
+      gradient_mov_2 = ctx2_c2_p3.createLinearGradient(0, 0, 0, 300);
+    gradient_mov_2.addColorStop(0, "rgb(245, 124, 0)");
+    gradient_mov_2.addColorStop(0.010101010101010102, "rgb(245, 124, 0)");
+    gradient_mov_2.addColorStop(0.6717171717171717, "rgb(255, 255, 255)");
+    gradient_mov_2.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c2_p3 = new Chart(ctx2_c2_p3, {
       type: "line",
       options: {
@@ -581,7 +623,7 @@ export default {
                 max: 12000,
               },
               scaleLabel: {
-                display: false,
+                display: true,
                 labelString: "ก้าว",
               },
             },
@@ -589,6 +631,9 @@ export default {
           xAxes: [
             {
               display: true,
+              gridLines: {
+                display: false,
+              },
             },
           ],
         },
@@ -597,10 +642,12 @@ export default {
         datasets: [
           {
             label: "ก้าว",
-            backgroundColor: "#B192BE",
+            backgroundColor: gradient_mov_2,
+            borderColor: "#f57c00",
             data: [2900, 4000, 4100, 3800, 7200, 2800],
             borderDash: [5],
-            fill: "Disabled",
+            pointRadius: 0,
+            // fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -635,6 +682,9 @@ export default {
           xAxes: [
             {
               display: true,
+              gridLines: {
+                display: false,
+              },
             },
           ],
         },
@@ -655,12 +705,12 @@ export default {
             label: "ชาย",
             backgroundColor: "#9ACDE9",
             // แก้เป็นจน เต็ม
-            data: [638, 557, 784, 652, 145, 24],
+            data: [2.8, 3.4, 3.9, 3.6, 3.0, 2.5],
           },
           {
             label: "หญิง",
             backgroundColor: "#F8C5C5",
-            data: [270, 250, 275, 480, 145, 40],
+            data: [1.4, 1.1, 1.3, 1.8, 3.0, 3.0],
           },
         ],
       },
@@ -750,6 +800,9 @@ export default {
 </script>
 
 <style lang="scss" scope>
+.hid {
+  display: none;
+}
 .progress-el {
   display: flex;
   flex-direction: row;
@@ -777,7 +830,7 @@ export default {
   /* background-color: gray; */
 }
 .card1_p3 {
-  padding:10px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .card1_p3_root {
   padding: 20px;
@@ -806,6 +859,12 @@ export default {
   justify-content: space-between;
   /* background-color:green; */
   width: 50%;
+}
+.head_card1_p3_l_last {
+  display: flex;
+  justify-content: space-between;
+  // background-color:green;
+  width: 70%;
 }
 
 .card1_p3_content_left {
@@ -837,7 +896,7 @@ export default {
   display: flex;
   /* padding: 0 10px; */
   // background-color: rgba(0, 0, 0, 0.2);
-  /* justify-content: space-between; */
+  // justify-content: space-between;
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
@@ -858,7 +917,7 @@ export default {
   text-align: center;
   align-items: center;
 }
-.age_title{
+.age_title {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -885,13 +944,14 @@ export default {
   display: flex;
 }
 .title_card3_p3 {
-  width: 40%;
+  width: 30%;
+  align-items: left;
 }
 .btn_date_head_card3 {
   display: flex;
   /* padding-left:30px; */
   justify-content: space-around;
-  width: 60%;
+  width: 50%;
   // background-color: rgba(0, 200, 200, 0.4);
 }
 
@@ -939,6 +999,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.text_sub {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* 

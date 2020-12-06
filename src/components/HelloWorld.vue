@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-lg-xl>
     <div class="card_el">
-      <v-card elevation="2" outlined>
+      <v-card class="bdr_12">
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
@@ -26,9 +26,7 @@
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
                       color="#AD8DBB"
-                      v-model="date"
-                      label="select date"
-                      placeholder=""
+                      v-model="date1"
                       prepend-inner-icon="mdi-calendar"
                       v-bind="attrs"
                       v-on="on"
@@ -38,16 +36,13 @@
                     ></v-text-field>
                   </template>
                   <v-date-picker
-                    v-model="date"
+                    v-model="date1"
                     no-title
                     scrollable
                     color="#AD8DBB"
                   >
                     <v-spacer></v-spacer>
-                    <v-btn text color="primary" @click="menu = false">
-                      Cancel
-                    </v-btn>
-                    <v-btn text color="primary" @click="$refs.menu.save(date)">
+                    <v-btn text color="primary" @click="$refs.menu.save(date1)">
                       OK
                     </v-btn>
                   </v-date-picker>
@@ -139,7 +134,7 @@
       </v-card>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined>
+      <v-card class="rounded-card">
         <div class="card2">
           <div class="head-card2">
             <p><strong>ช่วงอายุ</strong></p>
@@ -777,12 +772,15 @@ export default {
     });
     console.log(bar3);
   },
-  date: new Date().toISOString().substr(0, 10),
+
   menu: false,
   modal: false,
   menu2: false,
   data() {
     return {
+      date0: new Date(),
+      date: new Date().toISOString().substr(0, 10),
+      date1: new Date().toISOString().substr(0, 10),
       items: [
         {
           gender: "ชาย",
@@ -889,6 +887,13 @@ export default {
 .hid {
   display: none;
 }
+.bdr_12 {
+  // border-radius: 12px;
+}
+.rounded-card {
+  border-radius: 12px;
+  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
+}
 .head_name_tag {
   font-size: 20px;
 }
@@ -936,6 +941,7 @@ th {
 }
 .card1-root {
   padding: 20px;
+  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
 .card1-percent {
   padding-right: 10px;

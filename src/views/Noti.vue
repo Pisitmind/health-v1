@@ -172,7 +172,7 @@
                           </v-card-title>
                           <v-card-text>
                             <thead>
-                              <tr width="100%"  justify="space-around">
+                              <tr width="100%" justify="space-around">
                                 <th width="" class="text-left">
                                   NO
                                 </th>
@@ -189,11 +189,12 @@
                                 v-for="item in mini_data"
                                 :key="item.id"
                                 class="text-left mini_fz"
-                                width="100%"  justify="space-around"
+                                width="100%"
+                                justify="space-around"
                               >
                                 <td width="20%">{{ item.no }}</td>
                                 <td width="60%">{{ item.name }}</td>
-                                <td  width="20%" class="text-center">
+                                <td width="20%" class="text-center">
                                   <v-btn
                                     :style="{
                                       backgroundColor: item.color,
@@ -855,11 +856,13 @@ export default {
             label: "Steps",
             backgroundColor: "#A3A1FB",
             data: [139, 384, 223, 189, 158, 318, 93],
+            barPercentage: 0.5,
           },
           {
             label: "Setting",
             backgroundColor: "#FFDA83",
             data: [385, 259, 196, 230, 106, 237, 107],
+            barPercentage: 0.5,
           },
         ],
         labels: ["7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14"],
@@ -1099,9 +1102,9 @@ export default {
 
 <style scoped>
 .v-dialog {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .noti {
   padding: 16px;

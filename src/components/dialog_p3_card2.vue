@@ -1,6 +1,6 @@
 <template>
   <div class="dialog_p3_card2">
-     <v-card elevation="0">
+    <v-card elevation="0">
       <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
@@ -15,7 +15,12 @@
             <div class="table_content_card2">
               <table style="width: 100%;">
                 <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th scope="row" width="15%" align="left"  class="head_table_card3">
+                  <th
+                    scope="row"
+                    width="15%"
+                    align="left"
+                    class="head_table_card3"
+                  >
                     <v-icon small :style="{ color: item.color }">{{
                       item.icon
                     }}</v-icon>
@@ -170,9 +175,10 @@
                     </td>
                     <td>
                       <v-btn
-                        :style="{ backgroundColor: item.color }"
+                        style="background-color:#AD8DBB; color:white;"
                         elevation="2"
                         small
+                        width="80px"
                       >
                         {{ item.show_history }}
                       </v-btn>
@@ -195,21 +201,34 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx_dia_c1_p3 = document
-      .getElementById("graphdia1_c1_p3")
-      .getContext("2d");
+        .getElementById("graphdia1_c1_p3")
+        .getContext("2d"),
+      gradient1_c1_p3 = ctx_dia_c1_p3.createLinearGradient(0, 0, 0, 300),
+    gradient2_c1_p3 = ctx_dia_c1_p3.createLinearGradient(0, 0, 0, 300);
+    gradient1_c1_p3.addColorStop(0, "rgb(82, 169, 217)");
+    gradient1_c1_p3.addColorStop(0.6414141414141414, "rgb(255, 255, 255)");
+    gradient1_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
+
+    gradient2_c1_p3.addColorStop(0, "rgb(255, 161, 161)");
+    gradient2_c1_p3.addColorStop(0.6414141414141414, "rgb(255, 255, 255)");
+    gradient2_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c1_p3 = new Chart(ctx_dia_c1_p3, {
       type: "line",
       data: {
         datasets: [
           {
-            label: "Steps",
-            backgroundColor: "#A3A1FB",
-            data: [139, 384, 223, 189, 158, 318,],
+            label: "ชาย",
+            backgroundColor: gradient1_c1_p3,
+            borderColor: "#A3A1FB",
+            data: [139, 384, 223, 189, 158, 318],
+            pointBackgroundColor: "white",
           },
           {
-            label: "Setting",
-            backgroundColor: "#FFDA83",
+            label: "หญิง",
+            backgroundColor: gradient2_c1_p3,
+            borderColor: "#ffa1a1",
             data: [385, 259, 196, 230, 106, 237],
+            pointBackgroundColor: "white",
           },
         ],
         labels: ["ม.ค", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย."],
