@@ -150,9 +150,10 @@
                     </td>
                     <td>
                       <v-btn
-                        style="backgroundColor:#AD8DBB; color:white"
+                        style="background-color:#AD8DBB; color:white;"
                         elevation="2"
                         small
+                        width="80px"
                       >
                         {{ item.show_history }}
                       </v-btn>
@@ -342,7 +343,7 @@ export default {
             label: "TODAY",
             backgroundColor: gradient_diac3,
             borderColor: "#f98499",
-            pointRadius:0,
+            pointRadius: 0,
             borderDash: [3],
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },

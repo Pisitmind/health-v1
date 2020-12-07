@@ -173,9 +173,10 @@
                     </td>
                     <td>
                       <v-btn
-                        style="backgroundColor:#AD8DBB; color:white"
+                        style="background-color:#AD8DBB; color:white;"
                         elevation="2"
                         small
+                        width="80px"
                       >
                         {{ item.show_history }}
                       </v-btn>

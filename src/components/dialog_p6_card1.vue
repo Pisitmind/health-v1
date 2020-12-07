@@ -162,9 +162,10 @@
                     </td>
                     <td>
                       <v-btn
-                        :style="{ backgroundColor: item.color }"
+                        style="background-color:#AD8DBB; color:white;"
                         elevation="2"
                         small
+                        width="80px"
                       >
                         {{ item.show_history }}
                       </v-btn>
@@ -187,26 +188,37 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx_dia_c1_p6 = document
-      .getElementById("graph1_c1_p6")
-      .getContext("2d");
+        .getElementById("graph1_c1_p6")
+        .getContext("2d"),
+      gradient_m1 = ctx_dia_c1_p6.createLinearGradient(0, 0, 0, 300);
+    gradient_m1.addColorStop(0, "rgb(31, 226, 136)");
+    gradient_m1.addColorStop(0.6818181818181818, "rgb(255, 255, 255)");
+    gradient_m1.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c1_p6 = new Chart(ctx_dia_c1_p6, {
       type: "line",
       data: {
         datasets: [
           {
+            label: "all",
+            backgroundColor: gradient_m1,
+            borderColor: "#2CD889",
+            pointRadius: 0,
+            data: [240, 240, 320, 240, 120, 248, 115],
+          },
+          {
             label: "Steps",
-            pointBorderColor: "#A3A1FB",
+            borderColor: "#359BD3",
             fill: "Disabled",
-            backgroundColor: "#A3A1FB",
-            lineTension: "0.2",
-            borderDash: [5],
+            borderDash: [3],
+            pointRadius: 0,
             data: [139, 384, 223, 189, 158, 318, 93],
           },
           {
             label: "Setting",
-            pointBorderColor: "#FFDA83",
+            borderColor: "#F7617D",
             fill: "Disabled",
-            borderDash:[5],
+            borderDash: [3],
+            pointRadius: 0,
             data: [385, 259, 196, 230, 106, 237, 107],
           },
         ],
@@ -236,8 +248,12 @@ export default {
     console.log(bar_dia_c1_p6);
 
     var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
+        .getElementById("graph_dialog_c2")
+        .getContext("2d"),
+      gradient_diac2_0 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_diac2_0.addColorStop(0, "rgb(116, 110, 244)");
+    gradient_diac2_0.addColorStop(0.31, "rgb(255, 255, 255)");
+    gradient_diac2_0.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -269,8 +285,9 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
-
+            backgroundColor: gradient_diac2_0,
+            borderDash: [3],
+            pointRadius: 0,
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -289,8 +306,12 @@ export default {
     });
     console.log(bar_dia_c2);
     var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
+        .getElementById("graph_dialog_c3")
+        .getContext("2d"),
+      gradient_diac3 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_diac3.addColorStop(0, "rgb(249, 132, 153)");
+    gradient_diac3.addColorStop(0.36, "rgb(255, 255, 255)");
+    gradient_diac3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -322,7 +343,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: gradient_diac3,
+            borderColor: "#f98499",
+            pointRadius: 0,
+            borderDash: [3],
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],

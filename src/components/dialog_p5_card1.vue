@@ -34,12 +34,11 @@
                                   </td>
                                   <td width="" class="btn_right">
                                     <v-btn
-                                      color="#AD8DBB"
+                                      color="#22CE8B"
                                       depressed
-                                      small
                                       class="white--text"
                                       elevation="2"
-                                      >+4%</v-btn
+                                      >+2%</v-btn
                                     >
                                   </td>
                                 </tr>
@@ -85,9 +84,8 @@
                                   </td>
                                   <td width="" class="btn_right">
                                     <v-btn
-                                      color="#AD8DBB"
+                                      color="#22CE8B"
                                       depressed
-                                      small
                                       class="white--text"
                                       elevation="2"
                                       >+4%</v-btn
@@ -306,15 +304,17 @@
                                 <td>{{ item.pos }}</td>
                                 <td>{{ item.bmi_sum }}</td>
                                 <td :style="{ color: item.color0 }">
-                                  <v-icon  :style="{ color: item.color0 }">{{item.icon}}</v-icon>
+                                  <v-icon :style="{ color: item.color0 }">{{
+                                    item.icon
+                                  }}</v-icon>
                                   {{ item.bmi_change }}
-
                                 </td>
                                 <td>
                                   <v-btn
-                                    style="backgroundColor:#AD8DBB; color:white"
+                                    style="background-color:#AD8DBB; color:white;"
                                     elevation="2"
                                     small
+                                    width="80px"
                                   >
                                     {{ item.show_history }}
                                   </v-btn>
@@ -378,7 +378,11 @@ export default {
     });
     console.log(bar_dia_do1);
 
-    var ctx_dia_c1_man = document.getElementById("graph_man").getContext("2d");
+    var ctx_dia_c1_man = document.getElementById("graph_man").getContext("2d"),
+      gradient_man = ctx_dia_c1_man.createLinearGradient(0, 0, 0, 300);
+    gradient_man.addColorStop(0, "rgb(132, 127, 234)");
+    gradient_man.addColorStop(0.3, "rgb(255, 255, 255)");
+    gradient_man.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c1_man = new Chart(ctx_dia_c1_man, {
       type: "line",
       options: {
@@ -410,7 +414,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#E7E7FE",
+            backgroundColor: gradient_man,
+            pointRadius: 0,
+            borderDash: [3],
+            boderColor: "#E9E8FE",
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -430,8 +437,12 @@ export default {
     console.log(bar_dia_c1_man);
 
     var ctx_dia_c1_wman = document
-      .getElementById("graph_wman")
-      .getContext("2d");
+        .getElementById("graph_wman")
+        .getContext("2d"),
+      gradient_wman = ctx_dia_c1_wman.createLinearGradient(0, 0, 0, 300);
+    gradient_wman.addColorStop(0, "rgb(249, 199, 89)");
+    gradient_wman.addColorStop(0.30808080808080807, "rgb(255, 255, 255)");
+    gradient_wman.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c1_wman = new Chart(ctx_dia_c1_wman, {
       type: "line",
       options: {
@@ -463,7 +474,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#FFE5A9",
+            backgroundColor: gradient_wman,
+            pointRadius: 0,
+            borderDash: [3],
+            borderColor: "#f9c759",
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -505,7 +519,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "18.5",
           bmi_change: "+2.1",
-            icon: "mdi-menu-up",
+          icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "red",
@@ -517,7 +531,7 @@ export default {
           pos: "ผู้ช่วยสอน",
           bmi_sum: "20.0",
           bmi_change: "-0.2",
-           icon: "mdi-menu-down",
+          icon: "mdi-menu-down",
           color: "#AD8DBB",
           color0: "red",
           color1: "green",
@@ -529,7 +543,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "12.4",
           bmi_change: "+0.1",
-            icon: "mdi-menu-up",
+          icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "green",
@@ -541,7 +555,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "28.2",
           bmi_change: "+2",
-            icon: "mdi-menu-up",
+          icon: "mdi-menu-up",
           color: "#AD8DBB",
           color0: "green",
           color1: "green",
@@ -553,7 +567,7 @@ export default {
           pos: "อาจารย์",
           bmi_sum: "30.1",
           bmi_change: "-4",
-           icon: "mdi-menu-down",
+          icon: "mdi-menu-down",
           color: "#AD8DBB",
           color0: "red",
           color1: "green",

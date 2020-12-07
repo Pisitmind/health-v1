@@ -359,7 +359,7 @@ export default {
             label: "TODAY",
             backgroundColor: gradient_dia_c3_p3,
             pointRadius: 0,
-            borderColor:"#f9b000",
+            borderColor: "#f9b000",
             borderDash: [2],
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
