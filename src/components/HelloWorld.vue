@@ -31,7 +31,6 @@
                       v-bind="attrs"
                       v-on="on"
                       dense
-                      autofocus="true"
                       outlined
                     ></v-text-field>
                   </template>
@@ -40,6 +39,7 @@
                     no-title
                     scrollable
                     color="#AD8DBB"
+                    dense
                   >
                     <v-spacer></v-spacer>
                     <v-btn text color="primary" @click="$refs.menu.save(date1)">
@@ -52,7 +52,12 @@
             <div class="card1-right">
               <div class="right-icon">
                 <v-btn small icon fab class="hid">
-                  <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                  <img
+                    height="40px"
+                    class="filter-white"
+                    src="../assets/icon/icon_detail.svg"
+                    alt="dtail"
+                  />
                 </v-btn>
               </div>
             </div>
@@ -61,7 +66,7 @@
             <div class="text-center">
               <canvas id="graph0" width="" height="200px"></canvas>
             </div>
-            <v-card height="">
+            <v-card class="bdr_12_only" height="">
               <v-card-subtitle>
                 <span class="topic-name-card ">
                   ตัวบ่งชี้
@@ -96,7 +101,7 @@
                 </div>
               </v-card-text>
             </v-card>
-            <v-card class="card1-subcard-3" width="350px" height="">
+            <v-card class="card1-subcard-3 bdr_12_only" width="350px" height="">
               <v-card-subtitle class="set_pdbot0">
                 <span class="topic-name-card pl-5">
                   อุปกรณ์
@@ -165,7 +170,11 @@
               </div>
             </div>
             <div class="card_right_c2_p1">
-              <v-card class="card2-subcard-3 ct_set" width="" height="300px">
+              <v-card
+                class="card2-subcard-3 ct_set bdr_12_only"
+                width=""
+                height="300px"
+              >
                 <v-card-subtitle>
                   <span class="topic-name-card pl-5">
                     ตัวบ่งชี้
@@ -208,13 +217,18 @@
     <div class="card_el">
       <div class="card-split">
         <div class="card_l">
-          <v-card elevation="2" outlined height="350">
+          <v-card class="bdr_12" height="350">
             <div class="card3 c_l">
               <div class="card3_headNsub">
                 <div class="head_card3_l">
                   <div class="title-card3">
-                    <div style="padding-right:10px;">
-                      <v-icon large color="#AD8DBB">mdi-shoe-print</v-icon>
+                    <div class="pd_icon" style="padding-right:10px;">
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_step_03.svg"
+                        alt="step"
+                      />
                     </div>
                     <div
                       class="card3-bot-text"
@@ -256,7 +270,12 @@
                   <div class="icon-card">
                     <div class="exit-icon-card3">
                       <v-btn small icon fab class="hid">
-                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="dtail"
+                        />
                       </v-btn>
                     </div>
                   </div>
@@ -302,13 +321,18 @@
           </v-card>
         </div>
         <div class="card_r">
-          <v-card elevation="2" outlined height="350">
+          <v-card class="bdr_12" height="350">
             <div class="card3 c_r">
               <div class="card3_headNsub">
                 <div class="head_card3_r">
                   <div class="title-card3">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#F57C00">mdi-fire</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_brun_01.svg"
+                        alt="burn"
+                      />
                     </div>
                     <div
                       class="card3-bot-text "
@@ -341,7 +365,12 @@
                   <div class="icon-card">
                     <div class="exit-icon-card3">
                       <v-btn small icon fab class="hid">
-                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="dtail"
+                        />
                       </v-btn>
                     </div>
                   </div>
@@ -365,14 +394,19 @@
       </div>
     </div>
     <div class="card_el">
-      <v-card elevation="2" outlined>
+      <v-card class="bdr_12">
         <div class="card5">
           <div>
             <div class="head_card4">
               <div class="title_card4">
                 <div class="card4_nameNicon">
-                  <div style="padding-right:10px;">
-                    <v-icon color="#009688">mdi-scale</v-icon>
+                  <div style="padding-right:0px;">
+                    <img
+                      height="40px"
+                      class="filter-white"
+                      src="../assets/icon/icon_weight_01.svg"
+                      alt="weight"
+                    />
                   </div>
                   <div class="card3-bot-text ">
                     <span><strong>สัดส่วนน้ำหนัก</strong></span>
@@ -405,7 +439,12 @@
               <div class="icon-card">
                 <div class="exit-icon-card3">
                   <v-btn small icon fab class="hid">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                    <img
+                      height="40px"
+                      class="filter-white"
+                      src="../assets/icon/icon_detail.svg"
+                      alt="dtail"
+                    />
                   </v-btn>
                 </div>
               </div>
@@ -515,31 +554,66 @@
                     <th></th>
                     <th>
                       <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div>
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            src="../assets/icon/Login-Regis_8Jul20-21.png"
+                            alt="human"
+                          />
+                        </div>
                         <div class="t-icon"><p>ผอมมาก</p></div>
                       </div>
                     </th>
                     <th>
                       <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div>
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            src="../assets/icon/Login-Regis_8Jul20-23.png"
+                            alt="human"
+                          />
+                        </div>
                         <div class="t-icon"><p>ปกติ</p></div>
                       </div>
                     </th>
                     <th>
                       <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div>
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            src="../assets/icon/Login-Regis_8Jul20-20.png"
+                            alt="human"
+                          />
+                        </div>
                         <div class="t-icon"><p>อวบ</p></div>
                       </div>
                     </th>
                     <th>
                       <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div>
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            src="../assets/icon/Login-Regis_8Jul20-18.png"
+                            alt="human"
+                          />
+                        </div>
                         <div class="t-icon"><p>อ้วน ระยะที่1</p></div>
                       </div>
                     </th>
                     <th>
                       <div class="i-human">
-                        <div><v-icon>mdi-human-male</v-icon></div>
+                        <div>
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            src="../assets/icon/Login-Regis_8Jul20-15.png"
+                            alt="human"
+                          />
+                        </div>
                         <div class="t-icon"><p>อ้วน ระยะที่2</p></div>
                       </div>
                     </th>
@@ -888,10 +962,11 @@ export default {
   display: none;
 }
 .bdr_12 {
-  // border-radius: 12px;
+  border-radius: 12px !important;
+  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
 .rounded-card {
-  border-radius: 12px;
+  border-radius: 12px !important;
   box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
 .head_name_tag {
@@ -941,7 +1016,7 @@ th {
 }
 .card1-root {
   padding: 20px;
-  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
+  // box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
 .card1-percent {
   padding-right: 10px;

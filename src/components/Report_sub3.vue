@@ -6,17 +6,22 @@
           <div class="head_card_p7_3">
             <div>
               <v-btn color="black lighten-1" icon large @click="dialog = false">
-                <v-icon>mdi-chart-areaspline</v-icon>
+                <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_report.svg"
+                        alt="report"
+                      />
               </v-btn>
             </div>
             <div class="text_header">
               <span class="">รายงานข้อมูลสถานะร่างกายของผู้ใช้งาน</span>
             </div>
             <br />
-            <br />
           </div>
         </div>
       </v-card-title>
+            <br />
       <v-card-content>
         <v-row>
           <v-col cols="6" sm="6">
@@ -292,6 +297,14 @@ export default {
 }
 .report_card_root {
   padding: 20px;
+}
+.text_header{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .ddog {
   font-size: 20px;

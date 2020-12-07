@@ -1,186 +1,186 @@
 <template>
   <div class="dialog_p9">
     <!-- Dialog card in  -->
-    <div class="pd_20" >
-       <v-card-content>
-          <div class="content_dialog_p9">
-            <v-form>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" sm="12">
-                    <v-text-field
-                      v-model="topic"
-                      :rules="rules_"
-                      counter
-                      maxlength="50"
-                      hint=""
-                      label="หัวข้อข่าว"
-                      placeholder="กรอกหัวข้อข่าว"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12">
-                    <v-text-field
-                      v-model="detail"
-                      :rules="rules_1000"
-                      counter
-                      maxlength="1000"
-                      hint=""
-                      label="รายละเอียดข่าว"
-                      placeholder="เนื้อหาข่าว"
-                    ></v-text-field>
-                  </v-col>
-                </v-row>
-                <!-- card image add -->
-                <div class="row_card">
-                  <v-card class="mini_card1">
-                    <v-action-card>
-                      <div class="in_card1">
-                        <!-- <v-file-input
+    <div class="pd_20">
+      <v-card-content>
+        <div class="content_dialog_p9">
+          <v-form>
+            <v-container>
+              <v-row>
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    v-model="topic"
+                    :rules="rules_"
+                    counter
+                    maxlength="50"
+                    hint=""
+                    label="หัวข้อข่าว"
+                    placeholder="กรอกหัวข้อข่าว"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    v-model="detail"
+                    :rules="rules_1000"
+                    counter
+                    maxlength="1000"
+                    hint=""
+                    label="รายละเอียดข่าว"
+                    placeholder="เนื้อหาข่าว"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <!-- card image add -->
+              <div class="row_card">
+                <v-card class="mini_card1">
+                  <v-action-card>
+                    <div class="in_card1">
+                      <!-- <v-file-input
                       accept="image/*"
                       prepend-icon="mdi-camera-outline"
                       hide-input
                     >
                     </v-file-input> -->
-                        <v-btn class="center" icon small>
-                          <v-icon color="#8A4532">mdi-camera-outline</v-icon>
-                        </v-btn>
-                        <span class="card_text">รูปข่าว</span>
-                        <p class="sub_text">
-                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
-                        </p>
-                      </div>
-                    </v-action-card>
-                  </v-card>
-                  <v-card class="mini_card1">
-                    <v-action-card>
-                      <div class="in_card1">
-                        <v-btn class="center" icon small>
-                          <v-icon color="#8A4532">mdi-camera-outline</v-icon>
-                        </v-btn>
-                        <span class="card_text">รูปข่าว</span>
-                        <p class="sub_text">
-                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
-                        </p>
-                      </div>
-                    </v-action-card>
-                  </v-card>
-                  <v-card class="mini_card1">
-                    <v-action-card>
-                      <div class="in_card1">
-                        <v-btn class="center" icon small>
-                          <v-icon color="#8A4532">mdi-camera-outline</v-icon>
-                        </v-btn>
-                        <span class="card_text">รูปข่าว</span>
-                        <p class="sub_text">
-                          ขนาดที่ดีที่สุด 960x540 หรือ 16:9
-                        </p>
-                      </div>
-                    </v-action-card>
-                  </v-card>
-                </div>
-                <br />
-                <v-card-text>
-                  <v-file-input
-                    prepend-icon=""
-                    messages=""
-                    placeholder="เลือกไฟล์"
-                    label="แนบไฟล์บทความ"
-                    outlined
-                    dense
-                  ></v-file-input>
-                  <div style="width=100%;">
-                    <v-row>
-                      <v-col cols="11" sm="3">
-                        <v-dialog
-                          ref="dialog"
-                          v-model="modal"
-                          :return-value.sync="date"
-                          persistent
-                          width="290px"
-                        >
-                          <template v-slot:activator="{ on, attrs }">
-                            <v-text-field
-                              color="#AD8DBB"
-                              v-model="date"
-                              outlined
-                              label="เริ่มกระจายบทความ"
-                              prepend-icon="mdi-calendar"
-                              readonly
-                              v-bind="attrs"
-                              v-on="on"
-                            ></v-text-field>
-                          </template>
-                          <v-date-picker
-                            v-model="date"
-                            no-title
-                            scrollable
+                      <v-btn class="center" icon small>
+                        <v-icon color="#8A4532">mdi-camera-outline</v-icon>
+                      </v-btn>
+                      <span class="card_text">รูปข่าว</span>
+                      <p class="sub_text">
+                        ขนาดที่ดีที่สุด 960x540 หรือ 16:9
+                      </p>
+                    </div>
+                  </v-action-card>
+                </v-card>
+                <v-card class="mini_card1">
+                  <v-action-card>
+                    <div class="in_card1">
+                      <v-btn class="center" icon small>
+                        <v-icon color="#8A4532">mdi-camera-outline</v-icon>
+                      </v-btn>
+                      <span class="card_text">รูปข่าว</span>
+                      <p class="sub_text">
+                        ขนาดที่ดีที่สุด 960x540 หรือ 16:9
+                      </p>
+                    </div>
+                  </v-action-card>
+                </v-card>
+                <v-card class="mini_card1">
+                  <v-action-card>
+                    <div class="in_card1">
+                      <v-btn class="center" icon small>
+                        <v-icon color="#8A4532">mdi-camera-outline</v-icon>
+                      </v-btn>
+                      <span class="card_text">รูปข่าว</span>
+                      <p class="sub_text">
+                        ขนาดที่ดีที่สุด 960x540 หรือ 16:9
+                      </p>
+                    </div>
+                  </v-action-card>
+                </v-card>
+              </div>
+              <br />
+              <v-card-text>
+                <v-text-field
+                  v-model="link_new"
+                  :rules="rules_"
+                  hint=""
+                  label="ลิงค์"
+                  placeholder="ลิงค์ข่าว"
+                  width="100%"
+                  outlined
+                  dense
+                ></v-text-field>
+                <div style="width=100%;">
+                  <v-row>
+                    <v-col cols="11" sm="3">
+                      <v-dialog
+                        ref="dialog"
+                        v-model="modal"
+                        :return-value.sync="date"
+                        persistent
+                        width="290px"
+                      >
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-text-field
                             color="#AD8DBB"
-                          >
-                            <v-spacer></v-spacer>
-                            <v-btn text color="primary" @click="modal = false">
-                              Cancel
-                            </v-btn>
-                            <v-btn
-                              text
-                              color="primary"
-                              @click="$refs.dialog.save(date)"
-                            >
-                              OK
-                            </v-btn>
-                          </v-date-picker>
-                        </v-dialog>
-                      </v-col>
-                      <v-col cols="11" sm="3">
-                        <v-menu
-                          ref="menu"
-                          v-model="menu2"
-                          :close-on-content-click="false"
-                          :nudge-right="40"
-                          :return-value.sync="time"
-                          transition="scale-transition"
-                          offset-y
-                          max-width="290px"
-                          min-width="290px"
+                            v-model="date"
+                            outlined
+                            label="เริ่มกระจายบทความ"
+                            prepend-icon="mdi-calendar"
+                            readonly
+                            v-bind="attrs"
+                            v-on="on"
+                          ></v-text-field>
+                        </template>
+                        <v-date-picker
+                          v-model="date"
+                          no-title
+                          scrollable
+                          color="#AD8DBB"
                         >
-                          <template v-slot:activator="{ on, attrs }">
-                            <v-text-field
-                              v-model="time"
-                              label=""
-                              placeholder="08:00"
-                              prepend-icon="mdi-clock-time-four-outline"
-                              readonly
-                              outlined
-                              v-bind="attrs"
-                              v-on="on"
-                            ></v-text-field>
-                          </template>
-                          <v-time-picker
-                            v-if="menu2"
+                          <v-spacer></v-spacer>
+                          <v-btn text color="primary" @click="modal = false">
+                            Cancel
+                          </v-btn>
+                          <v-btn
+                            text
+                            color="primary"
+                            @click="$refs.dialog.save(date)"
+                          >
+                            OK
+                          </v-btn>
+                        </v-date-picker>
+                      </v-dialog>
+                    </v-col>
+                    <v-col cols="11" sm="3">
+                      <v-menu
+                        ref="menu"
+                        v-model="menu2"
+                        :close-on-content-click="false"
+                        :nudge-right="40"
+                        :return-value.sync="time"
+                        transition="scale-transition"
+                        offset-y
+                        max-width="290px"
+                        min-width="290px"
+                      >
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-text-field
                             v-model="time"
-                            full-width
-                            @click:minute="$refs.menu.save(time)"
-                          ></v-time-picker>
-                        </v-menu>
-                      </v-col>
-                    </v-row>
-                    <v-row>
-                      <v-col cols="12" sm="6"> </v-col>
-                    </v-row>
-                  </div>
-                </v-card-text>
-              </v-container>
-            </v-form>
-          </div>
-        </v-card-content>
+                            label=""
+                            placeholder="08:00"
+                            prepend-icon="mdi-clock-time-four-outline"
+                            readonly
+                            outlined
+                            v-bind="attrs"
+                            v-on="on"
+                          ></v-text-field>
+                        </template>
+                        <v-time-picker
+                          v-if="menu2"
+                          v-model="time"
+                          full-width
+                          @click:minute="$refs.menu.save(time)"
+                        ></v-time-picker>
+                      </v-menu>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" sm="6"> </v-col>
+                  </v-row>
+                </div>
+              </v-card-text>
+            </v-container>
+          </v-form>
+        </div>
+      </v-card-content>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  
   data() {
-    
     return {
       time: null,
       date: new Date().toISOString().substr(0, 10),
@@ -256,10 +256,10 @@ export default {
 .card_text {
   padding-top: 10px;
 }
-.color_bg{
+.color_bg {
   /* background-color: rgba(0,0,50,0.4); */
-  padding:0;
-  padding-top:20px;
+  padding: 0;
+  padding-top: 20px;
 }
 /* .pd_20 {
   padding:20px;

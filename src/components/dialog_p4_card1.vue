@@ -1,6 +1,6 @@
 <template>
   <div class="dialog_p4_card1">
-     <v-card elevation="0">
+    <v-card elevation="0">
       <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
@@ -35,7 +35,7 @@
           <div class="content_top_right_page">
             <!-- data top right -->
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
@@ -83,7 +83,7 @@
             </div>
             <br />
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
@@ -198,20 +198,30 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx_dia_c1_p4 = document
-      .getElementById("graph1_c1_p4")
-      .getContext("2d");
+        .getElementById("graph1_c1_p4")
+        .getContext("2d"),
+      gradient_1c1p4 = ctx_dia_c1_p4.createLinearGradient(0, 0, 0, 300),
+      gradient1_1c1p4 = ctx_dia_c1_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_1c1p4.addColorStop(0, "rgb(125, 174, 231)");
+    gradient_1c1p4.addColorStop(.5, "rgb(255, 255, 255)");
+    gradient1_1c1p4.addColorStop(0, "rgb(237, 119, 119)");
+    gradient1_1c1p4.addColorStop(.4, "rgb(255, 255, 255)");
     var bar_dia_c1_p4 = new Chart(ctx_dia_c1_p4, {
       type: "line",
       data: {
         datasets: [
           {
             label: "ชาย",
-            backgroundColor: "#A3A1FB",
+            backgroundColor: gradient_1c1p4,
+            borderColor: "#A8C5DD",
+            pointBackgroundColor:"white",
             data: [8.11, 3.3, 7.0, 5.4, 7.3, 4.05],
           },
           {
             label: "หญิง",
-            backgroundColor: "#FFDA83",
+            backgroundColor: gradient1_1c1p4,
+            borderColor:"#FFD4D4",
+            pointBackgroundColor:"white",
             data: [6.15, 4.15, 6.15, 7.45, 6.1, 9.5],
           },
         ],
@@ -455,7 +465,7 @@ export default {
       ],
       data_card3: [
         {
-          type: "All",
+          type: "เฉลี่ย",
           icon: "mdi-circle",
           color: "#359BD3",
           data: ["7:30", "3:55", "6:45", "6:20", "7:05", "6:15"],

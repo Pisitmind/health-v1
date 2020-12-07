@@ -1,7 +1,7 @@
 <template>
   <div class="unqHealth">
     <div class="card1_p6">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p6_root">
           <div class="card1_p6_headNsub">
             <!-- head lr -->
@@ -13,7 +13,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p6">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#FF3F3F">mdi-water-plus</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_bp.svg"
+                        alt="blodpresure"
+                      />
                     </div>
                     <div class="card6-bot-text" style="text-align: center;">
                       <span><strong>ความดันโลหิต</strong></span>
@@ -22,7 +27,11 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p6">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
@@ -32,6 +41,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -48,7 +58,12 @@
                     <v-dialog v-model="dialog0" width="">
                       <template v-slot:activator="{ on, attrs1 }">
                         <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -60,9 +75,12 @@
                                 icon
                                 @click="dialog0 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div>
@@ -147,7 +165,7 @@
       </v-card>
     </div>
     <div class="card2_p6">
-      <v-card elevation="3" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p6_root">
           <div class="card1_p6_headNsub">
             <!-- head lr -->
@@ -159,7 +177,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p6">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#00E676">mdi-water-check</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_blood_ox.svg"
+                        alt="blodpresure"
+                      />
                     </div>
                     <div class="card6-bot-text" style="text-align: center;">
                       <span><strong>ออกซิเจนในเลือด</strong></span>
@@ -174,8 +197,20 @@
                   <div class="exit-icon-card3">
                     <v-dialog v-model="dialog2" width="">
                       <template v-slot:activator="{ on, attrs }">
-                        <v-btn small icon fab v-bind="attrs" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <v-btn
+                          small
+                          icon
+                          fab
+                          v-bind="attrs"
+                          v-on="on"
+                          class="hid"
+                        >
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -187,9 +222,12 @@
                                 icon
                                 @click="dialog2 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div class="pd_text">
@@ -379,117 +417,138 @@
       </v-card>
     </div>
     <div class="card3_p6">
-      <v-card elevation="2" outlined height="">
-        <v-card elevation="2" outlined height="">
-          <div class="card1_p6_root">
-            <div class="card1_p6_headNsub">
-              <!-- head lr -->
-              <div class="card1_head_lr">
-                <!-- head left div -->
-                <div class="head_card1_p6_l">
-                  <!-- head left -->
-                  <div class="head_card1_p6_l_title">
-                    <!-- การก้าว+icon -->
-                    <div class="title_card1_p6">
-                      <div style="padding-right:10px;">
-                        <v-icon large color="#F9A551"
-                          >mdi-thermometer-lines</v-icon
+      <v-card class="bdr_12">
+        <div class="card1_p6_root">
+          <div class="card1_p6_headNsub">
+            <!-- head lr -->
+            <div class="card1_head_lr">
+              <!-- head left div -->
+              <div class="head_card1_p6_l">
+                <!-- head left -->
+                <div class="head_card1_p6_l_title">
+                  <!-- การก้าว+icon -->
+                  <div class="title_card1_p6">
+                    <div style="padding-right:10px;">
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_temp.svg"
+                        alt="temp"
+                      />
+                    </div>
+                    <div class="card6-bot-text " style="text-align: center;">
+                      <span><strong>อุณหภูมิร่างกาย</strong></span>
+                    </div>
+                  </div>
+                  <!-- btn sex & age -->
+                </div>
+              </div>
+
+              <!-- head right div -->
+              <div class="head_card1_p6_r">
+                <!-- head right -->
+                <div class="head_card1_p6_r_title">
+                  <div class="exit-icon-card3">
+                    <!-- คอนเท้นย่อย ยัง -->
+                    <v-dialog v-model="dialog3" width="">
+                      <template v-slot:activator="{ on, attrs1 }">
+                        <v-btn
+                          small
+                          icon
+                          fab
+                          v-bind="attrs1"
+                          v-on="on"
+                          class="hid"
                         >
-                      </div>
-                      <div class="card6-bot-text " style="text-align: center;">
-                        <span><strong>อุณหภูมิร่างกาย</strong></span>
-                      </div>
-                    </div>
-                    <!-- btn sex & age -->
-                  </div>
-                </div>
-
-                <!-- head right div -->
-                <div class="head_card1_p6_r">
-                  <!-- head right -->
-                  <div class="head_card1_p6_r_title">
-                    <div class="exit-icon-card3">
-                      <!-- คอนเท้นย่อย ยัง -->
-                      <v-dialog v-model="dialog3" width="">
-                        <template v-slot:activator="{ on, attrs1 }">
-                          <v-btn small icon fab v-bind="attrs1" v-on="on">
-                            <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                          </v-btn>
-                        </template>
-                        <v-card>
-                          <v-card-title>
-                            <div class="head_dialog_c1_p6">
-                              <div>
-                                <v-btn
-                                  color="green darken-1"
-                                  icon
-                                  @click="dialog3 = false"
-                                >
-                                  <v-icon
-                                    >mdi-arrow-left-drop-circle-outline</v-icon
-                                  >
-                                </v-btn>
-                              </div>
-                              <div>
-                                <span class="headline"
-                                  >รายละเอียดค่าอุณหภูมิร่างกาย</span
-                                >
-                              </div>
-                            </div>
-                          </v-card-title>
-                          <v-card-text>
-                            กราฟสรุปรายละเอียดอุณหภูมิของผู้ใช้
-                            เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                            ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                          </v-card-text>
-                          <v-card-content>
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
+                        </v-btn>
+                      </template>
+                      <v-card>
+                        <v-card-title>
+                          <div class="head_dialog_c1_p6">
                             <div>
-                              <dialog_p6_2 />
+                              <v-btn
+                                color="green darken-1"
+                                icon
+                                @click="dialog3 = false"
+                              >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
+                              </v-btn>
                             </div>
-                          </v-card-content>
-                        </v-card>
-                      </v-dialog>
-                    </div>
+                            <div>
+                              <span class="headline"
+                                >รายละเอียดค่าอุณหภูมิร่างกาย</span
+                              >
+                            </div>
+                          </div>
+                        </v-card-title>
+                        <v-card-text>
+                          กราฟสรุปรายละเอียดอุณหภูมิของผู้ใช้
+                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                        </v-card-text>
+                        <v-card-content>
+                          <div>
+                            <dialog_p6_2 />
+                          </div>
+                        </v-card-content>
+                      </v-card>
+                    </v-dialog>
                   </div>
                 </div>
               </div>
-              <v-subtitle class="sub_text"
-                >ค่าเฉลี่ยอุณหภูมิร่างกายของผู้ใช้เพศชาย และเพศหญิง</v-subtitle
-              >
             </div>
-            <!-- Content  -->
-            <div class="card3_p6_content_na">
-              <v-card-text>
-                <!-- ใส่กราฟ -->
-                <canvas id="graph1_c3_p6" width="" height="80px"></canvas>
-              </v-card-text>
+            <v-subtitle class="sub_text"
+              >ค่าเฉลี่ยอุณหภูมิร่างกายของผู้ใช้เพศชาย และเพศหญิง</v-subtitle
+            >
+          </div>
+          <!-- Content  -->
+          <div class="card3_p6_content_na">
+            <v-card-text>
+              <!-- ใส่กราฟ -->
+              <canvas id="graph1_c3_p6" width="" height="80px"></canvas>
+            </v-card-text>
 
-              <div class="label_grpah1_c1_p6">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card1">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
-                        </div>
-                        <div class="pd_10">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
-                        </div>
+            <div class="label_grpah1_c1_p6">
+              <table width="100%">
+                <tr>
+                  <td style="text-align:center;">
+                    <div class="label_text_card1">
+                      <div>
+                        <v-icon small color="blue"> mdi-circle</v-icon>
+                        <span class="black--text"><strong>ชาย</strong></span>
                       </div>
-                    </td>
-                    <td width="50%">
-                      <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                    </td>
-                  </tr>
-                </table>
-              </div>
+                      <div class="pd_10">
+                        <v-icon small color="pink"> mdi-circle</v-icon>
+                        <span class="black--text"><strong>หญิง</strong></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="50%">
+                    <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
-        </v-card>
+        </div>
       </v-card>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -761,7 +820,7 @@ export default {
 .card1_p6,
 .card2_p6,
 .card3_p6 {
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
 }
 .card1_p6_root {
   padding: 20px;
@@ -791,9 +850,6 @@ export default {
   /* padding:20px; */
   /* background-color:rgba(0, 0,100,.3); */
 }
-.title_card1_p6 {
-  display: flex;
-}
 
 .sex_age_title_card1_p6 {
   display: flex;
@@ -817,12 +873,6 @@ export default {
   width: 50%;
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
-}
-.card1_p6 {
-  padding: 20px;
-}
-.card1_p6_root {
-  padding: 20px;
 }
 .card1_p6_content {
   display: flex;

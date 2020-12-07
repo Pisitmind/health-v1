@@ -1,7 +1,7 @@
 <template>
   <div class="status">
     <div class="card1_p4">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p4_root">
           <div class="card1_p4_headNsub">
             <!-- head lr -->
@@ -13,7 +13,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p4">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#AD8DBB">mdi-weather-night</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_sleep_03.svg"
+                        alt="burn"
+                      />
                     </div>
                     <div class="card3-bot-text ">
                       <span><strong>การนอนหลับ</strong></span>
@@ -22,7 +27,11 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p4">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
@@ -32,6 +41,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -48,7 +58,12 @@
                     <v-dialog v-model="dialog0" width="">
                       <template v-slot:activator="{ on, attrs1 }">
                         <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -60,9 +75,12 @@
                                 icon
                                 @click="dialog0 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div>
@@ -150,7 +168,7 @@
       </v-card>
     </div>
     <div class="card1_p4">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p4_root">
           <div class="card1_p4_headNsub">
             <!-- head lr -->
@@ -162,7 +180,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p4">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#F72040">mdi-heart-pulse</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_heartrate_01.svg"
+                        alt="heartrate"
+                      />
                     </div>
                     <div class="card3-bot-text ">
                       <span><strong>การเต้นของหัวใจ</strong></span>
@@ -171,7 +194,11 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p4">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
@@ -181,6 +208,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -196,7 +224,12 @@
                     <v-dialog v-model="dialog1" width="">
                       <template v-slot:activator="{ on, attrs2 }">
                         <v-btn small icon fab v-bind="attrs2" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -208,9 +241,12 @@
                                 icon
                                 @click="dialog1 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div class="pd_text">
@@ -274,7 +310,12 @@
             <div class="card2_content_bot">
               <div class="card2_p4_content_left">
                 <v-card-title>
-                  <v-icon>mdi-human-male</v-icon>
+                  <img
+                    height="30px"
+                    class="filter-white"
+                    src="../assets/icon/icon_men.svg"
+                    alt="man"
+                  />
                   <span style="font-size:14px; font-weight:bold;"
                     >ค่าเฉลี่ยในเพศชาย
                   </span>
@@ -302,7 +343,12 @@
               <v-divider vertical></v-divider>
               <div class="card2_p4_content_right">
                 <v-card-title>
-                  <v-icon>mdi-human-female</v-icon>
+                  <img
+                    height="30px"
+                    class="filter-white"
+                    src="../assets/icon/icon_women.svg"
+                    alt="woman"
+                  />
                   <span style="font-size:14px; font-weight:bold;">
                     ค่าเฉลี่ยในเพศหญิง
                   </span>
@@ -333,7 +379,7 @@
       </v-card>
     </div>
     <div class="card1_p4">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p4_root">
           <div class="card1_p4_headNsub">
             <!-- head lr -->
@@ -345,9 +391,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p4">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#DDA0DD"
-                        >mdi-human-female-dance</v-icon
-                      >
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_step.svg"
+                        alt="Step"
+                      />
                     </div>
                     <div class="card3-bot-text ">
                       <span><strong>คะแนนร่างกาย</strong></span>
@@ -356,16 +405,21 @@
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p4">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
-                        ><span>เพศ</span></v-btn
-                      >
-                    </div>
-                    <div class="age_title">
                       <v-btn
                         class="#AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age_title">
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -380,8 +434,13 @@
                     <!-- ยังก่อน -->
                     <v-dialog v-model="dialog2" width="">
                       <template v-slot:activator="{ on, attrs }">
-                        <v-btn small icon fab v-bind="attrs" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <v-btn small icon fab v-bind="attrs" v-on="on" class="hid">
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -393,9 +452,12 @@
                                 icon
                                 @click="dialog2 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div class="pd_text">
@@ -522,13 +584,18 @@ export default {
             label: "ชั่วโมง",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [4, 7.3],
+            barPercentage: 0.5,
           },
         ],
       },
     });
     console.log(bar1_p4);
 
-    var ctx2_c1_p4 = document.getElementById("graph2_c1_p4").getContext("2d");
+    var ctx2_c1_p4 = document.getElementById("graph2_c1_p4").getContext("2d"),
+      gradient_2_c2_p4 = ctx2_c1_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_2_c2_p4.addColorStop(0, "rgb(107, 179, 253)");
+    gradient_2_c2_p4.addColorStop(0.61, "rgb(255, 255, 255)");
+    gradient_2_c2_p4.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c1_p4 = new Chart(ctx2_c1_p4, {
       type: "line",
       options: {
@@ -568,10 +635,11 @@ export default {
         datasets: [
           {
             label: "",
-            backgroundColor: "#BADCEF",
+            backgroundColor: gradient_2_c2_p4,
+            borderColor: "#49ade5",
             data: [2.9, 4.0, 4.1, 3.8, 6.2, 2.8],
-            borderDash: [5],
-            fill: "Disabled",
+            borderDash: [4],
+            pointRadius: 0,
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -636,18 +704,24 @@ export default {
             label: "ชาย",
             backgroundColor: "#9ACDE9",
             data: [638, 557, 784, 652, 145, 24],
+            barPercentage: 0.5,
           },
           {
             label: "หญิง",
             backgroundColor: "#F8C5C5",
             data: [270, 250, 275, 480, 145, 40],
+            barPercentage: 0.5,
           },
         ],
       },
     });
     console.log(bar1_c3_p4);
-
-    var ctx2_c2_p4 = document.getElementById("graph2_c2_p4").getContext("2d");
+    // กราฟชาย เฉลี่ย
+    var ctx2_c2_p4 = document.getElementById("graph2_c2_p4").getContext("2d"),
+      gradient_2c2p4 = ctx2_c2_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_2c2p4.addColorStop(0, "rgb(30, 135, 244)");
+    gradient_2c2p4.addColorStop(0.57, "rgb(255, 255, 255)");
+    gradient_2c2p4.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c2_p4 = new Chart(ctx2_c2_p4, {
       type: "line",
       options: {
@@ -687,10 +761,11 @@ export default {
         datasets: [
           {
             label: "BPM",
-            backgroundColor: "#BADCEF",
+            backgroundColor: gradient_2c2p4,
+            pointRadius: 0,
+            borderColor: "#1796d8",
             data: [60, 89, 92, 107, 122, 59],
-            borderDash: [5],
-            fill: "Disabled",
+            borderDash: [4],
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -698,7 +773,11 @@ export default {
     });
     console.log(bar2_c2_p4);
 
-    var ctx3_c2_p4 = document.getElementById("graph3_c2_p4").getContext("2d");
+    var ctx3_c2_p4 = document.getElementById("graph3_c2_p4").getContext("2d"),
+      gradient_3c2p4 = ctx3_c2_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_3c2p4.addColorStop(0, "rgb(242, 140, 140)");
+    gradient_3c2p4.addColorStop(0.58, "rgb(255, 255, 255)");
+    gradient_3c2p4.addColorStop(1, "rgb(255, 255, 255)");
     var bar3_c2_p4 = new Chart(ctx3_c2_p4, {
       type: "line",
       options: {
@@ -738,10 +817,11 @@ export default {
         datasets: [
           {
             label: "BPM",
-            backgroundColor: "#F28C8C",
+            backgroundColor: gradient_3c2p4,
+            borderColor: "#F28C8C",
+            pointRadius: 0,
             data: [60, 89, 92, 107, 122, 59],
             borderDash: [5],
-            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -782,9 +862,8 @@ export default {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         datasets: [
           {
-            barPercentage: 0.5,
-            barThickness: 6,
-            maxBarThickness: 8,
+            barPercentage: 0.9,
+            barThickness: 10,
             minBarLength: 2,
             backgroundColor: [
               "#58BFAE",
@@ -801,7 +880,11 @@ export default {
     });
     console.log(bar1_c2_p4);
 
-    var ctx2_c3_p4 = document.getElementById("graph2_c3_p4").getContext("2d");
+    var ctx2_c3_p4 = document.getElementById("graph2_c3_p4").getContext("2d"),
+      gradient_2c3p4 = ctx2_c3_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_2c3p4.addColorStop(0, "rgb(201, 83, 250)");
+    gradient_2c3p4.addColorStop(0.68, "rgb(255, 255, 255)");
+    gradient_2c3p4.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c3_p4 = new Chart(ctx2_c3_p4, {
       type: "line",
       options: {
@@ -837,10 +920,11 @@ export default {
         datasets: [
           {
             label: "ก้าว",
-            backgroundColor: "#B192BE",
-            data: [2900, 4000, 4100, 3800, 7200, 2800],
+            pointRadius: 0,
+            backgroundColor: gradient_2c3p4,
+            borderColor: "#bc35f4",
             borderDash: [5],
-            fill: "Disabled",
+            data: [2900, 4000, 4100, 3800, 7200, 2800],
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -860,7 +944,7 @@ export default {
 
 <style scoped>
 .card1_p4 {
-  padding:10px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .card1_p4_root {
   padding: 20px;

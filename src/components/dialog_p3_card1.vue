@@ -13,7 +13,7 @@
                 <tr v-for="item in data_card3" :key="item.id" align="center">
                   <th
                     scope="row"
-                    width="15%"
+                    width="16%"
                     align="left"
                     class="head_table_card3"
                   >
@@ -40,7 +40,7 @@
           <div class="content_top_right_page">
             <!-- data top right -->
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
@@ -86,7 +86,7 @@
             </div>
             <br />
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
@@ -180,14 +180,50 @@
                       {{ item.sit_change }}
                     </td>
                     <td>
-                      <v-btn
-                        style="background-color:#AD8DBB; color:white;"
-                        elevation="2"
-                        small
-                        width="80px"
-                      >
-                        {{ item.show_history }}
-                      </v-btn>
+                      <v-dialog v-model="dialog_2" scrollable>
+                        <template v-slot:activator="{ on, attrs50 }">
+                          <v-btn
+                            style="background-color:#AD8DBB; color:white;"
+                            elevation="2"
+                            small
+                            width="80px"
+                            v-bind="attrs50"
+                            v-on="on"
+                          >
+                            {{ item.show_history }}
+                          </v-btn>
+                        </template>
+                        <v-card>
+                          <v-card-title>
+                            <div class="head_dialog">
+                              <div>
+                                <span class="headline"
+                                  >รายละเอียดการเคลื่อนไหว</span
+                                >
+                              </div>
+                              <div>
+                                <v-btn
+                                  color="black darken-1"
+                                  icon
+                                  @click="dialog_2 = false"
+                                >
+                                  <v-icon>mdi-close</v-icon>
+                                </v-btn>
+                              </div>
+                            </div>
+                          </v-card-title>
+                          <v-card-text>
+                            กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
+                            เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                            ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                          </v-card-text>
+                          <v-card-content>
+                            <div>
+                              <!-- content diap3 1 c1 here -->
+                            </div>
+                          </v-card-content>
+                        </v-card>
+                      </v-dialog>
                     </td>
                   </tr>
                 </tbody>
@@ -401,6 +437,7 @@ export default {
   },
   data() {
     return {
+      dialog_2: false,
       items: [
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
         { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
@@ -461,19 +498,19 @@ export default {
       ],
       data_card3: [
         {
-          type: "All",
+          type: "รวม",
           icon: "mdi-circle",
           color: "#359BD3",
           data: [524, 643, 419, 419, 264, 555, 200],
         },
         {
-          type: "Steps",
+          type: "การก้าว",
           icon: "mdi-circle",
           color: "#A3A1FB",
           data: [139, 384, 223, 189, 158, 318, 93],
         },
         {
-          type: "Setting",
+          type: "การนั่งนาน",
           icon: "mdi-circle",
           color: "#FFDA83",
           data: [385, 259, 196, 230, 106, 237, 107],
@@ -493,12 +530,12 @@ export default {
   /* justify-items: center; */
   justify-content: center;
 }
-/* .head_dialog_c1_p3 {
-  width: 30%;
+.head_dialog {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-} */
+}
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;

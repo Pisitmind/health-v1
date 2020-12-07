@@ -1,7 +1,8 @@
 <template>
   <div class="Moving">
+    <!-- การ์ดการก้าว -->
     <div class="card1_p3">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p3_root">
           <div class="card1_p3_headNsub">
             <!-- head lr -->
@@ -13,7 +14,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p3">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#AD8DBB">mdi-shoe-print</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_step_03.svg"
+                        alt="step"
+                      />
                     </div>
                     <div class="card3-bot-text ">
                       <span><strong>การก้าว</strong></span>
@@ -49,9 +55,14 @@
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
                     <v-dialog v-model="dialog1" width="">
-                      <template v-slot:activator="{ on, attrs1 }">
-                        <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                      <template v-slot:activator="{ on, attrs2 }">
+                        <v-btn small icon fab v-bind="attrs2" v-on="on">
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -63,9 +74,12 @@
                                 icon
                                 @click="dialog1 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div>
@@ -149,8 +163,9 @@
         </div>
       </v-card>
     </div>
+    <!-- การ์ดเผาผลาญ -->
     <div class="card1_p3">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p3_root">
           <div class="card1_p3_headNsub">
             <!-- head lr -->
@@ -162,9 +177,14 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p3">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#F57C00">mdi-fire</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_brun_01.svg"
+                        alt="burn"
+                      />
                     </div>
-                    <div class="card3-bot-text ">
+                    <div class="card3-bot-text">
                       <span><strong>การเผาผลาญ</strong></span>
                     </div>
                   </div>
@@ -197,10 +217,15 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                    <v-dialog v-model="dialog2" width="">
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-btn small icon fab v-bind="attrs" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                    <v-dialog v-model="dialog20" width="">
+                      <template v-slot:activator="{ on, attrs10 }">
+                        <v-btn small icon fab v-bind="attrs10" v-on="on">
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -210,11 +235,14 @@
                               <v-btn
                                 color="black darken-1"
                                 icon
-                                @click="dialog2 = false"
+                                @click="dialog20 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div class="pd_text">
@@ -277,8 +305,9 @@
         </div>
       </v-card>
     </div>
+    <!-- การ์ด ออกกำลังกาย -->
     <div class="card1_p3">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p3_root">
           <div class="card1_p3_headNsub">
             <!-- head lr -->
@@ -343,7 +372,12 @@
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
                     <v-btn small icon fab class="hid">
-                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                      <img
+                        height="30px"
+                        class="filter-white"
+                        src="../assets/icon/icon_detail.svg"
+                        alt="detail"
+                      />
                     </v-btn>
                   </div>
                 </div>
@@ -422,6 +456,7 @@
         </div>
       </v-card>
     </div>
+    <br />
   </div>
 </template>
 
@@ -720,7 +755,7 @@ export default {
   data() {
     return {
       dialog1: false,
-      dialog2: false,
+      dialog20: false,
       items: [
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
         { gender: "ผญ", color: "F28C8C", data: [12, 132, 560, 22, 0] },
@@ -794,6 +829,23 @@ export default {
           avg: ["22.7%", "19.9%", "28%", "23.2%", "5.1%", "1.1%"],
         },
       ],
+      itm_walk: ["7วันล่าสุด", "1เดือนล่าสุด", "1ปีล่าสุด"],
+      new_item: [
+        {
+          no: "02",
+          date_time: "15 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งเพิ่มสูงขึ้นผิดปกติ มากกว่า 5 ครั้ง โปรดตรวจสอบว่าสวมใส่ปุปกรณ์หรือไม่",
+        },
+        {
+          no: "01",
+          date_time: "6 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งต่อเนื่องเกินกว่า 3 ชั่วโมง ควรขยับ หรือลุกจากที่นั่งเผื่อผ่อนคลายกล้ามเนื้อ",
+        },
+      ],
     };
   },
 };
@@ -812,6 +864,9 @@ export default {
 }
 .s-20 {
   width: 20%;
+}
+.big_font {
+  font-size: 25px;
 }
 .icon-set {
   display: flex;

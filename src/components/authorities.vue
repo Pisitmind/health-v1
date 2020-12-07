@@ -1,6 +1,6 @@
 <template>
   <div class="authorities">
-    <v-card>
+    <v-card class="bdr_12">
       <v-card-title>
         <div class="head_title_card_user">
           <div class="head_card_user">
@@ -75,11 +75,14 @@
                   label="ค้นหา"
                   type="text"
                   height="40px"
+                  dense
                 >
                   <template v-slot:append>
-                    <v-icon center>
-                      mdi-magnify
-                    </v-icon>
+                    <button>
+                      <v-icon center>
+                        mdi-magnify
+                      </v-icon>
+                    </button>
                   </template>
                 </v-text-field>
               </v-col>
@@ -94,20 +97,26 @@
         </span>
       </v-card-content>
       <v-card-content>
-        <v-container class="grey lighten-5">
-          <v-row>
-            <v-col v-for="idx in data_au" :key="idx.id" cols="12" sm="2">
-              <v-card class="au_card" elevation="2" outlined>
+        <v-container class="">
+          <v-row class="pd_content">
+            <v-col
+              class=""
+              v-for="idx in data_au"
+              :key="idx.id"
+              cols="12"
+              sm="2"
+            >
+              <v-card class="au_card bdr_12">
                 <div class="img_n_name">
-                <div class="img_avatar" >
-                  <v-avatar size="84">
-                     <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
-                        <img :src="idx.pic">
-                  </v-avatar>
-                </div>
-                <div class="n_card">
-                  <span style="color:#88432F;">{{ idx.name }}</span>
-                </div>
+                  <div class="img_avatar">
+                    <v-avatar size="84" aspect-ratio="1">
+                      <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
+                      <img :src="idx.pic" />
+                    </v-avatar>
+                  </div>
+                  <div class="n_card">
+                    <span style="color:#88432F;">{{ idx.name }}</span>
+                  </div>
                 </div>
 
                 <div class="rol_card ">
@@ -137,14 +146,14 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           // pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user1.jpg",
-          pic: "https://ibb.co/nDCXTFP",
+          pic: "https://i.ibb.co/D7pBNZr/image.png",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "./assets/user_pic/user7.jpg",
+          pic: "https://i.ibb.co/kJbWBrQ/user2.jpg",
           // pic: "./src/assets/user_pic/user2.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
@@ -152,49 +161,55 @@ export default {
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user3.jpg",
+          pic: "https://i.ibb.co/hsNP4R5/user3.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user4.jpg",
+          pic: "https://i.ibb.co/mJz1Tm9/user4.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user5.jpg",
+          pic: "https://i.ibb.co/1mFyKnY/user5.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user6.jpg",
+          pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user7.jpg",
+          pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          // pic:
+          //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user7.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user8.jpg",
+          pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          // pic:
+          //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user8.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
         },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user9.jpg",
+          pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          // pic:
+          //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user9.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -206,8 +221,14 @@ export default {
 </script>
 
 <style scoped>
-.authorities{
-  padding:20px;
+.authorities {
+  padding: 20px;
+}
+.bg_white {
+  background-color: white;
+}
+.pd_content {
+  padding: 0 15px;
 }
 .n_card {
   text-align: center;
@@ -228,11 +249,11 @@ export default {
   width: 100%;
   padding: 0 15px;
 }
-.pd_h_card{
-  color:grey;
+.pd_h_card {
+  /* color: grey; */
   font-size: bold;
   font-size: 16px;
-  padding:20px;
+  padding: 20px;
 }
 .head_dialog_c1_user {
   width: 50%;
@@ -252,9 +273,9 @@ export default {
   width: 50px;
   height: 50px;
 }
-.img_n_name{
-    display: flex;
-    flex-direction: column;
+.img_n_name {
+  display: flex;
+  flex-direction: column;
 }
 .au_card {
   width: 100%;
@@ -263,8 +284,8 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.img_avatar{
-    display: flex;
-    justify-content: center;
+.img_avatar {
+  display: flex;
+  justify-content: center;
 }
 </style>

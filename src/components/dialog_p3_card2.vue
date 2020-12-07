@@ -44,11 +44,13 @@
           <div class="content_top_right_page">
             <!-- data top right -->
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย </span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -90,11 +92,13 @@
             </div>
             <br />
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr>
                     <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง (ในช่วง 6 เดือน)</span>
+                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง</span>
+                      <br />
+                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -204,7 +208,7 @@ export default {
         .getElementById("graphdia1_c1_p3")
         .getContext("2d"),
       gradient1_c1_p3 = ctx_dia_c1_p3.createLinearGradient(0, 0, 0, 300),
-    gradient2_c1_p3 = ctx_dia_c1_p3.createLinearGradient(0, 0, 0, 300);
+      gradient2_c1_p3 = ctx_dia_c1_p3.createLinearGradient(0, 0, 0, 300);
     gradient1_c1_p3.addColorStop(0, "rgb(82, 169, 217)");
     gradient1_c1_p3.addColorStop(0.6414141414141414, "rgb(255, 255, 255)");
     gradient1_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
@@ -260,7 +264,11 @@ export default {
     });
     console.log(bar_dia_c1_p3);
 
-    var ctx_dia_c2 = document.getElementById("graphdia_c2_p3").getContext("2d");
+    var ctx_dia_c2 = document.getElementById("graphdia_c2_p3").getContext("2d"),
+      gradient_dia_c2_p3 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_dia_c2_p3.addColorStop(0, "rgb(114, 114, 242)");
+    gradient_dia_c2_p3.addColorStop(0.31, "rgb(255, 255, 255)");
+    gradient_dia_c2_p3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -292,8 +300,11 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
+            backgroundColor: gradient_dia_c2_p3,
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
+            pointRadius: 0,
+            borderDash: [2],
+            borderColor: "#A5A5F7",
           },
         ],
         labels: [
@@ -310,7 +321,11 @@ export default {
       },
     });
     console.log(bar_dia_c2);
-    var ctx_dia_c3 = document.getElementById("graphdia_c3_p3").getContext("2d");
+    var ctx_dia_c3 = document.getElementById("graphdia_c3_p3").getContext("2d"),
+      gradient_dia_c3_p3 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_dia_c3_p3.addColorStop(0, "rgb(255, 226, 156)");
+    gradient_dia_c3_p3.addColorStop(0.4797979797979798, "rgb(255, 255, 255)");
+    gradient_dia_c3_p3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -342,7 +357,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: gradient_dia_c3_p3,
+            pointRadius: 0,
+            borderColor:"#f9b000",
+            borderDash: [2],
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],
@@ -453,19 +471,19 @@ export default {
       ],
       data_card3: [
         {
-          type: "All",
+          type: "เฉลี่ย",
           icon: "mdi-circle",
           color: "#359BD3",
           data: [524, 643, 419, 419, 264, 555, 200],
         },
         {
-          type: "Steps",
+          type: "ชาย",
           icon: "mdi-circle",
           color: "#A3A1FB",
           data: [139, 384, 223, 189, 158, 318, 93],
         },
         {
-          type: "Setting",
+          type: "หญิง",
           icon: "mdi-circle",
           color: "#FFDA83",
           data: [385, 259, 196, 230, 106, 237, 107],

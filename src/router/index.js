@@ -102,6 +102,12 @@ const router = new VueRouter({
   mode: "history", // Remove the hash from the URL, optional.
   routes,
 });
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+
+  // More code ...
+  next();
+});
 
 // router.replace("/login");
 

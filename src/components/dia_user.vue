@@ -2,7 +2,7 @@
   <div class="dia_user">
     <!-- Dialog card in  -->
     <div class="pd_20">
-      <v-card>
+      <v-card elevation="0">
         <v-card-content>
           <div class="content_dialog_user">
             <v-form>
@@ -10,7 +10,7 @@
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
-                    <v-col cols="3" sm="3">
+                    <v-col cols="12" sm="3">
                       <v-card class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
@@ -27,27 +27,32 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
-                    <v-col cols="" sm="5">
+                    <v-col cols="12" sm="7">
                       <v-text-field
                         v-model="name_au"
                         label="ชื่อ"
                         placeholder="ชื่อพนักงาน"
+                        
                       >
                       </v-text-field>
                       <v-row>
+                        <v-col cols="12" sm="5">
                         <v-text-field
                           v-model="tel_au"
                           label="เบอร์โทรศัพท์"
                           placeholder="(+66)"
                         >
                         </v-text-field>
+                        </v-col>
                         <v-spacer></v-spacer>
+                        <v-col cols="12" sm="7">
                         <v-text-field
                           v-model="email"
                           label="อีเมลล์"
                           placeholder="กรอกอีเมลล์"
                         >
                         </v-text-field>
+                        </v-col>
                       </v-row>
                     </v-col>
                   </v-row>
@@ -113,7 +118,7 @@ export default {
       modal: false,
       menu2: false,
       title: "",
-      items: ["เจ้าหน้าที่", "ผู้ดูแล", "ผู้ดูแลทั่วไป", "สมาชิก"],
+      items: ["เจ้าหน้าที่ทั่วไป", "ผู้ดูแล", "ผู้ดูแลทั่วไป", "สมาชิก"],
       description: "",
       rules: [(v) => v.length <= 50 || "Max 50 characters"],
       rules_1000: [(v) => v.length <= 1000 || "Max 1000 characters"],
@@ -128,7 +133,7 @@ export default {
 }
 
 .pd_20{
-    padding:20px;
+    padding:0 20px 20px 20px;
 }
 .row_card {
   display: flex;
@@ -145,10 +150,13 @@ export default {
   height: 100px;
 }
 .mini_card1 {
-  width: 220px;
-  height: 130px;
+  width: 180px;
+  height: 180px;
   display: flex;
+  justify-items: center;
+  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 .in_card1 {
   width: 100%;

@@ -1,6 +1,6 @@
 <template>
   <div class="report">
-    <v-card>
+    <v-card class="bdr_12">
       <v-tabs v-model="tab" background-color="blue lighten-2" dark>
         <v-tab v-for="item in items" :key="item.tab">
           {{ item.content }}

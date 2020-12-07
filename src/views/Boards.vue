@@ -1,7 +1,7 @@
 <template>
   <div class="boards">
     <div class="card_1_p10">
-      <v-card>
+      <v-card class="bdr_12">
         <v-card-title>
           <div class="head_card_p10">
             <div>
@@ -76,11 +76,14 @@
                   label="ค้นหา"
                   type="text"
                   height="40px"
+                  dense
                 >
                   <template v-slot:append>
+                    <button>
                     <v-icon center>
                       mdi-magnify
                     </v-icon>
+                    </button>
                   </template>
                 </v-text-field>
               </v-col>
@@ -409,7 +412,7 @@ export default {
   display: flex;
   width: 100%;
   padding: 0 15px;
-  padding-top:20px;
+  padding-top: 20px;
   justify-content: space-between;
 }
 .head_text_content {

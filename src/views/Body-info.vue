@@ -1,7 +1,7 @@
 <template>
   <div class="bodyinfo">
     <div class="card1_p5">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p5_root">
           <div class="card1_p5_headNsub">
             <!-- head lr -->
@@ -13,16 +13,25 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p5">
                     <div style="padding-right:10px;">
-                      <v-icon large color="#AD8DBB">mdi-weight-gram</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_weight_01.svg"
+                        alt="weight"
+                      />
                     </div>
-                    <div class="card5-bot-text " style="text-align: center;">
+                    <div class="card5-bot-text" style="text-align: center;">
                       <span><strong>ค่าน้ำหนัก</strong></span>
                     </div>
                   </div>
                   <!-- btn sex & age -->
                   <div class="sex_age_title_card1_p5">
                     <div class="sex_title">
-                      <v-btn class="white--text " small color="#AD8DBB"
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
                         ><span>เพศ</span></v-btn
                       >
                     </div>
@@ -32,6 +41,7 @@
                         small
                         outlined
                         color="#AD8DBB"
+                        width="80px"
                         ><span>อายุ</span></v-btn
                       >
                     </div>
@@ -47,8 +57,20 @@
                     <!-- คอนเท้นย่อย ยัง -->
                     <v-dialog v-model="dialog0" width="">
                       <template v-slot:activator="{ on, attrs1 }">
-                        <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <v-btn
+                          small
+                          icon
+                          fab
+                          v-bind="attrs1"
+                          v-on="on"
+                          class="hid"
+                        >
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -148,7 +170,7 @@
       </v-card>
     </div>
     <div class="card1_p5">
-      <v-card elevation="2" outlined height="">
+      <v-card class="bdr_12">
         <div class="card1_p5_root">
           <div class="card1_p5_headNsub">
             <!-- head lr -->
@@ -209,7 +231,12 @@
                     <v-dialog v-model="dialog2" width="">
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn small icon fab v-bind="attrs" v-on="on">
-                          <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
                         </v-btn>
                       </template>
                       <v-card>
@@ -221,9 +248,12 @@
                                 icon
                                 @click="dialog2 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                   <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div class="pd_text">
@@ -544,8 +574,11 @@ export default {
 </script>
 
 <style scoped>
+.hid {
+  display: none;
+}
 .card1_p5 {
-  padding:10px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .card1_p5_root {
   padding: 20px;
@@ -572,6 +605,11 @@ export default {
 .card5-bot-text {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 20px;
 }
 /* .head_card1_p5_r{
   padding:20px;
@@ -626,9 +664,6 @@ export default {
 .head_card3_p5_l_title {
   display: flex;
   width: 100%;
-}
-.title_card1_p5 {
-  display: flex;
 }
 .sex_age_title_card1_p5 {
   display: flex;

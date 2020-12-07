@@ -18,7 +18,6 @@
           </v-card>
           <v-card flat v-if="data.no === '2'">
             <v-card-content>
-              
             </v-card-content>
           </v-card>
         </v-tab-item>

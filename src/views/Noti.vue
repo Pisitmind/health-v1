@@ -1,7 +1,7 @@
 <template>
   <div class="noti">
     <div class="card_el">
-      <v-card elevation="3" outlined>
+      <v-card class="bdr_12">
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
@@ -15,7 +15,12 @@
                   <v-dialog v-model="dialog" width="">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn small icon fab v-bind="attrs" v-on="on">
-                        <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
                       </v-btn>
                     </template>
                     <v-card>
@@ -26,8 +31,9 @@
                           </div>
                           <div>
                             <v-btn
-                              color="green darken-1"
+                              color="black darken-1"
                               icon
+                              x-large
                               @click="dialog = false"
                             >
                               <v-icon>mdi-close</v-icon>
@@ -219,7 +225,11 @@
             </div>
 
             <div class="c_size c1">
-              <v-card class="card1-subcard-3 ct_set" width="" height="">
+              <v-card
+                class="card1-subcard-3 ct_set bdr_12_only"
+                width=""
+                height=""
+              >
                 <v-card-title>
                   <span class="topic_name_card pl-5 ">
                     Heart rate zone
@@ -267,7 +277,7 @@
     </div>
     <div class="card_el_card2">
       <!-- card2 head+content -->
-      <v-card class="card2_size" elevation="3" outlined>
+      <v-card class="bdr_12">
         <div class="card2_root">
           <!-- card2 header -->
           <div class="head-card2">
@@ -276,7 +286,11 @@
                 <div class="title_card2">
                   <div class="card2_nameNicon">
                     <div style="padding-right:10px;">
-                      <v-icon color="#009688">mdi-amazon-alexa</v-icon>
+                      <img
+                        height="40px"
+                        src="../assets/icon/icon_weight_01.svg"
+                        alt="phone"
+                      />
                     </div>
                     <div class="card2_bot_text ">
                       <span><strong>Ideal weight</strong></span>
@@ -400,31 +414,66 @@
                       <th></th>
                       <th>
                         <div class="i-human">
-                          <div><v-icon>mdi-human-male</v-icon></div>
+                          <div>
+                            <img
+                              height="40px"
+                              class="filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-21.png"
+                              alt="phone"
+                            />
+                          </div>
                           <div><p>Underweight</p></div>
                         </div>
                       </th>
                       <th>
                         <div class="i-human">
-                          <div><v-icon>mdi-human-male</v-icon></div>
+                          <div>
+                            <img
+                              height="40px"
+                              class="filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-23.png"
+                              alt="phone"
+                            />
+                          </div>
                           <div><p>Normal</p></div>
                         </div>
                       </th>
                       <th>
                         <div class="i-human">
-                          <div><v-icon>mdi-human-male</v-icon></div>
+                          <div>
+                            <img
+                              height="40px"
+                              class="filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-20.png"
+                              alt="phone"
+                            />
+                          </div>
                           <div><p>Overweight</p></div>
                         </div>
                       </th>
                       <th>
                         <div class="i-human">
-                          <div><v-icon>mdi-human-male</v-icon></div>
+                          <div>
+                            <img
+                              height="40px"
+                              class="filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-18.png"
+                              alt="phone"
+                            />
+                          </div>
                           <div><p>Obese I</p></div>
                         </div>
                       </th>
                       <th>
                         <div class="i-human">
-                          <div><v-icon>mdi-human-male</v-icon></div>
+                          <div>
+                            <img
+                              height="40px"
+                              class="filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-15.png"
+                              alt="phone"
+                            />
+                          </div>
                           <div><p>Obese II</p></div>
                         </div>
                       </th>
@@ -459,7 +508,7 @@
     </div>
     <div class="card_el_card2">
       <!-- card2 head+content -->
-      <v-card class="card2_size" elevation="3" outlined>
+      <v-card class="bdr_12">
         <div class="card2_root">
           <!-- card2 header -->
           <div class="head-card2">
@@ -646,7 +695,7 @@
       </v-card>
     </div>
     <div class="card_el_card2">
-      <v-card class="card2_size" elevation="3" outlined>
+      <v-card class="bdr_12">
         <div class="card3_root">
           <div class="head-card2">
             <div class="">
@@ -654,7 +703,12 @@
                 <div class="title_card2">
                   <div class="card2_nameNicon">
                     <div style="padding-right:10px;">
-                      <v-icon color="#009688">mdi-foot-print</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_step_03.svg"
+                        alt="step"
+                      />
                     </div>
                     <div class="card2_bot_text ">
                       <span><strong>Step</strong></span>
@@ -1112,6 +1166,13 @@ export default {
 .hid {
   display: none;
 }
+.card2_bot_text {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  font-size: 22px !important;
+}
 .mini_fz {
   font-size: 12px;
 }
@@ -1272,6 +1333,7 @@ export default {
 .card2_nameNicon {
   display: flex;
   justify-content: center;
+  justify-items: center;
   /* padding:20px; */
 }
 .t_switch {

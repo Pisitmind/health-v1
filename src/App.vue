@@ -43,6 +43,13 @@ html{
   font-family: Roboto;
   /* overflow-y:hidden; */
 }
+.bdr_12 {
+  border-radius: 12px !important;
+  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.bdr_12_only {
+  border-radius: 12px !important;
+}
 /*
 html::-webkit-scrollbar { 
     display: none; 

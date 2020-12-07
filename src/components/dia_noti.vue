@@ -10,7 +10,7 @@
         <div class="content_top_right_page">
           <!-- data top right -->
           <div>
-            <v-card width="" class="c1_c2_dialog">
+            <v-card width="" class="c1_c2_dialog bdr_12">
               <table class="data_c1c2">
                 <tr>
                   <td class="left" width="80%" height="20%">
@@ -56,7 +56,7 @@
           </div>
           <br />
           <div>
-            <v-card width="" class="c1_c2_dialog">
+            <v-card width="" class="c1_c2_dialog bdr_12">
               <table class="data_c1c2">
                 <tr>
                   <td class="left" width="80%" height="20%">
