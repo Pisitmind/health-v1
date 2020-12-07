@@ -1,18 +1,18 @@
 <template>
   <div class="dialog_p4_card2">
-     <v-card elevation="0">
+    <v-card elevation="0">
       <v-card-title> </v-card-title>
       <v-card-content>
         <div class="content_dialog_page_top">
           <div class="content_top_left_page">
             <div class="set_center">
-              <canvas id="graph1_c1_p4" width="500px" height="200px"></canvas>
+              <canvas id="graph1_c2_p4" width="500px" height="200px"></canvas>
             </div>
           </div>
           <div class="content_top_right_page">
             <!-- data top right -->
             <div>
-              <v-card width="" class="c1_c2_dialog">
+              <v-card width="" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr width="">
                     <td class="left" width="70%" height="20%">
@@ -60,7 +60,7 @@
             </div>
             <br />
             <div>
-             <v-card width="400px" class="c1_c2_dialog">
+              <v-card width="400px" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr width="">
                     <td class="left" width="70%" height="20%">
@@ -126,7 +126,7 @@
                       ตำแหน่ง
                     </th>
                     <th class="text-left">
-                     ค่าเฉลี่ยการเต้นของหัวใจ
+                      ค่าเฉลี่ยการเต้นของหัวใจ
                     </th>
                     <th class="text-left">
                       เปลี่ยนแปลงการเต้นของหัวใจ
@@ -175,26 +175,38 @@ import Chart from "chart.js";
 export default {
   mounted: function() {
     var ctx_dia_c1_p4 = document
-      .getElementById("graph1_c1_p4")
-      .getContext("2d");
+        .getElementById("graph1_c2_p4")
+        .getContext("2d"),
+      gradient_c2p4 = ctx_dia_c1_p4.createLinearGradient(0, 0, 0, 300);
+    gradient_c2p4.addColorStop(0, "rgb(31, 226, 136)");
+    gradient_c2p4.addColorStop(0.6818181818181818, "rgb(255, 255, 255)");
+    gradient_c2p4.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c1_p4 = new Chart(ctx_dia_c1_p4, {
       type: "line",
       data: {
         datasets: [
           {
+            label: "เฉลี่ย",
+            backgroundColor: gradient_c2p4,
+            borderColor: "#2CD889",
+            pointRadius: 0,
+            data: [71.0, 37.5, 65.5, 64.25, 50.5, 67.75, 37.0, 59.25, 42.4],
+          },
+          {
             label: "ชาย",
-            backgroundColor: "#A3A1FB",
+            borderColor: "#359BD3",
+            fill: "Disabled",
+            borderDash: [3],
+            pointRadius: 0,
             data: [81.1, 33, 70, 54, 73, 40.5, 41.5, 61.5, 74.5],
           },
           {
             label: "หญิง",
-            backgroundColor: "#FFDA83",
+            borderColor: "#F7617D",
+            fill: "Disabled",
+            borderDash: [3],
+            pointRadius: 0,
             data: [61.5, 41.5, 61.5, 74.5, 61.0, 95.0, 10.5, 57.0, 10.3],
-          },
-          {
-            label: "เฉลี่ย",
-            backgroundColor: "#2CD889",
-            data: [71.0, 37.5, 65.5 , 64.25,50.5 , 67.75, 37.0 , 59.25, 42.4],
           },
         ],
         labels: [
@@ -233,8 +245,12 @@ export default {
     console.log(bar_dia_c1_p4);
 
     var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
+        .getElementById("graph_dialog_c2")
+        .getContext("2d"),
+      gradient_diac2_0 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_diac2_0.addColorStop(0, "rgb(116, 110, 244)");
+    gradient_diac2_0.addColorStop(0.31, "rgb(255, 255, 255)");
+    gradient_diac2_0.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -266,7 +282,9 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#3db161",
+            backgroundColor: gradient_diac2_0,
+            borderDash: [3],
+            pointRadius: 0,
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -285,8 +303,12 @@ export default {
     });
     console.log(bar_dia_c2);
     var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
+        .getElementById("graph_dialog_c3")
+        .getContext("2d"),
+      gradient_diac3 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_diac3.addColorStop(0, "rgb(249, 132, 153)");
+    gradient_diac3.addColorStop(0.36, "rgb(255, 255, 255)");
+    gradient_diac3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -318,7 +340,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "purple",
+            backgroundColor: gradient_diac3,
+            borderColor: "#f98499",
+            pointRadius:0,
+            borderDash: [3],
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],

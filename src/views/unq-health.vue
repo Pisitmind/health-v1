@@ -286,7 +286,7 @@
                   </div>
                 </div>
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1" width="" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้
@@ -359,7 +359,7 @@
                 </div>
                 <!-- <v-divider vertical></v-divider> -->
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1" width="" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้

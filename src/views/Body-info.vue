@@ -248,7 +248,7 @@
                                 icon
                                 @click="dialog2 = false"
                               >
-                                   <img
+                                <img
                                   height="30px"
                                   class="filter-white"
                                   src="../assets/icon/icon_prev.svg"
@@ -315,7 +315,7 @@
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p5_content_right pd_r_30">
-              <v-card class="card2-subcard-3  ct_set" width="" height="">
+              <v-card class="card2-subcard-3 ct_set bdr_12_only" width="" height="">
                 <v-card-subtitle>
                   <span class="topic-name-card_c3 ">
                     ตัวบ่งชี้
@@ -416,7 +416,11 @@ export default {
     });
     console.log(bar1_p5);
 
-    var ctx2_c1_p5 = document.getElementById("graph2_c1_p5").getContext("2d");
+    var ctx2_c1_p5 = document.getElementById("graph2_c1_p5").getContext("2d"),
+      gradient2_c1p5 = ctx2_c1_p5.createLinearGradient(0, 0, 0, 300);
+    gradient2_c1p5.addColorStop(0, "rgb(26, 184, 169)");
+    gradient2_c1p5.addColorStop(0.57, "rgb(255, 255, 255)");
+    gradient2_c1p5.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c1_p5 = new Chart(ctx2_c1_p5, {
       type: "line",
       options: {
@@ -456,10 +460,11 @@ export default {
         datasets: [
           {
             label: "ก้าว",
-            backgroundColor: "#BADCEF",
+            backgroundColor: gradient2_c1p5,
             data: [2.9, 4.0, 4.1, 3.8, 7.2, 2.8],
             borderDash: [5],
-            fill: "Disabled",
+            borderColor: "#1ab8a9",
+            pointRadius: 0,
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],

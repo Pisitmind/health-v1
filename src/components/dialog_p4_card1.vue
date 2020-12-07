@@ -203,9 +203,9 @@ export default {
       gradient_1c1p4 = ctx_dia_c1_p4.createLinearGradient(0, 0, 0, 300),
       gradient1_1c1p4 = ctx_dia_c1_p4.createLinearGradient(0, 0, 0, 300);
     gradient_1c1p4.addColorStop(0, "rgb(125, 174, 231)");
-    gradient_1c1p4.addColorStop(.5, "rgb(255, 255, 255)");
+    gradient_1c1p4.addColorStop(0.5, "rgb(255, 255, 255)");
     gradient1_1c1p4.addColorStop(0, "rgb(237, 119, 119)");
-    gradient1_1c1p4.addColorStop(.4, "rgb(255, 255, 255)");
+    gradient1_1c1p4.addColorStop(0.4, "rgb(255, 255, 255)");
     var bar_dia_c1_p4 = new Chart(ctx_dia_c1_p4, {
       type: "line",
       data: {
@@ -214,14 +214,14 @@ export default {
             label: "ชาย",
             backgroundColor: gradient_1c1p4,
             borderColor: "#A8C5DD",
-            pointBackgroundColor:"white",
+            pointBackgroundColor: "white",
             data: [8.11, 3.3, 7.0, 5.4, 7.3, 4.05],
           },
           {
             label: "หญิง",
             backgroundColor: gradient1_1c1p4,
-            borderColor:"#FFD4D4",
-            pointBackgroundColor:"white",
+            borderColor: "#FFD4D4",
+            pointBackgroundColor: "white",
             data: [6.15, 4.15, 6.15, 7.45, 6.1, 9.5],
           },
         ],
@@ -251,8 +251,12 @@ export default {
     console.log(bar_dia_c1_p4);
 
     var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
+        .getElementById("graph_dialog_c2")
+        .getContext("2d"),
+      gradient_diac2 = ctx_dia_c2.createLinearGradient(0, 0, 0, 300);
+    gradient_diac2.addColorStop(0, "rgb(82, 76, 239)");
+    gradient_diac2.addColorStop(0.32, "rgb(255, 255, 255)");
+    gradient_diac2.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
@@ -284,7 +288,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#E8E7FE",
+            backgroundColor: gradient_diac2,
+            borderColor: "#524cef",
+            borderDash: [2],
+            pointRadius: 0,
             data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
           },
         ],
@@ -303,8 +310,12 @@ export default {
     });
     console.log(bar_dia_c2);
     var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
+        .getElementById("graph_dialog_c3")
+        .getContext("2d"),
+      gradient_diac3 = ctx_dia_c3.createLinearGradient(0, 0, 0, 300);
+    gradient_diac3.addColorStop(0, "rgb(250, 207, 37)");
+    gradient_diac3.addColorStop(0.31, "rgb(255, 255, 255)");
+    gradient_diac3.addColorStop(1, "rgb(255, 255, 255)");
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
@@ -336,7 +347,10 @@ export default {
         datasets: [
           {
             label: "TODAY",
-            backgroundColor: "#ffdc89",
+            backgroundColor: gradient_diac3,
+            borderColor: "#facf25",
+            borderDash: [2],
+            pointRadius: 0,
             data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
           },
         ],

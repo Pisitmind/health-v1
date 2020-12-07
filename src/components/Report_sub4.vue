@@ -130,7 +130,7 @@
       </v-row>
       <v-row height="400px" justify="space-around">
         <v-col cols="12" sm="">
-          <v-card class="pa-2" width="auto" height="100%">
+          <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
             <v-card-subtitle>
               <span class="topic-name-card_c3 pl-5">
                 BMI

@@ -6,7 +6,12 @@
           <div class="head_card_p10">
             <div>
               <v-btn color="blue darken-1" icon large @click="dialog = false">
-                <v-icon>mdi-bottle-tonic-plus</v-icon>
+                <img
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_news.svg"
+                  alt="news"
+                />
               </v-btn>
             </div>
             <div class="text_header">
@@ -42,9 +47,12 @@
                               icon
                               @click="dialog1 = false"
                             >
-                              <v-icon
-                                >mdi-arrow-left-drop-circle-outline</v-icon
-                              >
+                              <img
+                                height="30px"
+                                class="filter-white"
+                                src="../assets/icon/icon_prev.svg"
+                                alt="prev"
+                              />
                             </v-btn>
                           </div>
                           <div class="head_text_content">
@@ -80,9 +88,9 @@
                 >
                   <template v-slot:append>
                     <button>
-                    <v-icon center>
-                      mdi-magnify
-                    </v-icon>
+                      <v-icon center>
+                        mdi-magnify
+                      </v-icon>
                     </button>
                   </template>
                 </v-text-field>

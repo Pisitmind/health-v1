@@ -95,7 +95,7 @@
         <br />
         <v-row height="400px" justify="space-around">
           <v-col col="12" sm="3">
-            <v-card class="pa-2" width="" height="100%">
+            <v-card class="pa-2 bdr_12_only" width="" height="100%">
               <v-card-subtitle>
                 <span class="topic-name-card_c3">
                   ตัวบ่งชี้
@@ -142,7 +142,7 @@
             </v-card>
           </v-col>
           <v-col cols="12" sm="4">
-             <v-card class="pa-2" width="auto" height="100%">
+             <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
               <v-card-subtitle>
                 <span class="topic-name-card_c3 pl-5">
                   ช่วงอายุ
@@ -174,7 +174,7 @@
             </v-card>
           </v-col>
           <v-col cols="12" sm="4">
-           <v-card class="pa-2" width="auto" height="100%">
+           <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
               <v-card-subtitle>
                 <span class="topic-name-card_c3 pl-5">
                   อุปกรณ์วัดค่าสุขภาพ

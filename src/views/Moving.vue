@@ -417,7 +417,7 @@
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p3_content_right pd_r_30">
-              <v-card class="card2-subcard-3  ct_set" width="" height="">
+              <v-card class="card2-subcard-3 ct_set bdr_12_only" width="" height="">
                 <v-card-subtitle>
                   <span class="topic-name-card_c3 ">
                     ตัวบ่งชี้
