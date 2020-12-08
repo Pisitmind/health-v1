@@ -1,8 +1,48 @@
 <template>
-  <div class="dia_user">
-    <!-- Dialog card in  -->
+  <div class="dia_user_data">
+    <!-- Dialog card in  userloop-->
     <div class="pd_20">
       <v-card elevation="0">
+        <v-card-title>
+          <div class="head_of_dialog_user">
+            <div class="left_head">
+              <div>
+                <v-btn color="green darken-1" icon>
+                  <img
+                    height="30px"
+                    class="filter-white"
+                    src="../assets/icon/icon_prev.svg"
+                    alt="prev"
+                  />
+                </v-btn>
+              </div>
+              <div class="head_text_content" style="paddint-left:15px">
+                <span class="headline">เพิ่มเจ้าหน้าที่</span>
+              </div>
+            </div>
+            <div class="btn_head_user">
+              <v-btn
+                class="white--text  mx-2"
+                small
+                width="120px"
+                height="30px"
+                color="#EE3743"
+              >
+                <span> ลบ</span>
+              </v-btn>
+              <v-btn
+                class="white--text  mx-2"
+                small
+                width="120px"
+                height="30px"
+                color="#AD8DBB"
+                @click="dialog99 = false"
+              >
+                <span> บันทึก</span>
+              </v-btn>
+            </div>
+          </div>
+        </v-card-title>
         <v-card-content>
           <div class="content_dialog_user">
             <v-form>
@@ -14,15 +54,12 @@
                       <v-card class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
-                            <v-btn class="center" icon small>
-                              <v-icon color="#8A4532"
-                                >mdi-camera-outline</v-icon
-                              >
-                            </v-btn>
-                            <span class="card_text">รูปเจ้าหน้าที่</span>
-                            <p class="sub_text">
-                              ขนาด 480x480 หรือ 1:1
-                            </p>
+                            <img
+                              height="190"
+                              rounded
+                              style="border-radius:16px!important;"
+                              src="../assets/user_pic/user7.jpg"
+                            />
                           </div>
                         </v-action-card>
                       </v-card>
@@ -32,26 +69,25 @@
                         v-model="name_au"
                         label="ชื่อ"
                         placeholder="ชื่อพนักงาน"
-                        
                       >
                       </v-text-field>
                       <v-row>
                         <v-col cols="12" sm="5">
-                        <v-text-field
-                          v-model="tel_au"
-                          label="เบอร์โทรศัพท์"
-                          placeholder="(+66)"
-                        >
-                        </v-text-field>
+                          <v-text-field
+                            v-model="tel_au"
+                            label="เบอร์โทรศัพท์"
+                            placeholder="(+66)"
+                          >
+                          </v-text-field>
                         </v-col>
                         <v-spacer></v-spacer>
                         <v-col cols="12" sm="7">
-                        <v-text-field
-                          v-model="email"
-                          label="อีเมลล์"
-                          placeholder="กรอกอีเมลล์"
-                        >
-                        </v-text-field>
+                          <v-text-field
+                            v-model="email"
+                            label="อีเมลล์"
+                            placeholder="กรอกอีเมลล์"
+                          >
+                          </v-text-field>
                         </v-col>
                       </v-row>
                     </v-col>
@@ -76,8 +112,8 @@
                     <v-col cols="12" sm="6">
                       <v-text-field
                         v-model="pass"
-                        :type="'password'"
                         label="รหัสผ่าน"
+                        :type="'password'"
                         placeholder="กรอกรหัสผ่าน"
                       ></v-text-field>
                     </v-col>
@@ -85,8 +121,8 @@
                     <v-col cols="12" sm="5">
                       <v-text-field
                         v-model="confirm_pass"
-                        :type="'password'"
                         label="ยืนยัน รหัสผ่าน"
+                        :type="'password'"
                         placeholder="กรอกรหัสผ่านอีกครั้ง"
                       ></v-text-field>
                     </v-col>
@@ -120,6 +156,12 @@ export default {
       modal: false,
       menu2: false,
       title: "",
+      name_au: "ปัญสิกรณ์ ติยกรณ์",
+      tel_au: "0874445121",
+      email: "Punpsk@o2o.com",
+      name_reg: "punsikorn1234",
+      pass: "12345678",
+      confirm_pass: "12345678",
       items: ["เจ้าหน้าที่ทั่วไป", "ผู้ดูแล", "ผู้ดูแลทั่วไป", "สมาชิก"],
       description: "",
       rules: [(v) => v.length <= 50 || "Max 50 characters"],
@@ -130,12 +172,26 @@ export default {
 </script>
 
 <style scoped>
-.content_dialog_user{
+.content_dialog_user {
   padding: 20px;
 }
-
-.pd_20{
-    padding:0 20px 20px 20px;
+.headline{
+  color:#8a4532;
+}
+.head_of_dialog_user {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.btn_head_user {
+  width: 50%;
+}
+.left_head {
+  display: flex;
+  width: 100%;
+}
+.pd_20 {
+  padding: 0 20px 20px 20px;
 }
 .row_card {
   display: flex;

@@ -50,6 +50,11 @@ html{
 .bdr_12_only {
   border-radius: 12px !important;
 }
+.set_center{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 /*
 html::-webkit-scrollbar { 
     display: none; 

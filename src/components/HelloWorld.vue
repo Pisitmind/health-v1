@@ -626,10 +626,12 @@
                     </th>
                   </tr>
                   <tr v-for="item in items" :key="item.id" align="center">
-                    <th scope="row">
-                      <v-icon :style="{ color: item.color }">{{
-                        item.icon
-                      }}</v-icon>
+                    <th scope="row" class="fix_center" >
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        :src="require('../assets/icon/' + item.icons)"
+                      />
                       <span class="black--text"
                         ><strong>{{ item.gender }}</strong></span
                       >
@@ -888,14 +890,14 @@ export default {
         {
           gender: "ชาย",
           icon: "mdi-human-male",
-          icons: "../assets/icon/icon_men.svg",
+          icons: "icon_men.svg",
           color: "#359BD3",
           data: [27, 98, 780, 34, 0],
         },
         {
           gender: "หญิง",
           icon: "mdi-human-female",
-          icons: "../assets/icon/icon_women.svg",
+          icons: "icon_women.svg",
           color: "#F28C8C",
           data: [12, 132, 560, 22, 0],
         },
@@ -998,14 +1000,13 @@ export default {
   border-radius: 12px !important;
   box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
-.text_inside{
+.text_inside {
   font-size: 14px;
-  color:grey;
+  color: grey;
 }
-.text_inside1{
+.text_inside1 {
   font-size: 22px;
   font-weight: bold;
-
 }
 .head_name_tag {
   font-size: 20px;
@@ -1349,5 +1350,11 @@ th {
   display: flex;
   justify-content: left;
   padding-left: 20px;
+}
+.fix_center{
+  display:flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 </style>

@@ -5,7 +5,8 @@
         <v-tab >
        เจ้าหน้าที่
         </v-tab>
-      <v-tab disabled >
+      <v-tab >
+      <!-- <v-tab disabled > -->
        ผู้ใช้งานระบบ
         </v-tab>
       </v-tabs>
@@ -18,6 +19,7 @@
           </v-card>
           <v-card flat v-if="data.no === '2'">
             <v-card-content>
+              <normal_user />
             </v-card-content>
           </v-card>
         </v-tab-item>
@@ -28,9 +30,10 @@
 
 <script>
 import auth from "@/components/authorities.vue";
+import normal_user from "@/components/normal_user.vue";
 export default {
   components: {
-    auth,
+    auth,normal_user
   },
   data() {
     return {

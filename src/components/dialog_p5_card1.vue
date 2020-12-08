@@ -13,7 +13,17 @@
                     <div class="card_top_lNr">
                       <!-- card l -->
                       <div class="card_left_top">
-                        <div class="donut_chart_1">
+                        <div
+                          class="donut_chart_1"
+                          style="float: left; position: relative;"
+                        >
+                          <div
+                            style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: 0px; 
+                line-height:19px; text-align: center; z-index: 2"
+                          >
+                            <span class="text_inside1">27</span><br />
+                            <span class="text_inside">avg.</span>
+                          </div>
                           <canvas
                             id="donut_g1"
                             width=""
@@ -646,8 +656,14 @@ export default {
   /* height: 120px; */
   padding: 10px;
 }
-.table_card_l_top {
-  /* background-color: rgba(0, 140, 0, 0.3); */
+.text_inside {
+  font-size: 16px;
+  color: #5b5b5b;
+  padding-top: 15px;
+}
+.text_inside1 {
+  font-size: 35px;
+  font-weight: bold;
 }
 .btn_right {
   display: flex;

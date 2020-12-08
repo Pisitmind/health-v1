@@ -268,21 +268,18 @@
             <div class="card2_l_all">
               <div class="card1_p6_content">
                 <div class="card3_p6_content_left">
-                  <div class="card_donut">
-                    <!-- <div class="card3_line2 grey--text">
-                  <span>graph here</span>
-                </div> -->
+                  <div
+                    class="card_donut"
+                    style="float: center; position: relative;"
+                  >
+                    <div
+                      style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index: 2"
+                    >
+                      <span class="text_inside">ผู้ใช้ทั้งหมด</span><br />
+                      <span class="text_inside1">1,471</span><br />
+                      <span class="text_inside">คน</span>
+                    </div>
                     <canvas id="graph1_c2_p6" width="" height="220px"></canvas>
-                    <!-- <div class="label_grpah1_c1_p6">
-                      <table width="100%">
-                        <tr>
-                          <td style="text-align:center;">
-                            <div class="label_text_card3">
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
-                    </div> -->
                   </div>
                 </div>
                 <div class="card3_p6_content_right">
@@ -343,10 +340,17 @@
             <div class="card2_r_all">
               <div class="card1_p6_content">
                 <div class="card3_p6_content_left">
-                  <div class="card_donut">
-                    <!-- <div class="card3_line2 grey--text">
-                  <span>graph here</span>
-                </div> -->
+                  <div
+                    class="card_donut"
+                    style="float: center; position: relative;"
+                  >
+                    <div
+                      style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index: 2"
+                    >
+                      <span class="text_inside">ผู้ใช้ทั้งหมด</span><br />
+                      <span class="text_inside1">1,329</span><br />
+                      <span class="text_inside">คน</span>
+                    </div>
                     <canvas id="graph2_c2_p6" width="" height="220px"></canvas>
                     <div class="label_grpah1_c1_p6">
                       <table width="100%">
@@ -844,6 +848,14 @@ export default {
   justify-content: space-between;
   width: 100%;
   /* background-color:rgba(0, 0,100,.3); */
+}
+.text_inside {
+  font-size: 12px;
+  color: #5b5b5b;
+}
+.text_inside1 {
+  font-size: 25px;
+  font-weight: bold;
 }
 .head_card1_p6_r_title {
   display: flex;

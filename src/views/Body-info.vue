@@ -11,7 +11,7 @@
                 <!-- head left -->
                 <div class="head_card1_p5_l_title">
                   <!-- การก้าว+icon -->
-                  <div class="title_card1_p5">
+                  <div class="title_card1_p5 set_center">
                     <div style="padding-right:10px;">
                       <img
                         height="40px"
@@ -184,7 +184,7 @@
                 <div class="head_card3_p5_l_title">
                   <!-- การก้าว+icon -->
                   <div class="title_card3_p5">
-                    <div class="card5-bot-text ">
+                    <div class="card5-bot-text set_center">
                       <img
                         height="40px"
                         class="filter-white"
@@ -704,4 +704,5 @@ export default {
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
+
 </style>

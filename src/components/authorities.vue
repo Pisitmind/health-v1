@@ -3,15 +3,15 @@
     <v-card class="bdr_12">
       <v-card-title>
         <div class="head_title_card_user">
-          <div class="head_card_user">
+          <div class="head_card_user set_center">
             <div>
               <v-btn color="green darken-1" icon large @click="dialog = false">
                 <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_datapersonsa.svg"
-                        alt="gruop"
-                      />
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_datapersonsa.svg"
+                  alt="gruop"
+                />
               </v-btn>
             </div>
             <div class="text_header">
@@ -21,7 +21,11 @@
           <div class="">
             <v-row>
               <v-col cols="6">
-                <v-dialog v-model="dialog1" width="80%">
+                <v-dialog
+                  v-model="dialog1"
+                  width="80%"
+                  style="overflow:hidden;"
+                >
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
                       class="white--text  mx-2"
@@ -46,11 +50,11 @@
                               @click="dialog1 = false"
                             >
                               <img
-                                  height="30px"
-                                  class="filter-white"
-                                  src="../assets/icon/icon_prev.svg"
-                                  alt="prev"
-                                />
+                                height="30px"
+                                class="filter-white"
+                                src="../assets/icon/icon_prev.svg"
+                                alt="prev"
+                              />
                             </v-btn>
                           </div>
                           <div class="head_text_content">
@@ -114,23 +118,36 @@
               cols="12"
               sm="2"
             >
-              <v-card class="au_card bdr_12">
-                <div class="img_n_name">
-                  <div class="img_avatar">
-                    <v-avatar size="84" aspect-ratio="1">
-                      <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
-                      <img :src="idx.pic" />
-                    </v-avatar>
-                  </div>
-                  <div class="n_card">
-                    <span style="color:#88432F;">{{ idx.name }}</span>
-                  </div>
-                </div>
+              <v-dialog v-model="dialog_au" width="85%" scrollable="false">
+                <template v-slot:activator="{ on, attrs29 }">
+                  <v-card class="au_card bdr_12" v-bind="attrs29" v-on="on">
+                    <div class="img_n_name">
+                      <div class="img_avatar">
+                        <v-avatar size="84" aspect-ratio="1">
+                          <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
+                          <img
+                            :src="require('../assets/user_pic/' + idx.picname)"
+                          />
+                        </v-avatar>
+                      </div>
+                      <div class="n_card">
+                        <span style="color:#88432F;">{{ idx.name }}</span>
+                      </div>
+                    </div>
 
-                <div class="rol_card ">
-                  <span style="color:#B79BC4;">{{ idx.role }}</span>
-                </div>
-              </v-card>
+                    <div class="rol_card ">
+                      <span style="color:#B79BC4;">{{ idx.role }}</span>
+                    </div>
+                  </v-card>
+                </template>
+                <v-card>
+                  <v-card-text>
+                    <v-container>
+                      <dia_user_data />
+                    </v-container>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
             </v-col>
           </v-row>
         </v-container>
@@ -141,9 +158,11 @@
 </template>
 <script>
 import dia_user from "@/components/dia_user.vue";
+import dia_user_data from "@/components/dia_user_data.vue";
 export default {
   components: {
     dia_user,
+    dia_user_data,
   },
   data() {
     return {
@@ -155,6 +174,7 @@ export default {
           name: "ปัญสิกรณ์ ติยะกร",
           // pic: "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user1.jpg",
           pic: "https://i.ibb.co/D7pBNZr/image.png",
+          picname: "user1.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -162,6 +182,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/kJbWBrQ/user2.jpg",
+          picname: "user2.jpg",
           // pic: "./src/assets/user_pic/user2.jpg",
           role: "ผู้ดูแลหลัก",
           color: "#B498C0",
@@ -170,6 +191,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/hsNP4R5/user3.jpg",
+          picname: "user3.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -177,6 +199,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/mJz1Tm9/user4.jpg",
+          picname: "user4.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -184,6 +207,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/1mFyKnY/user5.jpg",
+          picname: "user6.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -191,6 +215,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          picname: "user7.jpg",
           role: "ผู้ดูแล",
           color: "#B498C0",
           back_col: "#E5E5E5",
@@ -198,6 +223,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          picname: "user8.jpg",
           // pic:
           //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user7.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
@@ -207,6 +233,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          picname: "user9.jpg",
           // pic:
           //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user8.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
@@ -216,6 +243,7 @@ export default {
         {
           name: "ปัญสิกรณ์ ติยะกร",
           pic: "https://i.ibb.co/zxDCB0S/user6.jpg",
+          picname: "user10.jpg",
           // pic:
           //   "C:/Users/OhoMindZa/Documents/Banana/Demo/demo-health-1/health-v1/src/assets/user_pic/user9.jpg",
           role: "เจ้าหน้าที่ทั่วไป",
@@ -271,6 +299,7 @@ export default {
 }
 .head_text_content {
   padding-left: 15px;
+  color: #88432f;
 }
 .btn_head_user {
   display: flex;

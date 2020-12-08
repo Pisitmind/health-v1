@@ -67,7 +67,14 @@
                   BPM.
                 </p>
               </div>
-              <div class="c3">
+              <div style="float: left; position: relative;">
+                <div
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -20px; 
+                line-height:19px; text-align: center; z-index: 2"
+                >
+                  <span class="text_inside1">72</span><br />
+                  <span class="text_inside">avg. ฺBPM</span>
+                </div>
                 <canvas id="graph0" width="" height="200px"></canvas>
               </div>
 
@@ -122,9 +129,16 @@
                   exercise.
                 </p>
               </div>
-              <div class="c3">
+              <div style="float: left; position: relative;">
+                <div
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
+                >
+                  <span class="text_inside1">116</span><br />
+                  <span class="text_inside">avg. ฺBPM</span>
+                </div>
                 <canvas id="graph1" width="" height="200px"></canvas>
               </div>
+
               <div class="table_ct2_c1 c1">
                 <table
                   class="table_c1 c1"
@@ -314,13 +328,19 @@
           <!-- card2 content -->
           <div class="content1_card2">
             <!-- card l -->
-            <div class="chart1_card2 c30">
+            <div class="chart1_card2" style="float: left; position: relative;">
+              <div
+                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -25px; line-height:19px; text-align: center; z-index: 2"
+              >
+                <span class="text_inside1">76</span><br />
+                <span class="text_inside">avg. kg.</span>
+              </div>
               <div>
                 <canvas id="graph1_c2" width="200px" height="220"></canvas>
               </div>
             </div>
             <!-- card r  -->
-            <div class="data_table_card2 c30">
+            <div class="data_table_card2">
               <div class="card1-subcard-3 ct_set" width="" height="">
                 <div class="table_content_card2">
                   <table
@@ -479,10 +499,12 @@
                       </th>
                     </tr>
                     <tr v-for="item in items" :key="item.id" align="center">
-                      <th scope="row" class="text-left">
-                        <v-icon :style="{ color: item.color }">{{
-                          item.icon
-                        }}</v-icon>
+                      <th scope="row" class="fix_center" align="left">
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          :src="require('../assets/icon/' + item.icons)"
+                        />
                         <span class="black--text"
                           ><strong>{{ item.gender }}</strong></span
                         >
@@ -515,9 +537,14 @@
             <div class="">
               <div class="header_card2">
                 <div class="title_card2">
-                  <div class="card2_nameNicon">
+                  <div class="card2_nameNicon set_center">
                     <div style="padding-right:10px;">
-                      <v-icon color="#009688">mdi-google-fit</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/bmi.svg"
+                        alt="bmi"
+                      />
                     </div>
                     <div class="card2_bot_text ">
                       <span><strong>BMI</strong></span>
@@ -542,7 +569,13 @@
           <!-- card2 content -->
           <div class="content1_card2">
             <!-- card l -->
-            <div class="chart1_card2 c30">
+            <div class="chart1_card2" style="float: left; position: relative;">
+              <div
+                style="width: 100%; position: relative; top: 50%; left: 0; margin-bottom:-15px; margin-top: -15px; line-height:22px; text-align: center; z-index: 2"
+              >
+                <span class="text_inside1">27</span><br />
+                <span class="text_inside">avg.</span>
+              </div>
               <div class="">
                 <canvas id="graph2_c2" width="200px" height="220"></canvas>
               </div>
@@ -667,10 +700,12 @@
                       </th>
                     </tr>
                     <tr v-for="item in items_2" :key="item.id" align="center">
-                      <th scope="row" class="text-left">
-                        <v-icon :style="{ color: item.color }">{{
-                          item.icon
-                        }}</v-icon>
+                      <th scope="row" class="text-center fix_center">
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          :src="require('../assets/icon/' + item.icons)"
+                        />
                         <span class="black--text"
                           ><strong>{{ item.gender }}</strong></span
                         >
@@ -1068,12 +1103,14 @@ export default {
         {
           gender: "Men",
           icon: "mdi-human-male",
+          icons: "icon_men.svg",
           color: "#359BD3",
           data: [27, 98, 780, 34, 0],
         },
         {
           gender: "Women",
           icon: "mdi-human-female",
+          icons: "icon_women.svg",
           color: "#F28C8C",
           data: [12, 132, 560, 22, 0],
         },
@@ -1082,14 +1119,16 @@ export default {
         {
           gender: "Men",
           icon: "mdi-human-male",
+          icons: "icon_men.svg",
           color: "#359BD3",
-          data: [269, 492, 293, 34, 1],
+          data: [27, 98, 780, 34, 0],
         },
         {
           gender: "Women",
           icon: "mdi-human-female",
+          icons: "icon_women.svg",
           color: "#F28C8C",
-          data: [154, 569, 601, 22, 7],
+          data: [12, 132, 560, 22, 0],
         },
       ],
       data_card3: [
@@ -1255,7 +1294,14 @@ export default {
 .pd_text_5 {
   padding-left: 2px;
 }
-
+.text_inside1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.text_inside {
+  font-size: 14px;
+  color: gray;
+}
 .alr {
   text-align: right;
   padding-right: 20px;
@@ -1389,5 +1435,10 @@ export default {
 }
 .head_table_card3 {
   text-align: left;
+}
+.fix_center {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 </style>
