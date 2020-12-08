@@ -59,12 +59,14 @@
           <v-row class="pd_content">
             <v-col
               class=""
-              v-for="idx in data_au"
+              v-for="idx in data_au2"
               :key="idx.id"
               cols="12"
               sm="2"
             >
-              <v-card class="au_card bdr_12">
+             <v-dialog v-model="dialog_au2" width="85%" scrollable="false">
+                <template v-slot:activator="{ on, attrs30 }">
+                <v-card class="au_card bdr_12" v-bind="attrs30" v-on="on">
                 <div class="img_n_name">
                   <div class="img_avatar">
                     <v-avatar size="84" aspect-ratio="1">
@@ -79,24 +81,36 @@
                   </div>
                 </div>
               </v-card>
+                </template>
+                <v-card>
+                  <v-card-text>
+                  <v-card-content>
+                      <dia2 />
+                  </v-card-content>
+                  </v-card-text>
+                </v-card>
+             </v-dialog>
             </v-col>
           </v-row>
         </v-container>
       </v-card-content>
+      
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->
 </template>
 <script>
+import dia2 from '@/components/dia_user_data_normal.vue';
 export default {
   components: {
+    dia2,
   },
   data() {
     return {
       dialog: false,
       dialog1: false,
 
-      data_au: [
+      data_au2: [
         {
           name: "ปัญสิกรณ์ ติยะกร",
           picname: "user1.jpg",

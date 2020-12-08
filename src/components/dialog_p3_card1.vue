@@ -219,7 +219,7 @@
                           </v-card-text>
                           <v-card-content>
                             <div>
-                              <!-- content diap3 1 c1 here -->
+                              <sub_dia3 />
                             </div>
                           </v-card-content>
                         </v-card>
@@ -232,6 +232,7 @@
             <v-divider></v-divider>
           </div>
         </div>
+
         <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
       </v-card-content>
     </v-card>
@@ -239,8 +240,12 @@
 </template>
 
 <script>
+import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 import Chart from "chart.js";
 export default {
+  components: {
+    sub_dia3,
+  },
   mounted: function() {
     var ctx_dia_c1_p3 = document
       .getElementById("graph1_c1_p3")

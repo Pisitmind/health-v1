@@ -115,10 +115,10 @@
           <!-- Content  -->
           <div class="card1_p5_content">
             <div class="card1_p5_content_left">
-              <v-card-subtitle class="pd_0">
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
                 </div>
+              <v-card-subtitle class="pd_0">
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -149,10 +149,10 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p5_content_right">
-              <v-card-subtitle class="pd_0">
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
+              <v-card-subtitle class="pd_0">
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -292,10 +292,10 @@
           </div>
           <div class="card1_p5_content">
             <div class="card3_p5_content_left">
-              <v-card-text>
                 <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
+              <v-card-text>
                 <canvas id="graph1_c2_p5" width="200px" height=""></canvas>
                 <div class="label_grpah1_c1_p5">
                   <table width="100%">

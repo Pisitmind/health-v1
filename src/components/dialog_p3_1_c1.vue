@@ -2,94 +2,261 @@
   <div class="dialog_p3_1_c1">
     <br />
     <div class="card1_p3">
-      <v-card class="bdr_12">
-        <div>
-          <v-row>
-            <v-col cols="12" sm="1"></v-col>
-            <v-col cols="12" sm="2">
-              <v-img
-                max-height="100"
-                max-width="100"
-                class="round-img"
-                src="https://pbs.twimg.com/profile_images/1002416157280727040/7SjA9KTJ_400x400.jpg"
-              ></v-img>
-            </v-col>
-            <v-col cols="12" sm="4" height="30px">
-              <span class="big_font">Supratcha Wiwattanakorn</span>
-              <br />
-              <span class="grey--text">ตำแหน่ง : ผู้ช่วยสอน</span>
-            </v-col>
-            <v-col cols="12" sm="5"> </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-row height="35px">
-                <v-col cols="12" sm="6">
-                  <span class="card3-bot-text">การเดิน</span>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-select
-                    :items="itm_walk"
-                    placeholder="7 วันล่าสุด"
-                    outlined
-                    dense
-                  ></v-select>
-                </v-col>
-              </v-row>
-              <v-row>
-                <canvas id="walk_graph_1" width="200px" height="150px"></canvas>
-              </v-row>
-            </v-col>
+      <v-card class="bdr_12" elevation="0">
+        <div class="card1_p3_root">
+          <div class="card1_p3_headNsub">
+            <!-- head lr -->
+            <div class="card1_head_lr">
+              <!-- head left div -->
+              <div class="head_card1_p3_l">
+                <!-- head left -->
+                <div class="head_card1_p3_l_title">
+                  <!-- การก้าว+icon -->
+                  <div class="title_card1_p3">
+                    <v-img
+                      max-height="100"
+                      max-width="100"
+                      class="round-img"
+                      src="https://pbs.twimg.com/profile_images/1002416157280727040/7SjA9KTJ_400x400.jpg"
+                    ></v-img>
+                  </div>
+                  <!-- btn sex & age -->
+                  <div class="">
+                    <span class="big_font">Supratcha Wiwattanakorn</span>
+                    <br />
+                    <span class="grey--text">ตำแหน่ง : ผู้ช่วยสอน</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- dontent  -->
+          <div class="card1_p3_content">
+            <div class="card1_p3_content_left">
+              <div class="label_grpah1_c1_p3">
+                <table
+                  width="100%"
+                  justify="center"
+                  align="center"
+                  cellspacing=""
+                >
+                  <tr>
+                    <td>
+                      <div class="">
+                        <span class="">การเดิน</span>
+                      </div>
+                    </td>
+                    <td width="50%" class="text_sub">
+                      <div class="set_center">
+                        <v-select
+                          :items="itm_walk"
+                          placeholder="7 วันล่าสุด"
+                          outlined
+                          dense
+                        ></v-select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="chart_31c1" style="width:95%">
+                <canvas id="walk_graph_2" width="200px" height=""></canvas>
+              </div>
+            </div>
             <v-divider vertical></v-divider>
-            <v-row>
-              <v-row height="35px">
-                <v-col cols="12" sm="6">
-                  <span class="card3-bot-text">การนั่งนาน</span>
-                </v-col>
-                <v-col cols="12" sm="6">
-                  <v-select
-                    :items="itm_walk"
-                    placeholder="7 วันล่าสุด"
-                    outlined
-                    dense
-                    color="black"
-                  ></v-select>
-                </v-col>
-              </v-row>
-              <v-row>
-                <canvas id="walk_graph_2" width="200px" height="150px"></canvas>
-              </v-row>
-            </v-row>
-          </v-row>
-          <br />
-          <span> ประวัติการแจ้งเตือน </span>
-          <span class="grey--text">(การถูกแจ้งเตือนโดยผู้ดูแล)</span>
-          <table width="100%">
-            <thead>
-              <tr
-                class="grey--text"
-                width="100%"
-                cellspacing="0"
-                cellpadding=""
-              >
-                <td>ครั้งที่</td>
-                <td>วันที่ , เวลา</td>
-                <td>โดย</td>
-                <td>หมายเหตุ</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item in new_item" :key="item.id">
-                <td>{{ item.no }}</td>
-                <td>{{ item.date_time }}</td>
-                <td>{{ item.by }}</td>
-                <td>{{ item.dtail }}</td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="card1_p3_content_right">
+              <div class="label_grpah1_c1_p3">
+                <table
+                  width="100%"
+                  justify="center"
+                  align="center"
+                  cellspacing=""
+                >
+                  <tr>
+                    <td>
+                      <div class="">
+                        <span class="">การนั่งนาน</span>
+                      </div>
+                    </td>
+                    <td width="50%" class="text_sub">
+                      <div class="set_center">
+                        <v-select
+                          :items="itm_walk"
+                          placeholder="7 วันล่าสุด"
+                          outlined
+                          dense
+                        ></v-select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="chart_31c1" style="width:95%">
+                <canvas
+                  id="walk_graph_2_2"
+                  width="200px"
+                  height=""
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="table_content31c1" style="width:100%">
+            <br />
+            <span style="font-weight: bold;"> ประวัติการแจ้งเตือน </span>
+            <span class="grey--text">(การถูกแจ้งเตือนโดยผู้ดูแล)</span>
+            <br />
+            <br />
+            <table width="100%">
+              <thead>
+                <tr
+                  class="grey--text"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding=""
+                >
+                  <td>ครั้งที่</td>
+                  <td  width="">วันที่ , เวลา</td>
+                  <td width="">โดย</td>
+                  <td  width="65%">หมายเหตุ</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in new_item" :key="item.id" height="30px"  style="font-size:14px;">
+                  <td>{{ item.no }}</td>
+                  <td>{{ item.date_time }}</td>
+                  <td>{{ item.by }}</td>
+                  <td>{{ item.dtail }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </v-card>
     </div>
-    <br />
   </div>
 </template>
+
+<script>
+import Chart from "chart.js";
+export default {
+  mounted: function() {
+    var ctx_3_1c1 = document.getElementById("walk_graph_2").getContext("2d"),
+      gradient2_c1_p3 = ctx_3_1c1.createLinearGradient(0, 0, 0, 300);
+    gradient2_c1_p3.addColorStop(0, "rgb(255, 161, 161)");
+    gradient2_c1_p3.addColorStop(0.61, "rgb(255, 255, 255)");
+    gradient2_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
+    var bar_31c1 = new Chart(ctx_3_1c1, {
+      type: "line",
+      data: {
+        datasets: [
+          {
+            label: "",
+            // backgroundColor: gradient2_c1_p3,
+            backgroundColor: gradient2_c1_p3,
+            borderColor: "#ffa1a1",
+            data: [3000, 2000, 3000, 3500, 3000, 4800],
+            pointBackgroundColor: "white",
+          },
+        ],
+        labels: ["07/08", "08/08", "09/08", "10/08", "11/08", "12/08"],
+      },
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                reverse: false,
+                min: 1000,
+                max: 5000,
+                stepSize: 1000,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ก้าว",
+              },
+            },
+          ],
+        },
+      },
+    });
+    console.log(bar_31c1);
+
+    var ctx_3_1c1_2 = document
+        .getElementById("walk_graph_2_2")
+        .getContext("2d"),
+      gradient31c1_2 = ctx_3_1c1_2.createLinearGradient(0, 0, 0, 300);
+    gradient31c1_2.addColorStop(0, "rgb(0, 0, 0)");
+    gradient31c1_2.addColorStop(0.10, "rgb(0, 0, 0)");
+    gradient31c1_2.addColorStop(0.61, "rgb(255, 255, 255)");
+    gradient31c1_2.addColorStop(1, "rgb(255, 255, 255)");
+    var bar_3_1c1_2 = new Chart(ctx_3_1c1_2, {
+      type: "line",
+      data: {
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient31c1_2,
+            borderColor: "#000000",
+            data: [14, 3, 12, 7, 12, 5],
+            pointBackgroundColor: "white",
+          },
+        ],
+        labels: ["07/08", "08/08", "09/08", "10/08", "11/08", "12/08"],
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                reverse: false,
+                min: 0,
+                max: 20,
+                stepSize: 5,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ครั้ง",
+              },
+            },
+          ],
+        },
+      },
+    });
+    console.log(bar_3_1c1_2);
+  },
+  data() {
+    return {
+      itm_walk: ["7วันล่าสุด", "1เดือนล่าสุด", "1ปีล่าสุด"],
+      new_item: [
+        {
+          no: "02",
+          date_time: "15 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งเพิ่มสูงขึ้นผิดปกติ มากกว่า 5 ครั้ง โปรดตรวจสอบว่าสวมใส่อุปกรณ์หรือไม่",
+        },
+        {
+          no: "01",
+          date_time: "6 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งต่อเนื่องเกินกว่า 3 ชั่วโมง ควรขยับ หรือลุกจากที่นั่งเผื่อผ่อนคลายกล้ามเนื้อ",
+        },
+      ],
+    };
+  },
+};
+</script>

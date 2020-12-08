@@ -110,10 +110,10 @@
           <!-- Content  -->
           <div class="card1_p4_content">
             <div class="card1_p4_content_left">
-              <v-card-subtitle class="pd_0">
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการนอนหลับของผู้ใช้เพศชาย และเพศหญิง</span>
                 </div>
+              <v-card-subtitle class="pd_0">
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -144,10 +144,10 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p4_content_right">
-              <v-card-subtitle class="pd_0">
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
+              <v-card-subtitle class="pd_0">
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -486,13 +486,13 @@
           </div>
           <div class="card1_p4_content">
             <div class="card1_p4_content_left">
-              <v-card-subtitle>
                 <div class="card3_line2 grey--text" style="font-size:12px;">
                   <span
                     >วัดจากค่าไขมันในร่างกาย
                     เป็นสัดส่วนสำคัญในการสังเกตุคุณภาพของระบบเซลล์ในร่างกาย</span
                   >
                 </div>
+              <v-card-subtitle>
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -501,13 +501,13 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p4_content_right">
-              <v-card-subtitle>
                 <div class="card3_line2 grey--text" style="font-size:12px;">
                   <span
                     >ค่าเฉลี่ยคะแนนร่างกายของผู้ใช้เพศชาย และเพศหญิง
                     รายวัน</span
                   >
                 </div>
+              <v-card-subtitle>
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
@@ -968,6 +968,9 @@ export default {
 .card2_content_bot {
   /* background-color: rgba(0, 80, 10, 0.1); */
   font-size: 16px;
+}
+.card3_line2{
+  font-size: 12px;
 }
 
 .card2_content_bot {

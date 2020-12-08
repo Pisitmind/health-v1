@@ -110,12 +110,12 @@
           <!-- dontent  -->
           <div class="card1_p3_content">
             <div class="card1_p3_content_left">
-              <v-card-text>
                 <div class="card3_line2 grey--text">
                   <span
                     >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                   >
                 </div>
+              <v-card-text>
                 <canvas id="graph1_p3" width="200px" height=""></canvas>
               </v-card-text>
 
@@ -143,10 +143,10 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p3_content_right">
-              <v-card-text>
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
+              <v-card-text>
                 <canvas id="graph2_c1_p3" width="200px" height=""></canvas>
               </v-card-text>
 
@@ -271,19 +271,19 @@
           </div>
           <div class="card1_p3_content">
             <div class="card1_p3_content_left">
-              <v-card-text>
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
                 </div>
+              <v-card-text>
                 <canvas id="graph1_c2_p3" width="200px" height=""></canvas>
               </v-card-text>
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p3_content_right">
-              <v-card-text>
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
+              <v-card-text>
                 <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
               </v-card-text>
 
@@ -386,10 +386,10 @@
           </div>
           <div class="card1_p3_content">
             <div class="card3_p3_content_left">
-              <v-card-text>
                 <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
+              <v-card-text>
                 <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
                 <div class="label_grpah1_c1_p3">
                   <table width="100%">
@@ -417,7 +417,11 @@
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p3_content_right pd_r_30">
-              <v-card class="card2-subcard-3 ct_set bdr_12_only" width="" height="">
+              <v-card
+                class="card2-subcard-3 ct_set bdr_12_only"
+                width=""
+                height=""
+              >
                 <v-card-subtitle>
                   <span class="topic-name-card_c3 ">
                     ตัวบ่งชี้
@@ -456,7 +460,6 @@
         </div>
       </v-card>
     </div>
-    <br />
   </div>
 </template>
 
@@ -464,10 +467,12 @@
 import Chart from "chart.js";
 import dialog_p3 from "@/components/dialog_p3_card1.vue";
 import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
+import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 export default {
   components: {
     dialog_p3,
     dialog_p3_2,
+    sub_dia3,
   },
   mounted: function() {
     var ctx1_p3 = document.getElementById("graph1_p3").getContext("2d");
@@ -755,6 +760,7 @@ export default {
   data() {
     return {
       dialog1: false,
+      dialog_2: false,
       dialog20: false,
       items: [
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
@@ -836,7 +842,7 @@ export default {
           date_time: "15 มิ.ย.20 , 14:30 น.",
           by: "ศิริญญา ศุนาญ",
           dtail:
-            "แจ้งเตือนการนั่งเพิ่มสูงขึ้นผิดปกติ มากกว่า 5 ครั้ง โปรดตรวจสอบว่าสวมใส่ปุปกรณ์หรือไม่",
+            "แจ้งเตือนการนั่งเพิ่มสูงขึ้นผิดปกติ มากกว่า 5 ครั้ง โปรดตรวจสอบว่าสวมใส่อุปกรณ์หรือไม่",
         },
         {
           no: "01",
@@ -854,6 +860,11 @@ export default {
 <style lang="scss" scope>
 .hid {
   display: none;
+}
+.card3_line2{
+  padding-top: 0px;
+  padding-left: 10px;
+  font-size: 12px;
 }
 .progress-el {
   display: flex;

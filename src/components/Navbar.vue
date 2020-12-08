@@ -82,6 +82,31 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <!-- :src="require('../assets/icon/' + item.logo)" -->
+        <v-list-group :value="true" sub-gruop>
+          <template v-slot:activator>
+            <v-list-item-icon>
+              <img
+                height="30px"
+                class="filter-white "
+                src="../assets/icon/icon_report.svg"
+              />
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>รายงาน</v-list-item-title>
+            </v-list-item-content>
+          </template>
+          <v-list-item
+            v-for="itmx in items"
+            :key="itmx.id"
+            link
+            router
+            :to="itmx.route"
+            active-class="white--text purple rounded-l-lg "
+          >
+            <v-list-item-title>a</v-list-item-title>
+          </v-list-item>
+        </v-list-group>
         <v-list-item> </v-list-item>
         <span class="grey--text" style="font-size:14px">การจัดการ</span>
         <v-list-item
@@ -207,19 +232,19 @@ export default {
           icon: "mdi-account-group-outline",
           logo: "icon_datapersonsa.svg",
           logo2: "icon_datapersonsa_w.svg",
+          route: "/Users",
           sublink: [
             {
               title: "เจ้าหน้าที่",
               icon: "mdi-square-circle",
-              route: "/official",
+              route: "/admin_user",
             },
             {
               title: "ผู้ใช้งานระบบ",
               icon: "mdi-square-circle",
-              route: "/System_user",
+              route: "/normal_user",
             },
           ],
-          route: "/Users",
         },
         {
           title: "ข่าว / ประกาศ",
@@ -274,6 +299,6 @@ a:visited {
   padding-left: 10px;
 }
 .g_grey {
-  fill:#7C7D7D;
+  fill: #7c7d7d;
 }
 </style>

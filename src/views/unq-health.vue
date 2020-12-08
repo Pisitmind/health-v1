@@ -106,15 +106,15 @@
                 </div>
               </div>
             </div>
-            <v-card-subtitle class="pd_0">
               <div class="split_me grey--text">
-                <div class="split_l">
+                <div class="split_l" style="font-size: 12px;">
                   <span>ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span>
                 </div>
-                <div class="split_r">
+                <div class="split_r" style="font-size: 12px;">
                   <span>ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
               </div>
+            <v-card-subtitle class="pd_0">
             </v-card-subtitle>
           </div>
           <!-- Content  -->
@@ -1000,6 +1000,7 @@ table {
 }
 .split_l {
   width: 50%;
+  
 }
 .split_r {
   width: 50%;

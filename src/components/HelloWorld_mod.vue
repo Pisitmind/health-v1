@@ -297,6 +297,9 @@
               <div class="card3-content">
                 <div>
                   <v-card-text>
+                    <div>
+                      <canvas id="myChart" height="90"></canvas>
+                    </div>
                     <canvas id="graph3-1" width="450px" height="200px"></canvas>
                   </v-card-text>
                   <div class="label_grpah">
@@ -827,35 +830,84 @@ export default {
       },
     });
     console.log(bar1);
-
     var ctx3 = document.getElementById("graph3-1").getContext("2d");
-    // const labels = ["male", "female"];
-    // const images = ["icon_men.svg", "icon_women.svg"];
-    // const values = [3628, 4874];
     var bar3 = new Chart(ctx3, {
       type: "horizontalBar",
-      // plugins: [
-      //   {
-      //     afterDraw: (bar3) => {
-      //       var xAxis = bar3.scales["x-axis-0"];
-      //       var yAxis = bar3.scales["y-axis-0"];
-      //       xAxis.ticks.forEach((value, index) => {
-      //         var x = xAxis.getPixelForTick(index);
-      //         var image = new Image();
-      //         (image.src = require("../assets/icon/" + images[index])),
-      //           ctx3.drawImage(image, x - 12, yAxis.bottom + 10);
-      //       });
-      //     },
-      //   },
-      // ],
+      options: {
+        tooltips: {
+          // Add this..
+        },
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              display: true,
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 1000, // minimum will be 0, unless there is a lower value.
+                stepValue: 1000,
+                max: 6000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "ก้าว",
+              },
+              gridLines: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
       data: {
         labels: ["male", "female"],
+        // labels: ["mdi-human-male", "mdi-human-female"],
         datasets: [
           {
             barPercentage: 0.5,
             label: "ก้าว",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [3628, 4874],
+          },
+        ],
+      },
+    });
+    console.log(bar3);
+
+    const labels = ["male", "female"];
+    const images = ["icon_men.svg", "icon_women.svg"];
+    const values = [3628, 4874];
+
+    new Chart(document.getElementById("myChart"), {
+      type: "bar",
+      plugins: [
+        {
+          afterDraw: (chart) => {
+            var ctx_test = chart.chart.ctx;
+            var xAxis = chart.scales["x-axis-0"];
+            var yAxis = chart.scales["y-axis-0"];
+            xAxis.ticks.forEach((value, index) => {
+              var x = xAxis.getPixelForTick(index);
+              var image = new Image();
+              (image.src =require('../assets/icon/' +  images[index])),
+                ctx_test.drawImage(image, x - 12, yAxis.bottom + 10);
+            });
+          },
+        },
+      ],
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "My Dataset",
+            data: values,
+            backgroundColor: ["red", "blue", "green", "lightgray"],
           },
         ],
       },
@@ -879,17 +931,7 @@ export default {
           ],
           xAxes: [
             {
-              display: true,
               ticks: {
-                suggestedMin: 1000, // minimum will be 0, unless there is a lower value.
-                stepValue: 1000,
-                max: 6000,
-              },
-              scaleLabel: {
-                display: false,
-                labelString: "ก้าว",
-              },
-              gridLines: {
                 display: false,
               },
             },
@@ -897,8 +939,6 @@ export default {
         },
       },
     });
-    console.log(bar3);
-
   },
 
   menu: false,
@@ -1174,11 +1214,11 @@ th {
 .card3_line2 {
   padding-left: 30px;
   font-size: 11px;
-  // padding-top: 5px;
+  padding-top: 5px;
 }
 .card5_line2 {
   font-size: 11px;
-  padding-top: -5px;
+  padding-top: 5px;
 }
 .sex-age-title-card3 {
   display: flex;
