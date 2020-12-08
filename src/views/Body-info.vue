@@ -82,9 +82,12 @@
                                 icon
                                 @click="dialog0 = false"
                               >
-                                <v-icon
-                                  >mdi-arrow-left-drop-circle-outline</v-icon
-                                >
+                                <img
+                                  height="30px"
+                                  class="filter-white"
+                                  src="../assets/icon/icon_prev.svg"
+                                  alt="prev"
+                                />
                               </v-btn>
                             </div>
                             <div>
@@ -182,7 +185,12 @@
                   <!-- การก้าว+icon -->
                   <div class="title_card3_p5">
                     <div class="card5-bot-text ">
-                      <v-icon large color="#00E676">mdi-archive-alert</v-icon>
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/bmi.svg"
+                        alt="BMI"
+                      />
                       <span><strong>BMI</strong></span>
                     </div>
                   </div>
@@ -315,7 +323,11 @@
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p5_content_right pd_r_30">
-              <v-card class="card2-subcard-3 ct_set bdr_12_only" width="" height="">
+              <v-card
+                class="card2-subcard-3 ct_set bdr_12_only"
+                width=""
+                height=""
+              >
                 <v-card-subtitle>
                   <span class="topic-name-card_c3 ">
                     ตัวบ่งชี้

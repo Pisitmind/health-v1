@@ -63,7 +63,14 @@
             </div>
           </div>
           <div class="card1-content">
-            <div class="text-center">
+            <div style="float: left; position: relative;">
+              <div
+                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index: 999999999999999"
+              >
+                <span class="text_inside">ผู้ใช้ทั้งหมด</span><br />
+                <span class="text_inside1">2,800</span><br />
+                <span class="text_inside">คน</span>
+              </div>
               <canvas id="graph0" width="" height="200px"></canvas>
             </div>
             <v-card class="bdr_12_only" height="">
@@ -665,24 +672,43 @@ export default {
         labels: ["ชาย", "หญิง"],
       },
       options: {
-        elements: {
-          center: {
-            text: "ผู้ใช้ทั้งหมด 2,800 คน",
-            color: "#000000", // Default is #000000
-            fontStyle: "Arial", // Default is Arial
-            sidePadding: 40, // Default is 20 (as a percentage)
-            minFontSize: 15, // Default is 20 (in px), set to false and text will not wrap.
-            lineHeight: 25, // Default is 25 (in px), used for when text wraps
-          },
-        },
         responsive: true,
         legend: {
           display: false,
         },
+        elements: {
+          center: {
+            text: "ผู้ใช้ทั้งหมด 2,800 คน",
+            color: "#0000ff", // Default is #000000
+            fontStyle: "Arial", // Default is Arial
+          },
+        },
       },
     };
+
     var ctx0 = document.getElementById("graph0").getContext("2d");
     var bar0 = new Chart(ctx0, config);
+
+    // Chart.pluginService.register({
+    //   beforeDraw: function(chart) {
+    //     var width = chart.chart.width,
+    //       height = chart.chart.height,
+    //       ctx = chart.chart.ctx;
+
+    //     ctx.restore();
+    //     var fontSize = (height / 114).toFixed(2);
+    //     ctx.font = fontSize + "em sans-serif";
+    //     ctx.textBaseline = "middle";
+
+    //     var text = "ผู้ใช้ทั้งหมด 2,800 คน",
+    //       textX = Math.round((width - ctx.measureText(text).width) / 2),
+    //       textY = height / 2;
+
+    //     ctx0.fillText(text, textX, textY);
+    //     ctx0.save();
+    //   },
+    // });
+
     console.log(bar0);
 
     var ctx = document.getElementById("graph").getContext("2d");
@@ -713,6 +739,9 @@ export default {
           xAxes: [
             {
               display: true,
+              gridLines: {
+                display: false,
+              },
             },
           ],
         },
@@ -968,6 +997,15 @@ export default {
 .rounded-card {
   border-radius: 12px !important;
   box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.text_inside{
+  font-size: 14px;
+  color:grey;
+}
+.text_inside1{
+  font-size: 22px;
+  font-weight: bold;
+
 }
 .head_name_tag {
   font-size: 20px;

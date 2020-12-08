@@ -27,7 +27,13 @@
                 <span><strong> Supratcha Wiwattanakorn</strong></span>
               </div>
               <div class="icon-profile">
-                <v-icon>mdi-bell</v-icon>
+                <v-btn class="ma-1" color="blue lighten-2" icon rounded raised>
+                  <img
+                    height="25px"
+                    class="filter-white"
+                    src="../assets/icon/noti.svg"
+                    alt="notive"
+                /></v-btn>
                 <v-btn
                   class="ma-1"
                   icon
@@ -35,8 +41,12 @@
                   raised
                   color="blue lighten-2"
                   to="/login"
-                  ><v-icon>mdi-cog</v-icon></v-btn
-                >
+                  ><img
+                    height="25px"
+                    class="filter-white"
+                    src="../assets/icon/setting.svg"
+                    alt="notive"
+                /></v-btn>
               </div>
             </div>
           </div>
@@ -51,34 +61,45 @@
           link
           router
           :to="item.route"
-          active-class="white--text purple rounded-l-lg"
+          active-class="g_grey white--text purple rounded-l-lg"
         >
           <v-list-item-icon>
-            <!-- <img
-                  height="30px"
-                  class="filter-color"
-                  alt="email"
-                /> -->
-            <v-icon>{{ item.icon }}</v-icon>
+            <img
+              v-if="(active = true)"
+              height="30px"
+              class="filter-white "
+              :src="require('../assets/icon/' + item.logo)"
+            />
+            <img
+              v-else
+              height="30px"
+              class="filter-white"
+              :src="require('../assets/icon/' + item.logo_active)"
+            />
           </v-list-item-icon>
 
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
-          <p>การจัดการ</p>
-        </v-list-item>
+        <v-list-item> </v-list-item>
+        <span class="grey--text" style="font-size:14px">การจัดการ</span>
         <v-list-item
           v-for="item2 in items2"
           :key="item2.title"
           link
           router
           :to="item2.route"
-          active-class="white--text purple rounded-l-lg"
+          active-class="white--text purple rounded-l-lg "
         >
           <v-list-item-icon>
-            <v-icon>{{ item2.icon }}</v-icon>
+            <img
+              height="30px"
+              class="filter-white grey--text"
+              contain
+              fill-color="white"
+              :src="require('../assets/icon/' + item2.logo)"
+            />
           </v-list-item-icon>
 
           <v-list-item-content>
@@ -106,43 +127,50 @@ export default {
         {
           title: "กราฟข้อมูล",
           icon: "mdi-chart-timeline",
-          logo: "../assets/icon/icon_dashboard.svg",
+          logo: "icon_dashboard.svg",
+          logo_active: "icon_dashboard_02.svg",
           route: "/",
         },
         {
           title: "แจ้งเตือน",
           icon: "mdi-bell-outline",
-          logo: "../assets/icon/icon_noti_other.svg",
+          logo: "noti.svg",
+          logo_active: "icon_noti_other.svg",
           route: "/Notifications",
         },
         {
           title: "ข้อมูลการเคลื่อนไหว",
           icon: "mdi-walk",
-          logo: "../assets/icon/icon_exercise.svg",
+          logo: "icon_exercise.svg",
+          logo_active: "icon_exercise_02.svg",
           route: "/Moving",
         },
         {
           title: "ข้อมูลสถานะร่างกาย",
           icon: "mdi-account-details",
-          logo: "../assets/icon/icon_statusdata.svg",
+          logo: "icon_statusdata.svg",
+          logo_active: "icon_statusdata_02.svg",
           route: "/Status",
         },
         {
           title: "ค่าส่วนประกอบในร่างกาย",
           icon: "mdi-human-handsup",
-          logo: "../assets/icon/icon_bodycomposition.svg",
+          logo: "icon_bodycomposition.svg",
+          logo_active: "icon_bodycomposition_02.svg",
           route: "/Body-info",
         },
         {
           title: "ข้อมูลสุขภาพจำเพาะ",
           icon: "mdi-water-plus",
-          logo: "../assets/icon/icon_healthsign.svg",
+          logo: "icon_healthsign.svg",
+          logo_active: "icon_healthsign_02.svg",
           route: "/unq-health",
         },
         {
           title: "รายงาน",
           icon: "mdi-chart-areaspline",
-          logo: "../assets/icon/icon_report.svg",
+          logo: "icon_report.svg",
+          logo_active: "icon_report_w.svg",
           route: "/Report",
           sublink: [
             {
@@ -177,7 +205,8 @@ export default {
         {
           title: "ผู้ใช้งาน",
           icon: "mdi-account-group-outline",
-          logo: "../assets/icon/icon_datapersonsa.svg",
+          logo: "icon_datapersonsa.svg",
+          logo2: "icon_datapersonsa_w.svg",
           sublink: [
             {
               title: "เจ้าหน้าที่",
@@ -195,13 +224,15 @@ export default {
         {
           title: "ข่าว / ประกาศ",
           icon: "mdi-new-box",
-          logo: "../assets/icon/icon_news.svg",
+          logo: "icon_news.svg",
+          logo2: "icon_news_w.svg",
           route: "/News",
         },
         {
           title: "บอร์ด / สาระสุขภาพ",
           icon: "mdi-teach",
-          logo: "../assets/icon/icon_board.svg",
+          logo: "icon_board.svg",
+          logo2: "icon_board_w.svg",
           route: "/Boards",
         },
       ],
@@ -241,5 +272,8 @@ a:visited {
 }
 .profile-bar {
   padding-left: 10px;
+}
+.g_grey {
+  fill:#7C7D7D;
 }
 </style>
