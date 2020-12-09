@@ -62,13 +62,13 @@
             link
             router
             :to="item.route"
-            active-class="g_grey white--text purple rounded-l-lg"
+            active-class="white_new white--text purple rounded-l-lg"
           >
             <v-list-item-icon>
               <img
                 v-if="(active = true)"
                 height="30px"
-                class="filter-white mb-1"
+                class="filter-white grey_new mb-1"
                 :src="require('../assets/icon/' + item.logo)"
               />
               <img
@@ -84,23 +84,20 @@
             </v-list-item-content>
           </v-list-item>
           <!-- case has submenus -->
-          <v-list-group v-else :key="item.title" pl-2>
+          <v-list-group v-else :key="item.title" pl-2 >
             <template v-slot:activator>
-              <v-list-tile class="">
+              <v-list-tile class="" >
                 <v-list-item-icon class="set_icon_left">
                   <img
                     height="30px"
-                    class="filter-white "
+                    class="filter-white grey_new"
                     :src="require('../assets/icon/' + item.logo)"
                   />
                 </v-list-item-icon>
                 <v-list-tile-content
                   class="set_font_small "
-                  :style="{
-                    'align-items': 'center',
-                  }"
                 >
-                  <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                  <v-list-tile-title style="align-content: top;">{{ item.title }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </template>
@@ -110,13 +107,16 @@
               :key="sublink.title"
               link
               router
-              active-class="g_grey white--text purple rounded-l-lg"
+              dense
+              active-class="white_new white--text purple rounded-l-lg"
             >
               <!-- <v-list-item-icon
                 ><v-icon x-small>{{ sublink.icon }} </v-icon></v-list-item-icon
               > -->
               <v-list-item-content>
-                <v-list-item-title class="pl-7">{{ sublink.title }}</v-list-item-title>
+                <v-list-item-title class="pl-7">{{
+                  sublink.title
+                }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
@@ -130,12 +130,12 @@
             link
             router
             :to="item2.route"
-            active-class="g_grey white--text purple rounded-l-lg "
+            active-class="white_new white--text purple rounded-l-lg "
           >
             <v-list-item-icon>
               <img
                 height="30px"
-                class="filter-white grey--text"
+                class="filter-white grey--text grey_new"
                 contain
                 fill-color="white"
                 color="#656666"
@@ -147,14 +147,14 @@
               <v-list-item-title>{{ item2.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-group v-else :key="item2.title" >
+          <v-list-group v-else :key="item2.title">
             <template v-slot:activator>
               <v-list-tile>
                 <v-list-item-icon>
                   <img
                     v-if="(active = true)"
                     height="30px"
-                    class="filter-white "
+                    class="filter-white grey_new"
                     :src="require('../assets/icon/' + item2.logo)"
                   />
                   <img
@@ -175,13 +175,15 @@
               :key="sublink2.title"
               link
               router
-              active-class="g_grey white--text purple rounded-l-lg"
+              active-class="white_new white--text purple rounded-l-lg"
             >
               <!-- <v-list-item-icon
                 ><v-icon x-small>{{ sublink2.icon }} </v-icon></v-list-item-icon
               > -->
               <v-list-item-content>
-                <v-list-item-title class="pl-7">{{ sublink2.title }}</v-list-item-title>
+                <v-list-item-title class="pl-7">{{
+                  sublink2.title
+                }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
@@ -322,6 +324,22 @@ export default {
 </script>
 
 <style scope>
+/* color svg setting */
+.set_bg_1 {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.grey_new {
+  opacity: 0.5;
+  filter: #656666;
+}
+.white_new {
+  /* opacity: .1; */
+  /* filter: White; */
+  /* fill: white; */
+  background-Color:green;
+}
 .set_pl0 {
   padding-left: 0 !important;
   align-content: center;
