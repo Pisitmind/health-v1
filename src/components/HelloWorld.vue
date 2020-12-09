@@ -406,8 +406,8 @@
           <div>
             <div class="head_card4 ">
               <div class="title_card4">
-                <div class="card4_nameNicon set_center">
-                  <div style="padding-right:0px;">
+                <div class="card4_nameNicon set_weight">
+                  <div style="padding-right:10px;">
                     <img
                       height="40px"
                       class="filter-white"
@@ -415,11 +415,7 @@
                       alt="weight"
                     />
                   </div>
-                  <div
-                    class="card3-bot-text"
-                    style=" display: flex; flex-wrap: wrap; align-content: center; 
-                      text-align: center; align-item:center;"
-                  >
+                  <div class="card3-bot-text set_weight">
                     <span><strong>สัดส่วนน้ำหนัก</strong></span>
                   </div>
                 </div>
@@ -1324,6 +1320,10 @@ th {
 }
 .card4_nameNicon {
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
   padding-right: 60px;
 }
 .card_left_c2_p1 {
@@ -1392,5 +1392,12 @@ th {
   display: flex;
   // width: 50%;
   justify-content: center;
+}
+.set_weight {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 </style>

@@ -108,63 +108,80 @@
             </div>
           </div>
           <!-- dontent  -->
-          <div class="card1_p3_content">
-            <div class="card1_p3_content_left">
-              <div class="card3_line2 grey--text">
-                <span>ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span>
-              </div>
-              <v-card-text>
-                <canvas id="graph1_p3" width="200px" height="100px"></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card1">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text">ชาย</span>
-                        </div>
-                        <div class="pd_10">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text">หญิง</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td width="50%" class="text_sub">
-                      <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <v-divider vertical></v-divider>
-            <div class="card1_p3_content_right">
-              <div class="card3_line2 grey--text">
-                <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-              </div>
-              <v-card-text>
-                <canvas id="graph2_c1_p3" width="200px" height="100px"></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <tr>
-                    <td
-                      style="padding-left:20px display:flex; align-item:center;"
-                      class="text_sub"
+          <v-container>
+            <v-layout row wrap justify="space-between">
+              <v-flex xs12 md6>
+                <v-card
+                  elevation="0"
+                  class="bdr_0"
+                  style="padding-righ:5px; border-right: 1px solid grey !important;"
+                >
+                  <div class="card3_line2 grey--text">
+                    <span
+                      >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                     >
-                      <span
-                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ 7,580
-                        ก้าวต่อวัน</span
+                  </div>
+                  <v-card-text>
+                     <div style="height:180px">
+                      <canvas id="graph1_p3" width="" height="120px"></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="set_h30">
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align:center;">
+                        <div class="label_text_card1">
+                          <div>
+                            <v-icon small color="blue"> mdi-circle</v-icon>
+                            <span class="black--text">ชาย</span>
+                          </div>
+                          <div class="pd_10">
+                            <v-icon small color="pink"> mdi-circle</v-icon>
+                            <span class="black--text">หญิง</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td width="50%" class="text_sub">
+                        <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </v-flex>
+              <v-flex xs12 md6>
+                <v-card elevation="0" style="padding-left:10px;">
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                  </div>
+                  <v-card-text>
+                     <div style="height:180px">
+                      <canvas
+                        id="graph2_c1_p3"
+                        width=""
+                        height="120px"
+                      ></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="set_h30">
+                  <table width="100%">
+                    <tr>
+                      <td
+                        style="padding-left:20px;"
+                        class="text_sub"
                       >
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
+                        <span
+                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ 7,580
+                          ก้าวต่อวัน</span
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </div>
       </v-card>
     </div>
@@ -473,6 +490,7 @@
         </div>
       </v-card>
     </div>
+   
   </div>
 </template>
 
@@ -1104,4 +1122,12 @@ export default {
   padding: auto;
   margin: auto;
 } */
+.set_h30 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 30px;
+  // background-color: green;
+}
 </style>

@@ -55,6 +55,9 @@ html{
   flex-wrap: wrap;
   align-items: center;
 }
+.bdr_0{
+  border-radius: 0 !important;
+}
 /*
 html::-webkit-scrollbar { 
     display: none; 
