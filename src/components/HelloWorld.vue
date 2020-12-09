@@ -296,9 +296,9 @@
 
               <div class="card3-content">
                 <div>
-                  <v-card-text>
+                  <div class="card2-graph">
                     <canvas id="graph3-1" width="450px" height="200px"></canvas>
-                  </v-card-text>
+                  </div>
                   <div class="label_grpah">
                     <table width="100%">
                       <tr>
@@ -404,9 +404,9 @@
       <v-card class="bdr_12">
         <div class="card5">
           <div>
-            <div class="head_card4">
+            <div class="head_card4 ">
               <div class="title_card4">
-                <div class="card4_nameNicon">
+                <div class="card4_nameNicon set_center">
                   <div style="padding-right:0px;">
                     <img
                       height="40px"
@@ -415,7 +415,11 @@
                       alt="weight"
                     />
                   </div>
-                  <div class="card3-bot-text ">
+                  <div
+                    class="card3-bot-text"
+                    style=" display: flex; flex-wrap: wrap; align-content: center; 
+                      text-align: center; align-item:center;"
+                  >
                     <span><strong>สัดส่วนน้ำหนัก</strong></span>
                   </div>
                 </div>
@@ -563,7 +567,7 @@
                       <div class="i-human">
                         <div>
                           <img
-                            height="40px"
+                            height="60px"
                             class="filter-white"
                             src="../assets/icon/Login-Regis_8Jul20-21.png"
                             alt="human"
@@ -576,7 +580,7 @@
                       <div class="i-human">
                         <div>
                           <img
-                            height="40px"
+                            height="60px"
                             class="filter-white"
                             src="../assets/icon/Login-Regis_8Jul20-23.png"
                             alt="human"
@@ -589,7 +593,7 @@
                       <div class="i-human">
                         <div>
                           <img
-                            height="40px"
+                            height="60px"
                             class="filter-white"
                             src="../assets/icon/Login-Regis_8Jul20-20.png"
                             alt="human"
@@ -602,7 +606,7 @@
                       <div class="i-human">
                         <div>
                           <img
-                            height="40px"
+                            height="60px"
                             class="filter-white"
                             src="../assets/icon/Login-Regis_8Jul20-18.png"
                             alt="human"
@@ -615,7 +619,7 @@
                       <div class="i-human">
                         <div>
                           <img
-                            height="40px"
+                            height="60px"
                             class="filter-white"
                             src="../assets/icon/Login-Regis_8Jul20-15.png"
                             alt="human"
@@ -898,7 +902,6 @@ export default {
       },
     });
     console.log(bar3);
-
   },
 
   menu: false,
@@ -1295,6 +1298,7 @@ th {
   display: flex;
   justify-content: space-between;
   // padding: 20px;
+  // padding: 20px 10px 0px 10px;
 }
 .title_card4 {
   width: 60%;
@@ -1310,8 +1314,9 @@ th {
 }
 .sexnage_card4 {
   display: flex;
-  flex-direction: row;
-  width: 20%;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
 }
 .card4-content {
   display: flex;
@@ -1379,5 +1384,13 @@ th {
   justify-content: center;
   justify-items: center;
   align-items: center;
+}
+.label_grpah {
+  padding-bottom: 20px;
+}
+.card4_head_btn {
+  display: flex;
+  // width: 50%;
+  justify-content: center;
 }
 </style>

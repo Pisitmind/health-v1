@@ -25,6 +25,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
+                        height="24px"
                         >+2%</v-btn
                       >
                     </td>
@@ -73,6 +74,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
+                        height="24px"
                         >+4%</v-btn
                       >
                     </td>

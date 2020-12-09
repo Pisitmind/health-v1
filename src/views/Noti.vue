@@ -78,7 +78,7 @@
                 <canvas id="graph0" width="" height="200px"></canvas>
               </div>
 
-              <div class="table_ct1_c1 c1">
+              <div class="table_ct1_c1 pd_y_data ">
                 <table
                   class="table_c1 c1"
                   style="width: 100%;
@@ -139,7 +139,7 @@
                 <canvas id="graph1" width="" height="200px"></canvas>
               </div>
 
-              <div class="table_ct2_c1 c1">
+              <div class="table_ct2_c1 pd_y_data ">
                 <table
                   class="table_c1 c1"
                   style="width: 100%;
@@ -235,16 +235,15 @@
                   </v-row>
                 </table>
               </div>
-              <br />
             </div>
 
             <div class="c_size c1">
               <v-card
-                class="card1-subcard-3 ct_set bdr_12_only"
+                class="card1-subcard-3 bdr_12_only"
                 width=""
-                height=""
+                height="300px"
               >
-                <v-card-title>
+                <v-card-title class="med_20">
                   <span class="topic_name_card pl-5 ">
                     Heart rate zone
                   </span>
@@ -263,7 +262,7 @@
                         <th></th>
                       </tr>
                       <tr v-for="x in 6" :key="x" class="two-data-card2">
-                        <td height="40px" class="pd_text 3">
+                        <td height="38px" class="pd_text">
                           <div class="t_name_ct3c1">
                             <v-icon
                               x-small
@@ -303,7 +302,7 @@
                       <img
                         height="40px"
                         src="../assets/icon/icon_weight_01.svg"
-                        alt="phone"
+                        alt="human"
                       />
                     </div>
                     <div class="card2_bot_text ">
@@ -336,7 +335,7 @@
                 <span class="text_inside">avg. kg.</span>
               </div>
               <div>
-                <canvas id="graph1_c2" width="200px" height="220"></canvas>
+                <canvas id="graph1_c2" width="200px" height="240"></canvas>
               </div>
             </div>
             <!-- card r  -->
@@ -436,10 +435,10 @@
                         <div class="i-human">
                           <div>
                             <img
-                              height="40px"
+                              height="60px"
                               class="filter-white"
                               src="../assets/icon/Login-Regis_8Jul20-21.png"
-                              alt="phone"
+                              alt="human"
                             />
                           </div>
                           <div><p>Underweight</p></div>
@@ -449,10 +448,10 @@
                         <div class="i-human">
                           <div>
                             <img
-                              height="40px"
+                              height="60px"
                               class="filter-white"
                               src="../assets/icon/Login-Regis_8Jul20-23.png"
-                              alt="phone"
+                              alt="human"
                             />
                           </div>
                           <div><p>Normal</p></div>
@@ -462,10 +461,10 @@
                         <div class="i-human">
                           <div>
                             <img
-                              height="40px"
+                              height="60px"
                               class="filter-white"
                               src="../assets/icon/Login-Regis_8Jul20-20.png"
-                              alt="phone"
+                              alt="human"
                             />
                           </div>
                           <div><p>Overweight</p></div>
@@ -475,10 +474,10 @@
                         <div class="i-human">
                           <div>
                             <img
-                              height="40px"
+                              height="60px"
                               class="filter-white"
                               src="../assets/icon/Login-Regis_8Jul20-18.png"
-                              alt="phone"
+                              alt="human"
                             />
                           </div>
                           <div><p>Obese I</p></div>
@@ -488,10 +487,10 @@
                         <div class="i-human">
                           <div>
                             <img
-                              height="40px"
+                              height="60px"
                               class="filter-white"
                               src="../assets/icon/Login-Regis_8Jul20-15.png"
-                              alt="phone"
+                              alt="human"
                             />
                           </div>
                           <div><p>Obese II</p></div>
@@ -514,8 +513,7 @@
                         :key="n"
                         width="16.67%"
                         height="40px"
-                        style="border:1px solid black;"
-                        class="font_omg"
+                        style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
                       >
                         {{ item.data[n - 1] }}
                       </td>
@@ -569,7 +567,7 @@
           <!-- card2 content -->
           <div class="content1_card2">
             <!-- card l -->
-            <div class="chart1_card2" style="float: left; position: relative;">
+            <div class="chart1_card2_2" style="float: left; position: relative;">
               <div
                 style="width: 100%; position: relative; top: 50%; left: 0; margin-bottom:-15px; margin-top: -15px; line-height:22px; text-align: center; z-index: 2"
               >
@@ -577,11 +575,11 @@
                 <span class="text_inside">avg.</span>
               </div>
               <div class="">
-                <canvas id="graph2_c2" width="200px" height="220"></canvas>
+                <canvas id="graph2_c2" width="200px" height="240"></canvas>
               </div>
             </div>
             <!-- card r  -->
-            <div class="data_table_card2 c30">
+            <div class="data_table_card2_1 c30">
               <div class="card1-subcard-3 ct_set" width="" height="">
                 <div class="table_content_card2">
                   <table
@@ -715,7 +713,7 @@
                         :key="n"
                         width="16.67%"
                         height="40px"
-                        style="border:1px solid black;"
+                        style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
                         class="font_omg"
                       >
                         {{ item.data[n - 1] }}
@@ -1238,7 +1236,7 @@ export default {
 .head-card1 {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px 30px 10px 30px;
   margin: auto;
 }
 .content1-card1 {
@@ -1259,6 +1257,10 @@ export default {
   font-size: 24px;
 }
 .cont1-card1 {
+  display: flex;
+  flex-direction: column;
+}
+.cont2-card1 {
   display: flex;
   flex-direction: column;
 }
@@ -1388,7 +1390,10 @@ export default {
   justify-content: center;
 }
 .chart1_card2 {
-  padding: 20px 0;
+  padding: 25px 0;
+}
+.chart1_card2_2 {
+  padding: 0px;
 }
 .chart1_card3 {
   width: 100%;
@@ -1417,7 +1422,12 @@ export default {
 }
 .data_table_card2 {
   width: 70%;
+  /* padding: 20px 0; */
   padding: 20px 0;
+}
+.data_table_card2_1{
+   width: 70%;
+  padding: 30px 0 0 0;
 }
 .card3_root {
   padding: 10px;
@@ -1440,5 +1450,15 @@ export default {
   display: flex;
   justify-content: left;
   align-items: center;
+}
+.pd_y_data {
+  padding: 20px 0;
+}
+.co5 {
+  background-color: grey;
+}
+.med_20 {
+  padding: 16px 16px 0 16px !important;
+  font-size: 16px;
 }
 </style>

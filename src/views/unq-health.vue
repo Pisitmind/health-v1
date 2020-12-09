@@ -106,16 +106,15 @@
                 </div>
               </div>
             </div>
-              <div class="split_me grey--text">
-                <div class="split_l" style="font-size: 12px;">
-                  <span>ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span>
-                </div>
-                <div class="split_r" style="font-size: 12px;">
-                  <span>ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
+            <div class="split_me grey--text">
+              <div class="split_l" style="font-size: 12px;">
+                <span>ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span>
               </div>
-            <v-card-subtitle class="pd_0">
-            </v-card-subtitle>
+              <div class="split_r" style="font-size: 12px;">
+                <span>ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+              </div>
+            </div>
+            <v-card-subtitle class="pd_0"> </v-card-subtitle>
           </div>
           <!-- Content  -->
           <div class="card1_p6_content">
@@ -132,15 +131,15 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text">ชาย</span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
                     </td>
-                    <td width="50%">
+                    <td width="50%" style="font-size:14px;">
                       <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                     </td>
                   </tr>
@@ -151,12 +150,16 @@
             <div class="card1_p6_content_right">
               <v-card-text>
                 <!-- ใส่กราฟ -->
-                <canvas id="graph2_c1_p6" width="200px" height=""></canvas>
+                <canvas id="graph2_c1_p6" width="200px" height="90px"></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p6">
-                <table width="100%">
-                  <span class>ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี </span>
+                <table width="100%" style="font-size: 14px;">
+                  <tr>
+                    <td style=" padding-top: 5px;">
+                      <span class>ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี </span>
+                    </td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -289,7 +292,7 @@
                         ตัวบ่งชี้
                       </span>
                     </v-card-subtitle>
-                    <v-card-text class="pa-2">
+                    <v-card-text class="pa-2 pb-8">
                       <table class="card2_table">
                         <tr v-for="item in data_card2_p6" :key="item.id">
                           <td>
@@ -369,7 +372,7 @@
                         ตัวบ่งชี้
                       </span>
                     </v-card-subtitle>
-                    <v-card-text class="pa-1">
+                    <v-card-text class="pa-1 pb-8">
                       <table class="card2_table">
                         <tr v-for="item in data_card2_2_p6" :key="item.id">
                           <td>
@@ -526,20 +529,25 @@
             <div class="label_grpah1_c1_p6">
               <table width="100%">
                 <tr>
-                  <td style="text-align:center;">
-                    <div class="label_text_card1">
+                  <td style="text-align:center; padding-left: 45px;">
+                    <div class="label_text_card1_1">
                       <div>
                         <v-icon small color="blue"> mdi-circle</v-icon>
-                        <span class="black--text"><strong>ชาย</strong></span>
+                        <span class="black--text">ชาย</span>
                       </div>
                       <div class="pd_10">
                         <v-icon small color="pink"> mdi-circle</v-icon>
-                        <span class="black--text"><strong>หญิง</strong></span>
+                        <span class="black--text">หญิง</span>
                       </div>
                     </div>
                   </td>
-                  <td width="50%">
-                    <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                  <td width="50%" style="font-size:14px;">
+                    <!-- <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span> -->
+                  </td>
+                </tr>
+                <tr>
+                    <td width="50%" class="grey--text" style="font-size:14px; padding-left: 45px;">
+                    <span>อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5 องศาเซลเซียส</span>
                   </td>
                 </tr>
               </table>
@@ -826,6 +834,10 @@ export default {
 .card3_p6 {
   padding: 10px 20px 10px 20px;
 }
+.label_text_card1_1{
+  display: flex;
+  align-content: left;
+}
 .card1_p6_root {
   padding: 20px;
 }
@@ -977,7 +989,7 @@ export default {
 .card2_table {
   text-align: center;
   vertical-align: middle;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 /* .sub_table{
   width: 100%;
@@ -1000,7 +1012,6 @@ table {
 }
 .split_l {
   width: 50%;
-  
 }
 .split_r {
   width: 50%;

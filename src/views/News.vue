@@ -70,6 +70,7 @@
                               width="120px"
                               height="30px"
                               color="#AD8DBB"
+                              @click="dialog1 = false"
                             >
                               <span> บันทึก</span>
                             </v-btn>

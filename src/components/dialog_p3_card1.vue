@@ -52,6 +52,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
+                        height="24px"
                         >+4%</v-btn
                       >
                     </td>
@@ -98,6 +99,7 @@
                         depressed
                         class="white--text"
                         elevation="2"
+                        height="24px"
                         >+12%</v-btn
                       >
                     </td>
@@ -535,12 +537,12 @@ export default {
   /* justify-items: center; */
   justify-content: center;
 }
-.head_dialog {
+/* .head_dialog {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+} */
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;

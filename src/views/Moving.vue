@@ -110,13 +110,11 @@
           <!-- dontent  -->
           <div class="card1_p3_content">
             <div class="card1_p3_content_left">
-                <div class="card3_line2 grey--text">
-                  <span
-                    >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
-                  >
-                </div>
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span>
+              </div>
               <v-card-text>
-                <canvas id="graph1_p3" width="200px" height=""></canvas>
+                <canvas id="graph1_p3" width="200px" height="100px"></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p3">
@@ -126,11 +124,11 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text">ชาย</span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
                     </td>
@@ -143,19 +141,26 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p3_content_right">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+              </div>
               <v-card-text>
-                <canvas id="graph2_c1_p3" width="200px" height=""></canvas>
+                <canvas id="graph2_c1_p3" width="200px" height="100px"></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p3">
                 <table width="100%">
-                  <span class="text_sub"
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวปะมาณ 7,580
-                    ก้าวต่อวัน</span
-                  >
+                  <tr>
+                    <td
+                      style="padding-left:20px display:flex; align-item:center;"
+                      class="text_sub"
+                    >
+                      <span
+                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ 7,580
+                        ก้าวต่อวัน</span
+                      >
+                    </td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -271,33 +276,42 @@
           </div>
           <div class="card1_p3_content">
             <div class="card1_p3_content_left">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
-                </div>
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
+              </div>
               <v-card-text>
-                <canvas id="graph1_c2_p3" width="200px" height=""></canvas>
+                <canvas id="graph1_c2_p3" width="200px" height="130"></canvas>
               </v-card-text>
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p3_content_right">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+              </div>
               <v-card-text>
                 <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <span class="text_sub"
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
-                    แคลต่อวัน</span
-                  >
-                  <br />
-                  <span class="grey--text text_sub"
-                    >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
-                    ต่อวัน)</span
-                  >
+                <table width="100%" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding:0; margin:0;">
+                      <span class="text_sub"
+                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
+                        แคลต่อวัน</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span
+                        class="grey--text text_sub"
+                        style="padding:0; margin:0;"
+                        >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
+                        ต่อวัน)</span
+                      >
+                    </td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -306,9 +320,9 @@
       </v-card>
     </div>
     <!-- การ์ด ออกกำลังกาย -->
-    <div class="card1_p3">
+    <div class="card1_p3 pb_40">
       <v-card class="bdr_12">
-        <div class="card1_p3_root">
+        <div class="card1_p3_root pb_20">
           <div class="card1_p3_headNsub">
             <!-- head lr -->
             <div class="card1_head_lr">
@@ -386,34 +400,33 @@
           </div>
           <div class="card1_p3_content">
             <div class="card3_p3_content_left">
-                <!-- <div class="card3_line2 grey--text">
+              <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
               <v-card-text>
                 <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
-                <div class="label_grpah1_c1_p3">
-                  <table width="100%">
-                    <tr>
-                      <td style="text-align:center;">
-                        <div class="label_text_card3">
-                          <div>
-                            <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text"
-                              ><strong>ชาย</strong></span
-                            >
-                          </div>
-                          <div class="pd_10">
-                            <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text"
-                              ><strong>หญิง</strong></span
-                            >
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
               </v-card-text>
+              <div class="label_grpah1_c1_p3">
+                <table width="100%">
+                  <tr>
+                    <td style="text-align:center;">
+                      <div class="label_text_card3">
+                        <div>
+                          <v-icon small color="blue"> mdi-circle</v-icon>
+                          <span class="black--text">ชาย</span>
+                        </div>
+                        <div class="pd_20">
+                          <v-icon small color="pink"> mdi-circle</v-icon>
+                          <span class="black--text">หญิง</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td width="50%" class="text_sub">
+                      <span></span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p3_content_right pd_r_30">
@@ -622,7 +635,7 @@ export default {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         datasets: [
           {
-            label: "",
+            label: "แคล",
             backgroundColor: [
               "#58BFAE",
               "#FF3E80",
@@ -632,6 +645,7 @@ export default {
               "#2289D8",
             ],
             data: [984, 627, 743, 505, 286, 211],
+            barPercentage: 0.5,
           },
         ],
       },
@@ -861,7 +875,7 @@ export default {
 .hid {
   display: none;
 }
-.card3_line2{
+.card3_line2 {
   padding-top: 0px;
   padding-left: 10px;
   font-size: 12px;
@@ -1000,14 +1014,19 @@ export default {
   justify-content: space-around;
 }
 .pd_10 {
-  padding-left: 40px;
+  padding-left: 50px;
+}
+.pd_20 {
+  padding-left: 60px;
 }
 .label_text_card1 {
   display: flex;
   justify-content: center;
+  font-size: 14px;
 }
 .label_text_card3 {
   display: flex;
+  justify-content: center;
 }
 .title_card3_p3 {
   width: 30%;
@@ -1068,9 +1087,14 @@ export default {
 }
 .text_sub {
   font-size: 14px;
-  font-weight: bold;
+  // font-weight:lighter;
 }
-
+.pb_20 {
+  padding-bottom: 20px;
+}
+.pb_40 {
+  padding-bottom: 40px;
+}
 /* 
 
 .ct_set {

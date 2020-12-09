@@ -132,15 +132,15 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text">ชาย</span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
                     </td>
-                    <td width="50%">
+                    <td width="50%" style="font-size:14px">
                       <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                     </td>
                   </tr>
@@ -161,7 +161,7 @@
 
               <div class="label_grpah1_c1_p5">
                 <table width="100%">
-                  <span class
+                  <span style="font-size:14px;"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีน้ำหนักประมาณ 78
                     กิโลกรัม</span
                   >
@@ -305,16 +305,19 @@
                           <div>
                             <v-icon small color="blue"> mdi-circle</v-icon>
                             <span class="black--text"
-                              ><strong>ชาย</strong></span
+                              >ชาย</span
                             >
                           </div>
                           <div class="pd_10">
                             <v-icon small color="pink"> mdi-circle</v-icon>
                             <span class="black--text"
-                              ><strong>หญิง</strong></span
+                              >หญิง</span
                             >
                           </div>
                         </div>
+                      </td>
+                      <td width="60%">
+                        <span></span>
                       </td>
                     </tr>
                   </table>
@@ -650,9 +653,6 @@ export default {
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
-.sex_age_title_card1_p5 {
-  display: flex;
-}
 .card1_p5_content_left {
   width: 50%;
   /* background-color: rgba(0, 0, 0, 0.2); */
@@ -703,6 +703,10 @@ export default {
   width: 50%;
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.label_text_card3{
+  display:flex;
+  justify-content:space-around;
 }
 
 </style>

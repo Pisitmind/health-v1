@@ -42,11 +42,11 @@
                     >
                     </v-file-input> -->
                       <v-btn class="center" icon small>
-                         <img
-                    height="40px"
-                    src="../assets/icon/icon_photo.svg"
-                    alt="cam"
-                  />
+                        <img
+                          height="35px"
+                          src="../assets/icon/icon_photo.svg"
+                          alt="cam"
+                        />
                       </v-btn>
                       <span class="card_text">รูปข่าว</span>
                       <p class="sub_text">
@@ -59,7 +59,11 @@
                   <v-action-card>
                     <div class="in_card1">
                       <v-btn class="center" icon small>
-                        <v-icon color="#8A4532">mdi-camera-outline</v-icon>
+                        <img
+                          height="35px"
+                          src="../assets/icon/icon_photo.svg"
+                          alt="cam"
+                        />
                       </v-btn>
                       <span class="card_text">รูปข่าว</span>
                       <p class="sub_text">
@@ -72,7 +76,11 @@
                   <v-action-card>
                     <div class="in_card1">
                       <v-btn class="center" icon small>
-                        <v-icon color="#8A4532">mdi-camera-outline</v-icon>
+                        <img
+                          height="35px"
+                          src="../assets/icon/icon_photo.svg"
+                          alt="cam"
+                        />
                       </v-btn>
                       <span class="card_text">รูปข่าว</span>
                       <p class="sub_text">

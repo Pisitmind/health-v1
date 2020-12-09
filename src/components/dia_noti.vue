@@ -22,6 +22,7 @@
                       depressed
                       class="white--text"
                       elevation="2"
+                      height="24px"
                       >+4%</v-btn
                     >
                   </td>
@@ -68,6 +69,7 @@
                       depressed
                       class="white--text"
                       elevation="2"
+                      height="24px"
                       >+2%</v-btn
                     >
                   </td>
@@ -544,7 +546,7 @@ export default {
 </script>
 
 <style scoped>
-.dia_noti{
+.dia_noti {
   /* padding: 0 30px; */
 }
 .noti {
@@ -554,11 +556,11 @@ export default {
   height: auto;
   width: 300px;
 }
-.set_bold{
+.set_bold {
   font-weight: bold;
 }
-.fz_20{
-  font-size:20px;
+.fz_20 {
+  font-size: 20px;
 }
 /* .c1 {
   background-color: greenyellow;

@@ -19,6 +19,10 @@
                                 >mdi-camera-outline</v-icon
                               >
                             </v-btn>
+                            <!-- <v-file-input
+                              hide-input
+                              class="center"
+                            ></v-file-input> -->
                             <span class="card_text">รูปเจ้าหน้าที่</span>
                             <p class="sub_text">
                               ขนาด 480x480 หรือ 1:1
@@ -32,26 +36,25 @@
                         v-model="name_au"
                         label="ชื่อ"
                         placeholder="ชื่อพนักงาน"
-                        
                       >
                       </v-text-field>
                       <v-row>
                         <v-col cols="12" sm="5">
-                        <v-text-field
-                          v-model="tel_au"
-                          label="เบอร์โทรศัพท์"
-                          placeholder="(+66)"
-                        >
-                        </v-text-field>
+                          <v-text-field
+                            v-model="tel_au"
+                            label="เบอร์โทรศัพท์"
+                            placeholder="(+66)"
+                          >
+                          </v-text-field>
                         </v-col>
                         <v-spacer></v-spacer>
                         <v-col cols="12" sm="7">
-                        <v-text-field
-                          v-model="email"
-                          label="อีเมลล์"
-                          placeholder="กรอกอีเมลล์"
-                        >
-                        </v-text-field>
+                          <v-text-field
+                            v-model="email"
+                            label="อีเมลล์"
+                            placeholder="กรอกอีเมลล์"
+                          >
+                          </v-text-field>
                         </v-col>
                       </v-row>
                     </v-col>
@@ -130,12 +133,12 @@ export default {
 </script>
 
 <style scoped>
-.content_dialog_user{
+.content_dialog_user {
   padding: 20px;
 }
 
-.pd_20{
-    padding:0 20px 20px 20px;
+.pd_20 {
+  padding: 0 20px 20px 20px;
 }
 .row_card {
   display: flex;

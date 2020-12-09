@@ -9,7 +9,7 @@
                 <img
                   height="40px"
                   class="filter-white"
-                  src="../assets/icon/icon_news.svg"
+                  src="../assets/icon/icon_board.svg"
                   alt="news"
                 />
               </v-btn>
@@ -66,6 +66,7 @@
                             width="120px"
                             height="30px"
                             color="#AD8DBB"
+                            @click="dialog1 = false"
                           >
                             <span> บันทึก</span>
                           </v-btn>

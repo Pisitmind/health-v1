@@ -127,15 +127,15 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text">ชาย</span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
                     </td>
-                    <td width="50%">
+                    <td width="50%" align="right" style="font-size:14px; padding-right:40px;">
                       <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                     </td>
                   </tr>
@@ -149,14 +149,14 @@
                 </div>
               <v-card-subtitle class="pd_0">
               </v-card-subtitle>
-              <v-card-text>
+              <v-card-text >
                 <!-- ใส่กราฟ -->
                 <canvas id="graph2_c1_p4" width="200px" height=""></canvas>
               </v-card-text>
 
-              <div class="label_grpah1_c1_p4">
+              <div class="label_grpah1_c1_p4" style="padding-top:5px;">
                 <table width="100%">
-                  <span class
+                  <span style="font-size:14px"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40
                     ชั่วโมงต่อวัน</span
                   >
@@ -290,7 +290,7 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text">ชาย</span>
                         </div>
                       </div>
                     </td>
@@ -298,7 +298,7 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
                     </td>
@@ -333,7 +333,7 @@
                 </v-card-text>
                 <div class="label_grpah1_c1_p4">
                   <table width="100%">
-                    <span class="" style="font-size:14px; font-weight:bold;"
+                    <span class="" style="font-size:14px; font-weight:normal;"
                       >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ 135
                       BPM ต่อวัน</span
                     >
@@ -366,7 +366,7 @@
                 </v-card-text>
                 <div class="label_grpah1_c1_p4">
                   <table width="100%">
-                    <span class="" style="font-size:14px; font-weight:bold;"
+                    <span class="" style="font-size:14px; font-weight:normal;"
                       >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ 135
                       BPM ต่อวัน</span
                     >
@@ -516,7 +516,7 @@
 
               <div class="label_grpah1_c1_p4">
                 <table width="100%">
-                  <span class="" style="font-size:14px; font-weight:bold;"
+                  <span class="" style="font-size:14px; font-weight:normal;"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 22.4% มีจำนวน 684 คน</span
                   >
                 </table>
@@ -1041,5 +1041,8 @@ export default {
 }
 .head_dialog_c2_p4 {
   display: flex;
+}
+.label_text_card1{
+  font-size: 14px;
 }
 </style>
