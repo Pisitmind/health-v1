@@ -107,7 +107,7 @@
               </div>
             </div>
           </div>
-          <!-- dontent  -->
+          <!-- content  -->
           <v-container>
             <v-layout row wrap justify="space-between">
               <v-flex xs12 md6>
@@ -122,7 +122,7 @@
                     >
                   </div>
                   <v-card-text>
-                     <div style="height:180px">
+                    <div style="height:180px">
                       <canvas id="graph1_p3" width="" height="120px"></canvas>
                     </div>
                   </v-card-text>
@@ -155,7 +155,7 @@
                     <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                   </div>
                   <v-card-text>
-                     <div style="height:180px">
+                    <div style="height:180px">
                       <canvas
                         id="graph2_c1_p3"
                         width=""
@@ -167,10 +167,7 @@
                 <div class="set_h30">
                   <table width="100%">
                     <tr>
-                      <td
-                        style="padding-left:20px;"
-                        class="text_sub"
-                      >
+                      <td style="padding-left:20px;" class="text_sub">
                         <span
                           >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ 7,580
                           ก้าวต่อวัน</span
@@ -291,48 +288,75 @@
               </div>
             </div>
           </div>
-          <div class="card1_p3_content">
-            <div class="card1_p3_content_left">
-              <div class="card3_line2 grey--text">
-                <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
-              </div>
-              <v-card-text>
-                <canvas id="graph1_c2_p3" width="200px" height="130"></canvas>
-              </v-card-text>
-            </div>
-            <v-divider vertical></v-divider>
-            <div class="card1_p3_content_right">
-              <div class="card3_line2 grey--text">
-                <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-              </div>
-              <v-card-text>
-                <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p3">
-                <table width="100%" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="padding:0; margin:0;">
-                      <span class="text_sub"
-                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
-                        แคลต่อวัน</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span
-                        class="grey--text text_sub"
-                        style="padding:0; margin:0;"
-                        >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
-                        ต่อวัน)</span
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
+          <!-- content -->
+          <v-container>
+            <v-layout row wrap justify="space-between">
+              <v-flex xs12 md6>
+                <v-card
+                  elevation="0"
+                  class="bdr_0"
+                  style="padding-righ:5px; border-right: 1px solid grey !important;"
+                >
+                  <!-- หัวตาราง -->
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
+                  </div>
+                  <v-card-text>
+                    <div style="height:250px">
+                      <!-- graph -->
+                      <canvas
+                        id="graph1_c2_p3"
+                        width="200px"
+                        height="130"
+                      ></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="set_h30">
+                  <!-- ก้นตาราง -->
+                </div>
+              </v-flex>
+              <v-flex xs12 md6>
+                <v-card elevation="0" style="padding-left:10px;">
+                  <!-- หัวตาราง -->
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                  </div>
+                  <v-card-text>
+                    <div style="height:250px">
+                      <!-- กราฟ -->
+                      <canvas
+                        id="graph2_c2_p3"
+                        width="200px"
+                        height=""
+                      ></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="set_h50">
+                  <!-- ก้นตาราง -->
+                  <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr style="padding:0; margin:0;">
+                      <td style="padding-left:20px;">
+                        <span class="text_sub"
+                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ
+                          658 แคลต่อวัน</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:20px;">
+                        <span class="grey--text text_sub"
+                          >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
+                          ต่อวัน)</span
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </div>
       </v-card>
     </div>
@@ -490,7 +514,6 @@
         </div>
       </v-card>
     </div>
-   
   </div>
 </template>
 
@@ -1129,5 +1152,8 @@ export default {
   justify-items: center;
   height: 30px;
   // background-color: green;
+}
+.set_h50 {
+  height: 50px;
 }
 </style>

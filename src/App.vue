@@ -1,15 +1,14 @@
 <template>
-  <v-app >
+  <v-app>
     <!-- <v-app-bar app>
     </v-app-bar> -->
     <!-- <Navbar /> -->
-      <Navbar />
+    <Navbar />
     <v-main>
       <v-container fluid class="ma-0 pa-0">
         <router-view></router-view>
       </v-container>
     </v-main>
-
   </v-app>
 </template>
 
@@ -26,20 +25,16 @@ export default {
     return {};
   },
   computed: {
- hide () {
-   return this.$route.path !== '/login'; 
- },
-},
-  
+    hide() {
+      return this.$route.path !== "/login";
+    },
+  },
 };
-
-
 </script>
 
 <style scope>
-
-html{
-  overflow-x:hidden;
+html {
+  overflow-x: hidden;
   font-family: Roboto;
   /* overflow-y:hidden; */
 }
@@ -50,13 +45,21 @@ html{
 .bdr_12_only {
   border-radius: 12px !important;
 }
-.set_center{
-  display:flex;
+.set_center {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.bdr_0{
+.bdr_0 {
   border-radius: 0 !important;
+}
+.set_h30 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 30px;
+   /* background-color: green; */
 }
 /*
 html::-webkit-scrollbar { 

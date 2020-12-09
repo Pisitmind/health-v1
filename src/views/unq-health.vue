@@ -119,12 +119,12 @@
           <!-- Content  -->
           <div class="card1_p6_content">
             <div class="card3_p6_content_left">
-              <v-card-text>
+               <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_p6" width="200px" height="90px"></canvas>
-              </v-card-text>
+               </div>
 
-              <div class="label_grpah1_c1_p6">
+              <div class="label_grpah1_c1_p6 set_h30">
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
@@ -148,12 +148,12 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p6_content_right">
-              <v-card-text>
+              <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph2_c1_p6" width="200px" height="90px"></canvas>
-              </v-card-text>
+              </div>
 
-              <div class="label_grpah1_c1_p6">
+              <div class="label_grpah1_c1_p6 set_h30">
                 <table width="100%" style="font-size: 14px;">
                   <tr>
                     <td style=" padding-top: 5px;">

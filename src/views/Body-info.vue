@@ -120,12 +120,11 @@
                 </div>
               <v-card-subtitle class="pd_0">
               </v-card-subtitle>
-              <v-card-text>
+               <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_p5" width="200px" height="90px"></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p5">
+               </div>
+              <div class="label_grpah1_c1_p5 set_h30">
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
@@ -154,12 +153,12 @@
                 </div>
               <v-card-subtitle class="pd_0">
               </v-card-subtitle>
-              <v-card-text>
+              <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph2_c1_p5" width="200px" height=""></canvas>
-              </v-card-text>
+              </div>
 
-              <div class="label_grpah1_c1_p5">
+              <div class="label_grpah1_c1_p5 set_h30">
                 <table width="100%">
                   <span style="font-size:14px;"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีน้ำหนักประมาณ 78
