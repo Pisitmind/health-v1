@@ -2,16 +2,23 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import moving from '../views/Moving.vue';
-import status from '../views/Status.vue';
-import bodyinfo from '../views/Body-info.vue';
-import unqHealth from '../views/unq-health.vue';
-import report from '../views/Report.vue';
-import users from '../views/Users.vue';
-import news from '../views/News.vue';
-import boards from '../views/Boards.vue';
-import Login from '../components/Login.vue';
-import notif from '../views/Noti.vue';
+import moving from "../views/Moving.vue";
+import status from "../views/Status.vue";
+import bodyinfo from "../views/Body-info.vue";
+import unqHealth from "../views/unq-health.vue";
+import report from "../views/Report.vue";
+import users from "../views/Users.vue";
+import news from "../views/News.vue";
+import boards from "../views/Boards.vue";
+import Login from "../components/Login.vue";
+import notif from "../views/Noti.vue";
+import sub_report1 from "../components/Report_sub1.vue";
+import sub_report2 from "../components/Report_sub2.vue";
+import sub_report3 from "../components/Report_sub3.vue";
+import sub_report4 from "../components/Report_sub4.vue";
+import sub_report5 from "../components/Report_sub5.vue";
+import admin_user from "../components/authorities.vue";
+import normal_user from "../components/normal_user.vue";
 
 Vue.use(VueRouter);
 
@@ -87,6 +94,49 @@ const routes = [
     component: notif,
     auth: true,
   },
+  {
+    path: "/user_data",
+    name: "user_data_system",
+    component: sub_report1,
+    auth: true,
+  },
+  {
+    path: "/movment_data_user",
+    name: "user_movment_data",
+    component: sub_report2,
+    auth: true,
+  },
+  {
+    path: "/status_data_user",
+    name: "user_status_data",
+    component: sub_report3,
+    auth: true,
+  },
+  {
+    path: "/ingredient_data_user",
+    name: "user_ingredient_data",
+    component: sub_report4,
+    auth: true,
+  },
+  {
+    path: "/unq_data_user",
+    name: "user_unq_data",
+    component: sub_report5,
+    auth: true,
+  },
+  {
+    path: "/admin_user",
+    name: "admin_user",
+    component: admin_user,
+    auth: true,
+  },
+  {
+    path: "/normal_user",
+    name: "normal_user",
+    component: normal_user,
+    auth: true,
+  },
+
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.

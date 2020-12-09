@@ -1,6 +1,6 @@
 <template>
-  <div class="report_sub2">
-    <v-card class="report_card_root">
+  <div class="report_sub2 ">
+    <v-card class="report_card_root bdr_12">
       <v-card-title>
         <div class="head_title_card_p7">
           <div class="head_card_p7">
@@ -414,7 +414,7 @@ export default {
 };
 </script>
 <style scoped>
-.report {
+.report_sub2 {
   padding: 20px;
 }
 .text_header{

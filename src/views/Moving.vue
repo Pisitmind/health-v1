@@ -467,12 +467,12 @@
 import Chart from "chart.js";
 import dialog_p3 from "@/components/dialog_p3_card1.vue";
 import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
-import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
+// import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 export default {
   components: {
     dialog_p3,
     dialog_p3_2,
-    sub_dia3,
+    // sub_dia3,
   },
   mounted: function() {
     var ctx1_p3 = document.getElementById("graph1_p3").getContext("2d");

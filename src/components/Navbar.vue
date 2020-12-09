@@ -55,82 +55,137 @@
       </v-list-item>
 
       <v-list dense nav>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
-          router
-          :to="item.route"
-          active-class="g_grey white--text purple rounded-l-lg"
-        >
-          <v-list-item-icon>
-            <img
-              v-if="(active = true)"
-              height="30px"
-              class="filter-white "
-              :src="require('../assets/icon/' + item.logo)"
-            />
-            <img
-              v-else
-              height="30px"
-              class="filter-white"
-              :src="require('../assets/icon/' + item.logo_active)"
-            />
-          </v-list-item-icon>
+        <div v-for="(item, i) in items" :key="item.id" class="">
+          <v-list-item
+            v-if="!item.subLinks"
+            :key="i"
+            link
+            router
+            :to="item.route"
+            active-class="g_grey white--text purple rounded-l-lg"
+          >
+            <v-list-item-icon>
+              <img
+                v-if="(active = true)"
+                height="30px"
+                class="filter-white mb-1"
+                :src="require('../assets/icon/' + item.logo)"
+              />
+              <img
+                v-else
+                height="30px"
+                class="filter-white mb-1"
+                :src="require('../assets/icon/' + item.logo_active)"
+              />
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <!-- case has submenus -->
+          <v-list-group v-else :key="item.title" pl-2>
+            <template v-slot:activator>
+              <v-list-tile class="">
+                <v-list-item-icon class="set_icon_left">
+                  <img
+                    height="30px"
+                    class="filter-white "
+                    :src="require('../assets/icon/' + item.logo)"
+                  />
+                </v-list-item-icon>
+                <v-list-tile-content
+                  class="set_font_small "
+                  :style="{
+                    'align-items': 'center',
+                  }"
+                >
+                  <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </template>
+            <v-list-item
+              v-for="sublink in item.subLinks"
+              :to="sublink.route"
+              :key="sublink.title"
+              link
+              router
+              active-class="g_grey white--text purple rounded-l-lg"
+            >
+              <!-- <v-list-item-icon
+                ><v-icon x-small>{{ sublink.icon }} </v-icon></v-list-item-icon
+              > -->
+              <v-list-item-content>
+                <v-list-item-title class="pl-7">{{ sublink.title }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+        </div>
         <!-- :src="require('../assets/icon/' + item.logo)" -->
-        <v-list-group :value="true" sub-gruop>
-          <template v-slot:activator>
+        <span class="grey--text" style="font-size:14px">การจัดการ</span>
+        <div v-for="(item2, i) in items2" :key="item2.id">
+          <v-list-item
+            v-if="!item2.subLinks"
+            :key="i"
+            link
+            router
+            :to="item2.route"
+            active-class="g_grey white--text purple rounded-l-lg "
+          >
             <v-list-item-icon>
               <img
                 height="30px"
-                class="filter-white "
-                src="../assets/icon/icon_report.svg"
+                class="filter-white grey--text"
+                contain
+                fill-color="white"
+                color="#656666"
+                :src="require('../assets/icon/' + item2.logo)"
               />
             </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>รายงาน</v-list-item-title>
-            </v-list-item-content>
-          </template>
-          <v-list-item
-            v-for="itmx in items"
-            :key="itmx.id"
-            link
-            router
-            :to="itmx.route"
-            active-class="white--text purple rounded-l-lg "
-          >
-            <v-list-item-title>a</v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-        <v-list-item> </v-list-item>
-        <span class="grey--text" style="font-size:14px">การจัดการ</span>
-        <v-list-item
-          v-for="item2 in items2"
-          :key="item2.title"
-          link
-          router
-          :to="item2.route"
-          active-class="white--text purple rounded-l-lg "
-        >
-          <v-list-item-icon>
-            <img
-              height="30px"
-              class="filter-white grey--text"
-              contain
-              fill-color="white"
-              :src="require('../assets/icon/' + item2.logo)"
-            />
-          </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item2.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>{{ item2.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-group v-else :key="item2.title" >
+            <template v-slot:activator>
+              <v-list-tile>
+                <v-list-item-icon>
+                  <img
+                    v-if="(active = true)"
+                    height="30px"
+                    class="filter-white "
+                    :src="require('../assets/icon/' + item2.logo)"
+                  />
+                  <img
+                    v-else
+                    height="30px"
+                    class="filter-white"
+                    :src="require('../assets/icon/' + item2.logo_active)"
+                  />
+                </v-list-item-icon>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ item2.title }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </template>
+            <v-list-item
+              v-for="sublink2 in item2.subLinks"
+              :to="sublink2.route"
+              :key="sublink2.title"
+              link
+              router
+              active-class="g_grey white--text purple rounded-l-lg"
+            >
+              <!-- <v-list-item-icon
+                ><v-icon x-small>{{ sublink2.icon }} </v-icon></v-list-item-icon
+              > -->
+              <v-list-item-content>
+                <v-list-item-title class="pl-7">{{ sublink2.title }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+        </div>
       </v-list>
     </v-navigation-drawer>
   </nav>
@@ -197,7 +252,7 @@ export default {
           logo: "icon_report.svg",
           logo_active: "icon_report_w.svg",
           route: "/Report",
-          sublink: [
+          subLinks: [
             {
               title: "ข้อมูลผู้ใช้งานระบบ",
               icon: "mdi-square-circle",
@@ -206,7 +261,7 @@ export default {
             {
               title: "ข้อมูลการเคลื่อนไหวของผู้ใช้งาน",
               icon: "mdi-square-circle",
-              route: "/moving_data_user",
+              route: "/movment_data_user",
             },
             {
               title: "ข้อมูลสถานะร่างกาย",
@@ -233,7 +288,7 @@ export default {
           logo: "icon_datapersonsa.svg",
           logo2: "icon_datapersonsa_w.svg",
           route: "/Users",
-          sublink: [
+          subLinks: [
             {
               title: "เจ้าหน้าที่",
               icon: "mdi-square-circle",
@@ -267,6 +322,19 @@ export default {
 </script>
 
 <style scope>
+.set_pl0 {
+  padding-left: 0 !important;
+  align-content: center;
+}
+.set_icon_left {
+  padding-left: 0px;
+}
+.set_font_small {
+  font-size: 12px;
+}
+.pd_0 {
+  padding-left: 0px !important;
+}
 #nav a:link,
 a:visited {
   font-weight: bold;
@@ -300,5 +368,6 @@ a:visited {
 }
 .g_grey {
   fill: #7c7d7d;
+  /* padding: 0; */
 }
 </style>

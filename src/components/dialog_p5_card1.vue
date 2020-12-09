@@ -36,7 +36,7 @@
                         <!-- graph 2 card -->
                         <div class="card_content_right_top">
                           <div class="mini_r_Card">
-                            <v-card class="card_man">
+                            <v-card class="card_man bdr_12">
                               <table class="">
                                 <tr height="30px" class="">
                                   <td width="300px" class="text_lft">
@@ -84,7 +84,7 @@
                             </v-card>
                           </div>
                           <div class="mini_l_Card">
-                            <v-card class="card_wman">
+                            <v-card class="card_wman bdr_12">
                               <table class="">
                                 <tr height="30px" class="">
                                   <td width="300px" class="text_lft">

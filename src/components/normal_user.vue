@@ -252,7 +252,7 @@ export default {
 </script>
 
 <style scoped>
-.authorities {
+.normal_user {
   padding: 20px;
 }
 .bg_white {
