@@ -50,7 +50,7 @@
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
-                    <v-col cols="12" sm="2">
+                    <v-col cols="12" sm="3">
                       <v-card class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
@@ -64,7 +64,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
-                    <v-col cols="12" sm="7" style="padding-left:30px; align-content:center;">
+                    <v-col cols="12" sm="7" >
                       <v-text-field
                         v-model="name_au"
                         label="ชื่อ"
@@ -173,7 +173,7 @@ export default {
 
 <style scoped>
 .content_dialog_user {
-  padding: 20px 0 20px 0;
+  padding: 20px;
 }
 .headline {
   color: #8a4532;

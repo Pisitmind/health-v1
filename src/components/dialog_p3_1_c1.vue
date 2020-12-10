@@ -1,6 +1,5 @@
 <template>
   <div class="dialog_p3_1_c1">
-    <br />
     <div class="card1_p3">
       <v-card class="bdr_12" elevation="0">
         <div class="card1_p3_root">
@@ -92,11 +91,7 @@
                 </table>
               </div>
               <div class="chart_31c1" style="width:95%">
-                <canvas
-                  id="walk_graph_2_2"
-                  width="200px"
-                  height=""
-                ></canvas>
+                <canvas id="walk_graph_2_2" width="200px" height=""></canvas>
               </div>
             </div>
           </div>
@@ -115,13 +110,18 @@
                   cellpadding=""
                 >
                   <td>ครั้งที่</td>
-                  <td  width="">วันที่ , เวลา</td>
+                  <td width="">วันที่ , เวลา</td>
                   <td width="">โดย</td>
-                  <td  width="65%">หมายเหตุ</td>
+                  <td width="65%">หมายเหตุ</td>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in new_item" :key="item.id" height="30px"  style="font-size:14px;">
+                <tr
+                  v-for="item in new_item"
+                  :key="item.id"
+                  height="30px"
+                  style="font-size:14px;"
+                >
                   <td>{{ item.no }}</td>
                   <td>{{ item.date_time }}</td>
                   <td>{{ item.by }}</td>
@@ -193,7 +193,7 @@ export default {
         .getContext("2d"),
       gradient31c1_2 = ctx_3_1c1_2.createLinearGradient(0, 0, 0, 300);
     gradient31c1_2.addColorStop(0, "rgb(0, 0, 0)");
-    gradient31c1_2.addColorStop(0.10, "rgb(0, 0, 0)");
+    gradient31c1_2.addColorStop(0.1, "rgb(0, 0, 0)");
     gradient31c1_2.addColorStop(0.61, "rgb(255, 255, 255)");
     gradient31c1_2.addColorStop(1, "rgb(255, 255, 255)");
     var bar_3_1c1_2 = new Chart(ctx_3_1c1_2, {
@@ -260,3 +260,11 @@ export default {
   },
 };
 </script>
+<style scoped>
+.head_card1_p3_l_title {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+</style>

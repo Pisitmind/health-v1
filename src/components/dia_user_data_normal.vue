@@ -46,7 +46,7 @@
         <v-card-content>
           <div class="content_dialog_user">
             <v-form>
-              <v-container>
+              <v-card-content>
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
@@ -151,7 +151,7 @@
                   </v-row>
                   <v-spacer></v-spacer>
                 </div>
-              </v-container>
+              </v-card-content>
             </v-form>
           </div>
         </v-card-content>
@@ -194,7 +194,7 @@ export default {
   padding: 20px;
 }
 .headline {
-  /* color: #8a4532; */
+  color: #8a4532;
 }
 .head_of_dialog_user {
   display: flex;

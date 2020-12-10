@@ -182,7 +182,10 @@
                       {{ item.sit_change }}
                     </td>
                     <td>
-                      <v-dialog v-model="dialog_2" scrollable>
+                      <v-dialog
+                        v-model="dialog_2"
+                        :retain-focus="false"
+                      >
                         <template v-slot:activator="{ on, attrs50 }">
                           <v-btn
                             style="background-color:#AD8DBB; color:white;"
@@ -191,6 +194,7 @@
                             width="80px"
                             v-bind="attrs50"
                             v-on="on"
+                            @click="dialog_2 = true"
                           >
                             {{ item.show_history }}
                           </v-btn>
@@ -228,7 +232,7 @@
                       </v-dialog>
                     </td>
                   </tr>
-                </tbody>
+                </tbody>0
               </template>
             </v-simple-table>
             <v-divider></v-divider>
