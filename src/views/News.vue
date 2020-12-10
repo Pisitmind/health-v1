@@ -140,9 +140,9 @@
         <v-card-content>
           <div class="content_dialog_page_bot">
             <div class="table_news_p9">
-              <v-simple-table>
+              <v-simple-table class="customers">
                 <template v-slot:default>
-                  <thead>
+                  <thead class="none_color">
                     <tr class="">
                       <th width="10%" class="text-left">
                         วันที่
@@ -492,4 +492,6 @@ export default {
 .headline {
   color: #8a4532;
 }
+.customers tr:nth-child(odd){background-color: #f2f2f2;}
+.none_color tr:nth-child(odd){background-color: white;}
 </style>

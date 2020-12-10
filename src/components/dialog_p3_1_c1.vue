@@ -100,8 +100,8 @@
             <span style="font-weight: bold;"> ประวัติการแจ้งเตือน </span>
             <span class="grey--text">(การถูกแจ้งเตือนโดยผู้ดูแล)</span>
             <br />
-            <br />
-            <table width="100%">
+            <!-- <br /> -->
+            <table width="100%" id="customers" >
               <thead>
                 <tr
                   class="grey--text"
@@ -267,4 +267,5 @@ export default {
   width: 70%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
+/* #customers tr:nth-child(even){background-color: #f2f2f2;} */
 </style>
