@@ -6,7 +6,7 @@
       <v-card-content>
         <div class="content_dialog_p10">
           <v-form>
-            <v-container>
+            <div>
               <v-row>
                 <v-col cols="10" sm="6">
                   <v-text-field
@@ -15,7 +15,7 @@
                     counter
                     maxlength="50"
                     hint=""
-                    label="หัวข้อข่าว"
+                    label="กลุ่มบทความ"
                     placeholder="กรอกหัวข้อข่าว"
                   ></v-text-field>
                 </v-col>
@@ -194,7 +194,7 @@
                   </v-row>
                 </div>
               </v-card-text>
-            </v-container>
+            </div>
           </v-form>
         </div>
       </v-card-content>
@@ -285,7 +285,7 @@ export default {
   padding: 0;
   padding-top: 20px;
 }
-/* .pd_20 {
-  padding:20px;
-} */
+.pd_20{
+  padding:40px!important;
+}
 </style>

@@ -1,21 +1,21 @@
 <template>
-  <div class="login" id="login">
-    <v-app class="e20_none">
-      <v-main class="bg_top" >
+  <div class="set_hidden" id="login">
+    <v-app>
+      <v-main class="bg_top">
         <v-content>
-          <v-container class="e22" fluid >
+          <v-container class="container" fluid>
             <v-layout v-resize="onResize" align-bottom wrap>
               <v-flex class="set_form set_ab">
                 <v-card
-                  class="center set_card elevation-5 pa-10"
+                  class="center set_card elevation-5 pa-10 "
                   width="450px"
-                  
                 >
                   <v-img
                     class="center"
                     max-width="200px"
                     src="../assets/pic/Login-Regis_8Jul20_Logo CMU Health.png"
                   ></v-img>
+                  <div style="padding-top:40px"></div>
                   <v-form ref="form" v-model="valid" lazy-validation>
                     <v-text-field
                       v-model="name"
@@ -50,77 +50,79 @@
         </v-content>
       </v-main>
       <v-footer class="foot" padless fill-height>
-          <div class="foot_item">
-            <div dense class="p_200 foot_content">
-              <div class="pd_top_foot pd_30">
-                <span>POWERED BY</span>
-                <v-img
-                  class="mg_y_10 "
-                  max-width="160px"
-                  src="../assets/logo/Logo BAAK_w.png"
-                ></v-img>
-                <span class="main_text">BAAK Co., Ltd.</span>
-                <div class="icon_foot_l wd_70">
-                  <img
-                    height="30px"
-                    class="filter-white"
-                    src="../assets/icon/icon_contact_call.svg"
-                    alt="pho  ne"
-                  />
-                  <img
-                    height="30px"
-                    class="filter-white"
-                    src="../assets/icon/icon_contact_mail.svg"
-                    alt="email"
-                  />
-                  <img
-                    height="30px"
-                    class="filter-white"
-                    src="../assets/icon/icon_contact_location.svg"
-                    alt="location"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="p_200">
-              <div class="pd_top_foot">
-                <v-img
-                  max-width="200px"
-                  src="../assets/pic/LogoCMU02-12.png"
-                ></v-img>
-                <div style="padding-top:24px;"></div>
-                <div class="foot_card">
-                  <img
-                    height="30px"
-                    fill="white"
-                    class="filter-white"
-                    src="../assets/icon/icon_contact_location.svg"
-                    alt="location"
-                  />
-                  <span class="pd_icon"> Chiang Mai University</span>
-                </div>
-                <div class="foot_card">
-                  <img
-                    height="30px"
-                    class="filter-white"
-                    src="../assets/icon/icon_contact_call.svg"
-                    alt="phone"
-                  />
-                  <span class="pd_icon"> (+66) 456 982 156</span>
-                </div>
-                <div class="foot_card">
-                  <img
-                    class="filter-white"
-                    height="30px"
-                    src="../assets/icon/icon_contact_mail.svg"
-                    alt="email"
-                  />
-                  <span class="pd_icon"> cmuhealth@cmu.ac.th</span>
-                </div>
+        <div class="foot_item">
+          <!-- left card content foot -->
+          <div dense class="p_200 foot_content_color">
+            <div class="pd_top_foot pd_30">
+              <span>POWERED BY</span>
+              <v-img
+                class="mg_y_10 "
+                max-width="160px"
+                src="../assets/logo/Logo BAAK_w.png"
+              ></v-img>
+              <span class="main_text">BAAK Co., Ltd.</span>
+                <div style="height:10px;"></div>
+              <div class="icon_foot_l wd_70">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_contact_call.svg"
+                  alt="pho  ne"
+                />
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_contact_mail.svg"
+                  alt="email"
+                />
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_contact_location.svg"
+                  alt="location"
+                />
               </div>
             </div>
           </div>
+          <!-- right card content foot -->
+          <div dense class="p_white foot_content_color">
+            <div class="pd_top_foot pd_30">
+              <v-img
+                max-width="200px"
+                src="../assets/pic/LogoCMU02-12.png"
+              ></v-img>
+              <div style="height:10px;"></div>
+              <div class="foot_card">
+                <img
+                  height="30px"
+                  fill="white"
+                  class="filter-white"
+                  src="../assets/icon/icon_contact_location.svg"
+                  alt="location"
+                />
+                <span class="pd_icon"> Chiang Mai University</span>
+              </div>
+              <div class="foot_card">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_contact_call.svg"
+                  alt="phone"
+                />
+                <span class="pd_icon"> (+66) 456 982 156</span>
+              </div>
+              <div class="foot_card">
+                <img
+                  class="filter-white"
+                  height="30px"
+                  src="../assets/icon/icon_contact_mail.svg"
+                  alt="email"
+                />
+                <span class="pd_icon"> cmuhealth@cmu.ac.th</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </v-footer>
     </v-app>
   </div>
@@ -149,34 +151,41 @@
 .e22 {
   display: flex;
   /* align-items: center; */
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 .bg_top {
   background-image: url("../assets/pic/1710-GR-01-01.jpg");
   background-size: cover;
-  background-position: bottom 230px right 0px;
+  background-position: bottom 210px right 0px;
   /* background-repeat: no-repeat; */
-  background-attachment:fixed;
+  background-attachment: fixed;
   overflow: hidden !important;
 }
 
 .v-text-field {
   margin-bottom: 10px;
 }
-.foot_content {
+.foot_content_color {
   background-color: #ad8dbb;
+  display: flex;
+  justify-content: start;
 }
-.v-footer{
+.v-footer {
   position: absolute;
-  z-index:1;
+  z-index: 1;
   width: 100%;
-  bottom:0;
+  bottom: 0;
 }
 .v-flex {
   background-color: #ad8dbb;
 }
 .p_200 {
   width: 220px;
+  color: white;
+  /* color: aquamarine; */
+}
+.p_white {
+  /* width: 220px; */
   color: white;
   /* color: aquamarine; */
 }
@@ -191,7 +200,7 @@
   position: absolute;
   /* position: relative; */
   z-index: 9999;
-  padding-top:99px;
+  padding-top: 120px;
   left: 0;
   right: 0;
 }
@@ -200,8 +209,7 @@
 }
 .foot_item {
   width: 100%;
-  padding: 0 70px;
-  padding-bottom: 15px;
+  padding:0 70px;
   display: flex;
   justify-content: space-between;
   background-color: #ad8dbb;
@@ -216,23 +224,28 @@
 .icon_foot_l {
   display: flex;
   /* justify-content: space-around; */
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1;
   /* padding: 0 10px ; */
 }
+.wd_70 {
+  width: 100%;
+}
 .pd_top_foot {
-  padding-top: 30px;
+  padding: 30px 0;
+
   align-content: center;
   justify-content: center;
 }
 .mg_y_10 {
   margin: 10px 0;
 }
-.wd_70 {
-  width: 70%;
-}
 .pd_30 {
-  padding-top: 30px;
+  /* padding-top: 40px; */
+}
+.container {
+  background-color: transparent;
+  overflow: hidden;
 }
 /* .filter-white {
   filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(133deg)

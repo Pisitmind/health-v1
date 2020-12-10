@@ -1,11 +1,11 @@
 <template>
   <div class="boards">
     <div class="card_1_p10">
-      <v-card class="bdr_12">
+      <v-card class="bdr_12" height="1000">
         <v-card-title>
           <div class="head_card_p10">
             <div>
-              <v-btn color="blue darken-1" icon large @click="dialog = false">
+              <v-btn color="black darken-1" icon large @click="dialog = false">
                 <img
                   height="40px"
                   class="filter-white"
@@ -43,7 +43,7 @@
                         <div class="head_dialog_c1_p10">
                           <div>
                             <v-btn
-                              color="green darken-1"
+                              color="#8a4532"
                               icon
                               @click="dialog1 = false"
                             >
@@ -166,10 +166,16 @@
           <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
         </v-card-content>
       </v-card>
+      <div class="hid">
+        <canvas id="myChart111" width="" height="90px"></canvas>
+      </div>
     </div>
   </div>
 </template>
-
+<script
+  src="https://kit.fontawesome.com/4c16a2e0ed.js"
+  crossorigin="anonymous"
+></script>
 <script>
 import Chart from "chart.js";
 import dialog_p10 from "@/components/dialog_p10.vue";
@@ -178,25 +184,42 @@ export default {
     dialog_p10,
   },
   mounted: function() {
-    var ctx_dia_c1_p3 = document
-      .getElementById("graph1_c1_p3")
-      .getContext("2d");
-    var bar_dia_c1_p3 = new Chart(ctx_dia_c1_p3, {
-      type: "bar",
+    const labels = ["male", "female"];
+    // const images = [ require("../assets/icon/icon_men.svg"),
+    //   "https://i.stack.imgur.com/2RAv2.png",
+    // ];
+    const images = [
+      require("../assets/icon/icon_men.svg"),
+      require("../assets/icon/icon_women.svg"),
+    ];
+    const values = [48, 56];
+
+    new Chart(document.getElementById("myChart111"), {
+      type: "horizontalBar",
+      plugins: [
+        {
+          afterDraw: (chart) => {
+            var ctx = chart.chart.ctx;
+            var yAxis = chart.scales["y-axis-0"];
+            var xAxis = chart.scales["x-axis-0"];
+            yAxis.ticks.forEach((value, index) => {
+              var y = yAxis.getPixelForTick(index);
+              var image = new Image();
+              (image.src = images[index]),
+                ctx.drawImage(image, xAxis.bottom - 270, y - 10);
+            });
+          },
+        },
+      ],
       data: {
+        labels: labels,
         datasets: [
           {
-            label: "Steps",
-            backgroundColor: "#A3A1FB",
-            data: [139, 384, 223, 189, 158, 318, 93],
-          },
-          {
-            label: "Setting",
-            backgroundColor: "#FFDA83",
-            data: [385, 259, 196, 230, 106, 237, 107],
+            label: "My Dataset",
+            data: values,
+            backgroundColor: ["red", "blue"],
           },
         ],
-        labels: ["7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14"],
       },
       options: {
         responsive: true,
@@ -204,155 +227,28 @@ export default {
           display: false,
         },
         scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [
-            {
-              stacked: true,
-              ticks: {
-                reverse: false,
-                min: 0,
-                max: 1000,
-                stepSize: 200,
-              },
-            },
-          ],
-        },
-      },
-    });
-    console.log(bar_dia_c1_p3);
-
-    var ctx_dia_c2 = document
-      .getElementById("graph_dialog_c2")
-      .getContext("2d");
-    var bar_dia_c2 = new Chart(ctx_dia_c2, {
-      type: "line",
-      options: {
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          enabled: false,
-        },
-        scales: {
-          yAxes: [
-            {
-              display: false,
-              ticks: {
-                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
-                stepValue: 5,
-                max: 100,
-              },
-            },
-          ],
           xAxes: [
             {
-              display: false,
-            },
-          ],
-        },
-      },
-      data: {
-        datasets: [
-          {
-            label: "TODAY",
-            backgroundColor: "#3db161",
-            data: [20, 35, 20, 40, 35, 50, 42, 50, 80],
-          },
-        ],
-        labels: [
-          "00:00",
-          "03:00",
-          "06:00",
-          "09:00",
-          "12:00",
-          "15:00",
-          "18:00",
-          "21:00",
-          "00:00",
-        ],
-      },
-    });
-    console.log(bar_dia_c2);
-    var ctx_dia_c3 = document
-      .getElementById("graph_dialog_c3")
-      .getContext("2d");
-    var bar_dia_c3 = new Chart(ctx_dia_c3, {
-      type: "line",
-      options: {
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          enabled: false,
-        },
-        scales: {
-          yAxes: [
-            {
-              display: false,
               ticks: {
-                suggestedMin: 0, // minimum will be 0, unless there is a lower value.
-                stepValue: 5,
-                max: 100,
+                beginAtZero: true,
               },
             },
           ],
-          xAxes: [
-            {
-              display: false,
-            },
-          ],
-        },
-      },
-      data: {
-        datasets: [
-          {
-            label: "TODAY",
-            backgroundColor: "purple",
-            data: [14, 73, 33, 43, 74, 66, 76, 24, 72],
-          },
-        ],
-        labels: [
-          "00:00",
-          "03:00",
-          "06:00",
-          "09:00",
-          "12:00",
-          "15:00",
-          "18:00",
-          "21:00",
-          "00:00",
-        ],
-      },
-    });
-    console.log(bar_dia_c3);
-
-    var ctx_line = document.getElementById("graphline").getContext("2d");
-    var bar_line = new Chart(ctx_line, {
-      type: "line",
-      options: {
-        scales: {
           yAxes: [
             {
-              display: false,
+              ticks: {
+                padding: 30,
+              },
             },
           ],
+          layout: {
+            padding: {
+              bottom: 30,
+            },
+          },
         },
       },
-      data: {
-        datasets: [
-          {
-            data: [10, 10, 10, 10, 10],
-            // backgroundColor:['purple'],
-            backgroundColor: ["purple", "blue", "green", "orange", "red"],
-            above: ["purple", "blue", "green", "orange", "red"], // Area will be red above the origin
-            below: ["purple", "blue", "green", "orange", "red"],
-            borderColor: ["purple", "blue", "green", "orange", "red"],
-          },
-        ],
-        labels: ["0", "56.7", "76.6", "85.8", "98.0"],
-      },
     });
-    console.log(bar_line);
 
     // 'ผอมมาก','ปกติ','อวบ','อ้วน ระยะที่1','อ้วน ระยะที่2'
   },
@@ -447,11 +343,14 @@ export default {
   -color: rgba(0, 0, 0, 0.1); */
 }
 .table_news_p10 {
-  /* padding: 0 20px; */
+  padding: 16px;
 }
 .v-text-field .v-input__control .v-input__slot {
   min-height: auto !important;
   display: flex !important;
   align-items: center !important;
+}
+.headline {
+  color: #8a4532;
 }
 </style>

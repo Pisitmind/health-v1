@@ -108,7 +108,7 @@
             </div>
           </div>
           <!-- content  -->
-          <v-container>
+          <v-container-text>
             <v-layout row wrap justify="space-between">
               <v-flex xs12 md6>
                 <v-card
@@ -178,7 +178,7 @@
                 </div>
               </v-flex>
             </v-layout>
-          </v-container>
+          </v-container-text>
         </div>
       </v-card>
     </div>
@@ -236,7 +236,7 @@
                 <!-- head right -->
                 <div class="head_card1_p3_r_title">
                   <div class="exit-icon-card3">
-                    <v-dialog v-model="dialog20" width="">
+                    <v-dialog v-model="dialog20" :retain-focus="false" width="">
                       <template v-slot:activator="{ on, attrs10 }">
                         <v-btn small icon fab v-bind="attrs10" v-on="on">
                           <img
@@ -289,7 +289,7 @@
             </div>
           </div>
           <!-- content -->
-          <v-container>
+          <v-container-text>
             <v-layout row wrap justify="space-between">
               <v-flex xs12 md6>
                 <v-card
@@ -356,7 +356,7 @@
                 </div>
               </v-flex>
             </v-layout>
-          </v-container>
+          </v-container-text>
         </div>
       </v-card>
     </div>

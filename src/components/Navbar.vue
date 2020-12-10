@@ -32,7 +32,7 @@
                     height="25px"
                     class="filter-white"
                     src="../assets/icon/noti.svg"
-                    alt="notive"
+                    axlt="notive"
                 /></v-btn>
                 <v-btn
                   class="ma-1"
@@ -53,16 +53,19 @@
           <v-list-item-subtitle> </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-
+<!-- top menu -->
       <v-list dense nav>
         <div v-for="(item, i) in items" :key="item.id" class="">
+          <!-- case not sub -->
           <v-list-item
+          
             v-if="!item.subLinks"
             :key="i"
             link
             router
             :to="item.route"
             active-class="white_new white--text purple rounded-l-lg"
+            class="fz_14"
           >
             <v-list-item-icon>
               <img
@@ -79,27 +82,27 @@
               />
             </v-list-item-icon>
 
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-content class="fz_14">
+              <v-list-item-title >{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <!-- case has submenus -->
           <v-list-group v-else :key="item.title" pl-2 >
             <template v-slot:activator>
-              <v-list-tile class="" >
+              <!-- <v-list-tile class="" > -->
                 <v-list-item-icon class="set_icon_left">
                   <img
                     height="30px"
-                    class="filter-white grey_new"
+                    class="filter-white grey_new mb-1"
                     :src="require('../assets/icon/' + item.logo)"
                   />
                 </v-list-item-icon>
                 <v-list-tile-content
-                  class="set_font_small "
+                  class="fz_14"
                 >
-                  <v-list-tile-title style="align-content: top;">{{ item.title }}</v-list-tile-title>
+                  <v-list-tile-title class="">{{ item.title }}</v-list-tile-title>
                 </v-list-tile-content>
-              </v-list-tile>
+              <!-- </v-list-tile> -->
             </template>
             <v-list-item
               v-for="sublink in item.subLinks"
@@ -114,7 +117,7 @@
                 ><v-icon x-small>{{ sublink.icon }} </v-icon></v-list-item-icon
               > -->
               <v-list-item-content>
-                <v-list-item-title class="pl-7">{{
+                <v-list-item-title class="pl-7 set_font_small">{{
                   sublink.title
                 }}</v-list-item-title>
               </v-list-item-content>
@@ -135,7 +138,7 @@
             <v-list-item-icon>
               <img
                 height="30px"
-                class="filter-white grey--text grey_new"
+                class="filter-white grey--text grey_new mb-1"
                 contain
                 fill-color="white"
                 color="#656666"
@@ -144,12 +147,12 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>{{ item2.title }}</v-list-item-title>
+              <v-list-item-title    >{{ item2.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :key="item2.title">
             <template v-slot:activator>
-              <v-list-tile>
+              <!-- <v-list-tile> -->
                 <v-list-item-icon>
                   <img
                     v-if="(active = true)"
@@ -165,9 +168,9 @@
                   />
                 </v-list-item-icon>
                 <v-list-tile-content>
-                  <v-list-tile-title>{{ item2.title }}</v-list-tile-title>
+                  <v-list-tile-title class="fz_14">{{ item2.title }}</v-list-tile-title>
                 </v-list-tile-content>
-              </v-list-tile>
+              <!-- </v-list-tile> -->
             </template>
             <v-list-item
               v-for="sublink2 in item2.subLinks"
@@ -181,7 +184,7 @@
                 ><v-icon x-small>{{ sublink2.icon }} </v-icon></v-list-item-icon
               > -->
               <v-list-item-content>
-                <v-list-item-title class="pl-7">{{
+                <v-list-item-title class="pl-7 set_font_small">{{
                   sublink2.title
                 }}</v-list-item-title>
               </v-list-item-content>
@@ -388,4 +391,9 @@ a:visited {
   fill: #7c7d7d;
   /* padding: 0; */
 }
+.v-list-group__header__append-icon{
+  position: absolute;
+  right: 10px;
+}
+
 </style>

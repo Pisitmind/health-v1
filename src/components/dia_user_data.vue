@@ -46,11 +46,11 @@
         <v-card-content>
           <div class="content_dialog_user">
             <v-form>
-              <v-container>
+              <div>
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
-                    <v-col cols="12" sm="3">
+                    <v-col cols="12" sm="2">
                       <v-card class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
@@ -64,7 +64,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
-                    <v-col cols="12" sm="7">
+                    <v-col cols="12" sm="7" style="padding-left:30px; align-content:center;">
                       <v-text-field
                         v-model="name_au"
                         label="ชื่อ"
@@ -137,7 +137,7 @@
                   </v-col>
                   <v-spacer></v-spacer>
                 </div>
-              </v-container>
+              </div>
             </v-form>
           </div>
         </v-card-content>
@@ -173,10 +173,10 @@ export default {
 
 <style scoped>
 .content_dialog_user {
-  padding: 20px;
+  padding: 20px 0 20px 0;
 }
-.headline{
-  color:#8a4532;
+.headline {
+  color: #8a4532;
 }
 .head_of_dialog_user {
   display: flex;
@@ -185,6 +185,8 @@ export default {
 }
 .btn_head_user {
   width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 .left_head {
   display: flex;
@@ -222,7 +224,6 @@ export default {
   flex-direction: column;
   /* background-color: rgba(0, 100, 100, 0.2); */
   text-align: center;
-  padding: 20px;
   color: #8a4532;
 }
 .sub_text {

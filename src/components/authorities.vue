@@ -108,8 +108,8 @@
           รายชื่อเจ้าหน้าที่
         </span>
       </v-card-content>
-      <v-card-content>
-        <v-container class="">
+      <v-card-content style="background-color: transparent;">
+        <div class="">
           <v-row class="pd_content">
             <v-col
               class=""
@@ -142,16 +142,17 @@
                 </template>
                 <v-card>
                   <v-card-text>
-                    <v-container>
+                    <div>
                       <dia_user_data />
-                    </v-container>
+                    </div>
                   </v-card-text>
                 </v-card>
               </v-dialog>
             </v-col>
           </v-row>
-        </v-container>
+        </div>
       </v-card-content>
+       <div style="padding-bottom:40px;"></div>
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->

@@ -1,6 +1,11 @@
 <template>
   <v-container grid-list-lg-xl>
     <div class="card_el">
+      <link
+        rel="stylesheet"
+        href="https://i.icomoon.io/public/temp/e933b25521/UntitledProject/style.css"
+      />
+
       <v-card class="bdr_12">
         <div class="card1-root">
           <div class="head-card1">
@@ -243,6 +248,8 @@
                       text-align: center; align-item:center;"
                     >
                       <span><strong>การก้าว</strong></span>
+                      <span class="icon-icon_women"></span>
+                      <span class="icon-icon_men"></span>
                     </div>
                   </div>
                   <div class="sex-age-title-card3">
@@ -296,6 +303,7 @@
 
               <div class="card3-content">
                 <div>
+                  <!-- กราฟ horizontal problems  graph3-1 -->
                   <div class="card2-graph">
                     <canvas id="graph3-1" width="450px" height="200px"></canvas>
                   </div>
@@ -656,12 +664,19 @@
     </div>
   </v-container>
 </template>
-
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script>
 import Chart from "chart.js";
 
 export default {
   mounted: function() {
+    const material_font = new FontFace(
+      "material-icons",
+      // pass the url to the file in CSS url() notation
+      "url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)"
+    );
+    document.fonts.add(material_font); // add it to the document's FontFaceSet
+
     var config = {
       type: "doughnut",
       data: {
@@ -848,12 +863,40 @@ export default {
       //     },
       //   },
       // ],
+
       data: {
-        labels: ["male", "female"],
+        labels: {
+          render: "image",
+          images: [
+            {
+              src:
+                "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+              width: 20,
+              height: 20,
+            },
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_men.svg"),
+              width: 20,
+              height: 20,
+            }, 
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_women.svg"),
+              width: 20,
+              height: 20,
+            },
+          ],
+          // render: 'value',
+        },
         datasets: [
           {
             barPercentage: 0.5,
-            label: "ก้าว",
+            datalabels: {
+              labels: {
+                title: null,
+              },
+            },
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [3628, 4874],
           },
@@ -895,9 +938,70 @@ export default {
             },
           ],
         },
+        plugins: {
+          labels: {
+            render: "image",
+            images: [
+              {
+                src:
+                  "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+                width: 20,
+                height: 20,
+              },
+              {
+                // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+                src: require("../assets/icon/icon_men.svg"),
+                width: 20,
+                height: 20,
+              },
+            ],
+            // render: 'value',
+            showZero: true,
+            fontColor: "white",
+            position: "inside",
+            overlap: true,
+          },
+        },
       },
     });
     console.log(bar3);
+
+    // wait the font loads
+    // material_font.load().then(() => {
+    //   var icons = ["visibility", "trending_up"];
+    //   var ctx_demo = document.getElementById("chart_demo").getContext("2d");
+    //   var chart_demo1 = new Chart(ctx_demo, {
+    //     type: "bar",
+    //     data: {
+    //       // labels: ["0", "1"],
+    //       labels: ["visibility", "trending_up"],
+    //       datasets: [
+    //         {
+    //           label: "material font",
+    //           backgroundColor: "rgb(255, 99, 132, 0.5)",
+    //           borderColor: "rgb(255, 99, 132)",
+    //           borderWidth: 1,
+    //           data: [10, 20],
+    //         },
+    //       ],
+    //     },
+    //     options: {
+    //       scales: {
+    //         x: {
+    //           ticks: {
+    //             callback: (v) => icons[+v],
+    //             font: {
+    //               family: "material-icons",
+    //               size: "20",
+    //               color: "red",
+    //             },
+    //           },
+    //         },
+    //       },
+    //     },
+    //   });
+    //   console.log(chart_demo1);
+    // });
   },
 
   menu: false,
@@ -1399,5 +1503,13 @@ th {
   align-content: center;
   text-align: center;
   align-items: center;
+}
+.icon-icon_men:before {
+  content: "\e900";
+  color: #359bd3;
+}
+.icon-icon_women:before {
+  content: "\e901";
+  color: #f28c8c;
 }
 </style>

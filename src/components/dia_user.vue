@@ -6,7 +6,7 @@
         <v-card-content>
           <div class="content_dialog_user">
             <v-form>
-              <v-container>
+              <div>
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
@@ -104,7 +104,7 @@
                   </v-col>
                   <v-spacer></v-spacer>
                 </div>
-              </v-container>
+              </div>
             </v-form>
           </div>
         </v-card-content>

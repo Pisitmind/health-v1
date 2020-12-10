@@ -160,6 +160,7 @@
                         width="270px"
                         hide-overlay
                         scrollable
+                        :retain-focus="false"
                       >
                         <template v-slot:activator="{ on, attrs }">
                           <v-card

@@ -115,15 +115,14 @@
           <!-- Content  -->
           <div class="card1_p5_content">
             <div class="card1_p5_content_left">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
-                </div>
-              <v-card-subtitle class="pd_0">
-              </v-card-subtitle>
-               <div style="height:230px">
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
+              </div>
+              <v-card-subtitle class="pd_0"> </v-card-subtitle>
+              <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_p5" width="200px" height="90px"></canvas>
-               </div>
+              </div>
               <div class="label_grpah1_c1_p5 set_h30">
                 <table width="100%">
                   <tr>
@@ -148,11 +147,10 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p5_content_right">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
-              <v-card-subtitle class="pd_0">
-              </v-card-subtitle>
+              <div class="card3_line2 grey--text">
+                <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+              </div>
+              <v-card-subtitle class="pd_0"> </v-card-subtitle>
               <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph2_c1_p5" width="200px" height=""></canvas>
@@ -291,7 +289,7 @@
           </div>
           <div class="card1_p5_content">
             <div class="card3_p5_content_left">
-                <!-- <div class="card3_line2 grey--text">
+              <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
               <v-card-text>
@@ -303,15 +301,11 @@
                         <div class="label_text_card3">
                           <div>
                             <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text"
-                              >ชาย</span
-                            >
+                            <span class="black--text">ชาย</span>
                           </div>
                           <div class="pd_10">
                             <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text"
-                              >หญิง</span
-                            >
+                            <span class="black--text">หญิง</span>
                           </div>
                         </div>
                       </td>
@@ -368,6 +362,7 @@
         </div>
       </v-card>
     </div>
+    <div style="padding-bottom:40px;"></div>
   </div>
 </template>
 
@@ -703,9 +698,8 @@ export default {
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
-.label_text_card3{
-  display:flex;
-  justify-content:space-around;
+.label_text_card3 {
+  display: flex;
+  justify-content: space-around;
 }
-
 </style>

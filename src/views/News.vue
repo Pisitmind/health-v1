@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <div class="card_1_p9">
-      <v-card class="bdr_12">
+      <v-card class="bdr_12" height="1000">
         <v-card-title>
           <div class="head_title_card_p9">
             <div class="head_card_p9">
@@ -170,7 +170,7 @@
                     >
                       <td>{{ item.date }}</td>
                       <td>{{ item.time }}</td>
-                      <td class=" text-truncate" style="max-width: 100px;">
+                      <td class="text-truncate" style="max-width: 140px;">
                         {{ item.topic }}
                       </td>
                       <td class="text-center">{{ item.viewer }}</td>
@@ -396,7 +396,7 @@ export default {
         {
           date: "21 ก.ย.",
           time: "16:30",
-          topic: "การรักษาสุขภาพในช่วงฤดูร้อนนั้นทำได้โดยการ....",
+          topic: "การรักษาสุขภาพในช่วงฤดูร้อนนั้นทำได้โดยการเอาตัวไปจุ่มน้ำ...",
           viewer: "27",
           by: "จันทรา ทิพย์วานร",
           edit_bot: "ดู และแก้ไข",
@@ -488,5 +488,8 @@ export default {
 /* background-color: rgba(0, 0, 0, 0.2); */
 .table_news_p9 {
   padding: 16px;
+}
+.headline {
+  color: #8a4532;
 }
 </style>

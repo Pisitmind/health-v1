@@ -55,7 +55,7 @@
         </span>
       </v-card-content>
       <v-card-content>
-        <v-container class="">
+        <div class="">
           <v-row class="pd_content">
             <v-col
               class=""
@@ -92,9 +92,10 @@
              </v-dialog>
             </v-col>
           </v-row>
-        </v-container>
+        </div>
       </v-card-content>
       
+     <div style="padding-bottom:40px;"></div>
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->

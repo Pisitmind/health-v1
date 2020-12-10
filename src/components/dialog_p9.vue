@@ -5,7 +5,7 @@
       <v-card-content>
         <div class="content_dialog_p9">
           <v-form>
-            <v-container>
+            <div>
               <v-row>
                 <v-col cols="12" sm="12">
                   <v-text-field
@@ -182,7 +182,7 @@
                   </v-row>
                 </div>
               </v-card-text>
-            </v-container>
+            </div>
           </v-form>
         </div>
       </v-card-content>
@@ -273,7 +273,7 @@ export default {
   padding: 0;
   padding-top: 20px;
 }
-/* .pd_20 {
-  padding:20px;
-} */
+.pd_20{
+  padding:40px!important;
+}
 </style>

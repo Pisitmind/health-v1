@@ -33,10 +33,20 @@ export default {
 </script>
 
 <style scope>
+html .set_hidden {
+  overflow-y: hidden !important;
+}
+.fz_14 {
+  font-size: 13px !important;
+}
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: Roboto;
-  /* overflow-y:hidden; */
+  /* overflow-y: hidden !important; */
+  /* background-color: red; */
+}
+.container {
+  background-color: #f6f6f6;
 }
 .bdr_12 {
   border-radius: 12px !important;
@@ -59,7 +69,7 @@ html {
   align-items: center;
   justify-items: center;
   height: 30px;
-   /* background-color: green; */
+  /* background-color: green; */
 }
 /*
 html::-webkit-scrollbar { 

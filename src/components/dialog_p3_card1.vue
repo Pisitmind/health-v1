@@ -537,12 +537,12 @@ export default {
   /* justify-items: center; */
   justify-content: center;
 }
-/* .head_dialog {
+.head_dialog {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-} */
+}
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
