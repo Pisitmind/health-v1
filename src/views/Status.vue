@@ -20,7 +20,7 @@
                         alt="burn"
                       />
                     </div>
-                    <div class="card3-bot-text ">
+                    <div class="card3-bot-text " style="text-align: center;">
                       <span><strong>การนอนหลับ</strong></span>
                     </div>
                   </div>
@@ -117,10 +117,10 @@
               </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
-                <canvas id="graph1_p4" width="200px" height=""></canvas>
+                <canvas id="graph1_p4" width="200px" height="90px"></canvas>
               </v-card-text>
 
-              <div class="label_grpah1_c1_p4">
+              <div class="label_grpah1_c1_p4 set_h30">
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
@@ -151,10 +151,9 @@
               </v-card-subtitle>
               <v-card-text >
                 <!-- ใส่กราฟ -->
-                <canvas id="graph2_c1_p4" width="200px" height=""></canvas>
+                <canvas id="graph2_c1_p4" width="200px" height="95"></canvas>
               </v-card-text>
-
-              <div class="label_grpah1_c1_p4" style="padding-top:5px;">
+              <div class="label_grpah1_c1_p4">
                 <table width="100%">
                   <span style="font-size:14px"
                     >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40

@@ -119,10 +119,12 @@
                 <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
               </div>
               <v-card-subtitle class="pd_0"> </v-card-subtitle>
-              <div style="height:230px">
+              <!-- <div style="height:230px"> -->
+              <v-card-text>
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_p5" width="200px" height="90px"></canvas>
-              </div>
+              </v-card-text>
+              <!-- </div> -->
               <div class="label_grpah1_c1_p5 set_h30">
                 <table width="100%">
                   <tr>
