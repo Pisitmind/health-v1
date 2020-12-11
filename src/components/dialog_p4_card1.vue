@@ -56,7 +56,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graph_dialog_c2"
                           width=""
@@ -66,11 +66,13 @@
                     </td>
                     <td>
                       <div class="wd_100">
-                        <table class="align-center">
+                        <table class="text-align-center">
                           <tr>
-                            <span>2:10</span>
+                            <span style="font-size:30px;"
+                              ><strong>2:10</strong></span
+                            >
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="sm_text" width="100%">
                             <span>
                               ชั่วโมง / วัน
                             </span>
@@ -105,7 +107,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graph_dialog_c3"
                           width=""
@@ -117,9 +119,11 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>1:05</span>
+                            <span style="font-size:30px;"
+                              ><strong>1:05</strong></span
+                            >
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="sm_text">
                             <span>
                               ชั่วโมง / วัน
                             </span>
@@ -509,6 +513,9 @@ export default {
 .dialog_p4_card1 {
   width: 100%;
 }
+.wd_100 {
+  width: 100%;
+}
 .t_switch {
   display: flex;
   /* justify-items: center; */
@@ -527,9 +534,6 @@ export default {
 .c1_c2_dialog {
   padding: 20px;
 }
-.card_c1_c2_pd {
-  padding: 15px;
-}
 .set_center {
   height: 100%;
   display: flex;
@@ -542,6 +546,9 @@ export default {
 }
 .left {
   text-align: left;
+}
+.sm_text {
+  font-size: 14px;
 }
 
 .content_top_left_page {

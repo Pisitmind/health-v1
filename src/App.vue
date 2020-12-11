@@ -71,6 +71,13 @@ html {
   height: 30px;
   /* background-color: green; */
 }
+.bg_blue{
+  background-color: rgba(0, 0, 250, 0.2);
+}
+.sub_card_dia_mini {
+  padding: 15px;
+  width: 300px;
+}
 /*
 html::-webkit-scrollbar { 
     display: none; 

@@ -542,7 +542,5 @@ export default {
   text-align: center;
   /* background-color:rgba(200,100,50,.2); */
 }
-.bg_22 {
-  /* background-color:rgba(50,100,200,.2); */
-}
+
 </style>

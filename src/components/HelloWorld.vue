@@ -248,8 +248,8 @@
                       text-align: center; align-item:center;"
                     >
                       <span><strong>การก้าว</strong></span>
-                      <span class="icon-icon_women"></span>
-                      <span class="icon-icon_men"></span>
+                      <!-- <span class="icon-icon_women"></span> -->
+                      <!-- <span class="icon-icon_men"></span> -->
                     </div>
                   </div>
                   <div class="sex-age-title-card3">

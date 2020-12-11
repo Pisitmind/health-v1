@@ -49,8 +49,6 @@
                   <tr>
                     <td class="left" width="80%" height="20%">
                       <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย </span>
-                      <br />
-                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -64,8 +62,13 @@
                     </td>
                   </tr>
                   <tr>
+                    <td class="left" width="80%" height="">
+                      <span>(ในช่วง 6 เดือน) </span>
+                    </td>
+                  </tr>
+                  <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graphdia_c2_p3"
                           width=""
@@ -77,9 +80,11 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>92</span>
+                            <span style="font-size:30px;"
+                              ><strong>92</strong></span
+                            >
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="">
                             <span>
                               แคล / วัน
                             </span>
@@ -98,8 +103,6 @@
                   <tr>
                     <td class="left" width="80%" height="20%">
                       <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง</span>
-                      <br />
-                      <span>(ในช่วง 6 เดือน) </span>
                     </td>
                     <td>
                       <v-btn
@@ -113,8 +116,13 @@
                     </td>
                   </tr>
                   <tr>
+                    <td class="left" width="80%" height="">
+                      <span>(ในช่วง 6 เดือน) </span>
+                    </td>
+                  </tr>
+                  <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graphdia_c3_p3"
                           width=""
@@ -126,9 +134,11 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>136</span>
+                            <span style="font-size:30px;"
+                              ><strong>136</strong></span
+                            >
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="">
                             <span>
                               แคล / วัน
                             </span>
@@ -517,9 +527,6 @@ export default {
 }
 .c1_c2_dialog {
   padding: 20px;
-}
-.card_c1_c2_pd {
-  padding: 15px;
 }
 .set_center {
   height: 100%;

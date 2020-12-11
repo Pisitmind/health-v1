@@ -19,8 +19,8 @@
                       src="https://pbs.twimg.com/profile_images/1002416157280727040/7SjA9KTJ_400x400.jpg"
                     ></v-img>
                   </div>
-                  <!-- btn sex & age -->
-                  <div class="">
+                  <!-- name card user -->
+                  <div class="pdl_10">
                     <span class="big_font">Supratcha Wiwattanakorn</span>
                     <br />
                     <span class="grey--text">ตำแหน่ง : ผู้ช่วยสอน</span>
@@ -36,30 +36,34 @@
                 <table
                   width="100%"
                   justify="center"
+                  cellspacing="0"
+                  cellpadding="0"
                   align="center"
-                  cellspacing=""
                 >
-                  <tr>
-                    <td>
-                      <div class="">
+                  <tr class="set_row_select">
+                    <td width="50%">
+                      <div class="set_center">
+                        <v-select outlined dense class="hid"></v-select>
                         <span class="">การเดิน</span>
                       </div>
                     </td>
-                    <td width="50%" class="text_sub">
-                      <div class="set_center">
+                    <td width="50%" justify="center">
+                      <div class="set_center bg_green">
                         <v-select
                           :items="itm_walk"
                           placeholder="7 วันล่าสุด"
                           outlined
                           dense
-                        ></v-select>
+                          class="text-md-center"
+                        >
+                        </v-select>
                       </div>
                     </td>
                   </tr>
                 </table>
               </div>
               <div class="chart_31c1" style="width:95%">
-                <canvas id="walk_graph_2" width="200px" height=""></canvas>
+                <canvas id="walk_graph1_2" width="250px" height=""></canvas>
               </div>
             </div>
             <v-divider vertical></v-divider>
@@ -71,19 +75,20 @@
                   align="center"
                   cellspacing=""
                 >
-                  <tr>
-                    <td>
-                      <div class="">
+                  <tr class="set_row_select">
+                    <td width="50%">
+                      <div class="set_center">
                         <span class="">การนั่งนาน</span>
                       </div>
                     </td>
                     <td width="50%" class="text_sub">
-                      <div class="set_center">
+                      <div class="bg_green">
                         <v-select
                           :items="itm_walk"
                           placeholder="7 วันล่าสุด"
                           outlined
                           dense
+                          justify-center
                         ></v-select>
                       </div>
                     </td>
@@ -91,7 +96,7 @@
                 </table>
               </div>
               <div class="chart_31c1" style="width:95%">
-                <canvas id="walk_graph_2_2" width="200px" height=""></canvas>
+                <canvas id="walk_graph2_2" width="250px" height=""></canvas>
               </div>
             </div>
           </div>
@@ -101,14 +106,9 @@
             <span class="grey--text">(การถูกแจ้งเตือนโดยผู้ดูแล)</span>
             <br />
             <!-- <br /> -->
-            <table width="100%" id="customers" >
+            <v-simple-table width="100%" id="customers">
               <thead>
-                <tr
-                  class="grey--text"
-                  width="100%"
-                  cellspacing="0"
-                  cellpadding=""
-                >
+                <tr class="grey--text" width="100%" cellspacing="0">
                   <td>ครั้งที่</td>
                   <td width="">วันที่ , เวลา</td>
                   <td width="">โดย</td>
@@ -128,7 +128,7 @@
                   <td>{{ item.dtail }}</td>
                 </tr>
               </tbody>
-            </table>
+            </v-simple-table>
           </div>
         </div>
       </v-card>
@@ -140,7 +140,7 @@
 import Chart from "chart.js";
 export default {
   mounted: function() {
-    var ctx_3_1c1 = document.getElementById("walk_graph_2").getContext("2d"),
+    var ctx_3_1c1 = document.getElementById("walk_graph1_2").getContext("2d"),
       gradient2_c1_p3 = ctx_3_1c1.createLinearGradient(0, 0, 0, 300);
     gradient2_c1_p3.addColorStop(0, "rgb(255, 161, 161)");
     gradient2_c1_p3.addColorStop(0.61, "rgb(255, 255, 255)");
@@ -188,9 +188,7 @@ export default {
     });
     console.log(bar_31c1);
 
-    var ctx_3_1c1_2 = document
-        .getElementById("walk_graph_2_2")
-        .getContext("2d"),
+    var ctx_3_1c1_2 = document.getElementById("walk_graph2_2").getContext("2d"),
       gradient31c1_2 = ctx_3_1c1_2.createLinearGradient(0, 0, 0, 300);
     gradient31c1_2.addColorStop(0, "rgb(0, 0, 0)");
     gradient31c1_2.addColorStop(0.1, "rgb(0, 0, 0)");
@@ -264,8 +262,38 @@ export default {
 .head_card1_p3_l_title {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 85%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
+.big_font {
+  font-weight: bold;
+}
+.pdl_10 {
+  padding-left: 10px;
+}
+.v-select__selection {
+  width: 100%;
+  justify-content: center;
+}
+.set_row_select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* background-color:blueviolet; */
+}
+.clear_fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  text-align: center;
+  /* background-color: pink; */
+}
 /* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+.bg_green {
+  /* background-color: rgba(9, 231, 21, 0.397); */
+  padding-top: 25px;
+}
 </style>

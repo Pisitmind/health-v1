@@ -118,11 +118,11 @@
           </div>
           <!-- Content  -->
           <div class="card1_p6_content">
-            <div class="card3_p6_content_left">
-               <div style="height:230px">
+            <div class="card3_p6_content_left_old">
+              <div style="height:230px">
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_p6" width="200px" height="90px"></canvas>
-               </div>
+              </div>
 
               <div class="label_grpah1_c1_p6 set_h30">
                 <table width="100%">
@@ -286,51 +286,61 @@
                   </div>
                 </div>
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1 bdr_12_only" width="" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="400px" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้
                       </span>
                     </v-card-subtitle>
-                    <v-card-text class="pa-2 pb-8">
+                    <v-card-text class="">
                       <table class="card2_table">
                         <tr v-for="item in data_card2_p6" :key="item.id">
-                          <td>
-                            <table class="sub_table">
-                              <tr height="40px">
-                                <td style="text-align: right;" width="40px">
-                                  <v-icon x-small :style="{ color: item.color }"
-                                    >mdi-circle</v-icon
+                          <!-- <td> -->
+                          <table class="sub_table">
+                            <tr height="40px" width="">
+                              <td style="text-align: right;" width="80px">
+                                <v-icon x-small :style="{ color: item.color }"
+                                  >mdi-circle</v-icon
+                                >
+                              </td>
+                              <td
+                                class=""
+                                style="text-align:left; font-weight:bold; font-size: 13px;"
+                                width="70%"
+                              >
+                                <div class="fix_center">
+                                  <img
+                                    height="25px"
+                                    class="filter-white"
+                                    src="../assets/icon/icon_men.svg"
+                                    alt="men"
+                                  />
+                                  <span
+                                    style="align-text:left; letter-spacing: -1px;"
+                                    >{{ item.name }}</span
                                   >
-                                </td>
-                                <td
-                                  style="text-align: left;font-weight:bold; font-size: 14px;"
-                                  width="70%"
-                                >
-                                  <v-icon :style="{ color: item.color }"
-                                    >mdi-human-male</v-icon
-                                  >
-                                  {{ item.name }}
-                                </td>
-                                <td style="text-align: left;">
-                                  {{ item.dataMan }}
-                                </td>
-                              </tr>
-                              <tr>
-                                <td></td>
-                                <td
-                                  style="text-align: left;color:grey; font-size: 11px;"
-                                >
-                                  {{ item.dtail }}
-                                </td>
-                                <td
-                                  style="text-align: left;color:grey; font-size: 11px;"
-                                >
-                                  {{ item.avg }}
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
+                                </div>
+                              </td>
+                              <td style="text-align: left;  font-weight:bold;">
+                                {{ item.dataMan }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td
+                                style="text-align: left;color:grey; font-size: 11px;"
+                              >
+                                {{ item.dtail }}
+                              </td>
+                              <td
+                                style="text-align: left;color:grey; font-size: 11px;"
+                              >
+                                {{ item.avg }}
+                              </td>
+                            </tr>
+                          </table>
+
+                          <!-- </td> -->
                           <td></td>
                         </tr>
                       </table>
@@ -339,7 +349,7 @@
                 </div>
               </div>
             </div>
-            <v-divider vertical></v-divider>
+            <v-divider class="px-2" vertical></v-divider>
             <div class="card2_r_all">
               <div class="card1_p6_content">
                 <div class="card3_p6_content_left">
@@ -366,13 +376,13 @@
                 </div>
                 <!-- <v-divider vertical></v-divider> -->
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1 bdr_12_only" width="" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="400px" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้
                       </span>
                     </v-card-subtitle>
-                    <v-card-text class="pa-1 pb-8">
+                    <v-card-text class="">
                       <table class="card2_table">
                         <tr v-for="item in data_card2_2_p6" :key="item.id">
                           <td>
@@ -384,16 +394,27 @@
                                   >
                                 </td>
                                 <td
-                                  style="text-align: left;font-weight:bold; font-size: 14px;"
+                                  class=""
+                                  style="text-align:left; font-weight:bold; font-size: 13px;"
                                   width="70%"
                                 >
-                                  <v-icon :style="{ color: item.color }"
-                                    >mdi-human-female</v-icon
-                                  >
-                                  {{ item.name }}
+                                  <div class="fix_center">
+                                    <img
+                                      height="25px"
+                                      class="filter-white"
+                                      src="../assets/icon/icon_women.svg"
+                                      alt="women"
+                                    />
+                                    <span
+                                      style="align-text:left; letter-spacing: -1px;"
+                                      >{{ item.name }}</span
+                                    >
+                                  </div>
                                 </td>
-                                <td style="text-align: left;">
-                                  {{ item.dataMan }}
+                                <td
+                                  style=" font-weight: bold; text-align: left;"
+                                >
+                                  {{ item.dataWoman }}
                                 </td>
                               </tr>
                               <tr>
@@ -424,7 +445,7 @@
       </v-card>
     </div>
     <div class="card3_p6">
-      <v-card class="bdr_12">
+      <v-card class="bdr_12" style="padding-bottom:30px;">
         <div class="card1_p6_root">
           <div class="card1_p6_headNsub">
             <!-- head lr -->
@@ -531,11 +552,11 @@
                 <tr>
                   <td style="text-align:center; padding-left: 45px;">
                     <div class="label_text_card1_1">
-                      <div>
+                      <div class="">
                         <v-icon small color="blue"> mdi-circle</v-icon>
                         <span class="black--text">ชาย</span>
                       </div>
-                      <div class="pd_10">
+                      <div class=" pd_10">
                         <v-icon small color="pink"> mdi-circle</v-icon>
                         <span class="black--text">หญิง</span>
                       </div>
@@ -546,8 +567,15 @@
                   </td>
                 </tr>
                 <tr>
-                    <td width="50%" class="grey--text" style="font-size:14px; padding-left: 45px;">
-                    <span>อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5 องศาเซลเซียส</span>
+                  <td
+                    width="50%"
+                    class="grey--text"
+                    style="font-size:14px; padding-left: 45px;"
+                  >
+                    <span
+                      >อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5
+                      องศาเซลเซียส</span
+                    >
                   </td>
                 </tr>
               </table>
@@ -805,14 +833,14 @@ export default {
           name: "หญิง ปกติ",
           dtail: "ออกซิเจนมากกว่า95%",
           color: "#F28C8C",
-          dataMan: "772",
+          dataWoman: "772",
           avg: "63%",
         },
         {
           name: "หญิง ต่ำกว่าปกติ",
           dtail: "ออกซิเจนต่ำกว่า95%",
           color: "#F2C5C5",
-          dataMan: "557",
+          dataWoman: "557",
           avg: "27%",
         },
       ],
@@ -834,7 +862,7 @@ export default {
 .card3_p6 {
   padding: 10px 20px 10px 20px;
 }
-.label_text_card1_1{
+.label_text_card1_1 {
   display: flex;
   align-content: left;
 }
@@ -953,10 +981,10 @@ export default {
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
-.card_donut {
-  /* background-color: rgba(0, 120, 40, 0.2); */
-  /* height:200px; */
-}
+/* .card_donut { */
+/* background-color: rgba(0, 120, 40, 0.2); */
+/* height:200px; */
+/* } */
 .head_dialog_c1_p6 {
   display: flex;
 }
@@ -968,22 +996,41 @@ export default {
 }
 .card2_l_all {
   width: 50%;
+  /* padding: 20px 20px; */
+  padding: 20px 60px 20px 20px;
 }
 .card2_r_all {
   width: 50%;
+  /* padding: 20px 20px; */
+  padding: 20px 60px 20px 20px;
 }
 .card3_p6_content_left {
   width: 50%;
+  display: flex;
+  /* padding: 20px; */
+  justify-content: center;
+  /* padding-left: 10px; */
+  align-items: center;
+}
+.card3_p6_content_left_old {
+  width: 50%;
+  /* padding-left: 10px; */
+  align-items: center;
 }
 .card3_p6_content_right {
   width: 50%;
-  padding-right: 20px;
+  padding: 20px 0;
+  /* display:flex; */
+  /* justify-content:space-between; */
+  /* justify-content:center; */
+  /* padding-right: 10px; */
   /* background-color: rgba(255, 255, 255, 0.5); */
 }
 .card2_l1 {
   /* background-color: rgba(255, 255, 255, 0.2); */
-  margin-bottom: 20px;
-  margin-right: 30px;
+  /* margin-bottom: 20px; */
+  /* margin-right: 30px; */
+  margin: 0 20px;
   width: 100%;
 }
 .card2_table {
@@ -991,11 +1038,10 @@ export default {
   vertical-align: middle;
   padding-bottom: 15px;
 }
-/* .sub_table{
+.sub_table {
   width: 100%;
-  border-collapse: collapse;
-  border-spacing : 10px;
-} */
+  border-spacing: 10px;
+}
 table {
   border-collapse: collapse;
   width: 100%;
@@ -1016,5 +1062,17 @@ table {
 .split_r {
   width: 50%;
   padding-left: 60px;
+}
+.fix_center {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+.center_text {
+  text-align: center;
+}
+.left_text {
+  text-align: left;
 }
 </style>

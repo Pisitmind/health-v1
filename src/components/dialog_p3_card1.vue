@@ -59,7 +59,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graph_dialog_c2"
                           width=""
@@ -71,9 +71,9 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>119</span>
+                          <span style="font-size:30px;"><strong>119</strong></span>
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="">
                             <span>
                               ก้าว / วัน
                             </span>
@@ -106,7 +106,7 @@
                   </tr>
                   <tr>
                     <td>
-                      <div class="card_c1_c2_pd">
+                      <div class="sub_card_dia_mini">
                         <canvas
                           id="graph_dialog_c3"
                           width=""
@@ -118,9 +118,9 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span>64</span>
+                            <span style="font-size:30px;"><strong>64</strong></span>
                           </tr>
-                          <tr class="grey--text">
+                          <tr class="">
                             <span>
                               ครั้ง / วัน
                             </span>
@@ -232,7 +232,7 @@
                       </v-dialog>
                     </td>
                   </tr>
-                </tbody>0
+                </tbody>
               </template>
             </v-simple-table>
             <v-divider></v-divider>
@@ -553,9 +553,6 @@ export default {
 }
 .c1_c2_dialog {
   padding: 20px;
-}
-.card_c1_c2_pd {
-  padding: 15px;
 }
 .set_center {
   height: 100%;

@@ -148,19 +148,19 @@
                   <v-title class="title_table_c1"
                     >Active state of people</v-title
                   >
-                  <v-row no-gutters style="height:auto;">
-                    <v-dialog
-                      v-for="(item, index) in table1_ct2"
-                      :key="index"
-                      v-model="dialog1[n]"
-                      width="270px"
-                      :retain-focus="false"
-                      hide-overlay
-                      absolute
-                      offset-y
-                    >
-                      <template v-slot:activator="{ on, attrs5 }">
-                        <v-col v-for="n in 6" :key="n" cols="12" sm="4">
+                  <v-row
+                    no-gutters
+                    style="height:auto;"
+                    v-for="item in table1_ct2"
+                    :key="item.id"
+                  >
+                    <v-col v-for="n in 6" :key="n" cols="12" sm="4">
+                      <v-dialog
+                        v-model="dialog1[n]"
+                        width="270px"
+                        :retain-focus="false" hide-overlay
+                      >
+                        <template v-slot:activator="{ on, attrs5 }">
                           <v-card
                             class="box_ct1 pa-2"
                             outlined
@@ -184,54 +184,53 @@
                               </div>
                             </div>
                           </v-card>
-                        </v-col>
-                      </template>
-                      <v-card>
-                        <v-card-title>
-                          <span>Heart rate {{ item.name[index] }}</span>
-                        </v-card-title>
-                        <v-card-text>
-                          <thead>
-                            <tr width="100%" justify="space-around">
-                              <th width="" class="text-left">
-                                NO
-                              </th>
-                              <th width="" class="text-center">
-                                NAME
-                              </th>
-                              <th width="" class="text-left">
-                                Notification
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr
-                              v-for="item in mini_data"
-                              :key="item.id"
-                              class="text-left mini_fz"
-                              width="100%"
-                              height="30px"
-                              justify="space-around"
-                            >
-                              <td width="20%">{{ item.no }}</td>
-                              <td width="60%">{{ item.name }}</td>
-                              <td width="20%" class="text-center">
-                                <v-btn
-                                  :style="{
-                                    backgroundColor: item.color,
-                                    color: item.color1,
-                                  }"
-                                  elevation="2"
-                                  x-small
-                                >
-                                  {{ item.noti }}
-                                </v-btn>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </v-card-text>
-                      </v-card>
-                    </v-dialog>
+                        </template>
+                        <v-card>
+                          <v-card-title>
+                            <span>Heart rate {{ item.name[n - 1] }}</span>
+                          </v-card-title>
+                          <v-card-text>
+                            <thead>
+                              <tr width="100%" justify="space-around">
+                                <th width="" class="text-left">
+                                  NO
+                                </th>
+                                <th width="" class="text-center">
+                                  NAME
+                                </th>
+                                <th width="" class="text-left">
+                                  Notification
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr
+                                v-for="item in mini_data"
+                                :key="item.id"
+                                class="text-left mini_fz"
+                                width="100%"
+                                justify="space-around"
+                              >
+                                <td width="20%">{{ item.no }}</td>
+                                <td width="60%">{{ item.name }}</td>
+                                <td width="20%" class="text-center">
+                                  <v-btn
+                                    :style="{
+                                      backgroundColor: item.color,
+                                      color: item.color1,
+                                    }"
+                                    elevation="2"
+                                    x-small
+                                  >
+                                    {{ item.noti }}
+                                  </v-btn>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </v-card-text>
+                        </v-card>
+                      </v-dialog>
+                    </v-col>
                   </v-row>
                 </table>
               </div>
@@ -984,7 +983,7 @@ export default {
   data: function() {
     return {
       dialog: false,
-      dialog1: {},
+      dialog1:{},
       card2: {
         labels: ["18-20", "21-30", "31-40", "41-50", "51-60", "60 Up"],
         Color: [
@@ -1041,7 +1040,6 @@ export default {
       ],
       table1_ct2: [
         {
-          no: [1, 2, 3, 4, 5, 6],
           name: [
             "Relaxed",
             "Light",

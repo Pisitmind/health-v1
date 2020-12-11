@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="card_c1_c2_pd">
+                    <div class="sub_card_dia_mini">
                       <canvas
                         id="graph_dialogc2"
                         width=""
@@ -41,7 +41,9 @@
                     <div class="wd_100">
                       <table class="align-center">
                         <tr>
-                          <span>119</span>
+                          <span style="font-size:30px;"
+                            ><strong>119</strong></span
+                          >
                         </tr>
                         <tr class="grey--text">
                           <span>
@@ -76,7 +78,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="card_c1_c2_pd">
+                    <div class="sub_card_dia_mini">
                       <canvas
                         id="graph_dialogc3"
                         width=""
@@ -88,7 +90,9 @@
                     <div class="wd_100">
                       <table class="align-center">
                         <tr>
-                          <span>124</span>
+                          <span style="font-size:30px;"
+                            ><strong>124</strong></span
+                          >
                         </tr>
                         <tr class="grey--text">
                           <span>
@@ -665,9 +669,7 @@ export default {
 .c1_c2_dialog {
   padding: 20px;
 }
-.card_c1_c2_pd {
-  padding: 15px;
-}
+
 
 .content_top_left_page {
   width: 50%;

@@ -55,7 +55,7 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <div class="">
+                                    <div class="pd_x_15">
                                       <canvas
                                         id="graph_man"
                                         width="200px"
@@ -106,7 +106,7 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <div class="">
+                                    <div class="pd_x_15">
                                       <canvas
                                         id="graph_wman"
                                         width="200px"
@@ -258,10 +258,12 @@
                               :key="item.id"
                               align="center"
                             >
-                              <th scope="row" class="text-left">
-                                <v-icon :style="{ color: item.color }">{{
-                                  item.icon
-                                }}</v-icon>
+                              <th scope="row" class="fix_center">
+                                <img
+                                  height="40px"
+                                  class="filter-white"
+                                  :src="require('../assets/icon/' + item.icons)"
+                                />
                                 <span class="black--text"
                                   ><strong>{{ item.gender }}</strong></span
                                 >
@@ -271,8 +273,7 @@
                                 :key="n"
                                 width="16.67%"
                                 height="40px"
-                                style="border:1px solid black;"
-                                class="font_omg"
+                                style="font-size:24px; font-weight: bold; border:1.5px solid; #757575;"
                               >
                                 {{ item.data[n - 1] }}
                               </td>
@@ -514,14 +515,16 @@ export default {
         {
           gender: "ชาย",
           icon: "mdi-human-male",
+          icons: "icon_men.svg",
           color: "#359BD3",
-          data: [27, 98, 780, 34, 1],
+          data: [27, 98, 780, 34, 0],
         },
         {
           gender: "หญิง",
           icon: "mdi-human-female",
+          icons: "icon_women.svg",
           color: "#F28C8C",
-          data: [12, 132, 560, 22, 7],
+          data: [12, 132, 560, 22, 0],
         },
       ],
       moving_data_1: [
@@ -591,6 +594,15 @@ export default {
 };
 </script>
 <style scoped>
+.pd_x_15 {
+  padding: 0 40px 0 0;
+}
+.fix_center {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
 .dialog_p5_card1 {
   padding: 20px;
 }
@@ -652,11 +664,11 @@ export default {
 }
 .card_man {
   /* height: 120px; */
-  padding: 10px;
+  padding: 20px 10px;
 }
 .card_wman {
   /* height: 120px; */
-  padding: 10px;
+  padding: 20px 10px;
 }
 .text_inside {
   font-size: 16px;
