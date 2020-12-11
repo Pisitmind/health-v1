@@ -64,7 +64,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
-                    <v-col cols="12" sm="7" >
+                    <v-col cols="12" sm="7">
                       <v-text-field
                         v-model="name_au"
                         label="ชื่อ"
@@ -172,6 +172,9 @@ export default {
 </script>
 
 <style scoped>
+.dia_user_data {
+  overflow-y: hidden;
+}
 .content_dialog_user {
   padding: 20px;
 }

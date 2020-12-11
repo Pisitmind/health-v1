@@ -173,11 +173,11 @@ export default {
       name_au: "ปัญสิกรณ์ ติยกรณ์",
       tel_au: "0874445121",
       email: "Punpsk@o2o.com",
-      Sex:"หญิง",
-      weight_users:"55 kg",
-      height_users:"165 cm",
-      jobs:'Idols',
-      position:"Ceo",
+      Sex: "หญิง",
+      weight_users: "55 kg",
+      height_users: "165 cm",
+      jobs: "Idols",
+      position: "Ceo",
 
       statement: "12345 Chiangmai 50200",
       items: ["เจ้าหน้าที่ทั่วไป", "ผู้ดูแล", "ผู้ดูแลทั่วไป", "สมาชิก"],
@@ -190,6 +190,12 @@ export default {
 </script>
 
 <style scoped>
+.y-scroll-disabled {
+  overflow-y: hidden;
+}
+.dia_user_data_normal {
+  overflow-y: hidden !important;
+}
 .content_dialog_user {
   padding: 20px;
 }

@@ -1512,4 +1512,9 @@ th {
   content: "\e901";
   color: #f28c8c;
 }
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+
+}
 </style>

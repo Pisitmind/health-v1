@@ -133,6 +133,9 @@ export default {
 </script>
 
 <style scoped>
+.dia_user{
+  overflow-y: hidden;
+}
 .content_dialog_user {
   padding: 20px;
 }

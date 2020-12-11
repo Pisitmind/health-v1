@@ -24,16 +24,15 @@
                 <v-dialog
                   v-model="dialog1"
                   width="80%"
-                  style="overflow:hidden;"
                 >
-                  <template v-slot:activator="{ on, attrs }">
+                  <template v-slot:activator="{ on, attrs_au }">
                     <v-btn
                       class="white--text  mx-2"
                       small
                       width="120px"
                       height="30px"
                       color="#AD8DBB"
-                      v-bind="attrs"
+                      v-bind="attrs_au"
                       v-on="on"
                     >
                       <span>+ เพิ่มเจ้าหน้าที่</span>
@@ -152,7 +151,7 @@
           </v-row>
         </div>
       </v-card-content>
-       <div style="padding-bottom:40px;"></div>
+      <div style="padding-bottom:40px;"></div>
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->
@@ -258,8 +257,14 @@ export default {
 </script>
 
 <style scoped>
+.y-scroll-disabled {
+	overflow-y: hidden;
+}
 .authorities {
   padding: 20px;
+}
+.content_dia_admin_0 {
+  overflow-y: hidden !important;
 }
 .bg_white {
   background-color: white;
