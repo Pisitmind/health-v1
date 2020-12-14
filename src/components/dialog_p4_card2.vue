@@ -12,7 +12,7 @@
           <div class="content_top_right_page">
             <!-- data top right -->
             <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
+              <v-card width="400px" class="c1_c2_dialog bdr_12">
                 <table class="data_c1c2">
                   <tr width="">
                     <td class="left" width="70%" height="20%">
@@ -407,7 +407,7 @@ export default {
           no: "101",
           pos: "อาจารย์",
           sleep_sum: "124 BPM",
-          sleep_change: "+1 BPM",
+          sleep_change: "+ 1 BPM",
           icon: "mdi-menu-up",
           color: "#B4B4B4",
           color0: "green",
@@ -419,7 +419,7 @@ export default {
           no: "102",
           pos: "ผู้ช่วยสอน",
           sleep_sum: "120 BPM",
-          sleep_change: "-1 BPM",
+          sleep_change: "- 1 BPM",
           icon: "mdi-menu-down",
           color: "#22CE8B",
           color0: "red",
@@ -431,7 +431,7 @@ export default {
           no: "103",
           pos: "อาจารย์",
           sleep_sum: "105 BPM",
-          sleep_change: "+4 BPM",
+          sleep_change: "+ 4 BPM",
           icon: "mdi-menu-up",
           color: "#22CE8B",
           color0: "green",
@@ -443,7 +443,7 @@ export default {
           no: "104",
           pos: "อาจารย์",
           sleep_sum: "130 BPM",
-          sleep_change: "+1 BPM",
+          sleep_change: "+ 1 BPM",
           icon: "mdi-menu-up",
           color: "#22CE8B",
           color0: "green",
@@ -455,7 +455,7 @@ export default {
           no: "105",
           pos: "อาจารย์",
           sleep_sum: "109 ฺBPM",
-          sleep_change: "-4 BPM",
+          sleep_change: "- 4 BPM",
           icon: "mdi-menu-down",
           color: "#22CE8B",
           color0: "red",
@@ -542,5 +542,4 @@ export default {
   text-align: center;
   /* background-color:rgba(200,100,50,.2); */
 }
-
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-lg-xl>
+  <v-container grid-list-lg-xl  ssss>
     <div class="card_el">
       <link
         rel="stylesheet"
@@ -68,10 +68,7 @@
             </div>
           </div>
           <div class="card1-content">
-            <div
-              class="graph_donut_c1"
-              style="float: left; position: relative;"
-            >
+            <div style="float: left; position: relative;">
               <div
                 style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index: 999999999999999"
               >
@@ -81,9 +78,7 @@
               </div>
               <canvas id="graph0" width="" height="200px"></canvas>
             </div>
-            <div class="spac_content"></div>
-
-            <v-card class="card_p1_c1 bdr_12_only" height="">
+            <v-card class="bdr_12_only" height="">
               <v-card-subtitle>
                 <span class="topic-name-card ">
                   ตัวบ่งชี้
@@ -118,8 +113,7 @@
                 </div>
               </v-card-text>
             </v-card>
-            <div class="spac_content"></div>
-            <v-card class="card1-subcard-3 bdr_12_only" width="" height="">
+            <v-card class="card1-subcard-3 bdr_12_only" width="350px" height="">
               <v-card-subtitle class="set_pdbot0">
                 <span class="topic-name-card pl-5">
                   อุปกรณ์
@@ -157,7 +151,7 @@
       </v-card>
     </div>
     <div class="card_el">
-      <v-card class="c2_set_resp rounded-card">
+      <v-card class="rounded-card">
         <div class="card2">
           <div class="head-card2">
             <p><strong>ช่วงอายุ</strong></p>
@@ -201,7 +195,7 @@
                 <v-card-text class="pa-1">
                   <div class="card-info-right pa-1">
                     <table class="card2-table">
-                      <tr class="table_head1">
+                      <tr>
                         <th>ช่วงอายุ</th>
                         <th>ชาย</th>
                         <th>หญิง</th>
@@ -232,11 +226,11 @@
         </div>
       </v-card>
     </div>
-    <div class="c3_card_root card_el">
+    <div class="card_el">
       <div class="card-split">
         <div class="card_l">
-          <v-card class="card3_l1 bdr_12" height="350">
-            <div class="card3_l1_root c_l">
+          <v-card class="bdr_12" height="350">
+            <div class="card3 c_l">
               <div class="card3_headNsub">
                 <div class="head_card3_l">
                   <div class="title-card3">
@@ -342,8 +336,8 @@
           </v-card>
         </div>
         <div class="card_r">
-          <v-card class="card_r_root bdr_12" height="350">
-            <div class="card3_cardr c_r">
+          <v-card class="bdr_12" height="350">
+            <div class="card3 c_r">
               <div class="card3_headNsub">
                 <div class="head_card3_r">
                   <div class="title-card3">
@@ -400,9 +394,12 @@
                   <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุคน</span>
                 </div>
               </div>
-              <div class="card1-content_3">
+              <div class="card1-content">
                 <div>
+                  <v-card-title>
                     <canvas id="graph1" width="450px" height="220px"></canvas>
+                  </v-card-title>
+                  <v-card-content> </v-card-content>
                 </div>
                 <!-- <p>content</p> -->
               </div>
@@ -411,12 +408,11 @@
         </div>
       </div>
     </div>
-    <!-- สัดส่วน นน card -->
     <div class="card_el">
       <v-card class="bdr_12">
         <div class="card5">
           <div>
-            <div class="head_card4">
+            <div class="head_card4 ">
               <div class="title_card4">
                 <div class="card4_nameNicon set_weight">
                   <div style="padding-right:10px;">
@@ -674,12 +670,6 @@ import Chart from "chart.js";
 
 export default {
   mounted: function() {
-    const labels = ["male", "female"];
-    const images = [
-      require("../assets/icon/icon_men_sm.svg"),
-      require("../assets/icon/icon_women_sm.svg"),
-    ];
-    const values = [3628, 4874];
     const material_font = new FontFace(
       "material-icons",
       // pass the url to the file in CSS url() notation
@@ -712,7 +702,34 @@ export default {
         },
       },
     };
-    var config1 = {
+
+    var ctx0 = document.getElementById("graph0").getContext("2d");
+    var bar0 = new Chart(ctx0, config);
+
+    // Chart.pluginService.register({
+    //   beforeDraw: function(chart) {
+    //     var width = chart.chart.width,
+    //       height = chart.chart.height,
+    //       ctx = chart.chart.ctx;
+
+    //     ctx.restore();
+    //     var fontSize = (height / 114).toFixed(2);
+    //     ctx.font = fontSize + "em sans-serif";
+    //     ctx.textBaseline = "middle";
+
+    //     var text = "ผู้ใช้ทั้งหมด 2,800 คน",
+    //       textX = Math.round((width - ctx.measureText(text).width) / 2),
+    //       textY = height / 2;
+
+    //     ctx0.fillText(text, textX, textY);
+    //     ctx0.save();
+    //   },
+    // });
+
+    console.log(bar0);
+
+    var ctx = document.getElementById("graph").getContext("2d");
+    var bar = new Chart(ctx, {
       type: "bar",
       options: {
         legend: {
@@ -770,11 +787,12 @@ export default {
           },
         ],
       },
-    };
-    var config2 = {
+    });
+    console.log(bar);
+    var ctx1 = document.getElementById("graph1").getContext("2d");
+    var bar1 = new Chart(ctx1, {
       type: "horizontalBar",
       options: {
-        responsive: true,
         legend: {
           display: false,
         },
@@ -822,43 +840,84 @@ export default {
           },
         ],
       },
-    };
-    var config3 = {
+    });
+    console.log(bar1);
+
+    var ctx3 = document.getElementById("graph3-1").getContext("2d");
+    // const labels = ["male", "female"];
+    // const images = ["icon_men.svg", "icon_women.svg"];
+    // const values = [3628, 4874];
+    var bar3 = new Chart(ctx3, {
       type: "horizontalBar",
-      plugins: [
-        // {
-        //   afterDraw: (bar3) => {
-        //     var ctx_3 = bar3.getContextchart.ctx_3;
-        //     var yAxis_3 = bar3.scales["y-axis-0"];
-        //     var xAxis_3 = bar3.scales["x-axis-0"];
-        //     yAxis_3.ticks.forEach((value, index) => {
-        //       var y = yAxis_3.getPixelForTick(index);
-        //       var image_3 = new Image();
-        //       (image_3.src = images[index]),
-        //         ctx_3.drawImage(image_3, xAxis_3.bottom - 270, y - 10);
-        //     });
-        //   },
-        // },
-      ],
+      // plugins: [
+      //   {
+      //     afterDraw: (bar3) => {
+      //       var xAxis = bar3.scales["x-axis-0"];
+      //       var yAxis = bar3.scales["y-axis-0"];
+      //       xAxis.ticks.forEach((value, index) => {
+      //         var x = xAxis.getPixelForTick(index);
+      //         var image = new Image();
+      //         (image.src = require("../assets/icon/" + images[index])),
+      //           ctx3.drawImage(image, x - 12, yAxis.bottom + 10);
+      //       });
+      //     },
+      //   },
+      // ],
+
+      data: {
+        labels: {
+          render: "image",
+          images: [
+            {
+              src:
+                "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+              width: 20,
+              height: 20,
+            },
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_men.svg"),
+              width: 20,
+              height: 20,
+            }, 
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_women.svg"),
+              width: 20,
+              height: 20,
+            },
+          ],
+          // render: 'value',
+        },
+        datasets: [
+          {
+            barPercentage: 0.5,
+            datalabels: {
+              labels: {
+                title: null,
+              },
+            },
+            backgroundColor: ["#9ACDE9", "#F8C5C5"],
+            data: [3628, 4874],
+          },
+        ],
+      },
       options: {
         responsive: true,
-        legend: {
-          display: false,
-        },
         layout: {
           padding: {
-            // left: 50,
-            left: 0,
-            // right: 20,
-            right: 0,
-            top: 10,
-            bottom: 10,
+            bottom: 30,
           },
+        },
+        legend: {
+          display: false,
         },
         scales: {
           yAxes: [
             {
-              display: true,
+              ticks: {
+                beginAtZero: true,
+              },
             },
           ],
           xAxes: [
@@ -879,59 +938,223 @@ export default {
             },
           ],
         },
+        plugins: {
+          labels: {
+            render: "image",
+            images: [
+              {
+                src:
+                  "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+                width: 20,
+                height: 20,
+              },
+              {
+                // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+                src: require("../assets/icon/icon_men.svg"),
+                width: 20,
+                height: 20,
+              },
+            ],
+            // render: 'value',
+            showZero: true,
+            fontColor: "white",
+            position: "inside",
+            overlap: true,
+          },
+        },
       },
+    });
+   console.log(bar3);
+    var bar3 = new Chart(ctx3, {
+      type: "horizontalBar",
+      // plugins: [
+      //   {
+      //     afterDraw: (bar3) => {
+      //       var xAxis = bar3.scales["x-axis-0"];
+      //       var yAxis = bar3.scales["y-axis-0"];
+      //       xAxis.ticks.forEach((value, index) => {
+      //         var x = xAxis.getPixelForTick(index);
+      //         var image = new Image();
+      //         (image.src = require("../assets/icon/" + images[index])),
+      //           ctx3.drawImage(image, x - 12, yAxis.bottom + 10);
+      //       });
+      //     },
+      //   },
+      // ],
+
       data: {
-        labels: labels,
-        // labels: ["mdi-human-male", "mdi-human-female"],
+        labels: {
+          render: "image",
+          images: [
+            {
+              src:
+                "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+              width: 20,
+              height: 20,
+            },
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_men.svg"),
+              width: 20,
+              height: 20,
+            }, 
+            {
+              // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+              src: require("../assets/icon/icon_women.svg"),
+              width: 20,
+              height: 20,
+            },
+          ],
+          // render: 'value',
+        },
         datasets: [
           {
             barPercentage: 0.5,
-            label: "ก้าว",
+            datalabels: {
+              labels: {
+                title: null,
+              },
+            },
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
-            data: values,
+            data: [3628, 4874],
           },
         ],
       },
-    };
-
-    var ctx0 = document.getElementById("graph0").getContext("2d");
-    var bar0 = new Chart(ctx0, config);
-
-    // Chart.pluginService.register({
-    //   beforeDraw: function(chart) {
-    //     var width = chart.chart.width,
-    //       height = chart.chart.height,
-    //       ctx = chart.chart.ctx;
-
-    //     ctx.restore();
-    //     var fontSize = (height / 114).toFixed(2);
-    //     ctx.font = fontSize + "em sans-serif";
-    //     ctx.textBaseline = "middle";
-
-    //     var text = "ผู้ใช้ทั้งหมด 2,800 คน",
-    //       textX = Math.round((width - ctx.measureText(text).width) / 2),
-    //       textY = height / 2;
-
-    //     ctx0.fillText(text, textX, textY);
-    //     ctx0.save();
-    //   },
+      options: {
+        responsive: true,
+        layout: {
+          padding: {
+            bottom: 30,
+          },
+        },
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              display: true,
+              ticks: {
+                suggestedMin: 1000, // minimum will be 0, unless there is a lower value.
+                stepValue: 1000,
+                max: 6000,
+              },
+              scaleLabel: {
+                display: false,
+                labelString: "ก้าว",
+              },
+              gridLines: {
+                display: false,
+              },
+            },
+          ],
+        },
+        plugins: {
+          labels: {
+            render: "image",
+            images: [
+              {
+                src:
+                  "https://emn178.github.io/chartjs-plugin-labels/samples/demo/usa.png", // WORKS
+                width: 20,
+                height: 20,
+              },
+              {
+                // src: "../assets/svg/fa-unlink.svg", // DOESN'T WORK
+                src: require("../assets/icon/icon_men.svg"),
+                width: 20,
+                height: 20,
+              },
+            ],
+            // render: 'value',
+            showZero: true,
+            fontColor: "white",
+            position: "inside",
+            overlap: true,
+          },
+        },
+      },
+    });
+    // wait the font loads
+    // material_font.load().then(() => {
+    //   var icons = ["visibility", "trending_up"];
+    //   var ctx_demo = document.getElementById("chart_demo").getContext("2d");
+    //   var chart_demo1 = new Chart(ctx_demo, {
+    //     type: "bar",
+    //     data: {
+    //       // labels: ["0", "1"],
+    //       labels: ["visibility", "trending_up"],
+    //       datasets: [
+    //         {
+    //           label: "material font",
+    //           backgroundColor: "rgb(255, 99, 132, 0.5)",
+    //           borderColor: "rgb(255, 99, 132)",
+    //           borderWidth: 1,
+    //           data: [10, 20],
+    //         },
+    //       ],
+    //     },
+    //     options: {
+    //       scales: {
+    //         x: {
+    //           ticks: {
+    //             callback: (v) => icons[+v],
+    //             font: {
+    //               family: "material-icons",
+    //               size: "20",
+    //               color: "red",
+    //             },
+    //           },
+    //         },
+    //       },
+    //     },
+    //   });
+    //   console.log(chart_demo1);
     // });
 
-    // console.log(bar0);
-
-    var ctx = document.getElementById("graph").getContext("2d");
-    var bar = new Chart(ctx, config1);
-
-    // console.log(bar);
-
-    var ctx1 = document.getElementById("graph1").getContext("2d");
-    var bar1 = new Chart(ctx1, config2);
-    // console.log(bar1);
-
-    var ctx3 = document.getElementById("graph3-1").getContext("2d");
-    var bar3 = new Chart(ctx3, config3);
-    // console.log(bar3);
-    // return bar3;
+    // wait the font loads
+    // material_font.load().then(() => {
+    //   var icons = ["visibility", "trending_up"];
+    //   var ctx_demo = document.getElementById("chart_demo").getContext("2d");
+    //   var chart_demo1 = new Chart(ctx_demo, {
+    //     type: "bar",
+    //     data: {
+    //       // labels: ["0", "1"],
+    //       labels: ["visibility", "trending_up"],
+    //       datasets: [
+    //         {
+    //           label: "material font",
+    //           backgroundColor: "rgb(255, 99, 132, 0.5)",
+    //           borderColor: "rgb(255, 99, 132)",
+    //           borderWidth: 1,
+    //           data: [10, 20],
+    //         },
+    //       ],
+    //     },
+    //     options: {
+    //       scales: {
+    //         x: {
+    //           ticks: {
+    //             callback: (v) => icons[+v],
+    //             font: {
+    //               family: "material-icons",
+    //               size: "20",
+    //               color: "red",
+    //             },
+    //           },
+    //         },
+    //       },
+    //     },
+    //   });
+    //   console.log(chart_demo1);
+    // });
   },
 
   menu: false,
@@ -1443,122 +1666,8 @@ th {
   color: #f28c8c;
 }
 
-// ------ after resize web page -----------//
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width:800px) {
   /* For tablets: */
-  .head-card1 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .card_r_root{
-    height: 100%;
-  }
-  .card1-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    // padding:20px 0;
-    // height:"100%";
-  }
-  .graph_donut_c1 {
-    width: 400px;
-    display: flex;
-    align-self: center;
-    padding-bottom: 15px;
-  }
-  .card2-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .card_left_c2_p1 {
-    display: flex;
-    align-self: center;
-    width: 100%;
-  }
-  .card_right_c2_p1 {
-    width: 100%;
-  }
-  .card2-table {
-    width: 100%;
-  }
-  .table_head1 {
-    text-align: left;
-  }
-  .card2-table td[data-v-469af010] {
-    padding: 0 26px;
-    text-align: center;
-  }
-  .card-split {
-    display: flex;
-    flex-direction: column;
-  }
-  .card_l {
-    width: 100%;
-    padding: 0;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
-    // background-color: #ad8dbb;
-  }
-  .card2-graph {
-    width: 100%;
-    padding-right: 10px;
-  }
-  .card_r {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    padding-top: 10px;
-  }
-  .card_r_root{
-    height: 450px !important;
-    padding:20px;
-  }
-  .card3 {
-    width: 100%;
-    height: 100%;
-  }
-  .card1-content{
-    height: 100%;
-  }
-  .card3_l1{
-    position: relative;
-  }
-  .card3_l1_root {
-    width: 100%;
-    // background-color:#ad8dbb;
-    // background-color:#22CE8B;
-  }
-  .card1-content_3{
-    height: 90%;
-  }
-  .card3_cardr{
-    position: relative;
-    height: 100%;
-  }
-  .head_card4{
-    width: 100%;
-  }
-  .title_card4{
-    width: 100%;
-    display:flex;
-    flex-direction:column;
-    // background-color:#ad8dbb;
-  }
-  .card3-bot-text{
-    justify-content:start;
-  }
-  .card4_head_btn{
-    justify-content:start;
-  }
-  .card4_nameNicon{
-    justify-content:start;
-  }
-  .card5_line2 {
-    padding-top: 10px;
-
-  }
 
 }
 </style>

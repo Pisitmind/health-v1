@@ -28,8 +28,7 @@
                     v-for="n in 7"
                     :key="n"
                     height="35px"
-                    style="border:1px solid black;"
-                    class="font_omg"
+                    class="text_table_font_stle"
                   >
                     {{ item.data[n - 1] }}
                   </td>
@@ -71,7 +70,9 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                          <span style="font-size:30px;"><strong>119</strong></span>
+                            <span style="font-size:30px;"
+                              ><strong>119</strong></span
+                            >
                           </tr>
                           <tr class="">
                             <span>
@@ -118,7 +119,9 @@
                       <div class="wd_100">
                         <table class="align-center">
                           <tr>
-                            <span style="font-size:30px;"><strong>64</strong></span>
+                            <span style="font-size:30px;"
+                              ><strong>64</strong></span
+                            >
                           </tr>
                           <tr class="">
                             <span>
@@ -140,7 +143,9 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead>
-                  <span class=""> ข้อมูลผู้ใช้งาน</span>
+                  <span class="" style="font-size:18px; font-weight: bold;">
+                    ข้อมูลผู้ใช้งาน</span
+                  >
                   <tr>
                     <th class="text-left">
                       รหัส
@@ -175,17 +180,20 @@
                     <td>{{ item.pos }}</td>
                     <td>{{ item.walk_sum }}</td>
                     <td :style="{ color: item.color0 }">
+                      <v-icon :style="{ color: item.color0 }">{{
+                        item.icon
+                      }}</v-icon>
                       {{ item.walk_change }}
                     </td>
                     <td>{{ item.long_sit }}</td>
                     <td :style="{ color: item.color1 }">
+                      <v-icon :style="{ color: item.color0 }">{{
+                        item.icon
+                      }}</v-icon>
                       {{ item.sit_change }}
                     </td>
                     <td>
-                      <v-dialog
-                        v-model="dialog_2"
-                        :retain-focus="false"
-                      >
+                      <v-dialog v-model="dialog_2" :retain-focus="false">
                         <template v-slot:activator="{ on, attrs50 }">
                           <v-btn
                             style="background-color:#AD8DBB; color:white;"
@@ -459,12 +467,13 @@ export default {
           no: "101",
           pos: "อาจารย์",
           walk_sum: "4596",
-          walk_change: "+156",
+          walk_change: "+ 156",
+          icon: "mdi-menu-up",
           long_sit: "159",
-          sit_change: "+3",
+          sit_change: "+ 3",
           color: "#B4B4B4",
           color0: "green",
-          color1: "red",
+          color1: "green",
           show_history: "ดู",
         },
         {
@@ -472,12 +481,13 @@ export default {
           no: "102",
           pos: "ผู้ช่วยสอน",
           walk_sum: "4875",
-          walk_change: "-395",
+          walk_change: "- 395",
+          icon: "mdi-menu-down",
           long_sit: "157",
-          sit_change: "-1",
+          sit_change: "- 1",
           color: "#22CE8B",
           color0: "red",
-          color1: "green",
+          color1: "red",
           show_history: "ดู",
         },
         {
@@ -485,9 +495,10 @@ export default {
           no: "103",
           pos: "อาจารย์",
           walk_sum: "3621",
-          walk_change: "+0",
+          walk_change: "+ 0",
+          icon: "mdi-menu-up",
           long_sit: "174",
-          sit_change: "+0",
+          sit_change: "+ 0",
           color: "#22CE8B",
           color0: "green",
           color1: "green",
@@ -498,11 +509,12 @@ export default {
           no: "104",
           pos: "อาจารย์",
           walk_sum: "2541",
-          walk_change: "+156",
+          walk_change: "+ 156",
+          icon: "mdi-menu-up",
           long_sit: "159",
-          sit_change: "+3",
+          sit_change: "+ 3",
           color: "#AD8DBB",
-          color0: "red",
+          color0: "green",
           color1: "green",
           show_history: "ดู",
         },
@@ -535,6 +547,9 @@ export default {
 <style scoped>
 .dialog_p3_card1 {
   width: 100%;
+}
+.head_table_card3 {
+  font-size: 14px;
 }
 .t_switch {
   display: flex;

@@ -269,12 +269,12 @@
                               :style="{ color: item.color[x - 1] }"
                               >mdi-circle
                             </v-icon>
-                            <span class="txt_pd font_sm font_bold">
+                            <span class="txt_pd font_sm ">
                               {{ item.name[x - 1] }}
                             </span>
                           </div>
                         </td>
-                        <td class="alr font_sm font_bold">
+                        <td class="alr font_sm ">
                           {{ item.avg[x - 1] }}
                         </td>
                       </tr>
@@ -731,7 +731,7 @@
       </v-card>
     </div>
     <div class="card_el_card2">
-      <v-card class="bdr_12">
+      <v-card class="bdr_12" style="padding-bottom:30px;">
         <div class="card3_root">
           <div class="head-card2">
             <div class="">
@@ -779,7 +779,7 @@
   border-collapse: collapse;"
                 >
                   <tr v-for="item in data_card3" :key="item.id" align="center">
-                    <th scope="row" width="12%" class="head_table_card3">
+                    <th scope="row" width="10%" class="head_table_card3">
                       <v-icon small :style="{ color: item.color }">{{
                         item.icon
                       }}</v-icon>
@@ -789,11 +789,11 @@
                       >
                     </th>
                     <td
-                      v-for="n in 5"
+                      v-for="n in 7"
                       :key="n"
-                      width="17%"
+                      width=""
                       height="40px"
-                      style="border:1px solid black;"
+                      style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
                       class="font_omg"
                     >
                       {{ item.data[n - 1] }}
@@ -1250,7 +1250,7 @@ export default {
   justify-content: space-around;
 }
 .font_bold {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .font_norm {
   font-weight: normal;

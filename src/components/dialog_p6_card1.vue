@@ -156,10 +156,16 @@
                     <td>{{ item.pos }}</td>
                     <td>{{ item.walk_sum }}</td>
                     <td :style="{ color: item.color0 }">
+                      <v-icon :style="{ color: item.color0 }">{{
+                        item.icon
+                      }}</v-icon>
                       {{ item.walk_change }}
                     </td>
                     <td>{{ item.long_sit }}</td>
                     <td :style="{ color: item.color1 }">
+                      <v-icon :style="{ color: item.color0 }">{{
+                        item.icon
+                      }}</v-icon>
                       {{ item.sit_change }}
                     </td>
                     <td>
@@ -410,11 +416,12 @@ export default {
           pos: "อาจารย์",
           walk_sum: "4596",
           walk_change: "+156",
+          icon: "mdi-menu-up",
           long_sit: "159",
           sit_change: "+3",
           color: "#B4B4B4",
           color0: "green",
-          color1: "red",
+          color1: "green",
           show_history: "ดู",
         },
         {
@@ -423,11 +430,12 @@ export default {
           pos: "ผู้ช่วยสอน",
           walk_sum: "4875",
           walk_change: "-395",
+          icon: "mdi-menu-down",
           long_sit: "157",
           sit_change: "-1",
           color: "#22CE8B",
           color0: "red",
-          color1: "green",
+          color1: "red",
           show_history: "ดู",
         },
         {
@@ -436,6 +444,7 @@ export default {
           pos: "อาจารย์",
           walk_sum: "3621",
           walk_change: "+0",
+          icon: "mdi-menu-up",
           long_sit: "174",
           sit_change: "+0",
           color: "#22CE8B",
@@ -449,10 +458,11 @@ export default {
           pos: "อาจารย์",
           walk_sum: "2541",
           walk_change: "+156",
+          icon: "mdi-menu-up",
           long_sit: "159",
           sit_change: "+3",
           color: "#22CE8B",
-          color0: "red",
+          color0: "green",
           color1: "green",
           show_history: "ดู",
         },

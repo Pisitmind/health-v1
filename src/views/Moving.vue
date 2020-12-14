@@ -142,7 +142,7 @@
                           </div>
                         </div>
                       </td>
-                      <td width="50%" class="text_sub">
+                      <td width="50%" class="text_sub" style="text-align: right;padding-right:40px;">
                         <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                       </td>
                     </tr>

@@ -71,12 +71,21 @@ html {
   height: 30px;
   /* background-color: green; */
 }
-.bg_blue{
+.bg_blue {
   background-color: rgba(0, 0, 250, 0.2);
 }
 .sub_card_dia_mini {
   padding: 15px;
   width: 300px;
+}
+.text_table_font_stle {
+  font-size: 24px;
+  font-weight: bold;
+  border: 1.5px solid #757575;
+}
+.spac_content {
+  padding-bottom: 10px;
+   /* display:none; */
 }
 /*
 html::-webkit-scrollbar { 

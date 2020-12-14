@@ -34,7 +34,7 @@
             <div class="content_top_right_page">
               <!-- data top right -->
               <div>
-                <v-card width="" class="c1_c2_dialog">
+                <v-card width="400px" class="c1_c2_dialog">
                   <table class="data_c1c2">
                     <tr>
                       <td class="left" width="80%" height="20%">
@@ -80,7 +80,7 @@
               </div>
               <br />
               <div>
-                <v-card width="" class="c1_c2_dialog">
+                <v-card width="400px" class="c1_c2_dialog">
                   <table class="data_c1c2">
                     <tr>
                       <td class="left" width="80%" height="20%">
@@ -660,7 +660,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .data_c1c2 {
   text-align: center;

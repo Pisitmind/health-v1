@@ -118,7 +118,7 @@
                       <th width="20%" class="text-left">
                         กลุ่มบทความ
                       </th>
-                      <th width="" class="text-center">
+                      <th width="10%" class="text-center">
                         ยอดผู้อ่าน
                       </th>
                       <th width="15%" class="text-left">
@@ -166,7 +166,8 @@
           <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
         </v-card-content>
       </v-card>
-      <div class="hid">
+      <!-- <div class="hid"> -->
+      <div class="show">
         <canvas id="myChart111" width="" height="90px"></canvas>
       </div>
     </div>
@@ -184,13 +185,14 @@ export default {
     dialog_p10,
   },
   mounted: function() {
-    const labels = ["male", "female"];
+    const labels = [" ", " "];
+    // const labels = ["male", "female"];
     // const images = [ require("../assets/icon/icon_men.svg"),
     //   "https://i.stack.imgur.com/2RAv2.png",
     // ];
     const images = [
-      require("../assets/icon/icon_men.svg"),
-      require("../assets/icon/icon_women.svg"),
+      require("../assets/icon/icon_men_sm.svg"),
+      require("../assets/icon/icon_women_sm.svg"),
     ];
     const values = [48, 56];
 
@@ -217,7 +219,7 @@ export default {
           {
             label: "My Dataset",
             data: values,
-            backgroundColor: ["red", "blue"],
+            backgroundColor: ["blue", "pink"],
           },
         ],
       },
@@ -225,6 +227,14 @@ export default {
         responsive: true,
         legend: {
           display: false,
+        },
+         layout: {
+            padding: {
+                left: 50,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }
         },
         scales: {
           xAxes: [
@@ -237,15 +247,10 @@ export default {
           yAxes: [
             {
               ticks: {
-                padding: 30,
+                padding: 40,
               },
             },
           ],
-          layout: {
-            padding: {
-              bottom: 30,
-            },
-          },
         },
       },
     });
@@ -353,6 +358,10 @@ export default {
 .headline {
   color: #8a4532;
 }
-.customers tr:nth-child(odd){background-color: #f2f2f2;}
-.none_color tr:nth-child(odd){background-color: white;}
+.customers tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.none_color tr:nth-child(odd) {
+  background-color: white;
+}
 </style>
