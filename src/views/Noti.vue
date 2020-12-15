@@ -425,11 +425,11 @@
                     </tr>
                   </table>
 
-                  <table
+                  <table class="font_reg"
                     style="width: 100%;
-  border-collapse: collapse;"
+  border-collapse: collapse; "
                   >
-                    <tr>
+                    <tr class="set_reg">
                       <th></th>
                       <th>
                         <div class="i-human">
@@ -1205,6 +1205,9 @@ export default {
 .noti {
   padding: 16px;
 }
+.set_reg{
+  font-weight: regular !important;
+}
 .hid {
   display: none;
 }
@@ -1372,7 +1375,7 @@ export default {
   padding: 10px;
 }
 .card_el_card2 {
-  padding: 10px;
+  padding: 20px;
 }
 .head_card2_btn {
   align-content: center;
@@ -1465,5 +1468,18 @@ export default {
 .med_20 {
   padding: 16px 16px 0 16px !important;
   font-size: 16px;
+}
+.font_reg{
+  font-weight: regular !important;
+}
+/* 800px */
+@media only screen and (max-width: 800px) {
+  .noti{
+  }
+  .card_el{
+    background-color: rgba(224, 164, 51, 0.2);
+  }
+
+
 }
 </style>

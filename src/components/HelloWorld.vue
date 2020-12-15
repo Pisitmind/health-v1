@@ -13,12 +13,12 @@
               <div class="head_name_tag">
                 <p><strong>สมาชิกผู้ใช้</strong></p>
               </div>
-              <div class="">
+              <div class="btn_day_tag">
                 <v-btn class="white--text" small color="#AD8DBB" width="80px"
                   >วันนี้</v-btn
                 >
               </div>
-              <div>
+              <div class="calen_tag">
                 <v-menu
                   ref="menu"
                   v-model="menu"
@@ -167,7 +167,7 @@
               <div class="card2-graph">
                 <canvas id="graph" width="" height=""></canvas>
               </div>
-              <div class="label_grpah">
+              <div class="label_graph">
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
@@ -313,10 +313,10 @@
                   <div class="card2-graph">
                     <canvas id="graph3-1" width="450px" height="200px"></canvas>
                   </div>
-                  <div class="label_grpah">
+                  <div class="label_graph">
                     <table width="100%">
                       <tr>
-                        <td style="text-align:left;">
+                        <td style="text-align:center;">
                           <div class="label_text_card3">
                             <div>
                               <v-icon small color="blue"> mdi-circle</v-icon>
@@ -332,7 +332,7 @@
                             </div>
                           </div>
                         </td>
-                        <td width="50%"></td>
+                        <td width="25%"></td>
                       </tr>
                     </table>
                   </div>
@@ -401,8 +401,8 @@
                 </div>
               </div>
               <div class="card1-content_3">
-                <div>
-                    <canvas id="graph1" width="450px" height="220px"></canvas>
+                <div style="padding:20px;">
+                  <canvas id="graph1" width="450px" height="220px"></canvas>
                 </div>
                 <!-- <p>content</p> -->
               </div>
@@ -1066,6 +1066,13 @@ export default {
 }
 .head_name_tag {
   font-size: 20px;
+  padding-top: 10px;
+}
+.calen_tag {
+  padding-top: 5px;
+}
+.btn_day_tag {
+  padding-top: 10px;
 }
 .v-text-field {
   padding-top: 0px;
@@ -1122,6 +1129,7 @@ th {
   justify-content: space-around;
   justify-items: space-around;
   // background-color:rgba(0,0,50,0.2);
+  // align-content: center;
 }
 .pd_top10 {
   padding-top: 10px;
@@ -1181,13 +1189,13 @@ th {
 }
 .head_card3_l {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 10px 0px 10px;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
 }
 .head_card3_r {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 10px 0px 10px;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
 }
 .subtext-card3 {
   display: flex;
@@ -1215,6 +1223,7 @@ th {
 }
 .sex-age-title-card3 {
   display: flex;
+  left:0;
   /* width: 50%; */
   /* background-color:violet; */
 }
@@ -1310,12 +1319,12 @@ th {
   flex-direction: row;
 }
 .card_l {
-  width: 100%;
+  width: 50%;
   /* margin-right:10px; */
   padding-right: 10px;
 }
 .card_r {
-  width: 100%;
+  width: 50%;
   /* margin-left:10px; */
   padding-left: 10px;
 }
@@ -1406,12 +1415,13 @@ th {
 }
 .label_text_card1 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  padding-left: 70px;
 }
 .label_text_card3 {
   display: flex;
-  justify-content: left;
-  padding-left: 20px;
+  justify-content: start;
+  padding-left: 70px;
 }
 .fix_center {
   display: flex;
@@ -1419,7 +1429,7 @@ th {
   justify-items: center;
   align-items: center;
 }
-.label_grpah {
+.label_graph {
   padding-bottom: 20px;
 }
 .card4_head_btn {
@@ -1451,7 +1461,7 @@ th {
     flex-direction: column;
     width: 100%;
   }
-  .card_r_root{
+  .card_r_root {
     height: 100%;
   }
   .card1-content {
@@ -1511,18 +1521,19 @@ th {
     padding: 0;
     padding-top: 10px;
   }
-  .card_r_root{
+  .card_r_root {
     height: 450px !important;
-    padding:20px;
+    padding: 20px;
   }
   .card3 {
     width: 100%;
     height: 100%;
   }
-  .card1-content{
+  .card1-content {
     height: 100%;
   }
-  .card3_l1{
+  .card3_l1 {
+    padding: 20px;
     position: relative;
   }
   .card3_l1_root {
@@ -1530,35 +1541,36 @@ th {
     // background-color:#ad8dbb;
     // background-color:#22CE8B;
   }
-  .card1-content_3{
+  .card1-content_3 {
     height: 90%;
+    padding: 20px;
   }
-  .card3_cardr{
+  .card3_cardr {
     position: relative;
     height: 100%;
+    padding: 20px;
+    // background-color: #359bd3;
   }
-  .head_card4{
+  .head_card4 {
     width: 100%;
   }
-  .title_card4{
+  .title_card4 {
     width: 100%;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     // background-color:#ad8dbb;
   }
-  .card3-bot-text{
-    justify-content:start;
+  .card3-bot-text {
+    justify-content: start;
   }
-  .card4_head_btn{
-    justify-content:start;
+  .card4_head_btn {
+    justify-content: start;
   }
-  .card4_nameNicon{
-    justify-content:start;
+  .card4_nameNicon {
+    justify-content: start;
   }
   .card5_line2 {
     padding-top: 10px;
-
   }
-
 }
 </style>

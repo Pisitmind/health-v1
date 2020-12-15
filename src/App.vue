@@ -35,15 +35,20 @@ export default {
 <style scope>
 html .set_hidden {
   overflow-y: hidden !important;
+  
 }
 .fz_14 {
   font-size: 13px !important;
 }
 html {
   overflow-x: hidden !important;
-  font-family: Roboto;
+  font-family: th-sans-regular !important;
+  /* font-family: rsuregular !important; */
   /* overflow-y: hidden !important; */
   /* background-color: red; */
+}
+.card_rootcontent{
+  padding: 20px;
 }
 .container {
   background-color: #f6f6f6;

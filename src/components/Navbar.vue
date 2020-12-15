@@ -219,7 +219,7 @@ export default {
         {
           title: "แจ้งเตือน",
           icon: "mdi-bell-outline",
-          logo: "noti.svg",
+          logo: "noti_b.svg",
           logo_active: "icon_noti_other.svg",
           route: "/Notifications",
         },

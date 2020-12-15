@@ -223,8 +223,9 @@
 }
 .icon_foot_l {
   display: flex;
+  left: 0;
+  justify-content: space-between;
   /* justify-content: space-around; */
-  justify-content: space-around;
   z-index: 1;
   /* padding: 0 10px ; */
 }
