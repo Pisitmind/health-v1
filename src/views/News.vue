@@ -181,7 +181,7 @@
                             color: item.color,
                             backgroundColor: item.back_col,
                           }"
-                          elevation="2"
+                          elevation="0"
                           small
                         >
                           {{ item.edit_bot }}

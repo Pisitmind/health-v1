@@ -102,7 +102,12 @@
         <v-card-content>
           <div class="content_dialog_page_bot">
             <div class="table_news_p10">
-              <v-simple-table class="customers">
+              <v-simple-table
+                class="customers"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+              >
                 <template v-slot:default>
                   <thead class="none_color">
                     <tr class="">
@@ -149,7 +154,7 @@
                             color: item.color,
                             backgroundColor: item.back_col,
                           }"
-                          elevation="2"
+                          elevation="0"
                           small
                         >
                           {{ item.edit_bot }}
@@ -228,13 +233,13 @@ export default {
         legend: {
           display: false,
         },
-         layout: {
-            padding: {
-                left: 50,
-                right: 0,
-                top: 0,
-                bottom: 0
-            }
+        layout: {
+          padding: {
+            left: 50,
+            right: 0,
+            top: 0,
+            bottom: 0,
+          },
         },
         scales: {
           xAxes: [
@@ -364,4 +369,14 @@ export default {
 .none_color tr:nth-child(odd) {
   background-color: white;
 }
+
+td,
+th {
+  border: none;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
 </style>

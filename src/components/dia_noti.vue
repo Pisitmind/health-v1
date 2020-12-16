@@ -116,28 +116,28 @@
               <thead>
                 <span class="set_bold fz_20"> NOTIFY : ADMIN LIST</span>
                 <tr>
-                  <th class="text-left">
+                  <th class="text-center">
                     No
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     Name
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     Location
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     ROOM NO
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     AVG (BPM)
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     NOW (BPM)
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     AUTO NOTIFY
                   </th>
-                  <th class="text-left">
+                  <th class="text-center">
                     MANUAL NOTFY
                   </th>
                 </tr>
@@ -161,11 +161,13 @@
                       ></v-switch>
                     </div>
                   </td>
-                  <td>
+                  <td >
                     <v-btn
                       :style="{ backgroundColor: item.color }"
                       elevation="2"
                       small
+                      width="80px"
+                      class="white--text"
                     >
                       {{ item.manual_noti }}
                     </v-btn>
@@ -669,7 +671,6 @@ export default {
 .c1_c2_dialog {
   padding: 20px;
 }
-
 
 .content_top_left_page {
   width: 50%;

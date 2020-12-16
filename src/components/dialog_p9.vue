@@ -37,7 +37,7 @@
                     <div class="in_card1">
                       <!-- <v-file-input
                       accept="image/*"
-                      prepend-icon="mdi-camera-outline"
+                      prepend-inner-icon="mdi-camera-outline"
                       hide-input
                     >
                     </v-file-input> -->
@@ -117,8 +117,9 @@
                             color="#AD8DBB"
                             v-model="date"
                             outlined
+                            dense
                             label="เริ่มกระจายบทความ"
-                            prepend-icon="mdi-calendar"
+                            prepend-inner-icon="mdi-calendar"
                             readonly
                             v-bind="attrs"
                             v-on="on"
@@ -161,8 +162,9 @@
                             v-model="time"
                             label=""
                             placeholder="08:00"
-                            prepend-icon="mdi-clock-time-four-outline"
+                            prepend-inner-icon="mdi-clock-time-four-outline"
                             readonly
+                             dense
                             outlined
                             v-bind="attrs"
                             v-on="on"
@@ -273,7 +275,7 @@ export default {
   padding: 0;
   padding-top: 20px;
 }
-.pd_20{
-  padding:40px!important;
+.pd_20 {
+  padding: 40px !important;
 }
 </style>

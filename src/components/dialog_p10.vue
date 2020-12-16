@@ -130,8 +130,9 @@
                             v-model="date"
                             outlined
                             label="เริ่มกระจายบทความ"
-                            prepend-icon="mdi-calendar"
+                            prepend-inner-icon="mdi-calendar"
                             readonly
+                            dense
                             v-bind="attrs"
                             v-on="on"
                           ></v-text-field>
@@ -173,9 +174,10 @@
                             v-model="time"
                             label=""
                             placeholder="08:00"
-                            prepend-icon="mdi-clock-time-four-outline"
+                            prepend-inner-icon="mdi-clock-time-four-outline"
                             readonly
                             outlined
+                            dense
                             v-bind="attrs"
                             v-on="on"
                           ></v-text-field>
@@ -285,7 +287,7 @@ export default {
   padding: 0;
   padding-top: 20px;
 }
-.pd_20{
-  padding:40px!important;
+.pd_20 {
+  padding: 40px !important;
 }
 </style>

@@ -25,7 +25,7 @@
                     </template>
                     <v-card>
                       <v-card-title>
-                        <div class="head_dialog">
+                        <div class="head_dialog" id="head_dia_Hrate">
                           <div>
                             <span class="headline">Heart rate risk</span>
                           </div>
@@ -425,13 +425,14 @@
                     </tr>
                   </table>
 
-                  <table class="font_reg"
+                  <table
+                    class="font_reg"
                     style="width: 100%;
   border-collapse: collapse; "
                   >
                     <tr class="set_reg">
-                      <th></th>
-                      <th>
+                      <td class="text-center"></td>
+                      <td class="text-center">
                         <div class="i-human">
                           <div>
                             <img
@@ -441,10 +442,10 @@
                               alt="human"
                             />
                           </div>
-                          <div><p>Underweight</p></div>
+                          <div><p class="set_reg">Underweight</p></div>
                         </div>
-                      </th>
-                      <th>
+                      </td>
+                      <td class="text-center">
                         <div class="i-human">
                           <div>
                             <img
@@ -456,8 +457,8 @@
                           </div>
                           <div><p>Normal</p></div>
                         </div>
-                      </th>
-                      <th>
+                      </td>
+                      <td class="text-center">
                         <div class="i-human">
                           <div>
                             <img
@@ -469,8 +470,8 @@
                           </div>
                           <div><p>Overweight</p></div>
                         </div>
-                      </th>
-                      <th>
+                      </td>
+                      <td class="text-center">
                         <div class="i-human">
                           <div>
                             <img
@@ -482,8 +483,8 @@
                           </div>
                           <div><p>Obese I</p></div>
                         </div>
-                      </th>
-                      <th>
+                      </td>
+                      <td class="text-center">
                         <div class="i-human">
                           <div>
                             <img
@@ -495,7 +496,7 @@
                           </div>
                           <div><p>Obese II</p></div>
                         </div>
-                      </th>
+                      </td>
                     </tr>
                     <tr v-for="item in items" :key="item.id" align="center">
                       <th scope="row" class="fix_center" align="left">
@@ -808,14 +809,31 @@
     </div>
   </div>
 </template>
+<script>
+window.onscroll = function() {
+  myFunction();
+};
 
+var navbar = document.getElementById("head_dia_Hrate");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 <script>
 import Chart from "chart.js";
 import dia_noti from "@/components/dia_noti.vue";
+
 export default {
   components: {
     dia_noti,
   },
+
   mounted: function() {
     var ctx1_c2 = document.getElementById("graph1_c2").getContext("2d");
     var bar1_c2 = new Chart(ctx1_c2, {
@@ -1197,15 +1215,23 @@ export default {
 </script>
 
 <style scoped>
+.card1-root{
+  padding:20px;
+}
 .v-dialog {
   position: absolute;
   bottom: 0;
   right: 0;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .noti {
   padding: 16px;
 }
-.set_reg{
+.set_reg {
   font-weight: regular !important;
 }
 .hid {
@@ -1251,9 +1277,6 @@ export default {
   display: flex;
   /* justify-content:space-between; */
   justify-content: space-around;
-}
-.font_bold {
-  /* font-weight: bold; */
 }
 .font_norm {
   font-weight: normal;
@@ -1331,12 +1354,22 @@ export default {
 .text_green {
   color: #22ce8b;
 }
-.head_dialog {
+#head_dia_Hrate {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
+  /* background-color:#f2f2f2; */
 }
+/* .head_dialog {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  background-color:#f2f2f2;
+} */
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
@@ -1469,17 +1502,13 @@ export default {
   padding: 16px 16px 0 16px !important;
   font-size: 16px;
 }
-.font_reg{
+.font_reg {
   font-weight: regular !important;
 }
 /* 800px */
 @media only screen and (max-width: 800px) {
-  .noti{
-  }
-  .card_el{
+  .noti .card_el {
     background-color: rgba(224, 164, 51, 0.2);
   }
-
-
 }
 </style>

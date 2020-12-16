@@ -677,7 +677,7 @@ export default {
     const labels = ["male", "female"];
     const images = [
       require("../assets/icon/icon_men_sm.svg"),
-      require("../assets/icon/icon_women_sm.svg"),
+      require("../assets/icon/icon_women_sm.svg")
     ];
     const values = [3628, 4874];
     const material_font = new FontFace(
@@ -693,15 +693,15 @@ export default {
         datasets: [
           {
             data: [1471, 1329],
-            backgroundColor: ["#9ACDE9", "#F8C5C5"],
-          },
+            backgroundColor: ["#9ACDE9", "#F8C5C5"]
+          }
         ],
-        labels: ["ชาย", "หญิง"],
+        labels: ["ชาย", "หญิง"]
       },
       options: {
         responsive: true,
         legend: {
-          display: false,
+          display: false
         },
         elements: {
           center: {
@@ -1223,7 +1223,7 @@ th {
 }
 .sex-age-title-card3 {
   display: flex;
-  left:0;
+  left: 0;
   /* width: 50%; */
   /* background-color:violet; */
 }
@@ -1417,11 +1417,14 @@ th {
   display: flex;
   justify-content: start;
   padding-left: 70px;
+  font-size: 14px;
+  // background-color: #ad8dbb;
 }
 .label_text_card3 {
   display: flex;
   justify-content: start;
   padding-left: 70px;
+  font-size: 14px;
 }
 .fix_center {
   display: flex;
