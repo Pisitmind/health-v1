@@ -1,19 +1,64 @@
-html .set_hidden {
-  overflow-y: hidden !important;
-}
-
 .fz_14 {
   font-size: 13px !important;
 }
 
+@font-face {
+  font-family: "rsubold";
+  src: url("/fonts/rsu_bold-webfont.woff2") format("woff2"),
+    url("/fonts/rsu_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rsulight";
+  src: url("/fonts/rsu_light-webfont.woff2") format("woff2"),
+    url("/fonts/rsu_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rsuregular";
+  src: url("/fonts/rsu_regular-webfont.woff2") format("woff2"),
+    url("/fonts/rsu_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0E00 –U + 0e7f;
+}
+@font-face {
+  font-family: "CustomHeading";
+  src: url("/fonts/rsu-regular-webfont.woff") format("woff"),
+    url("/fonts/RSU_Regular.ttf") format("truetype"),
+    url("/fonts/rsu-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "rsu_1";
+  src: url("/fonts/rsu_bold-webfont.woff") format("woff"),
+    url("/fonts/rsu_bold-webfont.woff2") format("woff2");
+  unicode-range: U+0E00 –U + 0e7f;
+}
+.v-application {
+  font-family: "rsuregular";
+  /* font-family: rsuregular, CustomHeading; */
+  line-height: 1.5;
+}
 html {
   overflow-x: hidden !important;
-  font-family: RSU-Light !important;
+  /* font-family: rsulight, CustomHeading; */
+  /* font-family: rsu_font; */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  /* font-family: RSU-Light !important; */
   /* font-family: rsuregular !important; */
   /* overflow-y: hidden !important; */
   /* background-color: red; */
 }
-
+element.style {
+  font-family: cursive;
+}
+html .set_hidden {
+  overflow-y: hidden !important;
+}
 .card_rootcontent {
   padding: 20px;
 }

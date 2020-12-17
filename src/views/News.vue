@@ -24,86 +24,89 @@
                 <span class="">ข่าวสาร</span>
               </div>
             </div>
-            <div class="">
-              <v-row>
-                <v-col cols="6">
-                  <v-dialog v-model="dialog1" width="">
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn
-                        class="white--text  mx-2"
-                        small
-                        width="120px"
-                        height="30px"
-                        color="#AD8DBB"
-                        v-bind="attrs"
-                        v-on="on"
-                      >
-                        <span>+ เพิ่มข่าว</span>
-                      </v-btn>
-                    </template>
-                    <v-card>
-                      <v-card-title>
-                        <div class="head_of_dialog_p9">
-                          <div class="head_dialog_c1_p9">
-                            <div>
-                              <v-btn
-                                color="green darken-1"
-                                icon
-                                @click="dialog1 = false"
-                              >
-                                <img
-                                  height="30px"
-                                  class="filter-white"
-                                  src="../assets/icon/icon_prev.svg"
-                                  alt="prev"
-                                />
-                              </v-btn>
-                            </div>
-                            <div class="head_text_content">
-                              <span class="headline">เพิ่มข่าว</span>
-                            </div>
-                          </div>
-                          <div class="btn_head_p10">
-                            <v-btn
-                              class="white--text  mx-2"
-                              small
-                              width="120px"
-                              height="30px"
-                              color="#AD8DBB"
-                              @click="dialog1 = false"
-                            >
-                              <span> บันทึก</span>
-                            </v-btn>
-                          </div>
-                        </div>
-                      </v-card-title>
-                      <dialog_p9 />
-                    </v-card>
-                  </v-dialog>
-                </v-col>
-                <v-col cols="6">
-                  <v-text-field
-                    v-model="message"
-                    outlined
-                    clearable
-                    label="ค้นหา"
-                    type="text"
-                    height="40px"
-                    dense
-                  >
-                    <template v-slot:append>
-                      <button>
-                        <v-icon center>
-                          mdi-magnify
-                        </v-icon>
-                      </button>
-                    </template>
-                  </v-text-field>
-                </v-col>
-              </v-row>
-            </div>
           </div>
         </v-card-title>
+        <v-card-text>
+          <div class="">
+            <v-row>
+              <v-col cols="6">
+                <v-dialog v-model="dialog1" width="">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      class="white--text  mx-2"
+                      small
+                      width="120px"
+                      height="30px"
+                      color="#AD8DBB"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <span>+ เพิ่มข่าว</span>
+                    </v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title>
+                      <div class="head_of_dialog_p9">
+                        <div class="head_dialog_c1_p9">
+                          <div>
+                            <v-btn
+                              color="green darken-1"
+                              icon
+                              @click="dialog1 = false"
+                            >
+                              <img
+                                height="30px"
+                                class="filter-white"
+                                src="../assets/icon/icon_prev.svg"
+                                alt="prev"
+                              />
+                            </v-btn>
+                          </div>
+                          <div class="head_text_content">
+                            <span class="headline">เพิ่มข่าว</span>
+                          </div>
+                        </div>
+                        <div class="btn_head_p10">
+                          <v-btn
+                            class="white--text  mx-2"
+                            small
+                            width="120px"
+                            height="30px"
+                            color="#AD8DBB"
+                            @click="dialog1 = false"
+                          >
+                            <span> บันทึก</span>
+                          </v-btn>
+                        </div>
+                      </div>
+                    </v-card-title>
+                    <dialog_p9 />
+                  </v-card>
+                </v-dialog>
+              </v-col>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="message"
+                  outlined
+                  clearable
+                  label="ค้นหา"
+                  type="text"
+                  height="40px"
+                  dense
+                >
+                  <template v-slot:append>
+                    <button>
+                      <v-icon center>
+                        mdi-magnify
+                      </v-icon>
+                    </button>
+                  </template>
+                </v-text-field>
+              </v-col>
+            </v-row>
+          </div>
+          <!-- </div> -->
+        </v-card-text>
         <!-- <v-card-text>
           <div class="">
             <v-row>
@@ -492,6 +495,13 @@ export default {
 .headline {
   color: #8a4532;
 }
-.customers tr:nth-child(odd){background-color: #f2f2f2;}
-.none_color tr:nth-child(odd){background-color: white;}
+.customers tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.none_color tr:nth-child(odd) {
+  background-color: white;
+}
+.customers td {
+ border:none !important;
+}
 </style>

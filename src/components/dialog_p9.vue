@@ -32,7 +32,7 @@
               </v-row>
               <!-- card image add -->
               <div class="row_card">
-                <v-card class="mini_card1">
+                <v-card outlined elevation="0" class="mini_card1">
                   <v-action-card>
                     <div class="in_card1">
                       <!-- <v-file-input
@@ -55,7 +55,7 @@
                     </div>
                   </v-action-card>
                 </v-card>
-                <v-card class="mini_card1">
+                <v-card outlined elevation="0" class="mini_card1">
                   <v-action-card>
                     <div class="in_card1">
                       <v-btn class="center" icon small>
@@ -72,7 +72,7 @@
                     </div>
                   </v-action-card>
                 </v-card>
-                <v-card class="mini_card1">
+                <v-card outlined elevation="0" class="mini_card1">
                   <v-action-card>
                     <div class="in_card1">
                       <v-btn class="center" icon small>
@@ -164,7 +164,7 @@
                             placeholder="08:00"
                             prepend-inner-icon="mdi-clock-time-four-outline"
                             readonly
-                             dense
+                            dense
                             outlined
                             v-bind="attrs"
                             v-on="on"
@@ -253,6 +253,8 @@ export default {
   height: 130px;
   display: flex;
   justify-content: center;
+  border: 4px solid #935442;
+  border-style: dashed;
 }
 .in_card1 {
   width: 100%;

@@ -11,7 +11,7 @@
                   <div class="in_card1_left"></div>
                   <v-row>
                     <v-col cols="12" sm="3">
-                      <v-card class="mini_card1">
+                      <v-card outline elevation="0" class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
                             <v-btn class="center" icon small>
@@ -161,6 +161,8 @@ export default {
   align-content: center;
   justify-content: center;
   align-items: center;
+  border: 4px solid #935442;
+  border-style: dashed;
 }
 .in_card1 {
   width: 100%;

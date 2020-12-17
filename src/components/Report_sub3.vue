@@ -61,7 +61,7 @@
             </v-menu>
           </v-col>
           <div style="font-weight:bold; padding-top: 20px;">
-            <span>to</span>
+            <span>ถึง</span>
           </div>
           <v-col cols="6" sm="">
             <v-menu

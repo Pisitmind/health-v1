@@ -10,7 +10,7 @@
                   height="40px"
                   class="filter-white"
                   src="../assets/icon/icon_board.svg"
-                  alt="news"
+                  alt="boards"
                 />
               </v-btn>
             </div>

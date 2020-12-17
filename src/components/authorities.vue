@@ -169,6 +169,12 @@
         </div>
       </v-card-content>
       <div style="padding-bottom:40px;"></div>
+      <div class="a">
+        <v-card class="test" outlined width="400px" height="100px">
+          <span>test</span>
+        </v-card>
+      </div>
+      <div style="padding-bottom:40px;"></div>
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->
@@ -366,5 +372,10 @@ export default {
   object-position: top center;
   /* width: 300px; */
   /* height: 300px; */
+}
+
+.test {
+  border: 4px solid #935442;
+  border-style: dashed;
 }
 </style>
