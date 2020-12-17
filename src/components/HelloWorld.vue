@@ -10,8 +10,8 @@
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
-              <div class="head_name_tag">
-                <p><strong>สมาชิกผู้ใช้</strong></p>
+              <div class="head_name_tag pd_l25">
+                <p>สมาชิกผู้ใช้</p>
               </div>
               <div class="btn_day_tag">
                 <v-btn class="white--text" small color="#AD8DBB" width="80px"
@@ -85,7 +85,7 @@
 
             <v-card class="card_p1_c1 bdr_12_only" height="">
               <v-card-subtitle>
-                <span class="topic-name-card ">
+                <span class="f_color_purple ">
                   ตัวบ่งชี้
                 </span>
               </v-card-subtitle>
@@ -99,12 +99,10 @@
                       <v-icon :style="{ color: item.color }">{{
                         item.icon
                       }}</v-icon>
-                      <span class="black--text"
-                        ><strong>{{ item.gender }}</strong></span
-                      >
+                      <span class="black--text"> {{ item.gender }} </span>
                     </div>
                     <div class="black--text ">
-                      <strong>{{ item.data }}</strong>
+                      {{ item.data }}
                     </div>
                   </div>
                   <div class="bot-male-content">
@@ -121,7 +119,7 @@
             <div class="spac_content"></div>
             <v-card class="card1-subcard-3 bdr_12_only" width="" height="">
               <v-card-subtitle class="set_pdbot0">
-                <span class="topic-name-card pl-5">
+                <span class="f_color_purple pl-5">
                   อุปกรณ์
                 </span>
               </v-card-subtitle>
@@ -158,9 +156,9 @@
     </div>
     <div class="card_el">
       <v-card class="c2_set_resp rounded-card">
-        <div class="card2">
-          <div class="head-card2">
-            <p><strong>ช่วงอายุ</strong></p>
+        <div class="card_content">
+          <div class="head_name_tag pd_l25">
+            <p>ช่วงอายุ</p>
           </div>
           <div class="card2-content">
             <div class="card_left_c2_p1">
@@ -174,11 +172,11 @@
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>ชาย</strong></span>
+                          <span class="black--text"> ชาย </span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"><strong>หญิง</strong></span>
+                          <span class="black--text"> หญิง </span>
                         </div>
                       </div>
                     </td>
@@ -194,7 +192,7 @@
                 height="300px"
               >
                 <v-card-subtitle>
-                  <span class="topic-name-card pl-5">
+                  <span class="f_color_purple pl-5">
                     ตัวบ่งชี้
                   </span>
                 </v-card-subtitle>
@@ -238,7 +236,7 @@
           <v-card class="card3_l1 bdr_12" height="350">
             <div class="card3_l1_root c_l">
               <div class="card3_headNsub">
-                <div class="head_card3_l">
+                <div class="head_card_l">
                   <div class="title-card3">
                     <div class="pd_icon" style="padding-right:10px;">
                       <img
@@ -253,7 +251,7 @@
                       style=" display: flex; flex-wrap: wrap; align-content: center; 
                       text-align: center; align-item:center;"
                     >
-                      <span><strong>การก้าว</strong></span>
+                      <span> การก้าว </span>
                       <!-- <span class="icon-icon_women"></span> -->
                       <!-- <span class="icon-icon_men"></span> -->
                     </div>
@@ -300,7 +298,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card3_line2 grey--text">
+                <div class="sub_card_text grey--text">
                   <span
                     >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                   >
@@ -320,15 +318,11 @@
                           <div class="label_text_card3">
                             <div>
                               <v-icon small color="blue"> mdi-circle</v-icon>
-                              <span class="black--text"
-                                ><strong>ชาย</strong></span
-                              >
+                              <span class="black--text"> ชาย </span>
                             </div>
                             <div class="pd_10">
                               <v-icon small color="pink"> mdi-circle</v-icon>
-                              <span class="black--text"
-                                ><strong>หญิง</strong></span
-                              >
+                              <span class="black--text"> หญิง </span>
                             </div>
                           </div>
                         </td>
@@ -345,7 +339,7 @@
           <v-card class="card_r_root bdr_12" height="350">
             <div class="card3_cardr c_r">
               <div class="card3_headNsub">
-                <div class="head_card3_r">
+                <div class="head_card_r">
                   <div class="title-card3">
                     <div style="padding-right:10px;">
                       <img
@@ -359,7 +353,7 @@
                       class="card3-bot-text "
                       style="display: flex; flex-wrap: wrap; align-content: center;"
                     >
-                      <span><strong>การเผาผลาญ</strong></span>
+                      <span> การเผาผลาญ </span>
                     </div>
                   </div>
                   <div class="sex-age-title-card3">
@@ -396,12 +390,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="card3_line2 grey--text">
+                <div class="sub_card_text grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุคน</span>
                 </div>
               </div>
-              <div class="card1-content_3">
-                <div style="padding:20px;">
+              <div class="card_content">
+                <div class="card2-graph">
                   <canvas id="graph1" width="450px" height="220px"></canvas>
                 </div>
                 <!-- <p>content</p> -->
@@ -414,7 +408,7 @@
     <!-- สัดส่วน นน card -->
     <div class="card_el">
       <v-card class="bdr_12">
-        <div class="card5">
+        <div class="card_content">
           <div>
             <div class="head_card4">
               <div class="title_card4">
@@ -428,7 +422,7 @@
                     />
                   </div>
                   <div class="card3-bot-text set_weight">
-                    <span><strong>สัดส่วนน้ำหนัก</strong></span>
+                    <span> สัดส่วนน้ำหนัก </span>
                   </div>
                 </div>
                 <div class="card4_head_btn">
@@ -468,7 +462,7 @@
                 </div>
               </div>
             </div>
-            <div class="card5_line2 grey--text">
+            <div class="sub_card_text_sp grey--text">
               <span
                 >สัดส่วนน้ำหนักร่างกายของแต่ละบุคคล สามารถบ่งบอกถึงสุขภาพได้
                 ตามการเปลี่ยนแปลงของน้ำหนักตัว</span
@@ -644,9 +638,7 @@
                         class="filter-white"
                         :src="require('../assets/icon/' + item.icons)"
                       />
-                      <span class="black--text"
-                        ><strong>{{ item.gender }}</strong></span
-                      >
+                      <span class="black--text"> {{ item.gender }} </span>
                     </th>
                     <td
                       v-for="n in 5"
@@ -677,7 +669,7 @@ export default {
     const labels = ["male", "female"];
     const images = [
       require("../assets/icon/icon_men_sm.svg"),
-      require("../assets/icon/icon_women_sm.svg")
+      require("../assets/icon/icon_women_sm.svg"),
     ];
     const values = [3628, 4874];
     const material_font = new FontFace(
@@ -693,15 +685,15 @@ export default {
         datasets: [
           {
             data: [1471, 1329],
-            backgroundColor: ["#9ACDE9", "#F8C5C5"]
-          }
+            backgroundColor: ["#9ACDE9", "#F8C5C5"],
+          },
         ],
-        labels: ["ชาย", "หญิง"]
+        labels: ["ชาย", "หญิง"],
       },
       options: {
         responsive: true,
         legend: {
-          display: false
+          display: false,
         },
         elements: {
           center: {
@@ -1045,9 +1037,7 @@ export default {
   display: flex;
   flex-direction: column;
 } */
-.hid {
-  display: none;
-}
+
 .bdr_12 {
   border-radius: 12px !important;
   box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
@@ -1064,10 +1054,7 @@ export default {
   font-size: 22px;
   font-weight: bold;
 }
-.head_name_tag {
-  font-size: 20px;
-  padding-top: 10px;
-}
+
 .calen_tag {
   padding-top: 5px;
 }
@@ -1105,9 +1092,7 @@ th {
     text-align: left;
   }
 }
-.topic-name-card {
-  color: #ad8dbb;
-}
+
 .two-data-card2 {
   padding: 2px 0px;
 }
@@ -1126,7 +1111,7 @@ th {
 .card1-left {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   justify-items: space-around;
   // background-color:rgba(0,0,50,0.2);
   // align-content: center;
@@ -1142,9 +1127,9 @@ th {
 }
 .card1-content {
   display: flex;
-  justify-content: space-around;
-  // padding-top: 20px;
-  // height:"100%";
+  justify-content: space-between;
+  padding: 0 20px;
+  // height:"100%";//
 }
 .card-info-right {
   font-size: 12px;
@@ -1165,15 +1150,11 @@ th {
 .head-card2 {
   display: flex;
   justify-content: start;
-  padding-left: 10px;
-  font-size: 20px;
+  // padding-left: 10px;
+  font-size: 25px;
 }
 .card2 {
   padding: 20px;
-}
-.card2-graph {
-  width: 100%;
-  padding-right: 10px;
 }
 .card2-subcard-3 {
   padding-left: 10px;
@@ -1181,22 +1162,13 @@ th {
 .card2-content {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  padding: 20px 0;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 .text-ageRange {
   padding-left: 15px;
 }
-.head_card3_l {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 20px 0px 20px;
-}
-.head_card3_r {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 20px 0px 20px;
-}
+
 .subtext-card3 {
   display: flex;
   justify-content: start;
@@ -1205,6 +1177,7 @@ th {
 .card3-content {
   display: flex;
   justify-content: space-around;
+  padding: 20px;
 }
 
 .card3-bot-text {
@@ -1212,11 +1185,7 @@ th {
   justify-content: center;
   font-size: 20px;
 }
-.card3_line2 {
-  padding-left: 30px;
-  font-size: 11px;
-  // padding-top: 5px;
-}
+
 .card5_line2 {
   font-size: 11px;
   padding-top: -5px;
@@ -1305,28 +1274,6 @@ th {
 }
 .set_pdbot0 {
   padding: 16px 16px 0 16px;
-}
-.pd-10 {
-  padding: 10px;
-}
-
-.card_el {
-  padding: 10px 10px;
-  margin-bottom: 5px;
-}
-.card-split {
-  display: flex;
-  flex-direction: row;
-}
-.card_l {
-  width: 50%;
-  /* margin-right:10px; */
-  padding-right: 10px;
-}
-.card_r {
-  width: 50%;
-  /* margin-left:10px; */
-  padding-left: 10px;
 }
 .card3_headNsub {
   display: flex;
@@ -1417,15 +1364,10 @@ th {
   display: flex;
   justify-content: start;
   padding-left: 70px;
-  font-size: 14px;
+  font-size: 15px;
   // background-color: #ad8dbb;
 }
-.label_text_card3 {
-  display: flex;
-  justify-content: start;
-  padding-left: 70px;
-  font-size: 14px;
-}
+
 .fix_center {
   display: flex;
   justify-content: center;
@@ -1454,6 +1396,9 @@ th {
 .icon-icon_women:before {
   content: "\e901";
   color: #f28c8c;
+}
+.content_a {
+  padding: 0 20px;
 }
 
 // ------ after resize web page -----------//

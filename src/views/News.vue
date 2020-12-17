@@ -502,6 +502,6 @@ export default {
   background-color: white;
 }
 .customers td {
- border:none !important;
+  border: none !important;
 }
 </style>

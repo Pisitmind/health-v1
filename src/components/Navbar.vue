@@ -67,7 +67,7 @@
             active-class="white_new white--text purple rounded-l-lg"
             class="fz_14"
           >
-            <v-list-item-icon>
+            <v-list-item-icon class="pd_up">
               <img
                 v-if="(active = true)"
                 height="30px"
@@ -90,7 +90,7 @@
           <v-list-group v-else :key="item.title" pl-2 >
             <template v-slot:activator>
               <!-- <v-list-tile class="" > -->
-                <v-list-item-icon class="set_icon_left">
+                <v-list-item-icon class="set_icon_left pd_up"> 
                   <img
                     height="30px"
                     class="filter-white grey_new mb-1"
@@ -135,7 +135,7 @@
             :to="item2.route"
             active-class="white_new white--text purple rounded-l-lg "
           >
-            <v-list-item-icon>
+            <v-list-item-icon class="pd_up">
               <img
                 height="30px"
                 class="filter-white grey--text grey_new mb-1"
@@ -153,7 +153,7 @@
           <v-list-group v-else :key="item2.title">
             <template v-slot:activator>
               <!-- <v-list-tile> -->
-                <v-list-item-icon>
+                <v-list-item-icon class="pd_up">
                   <img
                     v-if="(active = true)"
                     height="30px"
@@ -349,6 +349,7 @@ export default {
 }
 .set_icon_left {
   padding-left: 0px;
+  text-align: center;
 }
 .set_font_small {
   font-size: 12px;
@@ -394,6 +395,11 @@ a:visited {
 .v-list-group__header__append-icon{
   position: absolute;
   right: 10px;
+}
+.pd_up{
+  /* background-color:rgba(0,200,50,0.4); */
+  text-align: center;
+  align-items: center;
 }
 
 </style>

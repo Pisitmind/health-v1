@@ -387,6 +387,9 @@ tbody[data-v-f1e5daf2] {
   /* border-bottom: 0 solid #999999; */
   border-bottom: none;
 }
+.customers td {
+  border: none !important;
+}
 /* table {
   border-collapse: collapse !important;
 }

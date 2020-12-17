@@ -2,7 +2,7 @@
   <div class="noti">
     <div class="card_el">
       <v-card class="bdr_12">
-        <div class="card1-root">
+        <div class="card_content">
           <div class="head-card1">
             <div class="card1-left">
               <div class="head_name_tag">
@@ -291,7 +291,7 @@
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="bdr_12">
-        <div class="card2_root">
+        <div class="card_rootcontent">
           <!-- card2 header -->
           <div class="head-card2">
             <div class="">
@@ -530,7 +530,7 @@
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="bdr_12">
-        <div class="card2_root">
+        <div class="card_rootcontent">
           <!-- card2 header -->
           <div class="head-card2">
             <div class="">
@@ -733,7 +733,7 @@
     </div>
     <div class="card_el_card2">
       <v-card class="bdr_12" style="padding-bottom:30px;">
-        <div class="card3_root">
+        <div class="card_rootcontent">
           <div class="head-card2">
             <div class="">
               <div class="header_card2">
@@ -1215,9 +1215,6 @@ export default {
 </script>
 
 <style scoped>
-.card1-root{
-  padding:20px;
-}
 .v-dialog {
   position: absolute;
   bottom: 0;
@@ -1413,9 +1410,7 @@ export default {
 .head_card2_btn {
   align-content: center;
 }
-.card2_root {
-  padding: 10px;
-}
+
 /* .card2_size{
   background-color:rgba(0,0,0,0.1);
 } */
@@ -1469,9 +1464,6 @@ export default {
 .data_table_card2_1 {
   width: 70%;
   padding: 30px 0 0 0;
-}
-.card3_root {
-  padding: 10px;
 }
 .data_table_card3 {
   padding: 0 40px;
