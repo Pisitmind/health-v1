@@ -1,0 +1,77 @@
+html .set_hidden {
+  overflow-y: hidden !important;
+}
+
+.fz_14 {
+  font-size: 13px !important;
+}
+
+html {
+  overflow-x: hidden !important;
+  font-family: RSU-Light !important;
+  /* font-family: rsuregular !important; */
+  /* overflow-y: hidden !important; */
+  /* background-color: red; */
+}
+
+.card_rootcontent {
+  padding: 20px;
+}
+
+.container {
+  background-color: #f6f6f6;
+}
+
+.bdr_12 {
+  border-radius: 12px !important;
+  box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bdr_12_only {
+  border-radius: 12px !important;
+}
+
+.set_center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bdr_0 {
+  border-radius: 0 !important;
+}
+
+.set_h30 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  height: 30px;
+  /* background-color: green; */
+}
+
+.bg_blue {
+  background-color: rgba(0, 0, 250, 0.2);
+}
+
+.sub_card_dia_mini {
+  padding: 15px;
+  width: 300px;
+}
+
+.text_table_font_stle {
+  font-size: 24px;
+  font-weight: bold;
+  border: 1.5px solid #757575;
+}
+
+.spac_content {
+  padding-bottom: 10px;
+  /* display:none; */
+}
+
+/*
+html::-webkit-scrollbar { 
+    display: none; 
+    
+} */

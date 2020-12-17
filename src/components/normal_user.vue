@@ -64,44 +64,45 @@
               cols="12"
               sm="2"
             >
-             <v-dialog v-model="dialog_au2" width="85%" scrollable="false">
+              <v-dialog v-model="dialog_au2" width="85%" scrollable="false">
                 <template v-slot:activator="{ on, attrs30 }">
-                <v-card class="au_card bdr_12" v-bind="attrs30" v-on="on">
-                <div class="img_n_name">
-                  <div class="img_avatar">
-                    <v-avatar size="84" aspect-ratio="1">
-                      <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
-                      <img
-                        :src="require('../assets/user_pic/' + idx.picname)"
-                      />
-                    </v-avatar>
-                  </div>
-                  <div class="n_card">
-                    <span style="color:#88432F;">{{ idx.name }}</span>
-                  </div>
-                </div>
-              </v-card>
+                  <v-card class="au_card bdr_12" v-bind="attrs30" v-on="on">
+                    <div class="img_n_name">
+                      <div class="img_avatar">
+                        <v-avatar size="84" aspect-ratio="1">
+                          <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
+                          <img
+                            class="set_size"
+                            :src="require('../assets/user_pic/' + idx.picname)"
+                          />
+                        </v-avatar>
+                      </div>
+                      <div class="n_card">
+                        <span style="color:#88432F;">{{ idx.name }}</span>
+                      </div>
+                    </div>
+                  </v-card>
                 </template>
                 <v-card>
                   <v-card-text>
-                  <v-card-content>
+                    <v-card-content>
                       <dia2 />
-                  </v-card-content>
+                    </v-card-content>
                   </v-card-text>
                 </v-card>
-             </v-dialog>
+              </v-dialog>
             </v-col>
           </v-row>
         </div>
       </v-card-content>
-      
-     <div style="padding-bottom:40px;"></div>
+
+      <div style="padding-bottom:40px;"></div>
     </v-card>
   </div>
   <!-- v-for="idx in data_au" :key="idx.id"  -->
 </template>
 <script>
-import dia2 from '@/components/dia_user_data_normal.vue';
+import dia2 from "@/components/dia_user_data_normal.vue";
 export default {
   components: {
     dia2,
@@ -166,13 +167,13 @@ export default {
           picname: "user10.jpg",
           color: "#B498C0",
           back_col: "#E5E5E5",
-        }, 
+        },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          picname: "user11.jpg",
+          picname: "user9.jpg",
           color: "#B498C0",
           back_col: "#E5E5E5",
-        }, 
+        },
         {
           name: "ปัญสิกรณ์ ติยะกร",
           picname: "user12.jpg",
@@ -233,13 +234,13 @@ export default {
           picname: "user10.jpg",
           color: "#B498C0",
           back_col: "#E5E5E5",
-        }, 
+        },
         {
           name: "ปัญสิกรณ์ ติยะกร",
-          picname: "user11.jpg",
+          picname: "user6.jpg",
           color: "#B498C0",
           back_col: "#E5E5E5",
-        }, 
+        },
         {
           name: "ปัญสิกรณ์ ติยะกร",
           picname: "user12.jpg",
@@ -309,7 +310,7 @@ export default {
 .img_n_name {
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   height: 100%;
 }
 .au_card {
@@ -322,5 +323,9 @@ export default {
 .img_avatar {
   display: flex;
   justify-content: center;
+}
+.set_size {
+  object-fit: cover;
+  object-position: top center;
 }
 </style>

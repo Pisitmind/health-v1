@@ -134,7 +134,7 @@
                   </thead>
                   <tbody>
                     <tr
-                      class="text-left"
+                      class="text-left set_border_none"
                       v-for="item in data_p10"
                       :key="item.id"
                     >
@@ -171,8 +171,8 @@
           <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
         </v-card-content>
       </v-card>
-      <!-- <div class="hid"> -->
-      <div class="show">
+      <div class="hid">
+        <!-- <div class="show"> -->
         <canvas id="myChart111" width="" height="90px"></canvas>
       </div>
     </div>
@@ -355,6 +355,20 @@ export default {
 .table_news_p10 {
   padding: 16px;
 }
+.tbody tr:not(:last-child) {
+  border-bottom: none;
+}
+tbody[data-v-f1e5daf2] {
+  border-collapse: collapse !important;
+  animation: none;
+  border: none;
+}
+.customers .v-table tbody tr:not(:last-child) {
+  border-bottom: none;
+}
+/* .theme--light.v-table tbody tr:not(:last-child) {
+  border-bottom: none;
+} */
 .v-text-field .v-input__control .v-input__slot {
   min-height: auto !important;
   display: flex !important;
@@ -365,18 +379,27 @@ export default {
 }
 .customers tr:nth-child(odd) {
   background-color: #f2f2f2;
+  /* border-bottom: 0 solid #999999; */
+  border-bottom: none;
 }
 .none_color tr:nth-child(odd) {
   background-color: white;
+  /* border-bottom: 0 solid #999999; */
+  border-bottom: none;
 }
-
-td,
-th {
-  border: none;
+/* table {
+  border-collapse: collapse !important;
 }
-table {
-  border: 1px solid #ccc;
+tbody {
+  border-collapse: collapse !important;
+} */
+/* v-simple-table {
+  border: hidden !important;
+  border: 0px solid #ccc;
   border-collapse: collapse;
 }
-
+.table.v-table.tbody.td,
+table.v-table.tbody.th {
+  border: hidden !important;
+} */
 </style>

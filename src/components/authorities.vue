@@ -21,10 +21,7 @@
           <div class="">
             <v-row>
               <v-col cols="6">
-                <v-dialog
-                  v-model="dialog1"
-                  width="80%"
-                >
+                <v-dialog v-model="dialog1" width="80%">
                   <template v-slot:activator="{ on, attrs_au }">
                     <v-btn
                       class="white--text  mx-2"
@@ -121,14 +118,21 @@
                 <template v-slot:activator="{ on, attrs29 }">
                   <v-card class="au_card bdr_12" v-bind="attrs29" v-on="on">
                     <div class="img_n_name">
+                      <!-- <v-responsive :aspect-ratio="16 / 9"> -->
                       <div class="img_avatar">
-                        <v-avatar size="84" aspect-ratio="1">
+                        <v-avatar
+                          size="84"
+                          class="img_set_ratio"
+                          style="text-align:center;"
+                        >
                           <!-- <img src="../assets/user_pic/user7.jpg" alt /> -->
                           <img
+                            class="set_size"
                             :src="require('../assets/user_pic/' + idx.picname)"
                           />
                         </v-avatar>
                       </div>
+                      <!-- </v-responsive> -->
                       <div class="n_card">
                         <span style="color:#88432F;">{{ idx.name }}</span>
                       </div>
@@ -149,6 +153,19 @@
               </v-dialog>
             </v-col>
           </v-row>
+          <v-card>
+            <div class="set_size hid">
+              <img
+                aspect-ratio="1.5"
+                position="absolute"
+                width="80px"
+                height="80px"
+                sizes="85"
+                class="rounded-circle set_size"
+                :src="require('../assets/user_pic/user2.jpg')"
+              />
+            </div>
+          </v-card>
         </div>
       </v-card-content>
       <div style="padding-bottom:40px;"></div>
@@ -258,7 +275,7 @@ export default {
 
 <style scoped>
 .y-scroll-disabled {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
 .authorities {
   padding: 20px;
@@ -273,6 +290,7 @@ export default {
   padding: 0 15px;
 }
 .n_card {
+  padding-top: 10px;
   text-align: center;
 }
 .rol_card {
@@ -330,5 +348,23 @@ export default {
 .img_avatar {
   display: flex;
   justify-content: center;
+}
+.set_img {
+  display: block;
+  margin: 0 auto;
+}
+/* .img_set_ratio {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+} */
+.set_pdleft_0 {
+  padding-left: 0;
+}
+.set_size {
+  object-fit: cover;
+  object-position: top center;
+  /* width: 300px; */
+  /* height: 300px; */
 }
 </style>

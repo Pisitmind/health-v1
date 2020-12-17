@@ -94,13 +94,9 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
-                  <v-col cols="6" sm="6">
-                    <v-select
-                      :items="items"
-                      label="กลุ่มเจ้าหน้าที่"
-                      dense
-                      outlined
-                    ></v-select>
+                  <v-col cols="6" sm="6" class="set_pdleft_0">
+                    <label for="lname">กลุ่มเจ้าหน้าที่</label><br />
+                    <v-select :items="items" dense outlined></v-select>
                   </v-col>
                   <v-spacer></v-spacer>
                 </div>
@@ -133,7 +129,7 @@ export default {
 </script>
 
 <style scoped>
-.dia_user{
+.dia_user {
   overflow-y: hidden;
 }
 .content_dialog_user {
