@@ -233,7 +233,7 @@
     <div class="c3_card_root card_el">
       <div class="card-split">
         <div class="card_l">
-          <v-card class="card3_l1_root bdr_12" height="380">
+          <v-card class="card3_l1_root bdr_12" height="350">
             <div class="card3_l1 c_l">
               <div class="card3_headNsub">
                 <div class="head_card_l">
@@ -247,7 +247,7 @@
                       />
                     </div>
                     <div
-                      class="card-bot-text"
+                      class="card3-bot-text"
                       style=" display: flex; flex-wrap: wrap; align-content: center; 
                       text-align: center; align-item:center;"
                     >
@@ -305,38 +305,38 @@
                 </div>
               </div>
 
-              <div class="card_content">
-                <!-- <div> -->
-                <!-- กราฟ horizontal problems  graph3-1 -->
-                <div class="card2-graph">
-                  <canvas id="graph3-1" class="set_size_chart"></canvas>
-                </div>
-                <div class="label_graph">
-                  <table width="100%">
-                    <tr>
-                      <td style="text-align:center;">
-                        <div class="label_text_card3">
-                          <div>
-                            <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text"> ชาย </span>
+              <div class="card3-content">
+                <div>
+                  <!-- กราฟ horizontal problems  graph3-1 -->
+                  <div class="card2-graph">
+                    <canvas id="graph3-1" width="450px" height="200px"></canvas>
+                  </div>
+                  <div class="label_graph">
+                    <table width="100%">
+                      <tr>
+                        <td style="text-align:center;">
+                          <div class="label_text_card3">
+                            <div>
+                              <v-icon small color="blue"> mdi-circle</v-icon>
+                              <span class="black--text"> ชาย </span>
+                            </div>
+                            <div class="pd_10">
+                              <v-icon small color="pink"> mdi-circle</v-icon>
+                              <span class="black--text"> หญิง </span>
+                            </div>
                           </div>
-                          <div class="pd_10">
-                            <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text"> หญิง </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td width="25%"></td>
-                    </tr>
-                  </table>
+                        </td>
+                        <td width="25%"></td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
-                <!-- </div> -->
               </div>
             </div>
           </v-card>
         </div>
         <div class="card_r">
-          <v-card class="card_r_root bdr_12" height="380">
+          <v-card class="card_r_root bdr_12" height="350">
             <div class="card3_cardr c_r">
               <div class="card3_headNsub">
                 <div class="head_card_r">
@@ -350,7 +350,7 @@
                       />
                     </div>
                     <div
-                      class="card-bot-text "
+                      class="card3-bot-text "
                       style="display: flex; flex-wrap: wrap; align-content: center;"
                     >
                       <span> การเผาผลาญ </span>
@@ -394,7 +394,6 @@
                   <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุคน</span>
                 </div>
               </div>
-
               <div class="card_content">
                 <div class="card2-graph">
                   <canvas id="graph1" width="450px" height="220px"></canvas>
@@ -422,7 +421,7 @@
                       alt="weight"
                     />
                   </div>
-                  <div class="card-bot-text set_weight">
+                  <div class="card3-bot-text set_weight">
                     <span> สัดส่วนน้ำหนัก </span>
                   </div>
                 </div>
@@ -615,7 +614,7 @@
                             alt="human"
                           />
                         </div>
-                        <div class="t-icon"><p>อ้วน ระยะที่ 1</p></div>
+                        <div class="t-icon"><p>อ้วน ระยะที่1</p></div>
                       </div>
                     </th>
                     <th>
@@ -628,7 +627,7 @@
                             alt="human"
                           />
                         </div>
-                        <div class="t-icon"><p>อ้วน ระยะที่ 2</p></div>
+                        <div class="t-icon"><p>อ้วน ระยะที่2</p></div>
                       </div>
                     </th>
                   </tr>
@@ -639,9 +638,7 @@
                         class="filter-white"
                         :src="require('../assets/icon/' + item.icons)"
                       />
-                      <span class="black--text" style="padding-left:10px;">
-                        {{ item.gender }}
-                      </span>
+                      <span class="black--text"> {{ item.gender }} </span>
                     </th>
                     <td
                       v-for="n in 5"
@@ -666,6 +663,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 <script>
 import Chart from "chart.js";
+
 export default {
   mounted: function() {
     const labels = ["male", "female"];
@@ -819,21 +817,21 @@ export default {
     };
     var config3 = {
       type: "horizontalBar",
-      // plugins: [
-      //   {
-      //     afterDraw: (bar3) => {
-      //       var ctx_3 = bar3.getContextchart.ctx_3;
-      //       var yAxis_3 = bar3.scales["y-axis-0"];
-      //       var xAxis_3 = bar3.scales["x-axis-0"];
-      //       yAxis_3.ticks.forEach((value, index) => {
-      //         var y = yAxis_3.getPixelForTick(index);
-      //         var image_3 = new Image();
-      //         (image_3.src = images[index]),
-      //           ctx_3.drawImage(image_3, xAxis_3.bottom - 270, y - 10);
-      //       });
-      //     },
-      //   },
-      // ],
+      plugins: [
+        // {
+        //   afterDraw: (bar3) => {
+        //     var ctx_3 = bar3.getContextchart.ctx_3;
+        //     var yAxis_3 = bar3.scales["y-axis-0"];
+        //     var xAxis_3 = bar3.scales["x-axis-0"];
+        //     yAxis_3.ticks.forEach((value, index) => {
+        //       var y = yAxis_3.getPixelForTick(index);
+        //       var image_3 = new Image();
+        //       (image_3.src = images[index]),
+        //         ctx_3.drawImage(image_3, xAxis_3.bottom - 270, y - 10);
+        //     });
+        //   },
+        // },
+      ],
       options: {
         responsive: true,
         legend: {
@@ -1060,7 +1058,9 @@ export default {
 .calen_tag {
   padding-top: 5px;
 }
-
+.btn_day_tag {
+  padding-top: 10px;
+}
 .v-text-field {
   padding-top: 0px;
   margin-top: 0px;
@@ -1174,17 +1174,43 @@ th {
   justify-content: start;
   padding: 0px 10px;
 }
-// .card3-content {
-//   display: flex;
-//   position: relative;
-//   padding: 20px;
-// }
+.card3-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card3-bot-text {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
 
 .card5_line2 {
   font-size: 11px;
   padding-top: -5px;
 }
-
+.sex-age-title-card3 {
+  display: flex;
+  left: 0;
+  /* width: 50%; */
+  /* background-color:violet; */
+}
+.sex-title {
+  padding: 0 10px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.age-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
 .icon-card {
   padding: 0 0 0 50px;
 
@@ -1252,7 +1278,6 @@ th {
 .card3_headNsub {
   display: flex;
   flex-direction: column;
-
   // background-color:gray;
 }
 .head_card4 {
@@ -1273,12 +1298,15 @@ th {
 .age_card4 {
   padding: 0 10px;
 }
-
+.sexnage_card4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
+}
 .card4-content {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  padding-bottom: 20px;
 }
 .card4_nameNicon {
   display: flex;
@@ -1314,6 +1342,12 @@ th {
   justify-content: space-around;
 }
 
+.graph6-details {
+  padding-top: 20px;
+}
+.text-top {
+  font-size: 12px;
+}
 .card5 {
   padding: 20px;
 }
@@ -1334,6 +1368,12 @@ th {
   // background-color: #ad8dbb;
 }
 
+.fix_center {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
 .label_graph {
   padding-bottom: 20px;
 }
@@ -1362,7 +1402,7 @@ th {
 }
 
 // ------ after resize web page -----------//
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   /* For tablets: */
   .head-card1 {
     display: flex;
@@ -1371,8 +1411,8 @@ th {
   }
   .card_r_root,
   .card3_l1_root {
-    // height: 100%;
-    padding-bottom: 30px !important;
+    height: 100%;
+    padding-bottom: 30px;
   }
   .card1-content {
     display: flex;
@@ -1416,7 +1456,6 @@ th {
   }
   .card_l {
     width: 100%;
-    height: 100%;
     padding: 0;
     padding-bottom: 10px;
     margin-bottom: 5px;
@@ -1429,12 +1468,20 @@ th {
     padding-top: 10px;
   }
   .card_r_root {
-    padding: 20px;
     height: 450px !important;
+    padding: 20px;
   }
   .card3 {
     width: 100%;
     height: 100%;
+  }
+  .card1-content {
+    height: 100%;
+  }
+  .card3_l1_root {
+    padding: 20px;
+    height: 380px !important;
+    position: relative;
   }
   .card3_l1 {
     position: relative;
@@ -1463,7 +1510,7 @@ th {
     // flex-direction: column;
     // background-color:#ad8dbb;
   }
-  .card-bot-text {
+  .card3-bot-text {
     justify-content: start;
   }
   .card4_head_btn {
@@ -1474,9 +1521,6 @@ th {
   }
   .card5_line2 {
     padding-top: 10px;
-  }
-  .set_size_chart {
-    height: 200px !important;
   }
 }
 </style>

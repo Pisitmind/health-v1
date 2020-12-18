@@ -6,7 +6,7 @@
           <div class="head-card1">
             <div class="card1-left">
               <div class="head_name_tag">
-                <p><strong>Hearth rate</strong></p>
+                <p>Hearth rate</p>
               </div>
             </div>
             <div class="card1-right">
@@ -57,25 +57,27 @@
             <div class="cont1-card1 c_size c1">
               <div class="head_ct1_c1">
                 <span style="text-align: center;" class="center"
-                  ><strong>Resting state</strong></span
+                  >Resting state</span
                 >
                 <p
                   class="grey--text "
-                  style="text-align: center; font-size:14px;"
+                  style="text-align: center; font-size:16px; line-height: 1.2;"
                 >
-                  Heart rate is resting state usually varies between 60 and 100
-                  BPM.
+                  Heart rate is resting state usually <br />
+                  varies between 60 and 100 BPM.
                 </p>
               </div>
               <div style="float: left; position: relative;">
                 <div
-                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -20px; 
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -10px; 
                 line-height:19px; text-align: center; z-index: 2"
                 >
                   <span class="text_inside1">72</span><br />
                   <span class="text_inside">avg. ฺBPM</span>
                 </div>
-                <canvas id="graph0" width="" height="200px"></canvas>
+                <div style="padding-top:20px;">
+                  <canvas id="graph0" width="" height="200px"></canvas>
+                </div>
               </div>
 
               <div class="table_ct1_c1 pd_y_data ">
@@ -121,9 +123,9 @@
             <div class="cont2-card1 c_size c2">
               <div class="head_ct1_c1">
                 <span style="text-align: center;" class="center"
-                  ><strong>Active state</strong></span
+                  >Active state</span
                 >
-                <p class="grey--text " style="font-size:14px;">
+                <p class="grey--text" style="font-size:16px; line-height: 1.2;">
                   Your exercise heart rate zone is calculated as below. Select
                   the appropriate heart rate zone to get the most out of your
                   exercise.
@@ -131,12 +133,14 @@
               </div>
               <div style="float: left; position: relative;">
                 <div
-                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -5px; line-height:19px; text-align: center; z-index: 2"
                 >
                   <span class="text_inside1">116</span><br />
                   <span class="text_inside">avg. ฺBPM</span>
                 </div>
-                <canvas id="graph1" width="" height="200px"></canvas>
+                <div style="padding-top:20px;">
+                  <canvas id="graph1" width="" height="200px"></canvas>
+                </div>
               </div>
 
               <div class="table_ct2_c1 pd_y_data ">
@@ -329,13 +333,13 @@
             <!-- card l -->
             <div class="chart1_card2" style="float: left; position: relative;">
               <div
-                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -25px; line-height:19px; text-align: center; z-index: 2"
+                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -35px; line-height:19px; text-align: center; z-index: 2"
               >
                 <span class="text_inside1">76</span><br />
                 <span class="text_inside">avg. kg.</span>
               </div>
-              <div>
-                <canvas id="graph1_c2" width="200px" height="240"></canvas>
+              <div style="display:flex;justify-content:center;">
+                <canvas id="graph1_c2" width="240px" height="240"></canvas>
               </div>
             </div>
             <!-- card r  -->
@@ -1244,16 +1248,14 @@ export default {
 .mini_fz {
   font-size: 12px;
 }
-.head_name_tag {
+/* .head_name_tag {
   font-size: 20px;
-}
+} */
 .c_size {
   height: auto;
   width: 300px;
 }
-.head_ct1_c1 {
-  height: 84px;
-}
+
 /* .c1 {
   background-color: greenyellow;
 }
@@ -1267,7 +1269,7 @@ export default {
 .head-card1 {
   display: flex;
   justify-content: space-between;
-  padding: 30px 30px 10px 30px;
+  padding: 0px 20px 0px 20px;
   margin: auto;
 }
 .content1-card1 {
@@ -1282,7 +1284,8 @@ export default {
   font-size: 14px;
 }
 .font_omg {
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: bold;
 }
 .cont1-card1 {
   display: flex;
@@ -1305,7 +1308,7 @@ export default {
   color: #ad8dbb;
 }
 .title_table_c1 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 .t_name_ct3c1 {
@@ -1400,6 +1403,7 @@ export default {
 .header_card2 {
   display: flex;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 .card_el {
   padding: 10px;
@@ -1416,6 +1420,8 @@ export default {
 } */
 .card2_nameNicon {
   display: flex;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   justify-items: center;
   /* padding:20px; */
@@ -1426,7 +1432,9 @@ export default {
   justify-content: center;
 }
 .chart1_card2 {
-  padding: 25px 0;
+  padding: 70px 0;
+  /* display: flex; */
+  /* background-color:rgba(0,100,20,0.5); */
 }
 .chart1_card2_2 {
   padding: 0px;
@@ -1437,24 +1445,28 @@ export default {
   /* align-content: center; */
   /* align-items: center; */
   justify-content: center;
+  padding: 0 20px;
 }
 .content1_card2 {
   display: flex;
   justify-content: space-around;
+  padding: 0 20px;
 }
 .content1_card3 {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  padding: 0 20px;
 }
 .title_card2 {
   justify-content: center;
   align-items: center;
   text-align: bottom;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 .card2_line2 {
   font-size: 12px;
+  padding-left: 30px;
 }
 .data_table_card2 {
   width: 70%;
@@ -1466,7 +1478,7 @@ export default {
   padding: 30px 0 0 0;
 }
 .data_table_card3 {
-  padding: 0 40px;
+  padding: 0 20px;
 }
 .size_chart3 {
   width: 80%;
