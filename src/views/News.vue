@@ -1,5 +1,6 @@
 <template>
-  <div class="news">
+  <v-container grid-list-lg-xl class="news">
+    <!-- <div class="news"> -->
     <div class="card_1_p9">
       <v-card class="bdr_12" height="1000">
         <v-card-title>
@@ -202,7 +203,8 @@
         </v-card-content>
       </v-card>
     </div>
-  </div>
+  </v-container>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -445,7 +447,7 @@ export default {
 
 <style scoped>
 .card_1_p9 {
-  padding: 20px;
+  padding: 10px;
 }
 
 .head_of_dialog_p9 {

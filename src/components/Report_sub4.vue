@@ -7,21 +7,23 @@
             <div>
               <v-btn color="black lighten-1" icon large @click="dialog = false">
                 <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_report.svg"
-                        alt="report"
-                      />
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_report.svg"
+                  alt="report"
+                />
               </v-btn>
             </div>
             <div class="text_header">
-              <span class="">รายงานข้อมูลค่าส่วนประกอบในร่างกายของผู้ใช้งาน</span>
+              <span class=""
+                >รายงานข้อมูลค่าส่วนประกอบในร่างกายของผู้ใช้งาน</span
+              >
             </div>
           </div>
         </div>
       </v-card-title>
-            <br />
-            <br />
+      <br />
+      <br />
       <v-card-content>
         <v-row>
           <v-col cols="6" sm="6">
@@ -137,9 +139,9 @@
               </span>
             </v-card-subtitle>
             <v-card-text class="pa-1">
-              <table class="" style="width:100%;">
+              <table class="table_head1" style="width:100%;">
                 <tr style="text-align:center;" height="35px">
-                  <th width="4%"></th> 
+                  <th width="4%"></th>
                   <th style="text-align:left;padding-left:15px;">กิจกรรม</th>
                   <th>ชาย</th>
                   <th>หญิง</th>
@@ -153,19 +155,20 @@
                   <th width="4%"></th>
                 </tr>
                 <tr
+                  class="card_table_content_font"
                   v-for="item in data_card1_status"
                   :key="item.id"
                   style="text-align:center;"
                   height="35px"
                 >
                   <td></td>
-                  
+
                   <td class="two-data-card2" style="text-align:left; ">
                     <v-icon x-small :style="{ color: item.color }"
                       >mdi-circle
                     </v-icon>
                     <span style="padding-left:5px">
-                    {{ item.name }}
+                      {{ item.name }}
                     </span>
                   </td>
                   <td>{{ item.dataMan }}</td>
@@ -191,7 +194,7 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead color="gray">
-                  <tr class="">
+                  <tr class="table_head1">
                     <th width="" class="text-left">
                       ลำดับ
                     </th>
@@ -208,13 +211,13 @@
                       น้ำหนัก
                     </th>
                     <th width="" class="text-left">
-                     BMI
+                      BMI
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
-                    class="text-left"
+                    class="text-left card_table_content_font"
                     v-for="item in data_table_p7_4"
                     :key="item.id"
                   >
@@ -236,7 +239,7 @@
         </div>
       </v-card-content>
     </v-card>
-     <div style="padding-bottom:40px;"></div>
+    <div style="padding-bottom:40px;"></div>
   </div>
 </template>
 
@@ -263,12 +266,12 @@ export default {
           color: "#AD8DBB",
           dataMan: "638",
           dataWman: "270",
-          r1:"145",
-          r2:"76",
-          r3:"34",
-          r4:"103",
-          r5:"141",
-          r6:"28",
+          r1: "145",
+          r2: "76",
+          r3: "34",
+          r4: "103",
+          r5: "141",
+          r6: "28",
           avg: "22.7%",
         },
         {
@@ -276,12 +279,12 @@ export default {
           color: "#359BD3",
           dataMan: "557",
           dataWman: "250",
-          r1:"264",
-          r2:"178",
-          r3:"100",
-          r4:"96",
-          r5:"34",
-          r6:"35",
+          r1: "264",
+          r2: "178",
+          r3: "100",
+          r4: "96",
+          r5: "34",
+          r6: "35",
           avg: "19.9%",
         },
         {
@@ -289,12 +292,12 @@ export default {
           color: "#58BFAE",
           dataMan: "784",
           dataWman: "275",
-          r1:"163",
-          r2:"254",
-          r3:"103",
-          r4:"108",
-          r5:"206",
-          r6:"46",
+          r1: "163",
+          r2: "254",
+          r3: "103",
+          r4: "108",
+          r5: "206",
+          r6: "46",
           avg: "28%",
         },
         {
@@ -302,12 +305,12 @@ export default {
           color: "#FF850A",
           dataMan: "652",
           dataWman: "480",
-          r1:"364",
-          r2:"131",
-          r3:"104",
-          r4:"84",
-          r5:"12",
-          r6:"7",
+          r1: "364",
+          r2: "131",
+          r3: "104",
+          r4: "84",
+          r5: "12",
+          r6: "7",
           avg: "23.2%",
         },
         {
@@ -315,12 +318,12 @@ export default {
           color: "#DA2121 ",
           dataMan: "145",
           dataWman: "145",
-          r1:"145",
-          r2:"145",
-          r3:"131",
-          r4:"99",
-          r5:"63",
-          r6:"3",
+          r1: "145",
+          r2: "145",
+          r3: "131",
+          r4: "99",
+          r5: "63",
+          r6: "3",
           avg: "5.1%",
         },
       ],
@@ -366,7 +369,7 @@ export default {
 .report_sub4 {
   padding: 20px;
 }
-.text_header{
+.text_header {
   display: flex;
   flex-wrap: wrap;
   align-content: center;

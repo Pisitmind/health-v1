@@ -1,266 +1,262 @@
 <template>
   <div class="report_sub1">
-      <v-card class="report_card_root bdr_12">
-        <v-card-title>
-          <div class="head_title_card_p7">
-            <div class="head_card_p7">
-              <div>
-                <v-btn
-                  color="black lighten-1"
-                  icon
-                  large
-                  @click="dialog = false"
-                >
-                   <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_report.svg"
-                        alt="report"
-                      />
-                </v-btn>
-              </div>
-              <div class="text_header">
-                <span class="">รายงานข้อมูลผู้ใช้งาน</span>
-              </div>
-              <br />
+    <v-card class="report_card_root bdr_12">
+      <v-card-title>
+        <div class="head_title_card_p7">
+          <div class="head_card_p7">
+            <div>
+              <v-btn color="black lighten-1" icon large @click="dialog = false">
+                <img
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_report.svg"
+                  alt="report"
+                />
+              </v-btn>
             </div>
+            <div class="text_header">
+              <span class="">รายงานข้อมูลผู้ใช้งาน</span>
+            </div>
+            <br />
           </div>
-        </v-card-title>
-              <br />
-        <v-card-content>
-          <v-row>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="items"
-                label="กลุ่มผู้ใช้งาน"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="age_range"
-                label="ช่วงอายุ"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="6" sm="6">
-              <v-select
-                :items="item_type"
-                label="อุปกรณ์วัดค่า"
-                dense
-                outlined
-              ></v-select>
-            </v-col>
-            <v-col col="12" sm=""></v-col>
-            <v-col col="6" sm="1" class="text-right">
-              <v-btn outlined color="purple lighten-3" style="width:100px;"
-                >ล้างข้อมูล</v-btn
-              >
-            </v-col>
-            <v-col
-              col="6"
-              sm="2"
-              class="text-right"
-              style="padding-right:40px;"
+        </div>
+      </v-card-title>
+      <br />
+      <v-card-content>
+        <v-row>
+          <v-col cols="6" sm="6">
+            <v-select
+              :items="items"
+              label="กลุ่มผู้ใช้งาน"
+              dense
+              outlined
+            ></v-select>
+          </v-col>
+          <v-col cols="6" sm="6">
+            <v-select
+              :items="age_range"
+              label="ช่วงอายุ"
+              dense
+              outlined
+            ></v-select>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="6" sm="6">
+            <v-select
+              :items="item_type"
+              label="อุปกรณ์วัดค่า"
+              dense
+              outlined
+            ></v-select>
+          </v-col>
+          <v-col col="12" sm=""></v-col>
+          <v-col col="6" sm="1" class="text-right">
+            <v-btn outlined color="purple lighten-3" style="width:100px;"
+              >ล้างข้อมูล</v-btn
             >
-              <v-btn color="purple lighten-3" style="color:white; width:100px;"
-                >ค้นหา</v-btn
-              >
-            </v-col>
-          </v-row>
-        </v-card-content>
+          </v-col>
+          <v-col col="6" sm="2" class="text-right" style="padding-right:40px;">
+            <v-btn color="purple lighten-3" style="color:white; width:100px;"
+              >ค้นหา</v-btn
+            >
+          </v-col>
+        </v-row>
+      </v-card-content>
 
-        <v-divider color="#C5C5C5"></v-divider>
-        <br />
-        <v-row style="padding:0 50px 0 0;"   >
-          <v-col col="12" sm="">
-            <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
-          </v-col>
-          <v-col col="6" sm="2" class="text-right">
-            <v-btn color="#3BD081" style="color:white; width:120px;"
-              >พิมพ์</v-btn
-            >
-          </v-col>
-          <v-col col="6" sm="2" class="text-right">
-            <v-btn color="purple lighten-3" style="color:white;"
-              >นำออกเอกสาร
-              <v-icon>mdi-menu-down</v-icon>
-            </v-btn>
-          </v-col>
-        </v-row>
-        <br />
-        <v-row height="400px" justify="space-around">
-          <v-col col="12" sm="3">
-            <v-card class="pa-2 bdr_12_only" width="" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3">
-                  ตัวบ่งชี้
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-2">
-                  <v-row v-for="item in data_card1" :key="item.id" >
-                    <v-table style="width:100%;">
-                      <tr height="10px">
-                        <td style="text-align: right;" width="80px">
-                          <v-icon x-small :style="{ color: item.color }"
-                            >mdi-circle</v-icon
-                          >
-                        </td>
-                        <td
-                          style="text-align: left;font-weight:bold; font-size: 14px;"
-                          width="70%"
-                        >
-                          <v-icon :style="{ color: item.color }">{{
-                            item.icon
-                          }}</v-icon>
-                          {{ item.gender }}
-                        </td>
-                        <td style="text-align: left;"  width="20%">
-                          {{ item.data }}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td
-                          style="text-align: left;color:grey; font-size: 11px;"
-                        >
-                          {{ item.info }}
-                        </td>
-                        <td
-                          style="text-align: left;color:grey; font-size: 11px;"
-                        >
-                          {{ item.percent }}
-                        </td>
-                      </tr>
-                    </v-table>
-                  </v-row>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="4">
-             <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3 pl-5">
-                  ช่วงอายุ
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-1">
-                  <table class="" style="width:100%;">
-                    <tr style="text-align:center;" height="35px">
-                      <th width="5%"></th>
-                      <th style="text-align:left;padding-left:15px;">ช่วงอายุ</th>
-                      <th>ชาย</th>
-                      <th>หญิง</th>
-                      <th>เฉลี่ยรวม</th>
-                    </tr>
-                    <tr v-for="item in data_card2_info" :key="item.id" style="text-align:center;" height="35px">
-                      <td></td>
-                      <td class="two-data-card2" style="text-align:left;">
-                        <v-icon x-small :style="{ color: item.color }"
-                          >mdi-circle
-                        </v-icon>
-                        {{ item.name }}
-                      </td>
-                      <td>{{ item.dataMan }}</td>
-                      <td>{{ item.dataWman }}</td>
-                      <td>{{ item.avg }}</td>
-                    </tr>
-                  </table>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="4">
-           <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
-              <v-card-subtitle>
-                <span class="topic-name-card_c3 pl-5">
-                  อุปกรณ์วัดค่าสุขภาพ
-                </span>
-              </v-card-subtitle>
-              <v-card-text class="pa-1">
-                <div>
-                  <table width="100%" cellspacing="0" cellpadding="" class="">
-                    <tr height="35px">
-                      <th width="5%"></th>
-                      <th style="text-align:left; padding-left:15px;">
-                        อุปกรณ์
-                      </th>
-                      <th>จำนวน</th>
-                      <th>ค่าเฉลี่ย</th>
-                    </tr>
-                    <tr
-                      v-for="item in data_card1_info"
-                      :key="item.name"
-                      style="text-align: center;" height="35px"
+      <v-divider color="#C5C5C5"></v-divider>
+      <br />
+      <v-row style="padding:0 50px 0 0;">
+        <v-col col="12" sm="">
+          <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
+        </v-col>
+        <v-col col="6" sm="2" class="text-right">
+          <v-btn color="#3BD081" style="color:white; width:120px;">พิมพ์</v-btn>
+        </v-col>
+        <v-col col="6" sm="2" class="text-right">
+          <v-btn color="purple lighten-3" style="color:white;"
+            >นำออกเอกสาร
+            <v-icon>mdi-menu-down</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+      <br />
+      <v-row height="400px" justify="space-around">
+        <v-col col="12" sm="3">
+          <v-card class="pa-2 bdr_12_only" width="" height="100%">
+            <v-card-subtitle>
+              <span class="topic-name-card_c3">
+                ตัวบ่งชี้
+              </span>
+            </v-card-subtitle>
+            <v-card-text class="pa-2">
+              <v-row v-for="item in data_card1" :key="item.id">
+                <v-table style="width:100%;">
+                  <tr height="10px">
+                    <td style="text-align: right;" width="80px">
+                      <v-icon x-small :style="{ color: item.color }"
+                        >mdi-circle</v-icon
+                      >
+                    </td>
+                    <td
+                      style="text-align: left;font-weight:bold; font-size: 14px;"
+                      width="70%"
                     >
-                      <td></td>
-                      <td style="text-align:left;">
-                        <v-icon x-small :style="{ color: item.color }"
-                          >mdi-circle
-                        </v-icon>
-                        {{ item.name }}
-                      </td>
-                      <td>{{ item.data }}</td>
-                      <td>{{ item.percent }}</td>
-                    </tr>
-                  </table>
-                </div>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-        <br />
-        <v-card-content>
-          <div class="content_dialog_page_bot">
-            <div class="table_news_p7">
-              <v-simple-table>
-                <template v-slot:default>
-                  <thead color="gray">
-                    <tr class="">
-                      <th width="" class="text-left">
-                        ลำดับ
-                      </th>
-                      <th width="40%" class="text-left">
-                        รายชื่อผู้ใช้
-                      </th>
-                      <th width="" class="text-left">
-                        ช่วงอายุ
-                      </th>
-                      <th width="" class="text-center">
-                        เพศ
-                      </th>
-                      <th width="20%" class="text-left">
-                        อุปกรณ์
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr
-                      class="text-left"
-                      v-for="item in data_p7"
-                      :key="item.id"
-                    >
-                      <td>{{ item.no }}</td>
-                      <td>{{ item.name }}</td>
-                      <td class=" text-truncate" style="max-width: 100px;">
-                        {{ item.age_range }}
-                      </td>
-                      <td class="text-center">{{ item.gender }}</td>
-                      <td class="text-left">{{ item.item_type }}</td>
-                    </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
-              <br />
-              <div></div>
-            </div>
+                      <v-icon :style="{ color: item.color }">{{
+                        item.icon
+                      }}</v-icon>
+                      {{ item.gender }}
+                    </td>
+                    <td style="text-align: left;" width="20%">
+                      {{ item.data }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td style="text-align: left;color:grey; font-size: 11px;">
+                      {{ item.info }}
+                    </td>
+                    <td style="text-align: left;color:grey; font-size: 11px;">
+                      {{ item.percent }}
+                    </td>
+                  </tr>
+                </v-table>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="12" sm="4">
+          <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
+            <v-card-subtitle>
+              <span class="topic-name-card_c3 pl-5">
+                ช่วงอายุ
+              </span>
+            </v-card-subtitle>
+            <v-card-text class="pa-1">
+              <table class="" style="width:100%;">
+                <tr
+                  class="table_head1"
+                  style="text-align:center;"
+                  height="35px"
+                >
+                  <th width="5%"></th>
+                  <th style="text-align:left;padding-left:15px;">ช่วงอายุ</th>
+                  <th>ชาย</th>
+                  <th>หญิง</th>
+                  <th>เฉลี่ยรวม</th>
+                </tr>
+                <tr
+                  class="card_table_content_font"
+                  v-for="item in data_card2_info"
+                  :key="item.id"
+                  style="text-align:center;"
+                  height="35px"
+                >
+                  <td></td>
+                  <td class="two-data-card2" style="text-align:left;">
+                    <v-icon x-small :style="{ color: item.color }"
+                      >mdi-circle
+                    </v-icon>
+                    {{ item.name }}
+                  </td>
+                  <td>{{ item.dataMan }}</td>
+                  <td>{{ item.dataWman }}</td>
+                  <td>{{ item.avg }}</td>
+                </tr>
+              </table>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="12" sm="4">
+          <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
+            <v-card-subtitle>
+              <span class="topic-name-card_c3 pl-5">
+                อุปกรณ์วัดค่าสุขภาพ
+              </span>
+            </v-card-subtitle>
+            <v-card-text class="pa-1">
+              <div>
+                <table width="100%" cellspacing="0" cellpadding="" class="">
+                  <tr class="table_head1" height="35px">
+                    <th width="5%"></th>
+                    <th style="text-align:left; padding-left:15px;">
+                      อุปกรณ์
+                    </th>
+                    <th>จำนวน</th>
+                    <th>ค่าเฉลี่ย</th>
+                  </tr>
+                  <tr
+                    class="card_table_content_font"
+                    v-for="item in data_card1_info"
+                    :key="item.name"
+                    style="text-align: center;"
+                    height="35px"
+                  >
+                    <td></td>
+                    <td style="text-align:left;">
+                      <v-icon x-small :style="{ color: item.color }"
+                        >mdi-circle
+                      </v-icon>
+                      {{ item.name }}
+                    </td>
+                    <td>{{ item.data }}</td>
+                    <td>{{ item.percent }}</td>
+                  </tr>
+                </table>
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+      <br />
+      <v-card-content>
+        <div class="content_dialog_page_bot">
+          <div class="table_news_p7">
+            <v-simple-table>
+              <template v-slot:default>
+                <thead color="gray" class="table_head1">
+                  <tr >
+                    <th width="" class="text-left">
+                      ลำดับ
+                    </th>
+                    <th width="40%" class="text-left">
+                      รายชื่อผู้ใช้
+                    </th>
+                    <th width="" class="text-left">
+                      ช่วงอายุ
+                    </th>
+                    <th width="" class="text-center">
+                      เพศ
+                    </th>
+                    <th width="20%" class="text-left">
+                      อุปกรณ์
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="text-left card_table_content_font"
+                    v-for="item in data_p7"
+                    :key="item.id"
+                  >
+                    <td>{{ item.no }}</td>
+                    <td>{{ item.name }}</td>
+                    <td class=" text-truncate" style="max-width: 100px;">
+                      {{ item.age_range }}
+                    </td>
+                    <td class="text-center">{{ item.gender }}</td>
+                    <td class="text-left">{{ item.item_type }}</td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+            <br />
+            <div></div>
           </div>
-        </v-card-content>
-      </v-card>
-       <div style="padding-bottom:40px;"></div>
+        </div>
+      </v-card-content>
+    </v-card>
+    <div style="padding-bottom:40px;"></div>
   </div>
 </template>
 
@@ -373,7 +369,8 @@ export default {
           icon: "mdi-menu-up",
           color: "#B4B4B4",
           item_type: "Garmin",
-        }, {
+        },
+        {
           no: "2.",
           name: "สุนันญา กันต์จวรรณ์",
           age_range: "41-50",
@@ -381,7 +378,8 @@ export default {
           icon: "mdi-menu-up",
           color: "#B4B4B4",
           item_type: "Xiaomi",
-        }, {
+        },
+        {
           no: "3.",
           name: "สุวรรณจณีย์ ศิลธร",
           age_range: "21-30",
@@ -396,10 +394,10 @@ export default {
 };
 </script>
 <style scoped>
-.report_sub1{
+.report_sub1 {
   padding: 20px;
 }
-.report_card_root{
+.report_card_root {
   padding: 20px;
 }
 .ddog {
@@ -416,7 +414,7 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.text_header{
+.text_header {
   display: flex;
   flex-wrap: wrap;
   align-content: center;

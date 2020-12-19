@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-lg-xl>
+  <v-container grid-list-lg-xl class="home">
     <div class="card_el">
       <link
         rel="stylesheet"
@@ -10,8 +10,8 @@
         <div class="card1-root">
           <div class="head-card1">
             <div class="card1-left">
-              <div class="head_name_tag pd_l25">
-                <p>สมาชิกผู้ใช้</p>
+              <div class="head_name_tag pd_l25 sp_nametag">
+                <p >สมาชิกผู้ใช้</p>
               </div>
               <div class="btn_day_tag">
                 <v-btn class="white--text" small color="#AD8DBB" width="80px"
@@ -84,13 +84,13 @@
             <div class="spac_content"></div>
 
             <v-card class="card_p1_c1 bdr_12_only" height="">
-              <v-card-subtitle>
-                <span class="f_color_purple ">
+              <v-card-subtitle class="font_size_title_card">
+                <span class="f_color_purple pl-5">
                   ตัวบ่งชี้
                 </span>
               </v-card-subtitle>
               <v-card-text v-for="item in data_card1" :key="item.id">
-                <div class="male-content">
+                <div class="male-content px-3">
                   <div class="top-male-content">
                     <div class="text-male">
                       <v-icon x-small :style="{ color: item.color }"
@@ -118,7 +118,7 @@
             </v-card>
             <div class="spac_content"></div>
             <v-card class="card1-subcard-3 bdr_12_only" width="" height="">
-              <v-card-subtitle class="set_pdbot0">
+              <v-card-subtitle class="font_style_title_card">
                 <span class="f_color_purple pl-5">
                   อุปกรณ์
                 </span>
@@ -136,14 +136,14 @@
                       <th></th>
                     </tr>
                     <tr v-for="item in data_card1_info" :key="item.name">
-                      <td width="50%">
+                      <td class="speci_ele">
                         <v-icon x-small :style="{ color: item.color }"
                           >mdi-circle
                         </v-icon>
                         {{ item.name }}
                       </td>
-                      <td>{{ item.data }}</td>
-                      <td>{{ item.percent }}</td>
+                      <td class="set_cen_text_table">{{ item.data }}</td>
+                      <td class="set_cen_text_table">{{ item.percent }}</td>
                     </tr>
                   </table>
                 </div>
@@ -191,13 +191,13 @@
                 width=""
                 height="300px"
               >
-                <v-card-subtitle>
+                <v-card-subtitle class="font_style_title_card">
                   <span class="f_color_purple pl-5">
                     ตัวบ่งชี้
                   </span>
                 </v-card-subtitle>
                 <v-card-text class="pa-1">
-                  <div class="card-info-right pa-1">
+                  <div class="pa-1">
                     <table class="card2-table">
                       <tr class="table_head1">
                         <th>ช่วงอายุ</th>
@@ -326,7 +326,7 @@
                           </div>
                         </div>
                       </td>
-                      <td width="25%"></td>
+                      <td width="31%"></td>
                     </tr>
                   </table>
                 </div>
@@ -1081,14 +1081,14 @@ th {
   text-align: left;
 }
 .card1-table {
-  font-size: 12px;
+  font-size: 14px;
   color: #5b5b5b;
 }
 .card2-table {
-  font-size: 12px;
+  font-size: 14px;
   color: #5b5b5b;
   td {
-    padding: 0 26px;
+    padding: 0 20px;
     text-align: left;
   }
 }
@@ -1138,6 +1138,7 @@ th {
   padding: 10px;
 }
 .card1-subcard-3 {
+  width: 350px;
   padding-bottom: 15px;
 }
 .set-center {
@@ -1246,9 +1247,7 @@ th {
   margin: 0 auto;
   // text-align: left;
 }
-.set_pdbot0 {
-  padding: 16px 16px 0 16px;
-}
+
 .card3_headNsub {
   display: flex;
   flex-direction: column;
@@ -1258,7 +1257,9 @@ th {
 .head_card4 {
   display: flex;
   justify-content: space-between;
-  // padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px 0px 20px; // padding: 20px;
   // padding: 20px 10px 0px 10px;
 }
 .title_card4 {
@@ -1360,9 +1361,14 @@ th {
 .content_a {
   padding: 0 20px;
 }
+.sp_nametag{
+  align-text: center;
+  margin: 0px !important;
+  padding-top: 10px;
+}
 
 // ------ after resize web page -----------//
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   /* For tablets: */
   .head-card1 {
     display: flex;
@@ -1477,6 +1483,16 @@ th {
   }
   .set_size_chart {
     height: 200px !important;
+  }
+  .card1-subcard-3 {
+    width: 100%;
+  }
+  .set_cen_text_table {
+    text-align: center !important;
+  }
+  .card1-table {
+    font-size: 15px;
+    justify-content: space-between;
   }
 }
 </style>

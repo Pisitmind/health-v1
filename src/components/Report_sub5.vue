@@ -7,21 +7,21 @@
             <div>
               <v-btn color="black lighten-1" icon large @click="dialog = false">
                 <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_report.svg"
-                        alt="report"
-                      />
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_report.svg"
+                  alt="report"
+                />
               </v-btn>
             </div>
             <div class="text_header">
               <span class="">รายงานข้อมูลสุขภาพจำเพาะ</span>
             </div>
           </div>
-            <br />
+          <br />
         </div>
       </v-card-title>
-            <br />
+      <br />
       <v-card-content>
         <v-row>
           <v-col cols="6" sm="6">
@@ -135,7 +135,7 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead color="gray">
-                  <tr class="">
+                  <tr class="table_head1">
                     <th width="" class="text-left">
                       ลำดับ
                     </th>
@@ -149,19 +149,19 @@
                       เพศ
                     </th>
                     <th width="" class="text-left">
-                     ความดันโลหิต
+                      ความดันโลหิต
                     </th>
                     <th width="" class="text-left">
-                     ออกซิเจนในเลือด
+                      ออกซิเจนในเลือด
                     </th>
                     <th width="" class="text-left">
-                     อุณหภูมิร่างกาย
+                      อุณหภูมิร่างกาย
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
-                    class="text-left"
+                    class="text-left card_table_content_font"
                     v-for="item in data_table_p7_5"
                     :key="item.id"
                   >
@@ -184,7 +184,7 @@
         </div>
       </v-card-content>
     </v-card>
-     <div style="padding-bottom:40px;"></div>
+    <div style="padding-bottom:40px;"></div>
   </div>
 </template>
 
@@ -296,7 +296,7 @@ export default {
 .report_sub5 {
   padding: 20px;
 }
-.text_header{
+.text_header {
   display: flex;
   flex-wrap: wrap;
   align-content: center;

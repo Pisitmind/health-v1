@@ -1,5 +1,6 @@
 <template>
-  <div class="status">
+  <v-container grid-list-lg-xl class="status">
+    <!-- <div> -->
     <div class="card1_p4">
       <v-card class="bdr_12">
         <div class="card1_p4_root">
@@ -108,61 +109,77 @@
             </div>
           </div>
           <!-- Content  -->
-          <div class="card1_p4_content">
-            <div class="card1_p4_content_left">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยการนอนหลับของผู้ใช้เพศชาย และเพศหญิง</span>
-                </div>
-              <v-card-subtitle class="pd_0">
-              </v-card-subtitle>
-              <v-card-text>
-                <!-- ใส่กราฟ -->
-                <canvas id="graph1_p4" width="200px" height="90px"></canvas>
-              </v-card-text>
-
-              <div class="label_grpah1_c1_p4 set_h30">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card1">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text">ชาย</span>
+          <v-container-text>
+            <v-layout row wrap justify="space-between">
+              <v-flex xs12 md6>
+                <v-card
+                  elevation="0"
+                  class="bdr_0"
+                  style="padding-righ:5px; border-right: 1px solid grey !important;"
+                >
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยการนอนหลับของผู้ใช้เพศชาย และเพศหญิง</span>
+                  </div>
+                  <v-card-text>
+                    <!-- ใส่กราฟ -->
+                    <div class="set_content_space" style="height:230px">
+                      <canvas id="graph1_p4" width="200px" height=""></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="label_grpah1_c1_p4 set_h30">
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align:center;">
+                        <div class="label_text_card1">
+                          <div>
+                            <v-icon small color="blue"> mdi-circle</v-icon>
+                            <span class="black--text">ชาย</span>
+                          </div>
+                          <div class="pd_10">
+                            <v-icon small color="pink"> mdi-circle</v-icon>
+                            <span class="black--text">หญิง</span>
+                          </div>
                         </div>
-                        <div class="pd_10">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text">หญิง</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td width="50%" align="right" style="font-size:14px; padding-right:40px;">
-                      <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <v-divider vertical></v-divider>
-            <div class="card1_p4_content_right">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                      </td>
+                      <td
+                        width="50%"
+                        align="right"
+                        style="font-size:14px; padding-right:40px;"
+                      >
+                        <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
-              <v-card-subtitle class="pd_0">
-              </v-card-subtitle>
-              <v-card-text >
-                <!-- ใส่กราฟ -->
-                <canvas id="graph2_c1_p4" width="200px" height="95"></canvas>
-              </v-card-text>
-              <div class="label_grpah1_c1_p4">
-                <table width="100%">
-                  <span style="font-size:14px"
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ 5:40
-                    ชั่วโมงต่อวัน</span
-                  >
-                </table>
-              </div>
-            </div>
-          </div>
+              </v-flex>
+              <v-flex xs12 md6>
+                <v-card elevation="0" style="padding-left:10px;">
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                  </div>
+                  <v-card-text>
+                    <!-- ใส่กราฟ -->
+                    <div class="set_content_space" style="height:230px">
+                      <canvas id="graph2_c1_p4" width="200px"></canvas>
+                    </div>
+                  </v-card-text>
+                </v-card>
+                <div class="set_h30">
+                  <table width="100%">
+                    <tr>
+                      <td style="padding-left:40px;" class="text_sub">
+                        <span
+                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ
+                          5:40 ชั่วโมงต่อวัน</span
+                        >
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </v-flex>
+            </v-layout>
+          </v-container-text>
         </div>
       </v-card>
     </div>
@@ -285,23 +302,19 @@
               <div class="label_grpah1_c1_p4">
                 <table width="100%">
                   <tr>
-                    <td style="text-align:left;" width="15%">
+                    <td style="text-align:center;">
                       <div class="label_text_card1">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text">ชาย</span>
+                          <span class="black--text"> ชาย </span>
                         </div>
-                      </div>
-                    </td>
-                    <td style="text-align:left;" width="10%">
-                      <div class="label_text_card1">
-                        <div>
+                        <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text">หญิง</span>
+                          <span class="black--text"> หญิง </span>
                         </div>
                       </div>
                     </td>
-                    <v-spacer></v-spacer>
+                    <td width="50%"></td>
                   </tr>
                 </table>
               </div>
@@ -315,12 +328,12 @@
                     src="../assets/icon/icon_men.svg"
                     alt="man"
                   />
-                  <span style="font-size:14px; font-weight:bold;"
+                  <span style="font-size:15px; font-weight:bold;"
                     >ค่าเฉลี่ยในเพศชาย
                   </span>
                 </v-card-title>
                 <v-card-subtitle>
-                  <div class="card3_line2 grey--text" style="font-size:12px;">
+                  <div class="card3_line2 grey--text" >
                     <span
                       >ค่าเฉลี่ยการเต้นของหัวใจจากผู้ใช้เพศชายทั้งหมดตามช่วงอายุ</span
                     >
@@ -348,12 +361,12 @@
                     src="../assets/icon/icon_women.svg"
                     alt="woman"
                   />
-                  <span style="font-size:14px; font-weight:bold;">
+                  <span style="font-size:15px; font-weight:bold;">
                     ค่าเฉลี่ยในเพศหญิง
                   </span>
                 </v-card-title>
                 <v-card-subtitle>
-                  <div class="card3_line2 grey--text" style="font-size:12px;">
+                  <div class="card3_line2 grey--text">
                     <span
                       >ค่าเฉลี่ยการเต้นของหัวใจจากผู้ใช้เพศหญิงทั้งหมดตามช่วงอายุ</span
                     >
@@ -433,7 +446,14 @@
                     <!-- ยังก่อน -->
                     <v-dialog v-model="dialog2" width="">
                       <template v-slot:activator="{ on, attrs }">
-                        <v-btn small icon fab v-bind="attrs" v-on="on" class="hid">
+                        <v-btn
+                          small
+                          icon
+                          fab
+                          v-bind="attrs"
+                          v-on="on"
+                          class="hid"
+                        >
                           <img
                             height="30px"
                             class="filter-white"
@@ -485,14 +505,13 @@
           </div>
           <div class="card1_p4_content">
             <div class="card1_p4_content_left">
-                <div class="card3_line2 grey--text" style="font-size:12px;">
-                  <span
-                    >วัดจากค่าไขมันในร่างกาย
-                    เป็นสัดส่วนสำคัญในการสังเกตุคุณภาพของระบบเซลล์ในร่างกาย</span
-                  >
-                </div>
-              <v-card-subtitle>
-              </v-card-subtitle>
+              <div class="card3_line2 grey--text" >
+                <span
+                  >วัดจากค่าไขมันในร่างกาย
+                  เป็นสัดส่วนสำคัญในการสังเกตุคุณภาพของระบบเซลล์ในร่างกาย</span
+                >
+              </div>
+              <v-card-subtitle> </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
                 <canvas id="graph1_c3_p4" width="200px" height=""></canvas>
@@ -500,14 +519,12 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p4_content_right">
-                <div class="card3_line2 grey--text" style="font-size:12px;">
-                  <span
-                    >ค่าเฉลี่ยคะแนนร่างกายของผู้ใช้เพศชาย และเพศหญิง
-                    รายวัน</span
-                  >
-                </div>
-              <v-card-subtitle>
-              </v-card-subtitle>
+              <div class="card3_line2 grey--text" >
+                <span
+                  >ค่าเฉลี่ยคะแนนร่างกายของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
+                >
+              </div>
+              <v-card-subtitle> </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
                 <canvas id="graph2_c3_p4" width="200px" height=""></canvas>
@@ -525,8 +542,9 @@
         </div>
       </v-card>
     </div>
-  <div style="padding-bottom:40px;"></div>
-  </div>
+    <div style="padding-bottom:40px;"></div>
+    <!-- </div> -->
+  </v-container>
 </template>
 
 <script>
@@ -943,9 +961,6 @@ export default {
 </script>
 
 <style scoped>
-.card1_p4 {
-  padding: 10px 20px 10px 20px;
-}
 .card1_p4_root {
   padding: 20px;
 }
@@ -969,8 +984,8 @@ export default {
   /* background-color: rgba(0, 80, 10, 0.1); */
   font-size: 16px;
 }
-.card3_line2{
-  font-size: 12px;
+.card3_line2 {
+  font-size: 14px;
 }
 
 .card2_content_bot {
@@ -1021,7 +1036,9 @@ export default {
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
-
+.label_grpah1_c1_p4{
+  padding-left: 40px;
+}
 .title_card1_p4 {
   display: flex;
 }
@@ -1042,7 +1059,10 @@ export default {
 .head_dialog_c2_p4 {
   display: flex;
 }
-.label_text_card1{
+.label_text_card1 {
   font-size: 14px;
+}
+.v-card__title {
+  padding: 20px;
 }
 </style>

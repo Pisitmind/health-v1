@@ -135,7 +135,7 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead color="gray">
-                  <tr class="">
+                  <tr class="table_head1">
                     <th width="" class="text-left">
                       ลำดับ
                     </th>
@@ -161,7 +161,7 @@
                 </thead>
                 <tbody>
                   <tr
-                    class="text-left"
+                    class="text-left card_table_content_font"
                     v-for="item in data_table_p7_3"
                     :key="item.id"
                   >

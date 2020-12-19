@@ -19,9 +19,9 @@
             </div>
           </div>
           <div class="">
-            <v-row>
+            <v-row style="padding-top:10px;">
               <v-col cols="6">
-                <div class="text_header">
+                <div class="head_size s_bold" >
                   <span class="">จำนวนผู้ใช้งานทั้งหมด 2,800 คน</span>
                 </div>
               </v-col>
@@ -50,7 +50,7 @@
       </v-card-title>
 
       <v-card-content class="pd_h_card">
-        <span>
+        <span class="head_size grey--text">
           รายชื่อผู้ใช้งาน
         </span>
       </v-card-content>

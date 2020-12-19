@@ -1,6 +1,7 @@
 <template>
-  <div class="noti">
-    <div class="card_el">
+  <v-container grid-list-lg-xl class="noti">
+    <!-- <div class="noti"> -->
+    <div class="card_el_card2">
       <v-card class="bdr_12">
         <div class="card_content">
           <div class="head-card1">
@@ -247,7 +248,7 @@
                 width=""
                 height="300px"
               >
-                <v-card-title class="med_20">
+                <v-card-title class="font_style_title_card">
                   <span class="topic_name_card pl-5 ">
                     Heart rate zone
                   </span>
@@ -294,24 +295,22 @@
     </div>
     <div class="card_el_card2">
       <!-- card2 head+content -->
-      <v-card class="bdr_12">
-        <div class="card_rootcontent">
+      <v-card class="card_rootcontent bdr_12">
+        <div class="">
           <!-- card2 header -->
           <div class="head-card2">
             <div class="">
-              <div class="header_card2">
-                <div class="title_card2">
-                  <div class="card2_nameNicon">
-                    <div style="padding-right:10px;">
-                      <img
-                        height="40px"
-                        src="../assets/icon/icon_weight_01.svg"
-                        alt="human"
-                      />
-                    </div>
-                    <div class="card2_bot_text ">
-                      <span><strong>Ideal weight</strong></span>
-                    </div>
+              <div class="head-card1">
+                <div class="title_card1_p3">
+                  <div style="padding-right:10px;">
+                    <img
+                      height="40px"
+                      src="../assets/icon/icon_weight_01.svg"
+                      alt="human"
+                    />
+                  </div>
+                  <div class="card3-bot-text ">
+                    <span>Ideal weight</span>
                   </div>
                 </div>
                 <div class="head_card2_btn">
@@ -333,7 +332,7 @@
             <!-- card l -->
             <div class="chart1_card2" style="float: left; position: relative;">
               <div
-                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -35px; line-height:19px; text-align: center; z-index: 2"
+                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
               >
                 <span class="text_inside1">76</span><br />
                 <span class="text_inside">avg. kg.</span>
@@ -503,7 +502,7 @@
                       </td>
                     </tr>
                     <tr v-for="item in items" :key="item.id" align="center">
-                      <th scope="row" class="fix_center" align="left">
+                      <th scope="row" class="fix_center_table" align="left">
                         <img
                           height="40px"
                           class="filter-white"
@@ -549,8 +548,8 @@
                         alt="bmi"
                       />
                     </div>
-                    <div class="card2_bot_text ">
-                      <span><strong>BMI</strong></span>
+                    <div class="card3-bot-text  ">
+                      <span>BMI</span>
                     </div>
                   </div>
                 </div>
@@ -583,7 +582,7 @@
                 <span class="text_inside">avg.</span>
               </div>
               <div class="">
-                <canvas id="graph2_c2" width="200px" height="240"></canvas>
+                <canvas id="graph2_c2" width="240px" height="240px"></canvas>
               </div>
             </div>
             <!-- card r  -->
@@ -706,7 +705,7 @@
                       </th>
                     </tr>
                     <tr v-for="item in items_2" :key="item.id" align="center">
-                      <th scope="row" class="text-center fix_center">
+                      <th scope="row" class="text-center fix_center_table">
                         <img
                           height="40px"
                           class="filter-white"
@@ -751,8 +750,8 @@
                         alt="step"
                       />
                     </div>
-                    <div class="card2_bot_text ">
-                      <span><strong>Step</strong></span>
+                    <div class="card3-bot-text ">
+                      <span>Step</span>
                     </div>
                   </div>
                 </div>
@@ -811,7 +810,8 @@
         </div>
       </v-card>
     </div>
-  </div>
+    <!-- </div> -->
+  </v-container>
 </template>
 <script>
 window.onscroll = function() {
@@ -1230,7 +1230,7 @@ export default {
   width: 100%;
 }
 .noti {
-  padding: 16px;
+  /* padding: 16px; */
 }
 .set_reg {
   font-weight: regular !important;
@@ -1243,7 +1243,7 @@ export default {
   flex-wrap: wrap;
   align-content: center;
   text-align: center;
-  font-size: 22px !important;
+  font-size: 25px !important;
 }
 .mini_fz {
   font-size: 12px;
@@ -1269,12 +1269,13 @@ export default {
 .head-card1 {
   display: flex;
   justify-content: space-between;
-  padding: 0px 20px 0px 20px;
+  padding: 10px 20px 0px 20px;
   margin: auto;
 }
 .content1-card1 {
   display: flex;
   /* justify-content:space-between; */
+  padding: 0 20px;
   justify-content: space-around;
 }
 .font_norm {
@@ -1286,6 +1287,8 @@ export default {
 .font_omg {
   font-size: 26px;
   font-weight: bold;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
 }
 .cont1-card1 {
   display: flex;
@@ -1308,7 +1311,7 @@ export default {
   color: #ad8dbb;
 }
 .title_table_c1 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
 }
 .t_name_ct3c1 {
@@ -1403,14 +1406,9 @@ export default {
 .header_card2 {
   display: flex;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 10px 20px 0px 20px;
 }
-.card_el {
-  padding: 10px;
-}
-.card_el_card2 {
-  padding: 20px;
-}
+
 .head_card2_btn {
   align-content: center;
 }
@@ -1465,7 +1463,7 @@ export default {
   /* padding-top: 10px; */
 }
 .card2_line2 {
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 30px;
 }
 .data_table_card2 {
@@ -1491,10 +1489,11 @@ export default {
 .head_table_card3 {
   text-align: left;
 }
-.fix_center {
+.fix_center_table {
   display: flex;
   justify-content: left;
   align-items: center;
+  text-align: left;
 }
 .pd_y_data {
   padding: 20px 0;
@@ -1502,10 +1501,7 @@ export default {
 .co5 {
   background-color: grey;
 }
-.med_20 {
-  padding: 16px 16px 0 16px !important;
-  font-size: 16px;
-}
+
 .font_reg {
   font-weight: regular !important;
 }

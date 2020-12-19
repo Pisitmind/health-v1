@@ -1,5 +1,6 @@
 <template>
-  <div class="unqHealth">
+  <v-container grid-list-lg-xl class="unqHealth">
+    <!-- <div class="unqHealth"> -->
     <div class="card1_p6">
       <v-card class="bdr_12">
         <div class="card1_p6_root">
@@ -21,7 +22,7 @@
                       />
                     </div>
                     <div class="card6-bot-text" style="text-align: center;">
-                      <span><strong>ความดันโลหิต</strong></span>
+                      <span> ความดันโลหิต </span>
                     </div>
                   </div>
                   <!-- btn sex & age -->
@@ -106,11 +107,11 @@
                 </div>
               </div>
             </div>
-            <div class="split_me grey--text">
-              <div class="split_l" style="font-size: 12px;">
+            <div class="split_me  grey--text">
+              <div class="split_l card3_line2">
                 <span>ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span>
               </div>
-              <div class="split_r" style="font-size: 12px;">
+              <div class="split_r card3_line2">
                 <span>ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
               </div>
             </div>
@@ -188,7 +189,7 @@
                       />
                     </div>
                     <div class="card6-bot-text" style="text-align: center;">
-                      <span><strong>ออกซิเจนในเลือด</strong></span>
+                      <span> ออกซิเจนในเลือด </span>
                     </div>
                   </div>
                 </div>
@@ -235,9 +236,7 @@
                             </div>
                             <div class="pd_text">
                               <span class="headline"
-                                ><strong
-                                  >รายละเอียดค่าออกซิเจนในเลือด</strong
-                                ></span
+                                >รายละเอียดค่าออกซิเจนในเลือด</span
                               >
                             </div>
                           </div>
@@ -260,7 +259,7 @@
                 </div>
               </div>
             </div>
-            <v-subtitle class="sub_text"
+            <v-subtitle class="card3_line2"
               >น้ำหนัก(กก.) / ส่วนสูง(m2) คุณไม่สามารถตัดสินได้ว่าคุณเป็น
               "คนอ้วน" เพียงแค่ตามค่า BMI
               ผู้คนสามารถมีไขมันมากกว่ากล้ามเนื้อด้วยค่าดัชนีมวลกายปกติและยังจัดว่าเป็นโรคอ้วน</v-subtitle
@@ -286,7 +285,7 @@
                   </div>
                 </div>
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1 bdr_12_only" width="400px" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="450px" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้
@@ -308,7 +307,7 @@
                                 style="text-align:left; font-weight:bold; font-size: 13px;"
                                 width="70%"
                               >
-                                <div class="fix_center">
+                                <div class="fix_center_card">
                                   <img
                                     height="25px"
                                     class="filter-white"
@@ -398,7 +397,7 @@
                                   style="text-align:left; font-weight:bold; font-size: 13px;"
                                   width="70%"
                                 >
-                                  <div class="fix_center">
+                                  <div class="fix_center_card">
                                     <img
                                       height="25px"
                                       class="filter-white"
@@ -465,7 +464,7 @@
                       />
                     </div>
                     <div class="card6-bot-text " style="text-align: center;">
-                      <span><strong>อุณหภูมิร่างกาย</strong></span>
+                      <span> อุณหภูมิร่างกาย </span>
                     </div>
                   </div>
                   <!-- btn sex & age -->
@@ -536,7 +535,7 @@
                 </div>
               </div>
             </div>
-            <v-subtitle class="sub_text"
+            <v-subtitle class="card3_line2"
               >ค่าเฉลี่ยอุณหภูมิร่างกายของผู้ใช้เพศชาย และเพศหญิง</v-subtitle
             >
           </div>
@@ -547,36 +546,38 @@
               <canvas id="graph1_c3_p6" width="" height="80px"></canvas>
             </v-card-text>
 
-            <div class="label_grpah1_c1_p6">
-              <table width="100%">
+            <div class="label_text_p6">
+              <table width="100%" style="text-align:left!important;">
                 <tr>
-                  <td style="text-align:center; padding-left: 45px;">
-                    <div class="label_text_card1_1">
-                      <div class="">
+                  <td style="text-align:left!important;">
+                    <div class="label_text_p6">
+                      <div style="padding-left:70px;"></div>
+                      <div>
                         <v-icon small color="blue"> mdi-circle</v-icon>
                         <span class="black--text">ชาย</span>
                       </div>
-                      <div class=" pd_10">
+                      <div class="pd_20">
                         <v-icon small color="pink"> mdi-circle</v-icon>
                         <span class="black--text">หญิง</span>
                       </div>
                     </div>
                   </td>
-                  <td width="50%" style="font-size:14px;">
-                    <!-- <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span> -->
+                  <td width="50%" class="text_sub">
+                    <span></span>
                   </td>
                 </tr>
                 <tr>
                   <td
-                    width="50%"
+                    width=""
                     class="grey--text"
-                    style="font-size:14px; padding-left: 45px;"
+                    style="font-size:14px; padding-left: 70px;"
                   >
                     <span
                       >อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5
                       องศาเซลเซียส</span
                     >
                   </td>
+                  <td width="50%" class="text_sub"></td>
                 </tr>
               </table>
             </div>
@@ -589,7 +590,8 @@
     <br />
     <br />
     <br />
-  </div>
+    <!-- </div> -->
+  </v-container>
 </template>
 
 <script>
@@ -853,30 +855,32 @@ export default {
 .head_dialog {
   display: flex;
 }
-.sub_text {
-  color: gray;
-  font-size: 12px;
-}
 .card1_p6,
 .card2_p6,
 .card3_p6 {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px;
+  margin-bottom: 5px;
+}
+.label_text_card1 {
+  display: flex;
+  justify-content: start;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: regular;
 }
 .label_text_card1_1 {
   display: flex;
   align-content: left;
 }
-.card1_p6_root {
-  padding: 20px;
-}
 .card1_p6_content {
   display: flex;
+  padding: 0px 20px;
 }
 .head_card1_p6_l {
   width: 50%;
 }
 .label_grpah1_c1_p6 {
-  padding-left: 16px;
+  padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
 /* .head_card1_p6_r{
@@ -911,6 +915,7 @@ export default {
 }
 .card3_p6_content_na {
   width: 100%;
+  /* padding: 0px 20px; */
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
 .head_dialog_c2_p6 {
@@ -926,57 +931,21 @@ export default {
   padding-left: 20px;
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
-.card1_p6_content {
-  display: flex;
-}
-.head_card1_p6_l {
-  width: 50%;
-}
-.label_grpah1_c1_p6 {
-  padding-left: 16px;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-}
+
 /* .head_card1_p6_r{
   padding:20px;
 } */
-.head_card1_p6_l_title {
-  display: flex;
-  /* padding:20px; */
-  justify-content: space-between;
-  width: 100%;
-  /* background-color:rgba(0, 0,100,.3); */
-}
+
 .title_card1_p6 {
   display: flex;
 }
 
-.sex_age_title_card1_p6 {
-  display: flex;
-}
-.card1_p6_content_left {
-  width: 50%;
-}
-.head_dialog_c2_p6 {
-  display: flex;
-}
-.card6-bot-text {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
 /* .head_card1_p6_l {
   display: flex;
   justify-content: space-between;
   width: 50%;
 } */
-.card1_p6_content_right {
-  width: 50%;
-  padding-left: 20px;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-}
+
 .head_card3_p6_l_title {
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.1); */
@@ -997,7 +966,7 @@ export default {
 .card2_l_all {
   width: 50%;
   /* padding: 20px 20px; */
-  padding: 20px 60px 20px 20px;
+  padding: 20px 40px 20px 20px;
 }
 .card2_r_all {
   width: 50%;
@@ -1063,7 +1032,7 @@ table {
   width: 50%;
   padding-left: 60px;
 }
-.fix_center {
+.fix_center_card {
   display: flex;
   /* justify-content: center; */
   align-items: center;

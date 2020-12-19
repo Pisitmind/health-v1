@@ -1,5 +1,6 @@
 <template>
-  <div class="boards">
+  <v-container grid-list-lg-xl class="boards">
+    <!-- <div class="boards"> -->
     <div class="card_1_p10">
       <v-card class="bdr_12" height="1000">
         <v-card-title>
@@ -176,7 +177,8 @@
         <canvas id="myChart111" width="" height="90px"></canvas>
       </div>
     </div>
-  </div>
+    <!-- </div> -->
+  </v-container>
 </template>
 <script
   src="https://kit.fontawesome.com/4c16a2e0ed.js"
@@ -320,7 +322,7 @@ export default {
 
 <style scoped>
 .card_1_p10 {
-  padding: 20px;
+  padding: 10px;
 }
 
 .head_of_dialog_p10 {
@@ -390,6 +392,10 @@ tbody[data-v-f1e5daf2] {
 .customers td {
   border: none !important;
 }
+.v-card__title {
+  padding: 20px;
+}
+
 /* table {
   border-collapse: collapse !important;
 }

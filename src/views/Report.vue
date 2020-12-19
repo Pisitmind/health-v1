@@ -1,42 +1,44 @@
 <template>
-  <div class="report">
-    <v-card class="bdr_12">
-      <v-tabs v-model="tab" background-color="blue lighten-2" dark>
-        <v-tab v-for="item in items" :key="item.tab">
-          {{ item.content }}
-        </v-tab>
-      </v-tabs>
-      <v-tabs-items v-model="tab">
-        <v-tab-item v-for="data in items" :key="data.id">
-          <v-card flat v-if="data.check === '1'">
-            <v-card-content>
-              <report1 />
-            </v-card-content>
-          </v-card>
-          <v-card flat v-if="data.check === '2'">
-            <v-card-content>
-              <report2 />
-            </v-card-content>
-          </v-card>
-          <v-card flat v-if="data.check === '3'">
-            <v-card-content>
-              <report3 />
-            </v-card-content>
-          </v-card>
-          <v-card flat v-if="data.check === '4'">
-            <v-card-content>
-              <report4 />
-            </v-card-content>
-          </v-card>
-          <v-card flat v-if="data.check === '5'">
-            <v-card-content>
-              <report5 />
-            </v-card-content>
-          </v-card>
-        </v-tab-item>
-      </v-tabs-items>
-    </v-card>
-  </div>
+  <v-container grid-list-lg-xl class="report">
+    <div class="">
+      <v-card class="bdr_12">
+        <v-tabs v-model="tab" background-color="blue lighten-2" dark>
+          <v-tab v-for="item in items" :key="item.tab">
+            {{ item.content }}
+          </v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+          <v-tab-item v-for="data in items" :key="data.id">
+            <v-card flat v-if="data.check === '1'">
+              <v-card-content>
+                <report1 />
+              </v-card-content>
+            </v-card>
+            <v-card flat v-if="data.check === '2'">
+              <v-card-content>
+                <report2 />
+              </v-card-content>
+            </v-card>
+            <v-card flat v-if="data.check === '3'">
+              <v-card-content>
+                <report3 />
+              </v-card-content>
+            </v-card>
+            <v-card flat v-if="data.check === '4'">
+              <v-card-content>
+                <report4 />
+              </v-card-content>
+            </v-card>
+            <v-card flat v-if="data.check === '5'">
+              <v-card-content>
+                <report5 />
+              </v-card-content>
+            </v-card>
+          </v-tab-item>
+        </v-tabs-items>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>

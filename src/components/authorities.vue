@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="">
-            <v-row>
+            <v-row style="padding-top:10px;">
               <v-col cols="6">
                 <v-dialog v-model="dialog1" width="80%">
                   <template v-slot:activator="{ on, attrs_au }">
@@ -100,7 +100,7 @@
       </v-card-title>
 
       <v-card-content class="pd_h_card">
-        <span>
+        <span class="head_size grey--text">
           รายชื่อเจ้าหน้าที่
         </span>
       </v-card-content>

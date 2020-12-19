@@ -151,7 +151,7 @@
               </span>
             </v-card-subtitle>
             <v-card-text class="pa-1">
-              <table class="" style="width:100%;">
+              <table class="table_head1" style="width:100%;">
                 <tr style="text-align:center;" height="35px">
                   <th width="5%"></th>
                   <th style="text-align:left;padding-left:15px;">กิจกรรม</th>
@@ -170,6 +170,7 @@
                   :key="item.id"
                   style="text-align:center;"
                   height="35px"
+                  class="card_table_content_font"
                 >
                   <td></td>
                   <td class="two-data-card2" style="text-align:left; ">
@@ -202,7 +203,7 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead color="gray">
-                  <tr class="">
+                  <tr class="table_head1">
                     <th width="" class="text-left">
                       ลำดับ
                     </th>
@@ -228,7 +229,7 @@
                 </thead>
                 <tbody>
                   <tr
-                    class="text-left"
+                    class="text-left card_table_content_font"
                     v-for="item in data_table_p7_2"
                     :key="item.id"
                   >
