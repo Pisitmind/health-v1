@@ -131,7 +131,7 @@
                   <table width="100%">
                     <tr>
                       <td style="text-align:center;">
-                        <div class="label_text_card1">
+                        <div class="label_text_card_norm">
                           <div>
                             <v-icon small color="blue"> mdi-circle</v-icon>
                             <span class="black--text">ชาย</span>
@@ -303,7 +303,7 @@
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
-                      <div class="label_text_card1">
+                      <div class="label_text_card_norm">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
                           <span class="black--text"> ชาย </span>
@@ -1061,7 +1061,7 @@ export default {
 .head_dialog_c2_p4 {
   display: flex;
 }
-.label_text_card1 {
+.label_text_card_norm {
   font-size: 14px;
 }
 .v-card__title {

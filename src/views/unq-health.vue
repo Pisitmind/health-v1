@@ -129,7 +129,7 @@
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
-                      <div class="label_text_card1">
+                      <div class="label_text_card_norm">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
                           <span class="black--text">ชาย</span>
@@ -634,7 +634,12 @@ export default {
               },
               scaleLabel: {
                 display: true,
-                labelString: ["ปกติ", "เริ่มสูง", "สูง", "สูงมาก"],
+                labelString: [
+                  "      ปกติ      ",
+                  "      เริ่มสูง      ",
+                  "      สูง      ",
+                  "      สูงมาก      ",
+                ],
               },
             },
           ],
@@ -861,10 +866,10 @@ export default {
   padding: 10px 10px;
   margin-bottom: 5px;
 }
-.label_text_card1 {
+.label_text_card_norm {
   display: flex;
   justify-content: start;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   font-size: 14px;
   font-weight: regular;
 }

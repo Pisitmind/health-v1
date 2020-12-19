@@ -1327,13 +1327,7 @@ th {
   font-size: 14px;
   font-weight: lighter;
 }
-.label_text_card1 {
-  display: flex;
-  justify-content: start;
-  padding-left: 70px;
-  font-size: 15px;
-  // background-color: #ad8dbb;
-}
+
 
 .label_graph {
   padding-bottom: 20px;

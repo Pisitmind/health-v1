@@ -198,10 +198,22 @@ html .set_hidden {
 
 .label_text_card3 {
   display: flex;
-  justify-content: start;
-  padding-left: 70px+10px;
+  justify-content: start !important;
+  padding-left: 70px !important;
   font-size: 14px;
   font-weight: regular;
+}
+.label_text_card1 {
+  display: flex;
+  justify-content: start !important;
+  padding-left: 50px !important;
+  font-size: 14px;
+}
+.label_text_card_norm {
+  display: flex;
+  justify-content: start !important;
+  /* padding-left: 50px !important; */
+  font-size: 14px;
 }
 .label_text_p6 {
   display: flex;

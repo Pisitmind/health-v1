@@ -690,5 +690,6 @@ export default {
 .label_text_card3 {
   display: flex;
   justify-content: space-around;
+  background-color:rgba(red, green, blue, 0.3);
 }
 </style>
