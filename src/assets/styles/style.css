@@ -220,6 +220,11 @@ html .set_hidden {
   font-size: 14px;
   color: gray;
 }
+.card3_line2_fx {
+  padding-left: 20px;
+  font-size: 14px;
+  color: gray;
+}
 .sub_card_text_sp {
   padding-left: 30px;
   font-size: 14px;
@@ -277,9 +282,8 @@ html .set_hidden {
 .head_size {
   font-size: 25px;
 }
-.s_bold{
+.s_bold {
   font-weight: bold;
-
 }
 .card5-bot-text,
 .card6-bot-text {

@@ -333,7 +333,7 @@
                   </span>
                 </v-card-title>
                 <v-card-subtitle>
-                  <div class="card3_line2 grey--text" >
+                  <div class="card3_line2 grey--text">
                     <span
                       >ค่าเฉลี่ยการเต้นของหัวใจจากผู้ใช้เพศชายทั้งหมดตามช่วงอายุ</span
                     >
@@ -505,7 +505,7 @@
           </div>
           <div class="card1_p4_content">
             <div class="card1_p4_content_left">
-              <div class="card3_line2 grey--text" >
+              <div class="card3_line2 grey--text">
                 <span
                   >วัดจากค่าไขมันในร่างกาย
                   เป็นสัดส่วนสำคัญในการสังเกตุคุณภาพของระบบเซลล์ในร่างกาย</span
@@ -519,7 +519,7 @@
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p4_content_right">
-              <div class="card3_line2 grey--text" >
+              <div class="card3_line2 grey--text">
                 <span
                   >ค่าเฉลี่ยคะแนนร่างกายของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                 >
@@ -980,6 +980,7 @@ export default {
   /* padding-bottom: 60px; */
   /* background-color: rgba(0, 0, 90, 0.2); */
 }
+/* set style */
 .card2_content_bot {
   /* background-color: rgba(0, 80, 10, 0.1); */
   font-size: 16px;
@@ -990,6 +991,7 @@ export default {
 
 .card2_content_bot {
   display: flex;
+  padding-top: 20px;
   /* justify-content: space-between; */
   justify-content: space-around;
   /* width: 100%; */
@@ -1036,7 +1038,7 @@ export default {
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
-.label_grpah1_c1_p4{
+.label_grpah1_c1_p4 {
   padding-left: 40px;
 }
 .title_card1_p4 {

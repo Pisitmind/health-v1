@@ -125,7 +125,7 @@
                   class="bdr_0"
                   style="padding-righ:5px; border-right: 1px solid grey !important;"
                 >
-                  <div class="card3_line2 grey--text">
+                  <div class="card3_line2_fx grey--text">
                     <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
                   </div>
                   <!-- <div style="height:230px"> -->
