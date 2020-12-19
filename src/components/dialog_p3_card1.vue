@@ -1,256 +1,284 @@
 <template>
-  <div class="dialog_p3_card1">
-    <v-card elevation="0">
-      <v-card-title> </v-card-title>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas id="graph1_c1_p3" width="500px" height="200px"></canvas>
+  <v-container grid-list-lg-xl class="dialog_p3_card1">
+    <div class="card_el">
+      <v-card class="card1_p3_root bdr_12">
+        <v-card-title>
+          <div class="head_dialog_c1_p3">
+            <div>
+              <v-btn
+                color="black darken-1"
+                icon
+                @click="$router.push('Moving')"
+              >
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_prev.svg"
+                  alt="prev"
+                />
+              </v-btn>
             </div>
-            <div class="table_content_card2">
-              <table style="width: 100%;">
-                <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th
-                    scope="row"
-                    width="16%"
-                    align="left"
-                    class="head_table_card3"
-                  >
-                    <v-icon small :style="{ color: item.color }">{{
-                      item.icon
-                    }}</v-icon>
-                    <span class="black--text pd_text_table_c3 pd_text_5 font_sm"
-                      ><strong>{{ item.type }}</strong></span
+            <div>
+              <span class="headline pl-5">รายละเอียดการเคลื่อนไหว</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
+          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง ปัญหาสุขภาพในระยะสั้น กลาง
+          และยาวได้
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="set_center">
+                <canvas id="graph1_c1_p3" width="500px" height="200px"></canvas>
+              </div>
+              <div class="table_content_card2">
+                <table style="width: 100%;">
+                  <tr v-for="item in data_card3" :key="item.id" align="center">
+                    <th
+                      scope="row"
+                      width="17%"
+                      align="left"
+                      class="head_table_card3"
                     >
-                  </th>
-                  <td
-                    v-for="n in 7"
-                    :key="n"
-                    height="35px"
-                    class="text_table_font_stle"
-                  >
-                    {{ item.data[n - 1] }}
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
-            <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+4%</v-btn
+                      <v-icon small :style="{ color: item.color }">{{
+                        item.icon
+                      }}</v-icon>
+                      <span
+                        class="black--text pd_text_table_c3 pd_text_5 font_sm"
+                        ><strong>{{ item.type }}</strong></span
                       >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="sub_card_dia_mini">
-                        <canvas
-                          id="graph_dialog_c2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span style="font-size:30px;"
-                              ><strong>119</strong></span
-                            >
-                          </tr>
-                          <tr class="">
-                            <span>
-                              ก้าว / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
+                    </th>
+                    <td
+                      v-for="n in 7"
+                      :key="n"
+                      height="35px"
+                      class="text_table_font_stle"
+                    >
+                      {{ item.data[n - 1] }}
                     </td>
                   </tr>
                 </table>
-              </v-card>
+              </div>
             </div>
-            <br />
+            <div class="content_top_right_page">
+              <!-- data top right -->
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+4%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="sub_card_dia_mini">
+                          <canvas
+                            id="graph_dialog_c2"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span style="font-size:30px;"
+                                ><strong>119</strong></span
+                              >
+                            </tr>
+                            <tr class="">
+                              <span>
+                                ก้าว / วัน
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+              <br />
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>ค่าเฉลี่ยการนั่ง (ในช่วง 6 เดือน)</span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+12%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="sub_card_dia_mini">
+                          <canvas
+                            id="graph_dialog_c3"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span style="font-size:30px;"
+                                ><strong>64</strong></span
+                              >
+                            </tr>
+                            <tr class="">
+                              <span>
+                                ครั้ง / วัน
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+            </div>
+          </div>
+          <div class="content_dialog_page_bot">
             <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการนั่ง (ในช่วง 6 เดือน)</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+12%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="sub_card_dia_mini">
-                        <canvas
-                          id="graph_dialog_c3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span style="font-size:30px;"
-                              ><strong>64</strong></span
+              <br />
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <span class="" style="font-size:18px; font-weight: bold;">
+                      ข้อมูลผู้ใช้งาน</span
+                    >
+                    <tr>
+                      <th class="text-left">
+                        รหัส
+                      </th>
+                      <th class="text-left">
+                        ชื่อ-สกุล
+                      </th>
+                      <th class="text-left">
+                        ตำแหน่ง
+                      </th>
+                      <th class="text-left">
+                        การเดิน (วันนี้)
+                      </th>
+                      <th class="text-left">
+                        เปลี่ยนแปลงการเดิน
+                      </th>
+                      <th class="text-left">
+                        การนั่งนาน (วันนี้)
+                      </th>
+                      <th class="text-left">
+                        เปลี่ยนแปลงการนั่ง
+                      </th>
+                      <th class="text-left">
+                        ดูประวัติ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item in moving_data_1" :key="item.id">
+                      <td>{{ item.no }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.pos }}</td>
+                      <td>{{ item.walk_sum }}</td>
+                      <td :style="{ color: item.color0 }">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+                        {{ item.walk_change }}
+                      </td>
+                      <td>{{ item.long_sit }}</td>
+                      <td :style="{ color: item.color1 }">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+                        {{ item.sit_change }}
+                      </td>
+                      <td>
+                        <v-dialog v-model="dialog_2" :retain-focus="false">
+                          <template v-slot:activator="{ on, attrs50 }">
+                            <v-btn
+                              style="background-color:#AD8DBB; color:white;"
+                              elevation="2"
+                              small
+                              width="80px"
+                              v-bind="attrs50"
+                              v-on="on"
+                              @click="dialog_2 = true"
                             >
-                          </tr>
-                          <tr class="">
-                            <span>
-                              ครั้ง / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+                              {{ item.show_history }}
+                            </v-btn>
+                          </template>
+                          <v-card>
+                            <v-card-title>
+                              <div class="head_dialog">
+                                <div>
+                                  <span class="headline"
+                                    >รายละเอียดการเคลื่อนไหว</span
+                                  >
+                                </div>
+                                <div>
+                                  <v-btn
+                                    color="black darken-1"
+                                    icon
+                                    @click="dialog_2 = false"
+                                  >
+                                    <v-icon>mdi-close</v-icon>
+                                  </v-btn>
+                                </div>
+                              </div>
+                            </v-card-title>
+                            <v-card-text>
+                              กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
+                              เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                              ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                            </v-card-text>
+                            <v-card-content>
+                              <div>
+                                <sub_dia3 />
+                              </div>
+                            </v-card-content>
+                          </v-card>
+                        </v-dialog>
+                      </td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
             </div>
           </div>
-        </div>
-        <div class="content_dialog_page_bot">
-          <div>
-            <br />
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                  <span class="" style="font-size:18px; font-weight: bold;">
-                    ข้อมูลผู้ใช้งาน</span
-                  >
-                  <tr>
-                    <th class="text-left">
-                      รหัส
-                    </th>
-                    <th class="text-left">
-                      ชื่อ-สกุล
-                    </th>
-                    <th class="text-left">
-                      ตำแหน่ง
-                    </th>
-                    <th class="text-left">
-                      การเดิน (วันนี้)
-                    </th>
-                    <th class="text-left">
-                      เปลี่ยนแปลงการเดิน
-                    </th>
-                    <th class="text-left">
-                      การนั่งนาน (วันนี้)
-                    </th>
-                    <th class="text-left">
-                      เปลี่ยนแปลงการนั่ง
-                    </th>
-                    <th class="text-left">
-                      ดูประวัติ
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="item in moving_data_1" :key="item.id">
-                    <td>{{ item.no }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.pos }}</td>
-                    <td>{{ item.walk_sum }}</td>
-                    <td :style="{ color: item.color0 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.walk_change }}
-                    </td>
-                    <td>{{ item.long_sit }}</td>
-                    <td :style="{ color: item.color1 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.sit_change }}
-                    </td>
-                    <td>
-                      <v-dialog v-model="dialog_2" :retain-focus="false">
-                        <template v-slot:activator="{ on, attrs50 }">
-                          <v-btn
-                            style="background-color:#AD8DBB; color:white;"
-                            elevation="2"
-                            small
-                            width="80px"
-                            v-bind="attrs50"
-                            v-on="on"
-                            @click="dialog_2 = true"
-                          >
-                            {{ item.show_history }}
-                          </v-btn>
-                        </template>
-                        <v-card>
-                          <v-card-title>
-                            <div class="head_dialog">
-                              <div>
-                                <span class="headline"
-                                  >รายละเอียดการเคลื่อนไหว</span
-                                >
-                              </div>
-                              <div>
-                                <v-btn
-                                  color="black darken-1"
-                                  icon
-                                  @click="dialog_2 = false"
-                                >
-                                  <v-icon>mdi-close</v-icon>
-                                </v-btn>
-                              </div>
-                            </div>
-                          </v-card-title>
-                          <v-card-text>
-                            กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
-                            เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                            ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                          </v-card-text>
-                          <v-card-content>
-                            <div>
-                              <sub_dia3 />
-                            </div>
-                          </v-card-content>
-                        </v-card>
-                      </v-dialog>
-                    </td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-divider></v-divider>
-          </div>
-        </div>
 
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
-    </v-card>
-  </div>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -548,6 +576,7 @@ export default {
 .dialog_p3_card1 {
   width: 100%;
 }
+padding: 10px 20px 0px 20px;
 .head_table_card3 {
   font-size: 14px;
 }
@@ -592,5 +621,17 @@ export default {
 }
 .content_dialog_page_bot {
   padding: 0 30px;
+}
+.head_dialog_c1_p3 {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head_dialog_c2_p3 {
+  width: 27%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>

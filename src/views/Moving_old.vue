@@ -55,17 +55,17 @@
               <!-- head right -->
               <div class="head_card1_p3_r_title">
                 <div class="exit-icon-card3">
-                  <template>
-                    <v-btn small icon fab @click="$router.push('move_dtail')">
-                      <img
-                        height="30px"
-                        class="filter-white"
-                        src="../assets/icon/icon_detail.svg"
-                        alt="detail"
-                      />
-                    </v-btn>
-                  </template>
-                  <!-- <v-dialog v-model="dialog1" width="">
+                  <v-dialog v-model="dialog1" width="">
+                    <template v-slot:activator="{ on, attrs2 }">
+                      <v-btn small icon fab v-bind="attrs2" v-on="on">
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
                     <v-card>
                       <v-card-title>
                         <div class="head_dialog_c1_p3">
@@ -99,9 +99,10 @@
                         <div>
                           <dialog_p3 />
                         </div>
+                        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
                       </v-card-content>
                     </v-card>
-                  </v-dialog> -->
+                  </v-dialog>
                 </div>
               </div>
             </div>
@@ -530,12 +531,12 @@
 
 <script>
 import Chart from "chart.js";
-// import dialog_p3 from "@/components/dialog_p3_card1.vue";
+import dialog_p3 from "@/components/dialog_p3_card1.vue";
 import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
 // import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 export default {
   components: {
-    // dialog_p3,
+    dialog_p3,
     dialog_p3_2,
     // sub_dia3,
   },
@@ -1122,7 +1123,18 @@ export default {
   padding-right: 20px;
 }
 
-
+.head_dialog_c1_p3 {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head_dialog_c2_p3 {
+  width: 27%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .text_sub {
   font-size: 14px;
   // font-weight:lighter;

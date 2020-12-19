@@ -25,9 +25,9 @@
                       </v-btn>
                     </template>
                     <v-card>
-                      <v-card-title>
+                      <v-card-title class="set_head_dia">
                         <div class="head_dialog" id="head_dia_Hrate">
-                          <div>
+                          <div class="text_head_hr head-card2">
                             <span class="headline">Heart rate risk</span>
                           </div>
                           <div>
@@ -41,11 +41,16 @@
                             </v-btn>
                           </div>
                         </div>
+                        <div class="card2_line2 grey--text">
+                          <span>
+                            exercise and Weight loss can help limit some of the
+                            health risks associated with tachycardia by reducing
+                            the negative effects of high blood pressure and
+                            sleep apnea.
+                          </span>
+                        </div>
                       </v-card-title>
                       <v-card-text>
-                        exercise and Weight loss can help limit some of the
-                        health risks associated with tachycardia by reducing the
-                        negative effects of high blood pressure and sleep apnea.
                       </v-card-text>
                       <dia_noti />
                     </v-card>
@@ -309,7 +314,7 @@
                       alt="human"
                     />
                   </div>
-                  <div class="card3-bot-text ">
+                  <div class="card3-bot-text">
                     <span>Ideal weight</span>
                   </div>
                 </div>
@@ -1373,6 +1378,9 @@ export default {
   text-align: center;
   background-color:#f2f2f2;
 } */
+
+/* set sticky */
+
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;

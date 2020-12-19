@@ -1,15 +1,6 @@
 .fz_14 {
   font-size: 13px !important;
 }
-/* 
-@font-face {
-  font-family: "rsubold";
-  src: url("/fonts/rsu_bold-webfont.woff2") format("woff2"),
-    url("/fonts/rsu_bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-*/
 
 @font-face {
   font-family: "rsulight";
@@ -27,12 +18,7 @@
   font-style: normal;
   unicode-range: U+0E00 –U + 0e7f;
 }
-/* @font-face {
-  font-family: "CustomHeading";
-  src: url("/fonts/rsu-regular-webfont.woff") format("woff"),
-  url("/fonts/RSU_Regular.ttf") format("truetype"),
-  url("/fonts/rsu-regular-webfont.woff2") format("woff2");
-} */
+
 @font-face {
   font-family: "rsu_1";
   src: url("../fonts/rsu_bold-webfont.woff") format("woff"),
@@ -40,7 +26,7 @@
   unicode-range: U+0E00 –U + 0e7f;
 }
 .v-application {
-  font-family: rsuregular, rsulight, rsu_1;
+  font-family: rsuregular, rsulight, rsu_1 !important;
   /* font-family: rsuregular, CustomHeading; */
   font-size: normal;
   line-height: 1.5;
@@ -294,6 +280,10 @@ html .set_hidden {
 .head_size {
   font-size: 25px;
 }
+.headline {
+  font-size: 25px !important;
+  font-weight: bold !important;
+}
 .s_bold {
   font-weight: bold;
 }
@@ -387,6 +377,32 @@ html::-webkit-scrollbar {
     
 } */
 
+/* dialog style */
+.v-application .headline {
+  font-size: 30px !important;
+  font-weight: bold;
+  letter-spacing: normal !important;
+  font-family: rsuregular, rsulight, rsu_1 !important;
+}
+.text_head_hr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.set_head_dia {
+  padding: 0px 20px;
+  /* padding-top: 20px; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+  /* font-size: 20px; */
+}
+.head_dialog{
+  padding: 0px 20px;
+}
 /* @media only screen and (max-width: 768px) { */
 @media only screen and (max-width: 800px) {
   .fix_center {
