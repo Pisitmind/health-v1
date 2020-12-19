@@ -169,7 +169,7 @@
         </div>
       </v-card-content>
       <div style="padding-bottom:40px;"></div>
-      <div class="a">
+      <div class="hid">
         <v-card class="test" outlined width="400px" height="100px">
           <span>test</span>
         </v-card>
