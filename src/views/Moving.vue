@@ -236,53 +236,24 @@
               <!-- head right -->
               <div class="head_card1_p3_r_title">
                 <div class="exit-icon-card3">
-                  <v-dialog v-model="dialog20" :retain-focus="false" width="">
-                    <template v-slot:activator="{ on, attrs10 }">
-                      <v-btn small icon fab v-bind="attrs10" v-on="on">
-                        <img
-                          height="30px"
-                          class="filter-white"
-                          src="../assets/icon/icon_detail.svg"
-                          alt="detail"
-                        />
-                      </v-btn>
-                    </template>
-                    <v-card>
-                      <v-card-title>
-                        <div class="head_dialog_c2_p3">
-                          <div>
-                            <v-btn
-                              color="black darken-1"
-                              icon
-                              @click="dialog20 = false"
-                            >
-                              <img
-                                height="30px"
-                                class="filter-white"
-                                src="../assets/icon/icon_prev.svg"
-                                alt="prev"
-                              />
-                            </v-btn>
-                          </div>
-                          <div class="pd_text">
-                            <span class="headline"
-                              >รายละเอียดค่าการเผาผลาญ</span
-                            >
-                          </div>
-                        </div>
-                      </v-card-title>
-                      <v-card-text>
-                        กราฟสรุปรายละเอียดการเผาผลาญต่อเดือน
-                        เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง ปัญหาสุขภาพในระยะสั้น
-                        กลาง และยาวได้
-                      </v-card-text>
+                  <template>
+                    <v-btn small icon fab @click="$router.push('burn_dtail')">
+                      <img
+                        height="30px"
+                        class="filter-white"
+                        src="../assets/icon/icon_detail.svg"
+                        alt="detail"
+                      />
+                    </v-btn>
+                  </template>
+                  <!--  <v-card>
+                     
                       <v-card-content>
                         <div>
                           <dialog_p3_2 />
                         </div>
                       </v-card-content>
-                    </v-card>
-                  </v-dialog>
+                    </v-card> -->
                 </div>
               </div>
             </div>
@@ -531,12 +502,12 @@
 <script>
 import Chart from "chart.js";
 // import dialog_p3 from "@/components/dialog_p3_card1.vue";
-import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
+// import dialog_p3_2 from "@/components/dialog_p3_card2.vue";
 // import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 export default {
   components: {
     // dialog_p3,
-    dialog_p3_2,
+    // dialog_p3_2,
     // sub_dia3,
   },
   mounted: function() {
@@ -1121,7 +1092,6 @@ export default {
 .pd_r_20 {
   padding-right: 20px;
 }
-
 
 .text_sub {
   font-size: 14px;

@@ -56,53 +56,21 @@
                 <div class="head_card1_p4_r_title">
                   <div class="exit-icon-card3">
                     <!-- คอนเท้นย่อย ยัง -->
-                    <v-dialog v-model="dialog0" width="">
-                      <template v-slot:activator="{ on, attrs1 }">
-                        <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <img
-                            height="30px"
-                            class="filter-white"
-                            src="../assets/icon/icon_detail.svg"
-                            alt="detail"
-                          />
-                        </v-btn>
-                      </template>
-                      <v-card>
-                        <v-card-title>
-                          <div class="head_dialog_c1_p4">
-                            <div>
-                              <v-btn
-                                color="green darken-1"
-                                icon
-                                @click="dialog0 = false"
-                              >
-                                <img
-                                  height="30px"
-                                  class="filter-white"
-                                  src="../assets/icon/icon_prev.svg"
-                                  alt="prev"
-                                />
-                              </v-btn>
-                            </div>
-                            <div>
-                              <span class="headline"
-                                >รายละเอียดค่าการนอนหลับ</span
-                              >
-                            </div>
-                          </div>
-                        </v-card-title>
-                        <v-card-text>
-                          กราฟสรุปรายละเอียดการนอนหลับต่อเดือน
-                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                        </v-card-text>
-                        <v-card-content>
-                          <div>
-                            <dialog_p4 />
-                          </div>
-                        </v-card-content>
-                      </v-card>
-                    </v-dialog>
+                    <template>
+                      <v-btn
+                        small
+                        icon
+                        fab
+                        @click="$router.push('sleep_dtail')"
+                      >
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -237,53 +205,16 @@
                 <div class="head_card1_p4_r_title">
                   <div class="exit-icon-card3">
                     <!-- คอนเท้นย่อย ยัง -->
-                    <v-dialog v-model="dialog1" width="">
-                      <template v-slot:activator="{ on, attrs2 }">
-                        <v-btn small icon fab v-bind="attrs2" v-on="on">
-                          <img
-                            height="30px"
-                            class="filter-white"
-                            src="../assets/icon/icon_detail.svg"
-                            alt="detail"
-                          />
-                        </v-btn>
-                      </template>
-                      <v-card>
-                        <v-card-title>
-                          <div class="head_dialog_c2_p4">
-                            <div>
-                              <v-btn
-                                color="green darken-1"
-                                icon
-                                @click="dialog1 = false"
-                              >
-                                <img
-                                  height="30px"
-                                  class="filter-white"
-                                  src="../assets/icon/icon_prev.svg"
-                                  alt="prev"
-                                />
-                              </v-btn>
-                            </div>
-                            <div class="pd_text">
-                              <span class="headline"
-                                >รายละเอียดค่าการเต้นของหัวใจ</span
-                              >
-                            </div>
-                          </div>
-                        </v-card-title>
-                        <v-card-text>
-                          กราฟสรุปรายละเอียดการเต้นของหัวใจ
-                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                        </v-card-text>
-                        <v-card-content>
-                          <div>
-                            <dialog_p4_2 />
-                          </div>
-                        </v-card-content>
-                      </v-card>
-                    </v-dialog>
+                    <template>
+                      <v-btn small icon fab   @click="$router.push('heart_dtail')">
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -444,60 +375,22 @@
                 <div class="head_card1_p4_r_title">
                   <div class="exit-icon-card3">
                     <!-- ยังก่อน -->
-                    <v-dialog v-model="dialog2" width="">
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-btn
-                          small
-                          icon
-                          fab
-                          v-bind="attrs"
-                          v-on="on"
-                          class="hid"
-                        >
-                          <img
-                            height="30px"
-                            class="filter-white"
-                            src="../assets/icon/icon_detail.svg"
-                            alt="detail"
-                          />
-                        </v-btn>
-                      </template>
-                      <v-card>
-                        <v-card-title>
-                          <div class="head_dialog_c2_p4">
-                            <div>
-                              <v-btn
-                                color="green darken-1"
-                                icon
-                                @click="dialog2 = false"
-                              >
-                                <img
-                                  height="30px"
-                                  class="filter-white"
-                                  src="../assets/icon/icon_prev.svg"
-                                  alt="prev"
-                                />
-                              </v-btn>
-                            </div>
-                            <div class="pd_text">
-                              <span class="headline"
-                                >รายละเอียดค่าคะแนนร่างกาย</span
-                              >
-                            </div>
-                          </div>
-                        </v-card-title>
-                        <v-card-text>
-                          กราฟสรุปรายละเอียดค่าคะแนนร่างกายต่อเดือน
-                          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                        </v-card-text>
-                        <v-card-content>
-                          <div>
-                            <dialog_p4_3 />
-                          </div>
-                        </v-card-content>
-                      </v-card>
-                    </v-dialog>
+                    <template>
+                      <v-btn
+                        small
+                        icon
+                        fab
+                        @click="$router.push('bmi_dtail')"
+                        class="hid"
+                      >
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -549,12 +442,12 @@
 
 <script>
 import Chart from "chart.js";
-import dialog_p4 from "@/components/dialog_p4_card1.vue";
-import dialog_p4_2 from "@/components/dialog_p4_card2.vue";
+// import dialog_p4 from "@/components/dialog_p4_card1.vue";
+// import dialog_p4_2 from "@/components/dialog_p4_card2.vue";
 export default {
   components: {
-    dialog_p4,
-    dialog_p4_2,
+    // dialog_p4,
+    // dialog_p4_2,
   },
   mounted: function() {
     // card1 graph

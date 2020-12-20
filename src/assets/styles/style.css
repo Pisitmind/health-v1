@@ -56,6 +56,10 @@ html .set_hidden {
 .card1_p6_root {
   padding: 20px;
 }
+.card1_p3_root_sp {
+  padding: 20px;
+  padding-top: 0px;
+}
 .card2-graph {
   width: 100%;
   padding: 0 20px;
@@ -79,13 +83,24 @@ html .set_hidden {
   flex-wrap: wrap;
   align-items: center;
 }
+.set_center_sp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.bg_test {
+  background-color: rgba(241, 239, 91, 0.3);
+}
 .hid {
   display: none;
 }
 .bdr_0 {
   border-radius: 0 !important;
 }
-
+.zero_pd {
+  padding: 0px 0px 0px 16px !important;
+}
 .set_h30 {
   display: flex;
   justify-content: center;
@@ -215,6 +230,10 @@ html .set_hidden {
 .sub_card_text,
 .card3_line2 {
   padding-left: 30px;
+  font-size: 14px;
+  color: gray;
+}
+.sub_card_text_sp0 {
   font-size: 14px;
   color: gray;
 }
@@ -371,6 +390,23 @@ html .set_hidden {
   font-size: 15px !important;
   font-weight: bold;
 }
+.set_title_text td {
+  font-size: 15px !important;
+}
+.table_content td {
+  font-size: 14px !important;
+}
+.set_rowcontent {
+  display: flex;
+}
+.head_dialog_c1_p3,
+.head_dialog_c1_p4,
+.head_dialog_c2_p4 {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 /*  
 html::-webkit-scrollbar { 
     display: none; 
@@ -379,12 +415,12 @@ html::-webkit-scrollbar {
 
 /* dialog style */
 .v-application .headline {
-  font-size: 30px !important;
+  font-size: 25px !important;
   font-weight: bold;
   letter-spacing: normal !important;
   font-family: rsuregular, rsulight, rsu_1 !important;
 }
-.text_head_hr {
+.text_head_hr,.pd_text {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -400,8 +436,24 @@ html::-webkit-scrollbar {
   z-index: 999;
   /* font-size: 20px; */
 }
-.head_dialog{
+.head_dialog {
   padding: 0px 20px;
+}
+.sub_text_head {
+  padding-left: 20px !important;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+}
+.card2_line2 {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.set_height {
+  height: fit-content;
+}
+.h_table_dia {
+  font-size: 18px;
+  font-weight: bold;
 }
 /* @media only screen and (max-width: 768px) { */
 @media only screen and (max-width: 800px) {

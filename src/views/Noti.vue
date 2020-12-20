@@ -1470,10 +1470,7 @@ export default {
   text-align: bottom;
   /* padding-top: 10px; */
 }
-.card2_line2 {
-  font-size: 14px;
-  padding-left: 30px;
-}
+
 .data_table_card2 {
   width: 70%;
   /* padding: 20px 0; */

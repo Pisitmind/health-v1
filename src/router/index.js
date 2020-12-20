@@ -20,6 +20,9 @@ import sub_report5 from "../components/Report_sub5.vue";
 import admin_user from "../components/authorities.vue";
 import normal_user from "../components/normal_user.vue";
 import move_dtail from "../components/dialog_p3_card1.vue";
+import burn_dtail from "../components/dialog_p3_card2.vue";
+import sleep_dtail from "../components/dialog_p4_card1.vue";
+import heart_dtail from "../components/dialog_p4_card2.vue";
 
 Vue.use(VueRouter);
 
@@ -141,6 +144,24 @@ const routes = [
     path: "/move_dtail",
     name: "move_dtail",
     component: move_dtail,
+    auth: true,
+  },
+  {
+    path: "/burn_dtail",
+    name: "burn_dtail",
+    component: burn_dtail,
+    auth: true,
+  },
+  {
+    path: "/sleep_dtail",
+    name: "sleep_dtail",
+    component: sleep_dtail,
+    auth: true,
+  },
+  {
+    path: "/heart_dtail",
+    name: "heart_dtail",
+    component: heart_dtail,
     auth: true,
   },
 

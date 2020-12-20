@@ -1,176 +1,202 @@
 <template>
-  <div class="dialog_p4_card2">
-    <v-card elevation="0">
-      <v-card-title> </v-card-title>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas id="graph1_c2_p4" width="500px" height="200px"></canvas>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
+  <v-container grid-list-lg-xl class="dialog_p4_card2">
+    <div class="card_el">
+      <v-card class="card1_p3_root bdr_12">
+        <v-card-title>
+          <div class="head_dialog_c2_p4">
             <div>
-              <v-card width="400px" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr width="">
-                    <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td width="20%">
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+2%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td>
-                      <div class="wd_100">
-                        <table class="text-align-center">
-                          <tr>
-                            <span>24</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              ฺBPM
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+              <v-btn color="green darken-1" icon @click="$router.go(-1)">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_prev.svg"
+                  alt="prev"
+                />
+              </v-btn>
             </div>
-            <br />
+            <div class="pd_text">
+              <span class="headline">รายละเอียดค่าการเต้นของหัวใจ</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          กราฟสรุปรายละเอียดการเต้นของหัวใจ เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="set_center">
+                <canvas id="graph1_c2_p4" width="500px" height="250px"></canvas>
+              </div>
+            </div>
+            <div class="content_top_right_page">
+              <!-- data top right -->
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr width="">
+                      <td class="left" width="70%" height="20%">
+                        <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span>
+                      </td>
+                      <v-spacer></v-spacer>
+                      <td width="20%">
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+2%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="card_c1_c2_pd">
+                          <canvas
+                            id="graph_dialog_c2"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <v-spacer></v-spacer>
+                      <td>
+                        <div class="wd_100">
+                          <table class="text-align-center">
+                            <tr>
+                              <span>24</span>
+                            </tr>
+                            <tr class="grey--text">
+                              <span>
+                                ฺBPM
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+              <br />
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr width="">
+                      <td class="left" width="70%" height="20%">
+                        <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span>
+                      </td>
+                      <v-spacer></v-spacer>
+                      <td width="20%">
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+4%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr class="bg_22">
+                      <td>
+                        <div class="card_c1_c2_pd">
+                          <canvas
+                            id="graph_dialog_c3"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <v-spacer></v-spacer>
+                      <td>
+                        <div class="">
+                          <table class="align-center">
+                            <tr>
+                              <span>34</span>
+                            </tr>
+                            <tr class="grey--text">
+                              <span>
+                                BPM
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+            </div>
+          </div>
+          <div class="content_dialog_page_bot">
             <div>
-              <v-card width="400px" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr width="">
-                    <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td width="20%">
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr class="bg_22">
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td>
-                      <div class="">
-                        <table class="align-center">
-                          <tr>
-                            <span>34</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              BPM
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+              <br />
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <span class="h_table_dia"> ข้อมูลผู้ใช้งาน</span>
+                    <tr class="table_head1">
+                      <th class="text-left">
+                        รหัส
+                      </th>
+                      <th class="text-left">
+                        ชื่อ-สกุล
+                      </th>
+                      <th class="text-left">
+                        ตำแหน่ง
+                      </th>
+                      <th class="text-center">
+                        ค่าเฉลี่ยการเต้นของหัวใจ
+                      </th>
+                      <th class="text-center">
+                        เปลี่ยนแปลงการเต้นของหัวใจ
+                      </th>
+                      <th class="text-center">
+                        ดูประวัติ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="item in status_data_1"
+                      :key="item.id"
+                      class="table_content"
+                    >
+                      <td>{{ item.no }}</td>
+                      <td>{{ item.name }}</td>
+                      <td >{{ item.pos }}</td>
+                      <td class="text-center">{{ item.sleep_sum }}</td>
+                      <td :style="{ color: item.color0 }" class="text-center">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+                        {{ item.sleep_change }}
+                      </td>
+                      <td class="text-center">
+                        <v-btn
+                          style="background-color:#AD8DBB; color:white;"
+                          elevation="2"
+                          small
+                          width="80px"
+                        >
+                          {{ item.show_history }}
+                        </v-btn>
+                      </td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
             </div>
           </div>
-        </div>
-        <div class="content_dialog_page_bot">
-          <div>
-            <br />
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                  <span class=""> ข้อมูลผู้ใช้งาน</span>
-                  <tr>
-                    <th class="text-left">
-                      รหัส
-                    </th>
-                    <th class="text-left">
-                      ชื่อ-สกุล
-                    </th>
-                    <th class="text-left">
-                      ตำแหน่ง
-                    </th>
-                    <th class="text-left">
-                      ค่าเฉลี่ยการเต้นของหัวใจ
-                    </th>
-                    <th class="text-left">
-                      เปลี่ยนแปลงการเต้นของหัวใจ
-                    </th>
-                    <th class="text-left">
-                      ดูประวัติ
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="item in status_data_1" :key="item.id">
-                    <td>{{ item.no }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.pos }}</td>
-                    <td>{{ item.sleep_sum }}</td>
-                    <td :style="{ color: item.color0 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.sleep_change }}
-                    </td>
-                    <td>
-                      <v-btn
-                        style="background-color:#AD8DBB; color:white;"
-                        elevation="2"
-                        small
-                        width="80px"
-                      >
-                        {{ item.show_history }}
-                      </v-btn>
-                    </td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-divider></v-divider>
-          </div>
-        </div>
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
-    </v-card>
-  </div>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>

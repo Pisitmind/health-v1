@@ -5,11 +5,8 @@
         <v-card-title>
           <div class="head_dialog_c1_p3">
             <div>
-              <v-btn
-                color="black darken-1"
-                icon
-                @click="$router.push('Moving')"
-              >
+              <!-- @click="$router.push('Moving')" -->
+              <v-btn color="black darken-1" icon @click="$router.go(-1)">
                 <img
                   height="30px"
                   class="filter-white"
@@ -170,57 +167,63 @@
               <v-simple-table>
                 <template v-slot:default>
                   <thead>
-                    <span class="" style="font-size:18px; font-weight: bold;">
-                      ข้อมูลผู้ใช้งาน</span
-                    >
-                    <tr>
+                    <span class="h_table_dia"> ข้อมูลผู้ใช้งาน</span>
+                    <tr class="table_head1">
                       <th class="text-left">
                         รหัส
                       </th>
                       <th class="text-left">
                         ชื่อ-สกุล
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         ตำแหน่ง
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         การเดิน (วันนี้)
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         เปลี่ยนแปลงการเดิน
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         การนั่งนาน (วันนี้)
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         เปลี่ยนแปลงการนั่ง
                       </th>
-                      <th class="text-left">
+                      <th class="text-center">
                         ดูประวัติ
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="item in moving_data_1" :key="item.id">
+                    <tr
+                      v-for="item in moving_data_1"
+                      :key="item.id"
+                      class="table_content"
+                    >
                       <td>{{ item.no }}</td>
                       <td>{{ item.name }}</td>
-                      <td>{{ item.pos }}</td>
-                      <td>{{ item.walk_sum }}</td>
-                      <td :style="{ color: item.color0 }">
+                      <td class="text-center">{{ item.pos }}</td>
+                      <td class="text-center">{{ item.walk_sum }}</td>
+                      <td class="text-center" :style="{ color: item.color0 }">
                         <v-icon :style="{ color: item.color0 }">{{
                           item.icon
                         }}</v-icon>
                         {{ item.walk_change }}
                       </td>
-                      <td>{{ item.long_sit }}</td>
-                      <td :style="{ color: item.color1 }">
+                      <td class="text-center">{{ item.long_sit }}</td>
+                      <td class="text-center" :style="{ color: item.color1 }">
                         <v-icon :style="{ color: item.color0 }">{{
                           item.icon
                         }}</v-icon>
                         {{ item.sit_change }}
                       </td>
-                      <td>
-                        <v-dialog v-model="dialog_2" :retain-focus="false">
+                      <td class="text-center">
+                        <v-dialog
+                          v-model="dialog_2"
+                          :retain-focus="false"
+                          width="80vw"
+                        >
                           <template v-slot:activator="{ on, attrs50 }">
                             <v-btn
                               style="background-color:#AD8DBB; color:white;"
@@ -235,7 +238,7 @@
                             </v-btn>
                           </template>
                           <v-card>
-                            <v-card-title>
+                            <v-card-title class="set_head_dia">
                               <div class="head_dialog">
                                 <div>
                                   <span class="headline"
@@ -252,12 +255,14 @@
                                   </v-btn>
                                 </div>
                               </div>
+                              <div class="card2_line2 grey--text">
+                                <span class="">
+                                  กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
+                                  เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+                                  ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+                                </span>
+                              </div>
                             </v-card-title>
-                            <v-card-text>
-                              กราฟสรุปรายละเอียดการเคลื่อนไหวต่อเดือน
-                              เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
-                              ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
-                            </v-card-text>
                             <v-card-content>
                               <div>
                                 <sub_dia3 />
@@ -576,7 +581,7 @@ export default {
 .dialog_p3_card1 {
   width: 100%;
 }
-padding: 10px 20px 0px 20px;
+/* padding: 10px 20px 0px 20px; */
 .head_table_card3 {
   font-size: 14px;
 }
@@ -622,12 +627,7 @@ padding: 10px 20px 0px 20px;
 .content_dialog_page_bot {
   padding: 0 30px;
 }
-.head_dialog_c1_p3 {
-  /* width: 100%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 .head_dialog_c2_p3 {
   width: 27%;
   display: flex;

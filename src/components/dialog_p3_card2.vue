@@ -1,225 +1,249 @@
 <template>
-  <div class="dialog_p3_card2">
-    <v-card elevation="0">
-      <v-card-title> </v-card-title>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas
-                id="graphdia1_c1_p3"
-                width="500px"
-                height="200px"
-              ></canvas>
+  <v-container grid-list-lg-xl class="dialog_p3_card2">
+    <div class="card_el">
+      <v-card class="card1_p3_root bdr_12">
+        <v-card-title>
+          <div class="head_dialog_c2_p3">
+            <div>
+              <v-btn color="black darken-1" icon @click="$router.go(-1)">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_prev.svg"
+                  alt="prev"
+                />
+              </v-btn>
             </div>
-            <div class="table_content_card2">
-              <table style="width: 100%;">
-                <tr v-for="item in data_card3" :key="item.id" align="center">
-                  <th
-                    scope="row"
-                    width="15%"
-                    align="left"
-                    class="head_table_card3"
-                  >
-                    <v-icon small :style="{ color: item.color }">{{
-                      item.icon
-                    }}</v-icon>
-                    <span class="black--text pd_text_table_c3 pd_text_5 font_sm"
-                      ><strong>{{ item.type }}</strong></span
+            <div class="">
+              <span class="headline pl-5">รายละเอียดค่าการเผาผลาญ</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          กราฟสรุปรายละเอียดการเผาผลาญต่อเดือน
+          เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง ปัญหาสุขภาพในระยะสั้น กลาง
+          และยาวได้
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="set_center">
+                <canvas
+                  id="graphdia1_c1_p3"
+                  width="500px"
+                  height="200px"
+                ></canvas>
+              </div>
+              <div class="table_content_card2">
+                <table style="width: 100%;">
+                  <tr v-for="item in data_card3" :key="item.id" align="center">
+                    <th
+                      scope="row"
+                      width="15%"
+                      align="left"
+                      class="head_table_card3"
                     >
-                  </th>
-                  <td
-                    v-for="n in 7"
-                    :key="n"
-                    height="35px"
-                    style="border:1px solid black;"
-                    class="font_omg"
-                  >
-                    {{ item.data[n - 1] }}
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
-            <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย </span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="left" width="80%" height="">
-                      <span>(ในช่วง 6 เดือน) </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="sub_card_dia_mini">
-                        <canvas
-                          id="graphdia_c2_p3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span style="font-size:30px;"
-                              ><strong>92</strong></span
-                            >
-                          </tr>
-                          <tr class="">
-                            <span>
-                              แคล / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
-            <br />
-            <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="80%" height="20%">
-                      <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง</span>
-                    </td>
-                    <td>
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+12%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="left" width="80%" height="">
-                      <span>(ในช่วง 6 เดือน) </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="sub_card_dia_mini">
-                        <canvas
-                          id="graphdia_c3_p3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="align-center">
-                          <tr>
-                            <span style="font-size:30px;"
-                              ><strong>136</strong></span
-                            >
-                          </tr>
-                          <tr class="">
-                            <span>
-                              แคล / วัน
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
-            </div>
-          </div>
-        </div>
-        <div class="content_dialog_page_bot">
-          <div>
-            <br />
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                  <span
-                    class=""
-                    width="100%"
-                    style="font-size:18px; font-weight: bold;"
-                  >
-                    ข้อมูลผู้ใช้งาน</span
-                  >
-                  <tr>
-                    <th class="text-left" width="10%">
-                      รหัส
-                    </th>
-                    <th class="text-left" width="20%">
-                      ชื่อ-สกุล
-                    </th>
-                    <th class="text-left" width="15%">
-                      ตำแหน่ง
-                    </th>
-                    <th class="text-left" width="20%">
-                      แคลอรี่ (วันนี้)
-                    </th>
-                    <th class="text-left" width="20%">
-                      เปลี่ยนแปลงแคลอรี่
-                    </th>
-                    <th class="text-left" width="10%">
-                      ดูประวัติ
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="item in moving_data_1" :key="item.id">
-                    <td>{{ item.no }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.pos }}</td>
-                    <td>{{ item.walk_sum }}</td>
-                    <td :style="{ color: item.color0 }">
-                      <v-icon :style="{ color: item.color0 }">{{
+                      <v-icon small :style="{ color: item.color }">{{
                         item.icon
                       }}</v-icon>
-
-                      {{ item.walk_change }}
-                    </td>
-                    <td>
-                      <v-btn
-                        style="background-color:#AD8DBB; color:white;"
-                        elevation="2"
-                        small
-                        width="80px"
+                      <span
+                        class="black--text pd_text_table_c3 pd_text_5 font_sm"
+                        ><strong>{{ item.type }}</strong></span
                       >
-                        {{ item.show_history }}
-                      </v-btn>
+                    </th>
+                    <td
+                      v-for="n in 7"
+                      :key="n"
+                      height="35px"
+                      style="border:1px solid black;"
+                      class="font_omg"
+                    >
+                      {{ item.data[n - 1] }}
                     </td>
                   </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-divider></v-divider>
+                </table>
+              </div>
+            </div>
+            <div class="content_top_right_page">
+              <!-- data top right -->
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>ค่าเฉลี่ยการเผาผลาญ ผู้ชาย </span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+4%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="left" width="80%" height="">
+                        <span>(ในช่วง 6 เดือน) </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="sub_card_dia_mini">
+                          <canvas
+                            id="graphdia_c2_p3"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span style="font-size:30px;"
+                                ><strong>92</strong></span
+                              >
+                            </tr>
+                            <tr class="">
+                              <span>
+                                แคล / วัน
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+              <br />
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <table class="data_c1c2">
+                    <tr>
+                      <td class="left" width="80%" height="20%">
+                        <span>ค่าเฉลี่ยการเผาผลาญ ผู้หญิง</span>
+                      </td>
+                      <td>
+                        <v-btn
+                          color="#22CE8B"
+                          depressed
+                          class="white--text"
+                          elevation="2"
+                          height="24px"
+                          >+12%</v-btn
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="left" width="80%" height="">
+                        <span>(ในช่วง 6 เดือน) </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="sub_card_dia_mini">
+                          <canvas
+                            id="graphdia_c3_p3"
+                            width=""
+                            height="100px"
+                          ></canvas>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="wd_100">
+                          <table class="align-center">
+                            <tr>
+                              <span style="font-size:30px;"
+                                ><strong>136</strong></span
+                              >
+                            </tr>
+                            <tr class="">
+                              <span>
+                                แคล / วัน
+                              </span>
+                            </tr>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card>
+              </div>
+            </div>
           </div>
-        </div>
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
-    </v-card>
-  </div>
+          <div class="content_dialog_page_bot">
+            <div>
+              <br />
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <span
+                      class=""
+                      width="100%"
+                      style="font-size:18px; font-weight: bold;"
+                    >
+                      ข้อมูลผู้ใช้งาน</span
+                    >
+                    <tr>
+                      <th class="text-left" width="10%">
+                        รหัส
+                      </th>
+                      <th class="text-left" width="20%">
+                        ชื่อ-สกุล
+                      </th>
+                      <th class="text-left" width="15%">
+                        ตำแหน่ง
+                      </th>
+                      <th class="text-left" width="20%">
+                        แคลอรี่ (วันนี้)
+                      </th>
+                      <th class="text-left" width="20%">
+                        เปลี่ยนแปลงแคลอรี่
+                      </th>
+                      <th class="text-left" width="10%">
+                        ดูประวัติ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item in moving_data_1" :key="item.id">
+                      <td>{{ item.no }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.pos }}</td>
+                      <td>{{ item.walk_sum }}</td>
+                      <td :style="{ color: item.color0 }">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+
+                        {{ item.walk_change }}
+                      </td>
+                      <td>
+                        <v-btn
+                          style="background-color:#AD8DBB; color:white;"
+                          elevation="2"
+                          small
+                          width="80px"
+                        >
+                          {{ item.show_history }}
+                        </v-btn>
+                      </td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
+            </div>
+          </div>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -521,7 +545,7 @@ export default {
 </script>
 
 <style scoped>
-.dialog_p3_card1 {
+.dialog_p3_card2 {
   width: 100%;
 }
 .t_switch {
@@ -565,5 +589,10 @@ export default {
 }
 .content_dialog_page_bot {
   padding: 0 30px;
+}
+.head_dialog_c2_p3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>

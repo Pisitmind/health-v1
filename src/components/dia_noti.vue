@@ -115,7 +115,7 @@
             <template v-slot:default>
               <thead>
                 <span class="set_bold fz_20"> NOTIFY : ADMIN LIST</span>
-                <tr>
+                <tr class="">
                   <th class="text-center">
                     No
                   </th>
@@ -566,7 +566,7 @@ export default {
   font-weight: bold;
 }
 .fz_20 {
-  font-size: 20px;
+  font-size: 16px !important;
 }
 /* .c1 {
   background-color: greenyellow;

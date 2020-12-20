@@ -20,7 +20,7 @@
                     <v-col cols="12" md="12" sm="12" class="zero_pd">
                       <span class="big_font">Supratcha Wiwattanakorn</span>
                     </v-col>
-                    <v-col cols="12" md="12" sm="12" class="zero_pd">
+                    <v-col cols="12" md="12" sm="12"  class="zero_pd">
                       <span class="grey--text">ตำแหน่ง : ผู้ช่วยสอน</span>
                     </v-col>
                   </v-row>
@@ -28,110 +28,11 @@
               </v-col>
               <v-col cols="12" md="6" sm="6"> </v-col>
             </v-row>
+            <!-- End head page -->
+
           </div>
-          <!-- End head page -->
-          <v-container-text>
-            <v-layout row wrap justify="space-between" width="100%">
-              <v-flex xs12 md6>
-                <v-card
-                  elevation="0"
-                  class="bdr_0"
-                  style="padding-righ:15px !important; border-right: 1px solid grey !important;"
-                  width="100%"
-                >
-                  <v-row
-                    class=" pt-0 set_height"
-                    style="
-    margin-right: 0px;"
-                  >
-                    <v-col
-                      cols="12"
-                      md="8"
-                      sm="4"
-                      class="set_center  set_height pt-5"
-                    >
-                      <span> การเดิน</span>
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      md="4"
-                      sm="4"
-                      class="set_center set_height"
-                      style="padding-right: 22px; padding-left: 0px;"
-                    >
-                      <v-select
-                        :items="itm_walk"
-                        placeholder="7 วันล่าสุด"
-                        outlined
-                        dense
-                        class="text-md-center"
-                        height="40px"
-                      >
-                      </v-select>
-                    </v-col>
-                  </v-row>
-                  <v-card-text>
-                    <div class="chart_31c1" style="width:95%">
-                      <canvas
-                        id="walk_graph1_2"
-                        width="250px"
-                        height=""
-                      ></canvas>
-                    </div>
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex xs12 md6 class="">
-                <v-card elevation="0" style="padding-left:10px;">
-                  <v-row class=" pt-0 set_height">
-                    <v-col
-                      cols="12"
-                      md="8"
-                      sm="4"
-                      class="set_center  set_height pt-5"
-                    >
-                      <tr style="padding:0; margin:0;" class="set_pre_table">
-                        <span> การนั่งนาน</span>
-                        <br />
-                        <span class="grey--text text_sub"
-                          >ข้อมูลการนั่งมาจากการนั่งอย่างต่อเนื่องเป็นเวลา
-                          1ชั่วโมงจะมีการเตือน</span
-                        >
-                      </tr>
-                    </v-col>
-
-                    <v-col
-                      cols="12"
-                      md="4"
-                      sm="4"
-                      class="set_center set_height"
-                    >
-                      <v-select
-                        :items="itm_walk"
-                        placeholder="7 วันล่าสุด"
-                        outlined
-                        dense
-                        justify-center
-                        height="40px"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
-                  <v-card-text>
-                    <div class="chart_31c1" style="width:95%">
-                      <canvas
-                        id="walk_graph2_2"
-                        width="250px"
-                        height=""
-                      ></canvas>
-                    </div>
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-            </v-layout>
-          </v-container-text>
-
-          <!-- content bug fix layout  -->
-          <!-- <div class="card1_p3_content">
+          <!-- dontent  -->
+          <div class="card1_p3_content">
             <div class="card1_p3_content_left">
               <div class="label_grpah1_c1_p3">
                 <table
@@ -199,26 +100,16 @@
                 <canvas id="walk_graph2_2" width="250px" height=""></canvas>
               </div>
             </div>
-          </div> -->
-
-          <!-- table done -->
+          </div>
           <div class="table_content31c1" style="width:100%">
             <br />
-            <span style="font-size:18px; font-weight: bold;">
-              ประวัติการแจ้งเตือน
-            </span>
-            <span class="grey--text" style="font-size:15x;"
-              >(การถูกแจ้งเตือนโดยผู้ดูแล)</span
-            >
+            <span style="font-weight: bold;"> ประวัติการแจ้งเตือน </span>
+            <span class="grey--text">(การถูกแจ้งเตือนโดยผู้ดูแล)</span>
             <br />
             <!-- <br /> -->
             <v-simple-table width="100%" id="customers">
               <thead>
-                <tr
-                  class="set_title_text grey--text "
-                  width="100%"
-                  cellspacing="0"
-                >
+                <tr class="grey--text" width="100%" cellspacing="0">
                   <td>ครั้งที่</td>
                   <td width="">วันที่ , เวลา</td>
                   <td width="">โดย</td>
