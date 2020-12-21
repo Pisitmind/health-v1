@@ -188,31 +188,32 @@
                     >
                       ข้อมูลผู้ใช้งาน</span
                     >
-                    <tr>
+                    
+                    <tr class="table_head1">
                       <th class="text-left" width="10%">
                         รหัส
                       </th>
                       <th class="text-left" width="20%">
                         ชื่อ-สกุล
                       </th>
-                      <th class="text-left" width="15%">
+                      <th class="text-center" width="15%">
                         ตำแหน่ง
                       </th>
-                      <th class="text-left" width="20%">
+                      <th class="text-center" width="20%">
                         แคลอรี่ (วันนี้)
                       </th>
-                      <th class="text-left" width="20%">
+                      <th class="text-center" width="20%">
                         เปลี่ยนแปลงแคลอรี่
                       </th>
-                      <th class="text-left" width="10%">
+                      <th class="text-center" width="10%">
                         ดูประวัติ
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="item in moving_data_1" :key="item.id">
-                      <td>{{ item.no }}</td>
-                      <td>{{ item.name }}</td>
+                    <tr class="table_content text-center" v-for="item in moving_data_1" :key="item.id">
+                      <td class="text-left">{{ item.no }}</td>
+                      <td class="text-left">{{ item.name }}</td>
                       <td>{{ item.pos }}</td>
                       <td>{{ item.walk_sum }}</td>
                       <td :style="{ color: item.color0 }">

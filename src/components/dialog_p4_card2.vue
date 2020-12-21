@@ -15,7 +15,7 @@
               </v-btn>
             </div>
             <div class="pd_text">
-              <span class="headline">รายละเอียดค่าการเต้นของหัวใจ</span>
+              <span class="headline pl-5">รายละเอียดค่าการเต้นของหัวใจ</span>
             </div>
           </div>
         </v-card-title>
@@ -64,14 +64,19 @@
                       <v-spacer></v-spacer>
                       <td>
                         <div class="wd_100">
-                          <table class="text-align-center">
-                            <tr>
-                              <span>24</span>
+                          <table class="align-center pd_5">
+                            <tr class="bold_tx card_num_head">
+                              <td>
+                                <span>24</span>
+                              </td>
                             </tr>
                             <tr class="grey--text">
-                              <span>
-                                ฺBPM
-                              </span>
+                              <td></td>
+                              <td class="card_num_text_bot">
+                                <span>
+                                  BPM
+                                </span>
+                              </td>
                             </tr>
                           </table>
                         </div>
@@ -113,14 +118,17 @@
                       <v-spacer></v-spacer>
                       <td>
                         <div class="">
-                          <table class="align-center">
-                            <tr>
+                          <table class="align-center pd_5">
+                            <tr class="bold_tx card_num_head">
                               <span>34</span>
                             </tr>
                             <tr class="grey--text">
-                              <span>
-                                BPM
-                              </span>
+                              <td></td>
+                              <td class="card_num_text_bot">
+                                <span>
+                                  BPM
+                                </span>
+                              </td>
                             </tr>
                           </table>
                         </div>
@@ -167,7 +175,7 @@
                     >
                       <td>{{ item.no }}</td>
                       <td>{{ item.name }}</td>
-                      <td >{{ item.pos }}</td>
+                      <td>{{ item.pos }}</td>
                       <td class="text-center">{{ item.sleep_sum }}</td>
                       <td :style="{ color: item.color0 }" class="text-center">
                         <v-icon :style="{ color: item.color0 }">{{

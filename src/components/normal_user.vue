@@ -20,12 +20,12 @@
           </div>
           <div class="">
             <v-row style="padding-top:10px;">
-              <v-col cols="6">
-                <div class="head_size s_bold" >
+              <v-col cols="12" md="6" sm="12">
+                <div class="head_size s_bold">
                   <span class="">จำนวนผู้ใช้งานทั้งหมด 2,800 คน</span>
                 </div>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="12" md="6" sm="12">
                 <v-text-field
                   v-model="message"
                   outlined
@@ -54,7 +54,7 @@
           รายชื่อผู้ใช้งาน
         </span>
       </v-card-content>
-      <v-card-content>
+      <v-card-text>
         <div class="">
           <v-row class="pd_content">
             <v-col
@@ -62,7 +62,8 @@
               v-for="idx in data_au2"
               :key="idx.id"
               cols="12"
-              sm="2"
+              sm="4"
+              md="2"
             >
               <v-dialog v-model="dialog_au2" width="85%" scrollable="false">
                 <template v-slot:activator="{ on, attrs30 }">
@@ -94,7 +95,7 @@
             </v-col>
           </v-row>
         </div>
-      </v-card-content>
+      </v-card-text>
 
       <div style="padding-bottom:40px;"></div>
     </v-card>

@@ -95,7 +95,7 @@
                                 ><strong>2:10</strong></span
                               >
                             </tr>
-                            <tr class="sm_text" width="100%">
+                            <tr class="card_num_text_bot" width="100%">
                               <span>
                                 ชั่วโมง / วัน
                               </span>
@@ -146,7 +146,7 @@
                                 ><strong>1:05</strong></span
                               >
                             </tr>
-                            <tr class="sm_text">
+                            <tr class="card_num_text_bot">
                               <span>
                                 ชั่วโมง / วัน
                               </span>
@@ -574,9 +574,6 @@ export default {
 }
 .left {
   text-align: left;
-}
-.sm_text {
-  font-size: 14px;
 }
 
 .content_top_left_page {

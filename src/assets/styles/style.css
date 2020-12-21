@@ -1,5 +1,5 @@
 .fz_14 {
-  font-size: 13px !important;
+  font-size: 14px !important;
 }
 
 @font-face {
@@ -396,12 +396,16 @@ html .set_hidden {
 .table_content td {
   font-size: 14px !important;
 }
+.bold_text {
+  font-weight: bold;
+}
 .set_rowcontent {
   display: flex;
 }
 .head_dialog_c1_p3,
 .head_dialog_c1_p4,
-.head_dialog_c2_p4 {
+.head_dialog_c2_p4,
+.head_dialog_c1_p6 {
   /* width: 100%; */
   display: flex;
   flex-direction: row;
@@ -420,7 +424,8 @@ html::-webkit-scrollbar {
   letter-spacing: normal !important;
   font-family: rsuregular, rsulight, rsu_1 !important;
 }
-.text_head_hr,.pd_text {
+.text_head_hr,
+.pd_text {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -436,6 +441,7 @@ html::-webkit-scrollbar {
   z-index: 999;
   /* font-size: 20px; */
 }
+
 .head_dialog {
   padding: 0px 20px;
 }
@@ -454,6 +460,14 @@ html::-webkit-scrollbar {
 .h_table_dia {
   font-size: 18px;
   font-weight: bold;
+}
+.card_num_head {
+  font-size: 30px;
+  font-weight: bold;
+}
+.card_num_text_bot {
+  font-weight: bold;
+  font-size: 16px;
 }
 /* @media only screen and (max-width: 768px) { */
 @media only screen and (max-width: 800px) {

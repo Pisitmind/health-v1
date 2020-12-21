@@ -111,15 +111,15 @@
       <br />
       <div class="content_dialog_page_bot">
         <div>
+          <span class="h_table_dia"> NOTIFY : ADMIN LIST</span>
           <v-simple-table>
             <template v-slot:default>
               <thead>
-                <span class="set_bold fz_20"> NOTIFY : ADMIN LIST</span>
-                <tr class="">
-                  <th class="text-center">
+                <tr class="table_head1">
+                  <th width="5%" class="text-left">
                     No
                   </th>
-                  <th class="text-center">
+                  <th class="text-left">
                     Name
                   </th>
                   <th class="text-center">
@@ -143,25 +143,30 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in data_card1_info" :key="item.id">
+                <tr
+                  class="table_content text-center"
+                  v-for="item in data_card1_info"
+                  :key="item.id"
+                >
                   <td>{{ item.no }}</td>
-                  <td>{{ item.name }}</td>
+                  <td class="text-left">{{ item.name }}</td>
                   <td class="text_green">{{ item.location }}</td>
                   <td>{{ item.room_no }}</td>
                   <td>{{ item.avg_bpm }}</td>
                   <td>{{ item.now_bpm }}</td>
-                  <td>
-                    <div>
+                  <td class="text-center align-center">
+                    <div class="set_center">
                       <v-switch
                         v-model="ex11"
                         color="#22CE8B"
                         hide-details
                         value
                         input-value="true"
+                        style=" margin-top: 0px !important;"
                       ></v-switch>
                     </div>
                   </td>
-                  <td >
+                  <td>
                     <v-btn
                       :style="{ backgroundColor: item.color }"
                       elevation="2"

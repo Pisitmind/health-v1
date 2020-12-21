@@ -27,7 +27,7 @@
                 <span><strong> Supratcha Wiwattanakorn</strong></span>
               </div>
               <div class="icon-profile">
-                <v-btn class="ma-1" color="blue lighten-2" icon rounded raised>
+                <v-btn class="ma-0" color="blue lighten-2" icon rounded raised>
                   <img
                     height="25px"
                     class="filter-white"
@@ -53,12 +53,11 @@
           <v-list-item-subtitle> </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-<!-- top menu -->
+      <!-- top menu -->
       <v-list dense nav>
         <div v-for="(item, i) in items" :key="item.id" class="">
           <!-- case not sub -->
           <v-list-item
-          
             v-if="!item.subLinks"
             :key="i"
             link
@@ -82,26 +81,26 @@
               />
             </v-list-item-icon>
 
-            <v-list-item-content class="fz_14">
-              <v-list-item-title >{{ item.title }}</v-list-item-title>
+            <v-list-item-content>
+              <v-list-item-title class="fz_14">{{
+                item.title
+              }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <!-- case has submenus -->
-          <v-list-group v-else :key="item.title" pl-2 >
+          <v-list-group v-else :key="item.title" pl-2>
             <template v-slot:activator>
               <!-- <v-list-tile class="" > -->
-                <v-list-item-icon class="set_icon_left pd_up"> 
-                  <img
-                    height="30px"
-                    class="filter-white grey_new mb-1"
-                    :src="require('../assets/icon/' + item.logo)"
-                  />
-                </v-list-item-icon>
-                <v-list-tile-content
-                  class="fz_14"
-                >
-                  <v-list-tile-title class="">{{ item.title }}</v-list-tile-title>
-                </v-list-tile-content>
+              <v-list-item-icon class="set_icon_left pd_up">
+                <img
+                  height="30px"
+                  class="filter-white grey_new mb-1"
+                  :src="require('../assets/icon/' + item.logo)"
+                />
+              </v-list-item-icon>
+              <v-list-tile-content class="">
+                <v-list-tile-title class="fz_14">{{ item.title }}</v-list-tile-title>
+              </v-list-tile-content>
               <!-- </v-list-tile> -->
             </template>
             <v-list-item
@@ -147,29 +146,31 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title    >{{ item2.title }}</v-list-item-title>
+              <v-list-item-title class="fz_14">{{ item2.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :key="item2.title">
             <template v-slot:activator>
               <!-- <v-list-tile> -->
-                <v-list-item-icon class="pd_up">
-                  <img
-                    v-if="(active = true)"
-                    height="30px"
-                    class="filter-white grey_new"
-                    :src="require('../assets/icon/' + item2.logo)"
-                  />
-                  <img
-                    v-else
-                    height="30px"
-                    class="filter-white"
-                    :src="require('../assets/icon/' + item2.logo_active)"
-                  />
-                </v-list-item-icon>
-                <v-list-tile-content>
-                  <v-list-tile-title class="fz_14">{{ item2.title }}</v-list-tile-title>
-                </v-list-tile-content>
+              <v-list-item-icon class="pd_up">
+                <img
+                  v-if="(active = true)"
+                  height="30px"
+                  class="filter-white grey_new"
+                  :src="require('../assets/icon/' + item2.logo)"
+                />
+                <img
+                  v-else
+                  height="30px"
+                  class="filter-white"
+                  :src="require('../assets/icon/' + item2.logo_active)"
+                />
+              </v-list-item-icon>
+              <v-list-tile-content>
+                <v-list-tile-title class="fz_14">{{
+                  item2.title
+                }}</v-list-tile-title>
+              </v-list-tile-content>
               <!-- </v-list-tile> -->
             </template>
             <v-list-item
@@ -333,6 +334,10 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.icon-profile {
+  padding: 0px;
+  margin: 0px;
+}
 .grey_new {
   opacity: 0.5;
   filter: #656666;
@@ -341,7 +346,7 @@ export default {
   /* opacity: .1; */
   /* filter: White; */
   /* fill: white; */
-  background-Color:green;
+  background-color: green;
 }
 .set_pl0 {
   padding-left: 0 !important;
@@ -374,7 +379,7 @@ a:visited {
   flex-direction: row;
 }
 .pro-name {
-  font-size: 12px;
+  font-size: 14px;
 }
 .center {
   display: block;
@@ -392,14 +397,13 @@ a:visited {
   fill: #7c7d7d;
   /* padding: 0; */
 }
-.v-list-group__header__append-icon{
+.v-list-group__header__append-icon {
   position: absolute;
   right: 10px;
 }
-.pd_up{
+.pd_up {
   /* background-color:rgba(0,200,50,0.4); */
   text-align: center;
   align-items: center;
 }
-
 </style>

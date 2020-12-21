@@ -262,18 +262,17 @@
                 <!-- head right -->
                 <div class="head_card1_p5_r_title">
                   <div class="exit-icon-card3">
-                    <v-dialog v-model="dialog2" width="">
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-btn small icon fab v-bind="attrs" v-on="on">
-                          <img
-                            height="30px"
-                            class="filter-white"
-                            src="../assets/icon/icon_detail.svg"
-                            alt="detail"
-                          />
-                        </v-btn>
-                      </template>
-                      <v-card>
+                    <template>
+                      <v-btn small icon fab @click="$router.push('bmi_dtail')">
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
+                    <!-- <v-card>
                         <v-card-title>
                           <div class="head_dialog_c2_p4">
                             <div>
@@ -309,8 +308,7 @@
                             <dialog_p5 />
                           </div>
                         </v-card-content>
-                      </v-card>
-                    </v-dialog>
+                      </v-card> -->
                   </div>
                 </div>
               </div>
@@ -406,10 +404,10 @@
 
 <script>
 import Chart from "chart.js";
-import dialog_p5 from "@/components/dialog_p5_card1.vue";
+// import dialog_p5 from "@/components/dialog_p5_card1.vue";
 export default {
   components: {
-    dialog_p5,
+    // dialog_p5,
   },
   mounted: function() {
     // card1 graph
@@ -690,6 +688,6 @@ export default {
 .label_text_card3 {
   display: flex;
   justify-content: space-around;
-  background-color:rgba(red, green, blue, 0.3);
+  background-color: rgba(red, green, blue, 0.3);
 }
 </style>

@@ -27,6 +27,7 @@
                 width="120px"
                 height="30px"
                 color="#EE3743"
+                @click="$emit('close')"
               >
                 <span> ลบ</span>
               </v-btn>
@@ -232,7 +233,7 @@ export default {
 .card_text {
   padding-top: 10px;
 }
-.set_pdleft_0{
-  padding-left:0;
+.set_pdleft_0 {
+  padding-left: 0;
 }
 </style>

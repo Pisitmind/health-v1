@@ -23,6 +23,8 @@ import move_dtail from "../components/dialog_p3_card1.vue";
 import burn_dtail from "../components/dialog_p3_card2.vue";
 import sleep_dtail from "../components/dialog_p4_card1.vue";
 import heart_dtail from "../components/dialog_p4_card2.vue";
+import bmi_dtail from "../components/dialog_p5_card1.vue";
+import bloodp_dtail from "../components/dialog_p6_card1.vue";
 
 Vue.use(VueRouter);
 
@@ -164,6 +166,18 @@ const routes = [
     component: heart_dtail,
     auth: true,
   },
+  {
+    path: "/bmi_dtail",
+    name: "bmi_dtail",
+    component: bmi_dtail,
+    auth: true,
+  },
+  {
+    path: "/bloodp_dtail",
+    name: "bloop_dtail",
+    component: bloodp_dtail,
+    auth: true,
+  },
 
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
@@ -187,7 +201,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-// router.replace("/login");
+router.replace("/login");
 
 // export default router;
 

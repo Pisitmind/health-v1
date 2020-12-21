@@ -56,25 +56,28 @@
                 <div class="head_card1_p6_r_title">
                   <div class="exit-icon-card3">
                     <!-- คอนเท้นย่อย ยัง -->
-                    <v-dialog v-model="dialog0" width="">
-                      <template v-slot:activator="{ on, attrs1 }">
-                        <v-btn small icon fab v-bind="attrs1" v-on="on">
-                          <img
-                            height="30px"
-                            class="filter-white"
-                            src="../assets/icon/icon_detail.svg"
-                            alt="detail"
-                          />
-                        </v-btn>
-                      </template>
-                      <v-card>
+                    <template>
+                      <v-btn
+                        small
+                        icon
+                        fab
+                        @click="$router.push('bloodp_dtail')"
+                      >
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
+                    <!-- <v-card>
                         <v-card-title>
                           <div class="head_dialog_c1_p6">
                             <div>
                               <v-btn
                                 color="green darken-1"
-                                icon
-                                @click="dialog0 = false"
+                              icon @click="$router.go(-1)">
                               >
                                 <img
                                   height="30px"
@@ -101,8 +104,7 @@
                             <dialog_p6_1 />
                           </div>
                         </v-card-content>
-                      </v-card>
-                    </v-dialog>
+                      </v-card> -->
                   </div>
                 </div>
               </div>
@@ -303,8 +305,8 @@
                                 >
                               </td>
                               <td
-                                class=""
-                                style="text-align:left; font-weight:bold; font-size: 13px;"
+                                class="table_content"
+                                style="text-align:left; font-weight:bold;"
                                 width="70%"
                               >
                                 <div class="fix_center_card">
@@ -375,7 +377,7 @@
                 </div>
                 <!-- <v-divider vertical></v-divider> -->
                 <div class="card3_p6_content_right">
-                  <v-card class="card2_l1 bdr_12_only" width="400px" height="">
+                  <v-card class="card2_l1 bdr_12_only" width="450px" height="">
                     <v-card-subtitle>
                       <span class="topic-name-card_c3 ">
                         ตัวบ่งชี้
@@ -393,7 +395,7 @@
                                   >
                                 </td>
                                 <td
-                                  class=""
+                                  class="table_content"
                                   style="text-align:left; font-weight:bold; font-size: 13px;"
                                   width="70%"
                                 >
@@ -405,7 +407,7 @@
                                       alt="women"
                                     />
                                     <span
-                                      style="align-text:left; letter-spacing: -1px;"
+                                      style="align-text:left; letter-spacing: 0px;"
                                       >{{ item.name }}</span
                                     >
                                   </div>
@@ -596,10 +598,10 @@
 
 <script>
 import Chart from "chart.js";
-import dialog_p6_1 from "@/components/dialog_p6_card1.vue";
+// import dialog_p6_1 from "@/components/dialog_p6_card1.vue";
 export default {
   components: {
-    dialog_p6_1,
+    // dialog_p6_1,
   },
   mounted: function() {
     // card1 graph
@@ -976,7 +978,7 @@ export default {
 .card2_r_all {
   width: 50%;
   /* padding: 20px 20px; */
-  padding: 20px 60px 20px 20px;
+  padding: 20px 40px 20px 20px;
 }
 .card3_p6_content_left {
   width: 50%;

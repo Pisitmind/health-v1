@@ -1,6 +1,6 @@
 <template>
-  <div class="set_hidden" id="login">
-    <v-app>
+  <div class="" id="login">
+    <v-app class="set_hidden">
       <v-main class="bg_top">
         <v-content>
           <v-container class="container" fluid>
@@ -54,14 +54,14 @@
           <!-- left card content foot -->
           <div dense class="p_200 foot_content_color">
             <div class="pd_top_foot pd_30">
-              <span>POWERED BY</span>
+              <span style="font-size:20px;">POWERED BY</span>
               <v-img
                 class="mg_y_10 "
                 max-width="160px"
                 src="../assets/logo/Logo BAAK_w.png"
               ></v-img>
               <span class="main_text">BAAK Co., Ltd.</span>
-                <div style="height:10px;"></div>
+              <div style="height:10px;"></div>
               <div class="icon_foot_l wd_70">
                 <img
                   height="30px"
@@ -159,7 +159,11 @@
   background-position: bottom 210px right 0px;
   /* background-repeat: no-repeat; */
   background-attachment: fixed;
+}
+#login,
+.set_hidden {
   overflow: hidden !important;
+  overflow-y: hidden !important;
 }
 
 .v-text-field {
@@ -200,7 +204,7 @@
   position: absolute;
   /* position: relative; */
   z-index: 9999;
-  padding-top: 120px;
+  padding-top: 140px;
   left: 0;
   right: 0;
 }
@@ -209,7 +213,7 @@
 }
 .foot_item {
   width: 100%;
-  padding:0 70px;
+  padding: 0 70px;
   display: flex;
   justify-content: space-between;
   background-color: #ad8dbb;
@@ -220,6 +224,7 @@
 }
 .pd_icon {
   padding-left: 5px;
+  font-size: 17px;
 }
 .icon_foot_l {
   display: flex;
@@ -233,7 +238,7 @@
   width: 100%;
 }
 .pd_top_foot {
-  padding: 30px 0;
+  padding: 35px 0;
 
   align-content: center;
   justify-content: center;
@@ -257,7 +262,7 @@
     brightness(95%) contrast(109%);
 } */
 .main_text {
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(249, 236, 250);
   font-weight: 400;
 }

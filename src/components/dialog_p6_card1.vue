@@ -1,194 +1,279 @@
 <template>
-  <div class="dialog_p6_card1">
-    <v-card elevation="0">
-      <v-card-title> </v-card-title>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="set_center">
-              <canvas id="graph1_c1_p6" width="500px" height="200px"></canvas>
-            </div>
-            <div class="table_content_card2">
-              <table style="width: 100%;"></table>
-            </div>
-          </div>
-          <div class="content_top_right_page">
-            <!-- data top right -->
+  <v-container grid-list-lg-xl class="dialog_p6_card1">
+    <div class="card_el">
+      <v-card class="card1_p3_root bdr_12">
+        <v-card-title>
+          <div class="head_dialog_c1_p6">
             <div>
-              <v-card width="" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยความดันโลหิต ผู้ชาย</span>
-                      <br />
-                      <span>(ในช่วง 6 เดือน) </span>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td width="20%">
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+4%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c2"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="text-align-center">
-                          <tr>
-                            <span>24</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              ฺBPM
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+              <v-btn color="green darken-1" icon @click="$router.go(-1)">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_prev.svg"
+                  alt="prev"
+                />
+              </v-btn>
             </div>
-            <br />
+            <div class="pd_text">
+              <span class="headline pl-5">รายละเอียดค่าความดันโลหิต</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          กราฟสรุปรายละเอียดการเต้นของหัวใจ เพื่อสังเกตุพฤติกรรมที่อาจส่งผลถึง
+          ปัญหาสุขภาพในระยะสั้น กลาง และยาวได้
+        </v-card-text>
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="set_center">
+                <canvas id="graph1_c1_p6" width="500px" height="200px"></canvas>
+              </div>
+              <div class="table_content_card2">
+                <table style="width: 100%;"></table>
+              </div>
+            </div>
+            <div class="content_top_right_page">
+              <!-- data top right -->
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <v-card-content>
+                    <v-simple-table class="data_c1c2">
+                      <tr
+                        style="padding:0; margin:0;"
+                        class="set_pre_table_sp_sp"
+                      >
+                        <!-- <td style="padding-left:20px; "> -->
+                        <td width="40%">
+                          <span class="text_sub"
+                            >ค่าเฉลี่ยความดันโลหิต ผู้ชาย</span
+                          ><br />
+                          <span class="text_sub">(ในช่วง 6 เดือน) </span>
+                        </td>
+                        <!-- </td> -->
+                        <td class="text-center">
+                          <v-btn
+                            color="#22CE8B"
+                            depressed
+                            class="white--text"
+                            elevation="2"
+                            height="24px"
+                            >+4%</v-btn
+                          >
+                        </td>
+                      </tr>
+                      <!-- <v-row>
+                        <v-col class="left" width="70%" height="">
+                          <span>ค่าเฉลี่ยความดันโลหิต ผู้ชาย</span>
+                          <br />
+                          <span>(ในช่วง 6 เดือน) </span>
+                        </v-col>
+                        <v-col width="20%">
+                          <v-btn
+                            color="#22CE8B"
+                            depressed
+                            class="white--text"
+                            elevation="2"
+                            height="24px"
+                            >+4%</v-btn
+                          >
+                        </v-col>
+                      </v-row> -->
+                      <tr>
+                        <td>
+                          <div class="card_c1_c2_pd">
+                            <canvas
+                              id="graph_dialog_c2"
+                              width="200px"
+                              height="100px"
+                            ></canvas>
+                          </div>
+                        </td>
+                        <!-- <v-spacer></v-spacer> -->
+                        <td>
+                          <div class="wd_100">
+                            <table class="align-center pd_5">
+                              <tr class="bold_tx card_num_head">
+                                <td>
+                                  <span>24</span>
+                                </td>
+                              </tr>
+                              <tr class="grey--text">
+                                <td></td>
+                                <td class="card_num_text_bot">
+                                  <span>
+                                    BPM
+                                  </span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </v-simple-table>
+                  </v-card-content>
+                </v-card>
+              </div>
+              <br />
+              <div>
+                <v-card width="" class="c1_c2_dialog bdr_12">
+                  <v-card-content>
+                    <v-simple-table class="data_c1c2">
+                      <tr
+                        style="padding:0; margin:0;"
+                        class="set_pre_table_sp_sp"
+                      >
+                        <!-- <td style="padding-left:20px; "> -->
+                        <td width="40%">
+                          <span class="text_sub"
+                            >ค่าเฉลี่ยความดันโลหิต ผู้หญิง </span
+                          ><br />
+                          <span class="text_sub">(ในช่วง 6 เดือน) </span>
+                        </td>
+                        <!-- </td> -->
+                        <td class="text-center">
+                          <v-btn
+                            color="#22CE8B"
+                            depressed
+                            class="white--text"
+                            elevation="2"
+                            height="24px"
+                            >+12%</v-btn
+                          >
+                        </td>
+                      </tr>
+
+                      <!-- <tr>
+                        <td class="left" width="70%" height="20%">
+                          <span>ค่าเฉลี่ยความดันโลหิต ผู้หญิง </span>
+                          <br />
+                          <span>(ในช่วง 6 เดือน) </span>
+                        </td>
+                        <v-spacer></v-spacer>
+                        <td width="20%">
+                          <v-btn
+                            color="#22CE8B"
+                            depressed
+                            class="white--text"
+                            elevation="2"
+                            height="24px"
+                            >+12%</v-btn
+                          >
+                        </td>
+                      </tr> -->
+                      <tr class="bg_22">
+                        <td>
+                          <div class="card_c1_c2_pd">
+                            <canvas
+                              id="graph_dialog_c3"
+                              width="200px"
+                              height="100px"
+                            ></canvas>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="wd_100">
+                            <table class="align-center pd_5">
+                              <tr class="bold_tx card_num_head">
+                                <span>34</span>
+                              </tr>
+                              <tr class="grey--text">
+                                <td></td>
+                                <td class="card_num_text_bot">
+                                  <span>
+                                    BPM
+                                  </span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </v-simple-table>
+                  </v-card-content>
+                </v-card>
+              </div>
+            </div>
+          </div>
+          <div class="content_dialog_page_bot">
             <div>
-              <v-card width="400px" class="c1_c2_dialog bdr_12">
-                <table class="data_c1c2">
-                  <tr>
-                    <td class="left" width="70%" height="20%">
-                      <span>ค่าเฉลี่ยความดันโลหิต ผู้หญิง </span>
-                      <br />
-                      <span>(ในช่วง 6 เดือน) </span>
-                    </td>
-                    <v-spacer></v-spacer>
-                    <td width="20%">
-                      <v-btn
-                        color="#22CE8B"
-                        depressed
-                        class="white--text"
-                        elevation="2"
-                        height="24px"
-                        >+12%</v-btn
-                      >
-                    </td>
-                  </tr>
-                  <tr class="bg_22">
-                    <td>
-                      <div class="card_c1_c2_pd">
-                        <canvas
-                          id="graph_dialog_c3"
-                          width=""
-                          height="100px"
-                        ></canvas>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="wd_100">
-                        <table class="text-align-center">
-                          <tr>
-                            <span>34</span>
-                          </tr>
-                          <tr class="grey--text">
-                            <span>
-                              ฺBPM
-                            </span>
-                          </tr>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card>
+              <br />
+              <v-simple-table>
+                <template v-slot:default>
+                  <thead>
+                    <span class="h_table_dia"> ข้อมูลผู้ใช้งาน</span>
+                    <tr class="table_head1">
+                      <th class="text-left">
+                        รหัส
+                      </th>
+                      <th class="text-left">
+                        ชื่อ-สกุล
+                      </th>
+                      <th class="text-center">
+                        ตำแหน่ง
+                      </th>
+                      <th>
+                        การเดิน (วันนี้)
+                      </th>
+                      <th>
+                        เปลี่ยนแปลงการเดิน
+                      </th>
+                      <th>
+                        การนั่งนาน (วันนี้)
+                      </th>
+                      <th>
+                        เปลี่ยนแปลงการนั่ง
+                      </th>
+                      <th class="text-center">
+                        ดูประวัติ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="table_content text-center"
+                      v-for="item in moving_data_1"
+                      :key="item.id"
+                    >
+                      <td class="text-left">{{ item.no }}</td>
+                      <td class="text-left">{{ item.name }}</td>
+                      <td>{{ item.pos }}</td>
+                      <td>{{ item.walk_sum }}</td>
+                      <td :style="{ color: item.color0 }">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+                        {{ item.walk_change }}
+                      </td>
+                      <td>{{ item.long_sit }}</td>
+                      <td :style="{ color: item.color1 }">
+                        <v-icon :style="{ color: item.color0 }">{{
+                          item.icon
+                        }}</v-icon>
+                        {{ item.sit_change }}
+                      </td>
+                      <td>
+                        <v-btn
+                          style="background-color:#AD8DBB; color:white;"
+                          elevation="2"
+                          small
+                          width="80px"
+                        >
+                          {{ item.show_history }}
+                        </v-btn>
+                      </td>
+                    </tr>
+                  </tbody>
+                </template>
+              </v-simple-table>
+              <v-divider></v-divider>
             </div>
           </div>
-        </div>
-        <div class="content_dialog_page_bot">
-          <div>
-            <br />
-            <v-simple-table>
-              <template v-slot:default>
-                <thead>
-                  <span class=""> ข้อมูลผู้ใช้งาน</span>
-                  <tr>
-                    <th class="text-left">
-                      รหัส
-                    </th>
-                    <th class="text-left">
-                      ชื่อ-สกุล
-                    </th>
-                    <th class="text-left">
-                      ตำแหน่ง
-                    </th>
-                    <th class="text-left">
-                      การเดิน (วันนี้)
-                    </th>
-                    <th class="text-left">
-                      เปลี่ยนแปลงการเดิน
-                    </th>
-                    <th class="text-left">
-                      การนั่งนาน (วันนี้)
-                    </th>
-                    <th class="text-left">
-                      เปลี่ยนแปลงการนั่ง
-                    </th>
-                    <th class="text-left">
-                      ดูประวัติ
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="item in moving_data_1" :key="item.id">
-                    <td>{{ item.no }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.pos }}</td>
-                    <td>{{ item.walk_sum }}</td>
-                    <td :style="{ color: item.color0 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.walk_change }}
-                    </td>
-                    <td>{{ item.long_sit }}</td>
-                    <td :style="{ color: item.color1 }">
-                      <v-icon :style="{ color: item.color0 }">{{
-                        item.icon
-                      }}</v-icon>
-                      {{ item.sit_change }}
-                    </td>
-                    <td>
-                      <v-btn
-                        style="background-color:#AD8DBB; color:white;"
-                        elevation="2"
-                        small
-                        width="80px"
-                      >
-                        {{ item.show_history }}
-                      </v-btn>
-                    </td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-            <v-divider></v-divider>
-          </div>
-        </div>
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
-    </v-card>
-  </div>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>
@@ -511,8 +596,11 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+/* padding:0px 20px; */
 .c1_c2_dialog {
   padding: 20px;
+  /* height: fit-content; */
+  /* width: fit-content; */
 }
 .card_c1_c2_pd {
   padding: 15px;
@@ -524,21 +612,33 @@ export default {
   justify-content: center;
 }
 .data_c1c2 {
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
+  width: 100%;
 }
 .left {
   text-align: left;
 }
-
 .content_top_left_page {
-  width: 50%;
+  width: 60%;
   height: 400px;
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
 }
+.content_top_right_page {
+  width: 40%;
+  padding: 0px 20px;
+}
 .content_dialog_page_bot {
   padding: 0 30px;
+}
+.text_sub {
+  font-size: 16px !important;
+}
+.set_pre_table_sp {
+  /* white-space: pre; */
+  white-space: normal;
+  line-height: 0.9;
 }
 </style>

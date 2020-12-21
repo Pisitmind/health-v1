@@ -20,7 +20,7 @@
           </div>
           <div class="">
             <v-row style="padding-top:10px;">
-              <v-col cols="6">
+                <v-col cols="12" md="6" sm="12">
                 <v-dialog v-model="dialog1" width="80%">
                   <template v-slot:activator="{ on, attrs_au }">
                     <v-btn
@@ -75,7 +75,7 @@
                   </v-card>
                 </v-dialog>
               </v-col>
-              <v-col cols="6">
+                <v-col cols="12" md="6" sm="12">
                 <v-text-field
                   v-model="message"
                   outlined
@@ -104,7 +104,7 @@
           รายชื่อเจ้าหน้าที่
         </span>
       </v-card-content>
-      <v-card-content style="background-color: transparent;">
+      <v-card-text style="background-color: transparent;">
         <div class="">
           <v-row class="pd_content">
             <v-col
@@ -112,7 +112,9 @@
               v-for="idx in data_au"
               :key="idx.id"
               cols="12"
-              sm="2"
+              sm="4"
+              md="2"
+              xs="12"
             >
               <v-dialog v-model="dialog_au" width="85%" scrollable="false">
                 <template v-slot:activator="{ on, attrs29 }">
@@ -167,7 +169,7 @@
             </div>
           </v-card>
         </div>
-      </v-card-content>
+      </v-card-text>
       <div style="padding-bottom:40px;"></div>
       <div class="hid">
         <v-card class="test" outlined width="400px" height="100px">

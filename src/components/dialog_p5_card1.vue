@@ -1,355 +1,402 @@
 <template>
-  <div class="dialog_p5_card1">
-    <div>
-      <v-card-content>
-        <div class="content_dialog_page_top">
-          <div class="content_top_left_page">
-            <div class="card_el_card2">
-              <!-- card2 head+content -->
-              <v-card class="card2_size" elevation="0">
-                <div class="card2_root">
-                  <!-- card2 content -->
-                  <div class="content1_card2">
-                    <div class="card_top_lNr">
-                      <!-- card l -->
-                      <div class="card_left_top">
-                        <div
-                          class="donut_chart_1"
-                          style="float: left; position: relative;"
-                        >
-                          <div
-                            style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: 0px; 
-                line-height:19px; text-align: center; z-index: 2"
-                          >
-                            <span class="text_inside1">27</span><br />
-                            <span class="text_inside">avg.</span>
-                          </div>
-                          <canvas
-                            id="donut_g1"
-                            width=""
-                            height="200px"
-                          ></canvas>
-                        </div>
-                      </div>
-                      <!-- card r  -->
-                      <div class="card_right_top">
-                        <!-- graph 2 card -->
-                        <div class="card_content_right_top">
-                          <div class="mini_r_Card">
-                            <v-card class="card_man bdr_12">
-                              <table class="">
-                                <tr height="30px" class="">
-                                  <td width="300px" class="text_lft">
-                                    <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span>
-                                  </td>
-                                  <td width="" class="btn_right">
-                                    <v-btn
-                                      color="#22CE8B"
-                                      depressed
-                                      class="white--text"
-                                      elevation="2"
-                                      height="24px"
-                                      >+2%</v-btn
-                                    >
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="pd_x_15">
-                                      <canvas
-                                        id="graph_man"
-                                        width="200px"
-                                        height="70px"
-                                      ></canvas>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <div class="">
-                                      <table class="align-center pd_5">
-                                        <tr class="bold_tx big_text">
-                                          <span>24</span>
-                                        </tr>
-                                        <tr class="grey--text">
-                                          <td></td>
-                                          <td class="sm_text">
-                                            <span>
-                                              BPM
-                                            </span>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </table>
-                            </v-card>
-                          </div>
-                          <div class="mini_l_Card">
-                            <v-card class="card_wman bdr_12">
-                              <table class="">
-                                <tr height="30px" class="">
-                                  <td width="300px" class="text_lft">
-                                    <span
-                                      >ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span
-                                    >
-                                  </td>
-                                  <td width="" class="btn_right">
-                                    <v-btn
-                                      color="#22CE8B"
-                                      depressed
-                                      class="white--text"
-                                      elevation="2"
-                                      height="24px"
-                                      >+4%</v-btn
-                                    >
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <div class="pd_x_15">
-                                      <canvas
-                                        id="graph_wman"
-                                        width="200px"
-                                        height="70px"
-                                      ></canvas>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <div class="">
-                                      <table class="align-center pd_5">
-                                        <tr class="bold_tx big_text">
-                                          <span>34</span>
-                                        </tr>
-                                        <tr class="grey--text">
-                                          <td></td>
-                                          <td class="sm_text">
-                                            <span>
-                                              BPM
-                                            </span>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </table>
-                            </v-card>
-                          </div>
-                        </div>
-                        <br />
-                        <div class="table_content_right_bot">
-                          <table
-                            style="width: 100%;
-  border-collapse: collapse;"
-                          >
-                            <tr>
-                              <th width="16.67%"></th>
-                              <th>
-                                <div class="graph6-details ">
-                                  <!-- แถบprogress -->
-                                  <div class="progress-el">
-                                    <v-progress-linear
-                                      color="none"
-                                      rounded
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <span class="text-top ">18.5</span>
-                                    <v-progress-linear
-                                      color="none"
-                                      rounded
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <span class="text-top">25.0</span>
-                                    <v-progress-linear
-                                      color="none"
-                                      rounded
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <span class="text-top">28.0</span>
-                                    <v-progress-linear
-                                      color="none"
-                                      rounded
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <span class="text-top">32.0</span>
-                                    <v-progress-linear
-                                      color="none"
-                                      rounded
-                                      value="100"
-                                    ></v-progress-linear>
-                                  </div>
-                                  <div class="progress-el">
-                                    <v-progress-linear
-                                      color="purple darken-2"
-                                      height="15"
-                                      class="rounded-l-xl"
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <v-progress-linear
-                                      color="blue darken-2"
-                                      height="15"
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <v-progress-linear
-                                      color="green darken-2"
-                                      height="15"
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <v-progress-linear
-                                      color="yellow darken-2"
-                                      height="15"
-                                      value="100"
-                                    ></v-progress-linear>
-                                    <br />
-                                    <v-progress-linear
-                                      color="red darken-2"
-                                      height="15"
-                                      class="rounded-r-xl"
-                                      value="100"
-                                    ></v-progress-linear>
-                                  </div>
-                                  <br />
-                                </div>
-                              </th>
-                            </tr>
-                          </table>
+  <v-container grid-list-lg-xl class="dialog_p5_card1">
+    <div class="card_el">
+      <v-card class="card1_p3_root bdr_12">
+        <v-card-title>
+          <div class="head_dialog_c2_p4">
+            <div>
+              <v-btn color="green darken-1" icon @click="$router.go(-1)">
+                <img
+                  height="30px"
+                  class="filter-white"
+                  src="../assets/icon/icon_prev.svg"
+                  alt="prev"
+                />
+              </v-btn>
+            </div>
+            <div class="pd_text">
+              <span class="headline pl-5">รายละเอียดค่า BMI</span>
+            </div>
+          </div>
+        </v-card-title>
+        <v-card-text>
+          <span
+            >กราฟสรุปรายละเอียดค่า BMI
+            เพื่อสังเกตุความแข็งแรงและสมบูรณ์ของร่างกายเพื่อระวังปัญหาสุขภาพในระยะสั้น
+            กลาง และยาวได้</span
+          >
+        </v-card-text>
 
-                          <table
-                            style="width: 100%;
-  border-collapse: collapse;"
+        <v-card-content>
+          <div class="content_dialog_page_top">
+            <div class="content_top_left_page">
+              <div class="">
+                <!-- card2 head+content -->
+                <v-card class="card2_size" elevation="0">
+                  <div class="card2_root">
+                    <!-- card2 content -->
+                    <div class="content1_card2">
+                      <div class="card_top_lNr">
+                        <!-- card l -->
+                        <div class="card_left_top">
+                          <div
+                            class="donut_chart_1"
+                            style="float: left; position: relative;"
                           >
-                            <tr>
-                              <th></th>
-                              <th>
-                                <div class="i-human">
-                                  <div><p>low</p></div>
-                                </div>
-                              </th>
-                              <th>
-                                <div class="i-human">
-                                  <div><p>Normal</p></div>
-                                </div>
-                              </th>
-                              <th>
-                                <div class="i-human">
-                                  <div><p>Increased</p></div>
-                                </div>
-                              </th>
-                              <th>
-                                <div class="i-human">
-                                  <div><p>Hight</p></div>
-                                </div>
-                              </th>
-                              <th>
-                                <div class="i-human">
-                                  <div><p>Very hight</p></div>
-                                </div>
-                              </th>
-                            </tr>
-                            <tr
-                              v-for="item in items"
-                              :key="item.id"
-                              align="center"
+                            <div
+                              style="width: 100%; position: absolute; top: 50%; left: 0; margin:-15px 0px; 
+                line-height:19px; text-align: center; z-index: 2"
                             >
-                              <th scope="row" class="fix_center">
-                                <img
-                                  height="40px"
-                                  class="filter-white"
-                                  :src="require('../assets/icon/' + item.icons)"
-                                />
-                                <span class="black--text"
-                                  ><strong>{{ item.gender }}</strong></span
-                                >
-                              </th>
-                              <td
-                                v-for="n in 5"
-                                :key="n"
-                                width="16.67%"
-                                height="40px"
-                                style="font-size:24px; font-weight: bold; border:1.5px solid; #757575;"
+                              <span class="text_inside1">27</span><br />
+                              <span class="text_inside">avg.</span>
+                            </div>
+                            <div>
+                              <canvas
+                                id="donut_g1"
+                                width="250px"
+                                height="250px"
+                              ></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- card r  -->
+                        <div class="card_right_top">
+                          <!-- graph 2 card -->
+                          <div class="card_content_right_top">
+                            <div class="mini_r_Card">
+                              <v-card class="card_man bdr_12">
+                                <v-card-content>
+                                  <table class="">
+                                    <tr height="30px" width="" class="">
+                                      <td width="" class="text_lft">
+                                        <span
+                                          >ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span
+                                        >
+                                      </td>
+                                      <td width="" class="btn_right">
+                                        <v-btn
+                                          color="#22CE8B"
+                                          depressed
+                                          class="white--text"
+                                          elevation="2"
+                                          height="24px"
+                                          >+2%</v-btn
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="pd_x_15">
+                                          <canvas
+                                            id="graph_man"
+                                            width="200px"
+                                            height="70px"
+                                          ></canvas>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="">
+                                          <table class="align-center pd_5">
+                                            <tr class="bold_tx card_num_head">
+                                              <td>
+                                                <span>24</span>
+                                              </td>
+                                            </tr>
+                                            <tr class="grey--text">
+                                              <td></td>
+                                              <td class="card_num_text_bot">
+                                                <span>
+                                                  BPM
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </v-card-content>
+                              </v-card>
+                            </div>
+                            <div class="mini_l_Card">
+                              <v-card class="card_wman bdr_12">
+                                <v-card-content>
+                                  <table class="">
+                                    <tr height="30px" class="">
+                                      <td width="" class="text_lft">
+                                        <span
+                                          >ค่าเฉลี่ยการเต้นของหัวใจ
+                                          ผู้หญิง</span
+                                        >
+                                      </td>
+                                      <td width="" class="btn_right">
+                                        <v-btn
+                                          color="#22CE8B"
+                                          depressed
+                                          class="white--text"
+                                          elevation="2"
+                                          height="24px"
+                                          >+4%</v-btn
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="pd_x_15">
+                                          <canvas
+                                            id="graph_wman"
+                                            width="200px"
+                                            height="70px"
+                                          ></canvas>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="">
+                                          <table class="align-center pd_5">
+                                            <tr class="bold_tx card_num_head">
+                                              <span>34</span>
+                                            </tr>
+                                            <tr class="grey--text">
+                                              <td></td>
+                                              <td class="card_num_text_bot">
+                                                <span>
+                                                  BPM
+                                                </span>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </v-card-content>
+                              </v-card>
+                            </div>
+                          </div>
+                          <br />
+                          <div class="table_content_right_bot">
+                            <table
+                              style="width: 100%;
+  border-collapse: collapse;"
+                            >
+                              <tr>
+                                <th width="16.67%"></th>
+                                <th>
+                                  <div class="graph6-details ">
+                                    <!-- แถบprogress -->
+                                    <div class="progress-el">
+                                      <v-progress-linear
+                                        color="none"
+                                        rounded
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <span class="text-top ">18.5</span>
+                                      <v-progress-linear
+                                        color="none"
+                                        rounded
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <span class="text-top">25.0</span>
+                                      <v-progress-linear
+                                        color="none"
+                                        rounded
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <span class="text-top">28.0</span>
+                                      <v-progress-linear
+                                        color="none"
+                                        rounded
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <span class="text-top">32.0</span>
+                                      <v-progress-linear
+                                        color="none"
+                                        rounded
+                                        value="100"
+                                      ></v-progress-linear>
+                                    </div>
+                                    <div class="progress-el">
+                                      <v-progress-linear
+                                        color="purple darken-2"
+                                        height="15"
+                                        class="rounded-l-xl"
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <v-progress-linear
+                                        color="blue darken-2"
+                                        height="15"
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <v-progress-linear
+                                        color="green darken-2"
+                                        height="15"
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <v-progress-linear
+                                        color="yellow darken-2"
+                                        height="15"
+                                        value="100"
+                                      ></v-progress-linear>
+                                      <br />
+                                      <v-progress-linear
+                                        color="red darken-2"
+                                        height="15"
+                                        class="rounded-r-xl"
+                                        value="100"
+                                      ></v-progress-linear>
+                                    </div>
+                                    <br />
+                                  </div>
+                                </th>
+                              </tr>
+                            </table>
+
+                            <table
+                              style="width: 100%;
+  border-collapse: collapse;"
+                            >
+                              <tr>
+                                <th></th>
+                                <th>
+                                  <div class="i-human">
+                                    <div><p>low</p></div>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="i-human">
+                                    <div><p>Normal</p></div>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="i-human">
+                                    <div><p>Increased</p></div>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="i-human">
+                                    <div><p>Hight</p></div>
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="i-human">
+                                    <div><p>Very hight</p></div>
+                                  </div>
+                                </th>
+                              </tr>
+                              <tr
+                                v-for="item in items"
+                                :key="item.id"
+                                align="center"
                               >
-                                {{ item.data[n - 1] }}
-                              </td>
-                            </tr>
-                          </table>
+                                <th scope="row" class="fix_center_table">
+                                  <img
+                                    height="40px"
+                                    class="filter-white"
+                                    :src="
+                                      require('../assets/icon/' + item.icons)
+                                    "
+                                  />
+                                  <span class="black--text"
+                                    ><strong>{{ item.gender }}</strong></span
+                                  >
+                                </th>
+                                <td
+                                  v-for="n in 5"
+                                  :key="n"
+                                  width="16.67%"
+                                  height="40px"
+                                  style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
+                                >
+                                  {{ item.data[n - 1] }}
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="card_bot_table">
-                      <div>
-                        <br />
-                        <v-simple-table>
-                          <template v-slot:default>
-                            <thead>
-                              <span class=""> ข้อมูลผู้ใช้งาน</span>
-                              <tr>
-                                <th class="text-left">
-                                  รหัส
-                                </th>
-                                <th class="text-left">
-                                  ชื่อ-สกุล
-                                </th>
-                                <th class="text-left">
-                                  ตำแหน่ง
-                                </th>
-                                <th class="text-left">
-                                  ค่าเฉลี่ย BMI
-                                </th>
-                                <th class="text-left">
-                                  เปลี่ยนแปลง BMI
-                                </th>
-                                <th class="text-left">
-                                  ดูประวัติ
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr v-for="item in moving_data_1" :key="item.id">
-                                <td>{{ item.no }}</td>
-                                <td>{{ item.name }}</td>
-                                <td>{{ item.pos }}</td>
-                                <td>{{ item.bmi_sum }}</td>
-                                <td :style="{ color: item.color0 }">
-                                  <v-icon :style="{ color: item.color0 }">{{
-                                    item.icon
-                                  }}</v-icon>
-                                  {{ item.bmi_change }}
-                                </td>
-                                <td>
-                                  <v-btn
-                                    style="background-color:#AD8DBB; color:white;"
-                                    elevation="2"
-                                    small
-                                    width="80px"
-                                  >
-                                    {{ item.show_history }}
-                                  </v-btn>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </template>
-                        </v-simple-table>
-                        <v-divider></v-divider>
+                      <div class="card_bot_table">
+                        <div>
+                          <br />
+                          <span class="font_size_title_card bold_text">
+                            ข้อมูลผู้ใช้งาน</span
+                          >
+                          <v-simple-table>
+                            <template v-slot:default>
+                              <thead>
+                                <tr width="40%"></tr>
+                                <tr justify="space-between" class="table_head1">
+                                  <th class="text-left" width="8%">
+                                    รหัส
+                                  </th>
+                                  <th class="text-left">
+                                    ชื่อ-สกุล
+                                  </th>
+                                  <th class="text-left">
+                                    ตำแหน่ง
+                                  </th>
+                                  <th class="text-left">
+                                    ค่าเฉลี่ย BMI
+                                  </th>
+                                  <th class="text-center">
+                                    เปลี่ยนแปลง BMI
+                                  </th>
+                                  <th class="text-center">
+                                    ดูประวัติ
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr
+                                  v-for="item in moving_data_1"
+                                  :key="item.id"
+                                  class="table_content text-center"
+                                >
+                                  <td class="text-left">{{ item.no }}</td>
+                                  <td class="text-left">{{ item.name }}</td>
+                                  <td>{{ item.pos }}</td>
+                                  <td>{{ item.bmi_sum }}</td>
+                                  <td :style="{ color: item.color0 }">
+                                    <v-icon :style="{ color: item.color0 }">{{
+                                      item.icon
+                                    }}</v-icon>
+                                    {{ item.bmi_change }}
+                                  </td>
+                                  <td>
+                                    <v-btn
+                                      style="background-color:#AD8DBB; color:white;"
+                                      elevation="2"
+                                      small
+                                      width="80px"
+                                    >
+                                      {{ item.show_history }}
+                                    </v-btn>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </template>
+                          </v-simple-table>
+                          <v-divider></v-divider>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </v-card>
+                </v-card>
+              </div>
+              <br />
             </div>
-            <br />
           </div>
-        </div>
-        <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
-      </v-card-content>
+          <!-- <canvas id="graphline" width="" height="40px"></canvas> -->
+        </v-card-content>
+      </v-card>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -595,7 +642,7 @@ export default {
 </script>
 <style scoped>
 .pd_x_15 {
-  padding: 0 40px 0 0;
+  padding: 0 20px 0 0;
 }
 .fix_center {
   display: flex;
@@ -603,8 +650,15 @@ export default {
   justify-items: center;
   align-items: center;
 }
+.fix_center_table {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
 .dialog_p5_card1 {
-  padding: 20px;
+  width: 100%;
+  /* padding: 20px; */
 }
 .head-card2 {
   padding: 20px;
@@ -620,16 +674,19 @@ export default {
   /* background-color: rgba(0, 0, 200, 0.1); */
 }
 .card_left_top {
-  /* padding-top: 40px; */
+  padding: 40px 10px;
   width: 30%;
   /* background-color: rgba(0, 0, 200, 0.2); */
   /* width: 50%; */
 }
 .donut_chart_1 {
   display: flex;
-  padding-top: 50px;
   width: 100%;
+  justify-content: center;
   /* background-color: rgba(0, 0,100,.3); */
+}
+.set_pos_donut {
+  padding: 40px 10px;
 }
 .card_right_top {
   width: 70%;
@@ -650,17 +707,16 @@ export default {
   width: 50%;
 }
 .donut_g1 {
-  display: flex;
+  /* display: flex; */
 }
 .card2_nameNicon {
   display: flex;
   /* background-color:rgba(0,0,100,0.2); */
 }
-.mini_r_Card {
-  width: 46%;
-}
+.mini_r_Card,
 .mini_l_Card {
-  width: 46%;
+  width: 50%;
+  padding: 0px 5px;
 }
 .card_man {
   /* height: 120px; */
@@ -687,13 +743,6 @@ export default {
 }
 .bold_tx {
   font-weight: bold;
-}
-.sm_text {
-  font-weight: bold;
-  font-size: 10px;
-}
-.big_text {
-  font-size: 20px;
 }
 .pd_5 {
   padding-right: 5px;
