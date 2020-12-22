@@ -233,6 +233,7 @@
                               v-bind="attrs50"
                               v-on="on"
                               @click="dialog_2 = true"
+                              id="item.id"
                             >
                               {{ item.show_history }}
                             </v-btn>
@@ -264,8 +265,232 @@
                               </div>
                             </v-card-title>
                             <v-card-content>
-                              <div>
-                                <sub_dia3 />
+                              <div class="dialog_p3_1_c1">
+                                <div class="card1_p3">
+                                  <v-card class="bdr_12" elevation="0">
+                                    <div class="card1_p3_root_sp">
+                                      <div class="card1_p3_headNsub">
+                                        <!-- head lr -->
+                                        <v-row>
+                                          <v-col
+                                            cols="12"
+                                            md="6"
+                                            sm="6"
+                                            class="set_rowcontent"
+                                          >
+                                            <div class="title_card1_p3">
+                                              <v-img
+                                                max-height="100"
+                                                max-width="100"
+                                                class="round-img"
+                                                src="https://pbs.twimg.com/profile_images/1002416157280727040/7SjA9KTJ_400x400.jpg"
+                                              ></v-img>
+                                            </div>
+                                            <div class="set_center_sp">
+                                              <v-row class="pdl_10">
+                                                <v-col
+                                                  cols="12"
+                                                  md="12"
+                                                  sm="12"
+                                                  class="zero_pd"
+                                                >
+                                                  <span class="big_font"
+                                                    >Supratcha
+                                                    Wiwattanakorn</span
+                                                  >
+                                                </v-col>
+                                                <v-col
+                                                  cols="12"
+                                                  md="12"
+                                                  sm="12"
+                                                  class="zero_pd"
+                                                >
+                                                  <span class="grey--text"
+                                                    >ตำแหน่ง : ผู้ช่วยสอน</span
+                                                  >
+                                                </v-col>
+                                              </v-row>
+                                            </div>
+                                          </v-col>
+                                          <v-col cols="12" md="6" sm="6">
+                                          </v-col>
+                                        </v-row>
+                                      </div>
+                                      <!-- End head page -->
+                                      <v-container-text>
+                                        <v-layout
+                                          row
+                                          wrap
+                                          justify="space-between"
+                                          width="100%"
+                                        >
+                                          <v-flex xs12 md6>
+                                            <v-card
+                                              elevation="0"
+                                              class="bdr_0"
+                                              style="padding-righ:15px !important; border-right: 1px solid grey !important;"
+                                              width="100%"
+                                            >
+                                              <v-row
+                                                class=" pt-0 set_height"
+                                                style="
+    margin-right: 0px;"
+                                              >
+                                                <v-col
+                                                  cols="12"
+                                                  md="8"
+                                                  sm="4"
+                                                  class="set_center set_left_text  set_height pt-5"
+                                                >
+                                                  <span> การเดิน</span>
+                                                </v-col>
+                                                <v-col
+                                                  cols="12"
+                                                  md="4"
+                                                  sm="4"
+                                                  class="set_center set_height"
+                                                  style="padding-right: 22px; padding-left: 0px;"
+                                                >
+                                                  <v-select
+                                                    :items="itm_walk"
+                                                    placeholder="7 วันล่าสุด"
+                                                    outlined
+                                                    dense
+                                                    class="text-md-center rounded-lg select_itm_style"
+                                                    height="40px"
+                                                  >
+                                                  </v-select>
+                                                </v-col>
+                                              </v-row>
+                                              <v-card-text>
+                                                <div
+                                                  class="chart_31c1"
+                                                  style="width:95%"
+                                                >
+                                                  <canvas
+                                                    id="walk_graph1_2"
+                                                    width="250px"
+                                                    height=""
+                                                  ></canvas>
+                                                </div>
+                                              </v-card-text>
+                                            </v-card>
+                                          </v-flex>
+                                          <v-flex xs12 md6 class="">
+                                            <v-card
+                                              elevation="0"
+                                              style="padding-left:10px;"
+                                            >
+                                              <v-row class=" pt-0 set_height">
+                                                <v-col
+                                                  cols="12"
+                                                  md="8"
+                                                  sm="4"
+                                                  class="set_center  set_height pt-5"
+                                                >
+                                                  <tr
+                                                    style="padding:0; margin:0;"
+                                                    class="set_pre_table"
+                                                  >
+                                                    <span> การนั่งนาน</span>
+                                                    <br />
+                                                    <span
+                                                      class="grey--text text_sub"
+                                                      >ข้อมูลการนั่งมาจากการนั่งอย่างต่อเนื่องเป็นเวลา
+                                                      1ชั่วโมงจะมีการเตือน</span
+                                                    >
+                                                  </tr>
+                                                </v-col>
+
+                                                <v-col
+                                                  cols="12"
+                                                  md="4"
+                                                  sm="4"
+                                                  class="set_center set_height"
+                                                >
+                                                  <v-select
+                                                    :items="itm_walk"
+                                                    placeholder="7 วันล่าสุด"
+                                                    outlined
+                                                    dense
+                                                    justify-center
+                                                    class="rounded-lg "
+                                                    height="40px"
+                                                  ></v-select>
+                                                </v-col>
+                                              </v-row>
+                                              <v-card-text>
+                                                <div
+                                                  class="chart_31c1"
+                                                  style="width:95%"
+                                                >
+                                                  <!-- id="walk_graph2_2" -->
+                                                  <canvas
+                                                    :id="
+                                                      'walk_graph2_' +
+                                                        moving_data_1.id
+                                                    "
+                                                    width="250px"
+                                                    height=""
+                                                  ></canvas>
+                                                </div>
+                                              </v-card-text>
+                                            </v-card>
+                                          </v-flex>
+                                        </v-layout>
+                                      </v-container-text>
+                                      <!-- table done -->
+                                      <div
+                                        class="table_content31c1"
+                                        style="width:100%"
+                                      >
+                                        <br />
+                                        <span
+                                          style="font-size:18px; font-weight: bold;"
+                                        >
+                                          ประวัติการแจ้งเตือน
+                                        </span>
+                                        <span
+                                          class="grey--text"
+                                          style="font-size:15x;"
+                                          >(การถูกแจ้งเตือนโดยผู้ดูแล)</span
+                                        >
+                                        <br />
+                                        <!-- <br /> -->
+                                        <v-simple-table
+                                          width="100%"
+                                          id="customers"
+                                        >
+                                          <thead>
+                                            <tr
+                                              class="set_title_text grey--text "
+                                              width="100%"
+                                              cellspacing="0"
+                                            >
+                                              <td>ครั้งที่</td>
+                                              <td width="">วันที่ , เวลา</td>
+                                              <td width="">โดย</td>
+                                              <td width="65%">หมายเหตุ</td>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr
+                                              v-for="item in new_item"
+                                              :key="item.id"
+                                              height="30px"
+                                              style="font-size:14px;"
+                                            >
+                                              <td>{{ item.no }}</td>
+                                              <td>{{ item.date_time }}</td>
+                                              <td>{{ item.by }}</td>
+                                              <td>{{ item.dtail }}</td>
+                                            </tr>
+                                          </tbody>
+                                        </v-simple-table>
+                                      </div>
+                                    </div>
+                                  </v-card>
+                                </div>
                               </div>
                             </v-card-content>
                           </v-card>
@@ -287,11 +512,12 @@
 </template>
 
 <script>
-import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
+// import sub_dia3 from "@/components/dialog_p3_1_c1.vue";
 import Chart from "chart.js";
+import { fabric } from "fabric";
 export default {
   components: {
-    sub_dia3,
+    // sub_dia3,
   },
   mounted: function() {
     var ctx_dia_c1_p3 = document
@@ -485,10 +711,112 @@ export default {
     });
     console.log(bar_line);
 
+    // new data graph
+    var ctx_3_1c1 = document.getElementById("walk_graph1_2").getContext("2d"),
+      gradient2_c1_p3 = ctx_3_1c1.createLinearGradient(0, 0, 0, 300);
+    gradient2_c1_p3.addColorStop(0, "rgb(255, 161, 161)");
+    gradient2_c1_p3.addColorStop(0.61, "rgb(255, 255, 255)");
+    gradient2_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
+
+    var config_g1 = {
+      type: "line",
+      data: {
+        datasets: [
+          {
+            label: "",
+            // backgroundColor: gradient2_c1_p3,
+            backgroundColor: gradient2_c1_p3,
+            borderColor: "#ffa1a1",
+            data: [3000, 2000, 3000, 3500, 3000, 4800],
+            pointBackgroundColor: "white",
+          },
+        ],
+        labels: ["07/08", "08/08", "09/08", "10/08", "11/08", "12/08"],
+      },
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                reverse: false,
+                min: 1000,
+                max: 5000,
+                stepSize: 1000,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ก้าว",
+              },
+            },
+          ],
+        },
+      },
+    };
+
+    var bar_31c1 = new Chart(ctx_3_1c1, config_g1);
+    console.log(bar_31c1);
+
+    var ctx_3_1c1_2 = document.getElementById("walk_graph2_2").getContext("2d"),
+      gradient31c1_2 = ctx_3_1c1_2.createLinearGradient(0, 0, 0, 300);
+    gradient31c1_2.addColorStop(0, "rgb(0, 0, 0)");
+    gradient31c1_2.addColorStop(0.1, "rgb(0, 0, 0)");
+    gradient31c1_2.addColorStop(0.61, "rgb(255, 255, 255)");
+    gradient31c1_2.addColorStop(1, "rgb(255, 255, 255)");
+    var config_g2 = {
+      type: "line",
+      data: {
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient31c1_2,
+            borderColor: "#000000",
+            data: [14, 3, 12, 7, 12, 5],
+            pointBackgroundColor: "white",
+          },
+        ],
+        labels: ["07/08", "08/08", "09/08", "10/08", "11/08", "12/08"],
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [
+            {
+              stacked: true,
+              ticks: {
+                reverse: false,
+                min: 0,
+                max: 20,
+                stepSize: 5,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "ครั้ง",
+              },
+            },
+          ],
+        },
+      },
+    };
+    var bar_3_1c1_2 = new Chart(ctx_3_1c1_2, config_g2);
+    console.log(bar_3_1c1_2);
+
     // 'ผอมมาก','ปกติ','อวบ','อ้วน ระยะที่1','อ้วน ระยะที่2'
   },
   data() {
     return {
+      arr: [],
+      curIdx: -1,
       dialog_2: false,
       items: [
         { gender: "ผช", color: "#359BD3", data: [27, 98, 780, 34, 0] },
@@ -572,7 +900,48 @@ export default {
           data: [385, 259, 196, 230, 106, 237, 107],
         },
       ],
+      itm_walk: ["7 วันล่าสุด", "1 เดือนล่าสุด", "1 ปีล่าสุด"],
+      new_item: [
+        {
+          no: "02",
+          date_time: "15 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งเพิ่มสูงขึ้นผิดปกติ มากกว่า 5 ครั้ง โปรดตรวจสอบว่าสวมใส่อุปกรณ์หรือไม่",
+        },
+        {
+          no: "01",
+          date_time: "6 มิ.ย.20 , 14:30 น.",
+          by: "ศิริญญา ศุนาญ",
+          dtail:
+            "แจ้งเตือนการนั่งต่อเนื่องเกินกว่า 3 ชั่วโมง ควรขยับ หรือลุกจากที่นั่งเผื่อผ่อนคลายกล้ามเนื้อ",
+        },
+      ],
     };
+  },
+  methods: {
+    createCanvas(id) {
+      let _name = "canvas" + id;
+      let dom = document.getElementById(_name);
+      console.log(id);
+      console.log(dom);
+      let _this = this;
+      if (!dom) {
+        setTimeout(function() {
+          _this.createCanvas(id);
+        }, 50);
+        return;
+      }
+      let _canvas = new fabric.Canvas(_name);
+      //canvas.setDimensions({height: 300, width: 800})
+      let text = new fabric.Textbox(_name, {
+        left: 50,
+        top: 50,
+        width: 150,
+        fontSize: 20,
+      });
+      _canvas.add(text);
+    },
   },
 };
 </script>
@@ -633,5 +1002,50 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+/* new style diaplog */
+
+.head_card1_p3_l_title {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.big_font {
+  font-weight: bold;
+}
+.pdl_10 {
+  padding-left: 10px !important;
+}
+.v-select__selection {
+  width: 100%;
+  justify-content: center;
+}
+.set_row_select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* background-color:blueviolet; */
+}
+.clear_fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  text-align: center;
+  /* background-color: pink; */
+}
+/* #customers tr:nth-child(even){background-color: #f2f2f2;} */
+.bg_green {
+  /* background-color: rgba(9, 231, 21, 0.397); */
+  padding-top: 25px;
+}
+.set_left_text {
+  justify-content: start;
+  padding-left: 30px;
+}
+.select_itm_style {
 }
 </style>

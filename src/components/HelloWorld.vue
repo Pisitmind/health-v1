@@ -11,47 +11,53 @@
           <div class="head-card1">
             <div class="card1-left">
               <div class="head_name_tag pd_l25 sp_nametag">
-                <p >สมาชิกผู้ใช้</p>
+                <p>สมาชิกผู้ใช้</p>
               </div>
-              <div class="btn_day_tag">
-                <v-btn class="white--text" small color="#AD8DBB" width="80px"
-                  >วันนี้</v-btn
-                >
-              </div>
-              <div class="calen_tag">
-                <v-menu
-                  ref="menu"
-                  v-model="menu"
-                  :close-on-content-click="false"
-                  :return-value.sync="date"
-                  transition="scale-transition"
-                  offset-y
-                  min-width="290px"
-                >
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-text-field
-                      color="#AD8DBB"
-                      v-model="date1"
-                      prepend-inner-icon="mdi-calendar"
-                      v-bind="attrs"
-                      v-on="on"
-                      dense
-                      outlined
-                    ></v-text-field>
-                  </template>
-                  <v-date-picker
-                    v-model="date1"
-                    no-title
-                    scrollable
-                    color="#AD8DBB"
-                    dense
+              <div class="day_calen">
+                <div class="btn_day_tag">
+                  <v-btn color="#ad8dbb" class="set_today_btn white--text" small
+                    >วันนี้</v-btn
                   >
-                    <v-spacer></v-spacer>
-                    <v-btn text color="primary" @click="$refs.menu.save(date1)">
-                      OK
-                    </v-btn>
-                  </v-date-picker>
-                </v-menu>
+                </div>
+                <div class="calen_tag">
+                  <v-menu
+                    ref="menu"
+                    v-model="menu"
+                    :close-on-content-click="false"
+                    :return-value.sync="date"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="290px"
+                  >
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-text-field
+                        color="#AD8DBB"
+                        v-model="date1"
+                        prepend-inner-icon="mdi-calendar"
+                        v-bind="attrs"
+                        v-on="on"
+                        dense
+                        outlined
+                      ></v-text-field>
+                    </template>
+                    <v-date-picker
+                      v-model="date1"
+                      no-title
+                      scrollable
+                      color="#AD8DBB"
+                      dense
+                    >
+                      <v-spacer></v-spacer>
+                      <v-btn
+                        text
+                        color="primary"
+                        @click="$refs.menu.save(date1)"
+                      >
+                        OK
+                      </v-btn>
+                    </v-date-picker>
+                  </v-menu>
+                </div>
               </div>
             </div>
             <div class="card1-right">
@@ -196,33 +202,35 @@
                     ตัวบ่งชี้
                   </span>
                 </v-card-subtitle>
-                <v-card-text class="pa-1">
-                  <div class="pa-1">
-                    <table class="card2-table">
-                      <tr class="table_head1">
-                        <th>ช่วงอายุ</th>
-                        <th>ชาย</th>
-                        <th>หญิง</th>
-                        <th>เฉลี่ยรวม</th>
-                      </tr>
-                      <tr
-                        v-for="item in data_card2_info"
-                        :key="item.id"
-                        height="30px"
-                      >
-                        <td class="two-data-card2">
-                          <v-icon x-small :style="{ color: item.color }"
-                            >mdi-circle
-                          </v-icon>
-                          {{ item.name }}
-                        </td>
-                        <td>{{ item.dataMan }}</td>
-                        <td>{{ item.dataWman }}</td>
-                        <td>{{ item.avg }}</td>
-                      </tr>
-                    </table>
-                  </div>
-                </v-card-text>
+                <v-card-content class="pa-1">
+                  <!-- <div class="pa-1"> -->
+                  <table class="card2-table">
+                    <tr class="table_head1">
+                      <th class="table_head1_data">ช่วงอายุ</th>
+                      <th>ชาย</th>
+                      <th>หญิง</th>
+                      <th>เฉลี่ยรวม</th>
+                    </tr>
+                    <tr
+                      v-for="item in data_card2_info"
+                      :key="item.id"
+                      height="30px"
+                      class="filter-white content_table"
+                    >
+                      <td class="content_table_data1 two-data-card2 text-left">
+                        <v-icon x-small :style="{ color: item.color }"
+                          >mdi-circle
+                        </v-icon>
+                        {{ item.name }}
+                      </td>
+                      <td>{{ item.dataMan }}</td>
+                      <td>{{ item.dataWman }}</td>
+                      <td>{{ item.avg }}</td>
+                    </tr>
+                  </table>
+
+                  <!-- </div> -->
+                </v-card-content>
               </v-card>
             </div>
             <!-- <p>content</p> -->
@@ -233,7 +241,7 @@
     <div class="c3_card_root card_el">
       <div class="card-split">
         <div class="card_l">
-          <v-card class="card3_l1_root bdr_12" height="380">
+          <v-card class="card3_l1_root bdr_12" height="400">
             <div class="card3_l1 c_l">
               <div class="card3_headNsub">
                 <div class="head_card_l">
@@ -263,7 +271,7 @@
                       text-align: center; align-item:center;"
                     >
                       <v-btn
-                        class="white--text "
+                        class="set_btn_resize white--text "
                         small
                         color="#AD8DBB"
                         width="80px"
@@ -276,7 +284,7 @@
                       text-align: center; align-item:center;"
                     >
                       <v-btn
-                        class="#AD8DBB--text "
+                        class="set_btn_resize #AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
@@ -304,44 +312,45 @@
                   >
                 </div>
               </div>
-
-              <div class="card_content">
-                <!-- <div> -->
-                <!-- กราฟ horizontal problems  graph3-1 -->
-                <div class="card2-graph">
-                  <canvas id="graph3-1" class="set_size_chart"></canvas>
-                </div>
-                <div class="label_graph">
-                  <table width="100%">
-                    <tr>
-                      <td style="text-align:center;">
-                        <div class="label_text_card3">
-                          <div>
-                            <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text"> ชาย </span>
+              <v-card-content>
+                <div class="card_content">
+                  <!-- <div> -->
+                  <!-- กราฟ horizontal problems  graph3-1 -->
+                  <div class="card2-graph">
+                    <canvas id="graph3-1" class="set_size_chart"></canvas>
+                  </div>
+                  <div class="label_graph">
+                    <table width="100%">
+                      <tr>
+                        <td style="text-align:center;">
+                          <div class="label_text_card3">
+                            <div>
+                              <v-icon small color="blue"> mdi-circle</v-icon>
+                              <span class="black--text"> ชาย </span>
+                            </div>
+                            <div class="pd_10">
+                              <v-icon small color="pink"> mdi-circle</v-icon>
+                              <span class="black--text"> หญิง </span>
+                            </div>
                           </div>
-                          <div class="pd_10">
-                            <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text"> หญิง </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td width="31%"></td>
-                    </tr>
-                  </table>
+                        </td>
+                        <td width="31%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- </div> -->
                 </div>
-                <!-- </div> -->
-              </div>
+              </v-card-content>
             </div>
           </v-card>
         </div>
         <div class="card_r">
-          <v-card class="card_r_root bdr_12" height="380">
+          <v-card class="card_r_root bdr_12" height="400">
             <div class="card3_cardr c_r">
               <div class="card3_headNsub">
                 <div class="head_card_r">
                   <div class="title-card3">
-                    <div style="padding-right:10px;">
+                    <div class="pd_icon" style="padding-right:10px;">
                       <img
                         height="40px"
                         class="filter-white"
@@ -359,7 +368,7 @@
                   <div class="sex-age-title-card3">
                     <div class="sex-title">
                       <v-btn
-                        class="#AD8DBB--text "
+                        class="set_btn_resize #AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
@@ -369,7 +378,7 @@
                     </div>
                     <div class="age-title">
                       <v-btn
-                        class="white--text "
+                        class="set_btn_resize white--text "
                         small
                         color="#AD8DBB"
                         width="80px"
@@ -397,7 +406,7 @@
 
               <div class="card_content">
                 <div class="card2-graph">
-                  <canvas id="graph1" width="450px" height="220px"></canvas>
+                  <canvas id="graph1" class="set_g1_size"></canvas>
                 </div>
                 <!-- <p>content</p> -->
               </div>
@@ -410,7 +419,7 @@
     <div class="card_el">
       <v-card class="bdr_12">
         <div class="card_content">
-          <div>
+          <v-card-text class="head_and_sub_content">
             <div class="head_card4">
               <div class="title_card4">
                 <div class="card4_nameNicon set_weight">
@@ -430,7 +439,7 @@
                   <div class="sexnage_card4">
                     <div class="sex_card4">
                       <v-btn
-                        class="white--text "
+                        class="set_btn_resize white--text "
                         small
                         color="#AD8DBB"
                         width="80px"
@@ -439,7 +448,7 @@
                     </div>
                     <div class="age_card4">
                       <v-btn
-                        class="#AD8DBB--text "
+                        class="set_btn_resize #AD8DBB--text "
                         small
                         outlined
                         color="#AD8DBB"
@@ -469,195 +478,198 @@
                 ตามการเปลี่ยนแปลงของน้ำหนักตัว</span
               >
             </div>
-          </div>
-          <div class="card4-content">
-            <div class="card5-top-content">
-              <div class="graph6-details ">
-                <!-- แถบprogress -->
-                <table
-                  style="width: 100%;
+          </v-card-text>
+          <v-card-content>
+            <div class="card4-content">
+              <div class="card5-top-content">
+                <div class="graph6-details ">
+                  <!-- แถบprogress -->
+                  <table
+                    style="width: 100%;
   border-collapse: collapse;"
-                >
-                  <tr>
-                    <th width="16.67%"></th>
-                    <th>
-                      <div class="graph6-details ">
-                        <!-- แถบprogress -->
-                        <div class="progress-el">
-                          <v-progress-linear
-                            color="none"
-                            rounded
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <span class="text-top">56.7กก.</span>
-                          <v-progress-linear
-                            color="none"
-                            rounded
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <span class="text-top">76.6กก.</span>
-                          <v-progress-linear
-                            color="none"
-                            rounded
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <span class="text-top">85.8กก.</span>
-                          <v-progress-linear
-                            color="none"
-                            rounded
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <span class="text-top">98.0กก.</span>
-                          <v-progress-linear
-                            color="none"
-                            rounded
-                            value="100"
-                          ></v-progress-linear>
+                  >
+                    <tr>
+                      <th width="16.67%"></th>
+                      <th>
+                        <div class="graph6-details ">
+                          <!-- แถบprogress -->
+                          <div class="progress-el">
+                            <v-progress-linear
+                              color="none"
+                              rounded
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <span class="text-top">56.7กก.</span>
+                            <v-progress-linear
+                              color="none"
+                              rounded
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <span class="text-top">76.6กก.</span>
+                            <v-progress-linear
+                              color="none"
+                              rounded
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <span class="text-top">85.8กก.</span>
+                            <v-progress-linear
+                              color="none"
+                              rounded
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <span class="text-top">98.0กก.</span>
+                            <v-progress-linear
+                              color="none"
+                              rounded
+                              value="100"
+                            ></v-progress-linear>
+                          </div>
+                          <div class="progress-el">
+                            <v-progress-linear
+                              color="purple darken-2"
+                              height="15"
+                              class="rounded-l-xl"
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <v-progress-linear
+                              color="blue darken-2"
+                              height="15"
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <v-progress-linear
+                              color="green darken-2"
+                              height="15"
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <v-progress-linear
+                              color="yellow darken-2"
+                              height="15"
+                              value="100"
+                            ></v-progress-linear>
+                            <br />
+                            <v-progress-linear
+                              color="red darken-2"
+                              height="15"
+                              class="rounded-r-xl"
+                              value="100"
+                            ></v-progress-linear>
+                          </div>
                         </div>
-                        <div class="progress-el">
-                          <v-progress-linear
-                            color="purple darken-2"
-                            height="15"
-                            class="rounded-l-xl"
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <v-progress-linear
-                            color="blue darken-2"
-                            height="15"
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <v-progress-linear
-                            color="green darken-2"
-                            height="15"
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <v-progress-linear
-                            color="yellow darken-2"
-                            height="15"
-                            value="100"
-                          ></v-progress-linear>
-                          <br />
-                          <v-progress-linear
-                            color="red darken-2"
-                            height="15"
-                            class="rounded-r-xl"
-                            value="100"
-                          ></v-progress-linear>
-                        </div>
-                      </div>
-                    </th>
-                  </tr>
-                </table>
+                      </th>
+                    </tr>
+                  </table>
+                </div>
               </div>
-            </div>
-            <div class="card5-bottom-content">
-              <!-- ใส่ในนี้ -->
-              <div class="table_c5">
-                <table
-                  style="width: 100%;
+              <div class="card5-bottom-content">
+                <!-- ใส่ในนี้ -->
+                <div class="table_c5">
+                  <table
+                    class="set_table_n"
+                    style="width: 100%;
   border-collapse: collapse;"
-                >
-                  <tr>
-                    <th></th>
-                    <th>
-                      <div class="i-human">
-                        <div>
-                          <img
-                            height="60px"
-                            class="filter-white"
-                            src="../assets/icon/Login-Regis_8Jul20-21.png"
-                            alt="human"
-                          />
+                  >
+                    <tr>
+                      <th width="16.67%"></th>
+                      <th>
+                        <div class="i-human">
+                          <div>
+                            <img
+                              height="60px"
+                              class="set_human_fix filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-21.png"
+                              alt="human"
+                            />
+                          </div>
+                          <div class="t-icon"><p>ผอมมาก</p></div>
                         </div>
-                        <div class="t-icon"><p>ผอมมาก</p></div>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="i-human">
-                        <div>
-                          <img
-                            height="60px"
-                            class="filter-white"
-                            src="../assets/icon/Login-Regis_8Jul20-23.png"
-                            alt="human"
-                          />
+                      </th>
+                      <th>
+                        <div class="i-human">
+                          <div>
+                            <img
+                              height="60px"
+                              class="set_human_fix filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-23.png"
+                              alt="human"
+                            />
+                          </div>
+                          <div class="t-icon"><p>ปกติ</p></div>
                         </div>
-                        <div class="t-icon"><p>ปกติ</p></div>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="i-human">
-                        <div>
-                          <img
-                            height="60px"
-                            class="filter-white"
-                            src="../assets/icon/Login-Regis_8Jul20-20.png"
-                            alt="human"
-                          />
+                      </th>
+                      <th>
+                        <div class="i-human">
+                          <div>
+                            <img
+                              height="60px"
+                              class="set_human_fix filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-20.png"
+                              alt="human"
+                            />
+                          </div>
+                          <div class="t-icon"><p>อวบ</p></div>
                         </div>
-                        <div class="t-icon"><p>อวบ</p></div>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="i-human">
-                        <div>
-                          <img
-                            height="60px"
-                            class="filter-white"
-                            src="../assets/icon/Login-Regis_8Jul20-18.png"
-                            alt="human"
-                          />
+                      </th>
+                      <th>
+                        <div class="i-human">
+                          <div>
+                            <img
+                              height="60px"
+                              class="set_human_fix filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-18.png"
+                              alt="human"
+                            />
+                          </div>
+                          <div class="t-icon"><p>อ้วน ระยะที่ 1</p></div>
                         </div>
-                        <div class="t-icon"><p>อ้วน ระยะที่ 1</p></div>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="i-human">
-                        <div>
-                          <img
-                            height="60px"
-                            class="filter-white"
-                            src="../assets/icon/Login-Regis_8Jul20-15.png"
-                            alt="human"
-                          />
+                      </th>
+                      <th>
+                        <div class="i-human">
+                          <div>
+                            <img
+                              height="60px"
+                              class="set_human_fix filter-white"
+                              src="../assets/icon/Login-Regis_8Jul20-15.png"
+                              alt="human"
+                            />
+                          </div>
+                          <div class="t-icon"><p>อ้วน ระยะที่ 2</p></div>
                         </div>
-                        <div class="t-icon"><p>อ้วน ระยะที่ 2</p></div>
-                      </div>
-                    </th>
-                  </tr>
-                  <tr v-for="item in items" :key="item.id" align="center">
-                    <th scope="row" class="fix_center">
-                      <img
+                      </th>
+                    </tr>
+                    <tr v-for="item in items" :key="item.id" align="center">
+                      <th scope="row" class="fix_center">
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          :src="require('../assets/icon/' + item.icons)"
+                        />
+                        <span class="black--text" style="padding-left:10px;">
+                          {{ item.gender }}
+                        </span>
+                      </th>
+                      <td
+                        v-for="n in 5"
+                        :key="n"
+                        width="16.67%"
                         height="40px"
-                        class="filter-white"
-                        :src="require('../assets/icon/' + item.icons)"
-                      />
-                      <span class="black--text" style="padding-left:10px;">
-                        {{ item.gender }}
-                      </span>
-                    </th>
-                    <td
-                      v-for="n in 5"
-                      :key="n"
-                      width="16.67%"
-                      height="40px"
-                      style="font-size:24px; font-weight: bold; border:1.5px solid; #757575;"
-                    >
-                      {{ item.data[n - 1] }}
-                    </td>
-                  </tr>
-                </table>
+                        style="font-size:24px; font-weight: bold; border:1.5px solid; #757575;"
+                      >
+                        {{ item.data[n - 1] }}
+                      </td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <!-- <p>content</p> -->
             </div>
-            <!-- <p>content</p> -->
-          </div>
+          </v-card-content>
         </div>
       </v-card>
     </div>
@@ -1048,9 +1060,17 @@ export default {
   border-radius: 12px !important;
   box-shadow: 0 0px 12px 4px rgba(0, 0, 0, 0.1) !important;
 }
+.set_g1_size {
+  width: 450px;
+  height: 220px;
+}
 .text_inside {
   font-size: 14px;
   color: grey;
+}
+.set_today_btn {
+  // color: #ad8dbb!important;
+  width: 80px !important;
 }
 .text_inside1 {
   font-size: 22px;
@@ -1095,6 +1115,7 @@ th {
 
 .two-data-card2 {
   padding: 2px 0px;
+  text-align: left;
 }
 .head-card1 {
   display: flex;
@@ -1328,7 +1349,6 @@ th {
   font-weight: lighter;
 }
 
-
 .label_graph {
   padding-bottom: 20px;
 }
@@ -1355,10 +1375,14 @@ th {
 .content_a {
   padding: 0 20px;
 }
-.sp_nametag{
+.sp_nametag {
   align-text: center;
   margin: 0px !important;
   padding-top: 10px;
+}
+.card3_l1_root,
+.card3_cardr {
+  padding: 20px;
 }
 
 // ------ after resize web page -----------//
@@ -1368,6 +1392,10 @@ th {
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+  .card3_cardr,
+  .c_r {
+    padding: 0px !important;
   }
   .card_r_root,
   .card3_l1_root {
@@ -1487,6 +1515,180 @@ th {
   .card1-table {
     font-size: 15px;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card3_l1_root,
+  .card_r_root {
+    height: fit-content !important;
+  }
+  .card3_cardr {
+    padding-bottom: 50px;
+  }
+  .card2-table {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .table_head1_data {
+    text-align: left !important;
+    padding-left: 20px;
+  }
+  .content_table td {
+    text-align: center;
+  }
+  .content_table_data1 td {
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card_el {
+    width: 100%;
+  }
+  .card3_l1 {
+    padding: 0px;
+  }
+  .head-card1,
+  .card1-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background-color: red;
+  }
+  .card2-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .head_name_tag,
+  .title-card3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 40px;
+    width: 100%;
+  }
+  .sp_nametag p {
+    margin-bottom: 0px;
+  }
+  .set_today_btn {
+    width: 100px !important;
+  }
+  .card2-subcard-3,
+  .card2-table {
+    width: 100%;
+  }
+  .card2-subcard-3 {
+    height: fit-content !important;
+  }
+  .content_table_data1 {
+    padding: 0 !important;
+  }
+  .card_right_c2_p1 {
+    height: fit-content !important;
+    width: 100%;
+    padding: 0px;
+  }
+  .content_table {
+    padding: 0px;
+  }
+  .card2-graph {
+    padding: 0px;
+    width: 100%;
+    height: fit-content;
+  }
+  .card3_l1_root {
+    height: fit-content !important;
+  }
+  .label_text_card3 {
+    // padding: 0px !important;
+    padding-left: 30px !important;
+  }
+  .head_card_l,
+  .head_card_r {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .sub_card_text {
+    padding-top: 10px;
+  }
+  .sex-age-title-card3 {
+    justify-content: space-between;
+    // justify-content: center;
+    width: 100%;
+  }
+  .set_btn_resize {
+    width: 100px !important;
+  }
+  .card-bot-text {
+    font-size: 40px;
+  }
+  .pd_icon {
+    display: flex;
+    justify-content: center;
+  }
+  .set_g1_size {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .head_card4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .title_card4 {
+    width: 100% !important;
+  }
+  .icon-card {
+    width: 100% !important;
+  }
+  .sexnage_card4 {
+    justify-content: space-between;
+    // background-color: rgba(219, 34, 34, 0.575);
+    width: 100%;
+  }
+  .title_card4 {
+    display: flex;
+    flex-direction: column;
+  }
+  .card4_nameNicon {
+    // background-color: aquamarine;
+    display: flex;
+    padding: 0px;
+    width: 100%;
+  }
+  .head_and_sub_content {
+    padding: 0px;
+  }
+  .set_weight {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .sub_card_text_sp {
+    padding-top: 10px;
+  }
+  .card4-content {
+    // background-color: rgba(0, 50, 150, 0.6);
+  }
+  .card5-top-content {
+    width: 100%;
+  }
+  .card5-bottom-content,
+  .table_c5,
+  .set_table_n {
+    width: 100%;
+  }
+  .set_human_fix {
+    // height: 5vh !important;
+    height: 40px !important;
+  }
+  .fix_center {
+    padding-left: 0px;
   }
 }
 </style>

@@ -255,7 +255,8 @@ export default {
     gradient2_c1_p3.addColorStop(0, "rgb(255, 161, 161)");
     gradient2_c1_p3.addColorStop(0.61, "rgb(255, 255, 255)");
     gradient2_c1_p3.addColorStop(1, "rgb(255, 255, 255)");
-    var bar_31c1 = new Chart(ctx_3_1c1, {
+
+    var config_g1 = {
       type: "line",
       data: {
         datasets: [
@@ -295,7 +296,9 @@ export default {
           ],
         },
       },
-    });
+    };
+
+    var bar_31c1 = new Chart(ctx_3_1c1, config_g1);
     console.log(bar_31c1);
 
     var ctx_3_1c1_2 = document.getElementById("walk_graph2_2").getContext("2d"),
@@ -304,7 +307,7 @@ export default {
     gradient31c1_2.addColorStop(0.1, "rgb(0, 0, 0)");
     gradient31c1_2.addColorStop(0.61, "rgb(255, 255, 255)");
     gradient31c1_2.addColorStop(1, "rgb(255, 255, 255)");
-    var bar_3_1c1_2 = new Chart(ctx_3_1c1_2, {
+    var config_g2 = {
       type: "line",
       data: {
         datasets: [
@@ -342,7 +345,8 @@ export default {
           ],
         },
       },
-    });
+    };
+    var bar_3_1c1_2 = new Chart(ctx_3_1c1_2, config_g2);
     console.log(bar_3_1c1_2);
   },
   data() {

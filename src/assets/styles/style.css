@@ -109,7 +109,9 @@ html .set_hidden {
   height: 30px;
   /* background-color: green; */
 }
-
+.card1-left{
+  width: 60%;
+}
 .bg_blue {
   background-color: rgba(0, 0, 250, 0.2);
 }
@@ -178,6 +180,7 @@ html .set_hidden {
   font-weight: bold;
   padding-top: 10px;
   display: flex;
+  width: 50%;
   justify-content: start;
 }
 .pd_l25 {
@@ -453,7 +456,11 @@ html::-webkit-scrollbar {
   font-size: 14px;
   padding-left: 20px;
 }
-
+.day_calen{
+  display:flex;
+  width: 100%;
+  justify-content:space-around;
+}
 .set_height {
   height: fit-content;
 }
@@ -480,3 +487,4 @@ html::-webkit-scrollbar {
   justify-content: space-around; */
   }
 }
+

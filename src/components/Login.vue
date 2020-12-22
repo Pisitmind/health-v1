@@ -274,6 +274,18 @@
   height: 400px;
   /* height="fit-content" */
 }
+.v-input {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 20px;
+  letter-spacing: normal;
+  max-width: 100%;
+  text-align: left;
+}
+.v-input .v-label {
+  font-size: 16px;
+}
 /* .set_center{
   align-items: center;
   align-content: center;
