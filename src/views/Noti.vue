@@ -3,727 +3,851 @@
     <!-- <div class="noti"> -->
     <div class="card_el_card2">
       <v-card class="bdr_12">
-        <div class="card_content">
-          <div class="head-card1">
-            <div class="card1-left">
-              <div class="head_name_tag">
-                <p>Hearth rate</p>
-              </div>
-            </div>
-            <div class="card1-right">
-              <div class="right-icon">
-                <v-row justify="center">
-                  <v-dialog v-model="dialog" width="">
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-btn small icon fab v-bind="attrs" v-on="on">
-                        <img
-                          height="30px"
-                          class="filter-white"
-                          src="../assets/icon/icon_detail.svg"
-                          alt="detail"
-                        />
-                      </v-btn>
-                    </template>
-                    <v-card>
-                      <v-card-title class="set_head_dia">
-                        <div class="head_dialog" id="head_dia_Hrate">
-                          <div class="text_head_hr head-card2">
-                            <span class="headline">Heart rate risk</span>
-                          </div>
-                          <div>
-                            <v-btn
-                              color="black darken-1"
-                              icon
-                              x-large
-                              @click="dialog = false"
-                            >
-                              <v-icon>mdi-close</v-icon>
-                            </v-btn>
-                          </div>
-                        </div>
-                        <div class="card2_line2 grey--text">
-                          <span>
-                            exercise and Weight loss can help limit some of the
-                            health risks associated with tachycardia by reducing
-                            the negative effects of high blood pressure and
-                            sleep apnea.
-                          </span>
-                        </div>
-                      </v-card-title>
-                      <v-card-text>
-                      </v-card-text>
-                      <dia_noti />
-                    </v-card>
-                  </v-dialog>
-                </v-row>
-              </div>
-            </div>
-          </div>
-          <div class="content1-card1">
-            <div class="cont1-card1 c_size c1">
-              <div class="head_ct1_c1">
-                <span style="text-align: center;" class="center"
-                  >Resting state</span
-                >
-                <p
-                  class="grey--text "
-                  style="text-align: center; font-size:16px; line-height: 1.2;"
-                >
-                  Heart rate is resting state usually <br />
-                  varies between 60 and 100 BPM.
-                </p>
-              </div>
-              <div style="float: left; position: relative;">
-                <div
-                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -10px; 
-                line-height:19px; text-align: center; z-index: 2"
-                >
-                  <span class="text_inside1">72</span><br />
-                  <span class="text_inside">avg. ฺBPM</span>
-                </div>
-                <div style="padding-top:20px;">
-                  <canvas id="graph0" width="" height="200px"></canvas>
+        <v-card-content>
+          <div class="card_content">
+            <div class="head-card1">
+              <div class="card1-left">
+                <div class="head_name_tag">
+                  <p>Hearth rate</p>
                 </div>
               </div>
-
-              <div class="table_ct1_c1 pd_y_data ">
-                <table
-                  class="table_c1 c1"
-                  style="width: 100%;
-  border-collapse: collapse;"
-                >
-                  <v-title class="title_table_c1 "
-                    >Resting state of people</v-title
-                  >
-                  <v-row
-                    no-gutters
-                    style="height:auto;"
-                    v-for="item in table1_ct1"
-                    :key="item.id"
-                  >
-                    <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-                      <div class="">
-                        <v-card class="box_ct1 pa-2" outlined tile>
-                          <div class="">
-                            <div>
-                              <p class="font_omg">{{ item.data[n - 1] }}</p>
-                            </div>
-                            <div class="name_lb_c1">
-                              <v-icon
-                                x-small
-                                :style="{ color: item.color[n - 1] }"
-                                >mdi-circle</v-icon
-                              >
-                              <span class="font_sm pd_text_5">{{
-                                item.name[n - 1]
-                              }}</span>
-                            </div>
-                          </div>
-                        </v-card>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </table>
-              </div>
-            </div>
-            <div class="cont2-card1 c_size c2">
-              <div class="head_ct1_c1">
-                <span style="text-align: center;" class="center"
-                  >Active state</span
-                >
-                <p class="grey--text" style="font-size:16px; line-height: 1.2;">
-                  Your exercise heart rate zone is calculated as below. Select
-                  the appropriate heart rate zone to get the most out of your
-                  exercise.
-                </p>
-              </div>
-              <div style="float: left; position: relative;">
-                <div
-                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -5px; line-height:19px; text-align: center; z-index: 2"
-                >
-                  <span class="text_inside1">116</span><br />
-                  <span class="text_inside">avg. ฺBPM</span>
-                </div>
-                <div style="padding-top:20px;">
-                  <canvas id="graph1" width="" height="200px"></canvas>
-                </div>
-              </div>
-
-              <div class="table_ct2_c1 pd_y_data ">
-                <table
-                  class="table_c1 c1"
-                  style="width: 100%;
-  border-collapse: collapse;"
-                >
-                  <v-title class="title_table_c1"
-                    >Active state of people</v-title
-                  >
-                  <v-row no-gutters style="height:auto;">
-                    <v-dialog
-                      v-for="(item, index) in table1_ct2"
-                      :key="index"
-                      v-model="dialog1[n]"
-                      width="270px"
-                      :retain-focus="false"
-                      hide-overlay
-                      absolute
-                      offset-y
-                    >
-                      <template v-slot:activator="{ on, attrs5 }">
-                        <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-                          <v-card
-                            class="box_ct1 pa-2"
-                            outlined
-                            tile
-                            v-bind="attrs5"
-                            v-on="on"
-                          >
-                            <div class="">
-                              <div>
-                                <p class="font_omg">{{ item.data[n - 1] }}</p>
-                              </div>
-                              <div class="name_lb_c1">
-                                <v-icon
-                                  x-small
-                                  :style="{ color: item.color[n - 1] }"
-                                  >mdi-circle</v-icon
-                                >
-                                <span class="font_sm pd_text_5">{{
-                                  item.name[n - 1]
-                                }}</span>
-                              </div>
-                            </div>
-                          </v-card>
-                        </v-col>
+              <div class="card1-right">
+                <div class="right-icon">
+                  <v-row justify="center">
+                    <v-dialog v-model="dialog" width="">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn small icon fab v-bind="attrs" v-on="on">
+                          <img
+                            height="30px"
+                            class="filter-white"
+                            src="../assets/icon/icon_detail.svg"
+                            alt="detail"
+                          />
+                        </v-btn>
                       </template>
                       <v-card>
-                        <v-card-title>
-                          <span>Heart rate {{ item.name[index] }}</span>
+                        <v-card-title class="set_head_dia">
+                          <div class="head_dialog" id="head_dia_Hrate">
+                            <div class="text_head_hr head-card2">
+                              <span class="headline">Heart rate risk</span>
+                            </div>
+                            <div>
+                              <v-btn
+                                color="black darken-1"
+                                icon
+                                x-large
+                                @click="dialog = false"
+                              >
+                                <v-icon>mdi-close</v-icon>
+                              </v-btn>
+                            </div>
+                          </div>
+                          <div class="card2_line2 grey--text">
+                            <span>
+                              exercise and Weight loss can help limit some of
+                              the health risks associated with tachycardia by
+                              reducing the negative effects of high blood
+                              pressure and sleep apnea.
+                            </span>
+                          </div>
                         </v-card-title>
-                        <v-card-text>
-                          <thead>
-                            <tr width="100%" justify="space-around">
-                              <th width="" class="text-left">
-                                NO
-                              </th>
-                              <th width="" class="text-center">
-                                NAME
-                              </th>
-                              <th width="" class="text-left">
-                                Notification
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr
-                              v-for="item in mini_data"
-                              :key="item.id"
-                              class="text-left mini_fz"
-                              width="100%"
-                              height="30px"
-                              justify="space-around"
-                            >
-                              <td width="20%">{{ item.no }}</td>
-                              <td width="60%">{{ item.name }}</td>
-                              <td width="20%" class="text-center">
-                                <v-btn
-                                  :style="{
-                                    backgroundColor: item.color,
-                                    color: item.color1,
-                                  }"
-                                  elevation="2"
-                                  x-small
-                                >
-                                  {{ item.noti }}
-                                </v-btn>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </v-card-text>
+                        <v-card-text> </v-card-text>
+                        <dia_noti />
                       </v-card>
                     </v-dialog>
                   </v-row>
-                </table>
+                </div>
               </div>
             </div>
+            <div class="content1-card1">
+              
+              <div class="ct_1_c_noti">
+                <div class="cont1-card1 c_size c1">
+                  <div class="head_ct1_c1">
+                    <span style="text-align: center;" class="center set_wd100"
+                      >Resting state</span
+                    >
+                    <p
+                      class="grey--text "
+                      style="text-align: center; font-size:16px; line-height: 1.2;"
+                    >
+                      Heart rate is resting state usually <br />
+                      varies between 60 and 100 BPM.
+                    </p>
+                  </div>
+                  <div style="float: left; position: relative;">
+                    <div
+                      class="set_text_in_donut_1"
+                      style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -10px; 
+                line-height:19px; text-align: center; z-index: 2"
+                    >
+                      <span class="text_inside1">72</span><br />
+                      <span class="text_inside">avg. ฺBPM</span>
+                    </div>
+                    <div style="padding-top:20px;">
+                      <canvas id="graph0" width="" height="200px"></canvas>
+                    </div>
+                  </div>
 
-            <div class="c_size c1">
-              <v-card
-                class="card1-subcard-3 bdr_12_only"
-                width=""
-                height="300px"
-              >
-                <v-card-title class="font_style_title_card">
-                  <span class="topic_name_card pl-5 ">
-                    Heart rate zone
-                  </span>
-                </v-card-title>
-                <v-card-text class="pa-1">
-                  <div class="card-info-right pa-1">
-                    <table
-                      class="card2-table"
-                      v-for="item in table1_ct1"
-                      :key="item.id"
+                  <div class="table_ct1_c1 pd_y_data ">
+                    <v-simple-table
+                      class="table_c1 c1"
                       style="width: 100%;
   border-collapse: collapse;"
                     >
-                      <tr>
-                        <th></th>
-                        <th></th>
-                      </tr>
-                      <tr v-for="x in 6" :key="x" class="two-data-card2">
-                        <td height="38px" class="pd_text">
-                          <div class="t_name_ct3c1">
-                            <v-icon
-                              x-small
-                              :style="{ color: item.color[x - 1] }"
-                              >mdi-circle
-                            </v-icon>
-                            <span class="txt_pd font_sm ">
-                              {{ item.name[x - 1] }}
-                            </span>
+                      <v-title class="title_table_c1 "
+                        >Resting state of people</v-title
+                      >
+                      <v-row
+                        no-gutters
+                        style="height:auto;"
+                        v-for="item in table1_ct1"
+                        :key="item.id"
+                      >
+                        <v-col
+                          v-for="n in 6"
+                          :key="n"
+                          cols="6"
+                          md="4"
+                          sm="6"
+                          xs="4"
+                        >
+                          <div class="">
+                            <v-card class="box_ct1 pa-2" outlined tile>
+                              <div class="">
+                                <div>
+                                  <p class="font_omg">{{ item.data[n - 1] }}</p>
+                                </div>
+                                <div class="name_lb_c1">
+                                  <v-icon
+                                    x-small
+                                    :style="{ color: item.color[n - 1] }"
+                                    >mdi-circle</v-icon
+                                  >
+                                  <span class="font_sm pd_text_5">{{
+                                    item.name[n - 1]
+                                  }}</span>
+                                </div>
+                              </div>
+                            </v-card>
                           </div>
-                        </td>
-                        <td class="alr font_sm ">
-                          {{ item.avg[x - 1] }}
-                        </td>
-                      </tr>
-                    </table>
+                        </v-col>
+                      </v-row>
+                    </v-simple-table>
                   </div>
-                </v-card-text>
-              </v-card>
+                </div>
+                <div class="cont2-card1 c_size c2">
+                  <div class="head_ct1_c1 ">
+                    <span style="text-align: center;" class="center set_wd100"
+                      >Active state</span
+                    >
+                    <p
+                      class="grey--text"
+                      style="font-size:16px; line-height: 1.2;"
+                    >
+                      Your exercise heart rate zone is calculated as below.
+                      Select the appropriate heart rate zone to get the most out
+                      of your exercise.
+                    </p>
+                  </div>
+                  <div
+                    class="set_pd_top"
+                    style="float: left; position: relative;"
+                  >
+                    <div
+                      class="set_text_in_donut_2"
+                      style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -5px; line-height:19px; text-align: center; z-index: 2"
+                    >
+                      <span class="text_inside1">116</span><br />
+                      <span class="text_inside">avg. ฺBPM</span>
+                    </div>
+                    <div class="" style="padding-top:20px;">
+                      <canvas id="graph1" width="" height="200px"></canvas>
+                    </div>
+                  </div>
+
+                  <div class="table_ct2_c1 pd_y_data ">
+                    <v-simple-table
+                      class="table_c1 c1"
+                      style="width: 100%;
+  border-collapse: collapse;"
+                    >
+                      <v-title class="title_table_c1"
+                        >Active state of people</v-title
+                      >
+                      <v-row no-gutters style="height:auto;">
+                        <v-dialog
+                          v-for="(item, index) in table1_ct2"
+                          :key="index"
+                          v-model="dialog1[n]"
+                          width="270px"
+                          :retain-focus="false"
+                          hide-overlay
+                          absolute
+                          offset-y
+                        >
+                          <template v-slot:activator="{ on, attrs5 }">
+                            <v-col
+                              v-for="n in 6"
+                              :key="n"
+                              cols="6"
+                              md="4"
+                              sm="6"
+                              xs="6"
+                            >
+                              <v-card
+                                class="box_ct1 pa-2"
+                                outlined
+                                tile
+                                v-bind="attrs5"
+                                v-on="on"
+                              >
+                                <div class="">
+                                  <div>
+                                    <p class="font_omg">
+                                      {{ item.data[n - 1] }}
+                                    </p>
+                                  </div>
+                                  <div class="name_lb_c1">
+                                    <v-icon
+                                      x-small
+                                      :style="{ color: item.color[n - 1] }"
+                                      >mdi-circle</v-icon
+                                    >
+                                    <span class="font_sm pd_text_5">{{
+                                      item.name[n - 1]
+                                    }}</span>
+                                  </div>
+                                </div>
+                              </v-card>
+                            </v-col>
+                          </template>
+                          <v-card>
+                            <v-card-title>
+                              <span>Heart rate {{ item.name[index] }}</span>
+                            </v-card-title>
+                            <v-card-text>
+                              <thead>
+                                <tr width="100%" justify="space-around">
+                                  <th width="" class="text-left">
+                                    NO
+                                  </th>
+                                  <th width="" class="text-center">
+                                    NAME
+                                  </th>
+                                  <th width="" class="text-left">
+                                    Notification
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr
+                                  v-for="item in mini_data"
+                                  :key="item.id"
+                                  class="text-left mini_fz"
+                                  width="100%"
+                                  height="30px"
+                                  justify="space-around"
+                                >
+                                  <td width="20%">{{ item.no }}</td>
+                                  <td width="60%">{{ item.name }}</td>
+                                  <td width="20%" class="text-center">
+                                    <v-btn
+                                      :style="{
+                                        backgroundColor: item.color,
+                                        color: item.color1,
+                                      }"
+                                      elevation="2"
+                                      x-small
+                                    >
+                                      {{ item.noti }}
+                                    </v-btn>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </v-card-text>
+                          </v-card>
+                        </v-dialog>
+                      </v-row>
+                    </v-simple-table>
+                  </div>
+                </div>
+              </div>
+              <div class="ct_2_c_noti">
+                <div class="ct_r_c_noti c1">
+                  <v-card
+                    class="card1-subcard-3_sp bdr_12_only"
+                    width=""
+                    height=""
+                  >
+                    <v-card-title class="font_style_title_card">
+                      <span class="topic_name_card pl-5 ">
+                        Heart rate zone
+                      </span>
+                    </v-card-title>
+                    <v-card-text class="content_card_noti pa-1">
+                      <div class="card-info-right pa-1">
+                        <v-simple-table
+                          class="card2-table"
+                          v-for="item in table1_ct1"
+                          :key="item.id"
+                          style="width: 100%;
+  border-collapse: collapse;"
+                        >
+                          <tr>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                          <tr v-for="x in 6" :key="x" class="two-data-card2">
+                            <td height="38px" class="pd_text set_cen_el">
+                              <div class="t_name_ct3c1 set_cen_el">
+                                <v-icon
+                                  x-small
+                                  :style="{ color: item.color[x - 1] }"
+                                  >mdi-circle
+                                </v-icon>
+                                <span class="txt_pd font_sm ">
+                                  {{ item.name[x - 1] }}
+                                </span>
+                              </div>
+                            </td>
+                            <td class="alr font_sm ">
+                              {{ item.avg[x - 1] }}
+                            </td>
+                          </tr>
+                        </v-simple-table>
+                      </div>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+              <!-- <p>content</p> -->
             </div>
-            <!-- <p>content</p> -->
           </div>
-        </div>
+        </v-card-content>
       </v-card>
     </div>
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="card_rootcontent bdr_12">
-        <div class="">
-          <!-- card2 header -->
-          <div class="head-card2">
-            <div class="">
-              <div class="head-card1">
-                <div class="title_card1_p3">
-                  <div style="padding-right:10px;">
-                    <img
-                      height="40px"
-                      src="../assets/icon/icon_weight_01.svg"
-                      alt="human"
-                    />
-                  </div>
-                  <div class="card3-bot-text">
-                    <span>Ideal weight</span>
-                  </div>
-                </div>
-                <div class="head_card2_btn">
-                  <v-btn small icon fab class="hid">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                  </v-btn>
-                </div>
-              </div>
-              <div class="card2_line2 grey--text">
-                <span
-                  >Weightrefers to the weight of a person's body. You can know
-                  your health state besed on weight change.</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- card2 content -->
-          <div class="content1_card2">
-            <!-- card l -->
-            <div class="chart1_card2" style="float: left; position: relative;">
-              <div
-                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
-              >
-                <span class="text_inside1">76</span><br />
-                <span class="text_inside">avg. kg.</span>
-              </div>
-              <div style="display:flex;justify-content:center;">
-                <canvas id="graph1_c2" width="240px" height="240"></canvas>
-              </div>
-            </div>
-            <!-- card r  -->
-            <div class="data_table_card2">
-              <div class="card1-subcard-3 ct_set" width="" height="">
-                <div class="table_content_card2">
-                  <table
-                    style="width: 100%;
-  border-collapse: collapse;"
-                  >
-                    <tr>
-                      <th width="16.67%"></th>
-                      <th>
-                        <div class="graph6-details ">
-                          <!-- แถบprogress -->
-                          <div class="progress-el">
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top ">56.7kg.</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">76.6kg.</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">85.8kg.</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">98.0kg.</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                          </div>
-                          <div class="progress-el">
-                            <v-progress-linear
-                              color="purple darken-2"
-                              height="15"
-                              class="rounded-l-xl"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="blue darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="green darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="yellow darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="red darken-2"
-                              height="15"
-                              class="rounded-r-xl"
-                              value="100"
-                            ></v-progress-linear>
-                          </div>
-                          <br />
-                        </div>
-                      </th>
-                    </tr>
-                  </table>
-
-                  <table
-                    class="font_reg"
-                    style="width: 100%;
-  border-collapse: collapse; "
-                  >
-                    <tr class="set_reg">
-                      <td class="text-center"></td>
-                      <td class="text-center">
-                        <div class="i-human">
-                          <div>
-                            <img
-                              height="60px"
-                              class="filter-white"
-                              src="../assets/icon/Login-Regis_8Jul20-21.png"
-                              alt="human"
-                            />
-                          </div>
-                          <div><p class="set_reg">Underweight</p></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <div class="i-human">
-                          <div>
-                            <img
-                              height="60px"
-                              class="filter-white"
-                              src="../assets/icon/Login-Regis_8Jul20-23.png"
-                              alt="human"
-                            />
-                          </div>
-                          <div><p>Normal</p></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <div class="i-human">
-                          <div>
-                            <img
-                              height="60px"
-                              class="filter-white"
-                              src="../assets/icon/Login-Regis_8Jul20-20.png"
-                              alt="human"
-                            />
-                          </div>
-                          <div><p>Overweight</p></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <div class="i-human">
-                          <div>
-                            <img
-                              height="60px"
-                              class="filter-white"
-                              src="../assets/icon/Login-Regis_8Jul20-18.png"
-                              alt="human"
-                            />
-                          </div>
-                          <div><p>Obese I</p></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <div class="i-human">
-                          <div>
-                            <img
-                              height="60px"
-                              class="filter-white"
-                              src="../assets/icon/Login-Regis_8Jul20-15.png"
-                              alt="human"
-                            />
-                          </div>
-                          <div><p>Obese II</p></div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr v-for="item in items" :key="item.id" align="center">
-                      <th scope="row" class="fix_center_table" align="left">
-                        <img
-                          height="40px"
-                          class="filter-white"
-                          :src="require('../assets/icon/' + item.icons)"
-                        />
-                        <span class="black--text"
-                          ><strong>{{ item.gender }}</strong></span
-                        >
-                      </th>
-                      <td
-                        v-for="n in 5"
-                        :key="n"
-                        width="16.67%"
+        <v-card-content class="">
+          <div class="">
+            <!-- card2 header -->
+            <div class="head-card2">
+              <div class="">
+                <div class="head-card1">
+                  <div class="title_card1_p3">
+                    <div style="padding-right:10px;">
+                      <img
                         height="40px"
-                        style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
-                      >
-                        {{ item.data[n - 1] }}
-                      </td>
-                    </tr>
-                  </table>
+                        src="../assets/icon/icon_weight_01.svg"
+                        alt="human"
+                      />
+                    </div>
+                    <div class="card3-bot-text">
+                      <span>Ideal weight</span>
+                    </div>
+                  </div>
+                  <div class="head_card2_btn">
+                    <v-btn small icon fab class="hid">
+                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                    </v-btn>
+                  </div>
+                </div>
+                <div class="card2_line2 grey--text">
+                  <span
+                    >Weightrefers to the weight of a person's body. You can know
+                    your health state besed on weight change.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- card2 content -->
+            <div class="content1_card2">
+              <!-- card l -->
+              <div
+                class="chart1_card2"
+                style="float: left; position: relative;"
+              >
+                <div
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
+                >
+                  <span class="text_inside1">76</span><br />
+                  <span class="text_inside">avg. kg.</span>
+                </div>
+                <div style="display:flex;justify-content:center;">
+                  <canvas id="graph1_c2" width="240px" height="240"></canvas>
+                </div>
+              </div>
+              <!-- card r  -->
+              <div class="data_table_card2">
+                <div class="card1-subcard-3 ct_set" width="" height="">
+                  <div class="table_content_card2">
+                    <v-simple-table
+                      style="width: 100%;
+  border-collapse: collapse;"
+                    >
+                      <tr>
+                        <th width="16.67%"></th>
+                        <th>
+                          <div class="graph6-details ">
+                            <!-- แถบprogress -->
+                            <div class="progress-el">
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top ">56.7kg.</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">76.6kg.</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">85.8kg.</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">98.0kg.</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                            </div>
+                            <div class="progress-el">
+                              <v-progress-linear
+                                color="purple darken-2"
+                                height="15"
+                                class="rounded-l-xl"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="blue darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="green darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="yellow darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="red darken-2"
+                                height="15"
+                                class="rounded-r-xl"
+                                value="100"
+                              ></v-progress-linear>
+                            </div>
+                            <br />
+                          </div>
+                        </th>
+                      </tr>
+                    </v-simple-table>
+
+                    <v-simple-table
+                      class="font_reg"
+                      style="width: 100%;
+  border-collapse: collapse; "
+                    >
+                      <tr class="set_reg">
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                          <div class="i-human">
+                            <div>
+                              <img
+                                height="60px"
+                                class="set_human_fix filter-white"
+                                src="../assets/icon/Login-Regis_8Jul20-21.png"
+                                alt="human"
+                              />
+                            </div>
+                            <div><p class="set_reg">Underweight</p></div>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="i-human">
+                            <div>
+                              <img
+                                height="60px"
+                                class="set_human_fix filter-white"
+                                src="../assets/icon/Login-Regis_8Jul20-23.png"
+                                alt="human"
+                              />
+                            </div>
+                            <div><p>Normal</p></div>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="i-human">
+                            <div>
+                              <img
+                                height="60px"
+                                class="set_human_fix filter-white"
+                                src="../assets/icon/Login-Regis_8Jul20-20.png"
+                                alt="human"
+                              />
+                            </div>
+                            <div><p>Overweight</p></div>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="i-human">
+                            <div>
+                              <img
+                                height="60px"
+                                class="set_human_fix filter-white"
+                                src="../assets/icon/Login-Regis_8Jul20-18.png"
+                                alt="human"
+                              />
+                            </div>
+                            <div><p>Obese I</p></div>
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <div class="i-human">
+                            <div>
+                              <img
+                                height="60px"
+                                class="set_human_fix filter-white"
+                                src="../assets/icon/Login-Regis_8Jul20-15.png"
+                                alt="human"
+                              />
+                            </div>
+                            <div><p>Obese II</p></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr v-for="item in items" :key="item.id" align="center">
+                        <th scope="row" class="fix_center_table" align="left">
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            :src="require('../assets/icon/' + item.icons)"
+                          />
+                          <span class="black--text"
+                            ><strong>{{ item.gender }}</strong></span
+                          >
+                        </th>
+                        <td
+                          v-for="n in 5"
+                          :key="n"
+                          width="16.67%"
+                          height="40px"
+                          class="set_data_table_size"
+                          style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
+                        >
+                          {{ item.data[n - 1] }}
+                        </td>
+                      </tr>
+                    </v-simple-table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </v-card-content>
       </v-card>
     </div>
     <div class="card_el_card2">
       <!-- card2 head+content -->
       <v-card class="bdr_12">
-        <div class="card_rootcontent">
-          <!-- card2 header -->
-          <div class="head-card2">
-            <div class="">
-              <div class="header_card2">
-                <div class="title_card2">
-                  <div class="card2_nameNicon set_center">
-                    <div style="padding-right:10px;">
-                      <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/bmi.svg"
-                        alt="bmi"
-                      />
-                    </div>
-                    <div class="card3-bot-text  ">
-                      <span>BMI</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="head_card2_btn">
-                  <v-btn small icon fab class="hid">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                  </v-btn>
-                </div>
-              </div>
-              <div class="card2_line2 grey--text">
-                <span
-                  >Weight (kg) / height(m2) You can't judge if you're "Odese"
-                  just by BMI value. People can have more fat than muscle with
-                  normal BMI and still classify as obese.</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- card2 content -->
-          <div class="content1_card2">
-            <!-- card l -->
-            <div
-              class="chart1_card2_2"
-              style="float: left; position: relative;"
-            >
-              <div
-                style="width: 100%; position: relative; top: 50%; left: 0; margin-bottom:-15px; margin-top: -15px; line-height:22px; text-align: center; z-index: 2"
-              >
-                <span class="text_inside1">27</span><br />
-                <span class="text_inside">avg.</span>
-              </div>
+        <v-card-content>
+          <div class="card_rootcontent">
+            <!-- card2 header -->
+            <div class="head-card2">
               <div class="">
-                <canvas id="graph2_c2" width="240px" height="240px"></canvas>
-              </div>
-            </div>
-            <!-- card r  -->
-            <div class="data_table_card2_1 c30">
-              <div class="card1-subcard-3 ct_set" width="" height="">
-                <div class="table_content_card2">
-                  <table
-                    style="width: 100%;
-  border-collapse: collapse;"
-                  >
-                    <tr>
-                      <th width="16.67%"></th>
-                      <th>
-                        <div class="graph6-details ">
-                          <!-- แถบprogress -->
-                          <div class="progress-el">
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">18.5</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">25.0</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">28.0</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <span class="text-top">32.0</span>
-                            <v-progress-linear
-                              color="none"
-                              rounded
-                              value="100"
-                            ></v-progress-linear>
-                          </div>
-                          <div class="progress-el">
-                            <v-progress-linear
-                              color="purple darken-2"
-                              height="15"
-                              class="rounded-l-xl"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="blue darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="green darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="yellow darken-2"
-                              height="15"
-                              value="100"
-                            ></v-progress-linear>
-                            <br />
-                            <v-progress-linear
-                              color="red darken-2"
-                              height="15"
-                              class="rounded-r-xl"
-                              value="100"
-                            ></v-progress-linear>
-                          </div>
-                          <br />
-                        </div>
-                      </th>
-                    </tr>
-                  </table>
-
-                  <table
-                    style="width: 100%;
-  border-collapse: collapse;"
-                  >
-                    <tr>
-                      <th></th>
-                      <th>
-                        <div class="i-human">
-                          <div><p>Low</p></div>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="i-human">
-                          <div><p>Normal</p></div>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="i-human">
-                          <div><p>increased</p></div>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="i-human">
-                          <div><p>Hight</p></div>
-                        </div>
-                      </th>
-                      <th>
-                        <div class="i-human">
-                          <div><p>Very hight</p></div>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr v-for="item in items_2" :key="item.id" align="center">
-                      <th scope="row" class="text-center fix_center_table">
+                <div class="header_card2">
+                  <div class="title_card2">
+                    <div class="card2_nameNicon set_center">
+                      <div style="padding-right:10px;">
                         <img
                           height="40px"
                           class="filter-white"
-                          :src="require('../assets/icon/' + item.icons)"
+                          src="../assets/icon/bmi.svg"
+                          alt="bmi"
                         />
-                        <span class="black--text"
-                          ><strong>{{ item.gender }}</strong></span
+                      </div>
+                      <div class="card3-bot-text  ">
+                        <span>BMI</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="head_card2_btn">
+                    <v-btn small icon fab class="hid">
+                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                    </v-btn>
+                  </div>
+                </div>
+                <div class="card2_line2 grey--text">
+                  <span
+                    >Weight (kg) / height(m2) You can't judge if you're "Odese"
+                    just by BMI value. People can have more fat than muscle with
+                    normal BMI and still classify as obese.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- card2 content -->
+            <div class="content1_card2">
+              <!-- card l -->
+              <div
+                class="chart1_card2_2"
+                style="float: left; position: relative;"
+              >
+                <div
+                  class="set_text_in_donut_noti"
+                  style="width: 100%; position: relative; top: 50%; left: 0; margin-bottom:-15px; margin-top: -15px; line-height:22px; text-align: center; z-index: 2"
+                >
+                  <span class="text_inside1">27</span><br />
+                  <span class="text_inside">avg.</span>
+                </div>
+                <div class="">
+                  <canvas id="graph2_c2" width="240px" height="240px"></canvas>
+                </div>
+              </div>
+              <!-- card r  -->
+              <div class="data_table_card2_1 c30">
+                <div class="card1-subcard-3 ct_set" width="" height="">
+                  <div class="table_content_card2">
+                    <v-simple-table
+                      style="width: 100%;
+  border-collapse: collapse;"
+                    >
+                      <tr>
+                        <th width="16.67%"></th>
+                        <th>
+                          <div class="graph6-details ">
+                            <!-- แถบprogress -->
+                            <div class="progress-el">
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">18.5</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">25.0</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">28.0</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <span class="text-top">32.0</span>
+                              <v-progress-linear
+                                color="none"
+                                rounded
+                                value="100"
+                              ></v-progress-linear>
+                            </div>
+                            <div class="progress-el">
+                              <v-progress-linear
+                                color="purple darken-2"
+                                height="15"
+                                class="rounded-l-xl"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="blue darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="green darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="yellow darken-2"
+                                height="15"
+                                value="100"
+                              ></v-progress-linear>
+                              <br />
+                              <v-progress-linear
+                                color="red darken-2"
+                                height="15"
+                                class="rounded-r-xl"
+                                value="100"
+                              ></v-progress-linear>
+                            </div>
+                            <br />
+                          </div>
+                        </th>
+                      </tr>
+                    </v-simple-table>
+
+                    <v-simple-table
+                      style="width: 100%;
+  border-collapse: collapse;"
+                      class="table_human"
+                    >
+                      <tr>
+                        <th></th>
+                        <th>
+                          <div class="i-human">
+                            <div><p>Low</p></div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="i-human">
+                            <div><p>Normal</p></div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="i-human">
+                            <div><p>increased</p></div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="i-human">
+                            <div><p>Hight</p></div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="i-human">
+                            <div><p>Very hight</p></div>
+                          </div>
+                        </th>
+                      </tr>
+                      <tr v-for="item in items_2" :key="item.id" align="center">
+                        <th scope="row" class="text-center fix_center_table">
+                          <img
+                            height="40px"
+                            class="filter-white"
+                            :src="require('../assets/icon/' + item.icons)"
+                          />
+                          <span class="black--text"
+                            ><strong>{{ item.gender }}</strong></span
+                          >
+                        </th>
+                        <td
+                          v-for="n in 5"
+                          :key="n"
+                          width="16.67%"
+                          height="40px"
+                          style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
+                          class="font_omg"
+                        >
+                          {{ item.data[n - 1] }}
+                        </td>
+                      </tr>
+                    </v-simple-table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </v-card-content>
+      </v-card>
+    </div>
+    <div class="card_el_card2">
+      <v-card class="bdr_12" style="padding-bottom:30px;">
+        <v-card-content>
+          <div class="card_rootcontent">
+            <div class="head-card2">
+              <div class="">
+                <div class="header_card2">
+                  <div class="title_card2">
+                    <div class="card2_nameNicon">
+                      <div style="padding-right:10px;">
+                        <img
+                          height="40px"
+                          class="filter-white"
+                          src="../assets/icon/icon_step_03.svg"
+                          alt="step"
+                        />
+                      </div>
+                      <div class="card3-bot-text ">
+                        <span>Step</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="head_card2_btn">
+                    <v-btn small icon fab class="hid">
+                      <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
+                    </v-btn>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card2_line2 grey--text">
+              <span>Daily avg doing more exercise id good for health</span>
+            </div>
+            <div class="content1_card3">
+              <!-- card l -->
+              <div class="chart1_card3 c30">
+                <div class="size_chart3">
+                  <canvas
+                    id="graph1_c3"
+                    class="set_size_graph_noti_last"
+                  ></canvas>
+                </div>
+              </div>
+              <br />
+              <!-- card r  -->
+              <div class="data_table_card3 c30">
+                <div class="card1-subcard-3 ct_set" width="" height=""></div>
+                <div class="table_content_card2">
+                  <v-simple-table
+                    style="width: 100%;
+  border-collapse: collapse;"
+                  >
+                    <tr
+                      v-for="item in data_card3"
+                      :key="item.id"
+                      align="center"
+                    >
+                      <th scope="row" width="10%" class="head_table_card3">
+                        <v-icon small :style="{ color: item.color }">{{
+                          item.icon
+                        }}</v-icon>
+                        <span
+                          class="black--text pd_text_table_c3 pd_text_5 font_sm"
+                          ><strong>{{ item.type }}</strong></span
                         >
                       </th>
                       <td
-                        v-for="n in 5"
+                        v-for="n in 7"
                         :key="n"
-                        width="16.67%"
+                        width=""
                         height="40px"
                         style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
                         class="font_omg"
@@ -731,88 +855,12 @@
                         {{ item.data[n - 1] }}
                       </td>
                     </tr>
-                  </table>
+                  </v-simple-table>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </v-card>
-    </div>
-    <div class="card_el_card2">
-      <v-card class="bdr_12" style="padding-bottom:30px;">
-        <div class="card_rootcontent">
-          <div class="head-card2">
-            <div class="">
-              <div class="header_card2">
-                <div class="title_card2">
-                  <div class="card2_nameNicon">
-                    <div style="padding-right:10px;">
-                      <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_step_03.svg"
-                        alt="step"
-                      />
-                    </div>
-                    <div class="card3-bot-text ">
-                      <span>Step</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="head_card2_btn">
-                  <v-btn small icon fab class="hid">
-                    <v-icon class="exit-icon">mdi-exit-to-app</v-icon>
-                  </v-btn>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card2_line2 grey--text">
-            <span>Daily avg doing more exercise id good for health</span>
-          </div>
-          <div class="content1_card3">
-            <!-- card l -->
-            <div class="chart1_card3 c30">
-              <div class="size_chart3">
-                <canvas id="graph1_c3" width="800px" height="200px"></canvas>
-              </div>
-            </div>
-            <br />
-            <!-- card r  -->
-            <div class="data_table_card3 c30">
-              <div class="card1-subcard-3 ct_set" width="" height=""></div>
-              <div class="table_content_card2">
-                <table
-                  style="width: 100%;
-  border-collapse: collapse;"
-                >
-                  <tr v-for="item in data_card3" :key="item.id" align="center">
-                    <th scope="row" width="10%" class="head_table_card3">
-                      <v-icon small :style="{ color: item.color }">{{
-                        item.icon
-                      }}</v-icon>
-                      <span
-                        class="black--text pd_text_table_c3 pd_text_5 font_sm"
-                        ><strong>{{ item.type }}</strong></span
-                      >
-                    </th>
-                    <td
-                      v-for="n in 7"
-                      :key="n"
-                      width=""
-                      height="40px"
-                      style="font-size:29px; font-weight: bold; border:1.5px solid; #757575;"
-                      class="font_omg"
-                    >
-                      {{ item.data[n - 1] }}
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+        </v-card-content>
       </v-card>
     </div>
     <!-- </div> -->
@@ -1290,7 +1338,7 @@ export default {
   font-size: 14px;
 }
 .font_omg {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
   padding-bottom: 0px;
   margin-bottom: 5px;
@@ -1506,14 +1554,32 @@ export default {
 .co5 {
   background-color: grey;
 }
-
+.card1-subcard-3_sp {
+  height: 300px;
+}
 .font_reg {
   font-weight: regular !important;
 }
+.set_size_graph_noti_last {
+  max-width: 800px;
+  max-height: 250px;
+}
+@media only screen and (max-width: 1024px) {
+  .content1-card1 {
+    width: 100% !important;
+  }
+  .card1-subcard-3_sp {
+    width: fit-content;
+    /* width: fit-content !important; */
+  }
+  .ct_1_c_noti{
+    /* padding-left: 5px; */
+  }
+}
 /* 800px */
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .noti .card_el {
     background-color: rgba(224, 164, 51, 0.2);
   }
-}
+} */
 </style>

@@ -204,7 +204,7 @@
                 </v-card-subtitle>
                 <v-card-content class="pa-1">
                   <!-- <div class="pa-1"> -->
-                  <table class="card2-table">
+                  <table class="card2-table pd_x5">
                     <tr class="table_head1">
                       <th class="table_head1_data">ช่วงอายุ</th>
                       <th>ชาย</th>
@@ -217,7 +217,7 @@
                       height="30px"
                       class="filter-white content_table"
                     >
-                      <td class="content_table_data1 two-data-card2 text-left">
+                      <td width="fit-content" class="content_table_data1 two-data-card2 text-left">
                         <v-icon x-small :style="{ color: item.color }"
                           >mdi-circle
                         </v-icon>
@@ -459,7 +459,7 @@
                   </div>
                 </div>
               </div>
-              <div class="icon-card">
+              <div class="icon-card hid set_0">
                 <div class="exit-icon-card3">
                   <v-btn small icon fab class="hid">
                     <img
@@ -1541,154 +1541,4 @@ th {
   }
 }
 
-@media screen and (max-width: 425px) {
-  .card_el {
-    width: 100%;
-  }
-  .card3_l1 {
-    padding: 0px;
-  }
-  .head-card1,
-  .card1-left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // background-color: red;
-  }
-  .card2-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .head_name_tag,
-  .title-card3 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 40px;
-    width: 100%;
-  }
-  .sp_nametag p {
-    margin-bottom: 0px;
-  }
-  .set_today_btn {
-    width: 100px !important;
-  }
-  .card2-subcard-3,
-  .card2-table {
-    width: 100%;
-  }
-  .card2-subcard-3 {
-    height: fit-content !important;
-  }
-  .content_table_data1 {
-    padding: 0 !important;
-  }
-  .card_right_c2_p1 {
-    height: fit-content !important;
-    width: 100%;
-    padding: 0px;
-  }
-  .content_table {
-    padding: 0px;
-  }
-  .card2-graph {
-    padding: 0px;
-    width: 100%;
-    height: fit-content;
-  }
-  .card3_l1_root {
-    height: fit-content !important;
-  }
-  .label_text_card3 {
-    // padding: 0px !important;
-    padding-left: 30px !important;
-  }
-  .head_card_l,
-  .head_card_r {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .sub_card_text {
-    padding-top: 10px;
-  }
-  .sex-age-title-card3 {
-    justify-content: space-between;
-    // justify-content: center;
-    width: 100%;
-  }
-  .set_btn_resize {
-    width: 100px !important;
-  }
-  .card-bot-text {
-    font-size: 40px;
-  }
-  .pd_icon {
-    display: flex;
-    justify-content: center;
-  }
-  .set_g1_size {
-    width: 100% !important;
-    height: 200px !important;
-  }
-  .head_card4 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .title_card4 {
-    width: 100% !important;
-  }
-  .icon-card {
-    width: 100% !important;
-  }
-  .sexnage_card4 {
-    justify-content: space-between;
-    // background-color: rgba(219, 34, 34, 0.575);
-    width: 100%;
-  }
-  .title_card4 {
-    display: flex;
-    flex-direction: column;
-  }
-  .card4_nameNicon {
-    // background-color: aquamarine;
-    display: flex;
-    padding: 0px;
-    width: 100%;
-  }
-  .head_and_sub_content {
-    padding: 0px;
-  }
-  .set_weight {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-  }
-  .sub_card_text_sp {
-    padding-top: 10px;
-  }
-  .card4-content {
-    // background-color: rgba(0, 50, 150, 0.6);
-  }
-  .card5-top-content {
-    width: 100%;
-  }
-  .card5-bottom-content,
-  .table_c5,
-  .set_table_n {
-    width: 100%;
-  }
-  .set_human_fix {
-    // height: 5vh !important;
-    height: 40px !important;
-  }
-  .fix_center {
-    padding-left: 0px;
-  }
-}
 </style>

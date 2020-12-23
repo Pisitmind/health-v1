@@ -109,7 +109,7 @@ html .set_hidden {
   height: 30px;
   /* background-color: green; */
 }
-.card1-left{
+.card1-left {
   width: 60%;
 }
 .bg_blue {
@@ -262,7 +262,8 @@ html .set_hidden {
 .btn_day_tag span {
   font-size: 14px;
 }
-.sex-title {
+.sex-title,
+.sex_card4 {
   padding: 0 10px 0 30px;
   display: flex;
   flex-wrap: wrap;
@@ -319,6 +320,10 @@ html .set_hidden {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
+}
+.cont1-card1,
+.cont2-card1 {
+  padding: 0 10px;
 }
 .fix_center {
   display: flex;
@@ -456,10 +461,10 @@ html::-webkit-scrollbar {
   font-size: 14px;
   padding-left: 20px;
 }
-.day_calen{
-  display:flex;
+.day_calen {
+  display: flex;
   width: 100%;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 .set_height {
   height: fit-content;
@@ -476,9 +481,17 @@ html::-webkit-scrollbar {
   font-weight: bold;
   font-size: 16px;
 }
+.ct_1_c_noti {
+  display: flex;
+}
+.ct_r_c_noti {
+  width: 300px;
+  /* padding:0px 20px; */
+}
 /* @media only screen and (max-width: 768px) { */
 @media only screen and (max-width: 800px) {
-  .fix_center {
+  .fix_center,
+  .fix_center_table {
     display: flex;
     align-items: center;
     padding-right: 10px;
@@ -486,5 +499,350 @@ html::-webkit-scrollbar {
   justify-items: center;
   justify-content: space-around; */
   }
+  .set_ab {
+    padding-top: 50px !important;
+  }
+  .content1-card1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .ct_1_c_noti {
+    justify-content: space-between;
+    /* background-color: rgba(2, 10, 102, 0.2); */
+    /* padding: 0 20px; */
+  }
+  .cont1-card1,
+  .cont2-card1 {
+    padding: 0 20px;
+  }
+  .ct_2_c_noti {
+    width: 100%;
+  }
+  .card1-subcard-3,
+  .ct_r_c_noti {
+    width: 100% !important;
+  }
+  .alr {
+    text-align: center !important;
+  }
+  .t_name_ct3c1 {
+    /* background-color: #eeff01; */
+  }
+  .set_cen_el {
+    width: 100%;
+    padding-left: 25%;
+    /* justify-content:center;
+    justify-items: center;
+    align-items: center;
+    text-align: center; */
+  }
 }
 
+/* @media screen and (max-width: 320px) { */
+@media screen and (max-width: 425px) {
+  .card_el {
+    width: 100%;
+  }
+  .content1_card2,
+  .content1_card3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .card3_l1 {
+    padding: 0px;
+  }
+  .head-card1,
+  .card1-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+  }
+  .card2-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .head_name_tag,
+  .title-card3 {
+    display: flex;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 40px;
+    width: 100%;
+  }
+  .sp_nametag p {
+    margin-bottom: 0px;
+  }
+  .set_today_btn {
+    width: 100px !important;
+  }
+  .card2-subcard-3,
+  .card2-table {
+    width: 100%;
+  }
+  .card2-subcard-3 {
+    height: fit-content !important;
+  }
+  .content_table_data1 {
+    padding: 0 !important;
+  }
+  .card_right_c2_p1 {
+    height: fit-content !important;
+    width: 100%;
+    padding: 0px;
+    padding-left: 0px !important;
+    /* background-color:green; */
+  }
+  .pd_x5 {
+    /* padding: 0px 5px; */
+    margin: 0px 5px;
+  }
+  .male-content {
+    font-size: 15px;
+  }
+  .bot-male-content {
+    font-size: 13px;
+  }
+  .sex_card4 {
+    padding-left: 30px;
+  }
+  .content_table {
+    padding: 0px;
+  }
+  .card2-graph {
+    padding: 0px;
+    width: 100%;
+    height: fit-content;
+  }
+  .card3_l1_root {
+    height: fit-content !important;
+  }
+  .label_text_card3 {
+    /* // padding: 0px !important; */
+    padding-left: 30px !important;
+  }
+  .head_card_l,
+  .head_card_r {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .sub_card_text {
+    padding-top: 10px;
+  }
+  .sex-age-title-card3 {
+    justify-content: space-between;
+    /* // justify-content: center; */
+    width: 100%;
+  }
+  .set_btn_resize {
+    width: 100px !important;
+  }
+  .card-bot-text {
+    font-size: 40px;
+  }
+  .pd_icon {
+    display: flex;
+    justify-content: center;
+  }
+  .set_g1_size {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .head_card4 {
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  .title_card4 {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 100% !important;
+  }
+  .icon-card {
+    width: 100% !important;
+  }
+  .sexnage_card4 {
+    justify-content: space-between;
+    /* // background-color: rgba(219, 34, 34, 0.575); */
+    width: 100%;
+  }
+  .title_card4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .card4_nameNicon {
+    /* // background-color: aquamarine; */
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center !important;
+    padding: 0px;
+    padding-right: 0px !important;
+    width: 100%;
+  }
+  .set_0 {
+    position: absolute;
+    display: none;
+  }
+  .card4_head_btn {
+    width: 100%;
+  }
+  .head_and_sub_content {
+    padding: 0px !important;
+  }
+  .set_weight {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .sub_card_text_sp {
+    padding-top: 10px;
+  }
+  .card4-content {
+    /* // background-color: rgba(0, 50, 150, 0.6); */
+  }
+  .card5-top-content {
+    width: 100%;
+  }
+  .card5-bottom-content,
+  .table_c5,
+  .set_table_n {
+    width: 100%;
+  }
+  .set_human_fix {
+    /* // height: 5vh !important; */
+    height: 40px !important;
+  }
+  .fix_center {
+    padding-left: 0px;
+  }
+  .data_table_card2_1,
+  .data_table_card2 {
+    width: 100% !important;
+  }
+  .data_table_card2_1_1 {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .foot_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .set_card {
+    height: fit-content;
+    width: 300px !important;
+  }
+  .ct_1_c_noti {
+    /* display:flex; */
+    width: 100%;
+    flex-direction: column;
+  }
+  .content1-card1 {
+    width: 100%;
+    padding: 0px;
+    /* background-color:blue; */
+  }
+  .c_size {
+    width: 100% !important;
+    padding: 0px !important;
+    /* background-color: blue; */
+  }
+  .card_content {
+    width: 100%;
+  }
+  .head_ct1_c1 {
+    width: 100% !important;
+  }
+  .set_wd100 {
+    width: 100% !important;
+  }
+  .text_inside1 {
+    font-size: 30px !important;
+  }
+  .set_pd_top {
+    padding-top: 20px;
+  }
+
+  .set_text_in_donut_2 {
+    margin-top: 5px !important;
+  }
+  .card1-subcard-3 {
+    height: fit-content;
+    width: 100% !important;
+  }
+  .card2-table {
+    width: 100%;
+  }
+  .card2-table td {
+    padding: 0px !important ;
+  }
+  .content_card_noti {
+    width: 100%;
+  }
+  .alr {
+    padding-left: 0px;
+    white-space: nowrap;
+    /* width: 100%; */
+  }
+  .card1-subcard-3_sp {
+    height: auto !important;
+    width: auto !important;
+      /* width: fit-content !important; */
+    /* width: 100% !important; */
+  }
+  .content1_card2,
+  .content1_card3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .data_table_card2 {
+    width: 100% !important;
+  }
+  .pd_text {
+    white-space: nowrap;
+    padding: 0px !important;
+  }
+  .card-info-right {
+    width: 100% !important;
+  }
+  .table_content_card2 {
+    width: 100% !important;
+  }
+  .table_human {
+    width: 100%;
+  }
+  .font-omg {
+    font-size: 14px;
+  }
+  .data_table_card2_1 {
+    width: 100% !important;
+  }
+  .text-top {
+    font-size: 14px !important;
+    word-spacing: 0.2;
+  }
+  .set_data_table_size {
+    width: auto !important;
+  }
+  .set_size_graph_noti_last {
+    max-width: 200px;
+  }
+  .chart1_card3 {
+    width: 100%;
+  }
+  .set_text_in_donut_noti {
+    margin-top: 20px;
+  }
+
+  /* noti page */
+}
