@@ -1525,6 +1525,9 @@ th {
   .card_r_root {
     height: fit-content !important;
   }
+  .card_r_root{
+    padding-bottom:13px;
+  }
   .card3_cardr {
     padding-bottom: 50px;
   }
@@ -1544,9 +1547,12 @@ th {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1920px) {
   .card_r_root {
-    height: 551px !important;
+    height: 551px ;
+  }
+  .card3_l1_root{
+    height: 420px ;
   }
 }
 </style>

@@ -1563,6 +1563,15 @@ export default {
   max-width: 800px;
   max-height: 250px;
 }
+@media only screen and (max-width:768px){
+  .ct_r_c_noti{
+    display: flex;
+    justify-content: center;
+  }
+  .card1-subcard-3_sp{
+    width: 600px !important;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .content1-card1 {
     width: 100% !important;
@@ -1581,10 +1590,11 @@ export default {
     background-color: rgba(224, 164, 51, 0.2);
   }
 } */
-@media (max-width: 1920px) {
+@media(min-width: 1441px) and (max-width: 1920px) {
   .ct_1_c_noti {
-    width: 65%;
+    /* width: 65%; */
     /* background-color: #0072ff21; */
+    width: 800px;
     display: flex;
     justify-content: space-around;
   }

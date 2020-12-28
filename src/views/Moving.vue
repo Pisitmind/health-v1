@@ -275,8 +275,8 @@
             <v-flex xs12 md6>
               <v-card
                 elevation="0"
-                class="bdr_0"
-                style="padding-righ:5px; border-right: 1px solid grey !important;"
+                class="bdr_0 line_divi_content"
+                style="padding-righ:5px;"
               >
                 <!-- หัวตาราง -->
                 <div class="card3_line2 grey--text">
@@ -929,6 +929,9 @@ export default {
 .big_font {
   font-size: 25px;
 }
+.line_divi_content{
+  border-right: 1px solid grey !important;
+}
 .icon-set {
   display: flex;
   justify-content: space-around;
@@ -946,6 +949,7 @@ export default {
   /* background-color: gray; */
 }
 .card1_p3_root {
+  min-height:fit-content;
   height: 400px;
   // height: fit-content;
 }
@@ -1157,6 +1161,10 @@ export default {
   .set_content_space {
     height: fit-content !important;
   }
+  .content1-card1{
+    flex-direction:column;
+
+  }  
   .set_line_div {
     padding-right: 0px;
     border-right: 0px solid grey !important;
@@ -1169,6 +1177,16 @@ export default {
   .set_h50 {
     padding-left: 90px;
   }
+  .line_divi_content{
+    border-right: 0px solid grey !important;
+  }
+  .title_card1_p3{
+    min-width: fit-content;
+  }
+  .head_card1_p3_l {
+    width: 60%;
+  }
+ 
 }
 @media (min-width: 1440px) and(max-width: 1920px) {
   .set_h_step {

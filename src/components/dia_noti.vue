@@ -9,7 +9,7 @@
         </div>
         <div class="content_top_right_page">
           <!-- data top right -->
-          <div>
+          <div class="card_bonus1">
             <v-card width="" class="c1_c2_dialog bdr_12">
               <table class="data_c1c2">
                 <tr>
@@ -58,7 +58,7 @@
             </v-card>
           </div>
           <br />
-          <div>
+          <div class="card_bonus2">
             <v-card width="" class="c1_c2_dialog bdr_12">
               <table class="data_c1c2">
                 <tr>
@@ -781,4 +781,27 @@ export default {
 .head_table_card3 {
   text-align: left;
 }
+
+@media screen  and (max-width: 768px){
+  .content_dialog_page_top{
+      display: flex;
+    flex-direction: column;
+  }
+  .content_top_left_page{
+    width: auto;
+    padding:20px;
+  }
+  .content_top_right_page{
+    display: flex;
+        width: fit-content !important;
+    flex-direction: column;
+
+  }
+  .card_bonus1,.card_bonus2{
+    padding: 0px 150px !important;
+  }
+  .c1_c2_dialog {
+    width:fit-content;
+  }
+} 
 </style>
