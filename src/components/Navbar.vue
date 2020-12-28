@@ -5,6 +5,7 @@
       v-if="['Login'].indexOf($route.name) === -1"
       floating
     >
+      <!-- v-model="drawer" -->
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -99,7 +100,9 @@
                 />
               </v-list-item-icon>
               <v-list-tile-content class="">
-                <v-list-tile-title class="fz_14">{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title class="fz_14">{{
+                  item.title
+                }}</v-list-tile-title>
               </v-list-tile-content>
               <!-- </v-list-tile> -->
             </template>
@@ -146,7 +149,9 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title class="fz_14">{{ item2.title }}</v-list-item-title>
+              <v-list-item-title class="fz_14">{{
+                item2.title
+              }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :key="item2.title">
@@ -194,6 +199,14 @@
         </div>
       </v-list>
     </v-navigation-drawer>
+    <!-- <v-toolbar fixed app :clipped-left="clipped">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>more_vert</v-icon>
+      </v-btn>
+    </v-toolbar> -->
   </nav>
 </template>
 
@@ -209,6 +222,7 @@ export default {
 
   data() {
     return {
+      // drawer: true,
       items: [
         {
           title: "กราฟข้อมูล",

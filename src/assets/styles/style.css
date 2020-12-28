@@ -50,6 +50,10 @@ html .set_hidden {
 .card_rootcontent {
   padding: 20px;
 }
+.set_line_div {
+  padding-right: 5px;
+  border-right: 1px solid grey !important;
+}
 .card_content,
 .card1_p3_root,
 .card1_p5_root,
@@ -796,7 +800,7 @@ html::-webkit-scrollbar {
   .card1-subcard-3_sp {
     height: auto !important;
     width: auto !important;
-      /* width: fit-content !important; */
+    /* width: fit-content !important; */
     /* width: 100% !important; */
   }
   .content1_card2,

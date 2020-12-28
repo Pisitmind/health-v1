@@ -60,7 +60,6 @@
               </div>
             </div>
             <div class="content1-card1">
-              
               <div class="ct_1_c_noti">
                 <div class="cont1-card1 c_size c1">
                   <div class="head_ct1_c1">
@@ -1572,7 +1571,7 @@ export default {
     width: fit-content;
     /* width: fit-content !important; */
   }
-  .ct_1_c_noti{
+  .ct_1_c_noti {
     /* padding-left: 5px; */
   }
 }
@@ -1582,4 +1581,16 @@ export default {
     background-color: rgba(224, 164, 51, 0.2);
   }
 } */
+@media (max-width: 1920px) {
+  .ct_1_c_noti {
+    width: 65%;
+    /* background-color: #0072ff21; */
+    display: flex;
+    justify-content: space-around;
+  }
+  .set_size_graph_noti_last {
+    width: -webkit-fill-available;
+    max-width: fill-available;
+  }
+}
 </style>

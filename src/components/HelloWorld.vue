@@ -217,7 +217,10 @@
                       height="30px"
                       class="filter-white content_table"
                     >
-                      <td width="fit-content" class="content_table_data1 two-data-card2 text-left">
+                      <td
+                        width="fit-content"
+                        class="content_table_data1 two-data-card2 text-left"
+                      >
                         <v-icon x-small :style="{ color: item.color }"
                           >mdi-circle
                         </v-icon>
@@ -1541,4 +1544,9 @@ th {
   }
 }
 
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .card_r_root {
+    height: 551px !important;
+  }
+}
 </style>

@@ -3,69 +3,70 @@
     <!-- <div > -->
     <!-- การ์ดการก้าว -->
     <div class="card_el">
-      <v-card class="card1_p3_root bdr_12">
+      <v-card class="card1_p3_root bdr_12 set_h_step">
         <!-- <div class=""> -->
-        <div class="card1_p3_headNsub">
-          <!-- head lr -->
-          <div class="card1_head_lr">
-            <!-- head left div -->
-            <div class="head_card1_p3_l">
-              <!-- head left -->
-              <div class="head_card1_p3_l_title">
-                <!-- การก้าว+icon -->
-                <div class="title_card1_p3">
-                  <div style="padding-right:10px;">
-                    <img
-                      height="40px"
-                      class="filter-white"
-                      src="../assets/icon/icon_step_03.svg"
-                      alt="step"
-                    />
+        <v-card-content>
+          <div class="card1_p3_headNsub">
+            <!-- head lr -->
+            <div class="card1_head_lr">
+              <!-- head left div -->
+              <div class="head_card1_p3_l">
+                <!-- head left -->
+                <div class="head_card1_p3_l_title">
+                  <!-- การก้าว+icon -->
+                  <div class="title_card1_p3">
+                    <div style="padding-right:10px;">
+                      <img
+                        height="40px"
+                        class="filter-white"
+                        src="../assets/icon/icon_step_03.svg"
+                        alt="step"
+                      />
+                    </div>
+                    <div class="card3-bot-text ">
+                      <span>การก้าว</span>
+                    </div>
                   </div>
-                  <div class="card3-bot-text ">
-                    <span>การก้าว</span>
-                  </div>
-                </div>
-                <!-- btn sex & age -->
-                <div class="sex_age_title_card1_p3">
-                  <div class="sex_title">
-                    <v-btn
-                      class="white--text "
-                      small
-                      color="#AD8DBB"
-                      width="80px"
-                      ><span>เพศ</span></v-btn
-                    >
-                  </div>
-                  <div class="age_title">
-                    <v-btn
-                      class="#AD8DBB--text "
-                      small
-                      outlined
-                      color="#AD8DBB"
-                      width="80px"
-                      ><span>อายุ</span></v-btn
-                    >
+                  <!-- btn sex & age -->
+                  <div class="sex_age_title_card1_p3">
+                    <div class="sex_title">
+                      <v-btn
+                        class="white--text "
+                        small
+                        color="#AD8DBB"
+                        width="80px"
+                        ><span>เพศ</span></v-btn
+                      >
+                    </div>
+                    <div class="age_title">
+                      <v-btn
+                        class="#AD8DBB--text "
+                        small
+                        outlined
+                        color="#AD8DBB"
+                        width="80px"
+                        ><span>อายุ</span></v-btn
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- head right div -->
-            <div class="head_card1_p3_r">
-              <!-- head right -->
-              <div class="head_card1_p3_r_title">
-                <div class="exit-icon-card3">
-                  <template>
-                    <v-btn small icon fab @click="$router.push('move_dtail')">
-                      <img
-                        height="30px"
-                        class="filter-white"
-                        src="../assets/icon/icon_detail.svg"
-                        alt="detail"
-                      />
-                    </v-btn>
-                  </template>
-                  <!-- <v-dialog v-model="dialog1" width="">
+              <!-- head right div -->
+              <div class="head_card1_p3_r">
+                <!-- head right -->
+                <div class="head_card1_p3_r_title">
+                  <div class="exit-icon-card3">
+                    <template>
+                      <v-btn small icon fab @click="$router.push('move_dtail')">
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </template>
+                    <!-- <v-dialog v-model="dialog1" width="">
                     <v-card>
                       <v-card-title>
                         <div class="head_dialog_c1_p3">
@@ -102,89 +103,98 @@
                       </v-card-content>
                     </v-card>
                   </v-dialog> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- content  -->
-        <v-container-text>
-          <v-layout row wrap justify="space-between">
-            <v-flex xs12 md6>
-              <v-card
-                elevation="0"
-                class="bdr_0"
-                style="padding-righ:5px; border-right: 1px solid grey !important;"
-              >
-                <div class="card3_line2 grey--text">
-                  <span
-                    >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
-                  >
-                </div>
-                <v-card-text>
-                  <div class="set_content_space" style="height:180px">
-                    <canvas id="graph1_p3" width="" height="120px"></canvas>
-                  </div>
-                </v-card-text>
-              </v-card>
-              <div class="set_h30">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card1">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text">ชาย</span>
-                        </div>
-                        <div class="pd_10">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text">หญิง</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      width="50%"
-                      class="text_sub"
-                      style="text-align: right;padding-right:40px;"
+          <!-- content  -->
+          <v-container-text>
+            <v-layout row wrap justify="space-between" height="fit-content">
+              <v-flex xs12 sm12 md6 lg6 xl6 class="set_line_div">
+                <v-card elevation="0" class="bdr_0 " style="">
+                  <div class="card3_line2 grey--text ">
+                    <span
+                      >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                     >
-                      <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </v-flex>
-            <v-flex xs12 md6>
-              <v-card elevation="0" style="padding-left:10px;">
-                <div class="card3_line2 grey--text">
-                  <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                </div>
-                <v-card-text>
-                  <div class="set_content_space" style="height:180px">
-                    <canvas id="graph2_c1_p3" width="" height="120px"></canvas>
                   </div>
-                </v-card-text>
-              </v-card>
-              <div class="set_h30">
-                <table width="100%">
-                  <tr>
-                    <td style="padding-left:20px;" class="text_sub">
-                      <span
-                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ 7,580
-                        ก้าวต่อวัน</span
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </v-flex>
-          </v-layout>
-        </v-container-text>
-        <!-- </div> -->
+                  <v-card-text
+                    class="set_content_space step_card_size_l"
+                    style="height:180px"
+                  >
+                    <div class="" px-2>
+                      <canvas
+                        class=""
+                        id="graph1_p3"
+                        width=""
+                        height="120px"
+                      ></canvas>
+                    </div>
+                    <div class="set_h30 ">
+                      <table width="100%">
+                        <tr>
+                          <td style="text-align:center;">
+                            <div class="label_text_card1">
+                              <div>
+                                <v-icon small color="blue"> mdi-circle</v-icon>
+                                <span class="black--text">ชาย</span>
+                              </div>
+                              <div class="pd_10">
+                                <v-icon small color="pink"> mdi-circle</v-icon>
+                                <span class="black--text">หญิง</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td
+                            width="50%"
+                            class="text_sub"
+                            style="text-align: right;padding-right:40px;"
+                          >
+                            <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm12 md6 lg6 xl6>
+                <v-card elevation="0" style="padding-left:10px;">
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                  </div>
+                  <v-card-text class="set_content_space" style="height:180px">
+                    <div>
+                      <canvas
+                        id="graph2_c1_p3"
+                        width=""
+                        height="120px"
+                      ></canvas>
+                    </div>
+                    <div class="set_h30">
+                      <table width="100%">
+                        <tr>
+                          <td style="padding-left:20px;" class="text_sub">
+                            <span
+                              >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ
+                              7,580 ก้าวต่อวัน</span
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container-text>
+          <!-- </div> -->
+        </v-card-content>
       </v-card>
     </div>
     <!-- การ์ดเผาผลาญ -->
     <div class="card_el">
-      <v-card class="card1_p3_root bdr_12">
+      <v-card class="card1_p3_root_sp bdr_12 set_h_step">
         <!-- <div class="card1_p3_root"> -->
         <div class="card1_p3_headNsub">
           <!-- head lr -->
@@ -277,13 +287,14 @@
                     <!-- graph -->
                     <canvas
                       id="graph1_c2_p3"
-                      width="200px"
-                      height="130"
+                      width=""
+                      height=""
+                      class="set_size_burn"
                     ></canvas>
                   </div>
                 </v-card-text>
               </v-card>
-              <div class="set_h30">
+              <div class="set_h30_sp">
                 <!-- ก้นตาราง -->
               </div>
             </v-flex>
@@ -294,33 +305,31 @@
                   <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
                 <v-card-text>
-                  <div class="set_content_space" style="height:250px">
+                  <v-row class="set_content_space" style="height:250px">
                     <!-- กราฟ -->
                     <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
-                  </div>
-                </v-card-text>
-              </v-card>
-              <div class="set_h50">
-                <!-- ก้นตาราง -->
-                <table
-                  width="100%"
-                  cellspacing="0"
-                  cellpadding="0"
-                  style="padding-left:20px"
-                >
-                  <tr style="padding:0; margin:0;" class="set_pre_table">
-                    <!-- <td style="padding-left:20px; "> -->
-                    <span class="text_sub"
-                      >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
-                      แคลต่อวัน</span
-                    ><br />
-                    <span class="grey--text text_sub"
-                      >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
-                      ต่อวัน)</span
+                  </v-row>
+                  <v-row class="set_h50">
+                    <!-- ก้นตาราง -->
+                    <table
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="padding-left:20px"
                     >
-                    <!-- </td> -->
-                  </tr>
-                  <!-- <tr style="">
+                      <tr style="padding:0; margin:0;" class="set_pre_table">
+                        <!-- <td style="padding-left:20px; "> -->
+                        <span class="text_sub"
+                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ
+                          658 แคลต่อวัน</span
+                        ><br />
+                        <span class="grey--text text_sub"
+                          >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
+                          ต่อวัน)</span
+                        >
+                        <!-- </td> -->
+                      </tr>
+                      <!-- <tr style="">
                     <td style="padding-left:20px;">
                     <span class="grey--text text_sub"
                       >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
@@ -328,8 +337,10 @@
                     >
                     </td>
                   </tr> -->
-                </table>
-              </div>
+                    </table>
+                  </v-row>
+                </v-card-text>
+              </v-card>
             </v-flex>
           </v-layout>
         </v-container-text>
@@ -339,155 +350,157 @@
     <!-- การ์ด ออกกำลังกาย -->
     <div class="card1_p3 pb_40">
       <v-card class="card1_p3_root bdr_12">
-        <div class=" pb_20">
-          <div class="card1_p3_headNsub">
-            <!-- head lr -->
-            <div class="card1_head_lr">
-              <!-- head left div -->
-              <div class="head_card1_p3_l_last">
-                <!-- head left -->
-                <div class="head_card3_p3_l_title">
-                  <!-- การก้าว+icon -->
-                  <div class="title_card3_p3">
-                    <div class="card3-bot-text sp_card">
-                      <span>การออกกำลังกาย</span>
+        <v-card-content>
+          <div class=" pb_20">
+            <div class="card1_p3_headNsub">
+              <!-- head lr -->
+              <div class="card1_head_lr">
+                <!-- head left div -->
+                <div class="head_card1_p3_l_last">
+                  <!-- head left -->
+                  <div class="head_card3_p3_l_title">
+                    <!-- การก้าว+icon -->
+                    <div class="title_card3_p3">
+                      <div class="card3-bot-text sp_card">
+                        <span>การออกกำลังกาย</span>
+                      </div>
                     </div>
-                  </div>
-                  <!-- btn all -->
-                  <div class="btn_date_head_card3">
-                    <div class="">
-                      <v-btn
-                        class="white--text "
-                        small
-                        color="#AD8DBB"
-                        width="80px"
-                        ><span>วันนี้</span></v-btn
-                      >
-                    </div>
-                    <div class="">
-                      <v-btn
-                        class="#AD8DBB--text "
-                        small
-                        outlined
-                        color="#AD8DBB"
-                        width="80px"
-                        ><span>สัปดาห์</span></v-btn
-                      >
-                    </div>
-                    <div class="">
-                      <v-btn
-                        class="#AD8DBB--text "
-                        small
-                        outlined
-                        color="#AD8DBB"
-                        width="80px"
-                        ><span>เดือน</span></v-btn
-                      >
-                    </div>
-                    <div class="">
-                      <v-btn
-                        class="#AD8DBB--text "
-                        small
-                        outlined
-                        color="#AD8DBB"
-                        width="80px"
-                        ><span>ปี</span></v-btn
-                      >
+                    <!-- btn all -->
+                    <div class="btn_date_head_card3">
+                      <div class="">
+                        <v-btn
+                          class="white--text "
+                          small
+                          color="#AD8DBB"
+                          width="80px"
+                          ><span>วันนี้</span></v-btn
+                        >
+                      </div>
+                      <div class="">
+                        <v-btn
+                          class="#AD8DBB--text "
+                          small
+                          outlined
+                          color="#AD8DBB"
+                          width="80px"
+                          ><span>สัปดาห์</span></v-btn
+                        >
+                      </div>
+                      <div class="">
+                        <v-btn
+                          class="#AD8DBB--text "
+                          small
+                          outlined
+                          color="#AD8DBB"
+                          width="80px"
+                          ><span>เดือน</span></v-btn
+                        >
+                      </div>
+                      <div class="">
+                        <v-btn
+                          class="#AD8DBB--text "
+                          small
+                          outlined
+                          color="#AD8DBB"
+                          width="80px"
+                          ><span>ปี</span></v-btn
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- head right div -->
-              <div class="head_card1_p3_r">
-                <!-- head right -->
-                <div class="head_card1_p3_r_title">
-                  <div class="exit-icon-card3">
-                    <v-btn small icon fab class="hid">
-                      <img
-                        height="30px"
-                        class="filter-white"
-                        src="../assets/icon/icon_detail.svg"
-                        alt="detail"
-                      />
-                    </v-btn>
+                <!-- head right div -->
+                <div class="head_card1_p3_r">
+                  <!-- head right -->
+                  <div class="head_card1_p3_r_title">
+                    <div class="exit-icon-card3">
+                      <v-btn small icon fab class="hid">
+                        <img
+                          height="30px"
+                          class="filter-white"
+                          src="../assets/icon/icon_detail.svg"
+                          alt="detail"
+                        />
+                      </v-btn>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card1_p3_content">
-            <div class="card3_p3_content_left">
-              <!-- <div class="card3_line2 grey--text">
+            <div class="card1_p3_content">
+              <div class="card3_p3_content_left">
+                <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
-              <v-card-text class="set_content_space">
-                <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
-              </v-card-text>
-              <div class="label_grpah1_c1_p3">
-                <table width="100%">
-                  <tr>
-                    <td style="text-align:center;">
-                      <div class="label_text_card3">
-                        <div>
-                          <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text">ชาย</span>
+                <v-card-text class="set_content_space">
+                  <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
+                </v-card-text>
+                <div class="label_grpah1_c1_p3">
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align:center;">
+                        <div class="label_text_card3">
+                          <div>
+                            <v-icon small color="blue"> mdi-circle</v-icon>
+                            <span class="black--text">ชาย</span>
+                          </div>
+                          <div class="pd_20">
+                            <v-icon small color="pink"> mdi-circle</v-icon>
+                            <span class="black--text">หญิง</span>
+                          </div>
                         </div>
-                        <div class="pd_20">
-                          <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text">หญิง</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td width="50%" class="text_sub">
-                      <span></span>
-                    </td>
-                  </tr>
-                </table>
+                      </td>
+                      <td width="50%" class="text_sub">
+                        <span></span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!-- <v-divider vertical></v-divider> -->
+              <div class="card3_p3_content_right pd_r_20">
+                <v-card
+                  class="card2-subcard-3 ct_set bdr_12_only"
+                  width=""
+                  height=""
+                >
+                  <v-card-subtitle>
+                    <span class="topic-name-card_c3 ">
+                      ตัวบ่งชี้
+                    </span>
+                  </v-card-subtitle>
+                  <v-card-text class="pa-1">
+                    <div class="card-info-right pa-1">
+                      <table class="card2-table">
+                        <tr>
+                          <th height="30px">กิจกรรม</th>
+                          <th>ชาย</th>
+                          <th>หญิง</th>
+                          <th>เฉลี่ยรวม</th>
+                        </tr>
+                        <tr
+                          v-for="item in data_card3_p3"
+                          :key="item.id"
+                          height="30px"
+                        >
+                          <td class="two-data-card2">
+                            <v-icon x-small :style="{ color: item.color }"
+                              >mdi-circle
+                            </v-icon>
+                            {{ item.name }}
+                          </td>
+                          <td>{{ item.dataMan }}</td>
+                          <td>{{ item.dataWman }}</td>
+                          <td>{{ item.avg }}</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </v-card-text>
+                </v-card>
               </div>
             </div>
-            <!-- <v-divider vertical></v-divider> -->
-            <div class="card3_p3_content_right pd_r_20">
-              <v-card
-                class="card2-subcard-3 ct_set bdr_12_only"
-                width=""
-                height=""
-              >
-                <v-card-subtitle>
-                  <span class="topic-name-card_c3 ">
-                    ตัวบ่งชี้
-                  </span>
-                </v-card-subtitle>
-                <v-card-text class="pa-1">
-                  <div class="card-info-right pa-1">
-                    <table class="card2-table">
-                      <tr>
-                        <th height="30px">กิจกรรม</th>
-                        <th>ชาย</th>
-                        <th>หญิง</th>
-                        <th>เฉลี่ยรวม</th>
-                      </tr>
-                      <tr
-                        v-for="item in data_card3_p3"
-                        :key="item.id"
-                        height="30px"
-                      >
-                        <td class="two-data-card2">
-                          <v-icon x-small :style="{ color: item.color }"
-                            >mdi-circle
-                          </v-icon>
-                          {{ item.name }}
-                        </td>
-                        <td>{{ item.dataMan }}</td>
-                        <td>{{ item.dataWman }}</td>
-                        <td>{{ item.avg }}</td>
-                      </tr>
-                    </table>
-                  </div>
-                </v-card-text>
-              </v-card>
-            </div>
           </div>
-        </div>
+        </v-card-content>
       </v-card>
     </div>
     <!-- <div class="card1_p3 pb_40">
@@ -932,7 +945,10 @@ export default {
   height: 200px;
   /* background-color: gray; */
 }
-
+.card1_p3_root {
+  height: 400px;
+  // height: fit-content;
+}
 .card1_head_lr {
   /* background-color:rgba(0,0,0,0.1); */
   display: flex;
@@ -1113,6 +1129,9 @@ export default {
 .two-data-card2 {
   font-size: 14px;
 }
+.set_h30_sp{
+  height: 20px;
+}
 /* 
 .ct_set {
   align-items: center;
@@ -1126,10 +1145,42 @@ export default {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  height: 30px;
+  height: 100px;
   // background-color: green;
 }
 .set_h50 {
   height: 50px;
+}
+@media (max-width: 768px) {
+  .set_h_step,
+  .card1_p3_root,
+  .set_content_space {
+    height: fit-content !important;
+  }
+  .set_line_div {
+    padding-right: 0px;
+    border-right: 0px solid grey !important;
+  }
+  .step_card_size_l {
+    height: fit-content !important;
+  }
+  .set_size_burn {
+  }
+  .set_h50 {
+    padding-left: 90px;
+  }
+}
+@media (min-width: 1440px) and(max-width: 1920px) {
+  .set_h_step {
+    height: 550px !important;
+  }
+  .set_size_burn {
+    // width: 100%;
+    height: 300px;
+  }
+  .set_h50 {
+    height: 50px;
+    padding-top: 150px;
+  }
 }
 </style>
