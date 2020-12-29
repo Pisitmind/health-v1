@@ -79,7 +79,9 @@
                         </v-avatar>
                       </div>
                       <div class="n_card">
-                        <span style="color:#88432F;">{{ idx.name }}</span>
+                        <span class="fz_in_card" style="color:#88432F;">{{
+                          idx.name
+                        }}</span>
                       </div>
                     </div>
                   </v-card>
@@ -267,6 +269,9 @@ export default {
 .n_card {
   text-align: center;
 }
+.fz_in_card {
+  font-size: 1.2rem;
+}
 .rol_card {
   text-align: center;
   /* align-self: start; */
@@ -328,5 +333,23 @@ export default {
 .set_size {
   object-fit: cover;
   object-position: top center;
+}
+
+@media (max-width: 320px) {
+  .head_size {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fz_in_card {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .fz_in_card {
+    font-size: 1.2rem;
+  }
 }
 </style>
