@@ -863,3 +863,9 @@ html::-webkit-scrollbar {
 
   /* noti page */
 }
+@media (max-width: 1920px) {
+  .set_norm_size_graph {
+    min-height: 250px;
+    max-height: 300px;
+  }
+}

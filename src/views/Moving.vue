@@ -3,7 +3,7 @@
     <!-- <div > -->
     <!-- การ์ดการก้าว -->
     <div class="card_el">
-      <v-card class="card1_p3_root bdr_12 set_h_step">
+      <v-card class="card1_p3_root bdr_12 set_h_step_sp">
         <!-- <div class=""> -->
         <v-card-content>
           <div class="card1_p3_headNsub">
@@ -124,7 +124,7 @@
                   >
                     <div class="graph_line_step" px-2>
                       <canvas
-                        class="set_norm_size_graph"
+                        class="set_norm_size_graph "
                         id="graph1_p3"
                         width=""
                         height="120px"
@@ -326,6 +326,7 @@
                   <v-row class="pd_subtext_sm set_h50">
                     <!-- ก้นตาราง -->
                     <table
+                      class="set_pdt_table"
                       width="100%"
                       cellspacing="0"
                       cellpadding="0"
@@ -383,7 +384,7 @@
                     <div class="btn_date_head_card3">
                       <div>
                         <v-btn
-                          class="white--text "
+                          class="white--text set_btn_ex"
                           small
                           color="#AD8DBB"
                           width="80px"
@@ -392,7 +393,7 @@
                       </div>
                       <div>
                         <v-btn
-                          class="#AD8DBB--text "
+                          class="#AD8DBB--text set_btn_ex"
                           small
                           outlined
                           color="#AD8DBB"
@@ -402,7 +403,7 @@
                       </div>
                       <div>
                         <v-btn
-                          class="#AD8DBB--text "
+                          class="#AD8DBB--text set_btn_ex"
                           small
                           outlined
                           color="#AD8DBB"
@@ -412,7 +413,7 @@
                       </div>
                       <div>
                         <v-btn
-                          class="#AD8DBB--text "
+                          class="#AD8DBB--text set_btn_ex"
                           small
                           outlined
                           color="#AD8DBB"
@@ -1091,10 +1092,7 @@ export default {
   align-items: left;
   text-align: left;
 }
-.set_btn_ex {
-  flex-basis: 0 !important;
-  flex-grow: 0 !important;
-}
+
 .btn_date_head_card3 {
   display: flex;
   /* padding-left:30px; */
@@ -1207,6 +1205,18 @@ export default {
     justify-content: space-between;
     width: 100%;
   }
+  .head_card3_p3_l_title {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn_date_head_card3 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px !important;
+  }
+  .set_btn_ex {
+    // width: 60%;
+  }
   .head_card3_p3_r_title,
   .exit-icon-card3 {
     display: flex;
@@ -1214,6 +1224,9 @@ export default {
   }
   .title_card1_p3 {
     width: max-content;
+  }
+  .set_pdt_table {
+    padding-top: 20px;
   }
   .sex_age_title_card1_p3 {
     // width: auto;
@@ -1382,6 +1395,9 @@ export default {
     height: 50px;
     padding-top: 50px;
   }
+  .set_h_step_sp {
+    height: 460px;
+  }
   .set_h_exer_card {
     height: auto;
   }
@@ -1398,6 +1414,9 @@ export default {
     display: block;
     width: 770px;
     height: 300px;
+  }
+   .set_h_step_sp {
+    height: 500px;
   }
   .set_left {
     text-align: left;
@@ -1418,8 +1437,7 @@ export default {
     min-height: 200px;
   }
   .set_h50 {
-    // height: 50px;
-    padding-top: 150px;
+    padding-top: 100px;
   }
   .head_card1_p3_l_title {
     display: flex;
