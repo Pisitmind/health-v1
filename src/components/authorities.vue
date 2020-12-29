@@ -20,7 +20,7 @@
           </div>
           <div class="">
             <v-row style="padding-top:10px;">
-                <v-col cols="12" md="6" sm="12">
+              <v-col cols="12" md="6" sm="12">
                 <v-dialog v-model="dialog1" width="80%">
                   <template v-slot:activator="{ on, attrs_au }">
                     <v-btn
@@ -75,7 +75,7 @@
                   </v-card>
                 </v-dialog>
               </v-col>
-                <v-col cols="12" md="6" sm="12">
+              <v-col cols="12" md="6" sm="12">
                 <v-text-field
                   v-model="message"
                   outlined
@@ -375,7 +375,9 @@ export default {
   /* width: 300px; */
   /* height: 300px; */
 }
-
+.headline {
+  line-height: normal;
+}
 .test {
   border: 4px solid #935442;
   border-style: dashed;

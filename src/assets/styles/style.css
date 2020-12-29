@@ -310,6 +310,7 @@ html .set_hidden {
 .headline {
   font-size: 25px !important;
   font-weight: bold !important;
+  line-height: normal;
 }
 .s_bold {
   font-weight: bold;

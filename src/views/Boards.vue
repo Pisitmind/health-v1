@@ -16,14 +16,14 @@
               </v-btn>
             </div>
             <div class="text_header">
-              <span class="">บทความ / สาระสุขภาพ</span>
+              <span class="set_fz_topic">บทความ / สาระสุขภาพ</span>
             </div>
           </div>
         </v-card-title>
         <v-card-text>
           <div class="">
             <v-row>
-              <v-col cols="6">
+              <v-col cols="12" sm="5" md="6" lg="6" xl="6">
                 <v-dialog v-model="dialog1" width="">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
@@ -78,7 +78,8 @@
                   </v-card>
                 </v-dialog>
               </v-col>
-              <v-col cols="6">
+              <v-spacer></v-spacer>
+              <v-col cols="12" sm="5" md="5" lg="5" xl="5">
                 <v-text-field
                   v-model="message"
                   outlined
@@ -111,26 +112,26 @@
               >
                 <template v-slot:default>
                   <thead class="none_color">
-                    <tr class="">
-                      <th width="10%" class="text-left">
+                    <tr class="" justify="space-around">
+                      <th width="" class="text-left">
                         วันที่
                       </th>
-                      <th width="10%" class="text-left">
+                      <th width="" class="text-left">
                         เวลา
                       </th>
-                      <th width="25%" class="text-left">
+                      <th width="40%" class="text-left">
                         หัวข้อบทความ
                       </th>
-                      <th width="20%" class="text-left">
+                      <th width="" class="text-left">
                         กลุ่มบทความ
                       </th>
-                      <th width="10%" class="text-center">
+                      <th width="" class="text-center">
                         ยอดผู้อ่าน
                       </th>
-                      <th width="15%" class="text-left">
+                      <th width="" class="text-left">
                         โดย
                       </th>
-                      <th width="10%" class="text-left"></th>
+                      <th width="" class="text-left"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -339,6 +340,7 @@ export default {
   width: 50%;
   display: flex;
   flex-direction: row;
+  vertical-align: middle;
   /* justify-content: space-between; */
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
@@ -378,6 +380,7 @@ tbody[data-v-f1e5daf2] {
 }
 .headline {
   color: #8a4532;
+  line-height: normal;
 }
 .customers tr:nth-child(odd) {
   background-color: #f2f2f2;
@@ -391,6 +394,10 @@ tbody[data-v-f1e5daf2] {
 }
 .customers td {
   border: none !important;
+}
+.customers{
+  width: 100%;
+  /* overflow-x: scroll; */
 }
 .v-card__title {
   padding: 20px;
@@ -411,4 +418,10 @@ tbody {
 table.v-table.tbody.th {
   border: hidden !important;
 } */
+
+@media (max-width: 320px) {
+  .set_fz_topic {
+    font-size: 2.3vh;
+  }
+}
 </style>

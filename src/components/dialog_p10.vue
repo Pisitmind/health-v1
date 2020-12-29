@@ -237,6 +237,7 @@ export default {
   width: 50%;
   display: flex;
   flex-direction: row;
+  vertical-align: middle;
   /* justify-content: space-between; */
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
@@ -291,5 +292,15 @@ export default {
 }
 .pd_20 {
   padding: 40px !important;
+}
+
+@media (max-width:320px){
+  .row_card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px;
+
+  }
 }
 </style>

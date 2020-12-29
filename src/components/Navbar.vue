@@ -4,7 +4,9 @@
       app
       v-if="['Login'].indexOf($route.name) === -1"
       floating
+      v-model="drawer"
     >
+      <!-- :permanent="!$vuetify.breakpoint.xsOnly" -->
       <!-- v-model="drawer" -->
       <v-list-item>
         <v-list-item-content>
@@ -199,6 +201,9 @@
         </div>
       </v-list>
     </v-navigation-drawer>
+    <v-toolbar class="d-lg-none" dense flat color="transparent">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-toolbar>
     <!-- <v-toolbar fixed app :clipped-left="clipped">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Topics</v-toolbar-title>
@@ -222,7 +227,7 @@ export default {
 
   data() {
     return {
-      // drawer: true,
+      drawer: true,
       items: [
         {
           title: "กราฟข้อมูล",

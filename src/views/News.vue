@@ -463,6 +463,7 @@ export default {
   display: flex;
   width: 100%;
   padding: 20px;
+  vertical-align: middle;
 }
 .btn_head_p10 {
   padding: 20px;
@@ -496,6 +497,7 @@ export default {
 }
 .headline {
   color: #8a4532;
+  line-height: normal;
 }
 .customers tr:nth-child(odd) {
   background-color: #f2f2f2;

@@ -177,6 +177,7 @@ export default {
 }
 .headline {
   color: #8a4532;
+   line-height: normal;
 }
 .head_of_dialog_user {
   display: flex;
