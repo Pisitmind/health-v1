@@ -30,7 +30,7 @@
         <v-card-text>
           <div class="">
             <v-row>
-              <v-col cols="6">
+               <v-col cols="12" sm="5" md="6" lg="6" xl="6">
                 <v-dialog v-model="dialog1" width="">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
@@ -85,7 +85,7 @@
                   </v-card>
                 </v-dialog>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="12" sm="5" md="5" lg="5" xl="5">
                 <v-text-field
                   v-model="message"
                   outlined
@@ -507,5 +507,24 @@ export default {
 }
 .customers td {
   border: none !important;
+}
+
+@media (max-width: 320px) {
+  .head_of_dialog_p9 {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    font-size: 1.8rem !important;
+    white-space: nowrap;
+  }
+
+  .set_fz_topic {
+    font-size: 1.9vh;
+  }
+  .btn_head_p10 {
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

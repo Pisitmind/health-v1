@@ -116,7 +116,7 @@
                 ></v-file-input>
                 <div style="width=100%;">
                   <v-row>
-                    <v-col cols="11" sm="3">
+                    <v-col cols="12" sm="4" xl="3" lg="3">
                       <v-dialog
                         ref="dialog"
                         v-model="modal"
@@ -157,7 +157,7 @@
                         </v-date-picker>
                       </v-dialog>
                     </v-col>
-                    <v-col cols="11" sm="3">
+                    <v-col cols="12" sm="4" xl="3" lg="3">
                       <v-menu
                         ref="menu"
                         v-model="menu2"
@@ -192,7 +192,7 @@
                     </v-col>
                   </v-row>
                   <v-row>
-                    <v-col cols="12" sm="6"> </v-col>
+                    <v-col cols="12" sm="4" xl="6" lg="6"> </v-col>
                   </v-row>
                 </div>
               </v-card-text>
@@ -294,13 +294,26 @@ export default {
   padding: 40px !important;
 }
 
-@media (max-width:320px){
-  .row_card{
+@media (max-width: 320px) {
+  .row_card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding:10px;
-
+    height: unset;
+    padding: 10px;
+    padding: 5px;
+  }
+  .mini_card1 {
+    margin: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .row_card {
+    display: flex;
+    width: auto;
+  }
+  .mini_card1 {
+    width: unset;
   }
 }
 </style>

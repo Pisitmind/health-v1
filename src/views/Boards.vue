@@ -395,7 +395,7 @@ tbody[data-v-f1e5daf2] {
 .customers td {
   border: none !important;
 }
-.customers{
+.customers {
   width: 100%;
   /* overflow-x: scroll; */
 }
@@ -420,8 +420,21 @@ table.v-table.tbody.th {
 } */
 
 @media (max-width: 320px) {
+  .head_of_dialog_p10 {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    font-size: 1.8rem !important;
+    white-space: nowrap;
+  }
+
   .set_fz_topic {
-    font-size: 2.3vh;
+    font-size: 1.9vh;
+  }
+  .btn_head_p10 {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

@@ -861,6 +861,9 @@ html::-webkit-scrollbar {
     width: 100%;
     overflow-x: scroll;
   }
+  .set_fz_topic {
+    font-size: 1.9vh;
+  }
 
   /* noti page */
 }
