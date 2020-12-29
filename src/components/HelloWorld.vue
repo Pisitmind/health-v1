@@ -79,7 +79,7 @@
               style="float: left; position: relative;"
             >
               <div
-                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index: 999999999999999"
+                style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -30px; line-height:19px; text-align: center; z-index:9"
               >
                 <span class="text_inside">ผู้ใช้ทั้งหมด</span><br />
                 <span class="text_inside1">2,800</span><br />

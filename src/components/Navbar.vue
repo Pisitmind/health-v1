@@ -5,6 +5,7 @@
       v-if="['Login'].indexOf($route.name) === -1"
       floating
       v-model="drawer"
+      class="set_nav_index"
     >
       <!-- :permanent="!$vuetify.breakpoint.xsOnly" -->
       <!-- v-model="drawer" -->
@@ -201,7 +202,13 @@
         </div>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar class="d-lg-none" dense flat color="transparent">
+    <v-toolbar
+      v-if="['Login'].indexOf($route.name) === -1"
+      class="d-lg-none"
+      dense
+      flat
+      color="transparent"
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-toolbar>
     <!-- <v-toolbar fixed app :clipped-left="clipped">
@@ -424,5 +431,8 @@ a:visited {
   /* background-color:rgba(0,200,50,0.4); */
   text-align: center;
   align-items: center;
+}
+.set_nav_index{
+  z-index: 10 !important;
 }
 </style>
