@@ -741,6 +741,15 @@ html::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
   }
+  /* add new style to size */
+  .set_graph_content_dp_100 {
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+    height: 150px;
+    max-width: 800px;
+    overflow-x: scroll;
+  }
   .set_card {
     height: fit-content;
     width: 300px !important;
@@ -846,6 +855,10 @@ html::-webkit-scrollbar {
   }
   .set_text_in_donut_noti {
     margin-top: 20px;
+  }
+  .set_of_scroll {
+    width: 100%;
+    overflow-x: scroll;
   }
 
   /* noti page */

@@ -124,7 +124,7 @@
                   >
                     <div class="graph_line_step" px-2>
                       <canvas
-                        class="set_norm_size_graph"
+                        class=""
                         id="graph1_p3"
                         width=""
                         height="120px"
@@ -169,7 +169,7 @@
                         id="graph2_c1_p3"
                         width=""
                         height="120px"
-                        class="set_gp_size_mov2 set_norm_size_graph"
+                        class="set_gp_size_mov2"
                       ></canvas>
                     </div>
                     <div class="set_h30">
@@ -293,7 +293,7 @@
                       id="graph1_c2_p3"
                       width=""
                       height=""
-                      class="set_size_burn set_norm_size_graph"
+                      class="set_size_burn"
                     ></canvas>
                   </div>
                 </v-card-text>
@@ -309,21 +309,11 @@
                   <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
                 <v-card-text>
-                  <v-row>
+                  <v-row class="set_content_space" style="height:250px">
                     <!-- กราฟ -->
-                    <div
-                      class="set_content_space set_of_scroll"
-                      style="height:250px"
-                    >
-                      <canvas
-                        id="graph2_c2_p3"
-                        width="200px"
-                        height=""
-                        class="set_size_burn_2 set_norm_size_graph"
-                      ></canvas>
-                    </div>
+                    <canvas id="graph2_c2_p3" width="200px" height=""></canvas>
                   </v-row>
-                  <v-row class="pd_subtext_sm set_h50">
+                  <v-row class="set_h50">
                     <!-- ก้นตาราง -->
                     <table
                       width="100%"
@@ -363,7 +353,7 @@
     </div>
     <!-- การ์ด ออกกำลังกาย -->
     <div class="card1_p3 pb_40">
-      <v-card class="card1_p3_root set_h_exer_card bdr_12">
+      <v-card class="card1_p3_root bdr_12">
         <v-card-content>
           <div class=" pb_20">
             <div class="card1_p3_headNsub">
@@ -381,45 +371,83 @@
                     </div>
                     <!-- btn all -->
                     <div class="btn_date_head_card3">
-                      <div>
-                        <v-btn
-                          class="white--text "
-                          small
-                          color="#AD8DBB"
-                          width="80px"
-                          ><span>วันนี้</span></v-btn
+                      <v-row class="mx-0 px-0">
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="6"
+                          lg="3"
+                          xl="3"
+                          class="set_btn_ex"
                         >
-                      </div>
-                      <div>
-                        <v-btn
-                          class="#AD8DBB--text "
-                          small
-                          outlined
-                          color="#AD8DBB"
-                          width="80px"
-                          ><span>สัปดาห์</span></v-btn
+                          <div>
+                            <v-btn
+                              class="white--text "
+                              small
+                              color="#AD8DBB"
+                              width="80px"
+                              ><span>วันนี้</span></v-btn
+                            >
+                          </div></v-col
                         >
-                      </div>
-                      <div>
-                        <v-btn
-                          class="#AD8DBB--text "
-                          small
-                          outlined
-                          color="#AD8DBB"
-                          width="80px"
-                          ><span>เดือน</span></v-btn
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="6"
+                          lg="3"
+                          xl="3"
+                          class="set_btn_ex"
                         >
-                      </div>
-                      <div>
-                        <v-btn
-                          class="#AD8DBB--text "
-                          small
-                          outlined
-                          color="#AD8DBB"
-                          width="80px"
-                          ><span>ปี</span></v-btn
+                          <div>
+                            <v-btn
+                              class="#AD8DBB--text "
+                              small
+                              outlined
+                              color="#AD8DBB"
+                              width="80px"
+                              ><span>สัปดาห์</span></v-btn
+                            >
+                          </div></v-col
                         >
-                      </div>
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="6"
+                          lg="3"
+                          xl="3"
+                          class="set_btn_ex"
+                        >
+                          <div>
+                            <v-btn
+                              class="#AD8DBB--text "
+                              small
+                              outlined
+                              color="#AD8DBB"
+                              width="80px"
+                              ><span>เดือน</span></v-btn
+                            >
+                          </div></v-col
+                        >
+                        <v-col
+                          cols="12"
+                          sm="6"
+                          md="6"
+                          lg="3"
+                          xl="3"
+                          class="set_btn_ex"
+                        >
+                          <div>
+                            <v-btn
+                              class="#AD8DBB--text "
+                              small
+                              outlined
+                              color="#AD8DBB"
+                              width="80px"
+                              ><span>ปี</span></v-btn
+                            >
+                          </div></v-col
+                        >
+                      </v-row>
                     </div>
                   </div>
                 </div>
@@ -446,13 +474,8 @@
                 <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
-                <v-card-text class="set_content_space set_graph1c3_size">
-                  <canvas
-                    id="graph1_c3_p3"
-                    class="set_size_graph_ex_card_bot"
-                    width="200px"
-                    height=""
-                  ></canvas>
+                <v-card-text class="set_content_space">
+                  <canvas id="graph1_c3_p3" width="200px" height=""></canvas>
                 </v-card-text>
                 <div class="label_grpah1_c1_p3">
                   <table width="100%">
@@ -488,11 +511,11 @@
                       ตัวบ่งชี้
                     </span>
                   </v-card-subtitle>
-                  <v-card-text class="pa-1 table_bot_mov">
+                  <v-card-text class="pa-1">
                     <div class="card-info-right pa-1">
                       <table class="card2-table">
                         <tr>
-                          <th class="set_left" height="30px">กิจกรรม</th>
+                          <th height="30px">กิจกรรม</th>
                           <th>ชาย</th>
                           <th>หญิง</th>
                           <th>เฉลี่ยรวม</th>
@@ -508,9 +531,9 @@
                             </v-icon>
                             {{ item.name }}
                           </td>
-                          <td class="text-center">{{ item.dataMan }}</td>
-                          <td class="text-center">{{ item.dataWman }}</td>
-                          <td class="text-center">{{ item.avg }}</td>
+                          <td>{{ item.dataMan }}</td>
+                          <td>{{ item.dataWman }}</td>
+                          <td>{{ item.avg }}</td>
                         </tr>
                       </table>
                     </div>
@@ -970,7 +993,6 @@ export default {
 .card1_p3_root {
   min-height: fit-content;
   height: 400px;
-  // height: auto;
   // height: fit-content;
 }
 .card1_head_lr {
@@ -1100,7 +1122,6 @@ export default {
   /* padding-left:30px; */
   justify-content: space-around;
   width: 50%;
-  padding: 3px 0px;
   // background-color: rgba(0, 200, 200, 0.4);
 }
 
@@ -1178,23 +1199,14 @@ export default {
   // background-color: green;
 }
 .set_h50 {
-  // height: 50px;
+  height: 50px;
 }
-.set_size_burn_2 {
-  min-height: 200px;
-  min-width: 600px;
-  max-width: 800px;
-  width: 700px;
-  height: 370px;
-}
+
 @media (max-width: 320px) {
   .card1_p3_headNsub {
     display: flex;
     width: fit-content;
     flex-direction: column;
-  }
-  .pd_subtext_sm {
-    padding-top: 20px;
   }
   .card1_head_lr {
     display: flex;
@@ -1256,44 +1268,14 @@ export default {
     max-width: 600px;
     min-height: 150px;
   }
-  .set_size_burn_2 {
-    min-width: 300px;
-    max-width: 600px;
-    min-height: 200px;
-    overflow-x: scroll;
-  }
   .card3-bot-text {
     white-space: nowrap;
   }
   .set_h50 {
     padding: 0px !important;
   }
-  .card1_p3_content {
-    display: flex;
-    flex-direction: column;
-  }
-  .card3_p3_content_left,
-  .card1_p3_content_right {
-    width: 100%;
-  }
-  .set_of_scroll {
-    overflow-x: scroll;
-  }
-  .table_bot_mov {
-    width: max-content;
-  }
-  .card-info-right {
-    width: max-content;
-  }
-  .set_left {
-    padding-left: 0px !important;
-  }
-  .card2-table {
-    width: max-content;
-  }
-  .pd_r_20 {
-    padding-right: 0px;
-    padding-left: 0px;
+  .btn_date_head_card3 {
+    // display: block;
   }
 }
 @media (max-width: 768px) {
@@ -1314,12 +1296,6 @@ export default {
   }
   .set_size_burn {
   }
-  .set_size_burn_2 {
-    // min-height: 200px;
-    min-width: 600px;
-    max-width: 800px;
-    width: 680px;
-  }
   .set_h50 {
     padding-left: 90px;
   }
@@ -1334,110 +1310,41 @@ export default {
   }
   .head_card3_p3_l_title {
     display: flex;
-    width: 100%;
+    // width: 100%;
     // flex-direction: column;
   }
-  .head_card1_p3_l_last {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-  }
   .title_card3_p3 {
-    width: 60%;
-  }
-  .card3_p3_content_right {
-    width: auto;
+    width: 100%;
   }
   .btn_date_head_card3 {
-    display: flex;
-    justify-content: space-between;
-    // width: 60%;
-    width: 100%;
-    padding-left: 30px;
+    width: auto;
   }
   .pd_10 {
     padding-left: 10px;
   }
-  .card1_p3_content {
-    display: flex;
-    flex-direction: column;
-  }
-  .card3_p3_content_left {
-    width: 100%;
-  }
-  .card3_p3_content_right {
-    // width: fit-content;
-  }
-
-  .card2-table {
-    width: -webkit-fill-available;
-  }
-  .set_left {
-    text-align: left;
-    padding-left: 30px;
-  }
 }
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
   .set_h50 {
     height: 50px;
     padding-top: 50px;
   }
-  .set_h_exer_card {
-    height: auto;
-  }
-  .set_size_burn_2 {
-    min-height: 200px;
-    min-width: 400px;
-    max-width: 800px;
-    width: 503px;
-    height: 270px;
-  }
 }
 @media (min-width: 1441px) and(max-width: 1920px) {
-  .set_card_base {
-    display: block;
-    width: 770px;
-    height: 300px;
-  }
-  .set_left {
-    text-align: left;
-    padding-left: 20px;
-  }
   .set_h_step {
-    height: 500px !important;
+    height: 550px !important;
   }
   .set_size_burn {
     // width: 100%;
     height: 300px;
   }
-  .set_h_exer_card {
-    height: min-content;
-  }
-  .set_graph1c3_size {
-    min-width: 900px;
-    min-height: 200px;
-  }
   .set_h50 {
-    // height: 50px;
+    height: 50px;
     padding-top: 150px;
   }
   .head_card1_p3_l_title {
-    display: flex;
-    justify-content: normal;
-  }
-
-  .btn_date_head_card3 {
-    display: flex;
-    justify-content: space-around;
-    width: 35%;
-  }
-  .card2-table {
-    width: -webkit-fill-available;
-  }
-  .set_size_graph_ex_card_bot,
-  .set_norm_size_graph {
-    min-height: 250px;
-    max-height: 300px;
+    width: 100%;
+    padding-right: 240px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
   }
 }
 </style>

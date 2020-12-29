@@ -612,18 +612,17 @@
             <div class="content1_card2">
               <!-- card l -->
               <div
-                class="chart1_card2_2"
+                class="chart1_card2"
                 style="float: left; position: relative;"
               >
                 <div
-                  class="set_text_in_donut_noti"
-                  style="width: 100%; position: relative; top: 50%; left: 0; margin-bottom:-15px; margin-top: -15px; line-height:22px; text-align: center; z-index: 2"
+                  style="width: 100%; position: absolute; top: 50%; left: 0; margin-top: -15px; line-height:19px; text-align: center; z-index: 2"
                 >
                   <span class="text_inside1">27</span><br />
                   <span class="text_inside">avg.</span>
                 </div>
-                <div class="">
-                  <canvas id="graph2_c2" width="240px" height="240px"></canvas>
+                <div style="display:flex;justify-content:center;">
+                  <canvas id="graph2_c2" width="240px" height="240"></canvas>
                 </div>
               </div>
               <!-- card r  -->
@@ -812,7 +811,7 @@
             </div>
             <div class="content1_card3">
               <!-- card l -->
-              <div class="chart1_card3 c30">
+              <div class="chart1_card3  c30">
                 <div class="size_chart3">
                   <canvas
                     id="graph1_c3"
@@ -1563,12 +1562,26 @@ export default {
   max-width: 800px;
   max-height: 250px;
 }
-@media only screen and (max-width:768px){
-  .ct_r_c_noti{
+@media only screen and (max-width: 320px) {
+  .chart1_card2 {
+    padding: 15px 0;
+  }
+  .chart1_card3 {
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+    height: 150px;
+    /* width: 100%; */
+    max-width: 800px;
+    overflow-x: scroll;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ct_r_c_noti {
     display: flex;
     justify-content: center;
   }
-  .card1-subcard-3_sp{
+  .card1-subcard-3_sp {
     width: 600px !important;
   }
 }
@@ -1590,7 +1603,7 @@ export default {
     background-color: rgba(224, 164, 51, 0.2);
   }
 } */
-@media(min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1920px) {
   .ct_1_c_noti {
     /* width: 65%; */
     /* background-color: #0072ff21; */
