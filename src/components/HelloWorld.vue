@@ -129,8 +129,8 @@
                   อุปกรณ์
                 </span>
               </v-card-subtitle>
-              <v-card-text class="pa-1">
-                <div>
+              <v-card-text class="set_fit_content pa-1">
+                <div class="table_content_c2_c1">
                   <table
                     class="card1-table"
                     justify="space-around"
@@ -1525,8 +1525,8 @@ th {
   .card_r_root {
     height: fit-content !important;
   }
-  .card_r_root{
-    padding-bottom:13px;
+  .card_r_root {
+    padding-bottom: 13px;
   }
   .card3_cardr {
     padding-bottom: 50px;
@@ -1546,13 +1546,39 @@ th {
     text-align: left !important;
   }
 }
-
+@media (max-width: 320px) {
+  .graph_donut_c1 {
+    width: 300px;
+  }
+  .card_1_c1 {
+    min-width: min-content;
+  }
+  .font_style_title_card {
+    width: max-content;
+  }
+  .card1-root {
+    // padding: -2px 15px;
+  }
+  .card1-table {
+    // width: -webkit-fill-available;
+  }
+  .table_content_c2_c1 {
+    min-width: 200px;
+    max-width: 600px;
+    overflow-x: scroll;
+    // width: max-content;
+    // overflow-x: scroll !important;
+  }
+  .set_fit_content {
+    width: fit-content;
+  }
+}
 @media (min-width: 1441px) and (max-width: 1920px) {
   .card_r_root {
-    height: 551px ;
+    height: 551px;
   }
-  .card3_l1_root{
-    height: 420px ;
+  .card3_l1_root {
+    height: 420px;
   }
 }
 </style>
