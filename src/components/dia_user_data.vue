@@ -65,6 +65,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
+                    <div class="space_in_sm"></div>
                     <v-col cols="12" sm="7">
                       <v-text-field
                         v-model="name_au"
@@ -177,7 +178,7 @@ export default {
 }
 .headline {
   color: #8a4532;
-   line-height: normal;
+  line-height: normal;
 }
 .head_of_dialog_user {
   display: flex;
@@ -236,5 +237,18 @@ export default {
 }
 .set_pdleft_0 {
   padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .mini_card1 {
+    width: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    height: 160px;
+  }
+  .space_in_sm {
+    width: 60px;
+    height: auto;
+  }
 }
 </style>

@@ -382,4 +382,19 @@ export default {
   border: 4px solid #935442;
   border-style: dashed;
 }
+
+@media (max-width: 320px) {
+  .head_of_dialog_user {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    white-space: nowrap;
+  }
+  .btn_head_user {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+}
 </style>

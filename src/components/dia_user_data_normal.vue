@@ -50,7 +50,7 @@
                 <div class="c1_line1">
                   <div class="in_card1_left"></div>
                   <v-row>
-                    <v-col cols="12" sm="3">
+                    <v-col cols="12" sm="3" xl="2" lg="2">
                       <v-card class="mini_card1">
                         <v-action-card>
                           <div class="in_card1">
@@ -64,6 +64,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
+                    <div class="set_space_when_sm"></div>
                     <v-col cols="12" sm="7">
                       <v-text-field
                         v-model="name_au"
@@ -256,5 +257,25 @@ export default {
 }
 .card_text {
   padding-top: 10px;
+}
+
+@media (max-width: 320px) {
+  .pd_20 {
+    padding: 0 10px 20px 10px;
+  }
+  .headline {
+    font-size: 1.2rem !important;
+  }
+  .set_space_when_sm {
+    width: 40px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .set_space_when_sm {
+    width: 40px;
+    height: auto;
+  }
 }
 </style>

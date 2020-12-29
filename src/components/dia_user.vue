@@ -31,6 +31,7 @@
                         </v-action-card>
                       </v-card>
                     </v-col>
+                    <div class="space_in_sm"></div>
                     <v-col cols="12" sm="7">
                       <v-text-field
                         v-model="name_au"
@@ -94,7 +95,14 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
-                  <v-col cols="6" sm="6" class="set_pdleft_0">
+                  <v-col
+                    cols="6"
+                    sm="12"
+                    md="6"
+                    xl="6"
+                    lg="6"
+                    class="set_pdleft_0"
+                  >
                     <label for="lname">กลุ่มเจ้าหน้าที่</label><br />
                     <v-select :items="items" dense outlined></v-select>
                   </v-col>
@@ -179,5 +187,18 @@ export default {
 }
 .card_text {
   padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .mini_card1 {
+    width: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    height: 160px;
+  }
+  .space_in_sm {
+    width: 40px;
+    height: auto;
+  }
 }
 </style>
