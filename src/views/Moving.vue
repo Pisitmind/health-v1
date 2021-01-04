@@ -599,14 +599,6 @@ export default {
         tooltips: {
           enabled: true,
         },
-        layout: {
-          padding: {
-            left: 20,
-            right: 40,
-            top: 20,
-            bottom: 0,
-          },
-        },
 
         scales: {
           yAxes: [
