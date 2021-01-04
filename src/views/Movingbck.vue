@@ -118,77 +118,22 @@
                       >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
                     >
                   </div>
-                  <v-card-content>
-                    <div class="set_content_space step_card_size_l">
-                      <div class="graph_line_step px-2">
-                        <canvas
-                          class="set_norm_size_graph "
-                          id="graph1_p3"
-                          width=""
-                          height=""
-                        ></canvas>
-                      </div>
-                      <div class="set_h30 sub_ct_graph">
-                        <table width="100%">
-                          <tr>
-                            <td style="text-align:center;">
-                              <div class="label_text_card1">
-                                <div>
-                                  <v-icon small color="blue">
-                                    mdi-circle</v-icon
-                                  >
-                                  <span class="black--text pl-1">ชาย</span>
-                                </div>
-                                <div class="pd_10">
-                                  <v-icon small color="pink">
-                                    mdi-circle</v-icon
-                                  >
-                                  <span class="black--text pl-1">หญิง</span>
-                                </div>
-                              </div>
-                            </td>
-                            <td
-                              width="50%"
-                              class="text_sub set_sm_pd0 "
-                              style="text-align: right;padding-right:40px;"
-                            >
-                              <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                  </v-card-content>
-                </v-card>
-              </v-flex>
-              <v-flex xs12 sm12 md6 lg6 xl6>
-                <v-card elevation="0" style="padding-left:10px;">
-                  <div class="card3_line2 grey--text">
-                    <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                  </div>
-                  <v-card-content class="set_content_space" style="">
-                    <div class="set_grap_mov_2">
+                  <v-card-text
+                    class="set_content_space step_card_size_l"
+                    style="height:180px"
+                  >
+                    <div class="graph_line_step" px-2>
                       <canvas
-                        id="graph2_c1_p3"
+                        class="set_norm_size_graph "
+                        id="graph1_p3"
                         width=""
-                        height=""
-                        class="set_gp_size_mov2 set_norm_size_graph"
+                        height="120px"
                       ></canvas>
                     </div>
                     <div class="set_h30 sub_ct_graph">
                       <table width="100%">
                         <tr>
-                          <td
-                            width="80%"
-                            class="text_sub set_sm_pd0 pb_10"
-                            style="text-align: left;padding-left:40px;"
-                          >
-                            <span
-                              >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ
-                              7,580 ก้าวต่อวัน</span
-                            >
-                          </td>
-                          <!-- <td style="text-align:center;">
+                          <td style="text-align:center;">
                             <div class="label_text_card1">
                               <div>
                                 <v-icon small color="blue"> mdi-circle</v-icon>
@@ -199,24 +144,47 @@
                                 <span class="black--text">หญิง</span>
                               </div>
                             </div>
-                          </td> -->
-                        </tr>
-                      </table>
-
-                      <!-- <table width="100%">
-                        <tr>
-                          <td style="padding-left:20px;" class="text_sub">
-                            <div class="label_text_card1">
-                              <span
-                                >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ
-                                7,580 ก้าวต่อวัน</span
-                              >
-                            </div>
+                          </td>
+                          <td
+                            width="50%"
+                            class="text_sub set_sm_pd0"
+                            style="text-align: right;padding-right:40px;"
+                          >
+                            <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                           </td>
                         </tr>
-                      </table> -->
+                      </table>
                     </div>
-                  </v-card-content>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm12 md6 lg6 xl6>
+                <v-card elevation="0" style="padding-left:10px;">
+                  <div class="card3_line2 grey--text">
+                    <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+                  </div>
+                  <v-card-text class="set_content_space" style="height:180px">
+                    <div class="set_grap_mov_2">
+                      <canvas
+                        id="graph2_c1_p3"
+                        width=""
+                        height="120px"
+                        class="set_gp_size_mov2 set_norm_size_graph"
+                      ></canvas>
+                    </div>
+                    <div class="set_h30">
+                      <table width="100%">
+                        <tr>
+                          <td style="padding-left:20px;" class="text_sub">
+                            <span
+                              >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนก้าวประมาณ
+                              7,580 ก้าวต่อวัน</span
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </v-card-text>
                 </v-card>
               </v-flex>
             </v-layout>
@@ -304,7 +272,7 @@
         </div>
         <!-- content -->
         <v-container-text>
-          <v-layout row wrap justify="space-between" height="fit-content">
+          <v-layout row wrap justify="space-between">
             <v-flex xs12 md6>
               <v-card
                 elevation="0"
@@ -315,71 +283,68 @@
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญของผู้ใช้แต่ละช่วงอายุ</span>
                 </div>
-                <v-card-content>
-                  <div class="set_content_space step_card_size_l">
-                    <div
-                      class="set_content_space set_of_scroll px-2"
-                      style="height:auto"
-                    >
-                      <!-- graph -->
-                      <canvas
-                        id="graph1_c2_p3"
-                        width=""
-                        height=""
-                        class="set_size_burn set_norm_size_graph"
-                      ></canvas>
-                    </div>
+                <v-card-text>
+                  <div
+                    class="set_content_space set_of_scroll"
+                    style="height:250px"
+                  >
+                    <!-- graph -->
+                    <canvas
+                      id="graph1_c2_p3"
+                      width=""
+                      height=""
+                      class="set_size_burn set_norm_size_graph"
+                    ></canvas>
                   </div>
-                </v-card-content>
+                </v-card-text>
               </v-card>
-
-              <!-- ก้นตาราง -->
-              <!-- <div class="set_h30_sp">
-              </div> -->
+              <div class="set_h30_sp">
+                <!-- ก้นตาราง -->
+              </div>
             </v-flex>
-            <v-flex xs12 md6 lg6 xl6>
+            <v-flex xs12 md6>
               <v-card elevation="0" style="padding-left:10px;">
                 <!-- หัวตาราง -->
                 <div class="card3_line2 grey--text">
                   <span>ค่าเฉลี่ยการเผาผลาญ จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                 </div>
-                <v-card-content>
-                  <div>
+                <v-card-text>
+                  <v-row>
                     <!-- กราฟ -->
                     <div
                       class="set_content_space set_of_scroll"
-                      style="height:auto"
+                      style="height:250px"
                     >
                       <canvas
                         id="graph2_c2_p3"
-                        width=""
+                        width="200px"
                         height=""
                         class="set_size_burn_2 set_norm_size_graph"
                       ></canvas>
                     </div>
-                  </div>
-                  <!-- <v-row class="pd_subtext_sm set_h50"> -->
-                  <!-- ก้นตาราง -->
-                  <table
-                    class="set_pdt_table"
-                    width="100%"
-                    cellspacing="0"
-                    cellpadding="0"
-                    style="padding-left:20px"
-                  >
-                    <tr style="padding:0; margin:0;" class="set_pre_table">
-                      <!-- <td style="padding-left:20px; "> -->
-                      <span class="text_sub"
-                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ 658
-                        แคลต่อวัน</span
-                      ><br />
-                      <span class="grey--text text_sub"
-                        >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
-                        ต่อวัน)</span
-                      >
-                      <!-- </td> -->
-                    </tr>
-                    <!-- <tr style="">
+                  </v-row>
+                  <v-row class="pd_subtext_sm set_h50">
+                    <!-- ก้นตาราง -->
+                    <table
+                      class="set_pdt_table"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="padding-left:20px"
+                    >
+                      <tr style="padding:0; margin:0;" class="set_pre_table">
+                        <!-- <td style="padding-left:20px; "> -->
+                        <span class="text_sub"
+                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 24 ปี มีค่าการเผาผลาญประมาณ
+                          658 แคลต่อวัน</span
+                        ><br />
+                        <span class="grey--text text_sub"
+                          >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
+                          ต่อวัน)</span
+                        >
+                        <!-- </td> -->
+                      </tr>
+                      <!-- <tr style="">
                     <td style="padding-left:20px;">
                     <span class="grey--text text_sub"
                       >(*เพิ่มจากค่าการเผาผลาญปกติที่ประมาณ 2,000 แคล
@@ -387,10 +352,9 @@
                     >
                     </td>
                   </tr> -->
-                  </table>
-
-                  <!-- </v-row> -->
-                </v-card-content>
+                    </table>
+                  </v-row>
+                </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
@@ -487,7 +451,7 @@
                   <canvas
                     id="graph1_c3_p3"
                     class="set_size_graph_ex_card_bot"
-                    width=""
+                    width="200px"
                     height=""
                   ></canvas>
                 </v-card-text>
@@ -594,8 +558,8 @@ export default {
         layout: {
           padding: {
             left: 20,
-            right: 40,
-            top: 20,
+            right: 20,
+            top: 0,
             bottom: 0,
           },
         },
@@ -636,8 +600,8 @@ export default {
             label: "ก้าว",
             backgroundColor: ["#9ACDE9", "#F8C5C5"],
             data: [3628, 4874],
-            barPercentage: 0.5,
-            // categoryPercentage: 0.7,
+            barPercentage: 1.0,
+            categoryPercentage: 0.8,
           },
         ],
       },
@@ -652,15 +616,6 @@ export default {
     var bar2_c1_p3 = new Chart(ctx2_c1_p3, {
       type: "line",
       options: {
-        responsive: true,
-        layout: {
-          padding: {
-            left: 20,
-            right: 40,
-            top: 0,
-            bottom: 0,
-          },
-        },
         legend: {
           display: false,
         },
@@ -713,15 +668,6 @@ export default {
     var bar1_c2_p3 = new Chart(ctx1_c2_p3, {
       type: "horizontalBar",
       options: {
-        responsive: true,
-        layout: {
-          padding: {
-            left: 20,
-            right: 40,
-            top: 20,
-            bottom: 0,
-          },
-        },
         legend: {
           display: false,
         },
@@ -764,9 +710,7 @@ export default {
               "#2289D8",
             ],
             data: [984, 627, 743, 505, 286, 211],
-            barPercentage: 0.9,
-            barThickness: 10,
-            minBarLength: 2,
+            barPercentage: 0.5,
           },
         ],
       },
@@ -777,25 +721,16 @@ export default {
       gradient_mov_2 = ctx2_c2_p3.createLinearGradient(0, 0, 0, 300);
     gradient_mov_2.addColorStop(0, "rgb(245, 124, 0)");
     gradient_mov_2.addColorStop(0.010101010101010102, "rgb(245, 124, 0)");
-    gradient_mov_2.addColorStop(0.8717171717171717, "rgb(255, 255, 255)");
+    gradient_mov_2.addColorStop(0.6717171717171717, "rgb(255, 255, 255)");
     gradient_mov_2.addColorStop(1, "rgb(255, 255, 255)");
     var bar2_c2_p3 = new Chart(ctx2_c2_p3, {
       type: "line",
       options: {
-        responsive: true,
         legend: {
           display: false,
         },
         tooltips: {
           enabled: false,
-        },
-        layout: {
-          padding: {
-            left: 20,
-            right: 50,
-            top: 20,
-            bottom: 0,
-          },
         },
         scales: {
           yAxes: [
@@ -1017,18 +952,8 @@ export default {
 .text-top {
   text-align: top;
 }
-.pb_10 {
-  padding-bottom: 11px;
-}
 .s-20 {
   width: 20%;
-}
-.set_pdt_table {
-  display: flex;
-  padding-left: 60px !important;
-  padding-top: 20px;
-  align-items: center;
-  justify-items: center;
 }
 .big_font {
   font-size: 25px;
@@ -1202,11 +1127,7 @@ export default {
 .card2-subcard-3 {
   padding-left: 10px;
 }
-.set_space_c1 {
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 20px;
-}
+
 .card2-table {
   font-size: 15px;
   color: #5b5b5b;
@@ -1261,8 +1182,7 @@ export default {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  height: 30px;
-  padding-top: 20px;
+  height: 100px;
   // background-color: green;
 }
 .set_h50 {
@@ -1274,17 +1194,6 @@ export default {
   max-width: 800px;
   width: 700px;
   height: 370px;
-}
-.step_card_size_l {
-  height: auto;
-  width: 100%;
-}
-.set_pre_table {
-  height: 30px;
-}
-.set_size_on_graph {
-  width: 100%;
-  padding: 0 20px;
 }
 @media (max-width: 320px) {
   .card1_p3_headNsub {
@@ -1329,7 +1238,6 @@ export default {
   .set_pdt_table {
     padding-top: 20px;
   }
-
   .sex_age_title_card1_p3 {
     // width: auto;
     width: fit-content;
@@ -1347,7 +1255,6 @@ export default {
   }
   .graph_line_step {
     width: 100%;
-    padding: 0 20px;
     // overflow-x: scroll;
   }
   .set_sm_pd0 {
@@ -1492,12 +1399,6 @@ export default {
     text-align: left;
     padding-left: 30px;
   }
-  .set_norm_size_graph {
-    height: 200px !important;
-  }
-  .label_text_card3 {
-    padding-bottom: 20px;
-  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   .set_h50 {
@@ -1505,7 +1406,7 @@ export default {
     padding-top: 50px;
   }
   .set_h_step_sp {
-    height: fit-content;
+    height: 460px;
   }
   .set_h_exer_card {
     height: auto;
@@ -1529,7 +1430,7 @@ export default {
     height: 300px;
   }
   .set_h_step_sp {
-    height: fit-content;
+    height: 500px;
   }
   .set_left {
     text-align: left;
@@ -1568,19 +1469,6 @@ export default {
   .set_size_graph_ex_card_bot,
   .set_norm_size_graph {
     width: 100%;
-  }
-  .card1_p3_root_sp {
-    height: fit-content !important;
-  }
-  .text_sub {
-    line-height: 1.2;
-  }
-  .title_card1_p3 {
-    width: 30%;
-  }
-  .sex_age_title_card1_p3 {
-    width: 30%;
-    justify-content: space-around;
   }
 }
 </style>

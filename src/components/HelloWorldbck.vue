@@ -834,7 +834,21 @@ export default {
     };
     var config3 = {
       type: "horizontalBar",
-
+      // plugins: [
+      //   {
+      //     afterDraw: (bar3) => {
+      //       var ctx_3 = bar3.getContextchart.ctx_3;
+      //       var yAxis_3 = bar3.scales["y-axis-0"];
+      //       var xAxis_3 = bar3.scales["x-axis-0"];
+      //       yAxis_3.ticks.forEach((value, index) => {
+      //         var y = yAxis_3.getPixelForTick(index);
+      //         var image_3 = new Image();
+      //         (image_3.src = images[index]),
+      //           ctx_3.drawImage(image_3, xAxis_3.bottom - 270, y - 10);
+      //       });
+      //     },
+      //   },
+      // ],
       options: {
         responsive: true,
         legend: {
@@ -842,6 +856,7 @@ export default {
         },
         layout: {
           padding: {
+            // left: 50,
             left: 0,
             // right: 20,
             right: 0,

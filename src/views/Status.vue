@@ -82,31 +82,40 @@
               <v-flex xs12 md6>
                 <v-card
                   elevation="0"
-                  class="bdr_0"
-                  style="padding-righ:5px; border-right: 1px solid grey !important;"
+                  class="bdr_0 set_boder_right"
+                  style="padding-righ:5px;"
                 >
                   <div class="card3_line2 grey--text">
                     <span>ค่าเฉลี่ยการนอนหลับของผู้ใช้เพศชาย และเพศหญิง</span>
                   </div>
-                  <v-card-text>
+                  <v-card-content>
                     <!-- ใส่กราฟ -->
-                    <div class="set_content_space" style="height:230px">
-                      <canvas id="graph1_p4" width="200px" height=""></canvas>
+                    <div class="set_content_space" style="">
+                      <canvas
+                        class="set_norm_size_graph "
+                        id="graph1_p4"
+                        width=""
+                        height=""
+                      ></canvas>
                     </div>
-                  </v-card-text>
+                  </v-card-content>
                 </v-card>
-                <div class="label_grpah1_c1_p4 set_h30">
-                  <table width="100%">
+                <div class="label_grpah1_c1_p4 set_h_table">
+                  <table
+                    width="100%"
+                    class="set_tb_size"
+                    justify="space-between"
+                  >
                     <tr>
                       <td style="text-align:center;">
                         <div class="label_text_card_norm">
                           <div>
                             <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text">ชาย</span>
+                            <span class="black--text pl-1">ชาย</span>
                           </div>
                           <div class="pd_10">
                             <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text">หญิง</span>
+                            <span class="black--text pl-1">หญิง</span>
                           </div>
                         </div>
                       </td>
@@ -126,17 +135,24 @@
                   <div class="card3_line2 grey--text">
                     <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                   </div>
-                  <v-card-text>
+                  <v-card-content>
                     <!-- ใส่กราฟ -->
-                    <div class="set_content_space" style="height:230px">
-                      <canvas id="graph2_c1_p4" width="200px"></canvas>
+                    <div class="set_content_space" style="">
+                      <canvas
+                        class="set_norm_size_graph "
+                        id="graph2_c1_p4"
+                        width=""
+                      ></canvas>
                     </div>
-                  </v-card-text>
+                  </v-card-content>
                 </v-card>
-                <div class="set_h30">
-                  <table width="100%">
+                <div class="set_h_table">
+                  <table width="100%" class="set_tb_size">
                     <tr>
-                      <td style="padding-left:40px;" class="text_sub">
+                      <td
+                        style="padding-left:40px;"
+                        class="text_sub pd_text_table"
+                      >
                         <span
                           >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีจำนวนการนอนหลับประมาณ
                           5:40 ชั่วโมงต่อวัน</span
@@ -206,7 +222,12 @@
                   <div class="exit-icon-card3">
                     <!-- คอนเท้นย่อย ยัง -->
                     <template>
-                      <v-btn small icon fab   @click="$router.push('heart_dtail')">
+                      <v-btn
+                        small
+                        icon
+                        fab
+                        @click="$router.push('heart_dtail')"
+                      >
                         <img
                           height="30px"
                           class="filter-white"
@@ -237,11 +258,11 @@
                       <div class="label_text_card_norm">
                         <div>
                           <v-icon small color="blue"> mdi-circle</v-icon>
-                          <span class="black--text"> ชาย </span>
+                          <span class="black--text pl-1"> ชาย </span>
                         </div>
                         <div class="pd_10">
                           <v-icon small color="pink"> mdi-circle</v-icon>
-                          <span class="black--text"> หญิง </span>
+                          <span class="black--text pl-1"> หญิง </span>
                         </div>
                       </div>
                     </td>
@@ -455,6 +476,15 @@ export default {
     var bar1_p4 = new Chart(ctx1_p4, {
       type: "horizontalBar",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 40,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -510,6 +540,15 @@ export default {
     var bar2_c1_p4 = new Chart(ctx2_c1_p4, {
       type: "line",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 40,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -745,6 +784,15 @@ export default {
     var bar1_c2_p4 = new Chart(ctx1_c3_p4, {
       type: "horizontalBar",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -863,6 +911,16 @@ export default {
   justify-content: space-around;
   /* width: 100%; */
 }
+.set_boder_right {
+  border-right: 1px solid grey !important;
+}
+.set_tb_size {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  white-space: nowrap;
+  height: 30px;
+  width: 100%;
+}
 .card2_p4_content {
   display: flex;
   flex-direction: column;
@@ -915,7 +973,9 @@ export default {
   /* background-color:green; */
   width: 50%;
 }
-
+.pd_text_table {
+  padding-top: 6px;
+}
 .card1_p4_content_left {
   width: 50%;
   /* background-color: rgba(0, 0, 0, 0.2); */
@@ -959,5 +1019,64 @@ export default {
 }
 .v-card__title {
   padding: 20px;
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .set_boder_right {
+    border-right: 0px solid grey !important;
+  }
+  .label_grpah1_c1_p4 {
+    /* padding-left: 40px; */
+    /* padding-top: 20px; */
+    padding: 20px 0px 20px 40px;
+  }
+  .pd_text_table {
+    padding-top: 20px;
+  }
+  .head_card1_p4_l {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .set_norm_size_graph {
+    max-height: 300px;
+  }
+  .head_card1_p4_l_title {
+    display: flex;
+    justify-content: unset;
+  }
+  .sex_age_title_card1_p {
+    justify-content: space-around;
+  }
+  .title_card1_p4 {
+    width: 30%;
+  }
+  .sex_age_title_card1_p4 {
+    width: 30%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .card1_head_lr {
+    flex-direction: column;
+  }
+  .head_card1_p4_l_title {
+    flex-direction: column;
+  }
+  .title_card1_p4 {
+    width: 100%;
+  }
+  .sex_age_title_card1_p4 {
+    display: flex;
+    width: 100%;
+  }
+  .head_card1_p4_l {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .set_boder_right {
+    border-right: 0px solid grey !important;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
   <v-container grid-list-lg-xl class="unqHealth">
     <!-- <div class="unqHealth"> -->
     <div class="card1_p6">
-      <v-card class="bdr_12 set_space_card1">
+      <v-card class="bdr_12">
         <div class="card1_p6_root">
           <div class="card1_p6_headNsub">
             <!-- head lr -->
@@ -109,81 +109,63 @@
                 </div>
               </div>
             </div>
+            <div class="split_me  grey--text">
+              <div class="split_l card3_line2">
+                <span>ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span>
+              </div>
+              <div class="split_r card3_line2">
+                <span>ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
+              </div>
+            </div>
+            <v-card-subtitle class="pd_0"> </v-card-subtitle>
+          </div>
+          <!-- Content  -->
+          <div class="card1_p6_content">
+            <div class="card3_p6_content_left_old">
+              <div style="height:230px">
+                <!-- ใส่กราฟ -->
+                <canvas id="graph1_p6" width="" height=""></canvas>
+              </div>
 
-            <v-container-text>
-              <v-layout row wrap justify="space-between" height="fit-content">
-                <v-flex xs12 sm12 md6 lg6 xl6 class="set_line_div">
-                  <v-card elevation="0" class="bdr_0 " style="">
-                    <div class="card3_line2 grey--text ">
-                      <span
-                        >ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span
-                      >
-                    </div>
-                    <v-card-content>
-                      <div class="set_content_space step_card_size_l">
-                        <div class="graph_line_step ">
-                          <canvas id="graph1_p6" width="" height=""></canvas>
+              <div class="label_grpah1_c1_p6 set_h30">
+                <table width="100%">
+                  <tr>
+                    <td style="text-align:center;">
+                      <div class="label_text_card_norm">
+                        <div>
+                          <v-icon small color="blue"> mdi-circle</v-icon>
+                          <span class="black--text">ชาย</span>
                         </div>
-                        <div class="set_h30 sub_ct_graph">
-                          <table width="100%">
-                            <tr>
-                              <td style="text-align:center;">
-                                <div class="label_text_card_norm">
-                                  <div>
-                                    <v-icon small color="blue">
-                                      mdi-circle</v-icon
-                                    >
-                                    <span class="black--text pl-1">ชาย</span>
-                                  </div>
-                                  <div class="pd_10">
-                                    <v-icon small color="pink">
-                                      mdi-circle</v-icon
-                                    >
-                                    <span class="black--text pl-1">หญิง</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td
-                                width="50%"
-                                class="text-right"
-                                style="font-size:14px; padding-right:40px;"
-                              >
-                                <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                              </td>
-                            </tr>
-                          </table>
+                        <div class="pd_10">
+                          <v-icon small color="pink"> mdi-circle</v-icon>
+                          <span class="black--text">หญิง</span>
                         </div>
                       </div>
-                    </v-card-content>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 sm12 md6 lg6 xl6>
-                  <v-card elevation="0" style="padding-left:10px;">
-                    <div class="card3_line2 grey--text">
-                      <span
-                        >ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span
-                      >
-                    </div>
-                    <v-card-content class="set_content_space" style="">
-                      <div class="set_grap_mov_2">
-                        <canvas id="graph2_c1_p6" width="" height=""></canvas>
-                      </div>
-                      <div class="set_h30_sp sub_ct_graph">
-                        <table width="100%" style="font-size: 14px;">
-                          <tr>
-                            <td style=" padding-top: 5px;">
-                              <span class="set_space_under_graph"
-                                >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี
-                              </span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </v-card-content>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container-text>
+                    </td>
+                    <td width="50%" style="font-size:14px;">
+                      <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <v-divider vertical></v-divider>
+            <div class="card1_p6_content_right">
+              <div style="height:230px">
+                <!-- ใส่กราฟ -->
+                <canvas id="graph2_c1_p6" width="" height=""></canvas>
+              </div>
+
+              <div class="label_grpah1_c1_p6 set_h30">
+                <table width="100%" style="font-size: 14px;">
+                  <tr>
+                    <td style=" padding-top: 5px;">
+                      <span class>ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </v-card>
@@ -574,11 +556,11 @@
                       <div style="padding-left:70px;"></div>
                       <div>
                         <v-icon small color="blue"> mdi-circle</v-icon>
-                        <span class="black--text pl-1">ชาย</span>
+                        <span class="black--text">ชาย</span>
                       </div>
                       <div class="pd_20">
                         <v-icon small color="pink"> mdi-circle</v-icon>
-                        <span class="black--text pl-1">หญิง</span>
+                        <span class="black--text">หญิง</span>
                       </div>
                     </div>
                   </td>
@@ -627,15 +609,6 @@ export default {
     var bar1_p6 = new Chart(ctx1_p6, {
       type: "horizontalBar",
       options: {
-        responsive: true,
-        layout: {
-          padding: {
-            left: 20,
-            right: 20,
-            top: 20,
-            bottom: 0,
-          },
-        },
         legend: {
           display: false,
         },
@@ -688,24 +661,10 @@ export default {
     });
     console.log(bar1_p6);
 
-    var ctx2_c1_p6 = document.getElementById("graph2_c1_p6").getContext("2d"),
-      gradient_2c1p6 = ctx2_c1_p6.createLinearGradient(0, 0, 0, 300);
-    gradient_2c1p6.addColorStop(0, "rgba(0, 94, 187, 0.99)");
-    gradient_2c1p6.addColorStop(0.83, "rgba(232, 241, 249, 0.17)");
-    gradient_2c1p6.addColorStop(0.95, "rgba(255, 255, 255, 0.07)");
-    gradient_2c1p6.addColorStop(1, "rgba(255, 255, 255, 0.07)");
+    var ctx2_c1_p6 = document.getElementById("graph2_c1_p6").getContext("2d");
     var bar2_c1_p6 = new Chart(ctx2_c1_p6, {
       type: "line",
       options: {
-        responsive: true,
-        layout: {
-          padding: {
-            left: 20,
-            right: 20,
-            top: 20,
-            bottom: 0,
-          },
-        },
         legend: {
           display: false,
         },
@@ -742,12 +701,10 @@ export default {
         datasets: [
           {
             label: "",
-            backgroundColor: gradient_2c1p6,
-            borderColor: "#BADCEF",
-            pointRadius: 0,
+            backgroundColor: "#BADCEF",
             data: [2.9, 4.0, 4.1, 3.8, 7.2, 2.8],
             borderDash: [5],
-            // fill: "Disabled",
+            fill: "Disabled",
           },
         ],
         labels: ["10", "20", "30", "40", "50", "60 ปีขึ้นไป"],
@@ -919,15 +876,13 @@ export default {
 .label_text_card_norm {
   display: flex;
   justify-content: start;
-  padding-left: 70px;
+  /* padding-left: 30px; */
   font-size: 14px;
   font-weight: regular;
 }
 .label_text_card1_1 {
   display: flex;
-  align-content: flex-start;
-  font-size: 14px;
-  padding-left: 70px;
+  align-content: left;
 }
 .card1_p6_content {
   display: flex;
@@ -964,6 +919,9 @@ export default {
   /* background-color:rgba(0, 0,100,.3); */
 }
 
+.sex_age_title_card1_p6 {
+  display: flex;
+}
 .card1_p6_content_left {
   width: 50%;
 }
@@ -986,18 +944,14 @@ export default {
   /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
-.set_space_card1 {
-  padding-bottom: 20px;
-}
+/* .head_card1_p6_r{
+  padding:20px;
+} */
+
 .title_card1_p6 {
   display: flex;
 }
-.sex_age_title_card1_p6 {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  /* background-color: rgba(0, 0, 0, 0.4); */
-}
+
 /* .head_card1_p6_l {
   display: flex;
   justify-content: space-between;
@@ -1101,75 +1055,5 @@ table {
 }
 .left_text {
   text-align: left;
-}
-.set_h30 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  height: 30px;
-  padding-top: 20px;
-}
-.set_h30_sp {
-  padding-top: 3px;
-}
-.set_space_under_graph {
-  padding-left: 50px;
-}
-
-@media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  .head_card1_p6_l_title {
-    justify-content: unset;
-  }
-  .sex_age_title_card1_p {
-    justify-content: space-around;
-  }
-  .title_card1_p6 {
-    width: 30%;
-  }
-  .sex_age_title_card1_p6 {
-    width: 30%;
-    justify-content: space-around;
-  }
-  .set_h30 {
-    height: 40px;
-  }
-  .set_h30_sp {
-    padding-top: 30px;
-  }
-  .graph_line_step,
-  .set_grap_mov_2 {
-    padding: 0px 20px 0px 20px;
-  }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  .label_text_card_norm {
-    height: 40px;
-  }
-  .card3_line2 {
-    padding-top: 20px;
-  }
-  .card2_lNr {
-    flex-direction: column;
-  }
-  .card2_l_all {
-    width: 100%;
-  }
-  .card2_r_all {
-    width: 100%;
-  }
-  .graph_line_step,
-  .set_grap_mov_2 {
-    padding: 0px 20px 0px 20px;
-  }
-  .sex_age_title_card1_p6 {
-    display: flex;
-    width: 30%;
-  }
-  .title_card1_p6 {
-    width: 55%;
-    white-space: nowrap;
-  }
 }
 </style>
