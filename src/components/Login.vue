@@ -312,6 +312,7 @@
   }
   .set_ab {
     position: absolute;
+    padding-top: 30vh !important;
     padding-top: 350px;
   }
   .set_card {
