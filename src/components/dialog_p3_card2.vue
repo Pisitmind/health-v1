@@ -188,7 +188,7 @@
                     >
                       ข้อมูลผู้ใช้งาน</span
                     >
-                    
+
                     <tr class="table_head1">
                       <th class="text-left" width="10%">
                         รหัส
@@ -211,7 +211,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="table_content text-center" v-for="item in moving_data_1" :key="item.id">
+                    <tr
+                      class="table_content text-center"
+                      v-for="item in moving_data_1"
+                      :key="item.id"
+                    >
                       <td class="text-left">{{ item.no }}</td>
                       <td class="text-left">{{ item.name }}</td>
                       <td>{{ item.pos }}</td>
@@ -548,6 +552,9 @@ export default {
 <style scoped>
 .dialog_p3_card2 {
   width: 100%;
+}
+.card1_p3_root {
+  height: fit-content;
 }
 .t_switch {
   display: flex;

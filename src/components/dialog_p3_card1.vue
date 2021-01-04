@@ -947,6 +947,9 @@ export default {
 </script>
 
 <style scoped>
+.v-main__wrap {
+  background-color: #f6f6f6 !important;
+}
 .dialog_p3_card1 {
   width: 100%;
 }
@@ -968,6 +971,9 @@ export default {
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
+}
+.card1_p3_root {
+  height: fit-content;
 }
 .c1_c2_dialog {
   padding: 20px;

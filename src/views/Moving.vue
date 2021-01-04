@@ -585,6 +585,14 @@ export default {
       type: "horizontalBar",
       options: {
         responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -656,7 +664,7 @@ export default {
         layout: {
           padding: {
             left: 20,
-            right: 40,
+            right: 20,
             top: 0,
             bottom: 0,
           },
@@ -783,19 +791,19 @@ export default {
       type: "line",
       options: {
         responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
         tooltips: {
           enabled: false,
-        },
-        layout: {
-          padding: {
-            left: 20,
-            right: 50,
-            top: 20,
-            bottom: 0,
-          },
         },
         scales: {
           yAxes: [
@@ -843,6 +851,15 @@ export default {
     var bar1_c3_p3 = new Chart(ctx1_c3_p3, {
       type: "bar",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -1581,6 +1598,18 @@ export default {
   .sex_age_title_card1_p3 {
     width: 30%;
     justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .set_size_graph_ex_card_bot,
+  .set_norm_size_graph {
+    width: 100%;
+  }
+  .set_h_step_sp {
+    height: fit-content;
+  }
+  .set_h_exer_card {
+    height: fit-content;
   }
 }
 </style>

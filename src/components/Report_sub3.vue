@@ -7,11 +7,11 @@
             <div>
               <v-btn color="black lighten-1" icon large @click="dialog = false">
                 <img
-                        height="40px"
-                        class="filter-white"
-                        src="../assets/icon/icon_report.svg"
-                        alt="report"
-                      />
+                  height="40px"
+                  class="filter-white"
+                  src="../assets/icon/icon_report.svg"
+                  alt="report"
+                />
               </v-btn>
             </div>
             <div class="text_header">
@@ -21,10 +21,10 @@
           </div>
         </div>
       </v-card-title>
-            <br />
+      <br />
       <v-card-content>
         <v-row>
-          <v-col cols="6" sm="6">
+          <v-col cols="12" xs="6" sm="6" md="6" lg="6" xl="6">
             <v-select
               :items="items"
               label="กลุ่มผู้ใช้งาน"
@@ -33,7 +33,7 @@
               clearable
             ></v-select>
           </v-col>
-          <v-col cols="6" sm="">
+          <v-col cols="6" xs="3" sm="3" md="3" lg="3" xl="3">
             <v-menu
               v-model="menu1"
               :close-on-content-click="false"
@@ -63,7 +63,7 @@
           <div style="font-weight:bold; padding-top: 20px;">
             <span>ถึง</span>
           </div>
-          <v-col cols="6" sm="">
+          <v-col cols="5" xs="" sm="" md="" lg="" xl="">
             <v-menu
               v-model="menu2"
               :close-on-content-click="false"
@@ -90,7 +90,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="6" sm="6">
+          <v-col cols="12" xs="12" sm="6" md="6" lg="6" xl="6">
             <v-select
               :items="age_range"
               label="ช่วงอายุ"
@@ -98,13 +98,22 @@
               outlined
             ></v-select>
           </v-col>
-          <v-col col="12" sm=""></v-col>
-          <v-col col="6" sm="1" class="text-right">
-            <v-btn outlined color="purple lighten-3" style="width:100px;"
+          <v-col cols="12" xs="0" sm="1" md="2" lg="2" xl="4"></v-col>
+          <v-col cols="6" xs="6" sm="2" md="2" lg="" xl="1" class="text-right">
+            <v-btn outlined color="purple lighten-3" style="width:120px;"
               >ล้างข้อมูล</v-btn
             >
           </v-col>
-          <v-col col="6" sm="2" class="text-right" style="padding-right:20px;">
+          <v-col
+            cols="6"
+            xs="6"
+            sm="3"
+            md="2"
+            lg=""
+            xl="1"
+            class="text-right"
+            style="padding-right:20px;"
+          >
             <v-btn color="purple lighten-3" style="color:white; width:100px;"
               >ค้นหา</v-btn
             >
@@ -114,14 +123,14 @@
       <br />
       <v-divider color="#C5C5C5"></v-divider>
       <br />
-      <v-row style="padding:0 50px 0 0;">
-        <v-col col="12" sm="">
+      <v-row>
+        <v-col cols="12" xs="12" sm="7" md="6" lg="8" xl="9">
           <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
         </v-col>
-        <v-col col="6" sm="2" class="text-right">
+        <v-col cols="12" xs="12" sm="2" md="3" lg="" xl="" class="text-right">
           <v-btn color="#3BD081" style="color:white; width:120px;">พิมพ์</v-btn>
         </v-col>
-        <v-col col="6" sm="2" class="text-right">
+        <v-col cols="12" xs="12" sm="3" md="3" lg="" xl="" class="text-right">
           <v-btn color="purple lighten-3" style="color:white;"
             >นำออกเอกสาร
             <v-icon>mdi-menu-down</v-icon>
@@ -184,7 +193,7 @@
         </div>
       </v-card-content>
     </v-card>
-       <div style="padding-bottom:40px;"></div>
+    <div style="padding-bottom:40px;"></div>
   </div>
 </template>
 
@@ -299,13 +308,14 @@ export default {
 .report_card_root {
   padding: 20px;
 }
-.text_header{
+.text_header {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   text-align: center;
   align-items: center;
+  white-space: nowrap;
 }
 .ddog {
   font-size: 20px;
@@ -320,5 +330,24 @@ export default {
 .head_card_p7_3 {
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .text_header {
+    white-space: normal;
+    width: 100%;
+    letter-spacing: 0.7px;
+  }
+  .head_title_card_p7_3 {
+    width: 100%;
+  }
+  .set_card_of {
+    overflow-y: scroll;
+    width: 100%;
+  }
+  .set_table_of {
+    /* overflow-y: scroll; */
+    width: 100%;
+  }
 }
 </style>

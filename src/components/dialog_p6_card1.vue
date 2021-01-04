@@ -581,6 +581,9 @@ export default {
 .dialog_p6_card1 {
   width: 100%;
 }
+.card1_p3_root {
+  height: fit-content;
+}
 .t_switch {
   display: flex;
   /* justify-items: center; */

@@ -24,7 +24,7 @@
       <br />
       <v-card-content>
         <v-row>
-          <v-col cols="6" sm="6">
+          <v-col cols="12" xs="12" sm="6" md="6" lg="6" xl="6">
             <v-select
               :items="items"
               label="กลุ่มผู้ใช้งาน"
@@ -32,7 +32,7 @@
               outlined
             ></v-select>
           </v-col>
-          <v-col cols="6" sm="6">
+          <v-col cols="12" xs="12" sm="6" md="6" lg="6" xl="6">
             <v-select
               :items="age_range"
               label="ช่วงอายุ"
@@ -42,7 +42,7 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="6" sm="6">
+          <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
             <v-select
               :items="item_type"
               label="อุปกรณ์วัดค่า"
@@ -50,13 +50,22 @@
               outlined
             ></v-select>
           </v-col>
-          <v-col col="12" sm=""></v-col>
-          <v-col col="6" sm="1" class="text-right">
-            <v-btn outlined color="purple lighten-3" style="width:100px;"
+          <v-col cols="12" xs="0" sm="7" md="2" lg="2" xl="4"></v-col>
+          <v-col cols="6" xs="6" sm="" md="2" lg="" xl="1" class="text-right">
+            <v-btn outlined color="purple lighten-3" style="width:120px;"
               >ล้างข้อมูล</v-btn
             >
           </v-col>
-          <v-col col="6" sm="2" class="text-right" style="padding-right:40px;">
+          <v-col
+            cols="6"
+            xs="6"
+            sm=""
+            md="2"
+            lg=""
+            xl="1"
+            class="text-right"
+            style=""
+          >
             <v-btn color="purple lighten-3" style="color:white; width:100px;"
               >ค้นหา</v-btn
             >
@@ -66,14 +75,14 @@
 
       <v-divider color="#C5C5C5"></v-divider>
       <br />
-      <v-row style="padding:0 50px 0 0;">
-        <v-col col="12" sm="">
+      <v-row>
+        <v-col cols="12" xs="12" sm="7" md="6" lg="8" xl="9">
           <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
         </v-col>
-        <v-col col="6" sm="2" class="text-right">
+        <v-col cols="12" xs="12" sm="2" md="3" lg="" xl="" class="text-right">
           <v-btn color="#3BD081" style="color:white; width:120px;">พิมพ์</v-btn>
         </v-col>
-        <v-col col="6" sm="2" class="text-right">
+        <v-col cols="12" xs="12" sm="3" md="3" lg="" xl="" class="text-right">
           <v-btn color="purple lighten-3" style="color:white;"
             >นำออกเอกสาร
             <v-icon>mdi-menu-down</v-icon>
@@ -215,7 +224,7 @@
             <v-simple-table>
               <template v-slot:default>
                 <thead color="gray" class="table_head1">
-                  <tr >
+                  <tr>
                     <th width="" class="text-left">
                       ลำดับ
                     </th>
@@ -421,5 +430,6 @@ export default {
   justify-content: center;
   text-align: center;
   align-items: center;
+  white-space: nowrap;
 }
 </style>

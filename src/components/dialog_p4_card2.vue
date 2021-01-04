@@ -537,6 +537,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
 } */
+
+.card1_p3_root {
+  height: fit-content;
+}
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;

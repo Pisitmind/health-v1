@@ -673,6 +673,9 @@ export default {
   width: 100%;
   /* background-color: rgba(0, 0, 200, 0.1); */
 }
+.card1_p3_root {
+  height: fit-content;
+}
 .card_left_top {
   padding: 40px 10px;
   width: 30%;

@@ -31,6 +31,10 @@
   font-size: normal;
   line-height: 1.5;
 }
+.v-main__wrap {
+  background-color: #f6f6f6;
+}
+
 html {
   overflow-x: hidden !important;
   /* font-family: rsulight, CustomHeading; */
@@ -867,7 +871,7 @@ html::-webkit-scrollbar {
 
   /* noti page */
 }
-@media  (max-width: 1920px) {
+@media (max-width: 1920px) {
   /* .set_norm_size_graph {
     min-height: 250px;
     max-height: 300px;

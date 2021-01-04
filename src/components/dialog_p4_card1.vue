@@ -541,6 +541,9 @@ export default {
 .dialog_p4_card1 {
   width: 100%;
 }
+.card1_p3_root {
+  height: fit-content;
+}
 .wd_100 {
   width: 100%;
 }
