@@ -1039,6 +1039,9 @@ export default {
   align-items: center;
   justify-items: center;
 }
+.card1_p3_root_sp {
+  padding: 20px;
+}
 .big_font {
   font-size: 25px;
 }
@@ -1508,8 +1511,13 @@ export default {
   }
   .set_norm_size_graph {
     height: 200px !important;
+    max-width: 650px;
   }
   .label_text_card3 {
+    padding-bottom: 20px;
+  }
+  .set_h30 {
+    padding-top: 26px;
     padding-bottom: 20px;
   }
 }

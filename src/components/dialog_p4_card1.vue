@@ -549,15 +549,8 @@ export default {
 }
 .t_switch {
   display: flex;
-  /* justify-items: center; */
   justify-content: center;
 }
-/* .head_dialog_c1_p4 {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
 .content_dialog_page_top {
   display: flex;
   justify-content: space-around;
@@ -588,5 +581,96 @@ export default {
 }
 .content_dialog_page_bot {
   padding: 0 30px;
+}
+
+@media only screen and (max-width: 320px) {
+  .headline_sm {
+    letter-spacing: 3px;
+    font-size: 20px !important;
+    padding-left: 0px !important;
+  }
+  .data_c1c2 {
+    padding-right: 15px;
+  }
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .content_top_right_page {
+    width: 100%;
+  }
+  .table_content_card2,
+  .set_of_graph {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .c1_c2_dialog,
+  .c1_c2_dialog {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_h_table {
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .table_content_card2 {
+    padding-top: 20px;
+  }
+  .content_top_right_page {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .set_wd_card_avg {
+    width: 48%;
+  }
+  .c1_c2_dialog {
+    width: 100%;
+  }
+  .set_graph_size_n {
+    max-width: 200px;
+  }
+  .set_tr_width {
+    width: 100%;
+  }
+
+  .sub_card_dia_mini {
+    max-width: 200px;
+  }
+  .set_table {
+    width: 100%;
+  }
+  .set_full_size_table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .content_dialog_page_top {
+    height: fit-content;
+  }
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 50px;
+  }
 }
 </style>

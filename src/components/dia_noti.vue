@@ -279,6 +279,16 @@ export default {
         legend: {
           display: false,
         },
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            // right: 20,
+            right: 0,
+            top: 10,
+            bottom: 10,
+          },
+        },
         tooltips: {
           enabled: false,
         },
@@ -782,26 +792,30 @@ export default {
   text-align: left;
 }
 
-@media screen  and (max-width: 768px){
-  .content_dialog_page_top{
-      display: flex;
-    flex-direction: column;
-  }
-  .content_top_left_page{
-    width: auto;
-    padding:20px;
-  }
-  .content_top_right_page{
+@media screen and (max-width: 768px) {
+  .content_dialog_page_top {
     display: flex;
-        width: fit-content !important;
     flex-direction: column;
-
   }
-  .card_bonus1,.card_bonus2{
+  .content_top_left_page {
+    width: auto;
+    padding: 20px;
+  }
+  .content_top_right_page {
+    display: flex;
+    width: fit-content !important;
+    flex-direction: column;
+  }
+  .card_bonus1,
+  .card_bonus2 {
     padding: 0px 150px !important;
   }
   .c1_c2_dialog {
-    width:fit-content;
+    width: fit-content;
   }
-} 
+  .card_bonus1,
+  .card_bonus2 {
+    /* width: 40%; */
+  }
+}
 </style>

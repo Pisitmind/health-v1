@@ -16,7 +16,9 @@
               </v-btn>
             </div>
             <div>
-              <span class="headline pl-5">รายละเอียดการเคลื่อนไหว</span>
+              <span class="headline headline_sm pl-5"
+                >รายละเอียดการเคลื่อนไหว</span
+              >
             </div>
           </div>
         </v-card-title>
@@ -29,10 +31,15 @@
           <div class="content_dialog_page_top">
             <div class="content_top_left_page">
               <div class="set_center">
-                <canvas id="graph1_c1_p3" width="500px" height="200px"></canvas>
+                <canvas
+                  id="graph1_c1_p3"
+                  width="500px"
+                  height="200px"
+                  class="set_of_graph"
+                ></canvas>
               </div>
               <div class="table_content_card2">
-                <table style="width: 100%;">
+                <table class="set_h_table" style="width: 100%;">
                   <tr v-for="item in data_card3" :key="item.id" align="center">
                     <th
                       scope="row"
@@ -62,56 +69,59 @@
             </div>
             <div class="content_top_right_page">
               <!-- data top right -->
-              <div>
+              <div class="set_wd_card_avg">
                 <v-card width="" class="c1_c2_dialog bdr_12">
-                  <table class="data_c1c2">
-                    <tr>
-                      <td class="left" width="80%" height="20%">
-                        <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
-                      </td>
-                      <td>
-                        <v-btn
-                          color="#22CE8B"
-                          depressed
-                          class="white--text"
-                          elevation="2"
-                          height="24px"
-                          >+4%</v-btn
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="sub_card_dia_mini">
-                          <canvas
-                            id="graph_dialog_c2"
-                            width=""
-                            height="100px"
-                          ></canvas>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="wd_100">
-                          <table class="align-center">
-                            <tr>
-                              <span style="font-size:30px;"
-                                ><strong>119</strong></span
-                              >
-                            </tr>
-                            <tr class="">
-                              <span>
-                                ก้าว / วัน
-                              </span>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
+                  <div class="set_table">
+                    <table class="data_c1c2">
+                      <tr class="set_tr_width">
+                        <td class="left left_table_size" height="20%">
+                          <span>ค่าเฉลี่ยการเดิน (ในช่วง 6 เดือน)</span>
+                        </td>
+                        <td width="20%">
+                          <v-btn
+                            color="#22CE8B"
+                            depressed
+                            class="white--text"
+                            elevation="2"
+                            height="24px"
+                            >+4%</v-btn
+                          >
+                        </td>
+                      </tr>
+                      <tr class="set_tr_width">
+                        <td>
+                          <div class="sub_card_dia_mini">
+                            <canvas
+                              id="graph_dialog_c2"
+                              width=""
+                              height="100px"
+                              class="set_graph_size_n"
+                            ></canvas>
+                          </div>
+                        </td>
+                        <td width="20%">
+                          <div class="wd_100 ct_graph">
+                            <table class="align-center">
+                              <tr>
+                                <span style="font-size:30px;"
+                                  ><strong>119</strong></span
+                                >
+                              </tr>
+                              <tr class="">
+                                <span>
+                                  ก้าว / วัน
+                                </span>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </v-card>
               </div>
               <br />
-              <div>
+              <div class="set_wd_card_avg">
                 <v-card width="" class="c1_c2_dialog bdr_12">
                   <table class="data_c1c2">
                     <tr>
@@ -136,6 +146,7 @@
                             id="graph_dialog_c3"
                             width=""
                             height="100px"
+                            class="set_graph_size_n"
                           ></canvas>
                         </div>
                       </td>
@@ -164,7 +175,7 @@
           <div class="content_dialog_page_bot">
             <div>
               <br />
-              <v-simple-table>
+              <v-simple-table class="set_full_size_table">
                 <template v-slot:default>
                   <thead>
                     <span class="h_table_dia"> ข้อมูลผู้ใช้งาน</span>
@@ -575,6 +586,15 @@ export default {
     var bar_dia_c2 = new Chart(ctx_dia_c2, {
       type: "line",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 10,
+            bottom: 10,
+          },
+        },
         legend: {
           display: false,
         },
@@ -633,6 +653,15 @@ export default {
     var bar_dia_c3 = new Chart(ctx_dia_c3, {
       type: "line",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 10,
+            bottom: 10,
+          },
+        },
         legend: {
           display: false,
         },
@@ -1053,5 +1082,110 @@ export default {
   padding-left: 30px;
 }
 .select_itm_style {
+}
+.h_table_dia {
+  white-space: nowrap;
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 767px) { */
+/* @media only screen and (max-width: 767px) { */
+@media only screen and (max-width: 320px) {
+  .headline_sm {
+    letter-spacing: 3px;
+    font-size: 20px !important;
+    padding-left: 0px !important;
+  }
+  .data_c1c2 {
+    padding-right: 15px;
+  }
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .content_top_right_page {
+    width: 100%;
+  }
+  .table_content_card2,
+  .set_of_graph {
+    width: 100%;
+    /* max-width: 600px; */
+    /* overflow-x: scroll; */
+    overflow-x: scroll;
+  }
+  .c1_c2_dialog,
+  .c1_c2_dialog {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_h_table {
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .table_content_card2 {
+    padding-top: 20px;
+  }
+  .content_top_right_page {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .set_wd_card_avg {
+    width: 48%;
+  }
+  .c1_c2_dialog {
+    width: 100%;
+  }
+  .set_graph_size_n {
+    max-width: 200px;
+    /* width: 200px !important; */
+  }
+  .set_tr_width {
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .sub_card_dia_mini {
+    max-width: 200px;
+  }
+
+  /*
+  .ct_graph {
+    width: 30%;
+  } */
+  .set_table {
+    width: 100%;
+  }
+  .set_full_size_table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .content_dialog_page_top {
+    height: fit-content;
+  }
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 50px;
+  }
 }
 </style>

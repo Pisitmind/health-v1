@@ -79,7 +79,7 @@
           <!-- Content  -->
           <v-container-text>
             <v-layout row wrap justify="space-between">
-              <v-flex xs12 md6>
+              <v-flex xs12 md6 class="set_of_c1_top">
                 <v-card
                   elevation="0"
                   class="bdr_0 set_boder_right"
@@ -123,6 +123,7 @@
                         width="50%"
                         align="right"
                         style="font-size:14px; padding-right:40px;"
+                        class="sm_pd_left"
                       >
                         <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
                       </td>
@@ -130,8 +131,12 @@
                   </table>
                 </div>
               </v-flex>
-              <v-flex xs12 md6>
-                <v-card elevation="0" style="padding-left:10px;">
+              <v-flex xs12 md6 class="set_of_c1_top">
+                <v-card
+                  elevation="0"
+                  style="padding-left:10px;"
+                  class="sm_pd_top"
+                >
                   <div class="card3_line2 grey--text">
                     <span>ค่าเฉลี่ยก้าวจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                   </div>
@@ -256,7 +261,7 @@
                 height="80px"
                 class="set_wd_graph_c"
               ></canvas>
-              <div class="label_grpah1_c1_p4">
+              <div class="label_grpah1_c1_p4 set_pd_top_sp">
                 <table width="100%">
                   <tr>
                     <td style="text-align:center;">
@@ -340,7 +345,7 @@
                     id="graph3_c2_p4"
                     width="200px"
                     height=""
-                    class="set_norm_size_graph"
+                    class="set_mx_width"
                   ></canvas>
                 </v-card-text>
                 <div class="label_grpah1_c1_p4">
@@ -501,6 +506,16 @@ export default {
     var bar1_p4 = new Chart(ctx1_p4, {
       type: "horizontalBar",
       options: {
+        plugins: {
+          legend: {
+            labels: {
+              // This more specific font property overrides the global property
+              font: {
+                size: 16,
+              },
+            },
+          },
+        },
         responsive: true,
         layout: {
           padding: {
@@ -628,6 +643,14 @@ export default {
       type: "bar",
       options: {
         responsive: true,
+        layout: {
+          padding: {
+            left: 10,
+            right: 10,
+            top: 0,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -700,6 +723,15 @@ export default {
     var bar2_c2_p4 = new Chart(ctx2_c2_p4, {
       type: "line",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 10,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -756,6 +788,15 @@ export default {
     var bar3_c2_p4 = new Chart(ctx3_c2_p4, {
       type: "line",
       options: {
+        responsive: true,
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 10,
+            bottom: 0,
+          },
+        },
         legend: {
           display: false,
         },
@@ -964,7 +1005,12 @@ export default {
 .card3_line2 {
   font-size: 14px;
 }
-
+/* .set_wd_graph_c {
+  width: 100%;
+  max-height: 300px;
+   width="400px"
+   height="80px"
+} */
 .card2_content_bot {
   display: flex;
   padding-top: 20px;
@@ -1061,6 +1107,32 @@ export default {
   .head_card1_p4_l {
     width: 60%;
   }
+  .set_pd_top_sp {
+    padding-top: 10px !important;
+  }
+  .card2_content_bot,
+  .card1_p4_content {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+    /* width: 100%; */
+    flex-direction: column;
+  }
+  .label_grpah1_c1_p4 {
+    padding: 0px 0px 20px 40px;
+  }
+  .card2_p4_content_left,
+  .card1_p4_content_left {
+    width: 100%;
+  }
+  .card2_p4_content_right,
+  .card1_p4_content_right {
+    width: 100%;
+    /* max-width: 640px; */
+    overflow-x: scroll;
+  }
+  .set_wd_graph_c {
+  }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .set_norm_size_graph {
@@ -1084,6 +1156,8 @@ export default {
   }
   .set_wd_graph_c {
     padding-right: 20px;
+    max-width: 1563px;
+    max-height: 312px;
   }
   .set_mx_width {
     max-width: 700px;
@@ -1115,6 +1189,52 @@ export default {
   .set_boder_right {
     border-right: 0px solid grey !important;
   }
+  .set_of_c1_top {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .sm_pd_left {
+    padding-left: 50px;
+    padding-right: 0px;
+  }
+  .set_norm_size_graph {
+    width: 100%;
+    max-width: 400px;
+  }
+  .sm_pd_top {
+    padding-top: 20px;
+  }
+  .card2_content_top {
+    width: 100%;
+    max-width: 600px;
+  }
+  .set_wd_graph_c {
+    max-width: 600px;
+    width: 100% !important;
+    height: 200px;
+    overflow-x: scroll !important;
+  }
+  .card2_content_bot,
+  .card1_p4_content {
+    flex-direction: column;
+  }
+  .card2_p4_content_left,
+  .card1_p4_content_left {
+    width: 100%;
+  }
+  .card2_p4_content_right,
+  .card1_p4_content_right {
+    width: 100%;
+    /* max-width: 640px; */
+    overflow-x: scroll;
+  }
+  .set_mx_width {
+    /* max-width: 600px; */
+  }
+  .card3_line2 {
+    padding-top: 10px;
+  }
+  /* overflow-x: scroll; */
 }
 
 @media only screen and (min-width: 1921px) {
@@ -1124,6 +1244,7 @@ export default {
   }
   .set_wd_graph_c {
     padding-right: 30px;
+    max-height: 460px;
   }
   .pd_text_table {
     padding-top: 0px;

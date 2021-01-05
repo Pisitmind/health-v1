@@ -32,15 +32,17 @@
             </div>
             <div class="content_top_right_page">
               <!-- data top right -->
-              <div>
+              <div class="set_card_mNfm">
                 <v-card width="" class="c1_c2_dialog bdr_12">
                   <table class="data_c1c2">
                     <tr width="">
-                      <td class="left" width="70%" height="20%">
+                      <td class="left" width="80%" height="20%">
                         <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้ชาย</span>
+                        <br />
+                        <span>(ในช่วง 6 เดือน) </span>
                       </td>
                       <v-spacer></v-spacer>
-                      <td width="20%">
+                      <td>
                         <v-btn
                           color="#22CE8B"
                           depressed
@@ -58,6 +60,7 @@
                             id="graph_dialog_c2"
                             width=""
                             height="100px"
+                            class="set_graph_size_n"
                           ></canvas>
                         </div>
                       </td>
@@ -86,15 +89,17 @@
                 </v-card>
               </div>
               <br />
-              <div>
+              <div class="set_card_mNfm">
                 <v-card width="" class="c1_c2_dialog bdr_12">
                   <table class="data_c1c2">
                     <tr width="">
-                      <td class="left" width="70%" height="20%">
+                      <td class="left" width="80%" height="20%">
                         <span>ค่าเฉลี่ยการเต้นของหัวใจ ผู้หญิง</span>
+                        <br />
+                        <span>(ในช่วง 6 เดือน) </span>
                       </td>
                       <v-spacer></v-spacer>
-                      <td width="20%">
+                      <td>
                         <v-btn
                           color="#22CE8B"
                           depressed
@@ -112,6 +117,7 @@
                             id="graph_dialog_c3"
                             width=""
                             height="100px"
+                            class="set_graph_size_n"
                           ></canvas>
                         </div>
                       </td>
@@ -579,5 +585,111 @@ export default {
   width: 100%;
   text-align: center;
   /* background-color:rgba(200,100,50,.2); */
+}
+
+@media only screen and (max-width: 320px) {
+  .headline_sm {
+    letter-spacing: 3px;
+    font-size: 20px !important;
+    padding-left: 0px !important;
+  }
+  .headline {
+    white-space: normal;
+    letter-spacing: 1.6px !important;
+    padding-left: 0px !important;
+  }
+  .h_table_dia {
+    white-space: nowrap;
+  }
+  .data_c1c2 {
+    padding-right: 15px;
+  }
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .content_top_right_page {
+    width: 100%;
+  }
+  .table_content_card2,
+  .set_of_graph {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .c1_c2_dialog,
+  .c1_c2_dialog {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_h_table {
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .table_content_card2 {
+    padding-top: 20px;
+  }
+  .content_top_right_page {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .set_card_mNfm {
+    width: 48%;
+  }
+  .c1_c2_dialog {
+    width: 100%;
+  }
+  .data_c1c2 {
+    padding: 20px;
+    /* width: 200px; */
+  }
+  .set_graph_size_n {
+    max-width: 200px;
+  }
+  .set_tr_width {
+    width: 100%;
+  }
+
+  .sub_card_dia_mini {
+    max-width: 200px;
+  }
+  .set_table {
+    width: 100%;
+  }
+  .card_c1_c2_pd {
+    width: 100%;
+  }
+  .set_full_size_table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .content_dialog_page_top {
+    height: fit-content;
+  }
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 50px;
+  }
 }
 </style>

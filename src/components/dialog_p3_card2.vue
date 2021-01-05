@@ -56,7 +56,7 @@
                       :key="n"
                       height="35px"
                       style="border:1px solid black;"
-                      class="font_omg"
+                      class="text_table_font_stle"
                     >
                       {{ item.data[n - 1] }}
                     </td>
@@ -182,7 +182,7 @@
                 <template v-slot:default>
                   <thead>
                     <span
-                      class=""
+                      class="h_table_dia"
                       width="100%"
                       style="font-size:18px; font-weight: bold;"
                     >
@@ -602,5 +602,107 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.h_table_dia {
+  white-space: nowrap;
+}
+@media only screen and (max-width: 320px) {
+  .headline_sm {
+    letter-spacing: 3px;
+    font-size: 20px !important;
+    padding-left: 0px !important;
+  }
+  .data_c1c2 {
+    padding-right: 15px;
+  }
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .content_top_right_page {
+    width: 100%;
+  }
+  .table_content_card2,
+  .set_of_graph {
+    width: 100%;
+    /* max-width: 600px; */
+    /* overflow-x: scroll; */
+    overflow-x: scroll;
+  }
+  .c1_c2_dialog,
+  .c1_c2_dialog {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_h_table {
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content_dialog_page_top {
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .table_content_card2 {
+    padding-top: 20px;
+  }
+  .content_top_right_page {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .set_wd_card_avg {
+    width: 48%;
+  }
+  .c1_c2_dialog {
+    width: 100%;
+  }
+  .set_graph_size_n {
+    max-width: 200px;
+    /* width: 200px !important; */
+  }
+  .set_tr_width {
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .sub_card_dia_mini {
+    max-width: 200px;
+  }
+
+  /*
+  .ct_graph {
+    width: 30%;
+  } */
+  .set_table {
+    width: 100%;
+  }
+  .set_full_size_table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .content_dialog_page_top {
+    height: fit-content;
+  }
+  .content_dialog_page_bot {
+    height: fit-content;
+    padding-top: 50px;
+  }
 }
 </style>
