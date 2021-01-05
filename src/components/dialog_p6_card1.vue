@@ -27,7 +27,12 @@
           <div class="content_dialog_page_top">
             <div class="content_top_left_page">
               <div class="set_center">
-                <canvas id="graph1_c1_p6" width="500px" height="200px"></canvas>
+                <canvas
+                  id="graph1_c1_p6"
+                  width="500px"
+                  height="200px"
+                  class="set_left_graph"
+                ></canvas>
               </div>
               <div class="table_content_card2">
                 <table style="width: 100%;"></table>
@@ -37,7 +42,7 @@
               <!-- data top right -->
               <div>
                 <v-card width="" class="c1_c2_dialog bdr_12">
-                  <v-card-content>
+                  <v-card-content class="set_ct_full">
                     <v-simple-table class="data_c1c2">
                       <tr
                         style="padding:0; margin:0;"
@@ -86,6 +91,7 @@
                               id="graph_dialog_c2"
                               width="200px"
                               height="100px"
+                              class="set_graph_size_n"
                             ></canvas>
                           </div>
                         </td>
@@ -168,6 +174,7 @@
                               id="graph_dialog_c3"
                               width="200px"
                               height="100px"
+                              class="set_graph_size_n"
                             ></canvas>
                           </div>
                         </td>
@@ -643,5 +650,91 @@ export default {
   /* white-space: pre; */
   white-space: normal;
   line-height: 0.9;
+}
+
+@media only screen and (max-width: 320px) {
+  .content_dialog_page_top {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    white-space: normal;
+    letter-spacing: 2.9px !important;
+    padding-left: 0px !important;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .set_left_graph {
+    width: 100%;
+    max-width: 300px;
+    overflow-x: scroll;
+  }
+  .content_top_right_page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .c1_c2_dialog {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content_dialog_page_top {
+    display: flex;
+    flex-direction: column;
+  }
+  .content_top_left_page {
+    width: 100%;
+  }
+  .content_top_right_page {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .c1_c2_dialog {
+    padding: 20px 10px;
+  }
+  .set_ct_full {
+    width: 100%;
+  }
+  .h_table_dia {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .data_c1c2 {
+    width: 100%;
+  }
+  .c1_c2_dialog {
+    width: 80%;
+    /* padding: 0px 50px; */
+  }
+  .wd_100 {
+    text-align: center;
+  }
+  .pd_5 {
+    padding: 0px !important;
+  }
+  .content_top_right_page {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding-left: 90px;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .data_c1c2 {
+    width: 100%;
+  }
+  .mini_r_Card,
+  .mini_l_Card {
+    width: 40%;
+    /* padding: 0px 50px; */
+  }
 }
 </style>

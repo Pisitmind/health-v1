@@ -613,11 +613,11 @@ export default {
   .content_top_right_page {
     width: 100%;
   }
-  .table_content_card2,
+  /* .table_content_card2,
   .set_of_graph {
     width: 100%;
     overflow-x: scroll;
-  }
+  } */
   .c1_c2_dialog,
   .c1_c2_dialog {
     width: 100%;

@@ -53,7 +53,7 @@
                             <div>
                               <canvas
                                 id="donut_g1"
-                                width="250px"
+                                width=""
                                 height="250px"
                               ></canvas>
                             </div>
@@ -66,7 +66,7 @@
                             <div class="mini_r_Card">
                               <v-card class="card_man bdr_12">
                                 <v-card-content>
-                                  <table class="">
+                                  <table class="data_c1c2">
                                     <tr height="30px" width="" class="">
                                       <td width="" class="text_lft">
                                         <span
@@ -91,6 +91,7 @@
                                             id="graph_man"
                                             width="200px"
                                             height="70px"
+                                            class="set_graph_size_n"
                                           ></canvas>
                                         </div>
                                       </td>
@@ -121,7 +122,7 @@
                             <div class="mini_l_Card">
                               <v-card class="card_wman bdr_12">
                                 <v-card-content>
-                                  <table class="">
+                                  <table class="data_c1c2">
                                     <tr height="30px" class="">
                                       <td width="" class="text_lft">
                                         <span
@@ -147,6 +148,7 @@
                                             id="graph_wman"
                                             width="200px"
                                             height="70px"
+                                            class="set_graph_size_n"
                                           ></canvas>
                                         </div>
                                       </td>
@@ -698,6 +700,8 @@ export default {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   /* background-color:rgba(0,150,0, 0.4); */
 }
 .header_card2 {
@@ -749,5 +753,136 @@ export default {
 }
 .pd_5 {
   padding-right: 5px;
+}
+
+@media only screen and (max-width: 320px) {
+  .card_top_lNr {
+    flex-direction: column;
+    width: 100%;
+  }
+  /* .card_left_top {
+    width: 100%;
+    width: 300px;
+  } */
+  .donut_chart_1 {
+    width: 250px;
+  }
+  .card_left_top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px !important;
+  }
+  .table_content_card2,
+  .set_of_graph {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_h_table {
+    height: fit-content;
+  }
+  .card_right_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card_content_right_top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mini_r_Card,
+  .mini_l_Card {
+    width: 100%;
+    padding: 10px 0px;
+    /* width: fit-content; */
+    /* overflow-x: scroll; */
+    /* width: 350px; */
+  }
+  .card_man,
+  .card_wman {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .table_content_right_bot {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .card_bot_table {
+    padding-top: 20px;
+  }
+
+  .data_c1c2 {
+    width: 100%;
+    padding-right: 15px;
+  }
+  .set_graph_size_n {
+    width: 200px;
+  }
+  /* width: 200px; */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* .card_top_lNr {
+    display: flex;
+    justify-content: space-around;
+  } */
+  .card_left_top {
+    width: 33%;
+    height: 300px;
+  }
+  .card_right_top {
+    width: 65%;
+  }
+  .card_content_right_top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 40px;
+  }
+  .table_content_right_bot {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .mini_r_Card,
+  .mini_l_Card {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .card_bot_table {
+    padding-top: 20px;
+  }
+  .data_c1c2 {
+    width: 100%;
+    padding-right: 15px;
+  }
+  .set_graph_size_n {
+    width: 200px;
+  }
+  .card_bot_table {
+    padding-top: 250px;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .data_c1c2 {
+    width: 100%;
+  }
+  .mini_r_Card,
+  .mini_l_Card {
+    width: 46%;
+    /* padding: 0px 50px; */
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .data_c1c2 {
+    width: 100%;
+  }
+  .mini_r_Card,
+  .mini_l_Card {
+    width: 40%;
+    /* padding: 0px 50px; */
+  }
 }
 </style>
