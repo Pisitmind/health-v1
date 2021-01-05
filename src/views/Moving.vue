@@ -1027,6 +1027,7 @@ export default {
   text-align: top;
 }
 .pb_10 {
+  padding-top: 10px;
   padding-bottom: 11px;
 }
 .s-20 {

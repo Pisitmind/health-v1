@@ -119,7 +119,7 @@
           <!-- Content  -->
           <v-container-text class="card1_p5_content">
             <v-layout row wrap justify="space-between">
-              <v-flex xs12 md6>
+              <v-flex xs12 md6 class="set_of_c1_top ">
                 <v-card
                   elevation="0"
                   class="bdr_0 set_border_left"
@@ -136,14 +136,14 @@
                         id="graph1_p5"
                         width=""
                         height=""
-                        class="set_gp_size_xl"
+                        class="set_norm_size_graph"
                       ></canvas>
                     </div>
                   </v-card-content>
                 </v-card>
                 <!-- </div> -->
                 <div class="label_grpah1_c1_p5 set_h30_na">
-                  <table width="100%">
+                  <table width="100%" class="set_tb_size">
                     <tr>
                       <td style="text-align:center;">
                         <div class="label_text_card1">
@@ -168,7 +168,7 @@
                   </table>
                 </div>
               </v-flex>
-              <v-flex xs12 md6>
+              <v-flex xs12 md6 class="set_of_c1_top">
                 <v-card elevation="0" style="padding-left:10px;">
                   <div class="card3_line2 grey--text">
                     <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
@@ -180,13 +180,13 @@
                         id="graph2_c1_p5"
                         width=""
                         height=""
-                        class="set_gp_size_xl"
+                        class="set_wd_graph_c"
                       ></canvas>
                     </div>
                   </v-card-content>
                 </v-card>
                 <div class="label_grpah1_c1_p5 set_h30_na">
-                  <table width="100%">
+                  <table width="100%" class="set_tb_size">
                     <tr>
                       <td
                         style="padding-left:40px;"
@@ -337,10 +337,15 @@
                 </div> -->
               <v-card-content>
                 <div>
-                  <canvas id="graph1_c2_p5" width="200px" height=""></canvas>
+                  <canvas
+                    id="graph1_c2_p5"
+                    width="200px"
+                    height=""
+                    class="set_wd_graph_c"
+                  ></canvas>
                 </div>
                 <div class="label_grpah1_c1_p5">
-                  <table width="100%">
+                  <table width="100%" class="set_tb_size">
                     <tr>
                       <td style="text-align:center;">
                         <div class="label_text_card1">
@@ -374,7 +379,7 @@
                 </v-card-subtitle>
                 <v-card-text class="pa-1">
                   <div class="card-info-right pa-1">
-                    <table class="card2-table">
+                    <table class="card2-table set_tb_size">
                       <tr>
                         <th class="set_left_xl" height="30px">กิจกรรม</th>
                         <th>ชาย</th>
@@ -736,6 +741,91 @@ export default {
 .set_border_left {
   border-right: 1px solid grey !important;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .set_border_left {
+    border-right: 0px solid grey !important;
+  }
+  .set_tb_size {
+    width: 100%;
+  }
+  .head_card1_p5_l {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title_card1_p5 {
+    width: 100%;
+  }
+  .head_card1_p5_l_title {
+    width: 100%;
+    flex-direction: column;
+  }
+  .sex_age_title_card1_p5 {
+    display: flex;
+    width: 100%;
+  }
+  .title_card1_p4 {
+    width: 100%;
+  }
+  .sex_age_title_card1_p4 {
+    display: flex;
+    width: 100%;
+  }
+  .head_card1_p4_l {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .set_boder_right {
+    border-right: 0px solid grey !important;
+  }
+  .set_of_c1_top {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .sm_pd_left {
+    padding-left: 50px;
+    padding-right: 0px;
+  }
+  .set_norm_size_graph {
+    width: 100%;
+    max-width: 400px;
+  }
+  .sm_pd_top {
+    padding-top: 20px;
+  }
+  .card2_content_top {
+    width: 100%;
+    max-width: 600px;
+  }
+  .set_wd_graph_c {
+    max-width: 600px !important;
+    width: 100% !important;
+    /* height: 200px; */
+    overflow-x: scroll !important;
+  }
+  .card2_content_bot,
+  .card1_p4_content {
+    flex-direction: column;
+  }
+  .card2_p4_content_left,
+  .card1_p4_content_left {
+    width: 100%;
+  }
+  .card2_p4_content_right,
+  .card1_p4_content_right {
+    width: 100%;
+    /* max-width: 640px; */
+    overflow-x: scroll;
+  }
+  .set_mx_width {
+    /* max-width: 600px; */
+  }
+  .card3_line2 {
+    padding-top: 10px;
+  }
+}
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .set_border_left {
     border-right: 0px solid grey !important;
@@ -753,15 +843,19 @@ export default {
   .card3_line2 {
     padding-top: 20px;
   }
-  /* .head_card1_p5_l_title {
+  /* .set_gp_size_xl {
+    max-width: 600px;
+    width: 100% !important;
+    height: 200px;
+    overflow-x: scroll !important;
+  } */
+  .set_gp_size_xl {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_tb_size {
     width: 100%;
   }
-  .title_card1_p5 {
-    width: 50%;
-  }
-  .sex_age_title_card1_p5 {
-    width: 50%;
-  } */
 
   .card1_p5_content {
     flex-direction: column;

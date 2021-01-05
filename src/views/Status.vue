@@ -1045,7 +1045,9 @@ export default {
   width: 50%;
 }
 .pd_text_table {
-  padding-top: 6px;
+  /* padding-top: 6px; */
+  /* padding-top: 6px; */
+  /* padding-bottom: 10px; */
 }
 .card1_p4_content_left {
   width: 50%;
