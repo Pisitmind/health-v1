@@ -1429,6 +1429,12 @@ export default {
     padding-left: 0px;
   }
 }
+.set_size_graph_ex_card_bot {
+  width: 400px !important;
+}
+.set_graph1c3_size {
+  overflow: scroll;
+}
 @media (max-width: 768px) {
   .set_h_step,
   .card1_p3_root,
