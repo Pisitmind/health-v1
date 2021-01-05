@@ -250,7 +250,12 @@
             </div>
             <br />
             <div class="card2_content_top">
-              <canvas id="graph1_c2_p4" width="400px" height="80px"></canvas>
+              <canvas
+                id="graph1_c2_p4"
+                width="400px"
+                height="80px"
+                class="set_wd_graph_c"
+              ></canvas>
               <div class="label_grpah1_c1_p4">
                 <table width="100%">
                   <tr>
@@ -293,7 +298,12 @@
                 </v-card-subtitle>
                 <v-card-text>
                   <!-- ใส่กราฟ -->
-                  <canvas id="graph2_c2_p4" width="200px" height=""></canvas>
+                  <canvas
+                    id="graph2_c2_p4"
+                    width="200px"
+                    height=""
+                    class="set_mx_width"
+                  ></canvas>
                 </v-card-text>
                 <div class="label_grpah1_c1_p4">
                   <table width="100%">
@@ -326,7 +336,12 @@
                 </v-card-subtitle>
                 <v-card-text>
                   <!-- ใส่กราฟ -->
-                  <canvas id="graph3_c2_p4" width="200px" height=""></canvas>
+                  <canvas
+                    id="graph3_c2_p4"
+                    width="200px"
+                    height=""
+                    class="set_norm_size_graph"
+                  ></canvas>
                 </v-card-text>
                 <div class="label_grpah1_c1_p4">
                   <table width="100%">
@@ -428,7 +443,12 @@
               <v-card-subtitle> </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
-                <canvas id="graph1_c3_p4" width="200px" height=""></canvas>
+                <canvas
+                  id="graph1_c3_p4"
+                  width="200px"
+                  height=""
+                  class="set_mx_width"
+                ></canvas>
               </v-card-text>
             </div>
             <v-divider vertical></v-divider>
@@ -441,7 +461,12 @@
               <v-card-subtitle> </v-card-subtitle>
               <v-card-text>
                 <!-- ใส่กราฟ -->
-                <canvas id="graph2_c3_p4" width="200px" height=""></canvas>
+                <canvas
+                  id="graph2_c3_p4"
+                  width="200px"
+                  height=""
+                  class="set_mx_width "
+                ></canvas>
               </v-card-text>
 
               <div class="label_grpah1_c1_p4">
@@ -1039,7 +1064,9 @@ export default {
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   .set_norm_size_graph {
-    max-height: 300px;
+    /* max-height: 300px; */
+    max-width: 700px;
+    /* max-width: 800px; */
   }
   .head_card1_p4_l_title {
     display: flex;
@@ -1054,6 +1081,16 @@ export default {
   .sex_age_title_card1_p4 {
     width: 30%;
     justify-content: space-around;
+  }
+  .set_wd_graph_c {
+    padding-right: 20px;
+  }
+  .set_mx_width {
+    max-width: 700px;
+  }
+  .pd_text_table {
+    padding-top: 0px;
+    padding-bottom: 3px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 425px) {
@@ -1077,6 +1114,20 @@ export default {
   }
   .set_boder_right {
     border-right: 0px solid grey !important;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .set_norm_size_graph,
+  .set_mx_width {
+    max-width: 800px;
+  }
+  .set_wd_graph_c {
+    padding-right: 30px;
+  }
+  .pd_text_table {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 </style>

@@ -132,7 +132,12 @@
                   <v-card-content>
                     <!-- ใส่กราฟ -->
                     <div class="set_content_space" style="height:">
-                      <canvas id="graph1_p5" width="" height=""></canvas>
+                      <canvas
+                        id="graph1_p5"
+                        width=""
+                        height=""
+                        class="set_gp_size_xl"
+                      ></canvas>
                     </div>
                   </v-card-content>
                 </v-card>
@@ -171,7 +176,12 @@
                   <v-card-content>
                     <div class="set_content_space" style="height:">
                       <!-- ใส่กราฟ -->
-                      <canvas id="graph2_c1_p5" width="" height=""></canvas>
+                      <canvas
+                        id="graph2_c1_p5"
+                        width=""
+                        height=""
+                        class="set_gp_size_xl"
+                      ></canvas>
                     </div>
                   </v-card-content>
                 </v-card>
@@ -803,6 +813,28 @@ export default {
   }
   .head_card1_p5_l {
     width: 30%;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .text_sub_binfo {
+    padding-top: 0px;
+  }
+  .set_gp_size_xl {
+    max-width: 800px;
+  }
+  .card2-subcard-3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card3_p5_content_right {
+    width: 35%;
+  }
+  .card2-table {
+    width: 100%;
+  }
+  .set_left_xl {
+    text-align: left;
+    padding-left: 20px;
   }
 }
 </style>

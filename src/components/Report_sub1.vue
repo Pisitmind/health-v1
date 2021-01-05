@@ -41,7 +41,7 @@
             ></v-select>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="set_pd_row">
           <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
             <v-select
               :items="item_type"
@@ -63,10 +63,10 @@
             md="2"
             lg=""
             xl="1"
-            class="text-right"
+            class="text-right set_glow_flex"
             style=""
           >
-            <v-btn color="purple lighten-3" style="color:white; width:100px;"
+            <v-btn color="purple lighten-3" style="color:white; width:120px;"
               >ค้นหา</v-btn
             >
           </v-col>
@@ -75,7 +75,7 @@
 
       <v-divider color="#C5C5C5"></v-divider>
       <br />
-      <v-row>
+      <v-row class="set_nd_row">
         <v-col cols="12" xs="12" sm="7" md="6" lg="8" xl="9">
           <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
         </v-col>
@@ -92,7 +92,7 @@
       <br />
       <v-row height="400px" justify="space-around">
         <v-col col="12" sm="3">
-          <v-card class="pa-2 bdr_12_only" width="" height="100%">
+          <v-card outlined class="pa-2  bdr_12_only" width="" height="100%">
             <v-card-subtitle>
               <span class="topic-name-card_c3">
                 ตัวบ่งชี้
@@ -135,7 +135,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" sm="4">
-          <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
+          <v-card outlined class="pa-2 bdr_12_only" width="auto" height="100%">
             <v-card-subtitle>
               <span class="topic-name-card_c3 pl-5">
                 ช่วงอายุ
@@ -177,7 +177,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" sm="4">
-          <v-card class="pa-2 bdr_12_only" width="auto" height="100%">
+          <v-card outlined class="pa-2 bdr_12_only" width="auto" height="100%">
             <v-card-subtitle>
               <span class="topic-name-card_c3 pl-5">
                 อุปกรณ์วัดค่าสุขภาพ
@@ -431,5 +431,14 @@ export default {
   text-align: center;
   align-items: center;
   white-space: nowrap;
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .set_pd_row {
+    padding-right: 20px;
+  }
+  .set_nd_row {
+    padding-right: 5px;
+  }
 }
 </style>

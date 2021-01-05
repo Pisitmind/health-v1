@@ -85,6 +85,9 @@ html .set_hidden {
 .bdr_12_only {
   border-radius: 12px !important;
 }
+.set_glow_flex {
+  flex-grow: 0.1;
+}
 
 .set_center {
   display: flex;

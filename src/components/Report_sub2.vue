@@ -110,10 +110,10 @@
             ></v-select>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="set_pd_row">
           <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"> </v-col>
           <v-col cols="12" xs="0" sm="7" md="2" lg="2" xl="4"></v-col>
-          <v-col cols="6" xs="6" sm="" md="2" lg="" xl="1" class="text-right">
+          <v-col cols="6" xs="6" sm="" md="2" lg="" xl="1" class="text-right set_glow_flex">
             <v-btn outlined color="purple lighten-3" style="width:120px;"
               >ล้างข้อมูล</v-btn
             >
@@ -128,7 +128,7 @@
             class="text-right"
             style=""
           >
-            <v-btn color="purple lighten-3" style="color:white; width:100px;"
+            <v-btn color="purple lighten-3" style="color:white; width:120px;"
               >ค้นหา</v-btn
             >
           </v-col>
@@ -137,7 +137,7 @@
       <br />
       <v-divider color="#C5C5C5"></v-divider>
       <br />
-      <v-row>
+      <v-row class="set_nd_row">
         <v-col cols="12" xs="12" sm="7" md="6" lg="8" xl="9">
           <p style="text-indent: 20px;">พบผลลัพธ์ 2,800 ผลลัพธ์</p>
         </v-col>
@@ -155,6 +155,7 @@
       <v-row height="400px" justify="space-around">
         <v-col cols="12" sm="">
           <v-card
+          outlined
             class="pa-2 bdr_12_only set_card_of"
             width="auto"
             height="100%"
@@ -475,6 +476,14 @@ export default {
   .set_table_of {
     /* overflow-y: scroll; */
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .set_pd_row {
+    padding-right: 20px;
+  }
+   .set_nd_row {
+    padding-right: 5px;
   }
 }
 </style>

@@ -498,11 +498,11 @@
                         <div class="label_text_card3">
                           <div>
                             <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text">ชาย</span>
+                            <span class="black--text pl-1">ชาย</span>
                           </div>
                           <div class="pd_20">
                             <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text">หญิง</span>
+                            <span class="black--text pl-1">หญิง</span>
                           </div>
                         </div>
                       </td>
@@ -1154,7 +1154,9 @@ export default {
   text-align: center;
   align-items: center;
 }
-
+.set_norm_size_graph {
+  max-width: 450px;
+}
 .dis_flex {
   display: flex;
 }
@@ -1277,12 +1279,15 @@ export default {
 .set_h50 {
   // height: 50px;
 }
+.set_gp_size_mov2 {
+  max-width: 450px;
+}
 .set_size_burn_2 {
-  min-height: 200px;
-  min-width: 600px;
-  max-width: 800px;
-  width: 700px;
-  height: 370px;
+  // min-height: 200px;
+  // max-width: 800px;
+  max-width: 450px;
+  // width: 700px;
+  // height: 370px;
 }
 .step_card_size_l {
   height: auto;
@@ -1379,7 +1384,7 @@ export default {
   .set_size_burn {
     min-width: 300px;
     max-width: 600px;
-    min-height: 150px;
+    // min-height: 150px;
   }
   .set_size_burn_2 {
     min-width: 300px;
@@ -1522,9 +1527,9 @@ export default {
   .set_size_burn_2 {
     min-height: 200px;
     min-width: 400px;
-    max-width: 800px;
-    width: 503px;
-    height: 270px;
+    // max-width: 800px;
+    // width: 503px;
+    // height: 270px;
   }
   .set_norm_size_graph {
     width: 100%;
@@ -1549,7 +1554,10 @@ export default {
   }
   .set_size_burn {
     // width: 100%;
-    height: 300px;
+    // height: 300px;
+  }
+  .card3_p3_content_left {
+    width: 55%;
   }
   .set_h_exer_card {
     height: min-content;
@@ -1574,12 +1582,16 @@ export default {
   .card2-table {
     width: -webkit-fill-available;
   }
-  .set_size_graph_ex_card_bot,
   .set_norm_size_graph {
     width: 100%;
+    max-width: 700px;
+  }
+  .set_size_graph_ex_card_bot {
+    max-width: 850px;
   }
   .card1_p3_root_sp {
     height: fit-content !important;
+    padding: 20px;
   }
   .text_sub {
     line-height: 1.2;
@@ -1597,11 +1609,26 @@ export default {
   .set_norm_size_graph {
     width: 100%;
   }
+  .set_size_graph_ex_card_bot {
+    max-width: 950px !important;
+  }
   .set_h_step_sp {
     height: fit-content;
   }
   .set_h_exer_card {
     height: fit-content;
+  }
+  .set_gp_size_mov2 {
+    max-width: 800px;
+  }
+  .set_size_burn_2 {
+    max-width: 800px;
+  }
+  .set_norm_size_graph {
+    max-width: 800px;
+  }
+  .pb_10 {
+    padding-bottom: 0px;
   }
 }
 </style>

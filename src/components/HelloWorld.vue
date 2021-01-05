@@ -1565,5 +1565,14 @@ th {
   .card3_l1_root {
     height: 420px;
   }
+  .set_size_chart {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1921px) {
+  .set_size_chart,
+  .set_g1_size {
+    max-width: 750px;
+  }
 }
 </style>

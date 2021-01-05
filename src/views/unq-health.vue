@@ -1135,11 +1135,14 @@ table {
     height: 40px;
   }
   .set_h30_sp {
-    padding-top: 30px;
+    /* padding-top: 30px; */
   }
   .graph_line_step,
   .set_grap_mov_2 {
     padding: 0px 20px 0px 20px;
+  }
+  .set_h30_sp {
+    padding-top: 17px;
   }
 }
 
@@ -1170,6 +1173,11 @@ table {
   .title_card1_p6 {
     width: 55%;
     white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1921px) {
+  .set_h30_sp {
+    padding-top: 17px;
   }
 }
 </style>

@@ -1616,4 +1616,24 @@ export default {
     max-width: fill-available;
   }
 }
+@media (min-width: 1921px) {
+  .content1-card1 {
+    width: 100%;
+  }
+  .ct_1_c_noti {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+  }
+  .ct_2_c_noti {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .set_size_graph_noti_last {
+    width: 100%;
+    max-width: 1900px;
+  }
+}
 </style>
