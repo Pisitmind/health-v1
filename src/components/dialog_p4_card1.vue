@@ -544,6 +544,9 @@ export default {
 .card1_p3_root {
   height: fit-content;
 }
+.h_table_dia {
+  white-space: nowrap;
+}
 .wd_100 {
   width: 100%;
 }

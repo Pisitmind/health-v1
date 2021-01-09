@@ -181,8 +181,8 @@
                     </td>
                     <td class="text-center">{{ item.gender }}</td>
                     <td class="text-center">{{ item.blood_presure }}</td>
-                    <td class="text-center">{{ item.o2_blood }}</td>
-                    <td class="text-left">{{ item.body_temp }}</td>
+                    <td class="text-left">{{ item.o2_blood }}</td>
+                    <td class="text-center">{{ item.body_temp }}</td>
                   </tr>
                 </tbody>
               </template>
@@ -304,6 +304,9 @@ export default {
 <style scoped>
 .report_sub5 {
   padding: 20px;
+}
+.set_glow_flex {
+  flex-grow: 0.2 !important;
 }
 .text_header {
   display: flex;

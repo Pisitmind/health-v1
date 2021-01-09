@@ -50,11 +50,12 @@
                               <span class="text_inside1">27</span><br />
                               <span class="text_inside">avg.</span>
                             </div>
-                            <div>
+                            <div class="set_sm_do">
                               <canvas
                                 id="donut_g1"
                                 width=""
                                 height="250px"
+                                class="set_sm_do"
                               ></canvas>
                             </div>
                           </div>
@@ -759,6 +760,9 @@ export default {
   .card_top_lNr {
     flex-direction: column;
     width: 100%;
+  }
+  .set_sm_do {
+    width: 250px;
   }
   /* .card_left_top {
     width: 100%;

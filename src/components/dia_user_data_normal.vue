@@ -142,7 +142,7 @@
                       ></v-text-field>
                     </v-col>
                     <v-spacer></v-spacer>
-                    <v-col cols="12" sm="6">
+                    <v-col cols="12" sm="12" md="6" xl="6" lg="6">
                       <v-text-field
                         v-model="position"
                         label="ตำแหน่ง"

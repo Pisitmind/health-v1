@@ -301,22 +301,26 @@
                     >
                   </div>
                 </v-card-subtitle>
-                <v-card-text>
-                  <!-- ใส่กราฟ -->
-                  <canvas
-                    id="graph2_c2_p4"
-                    width="200px"
-                    height=""
-                    class="set_mx_width"
-                  ></canvas>
-                </v-card-text>
-                <div class="label_grpah1_c1_p4">
-                  <table width="100%">
-                    <span class="" style="font-size:14px; font-weight:normal;"
-                      >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ 135
-                      BPM ต่อวัน</span
-                    >
-                  </table>
+                <div class="set_of_card_graph">
+                  <v-card-text>
+                    <!-- ใส่กราฟ -->
+                    <div class="card_out">
+                      <canvas
+                        id="graph2_c2_p4"
+                        width="200px"
+                        height=""
+                        class="set_mx_width set_wd_graph_hr"
+                      ></canvas>
+                    </div>
+                  </v-card-text>
+                  <div class="label_grpah1_c1_p4">
+                    <table width="100%">
+                      <span class="" style="font-size:14px; font-weight:normal;"
+                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ
+                        135 BPM ต่อวัน</span
+                      >
+                    </table>
+                  </div>
                 </div>
               </div>
               <v-divider vertical></v-divider>
@@ -339,22 +343,26 @@
                     >
                   </div>
                 </v-card-subtitle>
-                <v-card-text>
-                  <!-- ใส่กราฟ -->
-                  <canvas
-                    id="graph3_c2_p4"
-                    width="200px"
-                    height=""
-                    class="set_mx_width"
-                  ></canvas>
-                </v-card-text>
-                <div class="label_grpah1_c1_p4">
-                  <table width="100%">
-                    <span class="" style="font-size:14px; font-weight:normal;"
-                      >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ 135
-                      BPM ต่อวัน</span
-                    >
-                  </table>
+                <div class="set_of_card_graph">
+                  <v-card-text>
+                    <!-- ใส่กราฟ -->
+                    <div class="card_out">
+                      <canvas
+                        id="graph3_c2_p4"
+                        width="200px"
+                        height=""
+                        class="set_mx_width set_wd_graph_hr"
+                      ></canvas>
+                    </div>
+                  </v-card-text>
+                  <div class="label_grpah1_c1_p4">
+                    <table width="100%">
+                      <span class="" style="font-size:14px; font-weight:normal;"
+                        >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีการเต้นของหัวใจประมาณ
+                        135 BPM ต่อวัน</span
+                      >
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -446,15 +454,19 @@
                 >
               </div>
               <v-card-subtitle> </v-card-subtitle>
-              <v-card-text>
-                <!-- ใส่กราฟ -->
-                <canvas
-                  id="graph1_c3_p4"
-                  width="200px"
-                  height=""
-                  class="set_mx_width"
-                ></canvas>
-              </v-card-text>
+              <div class="set_of_card_graph">
+                <v-card-text>
+                  <!-- ใส่กราฟ -->
+                  <div class="card_out">
+                    <canvas
+                      id="graph1_c3_p4"
+                      width="200px"
+                      height=""
+                      class="set_mx_width set_size_canvas"
+                    ></canvas>
+                  </div>
+                </v-card-text>
+              </div>
             </div>
             <v-divider vertical></v-divider>
             <div class="card1_p4_content_right">
@@ -464,22 +476,26 @@
                 >
               </div>
               <v-card-subtitle> </v-card-subtitle>
-              <v-card-text>
-                <!-- ใส่กราฟ -->
-                <canvas
-                  id="graph2_c3_p4"
-                  width="200px"
-                  height=""
-                  class="set_mx_width "
-                ></canvas>
-              </v-card-text>
+              <div class="set_of_card_graph">
+                <v-card-text>
+                  <!-- ใส่กราฟ -->
+                  <div class="card_out">
+                    <canvas
+                      id="graph2_c3_p4"
+                      width="200px"
+                      height=""
+                      class="set_mx_width "
+                    ></canvas>
+                  </div>
+                </v-card-text>
 
-              <div class="label_grpah1_c1_p4">
-                <table width="100%">
-                  <span class="" style="font-size:14px; font-weight:normal;"
-                    >ค่าเฉลี่ยสูงสุดอยู่ที่่ 22.4% มีจำนวน 684 คน</span
-                  >
-                </table>
+                <div class="label_grpah1_c1_p4">
+                  <table width="100%">
+                    <span class="" style="font-size:14px; font-weight:normal;"
+                      >ค่าเฉลี่ยสูงสุดอยู่ที่่ 22.4% มีจำนวน 684 คน</span
+                    >
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -1131,9 +1147,10 @@ export default {
   .card1_p4_content_right {
     width: 100%;
     /* max-width: 640px; */
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
   }
   .set_wd_graph_c {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
@@ -1173,6 +1190,20 @@ export default {
   .card1_head_lr {
     flex-direction: column;
   }
+  .set_of_card_graph,
+  .card2_content_top {
+    width: 100%;
+    overflow-x: scroll;
+    height: auto;
+  }
+  .set_size_canvas {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_wd_graph_hr {
+    width: 100%;
+    max-width: 600px;
+  }
   .head_card1_p4_l_title {
     flex-direction: column;
   }
@@ -1211,9 +1242,7 @@ export default {
     max-width: 600px;
   }
   .set_wd_graph_c {
-    max-width: 600px;
-    width: 100% !important;
-    height: 200px;
+    max-width: 300px !important;
     overflow-x: scroll !important;
   }
   .card2_content_bot,
@@ -1223,15 +1252,21 @@ export default {
   .card2_p4_content_left,
   .card1_p4_content_left {
     width: 100%;
+    padding-left: 0px;
+    /* overflow-x: scroll; */
   }
   .card2_p4_content_right,
   .card1_p4_content_right {
     width: 100%;
+    padding-left: 0px;
     /* max-width: 640px; */
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
   }
   .set_mx_width {
-    /* max-width: 600px; */
+    display: block;
+    width: 300px !important;
+
+    /* height: 150px; */
   }
   .card3_line2 {
     padding-top: 10px;

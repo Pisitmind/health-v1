@@ -63,7 +63,7 @@
             md="2"
             lg=""
             xl="1"
-            class="text-right set_glow_flex"
+            class="text-right set_glow_flex set_nm_size"
             style=""
           >
             <v-btn color="purple lighten-3" style="color:white; width:120px;"
@@ -408,6 +408,9 @@ export default {
 }
 .report_card_root {
   padding: 20px;
+}
+.set_glow_flex {
+  flex-grow: 0.2 !important;
 }
 .ddog {
   font-size: 20px;

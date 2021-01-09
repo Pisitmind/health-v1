@@ -142,7 +142,7 @@
                       <th></th>
                     </tr>
                     <tr v-for="item in data_card1_info" :key="item.name">
-                      <td class="speci_ele">
+                      <td class="speci_ele setsize_nw">
                         <v-icon x-small :style="{ color: item.color }"
                           >mdi-circle
                         </v-icon>
@@ -204,7 +204,7 @@
                 </v-card-subtitle>
                 <v-card-content class="pa-1">
                   <!-- <div class="pa-1"> -->
-                  <table class="card2-table pd_x5">
+                  <table class="card2-table pd_x5 set_sm_table">
                     <tr class="table_head1">
                       <th class="table_head1_data">ช่วงอายุ</th>
                       <th>ชาย</th>
@@ -316,11 +316,14 @@
                 </div>
               </div>
               <v-card-content>
-                <div class="card_content">
+                <div class="card_content card_bt_s">
                   <!-- <div> -->
                   <!-- กราฟ horizontal problems  graph3-1 -->
                   <div class="card2-graph">
-                    <canvas id="graph3-1" class="set_size_chart"></canvas>
+                    <canvas
+                      id="graph3-1"
+                      class="set_size_chart set_size_chart_n"
+                    ></canvas>
                   </div>
                   <div class="label_graph">
                     <table width="100%">
@@ -426,7 +429,7 @@
             <div class="head_card4">
               <div class="title_card4">
                 <div class="card4_nameNicon set_weight">
-                  <div style="padding-right:10px;">
+                  <div class="set_ico_padd" style="padding-right:10px;">
                     <img
                       height="40px"
                       class="filter-white"
@@ -1535,11 +1538,83 @@ th {
   .graph_donut_c1 {
     width: 300px;
   }
+  .set_ico_padd {
+    adding-bottom: 20px;
+  }
+  .card-bot-text {
+    white-space: nowrap;
+  }
+  .graph6-details {
+    padding-left: 45px;
+  }
+  .head_card4 {
+    padding: 10px 0px 0px 0px;
+  }
+  .card4_nameNicon {
+    padding-bottom: 20px;
+  }
+  .card4-content {
+    width: 100%;
+    overflow-x: scroll !important;
+  }
+  .set_size_chart_n {
+    max-width: 600px;
+    overflow-x: scroll;
+  }
+  .set_size_chart {
+    overflow-x: scroll;
+    width: 400px !important;
+    max-width: 600px;
+    height: auto;
+  }
+  .card_bt_s {
+    width: 100%;
+    max-width: 600px;
+    overflow-x: scroll;
+  }
+  .set_sm_table {
+    max-width: 100%;
+    width: 300px;
+    justify-content: space-around;
+  }
+  .card3_l1 {
+    padding: 0px;
+  }
+  .card2-table {
+    padding: 0 20px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .table_head1_data {
+    text-align: left;
+  }
+  .head_card_l {
+    padding: 0px;
+  }
+  .sex-title,
+  .sex_card4 {
+    padding: 0 10px 0 0px;
+  }
+  .card1-subcard-3 {
+    overflow-x: scroll;
+  }
+  .speci_ele {
+    padding: 0px;
+  }
+  .setsize_nw {
+    width: 100%;
+    white-space: nowrap;
+  }
   .card_1_c1 {
     min-width: min-content;
   }
   .font_style_title_card {
     width: max-content;
+  }
+  .card2-subcard-3 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
   .card1-root {
     // padding: -2px 15px;
@@ -1550,7 +1625,7 @@ th {
   .table_content_c2_c1 {
     min-width: 200px;
     max-width: 600px;
-    overflow-x: scroll;
+    // overflow-x: scroll;
     // width: max-content;
     // overflow-x: scroll !important;
   }

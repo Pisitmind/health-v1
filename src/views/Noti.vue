@@ -1566,14 +1566,37 @@ export default {
   .chart1_card2 {
     padding: 15px 0;
   }
+  .set_size_graph_noti_last {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .table_content_card2 {
+    /* overflow-x: scroll; */
+  }
+  .v-data-table__wrapper {
+    overflow-x: normal;
+    overflow-y: normal;
+  }
+  .size_chart3 {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: scroll;
+  }
+
+  .head_table_card3 {
+    white-space: nowrap;
+  }
+  /* .v-data-table__wrapper {
+    overflow-x: scroll;
+    width: 100%;
+    overflow-y: hidden;
+  } */
   .chart1_card3 {
     width: 100%;
     min-width: 200px;
-    min-height: 200px;
-    height: 150px;
+    /* min-height: 200px; */
     /* width: 100%; */
-    max-width: 800px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
   }
 }
 @media only screen and (max-width: 768px) {

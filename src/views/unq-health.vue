@@ -10,7 +10,7 @@
               <!-- head left div -->
               <div class="head_card1_p6_l">
                 <!-- head left -->
-                <div class="head_card1_p6_l_title">
+                <div class="head_card1_p6_l_title set_sm_col">
                   <!-- การก้าว+icon -->
                   <div class="title_card1_p6">
                     <div style="padding-right:10px;">
@@ -112,74 +112,95 @@
 
             <v-container-text>
               <v-layout row wrap justify="space-between" height="fit-content">
-                <v-flex xs12 sm12 md6 lg6 xl6 class="set_line_div">
+                <v-flex
+                  xs12
+                  sm12
+                  md6
+                  lg6
+                  xl6
+                  class="set_line_div set_of_c1_top"
+                >
                   <v-card elevation="0" class="bdr_0 " style="">
                     <div class="card3_line2 grey--text ">
                       <span
                         >ค่าเฉลี่ยความดันโลหิตของผู้ใช้เพศชาย และเพศหญิง</span
                       >
                     </div>
-                    <v-card-content>
-                      <div class="set_content_space step_card_size_l">
-                        <div class="graph_line_step ">
-                          <canvas id="graph1_p6" width="" height=""></canvas>
-                        </div>
-                        <div class="set_h30 sub_ct_graph">
-                          <table width="100%">
-                            <tr>
-                              <td style="text-align:center;">
-                                <div class="label_text_card_norm">
-                                  <div>
-                                    <v-icon small color="blue">
-                                      mdi-circle</v-icon
-                                    >
-                                    <span class="black--text pl-1">ชาย</span>
+                    <div class="set_of_card_graph">
+                      <v-card-content>
+                        <div class="set_content_space step_card_size_l">
+                          <div class="graph_line_step card_out">
+                            <canvas
+                              id="graph1_p6"
+                              width=""
+                              height=""
+                              class="set_size_canvas"
+                            ></canvas>
+                          </div>
+                          <div class="set_h30 sub_ct_graph">
+                            <table width="100%">
+                              <tr>
+                                <td style="text-align:center;">
+                                  <div class="label_text_card_norm">
+                                    <div>
+                                      <v-icon small color="blue">
+                                        mdi-circle</v-icon
+                                      >
+                                      <span class="black--text pl-1">ชาย</span>
+                                    </div>
+                                    <div class="pd_10">
+                                      <v-icon small color="pink">
+                                        mdi-circle</v-icon
+                                      >
+                                      <span class="black--text pl-1">หญิง</span>
+                                    </div>
                                   </div>
-                                  <div class="pd_10">
-                                    <v-icon small color="pink">
-                                      mdi-circle</v-icon
-                                    >
-                                    <span class="black--text pl-1">หญิง</span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td
-                                width="50%"
-                                class="text-right"
-                                style="font-size:14px; padding-right:40px;"
-                              >
-                                <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                              </td>
-                            </tr>
-                          </table>
+                                </td>
+                                <td
+                                  width="50%"
+                                  class="text-right"
+                                  style="font-size:14px; padding-right:40px;"
+                                >
+                                  <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
                         </div>
-                      </div>
-                    </v-card-content>
+                      </v-card-content>
+                    </div>
                   </v-card>
                 </v-flex>
-                <v-flex xs12 sm12 md6 lg6 xl6>
+                <v-flex xs12 sm12 md6 lg6 xl6 class="set_of_c1_top">
                   <v-card elevation="0" style="padding-left:10px;">
                     <div class="card3_line2 grey--text">
                       <span
                         >ค่าเฉลี่ยความดันโลหิต จากผู้ใช้ทั้งหมดตามช่วงอายุ</span
                       >
                     </div>
-                    <v-card-content class="set_content_space" style="">
-                      <div class="set_grap_mov_2">
-                        <canvas id="graph2_c1_p6" width="" height=""></canvas>
-                      </div>
-                      <div class="set_h30_sp sub_ct_graph">
-                        <table width="100%" style="font-size: 14px;">
-                          <tr>
-                            <td style=" padding-top: 5px;">
-                              <span class="set_space_under_graph"
-                                >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี
-                              </span>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </v-card-content>
+                    <div class="set_of_card_graph">
+                      <v-card-content class="set_content_space" style="">
+                        <div class="set_grap_mov_2">
+                          <canvas
+                            id="graph2_c1_p6"
+                            width=""
+                            height=""
+                            class="set_size_canvas"
+                          ></canvas>
+                        </div>
+                        <div class="set_h30_sp sub_ct_graph">
+                          <table width="100%" style="font-size: 14px;">
+                            <tr>
+                              <td style=" padding-top: 5px;">
+                                <span class="set_space_under_graph"
+                                  >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </v-card-content>
+                    </div>
                   </v-card>
                 </v-flex>
               </v-layout>
@@ -301,7 +322,12 @@
                       <span class="text_inside1">1,471</span><br />
                       <span class="text_inside">คน</span>
                     </div>
-                    <canvas id="graph1_c2_p6" width="" height="220px"></canvas>
+                    <canvas
+                      id="graph1_c2_p6"
+                      width=""
+                      height="220px"
+                      class="set_donut"
+                    ></canvas>
                   </div>
                 </div>
                 <div class="card3_p6_content_right">
@@ -383,7 +409,12 @@
                       <span class="text_inside1">1,329</span><br />
                       <span class="text_inside">คน</span>
                     </div>
-                    <canvas id="graph2_c2_p6" width="" height="220px"></canvas>
+                    <canvas
+                      id="graph2_c2_p6"
+                      width=""
+                      height="220px"
+                      class="set_donut"
+                    ></canvas>
                     <div class="label_grpah1_c1_p6">
                       <table width="100%">
                         <tr>
@@ -560,46 +591,53 @@
             >
           </div>
           <!-- Content  -->
-          <div class="card3_p6_content_na">
-            <v-card-text>
-              <!-- ใส่กราฟ -->
-              <canvas id="graph1_c3_p6" width="" height="80px"></canvas>
-            </v-card-text>
+          <div class="card3_p6_content_na step_card_size_l">
+            <div class="set_of_card_graph">
+              <v-card-text>
+                <!-- ใส่กราฟ -->
+                <canvas
+                  id="graph1_c3_p6"
+                  width=""
+                  height="80px"
+                  class="set_size_canvas"
+                ></canvas>
+              </v-card-text>
 
-            <div class="label_text_p6">
-              <table width="100%" style="text-align:left!important;">
-                <tr>
-                  <td style="text-align:left!important;">
-                    <div class="label_text_p6">
-                      <div style="padding-left:70px;"></div>
-                      <div>
-                        <v-icon small color="blue"> mdi-circle</v-icon>
-                        <span class="black--text pl-1">ชาย</span>
+              <div class="label_text_p6">
+                <table width="100%" style="text-align:left!important;">
+                  <tr>
+                    <td style="text-align:left!important;">
+                      <div class="label_text_p6">
+                        <div style="padding-left:70px;"></div>
+                        <div>
+                          <v-icon small color="blue"> mdi-circle</v-icon>
+                          <span class="black--text pl-1">ชาย</span>
+                        </div>
+                        <div class="pd_20">
+                          <v-icon small color="pink"> mdi-circle</v-icon>
+                          <span class="black--text pl-1">หญิง</span>
+                        </div>
                       </div>
-                      <div class="pd_20">
-                        <v-icon small color="pink"> mdi-circle</v-icon>
-                        <span class="black--text pl-1">หญิง</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td width="50%" class="text_sub">
-                    <span></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    width=""
-                    class="grey--text"
-                    style="font-size:14px; padding-left: 70px;"
-                  >
-                    <span
-                      >อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5
-                      องศาเซลเซียส</span
+                    </td>
+                    <td width="50%" class="text_sub">
+                      <span></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      width=""
+                      class="grey--text"
+                      style="font-size:14px; padding-left: 70px;"
                     >
-                  </td>
-                  <td width="50%" class="text_sub"></td>
-                </tr>
-              </table>
+                      <span
+                        >อุณหภูมิร่างกายปกติอยู่ในช่วงระหว่าง 36.5 - 37.5
+                        องศาเซลเซียส</span
+                      >
+                    </td>
+                    <td width="50%" class="text_sub"></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -1143,6 +1181,80 @@ table {
   }
   .set_h30_sp {
     padding-top: 17px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .title_card1_p6 {
+    width: 100%;
+    white-space: nowrap;
+  }
+  .card_donut {
+    width: 250px;
+  }
+  .head_card1_p6_r_title {
+    justify-content: center;
+  }
+  .card1_head_lr {
+    /* padding: 0px; */
+  }
+  .set_of_c1_top {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_sm_col {
+    flex-direction: column;
+    width: 100%;
+  }
+  .head_card1_p6_l {
+    width: 100%;
+  }
+  .head_card1_p6_r {
+    width: 100%;
+  }
+  .sex_age_title_card1_p6 {
+    width: 100%;
+  }
+  .set_of_card_graph {
+    width: 100%;
+    overflow-x: scroll;
+    height: auto;
+    min-width: 450px;
+    max-width: 600px;
+  }
+  .set_size_canvas {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .card2_lNr {
+    flex-direction: column;
+  }
+  .card2_l_all {
+    width: 100%;
+    padding: 20px;
+  }
+  .card2_r_all {
+    width: 100%;
+    padding: 20px;
+  }
+  .card1_p6_content {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+  .card3_p6_content_left {
+    width: 100%;
+  }
+  .card3_p6_content_right {
+    width: 100%;
+  }
+  .card2_l1 {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .card3_p6_content_na {
+    overflow-x: scroll;
   }
 }
 

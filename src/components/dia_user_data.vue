@@ -20,27 +20,31 @@
                 <span class="headline">เพิ่มเจ้าหน้าที่</span>
               </div>
             </div>
-            <div class="btn_head_user">
-              <v-btn
-                class="white--text  mx-2"
-                small
-                width="120px"
-                height="30px"
-                color="#EE3743"
-                @click="$emit('close')"
-              >
-                <span> ลบ</span>
-              </v-btn>
-              <v-btn
-                class="white--text  mx-2"
-                small
-                width="120px"
-                height="30px"
-                color="#AD8DBB"
-                @click="dialog99 = false"
-              >
-                <span> บันทึก</span>
-              </v-btn>
+            <div class="btn_head_user set_sm_btn">
+              <div>
+                <v-btn
+                  class="white--text  mx-2 btn_1"
+                  small
+                  width="120px"
+                  height="30px"
+                  color="#EE3743"
+                  @click="$emit('close')"
+                >
+                  <span> ลบ</span>
+                </v-btn>
+              </div>
+              <div class="set_space_btn">
+                <v-btn
+                  class="white--text  mx-2 btn_2"
+                  small
+                  width="120px"
+                  height="30px"
+                  color="#AD8DBB"
+                  @click="dialog99 = false"
+                >
+                  <span> บันทึก</span>
+                </v-btn>
+              </div>
             </div>
           </div>
         </v-card-title>
@@ -129,7 +133,15 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
-                  <v-col cols="6" sm="6" class="set_pdleft_0">
+                  <v-col
+                    cols="12"
+                    xs="12"
+                    sm="12"
+                    md="6"
+                    lg="6"
+                    xl="6"
+                    class="set_pdleft_0"
+                  >
                     <label for="lname">กลุ่มเจ้าหน้าที่</label><br />
                     <v-select :items="items" dense outlined></v-select>
                   </v-col>
@@ -237,6 +249,38 @@ export default {
 }
 .set_pdleft_0 {
   padding-left: 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .head_of_dialog_user {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+  }
+  .left_head {
+    width: 100%;
+  }
+  .btn_head_user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0px;
+    justify-content: space-between;
+  }
+  .set_space_btn {
+    padding-top: 10px;
+  }
+  .btn_1,
+  .btn_2 {
+    padding: 10px 0px;
+  }
+  .headline {
+    width: 100%;
+    white-space: nowrap;
+  }
+  .set_sm_btn {
+    display: flex;
+    paddingl: 20px;
+  }
 }
 
 @media (max-width: 768px) {

@@ -112,7 +112,11 @@
           <v-container-text>
             <v-layout row wrap justify="space-between" height="fit-content">
               <v-flex xs12 sm12 md6 lg6 xl6 class="set_line_div">
-                <v-card elevation="0" class="bdr_0 " style="">
+                <v-card
+                  elevation="0"
+                  class="bdr_0 set_scroll_graph set_g2"
+                  style=""
+                >
                   <div class="card3_line2 grey--text ">
                     <span
                       >ค่าเฉลี่ยก้าวเดินของผู้ใช้เพศชาย และเพศหญิง รายวัน</span
@@ -122,7 +126,7 @@
                     <div class="set_content_space step_card_size_l">
                       <div class="graph_line_step px-2">
                         <canvas
-                          class="set_norm_size_graph "
+                          class="set_norm_size_graph set_sp_size"
                           id="graph1_p3"
                           width=""
                           height=""
@@ -172,7 +176,7 @@
                         id="graph2_c1_p3"
                         width=""
                         height=""
-                        class="set_gp_size_mov2 set_norm_size_graph"
+                        class="set_g_sp_p3"
                       ></canvas>
                     </div>
                     <div class="set_h30 sub_ct_graph">
@@ -1310,6 +1314,45 @@ export default {
     width: fit-content;
     flex-direction: column;
   }
+  .card3_p3_content_left {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_graph1c3_size {
+    width: 100%;
+    // overflow-x: scroll;
+  }
+  .set_g_sp_p3 {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_sp_size {
+    width: 400px !important;
+  }
+  .set_g2 {
+    max-width: 100%;
+    width: 400px !important;
+    overflow-x: scroll;
+  }
+  .set_scroll_graph {
+    width: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .card3_line2 {
+    padding-top: 20px;
+  }
+  .set_norm_size_graph {
+    max-width: 600px;
+    // overflow-x: scroll;
+  }
+  .set_pdt_table {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-items: center;
+  }
   .pd_subtext_sm {
     padding-top: 20px;
   }
@@ -1376,14 +1419,16 @@ export default {
     padding-left: 0px !important;
   }
   .set_grap_mov_2 {
-    min-width: 200px;
-    max-width: 600px;
+    width: 100% !important;
+    // max-width: 500px !important;
+    // max-width: 100% !important;
+    // overflow-x: scroll !important;
   }
   .set_gp_size_mov2 {
-    min-width: 200px;
-    max-width: 600px;
+    // max-width: 600px;
     width: 100%;
-    overflow-x: scroll;
+    height: auto;
+    // overflow-x: scroll;
   }
   .set_size_burn {
     min-width: 300px;
@@ -1429,12 +1474,12 @@ export default {
     padding-right: 0px;
     padding-left: 0px;
   }
-}
-.set_size_graph_ex_card_bot {
-  width: 400px !important;
-}
-.set_graph1c3_size {
-  overflow: scroll;
+  .set_size_graph_ex_card_bot {
+    max-width: 700px;
+    width: 100%;
+    height: 150px !important;
+    width: 600px !important;
+  }
 }
 @media (max-width: 768px) {
   .set_h_step,
@@ -1617,6 +1662,9 @@ export default {
   .sex_age_title_card1_p3 {
     width: 30%;
     justify-content: space-around;
+  }
+  .set_g_sp_p3 {
+    max-width: 700px;
   }
 }
 @media only screen and (min-width: 1921px) {

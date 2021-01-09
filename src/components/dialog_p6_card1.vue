@@ -678,6 +678,9 @@ export default {
   .c1_c2_dialog {
     width: 100%;
   }
+  .h_table_dia {
+    white-space: nowrap;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

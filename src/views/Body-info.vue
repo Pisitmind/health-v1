@@ -120,85 +120,93 @@
           <v-container-text class="card1_p5_content">
             <v-layout row wrap justify="space-between">
               <v-flex xs12 md6 class="set_of_c1_top ">
-                <v-card
-                  elevation="0"
-                  class="bdr_0 set_border_left"
-                  style="padding-righ:5px;"
-                >
-                  <div class="card3_line2_fx grey--text">
-                    <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
-                  </div>
-                  <!-- <div style="height:230px"> -->
-                  <v-card-content>
-                    <!-- ใส่กราฟ -->
-                    <div class="set_content_space" style="height:">
-                      <canvas
-                        id="graph1_p5"
-                        width=""
-                        height=""
-                        class="set_norm_size_graph"
-                      ></canvas>
+                <div class="set_graph_mb">
+                  <v-card
+                    elevation="0"
+                    class="bdr_0 set_border_left"
+                    style="padding-righ:5px;"
+                  >
+                    <div class="card3_line2_fx grey--text">
+                      <span>ค่าเฉลี่ยน้ำหนักของผู้ใช้เพศชาย และเพศหญิง</span>
                     </div>
-                  </v-card-content>
-                </v-card>
-                <!-- </div> -->
-                <div class="label_grpah1_c1_p5 set_h30_na">
-                  <table width="100%" class="set_tb_size">
-                    <tr>
-                      <td style="text-align:center;">
-                        <div class="label_text_card1">
-                          <div>
-                            <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text pl-1">ชาย</span>
-                          </div>
-                          <div class="pd_10">
-                            <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text pl-1">หญิง</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        width="50%"
-                        align="right"
-                        style="font-size:14px; padding-right:40px;"
+                    <!-- <div style="height:230px"> -->
+                    <v-card-content>
+                      <!-- ใส่กราฟ -->
+                      <div
+                        class="set_content_space set_md_spac"
+                        style="height:"
                       >
-                        <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
-                      </td>
-                    </tr>
-                  </table>
+                        <canvas
+                          id="graph1_p5"
+                          width=""
+                          height=""
+                          class="set_norm_size_graph"
+                        ></canvas>
+                      </div>
+                    </v-card-content>
+                  </v-card>
+                  <!-- </div> -->
+                  <div class="label_grpah1_c1_p5 set_h30_na">
+                    <table width="100%" class="set_tb_size">
+                      <tr>
+                        <td style="text-align:center;">
+                          <div class="label_text_card1">
+                            <div>
+                              <v-icon small color="blue"> mdi-circle</v-icon>
+                              <span class="black--text pl-1">ชาย</span>
+                            </div>
+                            <div class="pd_10">
+                              <v-icon small color="pink"> mdi-circle</v-icon>
+                              <span class="black--text pl-1">หญิง</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="set_pd_r0"
+                          width="50%"
+                          align="right"
+                          style="font-size:14px; padding-right:40px;"
+                        >
+                          <span>จำนวนผู้ใช้ทั้งหมด 2,800 คน</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </v-flex>
               <v-flex xs12 md6 class="set_of_c1_top">
-                <v-card elevation="0" style="padding-left:10px;">
-                  <div class="card3_line2 grey--text">
-                    <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
-                  </div>
-                  <v-card-content>
-                    <div class="set_content_space" style="height:">
-                      <!-- ใส่กราฟ -->
-                      <canvas
-                        id="graph2_c1_p5"
-                        width=""
-                        height=""
-                        class="set_wd_graph_c"
-                      ></canvas>
+                <div class="set_graph_mb">
+                  <v-card elevation="0" style="padding-left:10px;">
+                    <div class="card3_line2 grey--text">
+                      <span>ค่าเฉลี่ยน้ำหนักจากผู้ใช้ทั้งหมดตามช่วงอายุ</span>
                     </div>
-                  </v-card-content>
-                </v-card>
-                <div class="label_grpah1_c1_p5 set_h30_na">
-                  <table width="100%" class="set_tb_size">
-                    <tr>
-                      <td
-                        style="padding-left:40px;"
-                        class="text_sub text_sub_binfo"
-                      >
-                        <span
-                          >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีน้ำหนักประมาณ 78
-                          กิโลกรัม</span
+                    <v-card-content>
+                      <div class="set_content_space" style="height:">
+                        <!-- ใส่กราฟ -->
+                        <canvas
+                          id="graph2_c1_p5"
+                          width=""
+                          height=""
+                          class="set_wd_graph_c"
+                        ></canvas>
+                      </div>
+                    </v-card-content>
+                  </v-card>
+                  <div class="label_grpah1_c1_p5 set_h30_na">
+                    <table width="100%" class="set_tb_size">
+                      <tr>
+                        <td
+                          style="padding-left:40px;"
+                          class="text_sub text_sub_binfo"
                         >
-                      </td>
-                    </tr>
-                  </table>
+                          <span
+                            >ค่าเฉลี่ยสูงสุดอยู่ที่่ 49 ปี มีน้ำหนักประมาณ 78
+                            กิโลกรัม</span
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </v-flex>
             </v-layout>
@@ -335,35 +343,37 @@
               <!-- <div class="card3_line2 grey--text">
                   <span>graph here</span>
                 </div> -->
-              <v-card-content>
-                <div>
-                  <canvas
-                    id="graph1_c2_p5"
-                    width="200px"
-                    height=""
-                    class="set_wd_graph_c"
-                  ></canvas>
-                </div>
-                <div class="label_grpah1_c1_p5">
-                  <table width="100%" class="set_tb_size">
-                    <tr>
-                      <td style="text-align:center;">
-                        <div class="label_text_card1">
-                          <div>
-                            <v-icon small color="blue"> mdi-circle</v-icon>
-                            <span class="black--text pl-1"> ชาย </span>
+              <div class="set_of_card_graph">
+                <v-card-content>
+                  <div class="card_out">
+                    <canvas
+                      id="graph1_c2_p5"
+                      width="200px"
+                      height=""
+                      class="set_wd_graph_c set_size_canvas"
+                    ></canvas>
+                  </div>
+                  <div class="label_grpah1_c1_p5">
+                    <table width="100%" class="set_tb_size">
+                      <tr>
+                        <td style="text-align:center;">
+                          <div class="label_text_card1">
+                            <div>
+                              <v-icon small color="blue"> mdi-circle</v-icon>
+                              <span class="black--text pl-1"> ชาย </span>
+                            </div>
+                            <div class="pd_10">
+                              <v-icon small color="pink"> mdi-circle</v-icon>
+                              <span class="black--text pl-1"> หญิง </span>
+                            </div>
                           </div>
-                          <div class="pd_10">
-                            <v-icon small color="pink"> mdi-circle</v-icon>
-                            <span class="black--text pl-1"> หญิง </span>
-                          </div>
-                        </div>
-                      </td>
-                      <td width="50%"></td>
-                    </tr>
-                  </table>
-                </div>
-              </v-card-content>
+                        </td>
+                        <td width="50%"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </v-card-content>
+              </div>
             </div>
             <!-- <v-divider vertical></v-divider> -->
             <div class="card3_p5_content_right pd_r_30">
@@ -738,6 +748,9 @@ export default {
 .text_sub_binfo {
   padding-top: 3px;
 }
+.set_md_spac {
+  padding-bottom: 25px;
+}
 .set_border_left {
   border-right: 1px solid grey !important;
 }
@@ -746,6 +759,35 @@ export default {
   .set_border_left {
     border-right: 0px solid grey !important;
   }
+  .card1_head_lr {
+    flex-direction: row;
+  }
+  .head_card3_p5_l_title {
+    width: 100%;
+  }
+  .title_card1_p5 {
+    justify-content: center;
+  }
+  .set_of_card_graph {
+    width: 100%;
+    overflow-x: scroll;
+    height: auto;
+    min-width: 450px;
+    max-width: 600px;
+  }
+  .set_size_canvas {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .set_mx_width {
+    display: block;
+    width: 300px !important;
+
+    /* height: 150px; */
+  }
+  .set_pd_r0 {
+    padding-right: 0px !important;
+  }
   .set_tb_size {
     width: 100%;
   }
@@ -753,6 +795,16 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .card1_p5_content {
+    flex-direction: column;
+  }
+  .card3_p5_content_left {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .card3_p5_content_right {
+    width: 100%;
   }
   .title_card1_p5 {
     width: 100%;
@@ -779,6 +831,14 @@ export default {
   }
   .set_boder_right {
     border-right: 0px solid grey !important;
+  }
+  .set_graph_mb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    max-width: 600px;
+    min-width: 400px;
   }
   .set_of_c1_top {
     width: 100%;

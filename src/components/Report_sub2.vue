@@ -112,8 +112,24 @@
         </v-row>
         <v-row class="set_pd_row">
           <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"> </v-col>
-          <v-col cols="12" xs="0" sm="7" md="2" lg="2" xl="4"></v-col>
-          <v-col cols="6" xs="6" sm="" md="2" lg="" xl="1" class="text-right set_glow_flex">
+          <v-col
+            cols="12"
+            xs="0"
+            sm="7"
+            md="2"
+            lg="3"
+            xl="4"
+            class="set_unq_line"
+          ></v-col>
+          <v-col
+            cols="6"
+            xs="6"
+            sm=""
+            md="2"
+            lg=""
+            xl="1"
+            class="text-right set_glow_flex"
+          >
             <v-btn outlined color="purple lighten-3" style="width:120px;"
               >ล้างข้อมูล</v-btn
             >
@@ -125,7 +141,7 @@
             md="2"
             lg=""
             xl="1"
-            class="text-right"
+            class="text-right set_glow_flex"
             style=""
           >
             <v-btn color="purple lighten-3" style="color:white; width:120px;"
@@ -155,7 +171,7 @@
       <v-row height="400px" justify="space-around">
         <v-col cols="12" sm="">
           <v-card
-          outlined
+            outlined
             class="pa-2 bdr_12_only set_card_of"
             width="auto"
             height="100%"
@@ -434,6 +450,12 @@ export default {
 .report_sub2 {
   padding: 20px;
 }
+.set_unq_line {
+  flex: 0 0 22%;
+}
+.set_glow_flex {
+  flex-grow: 0.2 !important;
+}
 .text_header {
   display: flex;
   flex-wrap: wrap;
@@ -482,7 +504,7 @@ export default {
   .set_pd_row {
     padding-right: 20px;
   }
-   .set_nd_row {
+  .set_nd_row {
     padding-right: 5px;
   }
 }

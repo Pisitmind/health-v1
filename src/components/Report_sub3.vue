@@ -157,13 +157,13 @@
                     <th width="" class="text-center">
                       เพศ
                     </th>
-                    <th width="" class="text-left">
+                    <th width="" class="text-center">
                       เวลาการนอน (ชม:น)
                     </th>
-                    <th width="" class="text-left">
+                    <th width="" class="text-center">
                       อัตราการเต้นของหัวใจ
                     </th>
-                    <th width="" class="text-left">
+                    <th width="" class="text-center">
                       คะแนนร่างกาย
                     </th>
                   </tr>
@@ -182,7 +182,7 @@
                     <td class="text-center">{{ item.gender }}</td>
                     <td class="text-center">{{ item.sum_sleep }}</td>
                     <td class="text-center">{{ item.heartrate }}</td>
-                    <td class="text-left">{{ item.body_point }}</td>
+                    <td class="text-center">{{ item.body_point }}</td>
                   </tr>
                 </tbody>
               </template>
@@ -304,6 +304,9 @@ export default {
 <style scoped>
 .report_sub3 {
   padding: 20px;
+}
+.set_glow_flex {
+  flex-grow: 0.2 !important;
 }
 .report_card_root {
   padding: 20px;

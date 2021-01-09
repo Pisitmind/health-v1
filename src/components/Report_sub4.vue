@@ -383,6 +383,9 @@ export default {
 .report_sub4 {
   padding: 20px;
 }
+.set_glow_flex {
+  flex-grow: 0.2 !important;
+}
 .text_header {
   display: flex;
   flex-wrap: wrap;
