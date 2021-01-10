@@ -111,11 +111,11 @@
           </v-col>
         </v-row>
         <v-row class="set_pd_row">
-          <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6"> </v-col>
+          <v-col cols="12" xs="12" sm="4" md="6" lg="6" xl="6"> </v-col>
           <v-col
             cols="12"
             xs="0"
-            sm="7"
+            sm="3"
             md="2"
             lg="3"
             xl="4"
@@ -123,7 +123,7 @@
           ></v-col>
           <v-col
             cols="6"
-            xs="6"
+            xs="5"
             sm=""
             md="2"
             lg=""
@@ -136,7 +136,7 @@
           </v-col>
           <v-col
             cols="6"
-            xs="6"
+            xs="5"
             sm=""
             md="2"
             lg=""
@@ -488,6 +488,9 @@ export default {
     white-space: normal;
     width: 100%;
   }
+  .set_unq_line {
+    flex: 0 0 51%;
+  }
   .head_title_card_p7 {
     width: 100%;
   }
@@ -498,6 +501,15 @@ export default {
   .set_table_of {
     /* overflow-y: scroll; */
     width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .set_unq_line {
+    flex: 0 0 24%;
+  }
+  .set_glow_flex {
+    flex-grow: 0.5 !important;
+    /* flex-grow: 0.5; */
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {

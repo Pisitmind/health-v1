@@ -309,7 +309,7 @@
                         id="graph2_c2_p4"
                         width="200px"
                         height=""
-                        class="set_mx_width set_wd_graph_hr"
+                        class="set_mx_width set_wd_graph_hr set_norm_size_graph"
                       ></canvas>
                     </div>
                   </v-card-text>
@@ -351,7 +351,7 @@
                         id="graph3_c2_p4"
                         width="200px"
                         height=""
-                        class="set_mx_width set_wd_graph_hr"
+                        class="set_mx_width set_wd_graph_hr set_norm_size_graph"
                       ></canvas>
                     </div>
                   </v-card-text>
@@ -462,7 +462,7 @@
                       id="graph1_c3_p4"
                       width="200px"
                       height=""
-                      class="set_mx_width set_size_canvas"
+                      class="set_mx_width set_size_canvas set_norm_size_graph"
                     ></canvas>
                   </div>
                 </v-card-text>
@@ -484,7 +484,7 @@
                       id="graph2_c3_p4"
                       width="200px"
                       height=""
-                      class="set_mx_width "
+                      class="set_mx_width set_norm_size_graph"
                     ></canvas>
                   </div>
                 </v-card-text>

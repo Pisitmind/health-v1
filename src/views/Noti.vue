@@ -1566,6 +1566,11 @@ export default {
   .chart1_card2 {
     padding: 15px 0;
   }
+  .head_dialog{
+    width: 100%;
+    padding: 0px;
+
+  }
   .set_size_graph_noti_last {
     width: 100%;
     overflow-x: scroll;

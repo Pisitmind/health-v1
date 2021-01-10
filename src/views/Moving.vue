@@ -176,7 +176,7 @@
                         id="graph2_c1_p3"
                         width=""
                         height=""
-                        class="set_g_sp_p3"
+                        class="set_g_sp_p3 set_norm_size_graph"
                       ></canvas>
                     </div>
                     <div class="set_h30 sub_ct_graph">

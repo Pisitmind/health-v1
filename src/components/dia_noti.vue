@@ -3,14 +3,19 @@
     <v-card-content>
       <div class="content_dialog_page_top">
         <div class="content_top_left_page">
-          <div class="set_center">
-            <canvas id="graphdia1_c1_p2" width="" height=""></canvas>
+          <div class="set_center set_of_card_graph">
+            <canvas
+              id="graphdia1_c1_p2"
+              width=""
+              height=""
+              class="set_size_canvas"
+            ></canvas>
           </div>
         </div>
         <div class="content_top_right_page">
           <!-- data top right -->
           <div class="card_bonus1">
-            <v-card width="" class="c1_c2_dialog bdr_12">
+            <v-card width="" class="c1_c2_dialog bdr_12 sm_card_n">
               <table class="data_c1c2">
                 <tr>
                   <td class="left" width="80%" height="20%">
@@ -59,7 +64,7 @@
           </div>
           <br />
           <div class="card_bonus2">
-            <v-card width="" class="c1_c2_dialog bdr_12">
+            <v-card width="" class="c1_c2_dialog bdr_12 sm_card_n">
               <table class="data_c1c2">
                 <tr>
                   <td class="left" width="80%" height="20%">
@@ -791,8 +796,51 @@ export default {
 .head_table_card3 {
   text-align: left;
 }
+/* @media only screen and (max-width: 320px) and (max-width: 700px) { */
+@media only screen and (max-width: 320px) {
+  .content_dialog_page_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-@media screen and (max-width: 768px) {
+  .set_of_card_graph {
+    width: 100%;
+
+    height: auto;
+    min-width: 450px;
+    max-width: 600px;
+  }
+  .sm_card_n {
+    /* width: 100%; */
+    max-width: 550px;
+  }
+  .c1_c2_dialog,
+  .sm_card_n {
+    width: fit-content !important;
+  }
+  .content_top_left_page {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .content_top_right_page {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .set_size_canvas {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .card_bonus1,
+  .card_bonus2 {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0px !important;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
   .content_dialog_page_top {
     display: flex;
     flex-direction: column;

@@ -134,7 +134,7 @@
                               id="graph1_p6"
                               width=""
                               height=""
-                              class="set_size_canvas"
+                              class="set_size_canvas set_norm_size_graph"
                             ></canvas>
                           </div>
                           <div class="set_h30 sub_ct_graph">
@@ -185,7 +185,7 @@
                             id="graph2_c1_p6"
                             width=""
                             height=""
-                            class="set_size_canvas"
+                            class="set_size_canvas set_norm_size_graph"
                           ></canvas>
                         </div>
                         <div class="set_h30_sp sub_ct_graph">
@@ -1041,7 +1041,9 @@ export default {
   justify-content: space-between;
   width: 50%;
 } */
-
+.set_norm_size_graph {
+  max-width: 450px;
+}
 .head_card3_p6_l_title {
   width: 100%;
   /* background-color: rgba(0, 0, 0, 0.1); */
@@ -1261,6 +1263,10 @@ table {
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .label_text_card_norm {
     height: 40px;
+  }
+  .set_norm_size_graph {
+    width: 650px;
+    max-width: 650px;
   }
   .card3_line2 {
     padding-top: 20px;
